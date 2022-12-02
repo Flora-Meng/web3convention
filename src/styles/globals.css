@@ -1,0 +1,77 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+		Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	color: #282828;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+::-moz-selection {
+	background: #53f6c6;
+}
+
+::selection {
+	background: #53f6c6;
+}
+
+/* --- Customized class --- */
+
+/* Display */
+
+.flex {
+	display: flex;
+}
+
+/* Justify Content */
+
+.justify-center {
+	justify-content: center;
+}
+.justify-between {
+	justify-content: space-between;
+}
+
+/* Align Items */
+
+.items-center {
+	align-items: center;
+}
+
+/* Flex Direction */
+
+.flex-col {
+	flex-direction: column;
+}
+
+/* Cursor */
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+/* Line Height */
+
+.leading-normal {
+	line-height: 1.5;
+}
+.leading-relaxed {
+	line-height: 1.8;
+}
+.leading-loose {
+	line-height: 2;
+}
+
+/* Layout */
+.relative {
+	position: relative;
+}
