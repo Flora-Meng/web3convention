@@ -12,6 +12,13 @@ a {
 	text-decoration: none;
 }
 
+a,
+p a {
+	-webkit-transition: color 0.2s ease-out;
+	-moz-transition: color 0.2s ease-out;
+	transition: color 0.2s ease-out;
+}
+
 * {
 	box-sizing: border-box;
 }

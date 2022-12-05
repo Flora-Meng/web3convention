@@ -58,10 +58,12 @@ export const tagDecoration = () => css`
 		content: '< ';
 		position: relative;
 		display: inline-block;
+		font-size: 0.8em;
 	}
 	&::after {
 		content: ' />';
 		position: relative;
 		display: inline-block;
+		font-size: 0.8em;
 	}
 `;
