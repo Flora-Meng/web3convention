@@ -1,9 +1,9 @@
 import NavBarButton from '../NavBarButton';
-import { ISubNavItem } from '@/interfaces/nav';
+import { INavItem } from '@/interfaces/nav';
 import styled from 'styled-components';
 
 interface SubMenuProps {
-	subNavList: ISubNavItem[];
+	subNavList: INavItem[];
 }
 
 const SubMenuContainer = styled.div`
