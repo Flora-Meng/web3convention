@@ -8,7 +8,8 @@
 	},
 	"scripts": {
 		"dev": "next dev -p 8000",
-		"build": "next build",
+		"build": "cross-env next build",
+		"build:uat": "cross-env NEXT_PUBLIC_NEXT_ENV=uat next build",
 		"start": "next start",
 		"lint": "next lint",
 		"lint:fix": "eslint . --fix",
@@ -27,6 +28,7 @@
 		"@types/react-dom": "18.0.9",
 		"babel-preset-next": "^1.4.0",
 		"lodash": "^4.17.21",
+		"cross-env": "^7.0.3",
 		"next": "13.0.5",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
