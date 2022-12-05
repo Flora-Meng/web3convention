@@ -20,6 +20,7 @@ const MenuContainer = styled.div`
 	top: 64px;
 	max-height: 50vh;
 	overflow-y: scroll;
+	z-index: 1;
 	@media ${devices.laptop} {
 		display: none;
 	}

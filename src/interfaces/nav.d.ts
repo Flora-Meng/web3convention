@@ -1,4 +1,4 @@
-export interface ISubNavItem {
+export interface INavItem {
 	title: string;
 	path: string;
 }

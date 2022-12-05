@@ -1,11 +1,12 @@
 import { SetStateAction } from 'react';
 import { useRouter } from 'next/router';
+import { isEmpty } from 'lodash';
 import MuiAccordion, { AccordionProps } from '@mui/material/Accordion';
 import MuiAccordionSummary, { AccordionSummaryProps } from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-import subNavItemsConfig, { NAV_ITEM_TITLE } from '@/layouts/Header/navBarConfig';
+import { navItemsConfig, subNavItemsConfig } from '@/layouts/Header/navBarConfig';
 import { ENavItem } from '@/constants/nav';
 import { ActiveNavBarTitleDecoration, NavBarTitleDecoration } from '@/styles/mixin';
 import { devices } from '@/styles/variables';
@@ -51,10 +52,10 @@ const AccordionSummary = styled((props: AccordionSummaryProps) => (
 	.MuiAccordionSummary-content {
 		margin: 0;
 		p {
-			${NavBarTitleDecoration('calc(100% + 8px)', '50%', '-4px')}
+			${NavBarTitleDecoration('calc(100% + 8px)', '50%', '-4px')};
 		}
 		&:hover p::before {
-			${ActiveNavBarTitleDecoration()}
+			${ActiveNavBarTitleDecoration()};
 		}
 	}
 	.MuiAccordionSummary-expandIconWrapper {
@@ -68,13 +69,6 @@ const AccordionSummary = styled((props: AccordionSummaryProps) => (
 const AccordionDetails = styled(MuiAccordionDetails)`
 	padding: 0;
 	margin-left: 10px;
-`;
-
-const NavItem = styled.div<NavItemProps>`
-	${NavBarTitleDecoration('calc(100% + 8px)', '50%', '-4px')};
-	&:before {
-		${({ isActive }) => (isActive ? ActiveNavBarTitleDecoration() : null)}
-	}
 `;
 
 const SubNavItem = styled.div<NavItemProps>`
@@ -99,28 +93,26 @@ const SubNavItem = styled.div<NavItemProps>`
 const Menu: React.FC<MenuProps> = ({ navItem, openKey, setOpenKey }) => {
 	const router = useRouter();
 	const expanded = openKey === navItem;
+	const subItemConfig = subNavItemsConfig[navItem] || [];
+
+	const handleClickNavItem = () => {
+		if (isEmpty(subItemConfig)) {
+			router.push(navItemsConfig[navItem].path);
+		} else {
+			setOpenKey(expanded ? undefined : navItem);
+		}
+	};
 
 	return (
-		<Accordion
-			expanded={expanded}
-			onChange={() => setOpenKey(expanded ? undefined : navItem)}
-			key={navItem}
-		>
+		<Accordion expanded={expanded} onChange={handleClickNavItem} key={navItem}>
 			<AccordionSummary
 				aria-controls={navItem}
-				id={navItem}
-				expandIcon={<ExpandMoreIcon fontSize="small" />}
+				expandIcon={!isEmpty(subItemConfig) ? <ExpandMoreIcon fontSize="small" /> : null}
 			>
-				<NavItem
-					isActive={subNavItemsConfig[navItem].some(
-						subNavItem => subNavItem.path === router.pathname
-					)}
-				>
-					{NAV_ITEM_TITLE[navItem]}
-				</NavItem>
+				<p>{navItemsConfig[navItem].title}</p>
 			</AccordionSummary>
 			<AccordionDetails>
-				{subNavItemsConfig[navItem].map(subNavItem => (
+				{subItemConfig.map(subNavItem => (
 					<SubNavItem
 						isActive={router.pathname === subNavItem.path}
 						className="cursor-pointer"

@@ -1,10 +1,11 @@
 import { useRouter } from 'next/router';
 import Button from '@mui/material/Button';
 import Tooltip, { TooltipProps, tooltipClasses } from '@mui/material/Tooltip';
+import { isEmpty } from 'lodash';
 import styled from 'styled-components';
 
 import { ENavItem } from '@/constants/nav';
-import subNavItemsConfig, { NAV_ITEM_TITLE } from '@/layouts/Header/navBarConfig';
+import { navItemsConfig, subNavItemsConfig } from '@/layouts/Header/navBarConfig';
 import SubMenu from './components/SubMenu';
 import {
 	ActiveNavBarTitleDecoration,
@@ -12,6 +13,7 @@ import {
 	NavBarTitleDecoration
 } from '@/styles/mixin';
 import { color } from '@/styles/variables';
+import Link from 'next/link';
 
 const { whiteColor } = color;
 
@@ -57,20 +59,32 @@ const ButtonCtx = styled.span`
 const NavMenu: React.FC = () => {
 	const router = useRouter();
 	const pathKey = router.pathname.split('/');
+
+	const renderNavItem = (navItem: ENavItem) => (
+		<NavButtonContainer active={navItem === pathKey[1]}>
+			<StyledButton disableRipple>
+				<ButtonCtx>{navItemsConfig[navItem].title}</ButtonCtx>
+			</StyledButton>
+		</NavButtonContainer>
+	);
+
 	return (
 		<NavContainer>
-			{Object.values(ENavItem).map(navItem => (
-				<CustomWidthTooltip
-					title={<SubMenu subNavList={subNavItemsConfig[navItem]} />}
-					key={navItem}
-				>
-					<NavButtonContainer active={navItem === pathKey[1]}>
-						<StyledButton disableRipple>
-							<ButtonCtx>{NAV_ITEM_TITLE[navItem]}</ButtonCtx>
-						</StyledButton>
-					</NavButtonContainer>
-				</CustomWidthTooltip>
-			))}
+			{Object.values(ENavItem).map(navItem => {
+				const subNavItemConfig = subNavItemsConfig[navItem] || [];
+				return !isEmpty(subNavItemConfig) ? (
+					<CustomWidthTooltip
+						title={<SubMenu subNavList={subNavItemConfig} />}
+						key={navItem}
+					>
+						{renderNavItem(navItem)}
+					</CustomWidthTooltip>
+				) : (
+					<Link href={navItemsConfig[navItem].path} key={navItem}>
+						{renderNavItem(navItem)}
+					</Link>
+				);
+			})}
 		</NavContainer>
 	);
 };
