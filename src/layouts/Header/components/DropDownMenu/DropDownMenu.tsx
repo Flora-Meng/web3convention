@@ -1,10 +1,10 @@
-import { useState } from 'react';
 import Fade from '@mui/material/Fade';
+import { useState } from 'react';
 import styled from 'styled-components';
 
-import { ENavItem } from '@/constants/nav';
-import { color, devices } from '@/styles/variables';
 import Menu from './components/Menu';
+import ENavItem from '@/constants/nav';
+import { color, devices } from '@/styles/variables';
 
 const { whiteColor } = color;
 
@@ -13,13 +13,13 @@ interface DropDownMenuProps {
 }
 
 const MenuContainer = styled.div`
-	position: absolute;
 	background-color: ${whiteColor};
-	width: 100vw;
 	left: 0;
-	top: 64px;
 	max-height: 50vh;
 	overflow-y: scroll;
+	position: absolute;
+	top: 64px;
+	width: 100vw;
 	z-index: 1;
 	@media ${devices.laptop} {
 		display: none;

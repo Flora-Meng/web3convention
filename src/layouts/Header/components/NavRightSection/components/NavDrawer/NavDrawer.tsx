@@ -1,16 +1,16 @@
-import { useState } from 'react';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import Image from 'next/image';
 import CloseIcon from '@mui/icons-material/Close';
-import Button from '@mui/material/Button';
 import MenuIcon from '@mui/icons-material/Menu';
+import Button from '@mui/material/Button';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useState } from 'react';
 import styled from 'styled-components';
 
-import imageLoader from '@/utils/loader';
-import { color } from '@/styles/variables';
 import { tagDecoration } from '@/styles/mixin';
+import { color } from '@/styles/variables';
+import imageLoader from '@/utils/loader';
 
 const { primaryColor, textColor, whiteColor } = color;
 
@@ -29,18 +29,18 @@ const DrawerButton = styled(Button)({
 });
 
 const DrawerContainer = styled.div`
-	color: ${whiteColor};
 	background-color: ${textColor};
+	color: ${whiteColor};
 	height: 100%;
-	width: 400px;
 	padding: 75px 50px 36px;
 	position: relative;
+	width: 400px;
 `;
 
 const CloseButton = styled.div`
 	position: absolute;
-	top: 40px;
 	right: 50px;
+	top: 40px;
 `;
 
 const Tagline = styled.p`
@@ -57,13 +57,17 @@ const Title = styled.h4`
 `;
 
 const StyledLink = styled(Link)`
-	padding: 6px 0;
-	-webkit-transition: color 0.4s ease-out;
 	-moz-transition: color 0.4s ease-out;
+	-webkit-transition: color 0.4s ease-out;
+	padding: 6px 0;
 	transition: color 0.4s ease-out;
 	&:hover {
 		color: ${primaryColor};
 	}
+`;
+
+const ImageContainer = styled.div`
+	cursor: pointer;
 `;
 
 const linkConfigList = [
@@ -103,7 +107,7 @@ const NavDrawer: React.FC = () => {
 					<CloseButton className="cursor-pointer" onClick={close}>
 						<CloseIcon color="primary" fontSize="small" />
 					</CloseButton>
-					<div className="cursor-pointer" onClick={() => router.push('/')}>
+					<ImageContainer onClick={() => router.push('/')}>
 						<Image
 							loader={imageLoader}
 							unoptimized
@@ -113,7 +117,7 @@ const NavDrawer: React.FC = () => {
 							height={40}
 							priority
 						/>
-					</div>
+					</ImageContainer>
 					<Tagline>{`Don't_miss`}</Tagline>
 					<Title>Wire Festival</Title>
 					<p className="leading-relaxed">

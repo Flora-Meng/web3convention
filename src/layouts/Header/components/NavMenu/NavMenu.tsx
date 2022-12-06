@@ -1,19 +1,19 @@
-import { useRouter } from 'next/router';
 import Button from '@mui/material/Button';
 import Tooltip, { TooltipProps, tooltipClasses } from '@mui/material/Tooltip';
 import { isEmpty } from 'lodash';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
 
-import { ENavItem } from '@/constants/nav';
-import { navItemsConfig, subNavItemsConfig } from '@/layouts/Header/navBarConfig';
 import SubMenu from './components/SubMenu';
+import ENavItem from '@/constants/nav';
+import { navItemsConfig, subNavItemsConfig } from '@/layouts/Header/navBarConfig';
 import {
 	activeNavBarTitleDecoration,
 	disableMUIButtonHoverCss,
 	navBarTitleDecoration
 } from '@/styles/mixin';
 import { color, headerHeight } from '@/styles/variables';
-import Link from 'next/link';
 
 const { whiteColor } = color;
 
@@ -32,11 +32,11 @@ const CustomWidthTooltip = styled(({ className, ...props }: TooltipProps) => (
 });
 
 const StyledButton = styled(Button)`
-	height: ${headerHeight};
-	padding: 0 20px;
 	color: ${whiteColor};
 	font-size: 14px;
 	font-weight: 600;
+	height: ${headerHeight};
+	padding: 0 20px;
 	${disableMUIButtonHoverCss()}
 `;
 

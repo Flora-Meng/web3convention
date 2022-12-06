@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import carouselList from './carouselList.json';
 import CarouseItem from './components/CarouseItem';
-import { color, devices, carouselHeight, headerHeight } from '@/styles/variables';
+import { carouselHeight, color, devices, headerHeight } from '@/styles/variables';
 
 const { primaryColor } = color;
 

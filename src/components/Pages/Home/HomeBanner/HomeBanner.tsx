@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 import bannerInfo from './bannerInfo.json';
 import ThemeButton from '@/components/Shares/ThemeButton';
-import { color, devices } from '@/styles/variables';
 import { tagDecoration } from '@/styles/mixin';
+import { color, devices } from '@/styles/variables';
 
 const { primaryColor, whiteColor } = color;
 
@@ -13,9 +13,9 @@ interface LeftGridProps {
 
 const GridItem = styled.div<LeftGridProps>`
 	background-image: url(${({ imageSrc }) => imageSrc});
-	height: 745px;
 	background-position: 50% 50%;
 	background-size: cover;
+	height: 745px;
 `;
 
 const LeftGrid = styled(GridItem)`
@@ -26,9 +26,9 @@ const LeftGrid = styled(GridItem)`
 `;
 
 const RightGrid = styled(GridItem)`
-	width: 100vw;
 	color: ${whiteColor};
 	padding-left: 20px;
+	width: 100vw;
 	@media ${devices.tablet} {
 		padding-left: 50px;
 		width: 50vw;
@@ -36,8 +36,8 @@ const RightGrid = styled(GridItem)`
 `;
 
 const InfoContainer = styled.div`
-	margin-left: 30px;
 	height: inherit;
+	margin-left: 30px;
 	margin-right: 50px;
 	@media ${devices.tablet} {
 		width: 300px;
@@ -56,25 +56,25 @@ const InfoContainer = styled.div`
 const Title = styled.h2`
 	font-size: 42px;
 	font-weight: 700;
-	margin: 0;
 	line-height: 1.1;
+	margin: 0;
 	margin-bottom: 24px;
 `;
 
 const Subtitle = styled.p`
-	font-style: italic;
-	font-size: 18px;
-	margin: 0;
 	color: ${primaryColor};
+	font-size: 18px;
+	font-style: italic;
+	margin: 0;
 	${tagDecoration()};
 `;
 
 const Description = styled.p`
-	padding-right: 20px;
 	font-size: 15px;
+	line-height: 1.8;
 	margin: 0;
 	margin-bottom: 40px;
-	line-height: 1.8;
+	padding-right: 20px;
 `;
 
 const HomeBanner: React.FC = () => {

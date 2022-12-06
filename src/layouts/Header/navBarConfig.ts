@@ -1,4 +1,4 @@
-import { ENavItem } from '@/constants/nav';
+import ENavItem from '@/constants/nav';
 import { INavItem } from '@/interfaces/nav';
 
 export const navItemsConfig: { [K in ENavItem]: INavItem } = {

@@ -1,21 +1,22 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import HeaderLogo from '../HeaderLogo';
-import NavMenu from './components/NavMenu';
-import NavRightSection from './components/NavRightSection';
+
 import DropDownMenu from './components/DropDownMenu';
 import DropDownMenuButton from './components/DropDownMenuButton';
+import NavMenu from './components/NavMenu';
+import NavRightSection from './components/NavRightSection';
 import { color, devices, sizes } from '@/styles/variables';
 
 const { whiteColor } = color;
 
 const HeaderContainer = styled.div`
+	align-items: center;
+	background-color: ${whiteColor};
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
 	padding: 16px 30px 16px 10px;
-	background-color: ${whiteColor};
 	position: relative;
 	z-index: 2;
 	@media ${devices.laptop} {

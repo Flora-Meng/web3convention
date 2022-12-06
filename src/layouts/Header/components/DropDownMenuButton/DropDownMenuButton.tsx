@@ -1,10 +1,10 @@
-import Button from '@mui/material/Button';
 import MenuIcon from '@mui/icons-material/Menu';
+import Button from '@mui/material/Button';
 import styled from 'styled-components';
 
 import { color } from '@/styles/variables';
 
-const { primaryColor, textColor, whiteColor } = color;
+const { primaryColor, whiteColor } = color;
 
 interface DropDownMenuButtonProps {
 	handleClick: () => void;
