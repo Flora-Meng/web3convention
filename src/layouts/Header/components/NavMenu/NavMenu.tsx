@@ -8,9 +8,9 @@ import { ENavItem } from '@/constants/nav';
 import { navItemsConfig, subNavItemsConfig } from '@/layouts/Header/navBarConfig';
 import SubMenu from './components/SubMenu';
 import {
-	ActiveNavBarTitleDecoration,
+	activeNavBarTitleDecoration,
 	disableMUIButtonHoverCss,
-	NavBarTitleDecoration
+	navBarTitleDecoration
 } from '@/styles/mixin';
 import { color, headerHeight } from '@/styles/variables';
 import Link from 'next/link';
@@ -43,17 +43,17 @@ const StyledButton = styled(Button)`
 const NavButtonContainer = styled.div<INavButtonContainerProps>`
 	display: inline-block;
 	span:before {
-		${({ active }) => (active ? ActiveNavBarTitleDecoration() : null)}
+		${({ active }) => (active ? activeNavBarTitleDecoration() : null)}
 	}
 	&:hover span:before {
-		${ActiveNavBarTitleDecoration()}
+		${activeNavBarTitleDecoration()}
 	}
 `;
 
 const ButtonCtx = styled.span`
 	color: ${whiteColor};
 	text-transform: uppercase;
-	${NavBarTitleDecoration('calc(100% + 8px)', 'calc(50% - 2px)', '-4px')};
+	${navBarTitleDecoration('calc(100% + 8px)', 'calc(50% - 2px)', '-4px')};
 `;
 
 const NavMenu: React.FC = () => {

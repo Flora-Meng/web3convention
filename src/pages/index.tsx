@@ -3,6 +3,7 @@ import DefaultLayout from '@/layouts/DefaultLayout';
 import HomeCarousel from '@/components/Pages/Home/HomeCarousel';
 import HomeImageList from '@/components/Pages/Home/HomeImageList';
 import HomeBanner from '@/components/Pages/Home/HomeBanner';
+import HomePosts from '@/components/Pages/Home/HomePosts';
 
 type ComponentType = React.FC & { layout: typeof DefaultLayout };
 
@@ -13,6 +14,7 @@ const Homepage: ComponentType = props => {
 			<HomeCarousel />
 			<HomeImageList />
 			<HomeBanner />
+			<HomePosts />
 		</>
 	);
 };

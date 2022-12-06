@@ -5,7 +5,7 @@ const { primaryColor } = color;
 
 /* Nav item line-through decoration and animation */
 
-export const NavBarTitleDecoration = (
+export const navBarTitleDecoration = (
 	width: string,
 	top = 'calc(50% - 2px)',
 	left = '0px',
@@ -34,7 +34,7 @@ export const NavBarTitleDecoration = (
 	}
 `;
 
-export const ActiveNavBarTitleDecoration = () => css`
+export const activeNavBarTitleDecoration = () => css`
 	-webkit-transform: scaleX(1) translateZ(0);
 	-moz-transform: scaleX(1) translateZ(0);
 	transform: scaleX(1) translateZ(0);
@@ -92,4 +92,12 @@ export const animationHoverImage = css`
 	-webkit-transition: -webkit-transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 	-moz-transition: -moz-transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 	transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+`;
+
+export const textEllipsis = (line: number = 1) => css`
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: ${line};
+	overflow: hidden;
+	text-overflow: ellipsis;
 `;

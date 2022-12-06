@@ -19,7 +19,6 @@ const ImageListContainer = styled(Grid)`
 
 const ImageListItem = styled(Link)`
 	${animationHoverImageParent};
-
 	position: relative;
 	height: 50vw;
 	cursor: pointer;
