@@ -1,22 +1,22 @@
-import Image from 'next/image';
-import Grid from '@mui/material/Grid';
-import IconButton from '@mui/material/IconButton';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import Grid from '@mui/material/Grid';
+import IconButton from '@mui/material/IconButton';
+import Image from 'next/image';
 import styled from 'styled-components';
 
-import imageLoader from '@/utils/loader';
-import { color, devices } from '@/styles/variables';
 import { disableMUIButtonHoverCss } from '@/styles/mixin';
+import { color, devices } from '@/styles/variables';
+import imageLoader from '@/utils/loader';
 
 const { blackColor, primaryColor, whiteColor } = color;
 
 const ContentContainer = styled.section`
-	background-color: ${primaryColor};
-	font-size: 14px;
-	flex-direction: column;
 	align-items: center;
+	background-color: ${primaryColor};
+	flex-direction: column;
+	font-size: 14px;
 	padding: 30px 0;
 	@media ${devices.mobile} {
 		max-width: unset;

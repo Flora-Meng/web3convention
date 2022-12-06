@@ -20,18 +20,16 @@ const HeaderLogo: React.FC<HeaderLogoProps> = ({ logoSrc }) => {
 	const router = useRouter();
 
 	return (
-		<LogoWrapper>
-			<div className="cursor-pointer" onClick={() => router.push('/')}>
-				<Image
-					loader={imageLoader}
-					unoptimized
-					src={logoSrc}
-					alt="logo"
-					width={140}
-					height={40}
-					priority
-				/>
-			</div>
+		<LogoWrapper className="cursor-pointer" onClick={() => router.push('/')}>
+			<Image
+				loader={imageLoader}
+				unoptimized
+				src={logoSrc}
+				alt="logo"
+				width={140}
+				height={40}
+				priority
+			/>
 		</LogoWrapper>
 	);
 };

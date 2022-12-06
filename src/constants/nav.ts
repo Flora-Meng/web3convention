@@ -1,4 +1,4 @@
-export enum ENavItem {
+enum ENavItem {
 	HOME = 'home',
 	CONVENTION = 'convention',
 	PARTNER = 'partner',
@@ -6,3 +6,5 @@ export enum ENavItem {
 	VENUE = 'venue',
 	NEWS = 'news'
 }
+
+export default ENavItem;

@@ -1,17 +1,16 @@
-import { SetStateAction } from 'react';
-import { useRouter } from 'next/router';
-import { isEmpty } from 'lodash';
-import MuiAccordion, { AccordionProps } from '@mui/material/Accordion';
-import MuiAccordionSummary, { AccordionSummaryProps } from '@mui/material/AccordionSummary';
-import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import MuiAccordion, { AccordionProps } from '@mui/material/Accordion';
+import MuiAccordionDetails from '@mui/material/AccordionDetails';
+import MuiAccordionSummary, { AccordionSummaryProps } from '@mui/material/AccordionSummary';
+import { isEmpty } from 'lodash';
+import { useRouter } from 'next/router';
+import { SetStateAction } from 'react';
+import styled from 'styled-components';
 
+import ENavItem from '@/constants/nav';
 import { navItemsConfig, subNavItemsConfig } from '@/layouts/Header/navBarConfig';
-import { ENavItem } from '@/constants/nav';
 import { activeNavBarTitleDecoration, navBarTitleDecoration } from '@/styles/mixin';
 import { devices } from '@/styles/variables';
-
-import styled from 'styled-components';
 
 interface MenuProps {
 	navItem: ENavItem;
@@ -41,10 +40,10 @@ const Accordion = styled((props: AccordionProps) => (
 const AccordionSummary = styled((props: AccordionSummaryProps) => (
 	<MuiAccordionSummary {...props} />
 ))`
+	border-bottom: 1px solid #edeff2;
 	font-size: 13px;
 	font-weight: 600;
 	padding: 0 4px;
-	border-bottom: 1px solid #edeff2;
 	text-transform: uppercase;
 	.Mui-expanded {
 		min-height: unset;
@@ -67,19 +66,19 @@ const AccordionSummary = styled((props: AccordionSummaryProps) => (
 `;
 
 const AccordionDetails = styled(MuiAccordionDetails)`
-	padding: 0;
 	margin-left: 10px;
+	padding: 0;
 `;
 
 const SubNavItem = styled.div<NavItemProps>`
+	border-bottom: 1px solid #edeff2;
 	font-size: 13px;
 	font-weight: 600;
-	border-bottom: 1px solid #edeff2;
 	p {
+		margin-block-end: 12px;
+		margin-block-start: 12px;
 		padding: 0;
 		width: fit-content;
-		margin-block-start: 12px;
-		margin-block-end: 12px;
 		${navBarTitleDecoration('calc(100% + 8px)', '50%', '-4px')};
 		&:before {
 			${({ isActive }) => (isActive ? activeNavBarTitleDecoration() : null)}

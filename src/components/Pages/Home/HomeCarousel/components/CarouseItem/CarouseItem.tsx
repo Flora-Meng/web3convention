@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import ThemeButton from '@/components/Shares/ThemeButton';
-import { color, devices, carouselHeight } from '@/styles/variables';
+import { carouselHeight, color, devices } from '@/styles/variables';
 
 const { whiteColor } = color;
 
@@ -22,10 +22,10 @@ interface CarouseItemContainerProps {
 
 const CarouseItemContainer = styled.div<CarouseItemContainerProps>`
 	background-image: url(${({ imageSrc }) => imageSrc});
-	height: ${carouselHeight.tablet};
 	background-position: 50% 50%;
 	background-size: cover;
 	color: ${whiteColor};
+	height: ${carouselHeight.tablet};
 	@media ${devices.laptop} {
 		height: ${carouselHeight.laptop};
 	}
@@ -48,8 +48,8 @@ const InfoContainer = styled.div`
 const Title = styled.h2`
 	font-size: 54px;
 	font-weight: 700;
-	margin: 0;
 	line-height: 1.1;
+	margin: 0;
 	margin-bottom: 16px;
 	@media ${devices.tablet} {
 		font-size: 90px;
@@ -57,8 +57,8 @@ const Title = styled.h2`
 `;
 
 const Subtitle = styled.p`
-	font-style: italic;
 	font-size: 20px;
+	font-style: italic;
 	margin: 0;
 	margin-bottom: 8px;
 	@media ${devices.tablet} {
@@ -68,11 +68,11 @@ const Subtitle = styled.p`
 `;
 
 const Description = styled.p`
-	padding-right: 20px;
 	font-size: 18px;
+	line-height: 1.8;
 	margin: 0;
 	margin-bottom: 40px;
-	line-height: 1.8;
+	padding-right: 20px;
 	@media ${devices.tablet} {
 		line-height: 1.5;
 	}

@@ -1,37 +1,37 @@
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
 import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
-import InputAdornment from '@mui/material/InputAdornment';
+import Grid from '@mui/material/Grid';
 import Input from '@mui/material/Input';
+import InputAdornment from '@mui/material/InputAdornment';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-import instagramImage01 from '@/assets/images/demo/instagram-image-01.jpg';
 import instagramImage02 from '@/assets/images/demo//instagram-image-02.jpg';
 import instagramImage03 from '@/assets/images/demo//instagram-image-03.jpg';
 import instagramImage04 from '@/assets/images/demo//instagram-image-04.jpg';
 import instagramImage05 from '@/assets/images/demo//instagram-image-05.jpg';
 import instagramImage06 from '@/assets/images/demo//instagram-image-06.jpg';
-import imageLoader from '@/utils/loader';
-import { color, devices } from '@/styles/variables';
+import instagramImage01 from '@/assets/images/demo/instagram-image-01.jpg';
 import {
 	animationHoverImage,
 	animationHoverImageParent,
 	disableMUIButtonHoverCss,
 	tagDecoration
 } from '@/styles/mixin';
+import { color, devices } from '@/styles/variables';
+import imageLoader from '@/utils/loader';
 
 const { blackColor, primaryColor, whiteColor } = color;
 
 // Styles
 
 const ContentContainer = styled(Box)`
-	color: ${whiteColor};
 	background-color: ${blackColor};
+	color: ${whiteColor};
 	padding: 50px 0;
 	@media ${devices.mobile} {
 		padding: 50px;
@@ -60,8 +60,8 @@ const StyledLink = styled(Link)`
 	line-height: 1.5;
 	margin-bottom: 12px;
 	&:hover {
-		cursor: pointer;
 		color: ${primaryColor};
+		cursor: pointer;
 	}
 `;
 
@@ -93,8 +93,8 @@ const ContentText = styled.p`
 `;
 
 const StyledInput = styled(Input)`
-	color: ${whiteColor};
 	border-bottom: 2px solid ${primaryColor};
+	color: ${whiteColor};
 	&:after {
 		display: none;
 	}
@@ -107,8 +107,8 @@ const StyledInputStartAdornment = styled(InputAdornment)`
 `;
 
 const StyledSubmitButton = styled(Button)`
-	color: ${whiteColor};
 	background-color: transparent;
+	color: ${whiteColor};
 	${disableMUIButtonHoverCss};
 	&:hover {
 		color: ${primaryColor};
@@ -181,13 +181,11 @@ const FooterContent = () => {
 
 	useEffect(() => {
 		if (inputMessage) setInputMessage('');
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [emailInput]);
 
 	const handleSubmitEmail = () => {
 		if (!emailInput) {
 			setInputMessage('Email is invalid.');
-			return;
 		}
 	};
 

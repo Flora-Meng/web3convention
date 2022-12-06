@@ -1,13 +1,12 @@
-import Link from 'next/link';
-import Image from 'next/image';
 import Grid from '@mui/material/Grid';
+import Image from 'next/image';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 import postList from './postList.json';
 import PostBackgroundImage01 from '@/assets/images/blog-background-img-1.png';
 import PostBackgroundImage02 from '@/assets/images/blog-background-img-2.png';
 import PostBackgroundImage03 from '@/assets/images/blog-background-img-3.png';
-import { color, devices, sizes } from '@/styles/variables';
 import {
 	activeNavBarTitleDecoration,
 	animationHoverImage,
@@ -16,13 +15,14 @@ import {
 	tagDecoration,
 	textEllipsis
 } from '@/styles/mixin';
+import { color, devices, sizes } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
 const { darkPrimaryColor } = color;
 
 const HomePostsContainer = styled.div`
-	padding: 100px 40px 140px;
 	max-width: ${`${sizes.largeLaptop}px`};
+	padding: 100px 40px 140px;
 	@media ${devices.mobile} {
 		padding: 100px 100px 140px;
 	}
@@ -34,26 +34,26 @@ const HomePostsContainer = styled.div`
 const Title = styled.h2`
 	font-size: 40px;
 	font-weight: 700;
-	margin: 0;
 	line-height: 1.1;
+	margin: 0;
 	margin-bottom: 64px;
 	max-width: 350px;
 `;
 
 const Subtitle = styled.p`
-	font-style: italic;
-	font-size: 16px;
-	margin: 0;
 	color: ${darkPrimaryColor};
+	font-size: 16px;
+	font-style: italic;
+	margin: 0;
 	${tagDecoration()};
 	margin-bottom: 6px;
 `;
 
 const ImageListItem = styled(Link)`
 	${animationHoverImageParent};
-	position: relative;
-	height: 50vw;
 	cursor: pointer;
+	height: 50vw;
+	position: relative;
 	@media ${devices.tablet} {
 		height: 24vw;
 	}
@@ -82,9 +82,9 @@ const PostDescription = styled.p`
 
 const StyledLink = styled(Link)`
 	display: inline-block;
-	text-transform: uppercase;
-	font-weight: 700;
 	font-size: 13px;
+	font-weight: 700;
+	text-transform: uppercase;
 	span {
 		${navBarTitleDecoration('calc(100% + 4px)', '50%', '-2px')};
 	}
@@ -94,9 +94,9 @@ const StyledLink = styled(Link)`
 `;
 
 const PostBackGroundImage = styled(Image)`
+	left: 20px;
 	position: absolute;
 	top: -120px;
-	left: 20px;
 `;
 
 const postBackGroundImage = [PostBackgroundImage01, PostBackgroundImage02, PostBackgroundImage03];

@@ -1,12 +1,12 @@
-import Link from 'next/link';
-import Image from 'next/image';
 import Grid from '@mui/material/Grid';
+import Image from 'next/image';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 import imageList from './imageList.json';
+import { animationHoverImage, animationHoverImageParent } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
-import { animationHoverImage, animationHoverImageParent } from '@/styles/mixin';
 
 const { whiteColor } = color;
 
@@ -19,9 +19,9 @@ const ImageListContainer = styled(Grid)`
 
 const ImageListItem = styled(Link)`
 	${animationHoverImageParent};
-	position: relative;
-	height: 50vw;
 	cursor: pointer;
+	height: 50vw;
+	position: relative;
 	@media ${devices.mobile} {
 		height: 32vw;
 	}
@@ -35,12 +35,12 @@ const StyledImage = styled(Image)`
 `;
 
 const Label = styled.p`
-	position: absolute;
 	bottom: 0;
-	font-size: 24px;
-	left: 30px;
 	color: ${whiteColor};
+	font-size: 24px;
 	font-weight: 700;
+	left: 30px;
+	position: absolute;
 	@media ${devices.laptop} {
 		font-size: 28px;
 		left: 50px;

@@ -1,12 +1,9 @@
-import Link from 'next/link';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import Typography from '@mui/material/Typography';
-
-import styled from 'styled-components';
-import { color } from '@/styles/variables';
 import { useRouter } from 'next/router';
+import styled from 'styled-components';
+
 import { activeNavBarTitleDecoration, navBarTitleDecoration } from '@/styles/mixin';
+import { color } from '@/styles/variables';
 
 const { textColor } = color;
 

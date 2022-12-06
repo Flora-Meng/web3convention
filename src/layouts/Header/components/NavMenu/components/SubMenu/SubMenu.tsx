@@ -1,6 +1,8 @@
-import NavBarButton from '../NavBarButton';
-import { INavItem } from '@/interfaces/nav';
 import styled from 'styled-components';
+
+import NavBarButton from '../NavBarButton';
+
+import { INavItem } from '@/interfaces/nav';
 
 interface SubMenuProps {
 	subNavList: INavItem[];
@@ -9,8 +11,8 @@ interface SubMenuProps {
 const SubMenuContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	padding: 16px;
 	min-width: 230px;
+	padding: 16px;
 `;
 
 const SubMenu: React.FC<SubMenuProps> = ({ subNavList }) => {
