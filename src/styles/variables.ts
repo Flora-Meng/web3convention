@@ -1,6 +1,6 @@
 import { IColor, IDevices, IInputColor, ISize } from '@/interfaces/variables';
 
-const sizes: ISize = {
+export const sizes: ISize = {
 	miniMobile: 320,
 	mobile: 576,
 	tablet: 768,
@@ -11,7 +11,7 @@ const sizes: ISize = {
 	wideScreen: 3840
 };
 
-const devices: IDevices = {
+export const devices: IDevices = {
 	miniMobile: `(min-width: ${sizes.miniMobile}px)`,
 	mobile: `(min-width: ${sizes.mobile}px)`,
 	tablet: `(min-width: ${sizes.tablet}px)`,
@@ -21,18 +21,20 @@ const devices: IDevices = {
 	largeDesktop: `(min-width: ${sizes.largeDesktop}px)`
 };
 
-const color: IColor = {
+export const color: IColor = {
 	primaryColor: '#53f6c6',
 	whiteColor: '#fff',
 	textColor: '#282828',
 	blackColor: '#000'
 };
 
-const inputColor: IInputColor = {
+export const inputColor: IInputColor = {
 	borderColor: '#cacaca',
 	placeholderColor: '#d3d4d5'
 };
 
-const headerHeight = '100px';
-
-export { color, devices, headerHeight, inputColor, sizes };
+export const headerHeight = '100px';
+export const carouselHeight = {
+	tablet: '760px',
+	laptop: '800px'
+};

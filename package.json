@@ -27,11 +27,12 @@
 		"@types/react": "18.0.25",
 		"@types/react-dom": "18.0.9",
 		"babel-preset-next": "^1.4.0",
-		"lodash": "^4.17.21",
 		"cross-env": "^7.0.3",
+		"lodash": "^4.17.21",
 		"next": "13.0.5",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
+		"react-material-ui-carousel": "^3.4.2",
 		"styled-components": "^5.3.6"
 	},
 	"devDependencies": {

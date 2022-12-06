@@ -17,8 +17,9 @@ const HeaderContainer = styled.div`
 	padding: 16px 30px 16px 10px;
 	background-color: ${whiteColor};
 	position: relative;
+	z-index: 2;
 	@media ${devices.laptop} {
-		background-color: #282828;
+		background-color: transparent;
 		padding: 0 30px;
 	}
 `;
