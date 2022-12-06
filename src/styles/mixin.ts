@@ -67,3 +67,29 @@ export const tagDecoration = () => css`
 		font-size: 0.8em;
 	}
 `;
+
+export const animationHoverImageParent = css`
+	display: block;
+	overflow: hidden;
+	width: inherit;
+	&:hover img {
+		-webkit-transform: scale(1.12) translate3d(4px, 0, 0);
+		-moz-transform: scale(1.12) translate3d(4px, 0, 0);
+		transform: scale(1.12) translate3d(4px, 0, 0);
+		-webkit-transition: -webkit-transform 1s cubic-bezier(0.23, 1, 0.32, 1);
+		-moz-transition: -moz-transform 1s cubic-bezier(0.23, 1, 0.32, 1);
+		transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
+	}
+`;
+
+export const animationHoverImage = css`
+	display: block;
+	width: 100%;
+	height: 100%;
+	-webkit-transform: scale(1.12) translate3d(-4px, 0, 0);
+	-moz-transform: scale(1.12) translate3d(-4px, 0, 0);
+	transform: scale(1.12) translate3d(-4px, 0, 0);
+	-webkit-transition: -webkit-transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+	-moz-transition: -moz-transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+	transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+`;

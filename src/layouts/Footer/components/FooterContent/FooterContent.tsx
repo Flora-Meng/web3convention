@@ -18,7 +18,12 @@ import instagramImage05 from '@/assets/images/demo//instagram-image-05.jpg';
 import instagramImage06 from '@/assets/images/demo//instagram-image-06.jpg';
 import imageLoader from '@/utils/loader';
 import { color, devices } from '@/styles/variables';
-import { disableMUIButtonHoverCss, tagDecoration } from '@/styles/mixin';
+import {
+	animationHoverImage,
+	animationHoverImageParent,
+	disableMUIButtonHoverCss,
+	tagDecoration
+} from '@/styles/mixin';
 
 const { blackColor, primaryColor, whiteColor } = color;
 
@@ -71,32 +76,14 @@ const ImageListContainer = styled(Grid)`
 `;
 
 const ImageListItem = styled(Link)`
-	display: block;
-	overflow: hidden;
-	width: inherit;
-	&:hover img {
-		-webkit-transform: scale(1.12) translate3d(4px, 0, 0);
-		-moz-transform: scale(1.12) translate3d(4px, 0, 0);
-		transform: scale(1.12) translate3d(4px, 0, 0);
-		-webkit-transition: -webkit-transform 1s cubic-bezier(0.23, 1, 0.32, 1);
-		-moz-transition: -moz-transform 1s cubic-bezier(0.23, 1, 0.32, 1);
-		transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
-	}
+	${animationHoverImageParent};
 	@media ${devices.tablet} {
 		width: 82px;
 	}
 `;
 
 const StyledImage = styled(Image)`
-	display: block;
-	width: 100%;
-	height: 100%;
-	-webkit-transform: scale(1.12) translate3d(-4px, 0, 0);
-	-moz-transform: scale(1.12) translate3d(-4px, 0, 0);
-	transform: scale(1.12) translate3d(-4px, 0, 0);
-	-webkit-transition: -webkit-transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-	-moz-transition: -moz-transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-	transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+	${animationHoverImage};
 `;
 
 const ContentText = styled.p`
