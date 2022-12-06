@@ -8,7 +8,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import { navItemsConfig, subNavItemsConfig } from '@/layouts/Header/navBarConfig';
 import { ENavItem } from '@/constants/nav';
-import { ActiveNavBarTitleDecoration, NavBarTitleDecoration } from '@/styles/mixin';
+import { activeNavBarTitleDecoration, navBarTitleDecoration } from '@/styles/mixin';
 import { devices } from '@/styles/variables';
 
 import styled from 'styled-components';
@@ -52,10 +52,10 @@ const AccordionSummary = styled((props: AccordionSummaryProps) => (
 	.MuiAccordionSummary-content {
 		margin: 0;
 		p {
-			${NavBarTitleDecoration('calc(100% + 8px)', '50%', '-4px')};
+			${navBarTitleDecoration('calc(100% + 8px)', '50%', '-4px')};
 		}
 		&:hover p::before {
-			${ActiveNavBarTitleDecoration()};
+			${activeNavBarTitleDecoration()};
 		}
 	}
 	.MuiAccordionSummary-expandIconWrapper {
@@ -80,13 +80,13 @@ const SubNavItem = styled.div<NavItemProps>`
 		width: fit-content;
 		margin-block-start: 12px;
 		margin-block-end: 12px;
-		${NavBarTitleDecoration('calc(100% + 8px)', '50%', '-4px')};
+		${navBarTitleDecoration('calc(100% + 8px)', '50%', '-4px')};
 		&:before {
-			${({ isActive }) => (isActive ? ActiveNavBarTitleDecoration() : null)}
+			${({ isActive }) => (isActive ? activeNavBarTitleDecoration() : null)}
 		}
 	}
 	&:hover p::before {
-		${ActiveNavBarTitleDecoration()}
+		${activeNavBarTitleDecoration()}
 	}
 `;
 

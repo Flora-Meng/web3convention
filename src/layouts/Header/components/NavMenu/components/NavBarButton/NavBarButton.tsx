@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import styled from 'styled-components';
 import { color } from '@/styles/variables';
 import { useRouter } from 'next/router';
-import { ActiveNavBarTitleDecoration, NavBarTitleDecoration } from '@/styles/mixin';
+import { activeNavBarTitleDecoration, navBarTitleDecoration } from '@/styles/mixin';
 
 const { textColor } = color;
 
@@ -18,7 +18,7 @@ interface NavBarButtonProps {
 const NavButtonContainer = styled.div`
 	display: inline-block;
 	&:hover span:before {
-		${ActiveNavBarTitleDecoration()}
+		${activeNavBarTitleDecoration()}
 	}
 `;
 
@@ -37,7 +37,7 @@ const CustomizedButton = styled(Button)({
 });
 
 const ButtonCtx = styled.span`
-	${NavBarTitleDecoration('calc(100% + 4px)')};
+	${navBarTitleDecoration('calc(100% + 4px)')};
 `;
 
 const NavBarButton: React.FC<NavBarButtonProps> = ({ buttonCtx, linkHref }) => {

@@ -1,6 +1,3 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import Grid from '@mui/material/Grid';
 import styled from 'styled-components';
 
 import bannerInfo from './bannerInfo.json';
@@ -13,8 +10,6 @@ const { primaryColor, whiteColor } = color;
 interface LeftGridProps {
 	imageSrc: string;
 }
-
-const HomeBannerContainer = styled.div``;
 
 const GridItem = styled.div<LeftGridProps>`
 	background-image: url(${({ imageSrc }) => imageSrc});
@@ -84,7 +79,7 @@ const Description = styled.p`
 
 const HomeBanner: React.FC = () => {
 	return (
-		<HomeBannerContainer className="flex">
+		<div className="flex">
 			<LeftGrid imageSrc={bannerInfo.imageSrc} />
 			<RightGrid imageSrc="/images/demo/main-home-banner-bg.jpg">
 				<InfoContainer className="flex flex-col justify-center">
@@ -94,7 +89,7 @@ const HomeBanner: React.FC = () => {
 					<ThemeButton href="/comingSoon">registration</ThemeButton>
 				</InfoContainer>
 			</RightGrid>
-		</HomeBannerContainer>
+		</div>
 	);
 };
 

@@ -23,6 +23,7 @@ export const devices: IDevices = {
 
 export const color: IColor = {
 	primaryColor: '#53f6c6',
+	darkPrimaryColor: 'rgb(80, 214, 174)',
 	whiteColor: '#fff',
 	textColor: '#282828',
 	blackColor: '#000'
