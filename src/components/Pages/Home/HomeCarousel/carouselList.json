@@ -1,0 +1,20 @@
+[
+	{
+		"title": "Engineering Conference",
+		"subtitle": "< Paris, Sept 5-9 2018 />",
+		"description": "Make another step forward. Spread the inspiration. Join us at the biggest annual event and get ready to learn from the World’s greatest experts.",
+		"imageSrc": "/images/demo/main-slider-background-1.jpg"
+	},
+	{
+		"title": "The Latest Innovations",
+		"subtitle": "< Paris, Sept 5-9 2018 />",
+		"description": "Make another step forward. Spread the inspiration. Join us at the biggest annual event and get ready to learn from the World’s greatest experts.",
+		"imageSrc": "/images/demo/main-slider-background-2.jpg"
+	},
+	{
+		"title": "Inspiring Speeches",
+		"subtitle": "< Paris, Sept 5-9 2018 />",
+		"description": "Make another step forward. Spread the inspiration. Join us at the biggest annual event and get ready to learn from the World’s greatest experts.",
+		"imageSrc": "/images/demo/main-slider-background-3.jpg"
+	}
+]

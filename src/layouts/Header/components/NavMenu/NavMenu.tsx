@@ -12,7 +12,7 @@ import {
 	disableMUIButtonHoverCss,
 	NavBarTitleDecoration
 } from '@/styles/mixin';
-import { color } from '@/styles/variables';
+import { color, headerHeight } from '@/styles/variables';
 import Link from 'next/link';
 
 const { whiteColor } = color;
@@ -32,7 +32,7 @@ const CustomWidthTooltip = styled(({ className, ...props }: TooltipProps) => (
 });
 
 const StyledButton = styled(Button)`
-	height: 100px;
+	height: ${headerHeight};
 	padding: 0 20px;
 	color: ${whiteColor};
 	font-size: 14px;
