@@ -164,7 +164,7 @@ const SocialMediaContainer = styled.div`
 	}
 `;
 
-const HomeTeamList: React.FC = () => {
+const HomeTeam: React.FC = () => {
 	return (
 		<HomeTeamContainer container>
 			{teamMemberList.map(teamMember => {
@@ -242,4 +242,4 @@ const HomeTeamList: React.FC = () => {
 	);
 };
 
-export default HomeTeamList;
+export default HomeTeam;
