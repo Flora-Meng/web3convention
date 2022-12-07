@@ -18,7 +18,7 @@ const ImageListContainer = styled(Grid)`
 `;
 
 const ImageListItem = styled(Link)`
-	${animationHoverImageParent};
+	${animationHoverImageParent()};
 	cursor: pointer;
 	height: 50vw;
 	position: relative;
@@ -31,7 +31,7 @@ const ImageListItem = styled(Link)`
 `;
 
 const StyledImage = styled(Image)`
-	${animationHoverImage};
+	${animationHoverImage()};
 	object-fit: cover;
 `;
 
@@ -50,9 +50,20 @@ const Label = styled.p`
 
 const HomeImageList: React.FC = () => {
 	return (
-		<ImageListContainer container spacing={{ xs: 1, sm: 1, md: 1, lg: 1.5 }}>
+		<ImageListContainer
+			container
+			spacing={{ mobile: 1, tablet: 1, laptop: 1, largeLaptop: 1.5 }}
+		>
 			{imageList.map(item => (
-				<Grid item xs={12} sm={6} md={3} lg={3} key={item.label} className="relative">
+				<Grid
+					item
+					mobile={12}
+					tablet={6}
+					laptop={3}
+					largeLaptop={3}
+					key={item.label}
+					className="relative"
+				>
 					<ImageListItem href={item.href}>
 						<StyledImage
 							loader={imageLoader}

@@ -1,0 +1,122 @@
+[
+	{
+		"_id": "1",
+		"name": "Joe Armstrong",
+		"description": "Lorem ipsum dolor sit amet, feugait adipisci nec an, an assum dicunt scaevola eam. Ut mel alii nonum",
+		"jobTitle": "design_tube",
+		"avatarSrc": "/images/demo/team-img-1-new.jpg",
+		"socialMedia": {
+			"linkedIn": "/",
+			"twitter": "/",
+			"facebook": "/"
+		}
+	},
+	{
+		"_id": "2",
+		"name": "Juan Bennet",
+		"description": "Lorem ipsum dolor sit amet, feugait adipisci nec an, an assum dicunt scaevola eam. Ut mel alii nonum",
+		"jobTitle": "lead_speaker",
+		"avatarSrc": "/images/demo/team-img-2-new.jpg",
+		"socialMedia": {
+			"linkedIn": "/",
+			"twitter": "/",
+			"facebook": "/"
+		}
+	},
+	{
+		"_id": "3",
+		"name": "Lee Byron",
+		"description": "Lorem ipsum dolor sit amet, feugait adipisci nec an, an assum dicunt scaevola eam. Ut mel alii nonum",
+		"jobTitle": "ui_designer",
+		"avatarSrc": "/images/demo/team-img-3-new.jpg",
+		"socialMedia": {
+			"linkedIn": "/",
+			"twitter": "/",
+			"facebook": "/"
+		}
+	},
+	{
+		"_id": "4",
+		"name": "Alex Castillo",
+		"description": "Lorem ipsum dolor sit amet, feugait adipisci nec an, an assum dicunt scaevola eam. Ut mel alii nonum",
+		"jobTitle": "project_manager",
+		"avatarSrc": "/images/demo/team-img-4-new.jpg",
+		"socialMedia": {
+			"linkedIn": "/",
+			"twitter": "/",
+			"facebook": "/"
+		}
+	},
+	{
+		"_id": "5",
+		"name": "Joanne Vaniccola",
+		"description": "Lorem ipsum dolor sit amet, feugait adipisci nec an, an assum dicunt scaevola eam. Ut mel alii nonum",
+		"jobTitle": "digital_designer",
+		"avatarSrc": "/images/demo/team-img-5-new.jpg",
+		"socialMedia": {
+			"linkedIn": "/",
+			"twitter": "/",
+			"facebook": "/"
+		}
+	},
+	{
+		"_id": "6",
+		"name": "Jen Kramer",
+		"description": "Lorem ipsum dolor sit amet, feugait adipisci nec an, an assum dicunt scaevola eam. Ut mel alii nonum",
+		"jobTitle": "entrepreneur",
+		"avatarSrc": "/images/demo/team-img-6-new.jpg",
+		"socialMedia": {
+			"linkedIn": "/",
+			"twitter": "/",
+			"facebook": "/"
+		}
+	},
+	{
+		"_id": "7",
+		"name": "Bruce Lawson",
+		"description": "Lorem ipsum dolor sit amet, feugait adipisci nec an, an assum dicunt scaevola eam. Ut mel alii nonum",
+		"jobTitle": "developer",
+		"avatarSrc": "/images/demo/team-img-7-new.jpg",
+		"socialMedia": {
+			"linkedIn": "/",
+			"twitter": "/",
+			"facebook": "/"
+		}
+	},
+	{
+		"_id": "8",
+		"name": "Rachel Layrock",
+		"description": "Lorem ipsum dolor sit amet, feugait adipisci nec an, an assum dicunt scaevola eam. Ut mel alii nonum",
+		"jobTitle": "freelance_designer",
+		"avatarSrc": "/images/demo/team-img-8-new.jpg",
+		"socialMedia": {
+			"linkedIn": "/",
+			"twitter": "/",
+			"facebook": "/"
+		}
+	},
+	{
+		"_id": "9",
+		"name": "Bill Steiner",
+		"description": "Lorem ipsum dolor sit amet, feugait adipisci nec an, an assum dicunt scaevola eam. Ut mel alii nonum",
+		"jobTitle": "content_writer",
+		"avatarSrc": "/images/demo/team-img-9-new.jpg",
+		"socialMedia": {
+			"linkedIn": "/",
+			"twitter": "/",
+			"facebook": "/"
+		}
+	},
+	{
+		"_id": "10",
+		"name": "Maki Azumi",
+		"description": "Lorem ipsum dolor sit amet, feugait adipisci nec an, an assum dicunt scaevola eam. Ut mel alii nonum",
+		"jobTitle": "seo_manager",
+		"avatarSrc": "/images/demo/team-img-10-new.jpg",
+		"socialMedia": {
+			"linkedIn": "/",
+			"twitter": "/",
+			"facebook": "/"
+		}
+	}
+]

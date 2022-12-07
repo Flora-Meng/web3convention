@@ -57,10 +57,16 @@ const StyledIconButton = styled(IconButton)`
 	}
 `;
 
-const CopyRight = () => (
+const gridColumn = {
+	mobile: 12,
+	tablet: 12,
+	laptop: 3
+};
+
+const CopyRight: React.FC = () => (
 	<ContentContainer className="flex">
 		<ContainerGrid container className="justify-between">
-			<Grid item xs={12} sm={12} md={3} lg={3}>
+			<Grid item {...gridColumn}>
 				<Logo
 					loader={imageLoader}
 					unoptimized
@@ -71,10 +77,10 @@ const CopyRight = () => (
 					priority
 				/>
 			</Grid>
-			<Grid item xs={12} sm={12} md={3} lg={3}>
+			<Grid item {...gridColumn}>
 				<p>© 2022 Web 3 Convention, All Rights Reserved</p>
 			</Grid>
-			<Grid item xs={12} sm={12} md={3} lg={3} className="flex items-center">
+			<Grid item {...gridColumn} className="flex items-center">
 				<FollowLabel>Follow us</FollowLabel>
 				<StyledIconButton aria-label="add an alarm">
 					<TwitterIcon />
