@@ -69,28 +69,28 @@ export const tagDecoration = () => css`
 	}
 `;
 
-export const animationHoverImageParent = css`
+export const animationHoverImageParent = (translateX = '4px') => css`
 	display: block;
 	overflow: hidden;
 	width: inherit;
 	&:hover img {
-		-moz-transform: scale(1.12) translate3d(4px, 0, 0);
+		-moz-transform: scale(1.12) translate3d(${translateX}, 0, 0);
 		-moz-transition: -moz-transform 1s cubic-bezier(0.23, 1, 0.32, 1);
-		-webkit-transform: scale(1.12) translate3d(4px, 0, 0);
+		-webkit-transform: scale(1.12) translate3d(${translateX}, 0, 0);
 		-webkit-transition: -webkit-transform 1s cubic-bezier(0.23, 1, 0.32, 1);
-		transform: scale(1.12) translate3d(4px, 0, 0);
+		transform: scale(1.12) translate3d(${translateX}, 0, 0);
 		transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
 	}
 `;
 
-export const animationHoverImage = css`
-	-moz-transform: scale(1.12) translate3d(-4px, 0, 0);
+export const animationHoverImage = (translateX = '-4px') => css`
+	-moz-transform: scale(1.12) translate3d(${translateX}, 0, 0);
 	-moz-transition: -moz-transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-	-webkit-transform: scale(1.12) translate3d(-4px, 0, 0);
+	-webkit-transform: scale(1.12) translate3d(${translateX}, 0, 0);
 	-webkit-transition: -webkit-transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 	display: block;
 	height: 100%;
-	transform: scale(1.12) translate3d(-4px, 0, 0);
+	transform: scale(1.12) translate3d(${translateX}, 0, 0);
 	transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 	width: 100%;
 `;

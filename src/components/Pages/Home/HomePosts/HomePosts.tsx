@@ -58,7 +58,7 @@ const Subtitle = styled.p`
 `;
 
 const ImageListItem = styled(Link)`
-	${animationHoverImageParent};
+	${animationHoverImageParent()};
 	cursor: pointer;
 	height: 50vw;
 	position: relative;
@@ -72,7 +72,7 @@ const ImageListItem = styled(Link)`
 `;
 
 const StyledImage = styled(Image)`
-	${animationHoverImage};
+	${animationHoverImage()};
 	object-fit: cover;
 `;
 
@@ -125,10 +125,10 @@ const HomePosts: React.FC = () => {
 					return (
 						<Grid
 							item
-							xs={12}
-							sm={12}
-							md={6}
-							lg={4}
+							mobile={12}
+							tablet={12}
+							laptop={6}
+							largeLaptop={4}
 							key={post._id}
 							className="relative"
 						>

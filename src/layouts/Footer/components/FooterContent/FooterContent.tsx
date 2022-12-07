@@ -76,14 +76,14 @@ const ImageListContainer = styled(Grid)`
 `;
 
 const ImageListItem = styled(Link)`
-	${animationHoverImageParent};
+	${animationHoverImageParent()};
 	@media ${devices.tablet} {
 		width: 82px;
 	}
 `;
 
 const StyledImage = styled(Image)`
-	${animationHoverImage};
+	${animationHoverImage()};
 `;
 
 const ContentText = styled.p`
@@ -192,7 +192,7 @@ const FooterContent = () => {
 	return (
 		<ContentContainer sx={{ flexGrow: 1 }} className="flex justify-center">
 			<ContainerGrid container spacing={4}>
-				<Grid item xs={12} sm={6} md={3} lg={3}>
+				<Grid item mobile={12} tablet={6} laptop={3} largeLaptop={3}>
 					<Logo
 						loader={imageLoader}
 						unoptimized
@@ -209,7 +209,7 @@ const FooterContent = () => {
 					<ContentText>+490 54 324 77</ContentText>
 					<ContentText>Potsdamer Platz 9797</ContentText>
 				</Grid>
-				<Grid item xs={12} sm={6} md={3} lg={3}>
+				<Grid item mobile={12} tablet={6} laptop={3} largeLaptop={3}>
 					<Title>Useful Links</Title>
 					<div className="flex flex-col">
 						{linkConfigList.map(linkConfig => (
@@ -219,11 +219,18 @@ const FooterContent = () => {
 						))}
 					</div>
 				</Grid>
-				<Grid item xs={12} sm={6} md={3} lg={3}>
+				<Grid item mobile={12} tablet={6} laptop={3} largeLaptop={3}>
 					<Title>Instagram</Title>
 					<ImageListContainer container spacing={1}>
 						{itemData.map(item => (
-							<Grid item xs={6} sm={4} md={6} lg={4} key={item.title}>
+							<Grid
+								item
+								mobile={6}
+								tablet={4}
+								laptop={6}
+								largeLaptop={4}
+								key={item.title}
+							>
 								<ImageListItem href="/comingSoon">
 									<StyledImage
 										loader={imageLoader}
@@ -236,7 +243,7 @@ const FooterContent = () => {
 						))}
 					</ImageListContainer>
 				</Grid>
-				<Grid item xs={12} sm={6} md={3} lg={3}>
+				<Grid item mobile={12} tablet={6} laptop={3} largeLaptop={3}>
 					<Title>Join the Newsletter</Title>
 					<ContentText>Stay informed about the latest events.</ContentText>
 					<FormControl fullWidth variant="outlined">

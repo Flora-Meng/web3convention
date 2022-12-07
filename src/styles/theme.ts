@@ -2,6 +2,25 @@ import { createTheme } from '@mui/material/styles';
 
 import { color } from './variables';
 
+// override default MUI module
+declare module '@mui/material/styles' {
+	interface BreakpointOverrides {
+		xs: false; // removes the `xs` breakpoint
+		sm: false;
+		md: false;
+		lg: false;
+		xl: false;
+		miniMobile: true;
+		mobile: true;
+		tablet: true;
+		laptop: true;
+		largeLaptop: true;
+		desktop: true;
+		largeDesktop: true;
+		wideScreen: true;
+	}
+}
+
 // Warning: MUI
 const defaultTheme = createTheme({
 	typography: {
@@ -16,11 +35,14 @@ const defaultTheme = createTheme({
 	},
 	breakpoints: {
 		values: {
-			xs: 320,
-			sm: 576,
-			md: 768,
-			lg: 1024,
-			xl: 1920
+			miniMobile: 0,
+			mobile: 320,
+			tablet: 576,
+			laptop: 768,
+			largeLaptop: 1024,
+			desktop: 1440,
+			largeDesktop: 1920,
+			wideScreen: 2560
 		}
 	}
 });
