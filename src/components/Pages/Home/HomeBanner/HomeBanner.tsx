@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import bannerInfo from './bannerInfo.json';
 import ThemeButton from '@/components/Shares/ThemeButton';
-import { tagDecoration } from '@/styles/mixin';
+import { animation, animationFillMode, tagDecoration } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
 
 const { primaryColor, whiteColor } = color;
@@ -59,6 +59,9 @@ const Title = styled.h2`
 	line-height: 1.1;
 	margin: 0;
 	margin-bottom: 24px;
+	opacity: 0;
+	${animation('fade-in-opacity-transform-to-up', '0.5s', 'ease', '0.5s', '1')};
+	${animationFillMode()};
 `;
 
 const Subtitle = styled.p`
@@ -74,7 +77,10 @@ const Description = styled.p`
 	line-height: 1.8;
 	margin: 0;
 	margin-bottom: 40px;
+	opacity: 0;
 	padding-right: 20px;
+	${animation('fade-in-opacity-transform-to-up', '0.5s', 'ease', '0.7s', '1')};
+	${animationFillMode()};
 `;
 
 const HomeBanner: React.FC = () => {

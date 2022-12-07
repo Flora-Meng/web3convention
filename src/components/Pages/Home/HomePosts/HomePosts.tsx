@@ -9,6 +9,8 @@ import PostBackgroundImage02 from '@/assets/images/blog-background-img-2.png';
 import PostBackgroundImage03 from '@/assets/images/blog-background-img-3.png';
 import {
 	activeNavBarTitleDecoration,
+	animation,
+	animationFillMode,
 	animationHoverImage,
 	animationHoverImageParent,
 	navBarTitleDecoration,
@@ -38,6 +40,9 @@ const Title = styled.h2`
 	margin: 0;
 	margin-bottom: 64px;
 	max-width: 350px;
+	opacity: 0;
+	${animation('fade-in-opacity-transform-to-up', '1s', 'ease', '0.7s', '1')};
+	${animationFillMode()};
 `;
 
 const Subtitle = styled.p`
@@ -47,6 +52,9 @@ const Subtitle = styled.p`
 	margin: 0;
 	${tagDecoration()};
 	margin-bottom: 6px;
+	opacity: 0;
+	${animation('fade-in-opacity-transform-to-up', '1s', 'ease', '0.4s', '1')};
+	${animationFillMode()};
 `;
 
 const ImageListItem = styled(Link)`
@@ -65,6 +73,7 @@ const ImageListItem = styled(Link)`
 
 const StyledImage = styled(Image)`
 	${animationHoverImage};
+	object-fit: cover;
 `;
 
 const PostTitle = styled.h3`
@@ -95,8 +104,12 @@ const StyledLink = styled(Link)`
 
 const PostBackGroundImage = styled(Image)`
 	left: 20px;
+	opacity: 0;
 	position: absolute;
 	top: -120px;
+	z-index: -1;
+	${animation('fade-in-opacity-transform-to-right', '0.5s', 'ease', '0.5s', '1')};
+	${animationFillMode()};
 `;
 
 const postBackGroundImage = [PostBackgroundImage01, PostBackgroundImage02, PostBackgroundImage03];
@@ -124,9 +137,8 @@ const HomePosts: React.FC = () => {
 									loader={imageLoader}
 									src={post.imageSrc}
 									alt={post.title}
+									fill
 									unoptimized
-									layout="fill"
-									objectFit="cover"
 								/>
 							</ImageListItem>
 							<Link href={postLink}>
