@@ -32,6 +32,7 @@ const ImageListItem = styled(Link)`
 
 const StyledImage = styled(Image)`
 	${animationHoverImage};
+	object-fit: cover;
 `;
 
 const Label = styled.p`
@@ -57,9 +58,7 @@ const HomeImageList: React.FC = () => {
 							loader={imageLoader}
 							src={item.imageSrc}
 							alt={item.label}
-							unoptimized
-							layout="fill"
-							objectFit="cover"
+							fill
 						/>
 					</ImageListItem>
 					<Label>{item.label}</Label>

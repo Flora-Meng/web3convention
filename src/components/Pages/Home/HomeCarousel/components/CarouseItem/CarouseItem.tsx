@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import ThemeButton from '@/components/Shares/ThemeButton';
+import { animation, animationFillMode } from '@/styles/mixin';
 import { carouselHeight, color, devices } from '@/styles/variables';
 
 const { whiteColor } = color;
@@ -51,6 +52,9 @@ const Title = styled.h2`
 	line-height: 1.1;
 	margin: 0;
 	margin-bottom: 16px;
+	opacity: 0;
+	${animation('fade-in-opacity-transform-to-left', '1s', 'ease', '0.7s', '1')};
+	${animationFillMode()};
 	@media ${devices.tablet} {
 		font-size: 90px;
 	}
@@ -61,6 +65,9 @@ const Subtitle = styled.p`
 	font-style: italic;
 	margin: 0;
 	margin-bottom: 8px;
+	opacity: 0;
+	${animation('fade-in-opacity-transform-to-left', '1s', 'ease', '0.5s', '1')};
+	${animationFillMode()};
 	@media ${devices.tablet} {
 		font-size: 22px;
 		margin-bottom: 0;
@@ -72,10 +79,19 @@ const Description = styled.p`
 	line-height: 1.8;
 	margin: 0;
 	margin-bottom: 40px;
+	opacity: 0;
 	padding-right: 20px;
+	${animation('fade-in-opacity-transform-to-left', '1s', 'ease', '0.9s', '1')};
+	${animationFillMode()};
 	@media ${devices.tablet} {
 		line-height: 1.5;
 	}
+`;
+
+const ButtonContainer = styled.div`
+	opacity: 0;
+	${animation('fade-in-opacity-transform-to-left', '1s', 'ease', '1.1s', '1')};
+	${animationFillMode()};
 `;
 
 const CarouseItem: React.FC<CarouseItemProps> = ({
@@ -87,7 +103,9 @@ const CarouseItem: React.FC<CarouseItemProps> = ({
 				<Subtitle>{subtitle}</Subtitle>
 				<Title>{title}</Title>
 				<Description>{description}</Description>
-				<ThemeButton href="/comingSoon">registration</ThemeButton>
+				<ButtonContainer>
+					<ThemeButton href="/comingSoon">registration</ThemeButton>
+				</ButtonContainer>
 			</InfoContainer>
 		</CarouseItemContainer>
 	);

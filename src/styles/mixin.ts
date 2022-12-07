@@ -102,3 +102,21 @@ export const textEllipsis = (line = 1) => css`
 	overflow: hidden;
 	text-overflow: ellipsis;
 `;
+
+export const animation = (
+	name: string,
+	duration: string,
+	timingFunction: string,
+	delay: string,
+	iterationCount = '1'
+) => css`
+	-moz-animation: ${name} ${duration} ${timingFunction} ${delay} ${iterationCount};
+	-webkit-animation: ${name} ${duration} ${timingFunction} ${delay} ${iterationCount};
+	animation: ${name} ${duration} ${timingFunction} ${delay} ${iterationCount};
+`;
+
+export const animationFillMode = (mode = 'forwards') => css`
+	-o-animation-fill-mode: ${mode};
+	-webkit-animation-fill-mode: ${mode};
+	animation-fill-mode: ${mode};
+`;
