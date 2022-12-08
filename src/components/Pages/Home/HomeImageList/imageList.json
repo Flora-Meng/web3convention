@@ -1,20 +1,24 @@
 [
 	{
+		"_id": "1",
 		"label": "2019",
 		"imageSrc": "/images/demo/h1-banner-1.jpg",
 		"href": "/#"
 	},
 	{
+		"_id": "2",
 		"label": "2020",
 		"imageSrc": "/images/demo/h1-banner-2.jpg",
 		"href": "/#"
 	},
 	{
+		"_id": "3",
 		"label": "2021",
 		"imageSrc": "/images/demo/h1-banner-3.jpg",
 		"href": "/#"
 	},
 	{
+		"_id": "4",
 		"label": "2022",
 		"imageSrc": "/images/demo/h1-banner-4.jpg",
 		"href": "/#"

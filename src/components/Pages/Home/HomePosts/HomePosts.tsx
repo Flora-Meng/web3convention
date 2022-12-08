@@ -57,7 +57,7 @@ const Subtitle = styled.p`
 	${animationFillMode()};
 `;
 
-const ImageListItem = styled(Link)`
+const ImageItem = styled(Link)`
 	${animationHoverImageParent()};
 	cursor: pointer;
 	height: 50vw;
@@ -132,7 +132,7 @@ const HomePosts: React.FC = () => {
 							key={post._id}
 							className="relative"
 						>
-							<ImageListItem href={postLink}>
+							<ImageItem href={postLink}>
 								<StyledImage
 									loader={imageLoader}
 									src={post.imageSrc}
@@ -140,7 +140,7 @@ const HomePosts: React.FC = () => {
 									fill
 									unoptimized
 								/>
-							</ImageListItem>
+							</ImageItem>
 							<Link href={postLink}>
 								<PostTitle>{post.title}</PostTitle>
 							</Link>

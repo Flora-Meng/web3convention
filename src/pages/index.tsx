@@ -1,5 +1,6 @@
 import HomeBanner from '@/components/Pages/Home/HomeBanner';
 import HomeCarousel from '@/components/Pages/Home/HomeCarousel';
+import HomeGallery from '@/components/Pages/Home/HomeGallery';
 import HomeImageList from '@/components/Pages/Home/HomeImageList';
 import HomePosts from '@/components/Pages/Home/HomePosts';
 import HomeSubscription from '@/components/Pages/Home/HomeSubscription';
@@ -19,6 +20,7 @@ const Homepage: ComponentType = () => {
 			<HomePosts />
 			<HomeTeam />
 			<HomeSubscription />
+			<HomeGallery />
 		</>
 	);
 };

@@ -7,6 +7,7 @@ import { carouselHeight, color, devices } from '@/styles/variables';
 const { whiteColor } = color;
 
 interface ICarouseItem {
+	_id: string;
 	title: string;
 	subtitle: string;
 	description: string;

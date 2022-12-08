@@ -225,6 +225,7 @@ const HomeTeam: React.FC = () => {
 														href={link}
 														target="_blank"
 														rel="noopener noreferrer"
+														key={`${teamMember._id}-${socialMedia}`}
 													>
 														{socialMediaIcon}
 													</Link>
