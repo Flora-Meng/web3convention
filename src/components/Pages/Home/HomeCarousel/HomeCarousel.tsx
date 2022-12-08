@@ -33,7 +33,7 @@ const HomeCarousel: React.FC = () => {
 				}}
 			>
 				{carouselList.map(carouselInfo => (
-					<CarouseItem carouselInfo={carouselInfo} key={carouselInfo.title} />
+					<CarouseItem carouselInfo={carouselInfo} key={carouselInfo._id} />
 				))}
 			</Carousel>
 		</CarouselContainer>

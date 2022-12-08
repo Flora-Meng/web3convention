@@ -75,7 +75,7 @@ const ImageListContainer = styled(Grid)`
 	}
 `;
 
-const ImageListItem = styled(Link)`
+const ImageItem = styled(Link)`
 	${animationHoverImageParent()};
 	@media ${devices.tablet} {
 		width: 82px;
@@ -231,14 +231,14 @@ const FooterContent = () => {
 								largeLaptop={4}
 								key={item.title}
 							>
-								<ImageListItem href="/comingSoon">
+								<ImageItem href="/comingSoon">
 									<StyledImage
 										loader={imageLoader}
 										src={item.img}
 										alt={item.title}
 										unoptimized
 									/>
-								</ImageListItem>
+								</ImageItem>
 							</Grid>
 						))}
 					</ImageListContainer>
