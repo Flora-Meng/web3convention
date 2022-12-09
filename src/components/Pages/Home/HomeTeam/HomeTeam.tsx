@@ -125,13 +125,14 @@ const Info = styled.div`
 
 const Subtitle = styled.p`
 	color: ${darkPrimaryColor};
-	font-size: 16px;
+	font-size: 14px;
 	font-style: italic;
-	margin: 0;
+	letter-spacing: 0.05rem;
 	${tagDecoration()};
-	opacity: 0;
+	margin: 0;
 	${animation('fade-in-opacity-transform-to-up', '1s', 'ease', '0.4s', '1')};
 	${animationFillMode()};
+	opacity: 0;
 `;
 
 const Title = styled.h3`

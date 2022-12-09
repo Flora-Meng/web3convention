@@ -62,15 +62,17 @@ const Title = styled.h2`
 `;
 
 const Subtitle = styled.p`
-	font-size: 20px;
+	font-size: 16px;
 	font-style: italic;
+	letter-spacing: 0.05rem;
 	margin: 0;
 	margin-bottom: 8px;
-	opacity: 0;
 	${animation('fade-in-opacity-transform-to-left', '1s', 'ease', '0.5s', '1')};
 	${animationFillMode()};
+	opacity: 0;
+
 	@media ${devices.tablet} {
-		font-size: 22px;
+		font-size: 18px;
 		margin-bottom: 0;
 	}
 `;

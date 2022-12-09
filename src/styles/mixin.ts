@@ -135,12 +135,13 @@ export const sectionTitle = css`
 
 export const sectionSubtitle = css`
 	color: ${darkPrimaryColor};
-	font-size: 16px;
+	font-size: 14px;
 	font-style: italic;
-	margin: 0;
+	letter-spacing: 0.05rem;
 	${tagDecoration()};
+	margin: 0;
 	margin-bottom: 6px;
-	opacity: 0;
 	${animation('fade-in-opacity-transform-to-up', '1s', 'ease', '0.4s', '1')};
 	${animationFillMode()};
+	opacity: 0;
 `;

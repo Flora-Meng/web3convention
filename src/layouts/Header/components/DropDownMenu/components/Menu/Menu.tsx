@@ -75,8 +75,7 @@ const SubNavItem = styled.div<NavItemProps>`
 	font-size: 13px;
 	font-weight: 600;
 	p {
-		margin-block-end: 12px;
-		margin-block-start: 12px;
+		margin: 12px 0;
 		padding: 0;
 		width: fit-content;
 		${navBarTitleDecoration('calc(100% + 8px)', '50%', '-4px')};
