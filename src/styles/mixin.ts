@@ -2,7 +2,7 @@ import { css } from 'styled-components';
 
 import { color } from '@/styles/variables';
 
-const { primaryColor } = color;
+const { darkPrimaryColor, primaryColor } = color;
 
 /* Nav item line-through decoration and animation */
 
@@ -119,4 +119,28 @@ export const animationFillMode = (mode = 'forwards') => css`
 	-o-animation-fill-mode: ${mode};
 	-webkit-animation-fill-mode: ${mode};
 	animation-fill-mode: ${mode};
+`;
+
+export const sectionTitle = css`
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 1.1;
+	margin: 0;
+	margin-bottom: 64px;
+	max-width: 400px;
+	opacity: 0;
+	${animation('fade-in-opacity-transform-to-up', '1s', 'ease', '0.7s', '1')};
+	${animationFillMode()};
+`;
+
+export const sectionSubtitle = css`
+	color: ${darkPrimaryColor};
+	font-size: 16px;
+	font-style: italic;
+	margin: 0;
+	${tagDecoration()};
+	margin-bottom: 6px;
+	opacity: 0;
+	${animation('fade-in-opacity-transform-to-up', '1s', 'ease', '0.4s', '1')};
+	${animationFillMode()};
 `;

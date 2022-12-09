@@ -5,6 +5,7 @@ import HomeImageList from '@/components/Pages/Home/HomeImageList';
 import HomePosts from '@/components/Pages/Home/HomePosts';
 import HomeSubscription from '@/components/Pages/Home/HomeSubscription';
 import HomeTeam from '@/components/Pages/Home/HomeTeam';
+import HomeTestimonial from '@/components/Pages/Home/HomeTestimonial';
 import DefaultLayout from '@/layouts/DefaultLayout';
 import PageHead from '@/layouts/PageHead';
 
@@ -21,6 +22,7 @@ const Homepage: ComponentType = () => {
 			<HomeTeam />
 			<HomeSubscription />
 			<HomeGallery />
+			<HomeTestimonial />
 		</>
 	);
 };

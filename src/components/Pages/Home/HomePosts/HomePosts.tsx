@@ -14,13 +14,12 @@ import {
 	animationHoverImage,
 	animationHoverImageParent,
 	navBarTitleDecoration,
-	tagDecoration,
+	sectionSubtitle,
+	sectionTitle,
 	textEllipsis
 } from '@/styles/mixin';
-import { color, devices, sizes } from '@/styles/variables';
+import { devices, sizes } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
-
-const { darkPrimaryColor } = color;
 
 const HomePostsContainer = styled.div`
 	max-width: ${`${sizes.largeLaptop}px`};
@@ -34,27 +33,11 @@ const HomePostsContainer = styled.div`
 `;
 
 const Title = styled.h2`
-	font-size: 40px;
-	font-weight: 700;
-	line-height: 1.1;
-	margin: 0;
-	margin-bottom: 64px;
-	max-width: 350px;
-	opacity: 0;
-	${animation('fade-in-opacity-transform-to-up', '1s', 'ease', '0.7s', '1')};
-	${animationFillMode()};
+	${sectionTitle};
 `;
 
 const Subtitle = styled.p`
-	color: ${darkPrimaryColor};
-	font-size: 16px;
-	font-style: italic;
-	margin: 0;
-	${tagDecoration()};
-	margin-bottom: 6px;
-	opacity: 0;
-	${animation('fade-in-opacity-transform-to-up', '1s', 'ease', '0.4s', '1')};
-	${animationFillMode()};
+	${sectionSubtitle};
 `;
 
 const ImageItem = styled(Link)`
