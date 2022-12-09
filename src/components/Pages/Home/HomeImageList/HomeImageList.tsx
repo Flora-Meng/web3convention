@@ -70,6 +70,7 @@ const HomeImageList: React.FC = () => {
 							src={item.imageSrc}
 							alt={item.label}
 							fill
+							unoptimized
 						/>
 					</ImageItem>
 					<Label>{item.label}</Label>

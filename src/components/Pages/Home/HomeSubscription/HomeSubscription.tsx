@@ -41,7 +41,7 @@ const Subtitle = styled.p`
 	${animationFillMode()};
 `;
 
-const Title = styled.h3`
+const Title = styled.h2`
 	font-size: 30px;
 	font-weight: 700;
 	line-height: 1.2;
