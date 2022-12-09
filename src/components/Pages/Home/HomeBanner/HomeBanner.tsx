@@ -66,10 +66,11 @@ const Title = styled.h2`
 
 const Subtitle = styled.p`
 	color: ${primaryColor};
-	font-size: 18px;
+	font-size: 12px;
 	font-style: italic;
-	margin: 0;
+	letter-spacing: 0.1rem;
 	${tagDecoration()};
+	margin: 0;
 `;
 
 const Description = styled.p`

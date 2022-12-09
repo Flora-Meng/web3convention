@@ -6,9 +6,9 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import {
-	animation,
-	animationFillMode,
 	disableMUIButtonHoverCss,
+	sectionSubtitle,
+	sectionTitle,
 	tagDecoration
 } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
@@ -31,22 +31,13 @@ const Content = styled.div`
 `;
 
 const Subtitle = styled.p`
-	color: ${darkPrimaryColor};
-	font-size: 16px;
-	font-style: italic;
-	margin: 0;
-	${tagDecoration()};
-	opacity: 0;
-	${animation('fade-in-opacity-transform-to-up', '1s', 'ease', '0.4s', '1')};
-	${animationFillMode()};
+	${sectionSubtitle};
+	margin-bottom: 0;
 `;
 
 const Title = styled.h2`
-	font-size: 30px;
-	font-weight: 700;
-	line-height: 1.2;
-	margin: 0;
-	margin-bottom: 30px;
+	${sectionTitle};
+	color: ${whiteColor};
 	@media ${devices.tablet} {
 		font-size: 40px;
 	}

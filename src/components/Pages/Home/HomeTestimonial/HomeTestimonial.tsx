@@ -73,16 +73,21 @@ const HomeTestimonial: React.FC = () => {
 			>
 				{isMobile
 					? testimonialList.map(testimonial => (
-							<Grid item tablet={6} className="flex justify-center">
+							<Grid
+								item
+								tablet={6}
+								className="flex justify-center"
+								key={`${testimonial._id}`}
+							>
 								<TestimonialItem testimonial={testimonial} />
 							</Grid>
 					  ))
 					: testimonialList
 							.filter((_, index) => index % 2 === 0)
-							.map((carouselInfo, index) => (
+							.map((testimonial, index) => (
 								<Grid
 									container
-									key={`${carouselInfo._id}`}
+									key={`${testimonial._id}`}
 									className="flex justify-between"
 								>
 									<Grid item tablet={6} className="flex justify-center">

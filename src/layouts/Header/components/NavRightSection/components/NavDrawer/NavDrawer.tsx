@@ -47,13 +47,13 @@ const Tagline = styled.p`
 	${tagDecoration()};
 	color: ${primaryColor};
 	font-style: italic;
-	margin-block-end: 0;
+	margin-bottom: 0;
 `;
 
 const Title = styled.h4`
 	font-size: 25px;
 	font-weight: 700;
-	margin-block-start: 0;
+	margin-top: 0;
 `;
 
 const StyledLink = styled(Link)`

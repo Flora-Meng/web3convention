@@ -15,7 +15,7 @@ interface StyledButton {
 
 const StyledButton = styled(Button)`
 	border-radius: 5em;
-	font-size: 13px;
+	font-size: 12px;
 	font-weight: 700;
 	letter-spacing: 0.05em;
 	line-height: 2em;
@@ -42,7 +42,7 @@ const StyledButton = styled(Button)`
 		}
 	}
 	@media ${devices.laptop} {
-		padding: 16px 36px;
+		padding: 14px 34px;
 	}
 `;
 
