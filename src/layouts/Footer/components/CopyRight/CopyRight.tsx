@@ -1,9 +1,11 @@
-import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedinIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import YouTubeIcon from '@mui/icons-material/YouTube';
+import YoutubeIcon from '@mui/icons-material/Youtube';
 import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import Image from 'next/image';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 import { disableMUIButtonHoverCss } from '@/styles/mixin';
@@ -83,13 +85,27 @@ const CopyRight: React.FC = () => (
 			<Grid item {...gridColumn} className="flex items-center">
 				<FollowLabel>Follow us</FollowLabel>
 				<StyledIconButton aria-label="add an alarm">
-					<TwitterIcon />
+					<Link href="https://twitter.com/Web3Convention" target="_blank">
+						<TwitterIcon />
+					</Link>
 				</StyledIconButton>
 				<StyledIconButton aria-label="add an alarm">
-					<FacebookIcon />
+					<Link href="https://www.linkedin.com/company/web3convention" target="_blank">
+						<LinkedinIcon />
+					</Link>
 				</StyledIconButton>
 				<StyledIconButton aria-label="add an alarm">
-					<YouTubeIcon />
+					<Link href="https://www.instagram.com/web3convention" target="_blank">
+						<InstagramIcon />
+					</Link>
+				</StyledIconButton>
+				<StyledIconButton aria-label="add an alarm">
+					<Link
+						href="https://www.youtube.com/channel/UCTJEa6rxybFHmmlx6YAf1iA"
+						target="_blank"
+					>
+						<YoutubeIcon />
+					</Link>
 				</StyledIconButton>
 			</Grid>
 		</ContainerGrid>

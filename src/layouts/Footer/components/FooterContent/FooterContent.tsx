@@ -127,23 +127,19 @@ const EmailHelperText = styled(FormHelperText)`
 
 const linkConfigList = [
 	{
-		label: 'Engaging, purposeful, and creative',
+		label: 'ICC Sydney',
+		path: 'https://www.iccsydney.com.au/'
+	},
+	{
+		label: 'Apply to speak at Web3 Convention',
 		path: '/comingSoon'
 	},
 	{
-		label: 'Extroadinary life events.',
+		label: 'Volunteer at Web3 Convention',
 		path: '/comingSoon'
 	},
 	{
-		label: 'Design your perfect event.',
-		path: '/comingSoon'
-	},
-	{
-		label: 'Connect your worlds.',
-		path: '/comingSoon'
-	},
-	{
-		label: 'Improving workplace productivity.',
+		label: 'Anti-harassment policy',
 		path: '/comingSoon'
 	}
 ];

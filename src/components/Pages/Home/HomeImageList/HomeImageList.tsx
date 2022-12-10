@@ -42,6 +42,7 @@ const Label = styled.p`
 	font-weight: 700;
 	left: 30px;
 	position: absolute;
+	text-shadow: 0 0 10px #000000;
 	@media ${devices.laptop} {
 		font-size: 28px;
 		left: 50px;

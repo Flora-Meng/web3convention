@@ -63,8 +63,8 @@ const HomeParallax: React.FC = () => {
 				backgroundPosition: `center ${backgroundPositionTop}px`
 			}}
 		>
-			<Subtitle>the_festival</Subtitle>
-			<Title>Predict, Discuss & Invent The Future Wire</Title>
+			<Subtitle>web2_web3</Subtitle>
+			<Title>Welcome to a World where Web3 is now a thing</Title>
 			<ThemeButton href="/comingSoon">But Tickets</ThemeButton>
 		</HomeParallaxContainer>
 	);

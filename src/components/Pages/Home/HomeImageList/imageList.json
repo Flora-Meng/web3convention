@@ -2,25 +2,25 @@
 	{
 		"_id": "1",
 		"label": "NFT Gallery",
-		"imageSrc": "/images/demo/h1-banner-1.jpg",
+		"imageSrc": "/images/nft.png",
 		"href": "/#"
 	},
 	{
 		"_id": "2",
 		"label": "Pitch Space",
-		"imageSrc": "/images/demo/h1-banner-2.jpg",
+		"imageSrc": "/images/pitch.png",
 		"href": "/#"
 	},
 	{
 		"_id": "3",
 		"label": "Whale Yacht Party",
-		"imageSrc": "/images/demo/h1-banner-3.jpg",
+		"imageSrc": "/images/starship-sydney-cruise.png",
 		"href": "/#"
 	},
 	{
 		"_id": "4",
 		"label": "Web2 & Web3",
-		"imageSrc": "/images/demo/h1-banner-4.jpg",
+		"imageSrc": "/images/vr.png",
 		"href": "/#"
 	}
 ]
