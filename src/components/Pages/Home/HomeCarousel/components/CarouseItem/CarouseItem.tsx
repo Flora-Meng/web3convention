@@ -54,6 +54,7 @@ const Title = styled.h2`
 	margin: 0;
 	margin-bottom: 16px;
 	opacity: 0;
+	text-shadow: 0 0 10px #000000;
 	${animation('fade-in-opacity-transform-to-left', '1s', 'ease', '0.7s', '1')};
 	${animationFillMode()};
 	@media ${devices.tablet} {
@@ -67,9 +68,10 @@ const Subtitle = styled.p`
 	letter-spacing: 0.05rem;
 	margin: 0;
 	margin-bottom: 8px;
+	opacity: 0;
+	text-shadow: 0 0 10px #000000;
 	${animation('fade-in-opacity-transform-to-left', '1s', 'ease', '0.5s', '1')};
 	${animationFillMode()};
-	opacity: 0;
 
 	@media ${devices.tablet} {
 		font-size: 18px;

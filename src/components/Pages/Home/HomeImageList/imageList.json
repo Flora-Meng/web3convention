@@ -1,25 +1,25 @@
 [
 	{
 		"_id": "1",
-		"label": "2019",
+		"label": "NFT Gallery",
 		"imageSrc": "/images/demo/h1-banner-1.jpg",
 		"href": "/#"
 	},
 	{
 		"_id": "2",
-		"label": "2020",
+		"label": "Pitch Space",
 		"imageSrc": "/images/demo/h1-banner-2.jpg",
 		"href": "/#"
 	},
 	{
 		"_id": "3",
-		"label": "2021",
+		"label": "Whale Yacht Party",
 		"imageSrc": "/images/demo/h1-banner-3.jpg",
 		"href": "/#"
 	},
 	{
 		"_id": "4",
-		"label": "2022",
+		"label": "Web2 & Web3",
 		"imageSrc": "/images/demo/h1-banner-4.jpg",
 		"href": "/#"
 	}
