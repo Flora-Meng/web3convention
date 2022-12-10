@@ -203,11 +203,12 @@ const FooterContent = () => {
 						priority
 					/>
 					<ContentText>
-						Lorem ipsum dolor sit amet, quo quis simul tincidunt in. Ne electram
-						iracundia voluptatum per, ei nec
+						ICC Sydney: International Convention & Exhibition Centre
+						<br />
+						14 Darling Dr, Sydney NSW 2000
 					</ContentText>
-					<ContentText>+490 54 324 77</ContentText>
-					<ContentText>Potsdamer Platz 9797</ContentText>
+					<ContentText>+61 431 538 855</ContentText>
+					<ContentText>business@web3convention.com</ContentText>
 				</Grid>
 				<Grid item mobile={12} tablet={6} laptop={3} largeLaptop={3}>
 					<Title>Useful Links</Title>

@@ -78,7 +78,7 @@ const CopyRight: React.FC = () => (
 				/>
 			</Grid>
 			<Grid item {...gridColumn}>
-				<p>© 2022 Web 3 Convention, All Rights Reserved</p>
+				<p>© 2022-2023 Web3 Convention, All Rights Reserved</p>
 			</Grid>
 			<Grid item {...gridColumn} className="flex items-center">
 				<FollowLabel>Follow us</FollowLabel>
