@@ -15,7 +15,7 @@ type ComponentType = React.FC & { layout: typeof DefaultLayout };
 const Homepage: ComponentType = () => {
 	return (
 		<>
-			<PageHead title="Web 3 Convention" />
+			<PageHead title="Web3 Convention 2023 | July 22-22, 2023" />
 			<HomeCarousel />
 			<HomeImageList />
 			<HomeBanner />

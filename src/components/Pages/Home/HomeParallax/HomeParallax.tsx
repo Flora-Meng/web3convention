@@ -16,7 +16,7 @@ const HomeParallaxContainer = styled.div`
 	padding: 130px 16px;
 	text-align: center;
 	@media ${devices.tablet} {
-		padding: 130px 20%;
+		padding: 130px 100px;
 	}
 `;
 

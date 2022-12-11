@@ -4,11 +4,11 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 import imageList from './imageList.json';
-import { animationHoverImage, animationHoverImageParent } from '@/styles/mixin';
+import { animationHoverImage, animationHoverImageParent, tagDecoration } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
-const { whiteColor } = color;
+const { primaryColor, whiteColor } = color;
 
 const ImageListContainer = styled(Grid)`
 	padding: 8px 0;
@@ -35,18 +35,29 @@ const StyledImage = styled(Image)`
 	object-fit: cover;
 `;
 
-const Label = styled.p`
+const Subtitle = styled.p`
+	color: ${primaryColor};
+	font-size: 12px;
+	font-style: italic;
+	letter-spacing: 0.1rem;
+	${tagDecoration()};
+	margin: 0;
+`;
+
+const Label = styled.div`
 	bottom: 0;
 	color: ${whiteColor};
 	font-size: 24px;
 	font-weight: 700;
-	left: 30px;
+	padding-left: 15px;
 	position: absolute;
 	text-shadow: 0 0 10px #000000;
 	@media ${devices.laptop} {
 		font-size: 28px;
-		left: 50px;
 	}
+`;
+const Title = styled.div`
+	margin: 5px 0 20px;
 `;
 
 const HomeImageList: React.FC = () => {
@@ -73,8 +84,11 @@ const HomeImageList: React.FC = () => {
 							fill
 							unoptimized
 						/>
+						<Label>
+							<Subtitle>{item.subtitle}</Subtitle>
+							<Title>{item.label}</Title>
+						</Label>
 					</ImageItem>
-					<Label>{item.label}</Label>
 				</Grid>
 			))}
 		</ImageListContainer>
