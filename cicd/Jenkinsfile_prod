@@ -1,0 +1,77 @@
+pipeline {
+  agent any
+  
+  environment {
+    REGION      = 'ap-southeast-2'
+    ImgName     = 'jobpin-nextjs-prod'
+    CntName     = 'jobpin-nextjs-prod' 
+    DockerFile  = 'Dockerfile.prod'
+    CntPort     = '10091'
+  }
+
+  options {
+    // Keep maximum 10 archievd artifacts
+    buildDiscarder(logRotator(numToKeepStr:'10', artifactNumToKeepStr:'10'))
+    // No simultaneous builds
+    disableConcurrentBuilds()
+    durabilityHint('MAX_SURVIVABILITY') // PERFORMANCE_OPTIMIZED or SURVIVABLE_NONATOMIC
+    ansiColor('xterm')
+  }
+
+  stages {
+    stage('Sanity Check') {
+      steps {
+        echo 'Sanity checking...'
+        script {
+          timeout(time: 60, unit: 'MINUTES') {
+            input 'Deploy code to Production, should we continue?'
+          }
+        }
+      }
+    }
+    stage('Build image') {
+      steps {
+        echo 'Building jobpin frontend image...'
+        sh 'docker build -t $ImgName -f $DockerFile .'
+      }
+    }
+    stage('Restart Service') {
+      steps {
+        echo 'Stop old service'
+        sh '''
+          if [ "$(docker ps -q -f name=${CntName})" ]; then
+            docker stop $CntName && docker rm $CntName
+            sleep 5
+          fi
+        '''
+        sh 'docker run -d -p 10088:10088 --restart=always --name $CntName $ImgName'
+
+        echo 'Update cloudfront'
+        withVault(configuration: [timeout: 60, vaultCredentialId: 'Vault Credential', vaultUrl: 'https://vault.jiangren.com.au'], vaultSecrets: [[path: 'secret_aws/aws_prod', secretValues: [[vaultKey: 'AWS_ACCESS_KEY_ID'], [vaultKey: 'AWS_SECRET_ACCESS_KEY']]]]) {
+          withVault([configuration: [ vaultUrl: 'https://vault.jiangren.com.au', vaultCredentialId: 'Vault Credential', timeout: 60 ],
+                    vaultSecrets: [[path: 'jenkins_jr_jobpin/prod', secretValues: [
+                                  [vaultKey: 'DISTRIBUTION_ID'],[vaultKey: 'PATHS_TO_INVALIDATE']]]]]) {
+            //update cloudfront
+            sh 'aws cloudfront create-invalidation --distribution-id  "${DISTRIBUTION_ID}" --paths "${PATHS_TO_INVALIDATE}" '
+          }
+        }        
+      }
+    }
+  }
+
+  post {
+    always {
+      //clean jenkins workspace
+      cleanWs()
+    }
+    success {
+      bitbucketStatusNotify(buildState: 'SUCCESSFUL')
+      echo 'Success.'
+    }
+    failure {
+      bitbucketStatusNotify(buildState: 'FAILED')
+      echo 'Failure.'
+    }
+  }
+
+}
