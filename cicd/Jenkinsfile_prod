@@ -3,8 +3,8 @@ pipeline {
   
   environment {
     REGION      = 'ap-southeast-2'
-    ImgName     = 'jobpin-nextjs-prod'
-    CntName     = 'jobpin-nextjs-prod' 
+    ImgName     = 'web3convention-nextjs-prod'
+    CntName     = 'web3convention-nextjs-prod' 
     DockerFile  = 'Dockerfile.prod'
     CntPort     = '10091'
   }
@@ -31,7 +31,7 @@ pipeline {
     }
     stage('Build image') {
       steps {
-        echo 'Building jobpin frontend image...'
+        echo 'Building web3convention frontend image...'
         sh 'docker build -t $ImgName -f $DockerFile .'
       }
     }
@@ -44,12 +44,12 @@ pipeline {
             sleep 5
           fi
         '''
-        sh 'docker run -d -p 10088:10088 --restart=always --name $CntName $ImgName'
+        sh 'docker run -d -p $CntPort:$CntPort --restart=always --name $CntName $ImgName'
 
         echo 'Update cloudfront'
         withVault(configuration: [timeout: 60, vaultCredentialId: 'Vault Credential', vaultUrl: 'https://vault.jiangren.com.au'], vaultSecrets: [[path: 'secret_aws/aws_prod', secretValues: [[vaultKey: 'AWS_ACCESS_KEY_ID'], [vaultKey: 'AWS_SECRET_ACCESS_KEY']]]]) {
           withVault([configuration: [ vaultUrl: 'https://vault.jiangren.com.au', vaultCredentialId: 'Vault Credential', timeout: 60 ],
-                    vaultSecrets: [[path: 'jenkins_jr_jobpin/prod', secretValues: [
+                    vaultSecrets: [[path: 'jenkins_jr_web3convention/prod', secretValues: [
                                   [vaultKey: 'DISTRIBUTION_ID'],[vaultKey: 'PATHS_TO_INVALIDATE']]]]]) {
             //update cloudfront
             sh 'aws cloudfront create-invalidation --distribution-id  "${DISTRIBUTION_ID}" --paths "${PATHS_TO_INVALIDATE}" '
