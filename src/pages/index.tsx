@@ -13,9 +13,16 @@ import PageHead from '@/layouts/PageHead';
 type ComponentType = React.FC & { layout: typeof DefaultLayout };
 
 const Homepage: ComponentType = () => {
+	const meta = {
+		description:
+			'Web3 Convention is crypto’s most iconic event, bringing together  all sides of blockchain, Web3 and the metaverse. Brush shoulders with entrepreneurs, executives, Web3 creators, asset managers, individual investors, NFT collectors, brand and marketing professionals, government officials blockchain developers, cloud computing providers, and more.',
+		keywords:
+			'Web3Convention, ICC Sydney, Web3, Blockchain, NFT, Whale Yacht Party, Pitch Space',
+		title: 'Web3 Convention 2023 | July 22-22, 2023'
+	};
 	return (
 		<>
-			<PageHead title="Web3 Convention 2023 | July 22-22, 2023" />
+			<PageHead title="Web3 Convention 2023 | July 22-22, 2023" meta={meta} />
 			<HomeCarousel />
 			<HomeImageList />
 			<HomeBanner />

@@ -10,7 +10,12 @@ interface PageHeadProps {
 }
 
 const PageHead: React.FC<PageHeadProps> = props => {
-	const { meta, url = '', thumbnailSrc = '', title } = props;
+	const {
+		meta,
+		url = 'https://web3convention.com/',
+		thumbnailSrc = 'https://web3convention.com/web3-logo.svg',
+		title
+	} = props;
 	const pageTitle = title ? `${title}｜` : '';
 	const defaultTitle = 'Web3 Convention';
 
@@ -24,6 +29,10 @@ const PageHead: React.FC<PageHeadProps> = props => {
 			content: meta?.keywords ?? 'web3'
 		},
 		{ name: 'referrer', content: 'always' },
+		{
+			name: 'robots',
+			content: 'index, follow'
+		},
 		{
 			property: 'og:url',
 			content: url
