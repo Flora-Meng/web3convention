@@ -7,9 +7,9 @@ const nextConfig = {
 	images: {
 		loader: 'custom'
 	},
-	experimental: {
-		outputStandalone: true
-	},
+	// experimental: {
+	// 	outputStandalone: true
+	// },
 	output: 'standalone',
 	webpack(config) {
 		config.module.rules.push({
