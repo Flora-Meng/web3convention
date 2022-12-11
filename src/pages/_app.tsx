@@ -1,5 +1,6 @@
 import { ThemeProvider } from '@mui/material';
 import type { AppProps } from 'next/app';
+import Script from 'next/script';
 import { Fragment } from 'react';
 
 import type { Page } from '@/interfaces/page';
@@ -16,6 +17,20 @@ const App = ({ Component, pageProps }: Props) => {
 
 	return (
 		<ThemeProvider theme={defaultTheme}>
+			{/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+			<Script
+				async
+				src="https://www.googletagmanager.com/gtag/js?id=G-QGRPQF01S7"
+				strategy="afterInteractive"
+			/>
+			<Script id="google-analytics" strategy="afterInteractive">
+				{`
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){window.dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', 'G-QGRPQF01S7');
+				`}
+			</Script>
 			<Layout>{getLayout(<Component {...pageProps} />)}</Layout>
 		</ThemeProvider>
 	);
