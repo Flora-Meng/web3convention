@@ -1,7 +1,7 @@
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedinIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import YoutubeIcon from '@mui/icons-material/Youtube';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import Image from 'next/image';
@@ -104,7 +104,7 @@ const CopyRight: React.FC = () => (
 						href="https://www.youtube.com/channel/UCTJEa6rxybFHmmlx6YAf1iA"
 						target="_blank"
 					>
-						<YoutubeIcon />
+						<YouTubeIcon />
 					</Link>
 				</StyledIconButton>
 			</Grid>

@@ -82,7 +82,7 @@ const ImageModal: React.FC<ImageModalProps> = ({
 }) => {
 	return image ? (
 		<Dialog open={open} onClose={onClose}>
-			{/* <ModalContent open={open}>
+			<ModalContent>
 				<ImageItem>
 					<StyledArrowBackIosNewIcon onClick={onPrev} />
 					<StyledImage src={image.imageSrc} alt={image._id} key={image._id} />
@@ -95,7 +95,7 @@ const ImageModal: React.FC<ImageModalProps> = ({
 					</ArrowIconContainer>
 					<ImageIndicator>{imageIndicator}</ImageIndicator>
 				</BottomBar>
-			</ModalContent> */}
+			</ModalContent>
 		</Dialog>
 	) : null;
 };
