@@ -4,6 +4,7 @@ import HomeGallery from '@/components/Pages/Home/HomeGallery';
 import HomeImageList from '@/components/Pages/Home/HomeImageList';
 import HomeParallax from '@/components/Pages/Home/HomeParallax';
 import HomePosts from '@/components/Pages/Home/HomePosts';
+import HomeSponsor from '@/components/Pages/Home/HomeSponsor';
 import HomeSubscription from '@/components/Pages/Home/HomeSubscription';
 import HomeTeam from '@/components/Pages/Home/HomeTeam';
 import HomeTestimonial from '@/components/Pages/Home/HomeTestimonial';
@@ -32,6 +33,7 @@ const Homepage: ComponentType = () => {
 			<HomeGallery />
 			<HomeTestimonial />
 			<HomeParallax />
+			<HomeSponsor />
 		</>
 	);
 };
