@@ -2,6 +2,7 @@ import { Grid } from '@mui/material';
 import Link from 'next/link';
 import styled from 'styled-components';
 
+import sponsorList from './sponsorList.json';
 import { sectionSubtitle, sectionTitle } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
 
@@ -62,12 +63,6 @@ const StyledImage = styled.img`
 	width: auto;
 `;
 
-const sponsorLogoList = Array.from(Array(15), (_, index) => ({
-	_id: `${index + 1}`,
-	logoSrc: `/images/demo/client-img-${index + 1}.png`,
-	logoSrcHighlight: `/images/demo/client-img-${index + 1}-hover.png`
-}));
-
 const HomeSponsor: React.FC = () => {
 	return (
 		<HomeSponsorContainer>
@@ -76,7 +71,7 @@ const HomeSponsor: React.FC = () => {
 				<Title>Amazing Partners & Sponsors</Title>
 			</TitleContainer>
 			<Grid container>
-				{sponsorLogoList.map(sponsor => (
+				{sponsorList.map(sponsor => (
 					<Grid
 						item
 						key={sponsor._id}
@@ -89,7 +84,7 @@ const HomeSponsor: React.FC = () => {
 						<ImageContainer href="/#">
 							<StyledImage src={sponsor.logoSrc} alt={`sponsor_${sponsor._id}`} />
 							<StyledImage
-								src={sponsor.logoSrcHighlight}
+								src={sponsor.logoSrcHighlight || sponsor.logoSrc}
 								alt={`sponsor_${sponsor._id}_highLight`}
 							/>
 						</ImageContainer>
