@@ -1,14 +1,14 @@
 import HomeBanner from '@/components/Pages/Home/HomeBanner';
 import HomeCarousel from '@/components/Pages/Home/HomeCarousel';
 import HomeCountdown from '@/components/Pages/Home/HomeCounter';
-import HomeGallery from '@/components/Pages/Home/HomeGallery';
+// import HomeGallery from '@/components/Pages/Home/HomeGallery';
 import HomeImageList from '@/components/Pages/Home/HomeImageList';
 import HomeParallax from '@/components/Pages/Home/HomeParallax';
 import HomePosts from '@/components/Pages/Home/HomePosts';
 import HomeSponsor from '@/components/Pages/Home/HomeSponsor';
 import HomeSubscription from '@/components/Pages/Home/HomeSubscription';
 import HomeTeam from '@/components/Pages/Home/HomeTeam';
-import HomeTestimonial from '@/components/Pages/Home/HomeTestimonial';
+// import HomeTestimonial from '@/components/Pages/Home/HomeTestimonial';
 import DefaultLayout from '@/layouts/DefaultLayout';
 import PageHead from '@/layouts/PageHead';
 
@@ -26,16 +26,16 @@ const Homepage: ComponentType = () => {
 		<>
 			<PageHead title="Web3 Convention 2023 | July 22-22, 2023" meta={meta} />
 			<HomeCarousel />
+			<HomeCountdown />
 			<HomeImageList />
 			<HomeBanner />
 			<HomePosts />
 			<HomeTeam />
 			<HomeSubscription />
-			<HomeGallery />
-			<HomeTestimonial />
-			<HomeParallax />
+			{/* <HomeGallery /> */}
+			{/* <HomeTestimonial /> */}
 			<HomeSponsor />
-			<HomeCountdown />
+			<HomeParallax />
 		</>
 	);
 };

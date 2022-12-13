@@ -68,7 +68,7 @@ const HomeSponsor: React.FC = () => {
 		<HomeSponsorContainer>
 			<TitleContainer>
 				<Subtitle>event_testimonials</Subtitle>
-				<Title>Amazing Partners & Sponsors</Title>
+				<Title>Expected Partners & Sponsors</Title>
 			</TitleContainer>
 			<Grid container>
 				{sponsorList.map(sponsor => (

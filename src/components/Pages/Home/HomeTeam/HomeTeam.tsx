@@ -12,10 +12,12 @@ import {
 	animationFillMode,
 	animationHoverImage,
 	animationHoverImageParent,
+	sectionSubtitle,
+	sectionTitle,
 	tagDecoration,
 	textEllipsis
 } from '@/styles/mixin';
-import { color, devices } from '@/styles/variables';
+import { color, devices, sizes } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
 const { blackColor, darkPrimaryColor, primaryColor, whiteColor } = color;
@@ -165,82 +167,135 @@ const SocialMediaContainer = styled.div`
 	}
 `;
 
+const SectionSubtitle = styled.p`
+	${sectionSubtitle};
+`;
+
+const SectionTitle = styled.h2`
+	${sectionTitle};
+`;
+
+const ExpectedSpeakerContainer = styled.div`
+	max-width: ${`${sizes.largeLaptop}px`};
+	padding: 100px 40px 140px;
+	position: relative;
+	@media ${devices.mobile} {
+		padding: 100px 100px 140px;
+	}
+	@media ${devices.laptop} {
+		margin: 0 auto;
+	}
+`;
+
+const Backtips = styled.div`
+	display: inline-block;
+	font-size: 15vw;
+	font-weight: 700;
+	left: 60px;
+	line-height: 1.15em;
+	opacity: 0.2;
+	overflow: hidden;
+	position: absolute;
+	top: 20px;
+	vertical-align: middle;
+	&::after {
+		-ms-transform: scale(1.5);
+		-webkit-transform: scale(1.5);
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAMAAABFaP0WAAAABlBMVEUAAAD///+l2Z/dAAAAAXRSTlMAQObYZgAAAA5JREFUCNdjYGRgYGQEAAAOAATa5WfvAAAAAElFTkSuQmCC);
+		background-size: 2px 2px;
+		content: '';
+		display: block;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		transform: scale(1.5);
+		width: 100%;
+		z-index: 1;
+	}
+`;
+
 const HomeTeam: React.FC = () => {
 	return (
-		<HomeTeamContainer container>
-			{teamMemberList.map(teamMember => {
-				const postLink = '/comingSoon';
-				return (
-					<Grid
-						item
-						mobile={12}
-						tablet={6}
-						laptop={4}
-						largeLaptop={2.4}
-						key={teamMember._id}
-						className="relative"
-					>
-						<GridItemContainer>
-							<ImageContainer>
-								<StyledImage
-									loader={imageLoader}
-									src={teamMember.avatarSrc}
-									alt={teamMember.name}
-									fill
-									unoptimized
-								/>
-							</ImageContainer>
-							<InfoContainer>
-								<Info className="home-team-info-container flex flex-col">
-									<Subtitle>{teamMember.jobTitle}</Subtitle>
-									<Link href={postLink}>
-										<Title>{teamMember.name}</Title>
-									</Link>
-									<PostDescription className="home-team-info-container__description">
-										{teamMember.description}
-									</PostDescription>
-									<SocialMediaContainer className="home-team-info-container__social-media">
-										{Object.entries(teamMember.socialMedia).map(
-											([socialMedia, link]) => {
-												if (!link) return null;
-												let socialMediaIcon = null;
-												switch (socialMedia) {
-													case ESocialMedia.LINKED_IN: {
-														socialMediaIcon = <LinkedInIcon />;
-														break;
+		<ExpectedSpeakerContainer>
+			<SectionSubtitle>guest_speakers</SectionSubtitle>
+			<SectionTitle>Expected Speakers</SectionTitle>
+			<Backtips>speakers</Backtips>
+			<HomeTeamContainer container>
+				{teamMemberList.map(teamMember => {
+					const postLink = '/comingSoon';
+					return (
+						<Grid
+							item
+							mobile={12}
+							tablet={6}
+							laptop={4}
+							largeLaptop={2.4}
+							key={teamMember._id}
+							className="relative"
+						>
+							<GridItemContainer>
+								<ImageContainer>
+									<StyledImage
+										loader={imageLoader}
+										src={teamMember.avatarSrc}
+										alt={teamMember.name}
+										fill
+										unoptimized
+									/>
+								</ImageContainer>
+								<InfoContainer>
+									<Info className="home-team-info-container flex flex-col">
+										<Subtitle>{teamMember.jobTitle}</Subtitle>
+										<Link href={postLink}>
+											<Title>{teamMember.name}</Title>
+										</Link>
+										<PostDescription className="home-team-info-container__description">
+											{teamMember.description}
+										</PostDescription>
+										<SocialMediaContainer className="home-team-info-container__social-media">
+											{Object.entries(teamMember.socialMedia).map(
+												([socialMedia, link]) => {
+													if (!link) return null;
+													let socialMediaIcon = null;
+													switch (socialMedia) {
+														case ESocialMedia.LINKED_IN: {
+															socialMediaIcon = <LinkedInIcon />;
+															break;
+														}
+														case ESocialMedia.FACEBOOK: {
+															socialMediaIcon = <FacebookIcon />;
+															break;
+														}
+														case ESocialMedia.TWITTER: {
+															socialMediaIcon = <TwitterIcon />;
+															break;
+														}
+														default: {
+															break;
+														}
 													}
-													case ESocialMedia.FACEBOOK: {
-														socialMediaIcon = <FacebookIcon />;
-														break;
-													}
-													case ESocialMedia.TWITTER: {
-														socialMediaIcon = <TwitterIcon />;
-														break;
-													}
-													default: {
-														break;
-													}
+													return (
+														<Link
+															href={link}
+															target="_blank"
+															rel="noopener noreferrer"
+															key={`${teamMember._id}-${socialMedia}`}
+														>
+															{socialMediaIcon}
+														</Link>
+													);
 												}
-												return (
-													<Link
-														href={link}
-														target="_blank"
-														rel="noopener noreferrer"
-														key={`${teamMember._id}-${socialMedia}`}
-													>
-														{socialMediaIcon}
-													</Link>
-												);
-											}
-										)}
-									</SocialMediaContainer>
-								</Info>
-							</InfoContainer>
-						</GridItemContainer>
-					</Grid>
-				);
-			})}
-		</HomeTeamContainer>
+											)}
+										</SocialMediaContainer>
+									</Info>
+								</InfoContainer>
+							</GridItemContainer>
+						</Grid>
+					);
+				})}
+			</HomeTeamContainer>
+		</ExpectedSpeakerContainer>
 	);
 };
 
