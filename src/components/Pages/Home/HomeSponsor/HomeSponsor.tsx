@@ -3,17 +3,18 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 import sponsorList from './sponsorList.json';
-import { sectionSubtitle, sectionTitle } from '@/styles/mixin';
-import { color, devices } from '@/styles/variables';
-
-const { blackColor, whiteColor } = color;
+import { backdrop, sectionSubtitle, sectionTitle } from '@/styles/mixin';
+import { devices, sizes } from '@/styles/variables';
 
 const HomeSponsorContainer = styled.div`
-	background-color: ${blackColor};
-	color: ${whiteColor};
-	padding: 100px 0;
+	max-width: ${`${sizes.largeLaptop}px`};
+	padding: 100px 40px 140px;
+	position: relative;
+	@media ${devices.mobile} {
+		padding: 100px 100px 140px;
+	}
 	@media ${devices.laptop} {
-		padding: 130px 24% 130px 14.7%;
+		margin: 0 auto;
 	}
 `;
 
@@ -57,10 +58,16 @@ const ImageContainer = styled(Link)`
 `;
 
 const StyledImage = styled.img`
-	height: 60px;
-	margin-bottom: 30px;
+	height: 30px;
 	object-fit: contain;
 	width: auto;
+	@media ${devices.mobile} {
+		height: 50px;
+	}
+`;
+
+const Backdrop = styled.div`
+	${backdrop}
 `;
 
 const HomeSponsor: React.FC = () => {
@@ -69,18 +76,11 @@ const HomeSponsor: React.FC = () => {
 			<TitleContainer>
 				<Subtitle>event_testimonials</Subtitle>
 				<Title>Expected Partners & Sponsors</Title>
+				<Backdrop>Sponsors</Backdrop>
 			</TitleContainer>
-			<Grid container>
+			<Grid container spacing={3}>
 				{sponsorList.map(sponsor => (
-					<Grid
-						item
-						key={sponsor._id}
-						mobile={12}
-						tablet={4}
-						laptop={3}
-						largeLaptop={2}
-						className="flex justify-center"
-					>
+					<Grid item key={sponsor._id} className="flex justify-center">
 						<ImageContainer href="/#">
 							<StyledImage src={sponsor.logoSrc} alt={`sponsor_${sponsor._id}`} />
 							<StyledImage
