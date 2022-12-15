@@ -10,6 +10,7 @@ import useResize from '@/hooks/useResize';
 import { IEvent } from '@/interfaces/event';
 import {
 	activeNavBarTitleDecoration,
+	backdrop,
 	navBarTitleDecoration,
 	sectionSubtitle,
 	sectionTitle
@@ -30,25 +31,13 @@ const MaskContainer = styled.div`
 	top: 0;
 `;
 
-const MaskContent = styled.span`
-	display: inline-block;
+const Backdrop = styled.div`
+	${backdrop};
 	font-size: 23vw;
-	font-weight: 700;
-	line-height: 1;
-	margin: 0;
-	opacity: 0.2;
-	position: relative;
-	&:after {
-		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAMAAABFaP0WAAAABlBMVEUAAAD///+l2Z/dAAAAAXRSTlMAQObYZgAAAA5JREFUCNdjYGRgYGQEAAAOAATa5WfvAAAAAElFTkSuQmCC');
-		background-size: 2px 2px;
-		content: '';
-		display: block;
-		height: 100%;
-		left: 0;
-		position: absolute;
-		top: 0;
-		width: 100%;
-		z-index: 1;
+	left: 0;
+	top: -3vw;
+	@media ${devices.tablet} {
+		left: 60px;
 	}
 `;
 
@@ -115,7 +104,7 @@ const HomeEvent: React.FC = () => {
 	return (
 		<HomeEventContainer>
 			<MaskContainer>
-				<MaskContent>events</MaskContent>
+				<Backdrop>events</Backdrop>
 			</MaskContainer>
 			<ContentContainer>
 				<Subtitle>the_festival</Subtitle>
