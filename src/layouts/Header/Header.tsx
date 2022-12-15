@@ -62,12 +62,12 @@ const Header = () => {
 			<HeaderLogo logoSrc={logoSrc} />
 			<NavBar className="items-center">
 				<NavMenu />
-				<NavRightSection />
+				{/* <NavRightSection /> */}
 			</NavBar>
-			<DropDownNav>
+			{/* <DropDownNav>
 				<DropDownMenuButton handleClick={() => setOpenDropdownMenu(!openDropdownMenu)} />
 			</DropDownNav>
-			<DropDownMenu showMenu={openDropdownMenu} />
+			<DropDownMenu showMenu={openDropdownMenu} /> */}
 		</HeaderContainer>
 	);
 };

@@ -6,26 +6,26 @@ export const navItemsConfig: { [K in ENavItem]: INavItem } = {
 		title: 'home',
 		path: '/'
 	},
-	[ENavItem.CONVENTION]: {
-		title: 'conventions',
-		path: '/comingSoon'
-	},
-	[ENavItem.PARTNER]: {
-		title: 'our partner',
-		path: '/comingSoon'
-	},
-	[ENavItem.TICKET]: {
-		title: 'get tickets',
-		path: '/comingSoon'
-	},
-	[ENavItem.VENUE]: {
-		title: 'venue info',
-		path: '/comingSoon'
-	},
-	[ENavItem.NEWS]: {
-		title: 'news',
-		path: '/comingSoon'
-	}
+	// [ENavItem.CONVENTION]: {
+	// 	title: 'conventions',
+	// 	path: '/comingSoon'
+	// },
+	// [ENavItem.PARTNER]: {
+	// 	title: 'our partner',
+	// 	path: '/comingSoon'
+	// },
+	// [ENavItem.TICKET]: {
+	// 	title: 'get tickets',
+	// 	path: '/comingSoon'
+	// },
+	// [ENavItem.VENUE]: {
+	// 	title: 'venue info',
+	// 	path: '/comingSoon'
+	// },
+	// [ENavItem.NEWS]: {
+	// 	title: 'news',
+	// 	path: '/comingSoon'
+	// }
 };
 
 export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
