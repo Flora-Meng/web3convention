@@ -18,7 +18,6 @@ const { blackColor, darkPrimaryColor, textColor, whiteColor } = color;
 const HomeSubscriptionContainer = styled.div`
 	background: linear-gradient(180deg, ${blackColor} 70%, ${whiteColor} 30%);
 	color: ${whiteColor};
-	margin-bottom: 80px;
 	padding: 100px 30px 50px;
 	@media ${devices.mobile} {
 		padding: 100px 100px 50px;

@@ -1,6 +1,7 @@
 import HomeBanner from '@/components/Pages/Home/HomeBanner';
 import HomeCarousel from '@/components/Pages/Home/HomeCarousel';
 import HomeCountdown from '@/components/Pages/Home/HomeCounter';
+import HomeEvent from '@/components/Pages/Home/HomeEvent';
 // import HomeGallery from '@/components/Pages/Home/HomeGallery';
 import HomeImageList from '@/components/Pages/Home/HomeImageList';
 import HomeParallax from '@/components/Pages/Home/HomeParallax';
@@ -32,6 +33,8 @@ const Homepage: ComponentType = () => {
 			<HomePosts />
 			<HomeTeam />
 			<HomeSubscription />
+			<HomeEvent />
+			<HomeParallax />
 			{/* <HomeGallery /> */}
 			{/* <HomeTestimonial /> */}
 			<HomeSponsor />

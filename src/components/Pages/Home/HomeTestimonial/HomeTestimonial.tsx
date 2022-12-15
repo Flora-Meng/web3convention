@@ -1,10 +1,10 @@
 import Grid from '@mui/material/Grid';
-import { useEffect, useState } from 'react';
 import Carousel from 'react-material-ui-carousel';
 import styled from 'styled-components';
 
 import TestimonialItem from './components/TestimonialItem';
 import testimonialList from './testimonialList.json';
+import useResize from '@/hooks/useResize';
 import { sectionSubtitle, sectionTitle } from '@/styles/mixin';
 import { color, devices, sizes } from '@/styles/variables';
 
@@ -30,26 +30,7 @@ const Subtitle = styled.p`
 `;
 
 const HomeTestimonial: React.FC = () => {
-	const [isMobile, setIsMobile] = useState<boolean>(false);
-
-	const checkMobile = () => {
-		if (window.innerWidth < sizes.tablet) {
-			setIsMobile(true);
-		}
-	};
-
-	const handleResize = () => {
-		checkMobile();
-		if (window.innerWidth > sizes.tablet) {
-			setIsMobile(false);
-		}
-	};
-
-	useEffect(() => {
-		checkMobile();
-		window.addEventListener('resize', handleResize);
-		return () => window.removeEventListener('resize', handleResize);
-	}, []);
+	const { isMobile } = useResize(sizes.tablet);
 
 	return (
 		<HomeTestimonialContainer>

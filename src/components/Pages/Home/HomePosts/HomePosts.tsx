@@ -8,12 +8,12 @@ import PostBackgroundImage01 from '@/assets/images/blog-background-img-1.png';
 import PostBackgroundImage02 from '@/assets/images/blog-background-img-2.png';
 import PostBackgroundImage03 from '@/assets/images/blog-background-img-3.png';
 import {
-	activeNavBarTitleDecoration,
+	// activeNavBarTitleDecoration,
 	animation,
 	animationFillMode,
-	animationHoverImage,
+	// animationHoverImage,
 	animationHoverImageParent,
-	navBarTitleDecoration,
+	// navBarTitleDecoration,
 	sectionSubtitle,
 	sectionTitle,
 	textEllipsis
@@ -71,18 +71,18 @@ const PostDescription = styled.p`
 	${textEllipsis(2)}
 `;
 
-const StyledLink = styled(Link)`
-	display: inline-block;
-	font-size: 13px;
-	font-weight: 700;
-	text-transform: uppercase;
-	span {
-		${navBarTitleDecoration('calc(100% + 4px)', '50%', '-2px')};
-	}
-	&:hover span:before {
-		${activeNavBarTitleDecoration()}
-	}
-`;
+// const StyledLink = styled(Link)`
+// 	display: inline-block;
+// 	font-size: 13px;
+// 	font-weight: 700;
+// 	text-transform: uppercase;
+// 	span {
+// 		${navBarTitleDecoration('calc(100% + 4px)', '50%', '-2px')};
+// 	}
+// 	&:hover span:before {
+// 		${activeNavBarTitleDecoration()}
+// 	}
+// `;
 
 const PostBackGroundImage = styled(Image)`
 	left: 20px;

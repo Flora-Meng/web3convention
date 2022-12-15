@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import styled from 'styled-components';
 
 import ECountdownKey from '@/constants/countdown';
-import countdown from '@/hooks/countdown';
+import useCountdown from '@/hooks/useCountdown';
 import { sectionSubtitle, sectionTitle } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
 
@@ -98,7 +98,7 @@ const CountdownUnit = styled.p`
 const COUNTDOWN_DATE = '2023-07-22T22:00:00.000Z';
 
 const HomeCounter: React.FC = () => {
-	const { timer, countdownInfo } = countdown(COUNTDOWN_DATE);
+	const { timer, countdownInfo } = useCountdown(COUNTDOWN_DATE);
 
 	useEffect(() => {
 		return () => clearInterval(timer);
