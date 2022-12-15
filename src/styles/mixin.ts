@@ -170,6 +170,6 @@ export const backdrop = css`
 		top: 0;
 		transform: scale(1.5);
 		width: 100%;
-		z-index: 1;
+		z-index: 0;
 	}
 `;

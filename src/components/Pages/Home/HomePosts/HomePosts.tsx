@@ -55,7 +55,6 @@ const ImageItem = styled(Link)`
 `;
 
 const StyledImage = styled(Image)`
-	${animationHoverImage()};
 	object-fit: cover;
 `;
 
@@ -101,7 +100,7 @@ const HomePosts: React.FC = () => {
 	return (
 		<HomePostsContainer>
 			<Subtitle>the_festival</Subtitle>
-			<Title>Advancing Craft Connect People</Title>
+			<Title>Web3 Convention Highlights</Title>
 			<Grid container spacing={6}>
 				{postList.map((post, index) => {
 					const postLink = '/comingSoon';
@@ -128,9 +127,9 @@ const HomePosts: React.FC = () => {
 								<PostTitle>{post.title}</PostTitle>
 							</Link>
 							<PostDescription>{post.description}</PostDescription>
-							<StyledLink href={postLink}>
+							{/* <StyledLink href={postLink}>
 								<span>read more</span>
-							</StyledLink>
+							</StyledLink> */}
 							<PostBackGroundImage
 								loader={imageLoader}
 								src={postBackGroundImage[index]}
