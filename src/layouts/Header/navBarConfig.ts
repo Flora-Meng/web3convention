@@ -29,16 +29,16 @@ export const navItemsConfig: { [K in ENavItem]: INavItem } = {
 };
 
 export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
-	[ENavItem.CONVENTION]: [
-		{
-			title: 'Conventions',
-			path: '/comingSoon'
-		},
-		{
-			title: 'Session',
-			path: '/comingSoon'
-		}
-	]
+	// [ENavItem.CONVENTION]: [
+	// 	{
+	// 		title: 'Conventions',
+	// 		path: '/comingSoon'
+	// 	},
+	// 	{
+	// 		title: 'Session',
+	// 		path: '/comingSoon'
+	// 	}
+	// ]
 };
 
 export default navItemsConfig;
