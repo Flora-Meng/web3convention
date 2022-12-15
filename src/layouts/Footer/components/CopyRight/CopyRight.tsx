@@ -48,6 +48,8 @@ const Logo = styled(Image)`
 `;
 
 const FollowLabel = styled.p`
+	flex-shrink: 0;
+	margin-bottom: 24px;
 	margin-right: 10px;
 `;
 
@@ -62,13 +64,13 @@ const StyledIconButton = styled(IconButton)`
 const gridColumn = {
 	mobile: 12,
 	tablet: 12,
-	laptop: 3
+	laptop: 4
 };
 
 const CopyRight: React.FC = () => (
 	<ContentContainer className="flex">
 		<ContainerGrid container className="justify-between">
-			<Grid item {...gridColumn}>
+			<Grid item {...gridColumn} className="self-center">
 				<Logo
 					loader={imageLoader}
 					unoptimized
@@ -82,7 +84,7 @@ const CopyRight: React.FC = () => (
 			<Grid item {...gridColumn}>
 				<p>© 2022-2023 Web3 Convention, All Rights Reserved</p>
 			</Grid>
-			<Grid item {...gridColumn} className="flex items-center">
+			<Grid item {...gridColumn} className="flex items-center justify-end self-center">
 				<FollowLabel>Follow us</FollowLabel>
 				<StyledIconButton aria-label="add an alarm">
 					<Link href="https://twitter.com/Web3Convention" target="_blank">

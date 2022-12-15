@@ -7,7 +7,12 @@ import { TCountdownInfo } from '@/interfaces/countdown';
 dayjs.extend(duration);
 
 const useCountdown = (commenceDate: string) => {
-	const [countdownInfo, setCountdownInfo] = useState<TCountdownInfo>();
+	const [countdownInfo, setCountdownInfo] = useState<TCountdownInfo>({
+		month: 0,
+		day: 0,
+		minute: 0,
+		second: 0
+	});
 	const timer = setInterval(() => {
 		const currentDate = dayjs();
 		if (currentDate.isAfter(dayjs(commenceDate))) {
