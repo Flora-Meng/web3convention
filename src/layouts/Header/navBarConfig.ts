@@ -5,7 +5,7 @@ export const navItemsConfig: { [K in ENavItem]: INavItem } = {
 	[ENavItem.HOME]: {
 		title: 'home',
 		path: '/'
-	},
+	}
 	// [ENavItem.CONVENTION]: {
 	// 	title: 'conventions',
 	// 	path: '/comingSoon'

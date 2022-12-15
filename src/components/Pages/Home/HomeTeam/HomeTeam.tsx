@@ -12,11 +12,11 @@ import {
 	animationFillMode,
 	animationHoverImage,
 	animationHoverImageParent,
+	backdrop,
 	sectionSubtitle,
 	sectionTitle,
 	tagDecoration,
-	textEllipsis,
-	backdrop
+	textEllipsis
 } from '@/styles/mixin';
 import { color, devices, sizes } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
