@@ -6,7 +6,7 @@ import { TCountdownInfo } from '@/interfaces/countdown';
 
 dayjs.extend(duration);
 
-const countdown = (commenceDate: string) => {
+const useCountdown = (commenceDate: string) => {
 	const [countdownInfo, setCountdownInfo] = useState<TCountdownInfo>();
 	const timer = setInterval(() => {
 		const currentDate = dayjs();
@@ -27,4 +27,4 @@ const countdown = (commenceDate: string) => {
 	return { timer, countdownInfo };
 };
 
-export default countdown;
+export default useCountdown;
