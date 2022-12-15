@@ -145,3 +145,31 @@ export const sectionSubtitle = css`
 	${animationFillMode()};
 	opacity: 0;
 `;
+
+export const backdrop = css`
+	display: inline-block;
+	font-size: 15vw;
+	font-weight: 700;
+	left: 60px;
+	line-height: 1.15em;
+	opacity: 0.2;
+	overflow: hidden;
+	position: absolute;
+	top: 20px;
+	vertical-align: middle;
+	&::after {
+		-ms-transform: scale(1.5);
+		-webkit-transform: scale(1.5);
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAMAAABFaP0WAAAABlBMVEUAAAD///+l2Z/dAAAAAXRSTlMAQObYZgAAAA5JREFUCNdjYGRgYGQEAAAOAATa5WfvAAAAAElFTkSuQmCC);
+		background-size: 2px 2px;
+		content: '';
+		display: block;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		transform: scale(1.5);
+		width: 100%;
+		z-index: 0;
+	}
+`;

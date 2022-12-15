@@ -5,40 +5,40 @@ export const navItemsConfig: { [K in ENavItem]: INavItem } = {
 	[ENavItem.HOME]: {
 		title: 'home',
 		path: '/'
-	},
-	[ENavItem.CONVENTION]: {
-		title: 'conventions',
-		path: '/comingSoon'
-	},
-	[ENavItem.PARTNER]: {
-		title: 'our partner',
-		path: '/comingSoon'
-	},
-	[ENavItem.TICKET]: {
-		title: 'get tickets',
-		path: '/comingSoon'
-	},
-	[ENavItem.VENUE]: {
-		title: 'venue info',
-		path: '/comingSoon'
-	},
-	[ENavItem.NEWS]: {
-		title: 'news',
-		path: '/comingSoon'
 	}
+	// [ENavItem.CONVENTION]: {
+	// 	title: 'conventions',
+	// 	path: '/comingSoon'
+	// },
+	// [ENavItem.PARTNER]: {
+	// 	title: 'our partner',
+	// 	path: '/comingSoon'
+	// },
+	// [ENavItem.TICKET]: {
+	// 	title: 'get tickets',
+	// 	path: '/comingSoon'
+	// },
+	// [ENavItem.VENUE]: {
+	// 	title: 'venue info',
+	// 	path: '/comingSoon'
+	// },
+	// [ENavItem.NEWS]: {
+	// 	title: 'news',
+	// 	path: '/comingSoon'
+	// }
 };
 
 export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
-	[ENavItem.CONVENTION]: [
-		{
-			title: 'Conventions',
-			path: '/comingSoon'
-		},
-		{
-			title: 'Session',
-			path: '/comingSoon'
-		}
-	]
+	// [ENavItem.CONVENTION]: [
+	// 	{
+	// 		title: 'Conventions',
+	// 		path: '/comingSoon'
+	// 	},
+	// 	{
+	// 		title: 'Session',
+	// 		path: '/comingSoon'
+	// 	}
+	// ]
 };
 
 export default navItemsConfig;

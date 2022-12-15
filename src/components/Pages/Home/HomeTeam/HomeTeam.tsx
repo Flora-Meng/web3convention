@@ -12,10 +12,13 @@ import {
 	animationFillMode,
 	animationHoverImage,
 	animationHoverImageParent,
+	backdrop,
+	sectionSubtitle,
+	sectionTitle,
 	tagDecoration,
 	textEllipsis
 } from '@/styles/mixin';
-import { color, devices } from '@/styles/variables';
+import { color, devices, sizes } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
 const { blackColor, darkPrimaryColor, primaryColor, whiteColor } = color;
@@ -165,82 +168,111 @@ const SocialMediaContainer = styled.div`
 	}
 `;
 
+const SectionSubtitle = styled.p`
+	${sectionSubtitle};
+`;
+
+const SectionTitle = styled.h2`
+	${sectionTitle};
+`;
+
+const ExpectedSpeakerContainer = styled.div`
+	max-width: ${`${sizes.largeLaptop}px`};
+	padding: 100px 40px 140px;
+	position: relative;
+	@media ${devices.mobile} {
+		padding: 100px 100px 140px;
+	}
+	@media ${devices.laptop} {
+		margin: 0 auto;
+	}
+`;
+
+const Backdrop = styled.div`
+	${backdrop}
+`;
+
 const HomeTeam: React.FC = () => {
 	return (
-		<HomeTeamContainer container>
-			{teamMemberList.map(teamMember => {
-				const postLink = '/comingSoon';
-				return (
-					<Grid
-						item
-						mobile={12}
-						tablet={6}
-						laptop={4}
-						largeLaptop={2.4}
-						key={teamMember._id}
-						className="relative"
-					>
-						<GridItemContainer>
-							<ImageContainer>
-								<StyledImage
-									loader={imageLoader}
-									src={teamMember.avatarSrc}
-									alt={teamMember.name}
-									fill
-									unoptimized
-								/>
-							</ImageContainer>
-							<InfoContainer>
-								<Info className="home-team-info-container flex flex-col">
-									<Subtitle>{teamMember.jobTitle}</Subtitle>
-									<Link href={postLink}>
-										<Title>{teamMember.name}</Title>
-									</Link>
-									<PostDescription className="home-team-info-container__description">
-										{teamMember.description}
-									</PostDescription>
-									<SocialMediaContainer className="home-team-info-container__social-media">
-										{Object.entries(teamMember.socialMedia).map(
-											([socialMedia, link]) => {
-												if (!link) return null;
-												let socialMediaIcon = null;
-												switch (socialMedia) {
-													case ESocialMedia.LINKED_IN: {
-														socialMediaIcon = <LinkedInIcon />;
-														break;
+		<ExpectedSpeakerContainer>
+			<SectionSubtitle>guest_speakers</SectionSubtitle>
+			<SectionTitle>Expected Speakers</SectionTitle>
+			<Backdrop>speakers</Backdrop>
+			<HomeTeamContainer container>
+				{teamMemberList.map(teamMember => {
+					const postLink = '/comingSoon';
+					return (
+						<Grid
+							item
+							mobile={12}
+							tablet={6}
+							laptop={4}
+							largeLaptop={2.4}
+							key={teamMember._id}
+							className="relative"
+						>
+							<GridItemContainer>
+								<ImageContainer>
+									<StyledImage
+										loader={imageLoader}
+										src={teamMember.avatarSrc}
+										alt={teamMember.name}
+										fill
+										unoptimized
+									/>
+								</ImageContainer>
+								<InfoContainer>
+									<Info className="home-team-info-container flex flex-col">
+										<Subtitle>{teamMember.jobTitle}</Subtitle>
+										<Link href={postLink}>
+											<Title>{teamMember.name}</Title>
+										</Link>
+										<PostDescription className="home-team-info-container__description">
+											{teamMember.description}
+										</PostDescription>
+										<SocialMediaContainer className="home-team-info-container__social-media">
+											{Object.entries(teamMember.socialMedia).map(
+												([socialMedia, link]) => {
+													if (!link) return null;
+													let socialMediaIcon = null;
+													switch (socialMedia) {
+														case ESocialMedia.LINKED_IN: {
+															socialMediaIcon = <LinkedInIcon />;
+															break;
+														}
+														case ESocialMedia.FACEBOOK: {
+															socialMediaIcon = <FacebookIcon />;
+															break;
+														}
+														case ESocialMedia.TWITTER: {
+															socialMediaIcon = <TwitterIcon />;
+															break;
+														}
+														default: {
+															break;
+														}
 													}
-													case ESocialMedia.FACEBOOK: {
-														socialMediaIcon = <FacebookIcon />;
-														break;
-													}
-													case ESocialMedia.TWITTER: {
-														socialMediaIcon = <TwitterIcon />;
-														break;
-													}
-													default: {
-														break;
-													}
+													return (
+														<Link
+															href={link}
+															target="_blank"
+															rel="noopener noreferrer"
+															key={`${teamMember._id}-${socialMedia}`}
+														>
+															{socialMediaIcon}
+														</Link>
+													);
 												}
-												return (
-													<Link
-														href={link}
-														target="_blank"
-														rel="noopener noreferrer"
-														key={`${teamMember._id}-${socialMedia}`}
-													>
-														{socialMediaIcon}
-													</Link>
-												);
-											}
-										)}
-									</SocialMediaContainer>
-								</Info>
-							</InfoContainer>
-						</GridItemContainer>
-					</Grid>
-				);
-			})}
-		</HomeTeamContainer>
+											)}
+										</SocialMediaContainer>
+									</Info>
+								</InfoContainer>
+							</GridItemContainer>
+						</Grid>
+					);
+				})}
+			</HomeTeamContainer>
+		</ExpectedSpeakerContainer>
 	);
 };
 

@@ -1,77 +1,77 @@
 [
 	{
 		"_id": "1",
-		"logoSrc": "/images/demo/client-img-1.png",
-		"logoSrcHighlight": "/images/demo/client-img-1-hover.png"
+		"logoSrc": "/images/sponsors/binance-Logo.wine.png",
+		"logoSrcHighlight": "/images/sponsors/binance-Logo.wine.png"
 	},
 	{
 		"_id": "2",
-		"logoSrc": "/images/demo/client-img-2.png",
-		"logoSrcHighlight": "/images/demo/client-img-2-hover.png"
+		"logoSrc": "/images/sponsors/microsoft.webp",
+		"logoSrcHighlight": "/images/sponsors/microsoft.webp"
 	},
 	{
 		"_id": "3",
-		"logoSrc": "/images/demo/client-img-3.png",
-		"logoSrcHighlight": "/images/demo/client-img-3-hover.png"
+		"logoSrc": "/images/sponsors/f5.png",
+		"logoSrcHighlight": "/images/sponsors/f5.png"
 	},
 	{
 		"_id": "4",
-		"logoSrc": "/images/demo/client-img-4.png",
-		"logoSrcHighlight": "/images/demo/client-img-4-hover.png"
+		"logoSrc": "/images/sponsors/aws.png",
+		"logoSrcHighlight": "/images/sponsors/aws.png"
 	},
 	{
 		"_id": "5",
-		"logoSrc": "/images/demo/client-img-5.png",
-		"logoSrcHighlight": "/images/demo/client-img-5-hover.png"
+		"logoSrc": "/images/sponsors/snowflake_Logo.svg.png",
+		"logoSrcHighlight": "/images/sponsors/snowflake_Logo.svg.png"
 	},
 	{
 		"_id": "6",
-		"logoSrc": "/images/demo/client-img-6.png",
-		"logoSrcHighlight": "/images/demo/client-img-6-hover.png"
+		"logoSrc": "/images/sponsors/ethereum.png",
+		"logoSrcHighlight": "/images/sponsors/ethereum.png"
 	},
 	{
 		"_id": "7",
-		"logoSrc": "/images/demo/client-img-7.png",
-		"logoSrcHighlight": "/images/demo/client-img-7-hover.png"
+		"logoSrc": "/images/sponsors/solona.png",
+		"logoSrcHighlight": "/images/sponsors/solona.png"
 	},
 	{
 		"_id": "8",
-		"logoSrc": "/images/demo/client-img-8.png",
-		"logoSrcHighlight": "/images/demo/client-img-8-hover.png"
+		"logoSrc": "/images/sponsors/opensea.png",
+		"logoSrcHighlight": "/images/sponsors/opensea.png"
 	},
 	{
 		"_id": "9",
-		"logoSrc": "/images/demo/client-img-9.png",
-		"logoSrcHighlight": "/images/demo/client-img-9-hover.png"
+		"logoSrc": "/images/sponsors/ibm.png",
+		"logoSrcHighlight": "/images/sponsors/ibm.png"
 	},
 	{
 		"_id": "10",
-		"logoSrc": "/images/demo/client-img-10.png",
-		"logoSrcHighlight": "/images/demo/client-img-10-hover.png"
+		"logoSrc": "/images/sponsors/polygon.png",
+		"logoSrcHighlight": "/images/sponsors/polygon.png"
 	},
 	{
 		"_id": "11",
-		"logoSrc": "/images/demo/client-img-11.png",
-		"logoSrcHighlight": "/images/demo/client-img-11-hover.png"
+		"logoSrc": "/images/sponsors/1password.png",
+		"logoSrcHighlight": "/images/sponsors/1password.png"
 	},
 	{
 		"_id": "12",
-		"logoSrc": "/images/demo/client-img-12.png",
-		"logoSrcHighlight": "/images/demo/client-img-12-hover.png"
+		"logoSrc": "/images/sponsors/OKEx.png",
+		"logoSrcHighlight": "/images/sponsors/OKEx.png"
 	},
 	{
 		"_id": "13",
-		"logoSrc": "/images/demo/client-img-13.png",
-		"logoSrcHighlight": "/images/demo/client-img-13-hover.png"
+		"logoSrc": "/images/sponsors/file-coin.png",
+		"logoSrcHighlight": "/images/sponsors/file-coin.png"
 	},
 	{
 		"_id": "14",
-		"logoSrc": "/images/demo/client-img-14.png",
-		"logoSrcHighlight": "/images/demo/client-img-14-hover.png"
+		"logoSrc": "/images/sponsors/thoughtworks.png",
+		"logoSrcHighlight": "/images/sponsors/thoughtworks.png"
 	},
 	{
 		"_id": "15",
-		"logoSrc": "/images/demo/client-img-15.png",
-		"logoSrcHighlight": "/images/demo/client-img-15-hover.png"
+		"logoSrc": "/images/sponsors/gitlab-logo-gray-rgb.png",
+		"logoSrcHighlight": "/images/sponsors/gitlab-logo-gray-rgb.png"
 	}
 ]

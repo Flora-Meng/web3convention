@@ -8,12 +8,12 @@ import PostBackgroundImage01 from '@/assets/images/blog-background-img-1.png';
 import PostBackgroundImage02 from '@/assets/images/blog-background-img-2.png';
 import PostBackgroundImage03 from '@/assets/images/blog-background-img-3.png';
 import {
-	activeNavBarTitleDecoration,
+	// activeNavBarTitleDecoration,
 	animation,
 	animationFillMode,
-	animationHoverImage,
+	// animationHoverImage,
 	animationHoverImageParent,
-	navBarTitleDecoration,
+	// navBarTitleDecoration,
 	sectionSubtitle,
 	sectionTitle,
 	textEllipsis
@@ -55,7 +55,6 @@ const ImageItem = styled(Link)`
 `;
 
 const StyledImage = styled(Image)`
-	${animationHoverImage()};
 	object-fit: cover;
 `;
 
@@ -72,18 +71,18 @@ const PostDescription = styled.p`
 	${textEllipsis(2)}
 `;
 
-const StyledLink = styled(Link)`
-	display: inline-block;
-	font-size: 13px;
-	font-weight: 700;
-	text-transform: uppercase;
-	span {
-		${navBarTitleDecoration('calc(100% + 4px)', '50%', '-2px')};
-	}
-	&:hover span:before {
-		${activeNavBarTitleDecoration()}
-	}
-`;
+// const StyledLink = styled(Link)`
+// 	display: inline-block;
+// 	font-size: 13px;
+// 	font-weight: 700;
+// 	text-transform: uppercase;
+// 	span {
+// 		${navBarTitleDecoration('calc(100% + 4px)', '50%', '-2px')};
+// 	}
+// 	&:hover span:before {
+// 		${activeNavBarTitleDecoration()}
+// 	}
+// `;
 
 const PostBackGroundImage = styled(Image)`
 	left: 20px;
@@ -101,7 +100,7 @@ const HomePosts: React.FC = () => {
 	return (
 		<HomePostsContainer>
 			<Subtitle>the_festival</Subtitle>
-			<Title>Advancing Craft Connect People</Title>
+			<Title>Web3 Convention Highlights</Title>
 			<Grid container spacing={6}>
 				{postList.map((post, index) => {
 					const postLink = '/comingSoon';
@@ -128,9 +127,9 @@ const HomePosts: React.FC = () => {
 								<PostTitle>{post.title}</PostTitle>
 							</Link>
 							<PostDescription>{post.description}</PostDescription>
-							<StyledLink href={postLink}>
+							{/* <StyledLink href={postLink}>
 								<span>read more</span>
-							</StyledLink>
+							</StyledLink> */}
 							<PostBackGroundImage
 								loader={imageLoader}
 								src={postBackGroundImage[index]}

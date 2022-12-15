@@ -95,7 +95,7 @@ const CountdownUnit = styled.p`
 	margin: 0;
 `;
 
-const COUNTDOWN_DATE = '2023-07-21T22:00:00.000Z';
+const COUNTDOWN_DATE = '2023-07-22T22:00:00.000Z';
 
 const HomeCounter: React.FC = () => {
 	const { timer, countdownInfo } = useCountdown(COUNTDOWN_DATE);
@@ -107,7 +107,7 @@ const HomeCounter: React.FC = () => {
 	return (
 		<HomeCounterContainer>
 			<TitleContainer>
-				<Subtitle>conference_date</Subtitle>
+				<Subtitle>22-23 July 2023</Subtitle>
 				<Title>Count Every Second Until Event</Title>
 			</TitleContainer>
 			<CounterContainer>

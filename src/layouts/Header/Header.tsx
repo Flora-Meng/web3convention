@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 import HeaderLogo from '../HeaderLogo';
 
-import DropDownMenu from './components/DropDownMenu';
-import DropDownMenuButton from './components/DropDownMenuButton';
+// import DropDownMenu from './components/DropDownMenu';
+// import DropDownMenuButton from './components/DropDownMenuButton';
 import NavMenu from './components/NavMenu';
-import NavRightSection from './components/NavRightSection';
+// import NavRightSection from './components/NavRightSection';
 import { color, devices, sizes } from '@/styles/variables';
 
 const { whiteColor } = color;
@@ -32,14 +32,14 @@ const NavBar = styled.div`
 	}
 `;
 
-const DropDownNav = styled.div`
-	@media ${devices.laptop} {
-		display: none;
-	}
-`;
+// const DropDownNav = styled.div`
+// 	@media ${devices.laptop} {
+// 		display: none;
+// 	}
+// `;
 
 const Header = () => {
-	const [openDropdownMenu, setOpenDropdownMenu] = useState<boolean>(false);
+	// const [openDropdownMenu, setOpenDropdownMenu] = useState<boolean>(false);
 	const [logoSrc, setLogoSrc] = useState<string>('/web3-logo-white.svg');
 
 	const onResize = useCallback(() => {
@@ -62,12 +62,12 @@ const Header = () => {
 			<HeaderLogo logoSrc={logoSrc} />
 			<NavBar className="items-center">
 				<NavMenu />
-				<NavRightSection />
+				{/* <NavRightSection /> */}
 			</NavBar>
-			<DropDownNav>
+			{/* <DropDownNav>
 				<DropDownMenuButton handleClick={() => setOpenDropdownMenu(!openDropdownMenu)} />
 			</DropDownNav>
-			<DropDownMenu showMenu={openDropdownMenu} />
+			<DropDownMenu showMenu={openDropdownMenu} /> */}
 		</HeaderContainer>
 	);
 };
