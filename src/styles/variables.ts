@@ -1,5 +1,16 @@
 import { IColor, IDevices, IInputColor, ISize } from '@/interfaces/variables';
 
+export enum EDeviceSize {
+	miniMobile = 'miniMobile',
+	mobile = 'mobile',
+	tablet = 'tablet',
+	laptop = 'laptop',
+	largeLaptop = 'largeLaptop',
+	desktop = 'desktop',
+	largeDesktop = 'largeDesktop',
+	wideScreen = 'wideScreen'
+}
+
 export const sizes: ISize = {
 	miniMobile: 320,
 	mobile: 576,
