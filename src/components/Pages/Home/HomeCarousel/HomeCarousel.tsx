@@ -17,7 +17,7 @@ const CarouselContainer = styled.div`
 	.control-dots {
 		bottom: 50px;
 		@media ${devices.laptop} {
-			bottom: 200px;
+			bottom: 100px;
 		}
 	}
 `;

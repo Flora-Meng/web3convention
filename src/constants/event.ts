@@ -9,10 +9,12 @@ enum EWeekday {
 }
 
 export enum EEventType {
-	FESTIVITY = 'festivity',
-	MASTERCLASS = 'masterclass',
+	KEYNOTE = 'keynote',
 	SEMINAR = 'seminar',
-	WORKSHOP = 'workshop'
+	WORKSHOP = 'workshop',
+	PITCH = 'pitch',
+	HACKATHON = 'hackathon',
+	PARTY = 'party'
 }
 
 export const WEEKDAY = [

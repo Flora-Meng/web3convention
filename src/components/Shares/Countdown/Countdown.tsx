@@ -1,0 +1,112 @@
+import { upperFirst } from 'lodash';
+import { useEffect } from 'react';
+import styled from 'styled-components';
+
+import ECountdownKey from '@/constants/countdown';
+import useCountdown from '@/hooks/useCountdown';
+import { ISize } from '@/interfaces/variables';
+import { EDeviceSize, color, devices } from '@/styles/variables';
+
+const { primaryColor } = color;
+
+interface CountdownProps {
+	countdownDate?: string;
+	NumberFontSizeConfig?: ISize;
+}
+
+interface CountdownNumberProps {
+	NumberFontSizeConfig?: ISize;
+}
+
+const CountdownContainer = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	@media ${devices.tablet} {
+		justify-content: flex-start;
+	}
+`;
+
+const CountdownItemContainer = styled.div`
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	font-weight: 700;
+	min-width: 24vw;
+	text-align: center;
+	@media ${devices.mobile} {
+		min-width: 26vw;
+	}
+	@media ${devices.tablet} {
+		min-width: unset;
+	}
+	@media ${devices.tablet} {
+		margin-right: 60px;
+	}
+	@media ${devices.largeLaptop} {
+		margin-right: 80px;
+	}
+`;
+
+const CountdownNumber = styled.p<CountdownNumberProps>`
+	font-size: 36px;
+	margin: 0;
+	@media ${devices.miniMobile} {
+		font-size: ${({ NumberFontSizeConfig }) =>
+			`${(NumberFontSizeConfig && NumberFontSizeConfig[EDeviceSize.miniMobile]) || 36}px`};
+	}
+	@media ${devices.mobile} {
+		font-size: ${({ NumberFontSizeConfig }) =>
+			`${(NumberFontSizeConfig && NumberFontSizeConfig[EDeviceSize.mobile]) || 36}px`};
+	}
+	@media ${devices.tablet} {
+		font-size: ${({ NumberFontSizeConfig }) =>
+			`${(NumberFontSizeConfig && NumberFontSizeConfig[EDeviceSize.tablet]) || 50}px`};
+	}
+	@media ${devices.laptop} {
+		font-size: ${({ NumberFontSizeConfig }) =>
+			`${(NumberFontSizeConfig && NumberFontSizeConfig[EDeviceSize.laptop]) || 60}px`};
+	}
+	@media ${devices.largeLaptop} {
+		font-size: ${({ NumberFontSizeConfig }) =>
+			`${(NumberFontSizeConfig && NumberFontSizeConfig[EDeviceSize.largeLaptop]) || 80}px`};
+	}
+`;
+const CountdownUnit = styled.p`
+	color: ${primaryColor};
+	font-size: 18px;
+	margin: 0;
+`;
+
+const COUNTDOWN_DATE = '2023-07-22T22:00:00.000Z';
+
+const Countdown: React.FC<CountdownProps> = ({
+	countdownDate = COUNTDOWN_DATE,
+	NumberFontSizeConfig
+}) => {
+	const { timer, countdownInfo } = useCountdown(countdownDate);
+
+	useEffect(() => {
+		return () => clearInterval(timer);
+	}, []);
+	return (
+		<CountdownContainer>
+			{Object.values(ECountdownKey).map(countdownKey => {
+				const countdownNumber = (countdownInfo && countdownInfo[countdownKey]) || 0;
+				return (
+					<CountdownItemContainer key={countdownKey}>
+						<CountdownNumber NumberFontSizeConfig={NumberFontSizeConfig}>
+							{countdownInfo ? countdownNumber.toString().padStart(2, '0') : ''}
+						</CountdownNumber>
+						<CountdownUnit>
+							{upperFirst(countdownKey)}
+							{countdownNumber === 1 ? '' : 's'}
+						</CountdownUnit>
+					</CountdownItemContainer>
+				);
+			})}
+		</CountdownContainer>
+	);
+};
+
+export default Countdown;
