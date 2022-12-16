@@ -1,17 +1,27 @@
+import styled from 'styled-components';
+
 import StageBanner from '@/components/Pages/Stages/Banner/StageBanner';
 import MainContents from '@/components/Pages/Stages/MainContents';
-import DefaultLayout from '@/layouts/DefaultLayout';
+import Footer from '@/layouts/Footer';
+import Header from '@/layouts/Header';
 
-type ComponentType = React.FC & { layout: typeof DefaultLayout };
-const StagePage: ComponentType = () => {
+const BackgroundImage = styled.div`
+	background-image: url('/images/demo/main-slider-background-2.jpg');
+	background-position: bottom;
+	background-repeat: repeat;
+	background-size: 100vw;
+`;
+const StagePage = () => {
 	return (
 		<>
-			<StageBanner />
+			<BackgroundImage>
+				<Header />
+				<StageBanner />
+			</BackgroundImage>
 			<MainContents />
+			<Footer />
 		</>
 	);
 };
-
-StagePage.layout = DefaultLayout;
 
 export default StagePage;

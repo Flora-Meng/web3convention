@@ -53,7 +53,7 @@ const InfoContainer = styled.div`
 	}
 `;
 
-const Title = styled.h2<TextProps>`
+export const Title = styled.h2<TextProps>`
 	font-size: 54px;
 	font-weight: 700;
 	line-height: 1.1;
@@ -71,7 +71,7 @@ const Title = styled.h2<TextProps>`
 	}
 `;
 
-const Subtitle = styled.p<TextProps>`
+export const Subtitle = styled.p<TextProps>`
 	font-size: 16px;
 	font-style: italic;
 	letter-spacing: 0.14rem;
@@ -92,7 +92,7 @@ const Subtitle = styled.p<TextProps>`
 	}
 `;
 
-const Description = styled.p<TextProps>`
+export const Description = styled.p<TextProps>`
 	font-size: 18px;
 	line-height: 1.8;
 	margin: 0;

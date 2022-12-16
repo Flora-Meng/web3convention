@@ -1,35 +1,42 @@
 import styled from 'styled-components';
 
+import {
+	Description,
+	Subtitle,
+	Title
+} from '@/components/Pages/Home/HomeCarousel/components/CarouseItem/CarouseItem';
 import banner from '@/components/Pages/Stages/Banner/banner.json';
 import { color } from '@/styles/variables';
 
-const { blackColor, whiteColor } = color;
+const { whiteColor } = color;
 
 const BannerContainer = styled.div`
-	background-color: ${blackColor};
+	height: 850px;
 `;
 
 const TextSection = styled.div`
+	color: ${whiteColor};
+	height: 300px;
 	margin: auto;
 	max-width: 1600px;
-	padding: 30px 0;
+	padding: 200px 0;
 `;
 
-const Title = styled.h1`
-	color: ${whiteColor};
-	font-weight: 800;
-	margin-bottom: 50px;
+const BannerTitle = styled(Title)`
+	margin-bottom: 150px;
 `;
 
-const Text = styled.h3`
-	color: ${whiteColor};
+const BannerDescription = styled(Description)`
+	font-size: 23px;
+	max-width: 1200px;
 `;
 const StageBanner = () => {
 	return (
 		<BannerContainer>
 			<TextSection>
-				<Title>{banner.title}</Title>
-				<Text>{banner.text}</Text>
+				<Subtitle isCurrent>{banner.subtitle}</Subtitle>
+				<BannerTitle isCurrent>{banner.title}</BannerTitle>
+				<BannerDescription isCurrent>{banner.text}</BannerDescription>
 			</TextSection>
 		</BannerContainer>
 	);
