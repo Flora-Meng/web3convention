@@ -56,15 +56,17 @@ export const disableMUIButtonHoverCss = () => css`
 
 export const tagDecoration = () => css`
 	&::before {
-		content: '< ';
+		content: '<';
 		display: inline-block;
 		font-size: 0.8em;
+		padding-right: 0.2em;
 		position: relative;
 	}
 	&::after {
-		content: ' />';
+		content: '/>';
 		display: inline-block;
 		font-size: 0.8em;
+		padding-left: 0.2em;
 		position: relative;
 	}
 `;
@@ -171,5 +173,23 @@ export const backdrop = css`
 		transform: scale(1.5);
 		width: 100%;
 		z-index: 0;
+	}
+`;
+
+export const carouselStyle = css`
+	.control-dots {
+		.dot {
+			background: #afafaf;
+			box-shadow: none;
+			height: 10px;
+			width: 10px;
+			&:hover {
+				background: ${primaryColor};
+			}
+		}
+		.selected {
+			background: ${primaryColor};
+			border: 1px solid ${primaryColor};
+		}
 	}
 `;
