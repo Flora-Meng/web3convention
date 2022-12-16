@@ -19,11 +19,11 @@ const TextSection = styled.div`
 	height: 300px;
 	margin: auto;
 	max-width: 1600px;
-	padding: 200px 0;
+	padding: 180px 0;
 `;
 
 const BannerTitle = styled(Title)`
-	margin-bottom: 150px;
+	margin-bottom: 200px;
 `;
 
 const BannerDescription = styled(Description)`
