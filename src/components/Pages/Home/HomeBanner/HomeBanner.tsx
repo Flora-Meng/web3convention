@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 import bannerInfo from './bannerInfo.json';
 import ThemeButton from '@/components/Shares/ThemeButton';
-import { animation, animationFillMode, tagDecoration } from '@/styles/mixin';
+import { animation, animationFillMode, sectionSubtitle } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
 
-const { primaryColor, whiteColor } = color;
+const { whiteColor } = color;
 
 interface LeftGridProps {
 	imageSrc: string;
@@ -65,12 +65,8 @@ const Title = styled.h2`
 `;
 
 const Subtitle = styled.p`
-	color: ${primaryColor};
+	${sectionSubtitle};
 	font-size: 12px;
-	font-style: italic;
-	letter-spacing: 0.1rem;
-	${tagDecoration()};
-	margin: 0;
 `;
 
 const Description = styled.p`

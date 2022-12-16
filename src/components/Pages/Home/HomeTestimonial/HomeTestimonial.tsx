@@ -1,14 +1,13 @@
 import Grid from '@mui/material/Grid';
-import Carousel from 'react-material-ui-carousel';
+import { Carousel } from 'react-responsive-carousel';
 import styled from 'styled-components';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 import TestimonialItem from './components/TestimonialItem';
 import testimonialList from './testimonialList.json';
 import useResize from '@/hooks/useResize';
-import { sectionSubtitle, sectionTitle } from '@/styles/mixin';
-import { color, devices, sizes } from '@/styles/variables';
-
-const { primaryColor } = color;
+import { carouselStyle, sectionSubtitle, sectionTitle } from '@/styles/mixin';
+import { devices, sizes } from '@/styles/variables';
 
 const HomeTestimonialContainer = styled.div`
 	max-width: ${`${sizes.largeLaptop}px`};
@@ -19,6 +18,7 @@ const HomeTestimonialContainer = styled.div`
 	@media ${devices.laptop} {
 		margin: 0 auto;
 	}
+	${carouselStyle};
 `;
 
 const Title = styled.h2`
@@ -37,20 +37,14 @@ const HomeTestimonial: React.FC = () => {
 			<Subtitle>event_testimonials</Subtitle>
 			<Title>What Members Are Saying</Title>
 			<Carousel
-				animation="slide"
-				duration={1000}
-				indicatorIconButtonProps={{
-					style: {
-						bottom: 0,
-						zIndex: 2,
-						margin: '6px'
-					}
-				}}
-				activeIndicatorIconButtonProps={{
-					style: {
-						color: primaryColor
-					}
-				}}
+				autoPlay
+				infiniteLoop
+				showArrows={false}
+				showStatus={false}
+				showThumbs={false}
+				swipeable={false}
+				interval={6000}
+				transitionTime={1000}
 			>
 				{isMobile
 					? testimonialList.map(testimonial => (

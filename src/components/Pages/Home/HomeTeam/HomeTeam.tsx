@@ -65,17 +65,8 @@ const GridItemContainer = styled.div`
 
 const ImageContainer = styled.div`
 	cursor: pointer;
-	height: 100vw;
+	height: 340px;
 	position: relative;
-	@media ${devices.mobile} {
-		height: 50vw;
-	}
-	@media ${devices.tablet} {
-		height: 36vw;
-	}
-	@media ${devices.laptop} {
-		height: 25vw;
-	}
 `;
 
 const StyledImage = styled(Image)`

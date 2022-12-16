@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 
 import ThemeButton from '@/components/Shares/ThemeButton';
-import { tagDecoration } from '@/styles/mixin';
+import { sectionSubtitle } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
 
 const { whiteColor } = color;
@@ -21,11 +21,10 @@ const HomeParallaxContainer = styled.div`
 `;
 
 const Subtitle = styled.p`
+	${sectionSubtitle};
+	color: ${whiteColor};
 	font-size: 18px;
-	font-style: italic;
-	${tagDecoration()};
 	letter-spacing: 0.15rem;
-	margin: 0;
 	margin-bottom: 8px;
 `;
 
