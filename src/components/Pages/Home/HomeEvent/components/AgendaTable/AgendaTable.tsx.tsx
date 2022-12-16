@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 import { WEEKDAY } from '@/constants/event';
-import { color, devices } from '@/styles/variables';
+import { color, devices, sizes } from '@/styles/variables';
 
 const { textColor } = color;
 
@@ -12,6 +12,8 @@ interface GridItemProps {
 }
 
 const AgendaTableContainer = styled.div`
+	margin: 50px auto;
+	max-width: ${`${sizes.laptop}px`};
 	position: relative;
 `;
 const TableHead = styled(Grid)`
