@@ -14,12 +14,24 @@ const EvenRowContainer = styled.div`
 	display: grid;
 	grid-template-columns: 60% 1fr;
 	margin: 100px 0;
+	min-height: 500px;
 `;
 
 const OddRowContainer = styled.div`
 	display: grid;
 	grid-template-columns: 40% 1fr;
 	margin: 100px 0;
+	min-height: 500px;
+`;
+
+const EvenRowImgContainer = styled.div`
+	margin-right: 50px;
+	position: relative;
+`;
+
+const OddRowImgContainer = styled.div`
+	margin-left: 50px;
+	position: relative;
 `;
 
 const StyledImage = styled(Image)``;
@@ -41,13 +53,9 @@ const ContentRow: React.FC<ContentRowProps> = props => {
 	const isEven = rowCount % 2;
 	return isEven ? (
 		<EvenRowContainer>
-			<StyledImage
-				loader={imageLoader}
-				src={img}
-				alt="content image"
-				width={900}
-				height={500}
-			/>
+			<EvenRowImgContainer>
+				<StyledImage loader={imageLoader} src={img} alt="content image" fill />
+			</EvenRowImgContainer>
 			<div>
 				<Subtitle>SubTitle</Subtitle>
 				<Title>Title</Title>
@@ -61,13 +69,9 @@ const ContentRow: React.FC<ContentRowProps> = props => {
 				<Title>Title</Title>
 				<TextContainer>{text}</TextContainer>
 			</div>
-			<StyledImage
-				loader={imageLoader}
-				src={img}
-				alt="content image"
-				width={900}
-				height={500}
-			/>
+			<OddRowImgContainer>
+				<StyledImage loader={imageLoader} src={img} alt="content image" fill />
+			</OddRowImgContainer>
 		</OddRowContainer>
 	);
 };
