@@ -26,6 +26,9 @@ const Backdrop = styled.div`
 	@media ${devices.tablet} {
 		left: 60px;
 	}
+	@media ${devices.largeLaptop} {
+		font-size: 320px;
+	}
 `;
 
 const ContentContainer = styled.div`
