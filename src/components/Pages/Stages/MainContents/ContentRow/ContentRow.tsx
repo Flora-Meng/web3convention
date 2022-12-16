@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 
+import { sectionSubtitle, sectionTitle } from '@/styles/mixin';
 import imageLoader from '@/utils/loader';
 
 interface ContentRowProps {
@@ -18,12 +19,21 @@ const EvenRowContainer = styled.div`
 const OddRowContainer = styled.div`
 	display: grid;
 	grid-template-columns: 40% 1fr;
+	margin: 100px 0;
 `;
 
 const StyledImage = styled(Image)``;
 
 const TextContainer = styled.div`
 	font-size: 30px;
+`;
+
+const Title = styled.h2`
+	${sectionTitle};
+`;
+
+const Subtitle = styled.p`
+	${sectionSubtitle};
 `;
 
 const ContentRow: React.FC<ContentRowProps> = props => {
@@ -38,11 +48,19 @@ const ContentRow: React.FC<ContentRowProps> = props => {
 				width={900}
 				height={500}
 			/>
-			<TextContainer>{text}</TextContainer>
+			<div>
+				<Subtitle>SubTitle</Subtitle>
+				<Title>Title</Title>
+				<TextContainer>{text}</TextContainer>
+			</div>
 		</EvenRowContainer>
 	) : (
 		<OddRowContainer>
-			<TextContainer>{text}</TextContainer>
+			<div>
+				<Subtitle>SubTitle</Subtitle>
+				<Title>Title</Title>
+				<TextContainer>{text}</TextContainer>
+			</div>
 			<StyledImage
 				loader={imageLoader}
 				src={img}
