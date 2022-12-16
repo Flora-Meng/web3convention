@@ -6,38 +6,36 @@ import imageLoader from '@/utils/loader';
 
 interface ContentRowProps {
 	rowCount: number;
+	title: string;
+	subTitle: string;
 	text: string;
 	img: string;
 }
 
 const EvenRowContainer = styled.div`
 	display: grid;
-	grid-template-columns: 60% 1fr;
+	grid-template-columns: 80% 1fr;
 	margin: 100px 0;
-	min-height: 500px;
+	min-height: 700px;
 `;
 
 const OddRowContainer = styled.div`
 	display: grid;
-	grid-template-columns: 40% 1fr;
+	grid-template-columns: 20% 1fr;
 	margin: 100px 0;
-	min-height: 500px;
+	min-height: 700px;
 `;
 
 const EvenRowImgContainer = styled.div`
 	margin-right: 50px;
+	max-height: 700px;
 	position: relative;
 `;
 
 const OddRowImgContainer = styled.div`
 	margin-left: 50px;
+	max-height: 700px;
 	position: relative;
-`;
-
-const StyledImage = styled(Image)``;
-
-const TextContainer = styled.div`
-	font-size: 30px;
 `;
 
 const Title = styled.h2`
@@ -48,29 +46,35 @@ const Subtitle = styled.p`
 	${sectionSubtitle};
 `;
 
+const TextContainer = styled.div`
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 2;
+`;
+
 const ContentRow: React.FC<ContentRowProps> = props => {
-	const { rowCount, text, img } = props;
+	const { rowCount, title, subTitle, text, img } = props;
 	const isEven = rowCount % 2;
 	return isEven ? (
 		<EvenRowContainer>
 			<EvenRowImgContainer>
-				<StyledImage loader={imageLoader} src={img} alt="content image" fill />
+				<Image loader={imageLoader} src={img} alt="content image" fill unoptimized />
 			</EvenRowImgContainer>
-			<div>
-				<Subtitle>SubTitle</Subtitle>
-				<Title>Title</Title>
+			<section>
+				<Subtitle>{subTitle}</Subtitle>
+				<Title>{title}</Title>
 				<TextContainer>{text}</TextContainer>
-			</div>
+			</section>
 		</EvenRowContainer>
 	) : (
 		<OddRowContainer>
-			<div>
-				<Subtitle>SubTitle</Subtitle>
-				<Title>Title</Title>
+			<section>
+				<Subtitle>{subTitle}</Subtitle>
+				<Title>{title}</Title>
 				<TextContainer>{text}</TextContainer>
-			</div>
+			</section>
 			<OddRowImgContainer>
-				<StyledImage loader={imageLoader} src={img} alt="content image" fill />
+				<Image loader={imageLoader} src={img} alt="content image" fill unoptimized />
 			</OddRowImgContainer>
 		</OddRowContainer>
 	);

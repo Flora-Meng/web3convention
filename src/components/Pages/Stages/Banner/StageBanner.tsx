@@ -17,14 +17,12 @@ const TextSection = styled.div`
 
 const Title = styled.h1`
 	color: ${whiteColor};
-	font-family: 'Montserrat', sans-serif;
 	font-weight: 800;
 	margin-bottom: 50px;
 `;
 
 const Text = styled.h3`
 	color: ${whiteColor};
-	font-family: 'Neue Haas Grotesk', sans-serif;
 `;
 const StageBanner = () => {
 	return (
