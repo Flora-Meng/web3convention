@@ -8,10 +8,10 @@ import {
 import banner from '@/components/Pages/Stages/Banner/banner.json';
 import { color } from '@/styles/variables';
 
-const { whiteColor } = color;
+const { whiteColor, primaryColor } = color;
 
 const BannerContainer = styled.div`
-	height: 850px;
+	height: 100%;
 `;
 
 const TextSection = styled.div`
@@ -19,22 +19,26 @@ const TextSection = styled.div`
 	height: 300px;
 	margin: auto;
 	max-width: 1600px;
-	padding: 180px 0;
+	padding: 24vh 0;
+`;
+
+const BannerSubtitle = styled(Subtitle)`
+	color: ${primaryColor};
 `;
 
 const BannerTitle = styled(Title)`
-	margin-bottom: 200px;
+	margin-bottom: 120px;
 `;
 
 const BannerDescription = styled(Description)`
-	font-size: 23px;
-	max-width: 1200px;
+	font-size: 20px;
+	max-width: 600px;
 `;
 const StageBanner = () => {
 	return (
 		<BannerContainer>
 			<TextSection>
-				<Subtitle isCurrent>{banner.subtitle}</Subtitle>
+				<BannerSubtitle isCurrent>{banner.subtitle}</BannerSubtitle>
 				<BannerTitle isCurrent>{banner.title}</BannerTitle>
 				<BannerDescription isCurrent>{banner.text}</BannerDescription>
 			</TextSection>
