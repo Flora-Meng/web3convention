@@ -34,7 +34,6 @@ const Homepage: ComponentType = () => {
 			<HomeTeam />
 			<HomeSubscription />
 			<HomeEvent />
-			<HomeParallax />
 			{/* <HomeGallery /> */}
 			{/* <HomeTestimonial /> */}
 			<HomeSponsor />
