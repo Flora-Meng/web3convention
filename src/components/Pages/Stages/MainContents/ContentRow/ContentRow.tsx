@@ -109,8 +109,8 @@ const TextContainer = styled.div`
 		font-size: 15px;
 	}
 	@media ${devices.desktop} {
-		font-size: 17px;
-		line-height: 2;
+		font-size: 18px;
+		line-height: 1.75;
 	}
 `;
 
