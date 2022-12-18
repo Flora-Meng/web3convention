@@ -40,6 +40,7 @@ const BannerSubtitle = styled(Subtitle)`
 
 const BannerTitle = styled(Title)`
 	margin-bottom: 120px;
+	white-space: pre-wrap;
 	@media ${devices.laptop} {
 		font-size: 60px;
 	}
