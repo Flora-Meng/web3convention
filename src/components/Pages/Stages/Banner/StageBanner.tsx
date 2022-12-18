@@ -13,7 +13,12 @@ const { whiteColor, primaryColor } = color;
 const BannerContainer = styled.div`
 	position: relative;
 	top: 50%;
-	transform: translate(0, calc(-50% - 120px));
+	@media ${devices.laptop} {
+		transform: translate(0, calc(-50% - 100px));
+	}
+	@media ${devices.largeLaptop} {
+		transform: translate(0, calc(-50% - 120px));
+	}
 `;
 
 const TextSection = styled.div`
@@ -28,7 +33,7 @@ const TextSection = styled.div`
 const BannerSubtitle = styled(Subtitle)`
 	color: ${primaryColor};
 	@media ${devices.laptop} {
-		font-size: 14px;
+		font-size: 13px;
 	}
 	@media ${devices.largeLaptop} {
 		font-size: 16px;
@@ -42,10 +47,10 @@ const BannerTitle = styled(Title)`
 	margin-bottom: 120px;
 	white-space: pre-wrap;
 	@media ${devices.laptop} {
-		font-size: 60px;
+		font-size: 50px;
 	}
 	@media ${devices.largeLaptop} {
-		font-size: 80px;
+		font-size: 70px;
 	}
 	@media ${devices.desktop} {
 		font-size: 90px;
