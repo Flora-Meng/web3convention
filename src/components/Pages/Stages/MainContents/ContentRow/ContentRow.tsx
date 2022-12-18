@@ -72,15 +72,15 @@ const OddRowImgContainer = styled.div`
 const Title = styled.h2`
 	${sectionTitle};
 	@media ${devices.laptop} {
-		font-size: 25px;
+		font-size: 30px;
 		margin-bottom: 30px;
 	}
 	@media ${devices.largeLaptop} {
-		font-size: 35px;
+		font-size: 40px;
 		margin-bottom: 45px;
 	}
 	@media ${devices.desktop} {
-		font-size: 40px;
+		font-size: 50px;
 		margin-bottom: 50px;
 	}
 `;
@@ -101,6 +101,7 @@ const Subtitle = styled.p`
 const TextContainer = styled.div`
 	font-weight: 400;
 	line-height: 1.5;
+	white-space: pre-wrap;
 	@media ${devices.laptop} {
 		font-size: 12px;
 	}
@@ -109,6 +110,7 @@ const TextContainer = styled.div`
 	}
 	@media ${devices.desktop} {
 		font-size: 17px;
+		line-height: 2;
 	}
 `;
 
