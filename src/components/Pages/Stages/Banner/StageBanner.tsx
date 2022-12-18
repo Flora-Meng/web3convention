@@ -6,33 +6,67 @@ import {
 	Title
 } from '@/components/Pages/Home/HomeCarousel/components/CarouseItem/CarouseItem';
 import banner from '@/components/Pages/Stages/Banner/banner.json';
-import { color } from '@/styles/variables';
+import { color, devices } from '@/styles/variables';
 
 const { whiteColor, primaryColor } = color;
 
 const BannerContainer = styled.div`
-	height: 100%;
+	position: relative;
+	top: 50%;
+	transform: translate(0, calc(-50% - 120px));
 `;
 
 const TextSection = styled.div`
 	color: ${whiteColor};
-	height: 300px;
-	margin: auto;
-	max-width: 1600px;
-	padding: 24vh 0;
+	margin: 0 auto;
+	max-width: 1440px;
+	@media ${devices.laptop} {
+		width: calc(100vw - 200px);
+	}
+	@media ${devices.largeLaptop} {
+	}
+	@media ${devices.desktop} {
+		width: 80vw;
+	}
 `;
 
 const BannerSubtitle = styled(Subtitle)`
 	color: ${primaryColor};
+	@media ${devices.laptop} {
+		font-size: 13px;
+	}
+	@media ${devices.largeLaptop} {
+		font-size: 15px;
+	}
+	@media ${devices.desktop} {
+		font-size: 16px;
+	}
 `;
 
 const BannerTitle = styled(Title)`
 	margin-bottom: 120px;
+	@media ${devices.laptop} {
+		font-size: 40px;
+	}
+	@media ${devices.largeLaptop} {
+		font-size: 48px;
+	}
+	@media ${devices.desktop} {
+		font-size: 54px;
+	}
 `;
 
 const BannerDescription = styled(Description)`
-	font-size: 20px;
-	max-width: 600px;
+	max-width: 70%;
+	@media ${devices.laptop} {
+		font-size: 13px;
+	}
+	@media ${devices.largeLaptop} {
+		font-size: 18px;
+	}
+	@media ${devices.desktop} {
+		font-size: 20px;
+	}
 `;
 const StageBanner = () => {
 	return (

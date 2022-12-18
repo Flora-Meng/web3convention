@@ -8,7 +8,6 @@ import Header from '@/layouts/Header';
 const BackgroundImage = styled.div`
 	background-attachment: fixed;
 	background-image: url('/images/demo/stagePage/banner.jpeg');
-	background-repeat: repeat-x;
 	background-size: cover;
 	height: 100vh;
 `;
