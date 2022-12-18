@@ -19,53 +19,48 @@ const BannerContainer = styled.div`
 const TextSection = styled.div`
 	color: ${whiteColor};
 	margin: 0 auto;
-	max-width: 1440px;
+	max-width: 1600px;
 	@media ${devices.laptop} {
 		width: calc(100vw - 200px);
-	}
-	@media ${devices.largeLaptop} {
-	}
-	@media ${devices.desktop} {
-		width: 80vw;
 	}
 `;
 
 const BannerSubtitle = styled(Subtitle)`
 	color: ${primaryColor};
 	@media ${devices.laptop} {
-		font-size: 13px;
+		font-size: 14px;
 	}
 	@media ${devices.largeLaptop} {
-		font-size: 15px;
+		font-size: 16px;
 	}
 	@media ${devices.desktop} {
-		font-size: 16px;
+		font-size: 18px;
 	}
 `;
 
 const BannerTitle = styled(Title)`
 	margin-bottom: 120px;
 	@media ${devices.laptop} {
-		font-size: 40px;
+		font-size: 60px;
 	}
 	@media ${devices.largeLaptop} {
-		font-size: 48px;
+		font-size: 80px;
 	}
 	@media ${devices.desktop} {
-		font-size: 54px;
+		font-size: 90px;
 	}
 `;
 
 const BannerDescription = styled(Description)`
 	max-width: 70%;
 	@media ${devices.laptop} {
-		font-size: 13px;
+		font-size: 12px;
 	}
 	@media ${devices.largeLaptop} {
-		font-size: 18px;
+		font-size: 15px;
 	}
 	@media ${devices.desktop} {
-		font-size: 20px;
+		font-size: 18px;
 	}
 `;
 const StageBanner = () => {

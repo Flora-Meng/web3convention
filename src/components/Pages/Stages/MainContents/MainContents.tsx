@@ -5,13 +5,12 @@ import ContentRow from '@/components/Pages/Stages/MainContents/ContentRow/Conten
 import { devices } from '@/styles/variables';
 
 const MainSection = styled.div`
-	margin: auto;
-	max-width: 1440px;
+	margin: 0 auto;
+	max-width: 1600px;
 	@media ${devices.laptop} {
-		padding: 0 100px;
+		width: calc(100vw - 200px);
 	}
 	@media ${devices.desktop} {
-		padding: 0;
 		width: 80vw;
 	}
 `;

@@ -15,38 +15,34 @@ interface ContentRowProps {
 
 const EvenRowContainer = styled.div`
 	display: grid;
-	grid-template-columns: 80% 1fr;
+	grid-template-columns: 75% 1fr;
 	@media ${devices.laptop} {
 		margin: 80px 0;
-		min-height: 40vw;
 	}
 	@media ${devices.largeLaptop} {
 		margin: 120px 0;
 	}
 	@media ${devices.desktop} {
 		margin: 140px 0;
-		min-height: 640px;
 	}
 `;
 
 const OddRowContainer = styled.div`
 	display: grid;
-	grid-template-columns: 20% 1fr;
+	grid-template-columns: 25% 1fr;
 	@media ${devices.laptop} {
 		margin: 80px 0;
-		min-height: 40vw;
 	}
 	@media ${devices.largeLaptop} {
 		margin: 120px 0;
 	}
 	@media ${devices.desktop} {
 		margin: 140px 0;
-		min-height: 640px;
 	}
 `;
 
 const EvenRowImgContainer = styled.div`
-	aspect-ratio: 3/2;
+	aspect-ratio: 5/3;
 	position: relative;
 	@media ${devices.laptop} {
 		margin-right: 30px;
@@ -60,7 +56,7 @@ const EvenRowImgContainer = styled.div`
 `;
 
 const OddRowImgContainer = styled.div`
-	aspect-ratio: 3/2;
+	aspect-ratio: 5/3;
 	position: relative;
 	@media ${devices.laptop} {
 		margin-left: 30px;
@@ -77,7 +73,7 @@ const Title = styled.h2`
 	${sectionTitle};
 	@media ${devices.laptop} {
 		font-size: 25px;
-		margin-bottom: 35px;
+		margin-bottom: 30px;
 	}
 	@media ${devices.largeLaptop} {
 		font-size: 35px;
