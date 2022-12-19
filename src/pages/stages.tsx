@@ -5,7 +5,7 @@ import MainContents from '@/components/Pages/Stages/MainContents';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 
-const BackgroundImage = styled.div`
+const BannerBackground = styled.div`
 	background-attachment: fixed;
 	background-image: url('/images/demo/stagePage/banner.jpeg');
 	background-size: cover;
@@ -14,10 +14,10 @@ const BackgroundImage = styled.div`
 const StagePage = () => {
 	return (
 		<>
-			<BackgroundImage>
+			<BannerBackground>
 				<Header />
 				<StageBanner />
-			</BackgroundImage>
+			</BannerBackground>
 			<MainContents />
 			<Footer />
 		</>
