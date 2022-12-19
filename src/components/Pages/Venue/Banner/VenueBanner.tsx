@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 
 import {
-	Description,
 	Subtitle,
 	Title
 } from '@/components/Pages/Home/HomeCarousel/components/CarouseItem/CarouseItem';
-import banner from '@/components/Pages/Stages/Banner/stagePageBanner.json';
+import banner from '@/components/Pages/Venue/Banner/venuePageBanner.json';
 import { color, devices } from '@/styles/variables';
 
 const { whiteColor, primaryColor } = color;
@@ -57,28 +56,15 @@ const BannerTitle = styled(Title)`
 	}
 `;
 
-const BannerDescription = styled(Description)`
-	max-width: 70%;
-	@media ${devices.laptop} {
-		font-size: 12px;
-	}
-	@media ${devices.largeLaptop} {
-		font-size: 15px;
-	}
-	@media ${devices.desktop} {
-		font-size: 18px;
-	}
-`;
-const StageBanner = () => {
+const VenueBanner = () => {
 	return (
 		<BannerContainer>
 			<TextSection>
 				<BannerSubtitle isCurrent>{banner.subtitle}</BannerSubtitle>
 				<BannerTitle isCurrent>{banner.title}</BannerTitle>
-				<BannerDescription isCurrent>{banner.text}</BannerDescription>
 			</TextSection>
 		</BannerContainer>
 	);
 };
 
-export default StageBanner;
+export default VenueBanner;
