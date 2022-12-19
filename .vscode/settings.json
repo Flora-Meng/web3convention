@@ -14,7 +14,7 @@
 	},
 	"files.eol": "\n",
 	"editor.tabSize": 4,
-	"cSpell.words": ["stylelint", "swipeable", "unoptimized", "hackathon"],
+	"cSpell.words": ["stylelint", "swipeable", "unoptimized", "hackathon", "webp"],
 	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": true,
 		"source.fixAll.stylelint": true

@@ -57,53 +57,53 @@ const Counter = styled.div`
 
 const featureList = [
 	{
-		imageSrc: '/images/features/feature-lightbulb.png',
+		imageSrc: '/images/features/feature-lightbulb.webp',
 		title: 'Exhibitors',
 		count: 150
 	},
 	{
-		imageSrc: '/images/features/feature-vr.png',
+		imageSrc: '/images/features/feature-vr.webp',
 		title: 'Attendees',
 		count: 10000
 	},
 	{
-		imageSrc: '/images/features/feature-applaud.png',
+		imageSrc: '/images/features/feature-applaud.webp',
 		title: 'Speakers',
 		count: 100
 	},
 	{
-		imageSrc: '/images/features/feature-trophy.png',
+		imageSrc: '/images/features/feature-trophy.webp',
 		title: 'Creators',
 		count: 500
 	},
 	{
-		imageSrc: '/images/features/feature-bowknot.png',
+		imageSrc: '/images/features/feature-bowknot.webp',
 		title: 'Whales',
 		count: 900
 	},
 	{
-		imageSrc: '/images/features/feature-connection.png',
+		imageSrc: '/images/features/feature-connection.webp',
 		title: 'Parties',
 		count: 4
 	},
 	{
-		imageSrc: '/images/features/feature-graph.png',
+		imageSrc: '/images/features/feature-graph.webp',
 		title: 'Venture Capitalists',
 		count: 100
 	},
 	{
-		imageSrc: '/images/features/feature-target.png',
+		imageSrc: '/images/features/feature-target.webp',
 		title: 'Campagin',
 		count: 4,
 		extra: 'Month'
 	},
 	{
-		imageSrc: '/images/features/feature-email.png',
+		imageSrc: '/images/features/feature-email.webp',
 		title: 'Email Database',
 		count: 60000
 	},
 	{
-		imageSrc: '/images/features/feature-certificate.png',
+		imageSrc: '/images/features/feature-certificate.webp',
 		title: 'Influencers',
 		count: 100
 	}
