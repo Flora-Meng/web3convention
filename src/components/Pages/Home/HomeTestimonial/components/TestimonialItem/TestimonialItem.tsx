@@ -51,12 +51,12 @@ const Subtitle = styled.p`
 `;
 
 const ImageContainer = styled.div`
+	width: 100px;
 	z-index: 2;
 `;
 
 const LeftSection = styled.div`
 	margin-right: 40px;
-
 	position: relative;
 	width: 176px;
 `;
@@ -64,6 +64,7 @@ const LeftSection = styled.div`
 const RightSection = styled.div`
 	flex: 1;
 	margin-bottom: auto;
+	text-align: left;
 `;
 
 const StyledDotDecoration = styled(DotDecoration)`

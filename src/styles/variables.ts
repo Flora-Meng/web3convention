@@ -46,7 +46,3 @@ export const inputColor: IInputColor = {
 };
 
 export const headerHeight = '100px';
-export const carouselHeight = {
-	tablet: '760px',
-	laptop: '800px'
-};

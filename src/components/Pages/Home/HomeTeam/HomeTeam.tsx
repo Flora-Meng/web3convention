@@ -74,7 +74,7 @@ const ImageContainer = styled.div`
 		height: 36vw;
 	}
 	@media ${devices.laptop} {
-		height: 25vw;
+		height: 340px;
 	}
 `;
 
