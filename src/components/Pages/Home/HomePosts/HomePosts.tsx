@@ -135,6 +135,7 @@ const HomePosts: React.FC = () => {
 								src={postBackGroundImage[index]}
 								alt={`post-bg-${index}`}
 								unoptimized
+								loading="lazy"
 							/>
 						</Grid>
 					);

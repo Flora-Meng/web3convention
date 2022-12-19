@@ -105,7 +105,7 @@ const TestimonialItem: React.FC<TestimonialItemProps> = ({ testimonial: { author
 						alt={author.name}
 						width={100}
 						height={100}
-						priority
+						loading="lazy"
 					/>
 				</ImageContainer>
 				<StyledDotDecoration />
