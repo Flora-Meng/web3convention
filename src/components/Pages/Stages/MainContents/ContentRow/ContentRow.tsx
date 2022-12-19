@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { useEffect } from 'react';
 import styled from 'styled-components';
 
 import { sectionSubtitle, sectionTitle } from '@/styles/mixin';
@@ -153,7 +154,11 @@ const DescriptionContainer = styled.div`
 const ContentRow: React.FC<ContentRowProps> = props => {
 	const { rowCount, title, subTitle, description, imageSrc } = props;
 	const isEven = rowCount % 2;
-	if (window.innerWidth <= sizes.laptop) {
+	let pageWidth = 0;
+	useEffect(() => {
+		pageWidth = window.innerWidth;
+	}, []);
+	if (pageWidth <= sizes.laptop) {
 		return (
 			<OddRowContainer>
 				<TextContainer>
