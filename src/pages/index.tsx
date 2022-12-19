@@ -10,6 +10,7 @@ import HomePosts from '@/components/Pages/Home/HomePosts';
 import HomeSponsor from '@/components/Pages/Home/HomeSponsor';
 import HomeSubscription from '@/components/Pages/Home/HomeSubscription';
 import HomeTeam from '@/components/Pages/Home/HomeTeam';
+import HomeTicket from '@/components/Pages/Home/HomeTicket';
 // import HomeTestimonial from '@/components/Pages/Home/HomeTestimonial';
 import DefaultLayout from '@/layouts/DefaultLayout';
 import PageHead from '@/layouts/PageHead';
@@ -40,6 +41,7 @@ const Homepage: ComponentType = () => {
 			{/* <HomeTestimonial /> */}
 			<HomeSponsor />
 			<HomeParallax />
+			<HomeTicket />
 		</>
 	);
 };

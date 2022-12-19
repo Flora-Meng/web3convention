@@ -192,4 +192,7 @@ export const carouselStyle = css`
 			border: 1px solid ${primaryColor};
 		}
 	}
+	.selected {
+		z-index: 0 !important;
+	}
 `;

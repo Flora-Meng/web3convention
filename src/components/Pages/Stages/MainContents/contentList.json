@@ -1,93 +1,93 @@
 [
-  {
-    "_id": "1",
-    "title": "Mainstage",
-    "subtitle": "Sydney, July22-23 2023",
-    "text": "The Mainstage is reserved for keynotes and insights on the most significant topics surrounding crypto, blockchain, Web3 and the metaverse. The Mainstage will feature market-moving news and marquee names in crypto and beyond.",
-    "imageSrc": "/images/demo/stagePage/mainstage.png"
-  },
-  {
-    "_id": "2",
-    "title": "Protocol Village",
-    "subtitle": "Sydney, July22-23 2023",
-    "text": "The Protocol Village houses programming and networking space for developers, founders, protocols and users to explore software developments and to learn from each other’s successes, problems and experiences.\n\nPro and Piranha pass holders can visit on Wednesday, April 26, for macro themes that touch all protocols such as scalability and cross-chain interoperability. All attendees are welcome on Thursday, April 27, and Friday, April 28, as we offer set blocks of time to individual protocol communities to showcase developers who've successfully jumped from Web2 to Web3 careers as well as unpacking chain upgrades and other nitty-gritty issues critical to their ecosystems.",
-    "imageSrc": "/images/demo/stagePage/protocolVillage.png"
-  },
-  {
-    "_id": "3",
-    "title": "Metaverse and Gaming Zone",
-    "subtitle": "Sydney, July22-23 2023",
-    "text": "Founders, developers, brands, artists, gamers and platforms come together to explore how they’re building and navigating the digital landscapes and experiences of the future.\n\nPro and Piranha pass holders can come to the Metaverse and Gaming Zone on Wednesday April 26 for demos of the newest games and latest tech powering this new immersive reality. All attendees are welcome on Thursday, April 27, and Friday, April 28 for various content and programming.",
-    "imageSrc": "/images/demo/stagePage/metaverse.png"
-  },
-  {
-    "_id": "4",
-    "title": "Sports and Entertainment Arena",
-    "subtitle": "Sydney, July22-23 2023",
-    "text": "During crypto’s last run-up, no sectors embraced Web3 more than the sports and entertainment industries. The Sports and Entertainment Arena dives into the new frontiers that blockchain technology is providing for fan engagement as well as opportunities in digital collectibles, sponsorships, partnerships, NFT-powered TV shows and more.\n\nPro and Piranha pass holders can stop by on Wednesday, April 26, for activations and contests. All attendees are welcome on Thursday, April 27, and Friday, April 28 for additional programming.",
-    "imageSrc": "/images/demo/stagePage/sports.png"
-  },
-  {
-    "_id": "5",
-    "title": "Money Reimagined Summit",
-    "subtitle": "Sydney, July22-23 2023",
-    "text": "At the all-day Money Reimagined Summit, we map out the future of finance and investing with a gathering of institutional and retail investors, hedge fund managers, OTC digital asset traders, exchange providers, venture capitalists, smart contract developers, bankers, compliance officers, lawyers, custodians and everyone in between. Together we’ll address the opportunities and pitfalls that lie in integrating the radical, decentralized finance world of DeFi with traditional “TradFi” finance. We’ll explore the lessons learned from a brutal crypto winter and figure out where crypto solutions fit within the challenging post-pandemic global macro environment. This summit takes place on Wednesday, April 26, and is open only to Pro and Piranha pass holders.",
-    "imageSrc": "/images/demo/stagePage/moneyReimagined.png"
-  },
-  {
-    "_id": "6",
-    "title": "StageX",
-    "subtitle": "Sydney, July22-23 2023",
-    "text": "Stage X showcases the timely conversations in an industry that never sleeps. Whether it’s late-breaking news or the newest developments in crypto, blockchain or Web3, you will hear about it here. There is no set theme here; Stage X is designed to capture it all and provide the flexibility for timely content. This stage is open to all attendees on Thursday, April 27, and Friday, April 28.",
-    "imageSrc": "/images/demo/stagePage/stageX.png"
-  },
-  {
-    "_id": "7",
-    "title": "Crypto Policy Forum",
-    "subtitle": "Sydney, July22-23 2023",
-    "text": "The Crypto Policy Forum convenes leaders from government and the crypto and blockchain community to discuss, debate and determine where the affairs of the state should start and end within the Web3 economy. The Forum explores the advance of central bank digital currencies, the tensions around stablecoin regulation, the widening enforcement of anti-money laundering and counter-terrorism rules against cryptocurrency services and the challenges in applying 20th century securities laws to 21st century decentralized protocols.\n\nSpeakers and participants seek an international consensus on how to optimize a regulatory approach that protects users and boosts confidence in the digital asset industry without overly constraining innovation or killing the objective of equitable financial access for all. The Crypto Policy Forum is open to pass holders and takes place on Thursday, April 27.",
-    "imageSrc": "/images/demo/stagePage/cryptoPolicy.png"
-  },
-  {
-    "_id": "8",
-    "title": "Web3 Creator and Brand Summit",
-    "subtitle": "Sydney, July22-23 2023",
-    "text": "Web3 and the creator/ownership-centric economy are rewriting both the technological and relationship layers that power brands, creators and fandoms. The Web3 Creator and Brand Summit is a day of exploration and learning as attendees hear from some of the most influential artists, entrepreneurs and companies that are rewriting the rules of business and culture. The first half of the day highlights the disruptive creators and builders in the ecosystem while the second half sheds light on how brands are utilizing the tools of Web3 to evolve their offerings and customer base. The Web3 and Brand summit takes place on Wednesday, April 26, and is open only to Pro and Piranha pass holders.",
-    "imageSrc": "/images/demo/stagePage/web3Creator.png"
-  },
-  {
-    "_id": "9",
-    "title": "Big Ideas Stage",
-    "subtitle": "Sydney, July22-23 2023",
-    "text": "Provocative thinkers offer a rich diet of brainfood about the profound implications of crypto and blockchains for the future of the internet, money, finance, politics and more. The Big Ideas Stage brings together an eclectic mix of crypto developers and entrepreneurs, researchers and other big brains for talks, all with the aim of scoping out possibilities for a better tomorrow. Big Ideas content is showcased on Thursday, April 27, and Friday, April 28, and is open to all pass holders.",
-    "imageSrc": "/images/demo/stagePage/bigIdeas.png"
-  },
-  {
-    "_id": "10",
-    "title": "Speakers AMA Stage",
-    "subtitle": "Sydney, July22-23 2023",
-    "text": "Speakers continue their larger-stage conversations, or start new ones, in a more casual setting. The Speaker AMA Stage allows for more informal chats and interaction with the audience. This stage is open to all on Thursday, April 27, and Friday, April 28.",
-    "imageSrc": "/images/demo/stagePage/speakersAma.png"
-  },
-  {
-    "_id": "11",
-    "title": "CoinDesk Learn Stage",
-    "subtitle": "Sydney, July22-23 2023",
-    "text": "No matter if you are a crypto beginner or a seasoned expert, there is always something new to learn. CoinDesk Learn offers a series of pre-festival webinars plus two days of in-person workshops at Consensus for a variety of audiences from crypto newbies to marketing professionals to institutional investors. Topics range from using technical analysis for trading to reading on-chain data to creating DAOs to identifying scams and avoiding rug pulls to dos and don’ts in the metaverse. CoinDesk Learn is open to all and held on Thursday, April 27, and Friday, April 28, as well as the series of webinars.",
-    "imageSrc": "/images/demo/stagePage/coinDeskLearn.png"
-  },
-  {
-    "_id": "12",
-    "title": "DAO House",
-    "subtitle": "Sydney, July22-23 2023",
-    "text": "The DAO House serves as Consensus' community center for DAO organizers and members to congregate, network, collaborate on new ideas and hear from some of the most dynamic communities and builders in the space. The DAO house is open April 26-28, with Wednesday featuring networking events exclusive to Pro and Piranha pass holders.",
-    "imageSrc": "/images/demo/stagePage/daoHouse.png"
-  },
-  {
-    "_id": "13",
-    "title": "NFT Gallery",
-    "subtitle": "Sydney, July22-23 2023",
-    "text": "A visual immersion into the future of art, community and commerce on the blockchain. The Consensus NFT Gallery brings the massively creative world of non-fungible tokens to life via a physical/digital location showcasing not only the creative artists in the space but also educating those looking to get more involved on the development, culture, and marketing side of NFTs. The NFT gallery will be open to Pro and Piranha pass holders on Wednesday, April 26, and will feature programming for all pass holders April 27-28.",
-    "imageSrc": "/images/demo/stagePage/nftGallery.png"
-  }
+	{
+		"_id": "1",
+		"title": "Mainstage",
+		"subtitle": "Sydney, July22-23 2023",
+		"text": "The Mainstage is reserved for keynotes and insights on the most significant topics surrounding crypto, blockchain, Web3 and the metaverse. The Mainstage will feature market-moving news and marquee names in crypto and beyond.",
+		"imageSrc": "/images/demo/stagePage/mainstage.png"
+	},
+	{
+		"_id": "2",
+		"title": "Protocol Village",
+		"subtitle": "Sydney, July22-23 2023",
+		"text": "The Protocol Village houses programming and networking space for developers, founders, protocols and users to explore software developments and to learn from each other’s successes, problems and experiences.\n\nPro and Piranha pass holders can visit on Wednesday, April 26, for macro themes that touch all protocols such as scalability and cross-chain interoperability. All attendees are welcome on Thursday, April 27, and Friday, April 28, as we offer set blocks of time to individual protocol communities to showcase developers who've successfully jumped from Web2 to Web3 careers as well as unpacking chain upgrades and other nitty-gritty issues critical to their ecosystems.",
+		"imageSrc": "/images/demo/stagePage/protocolVillage.png"
+	},
+	{
+		"_id": "3",
+		"title": "Metaverse and Gaming Zone",
+		"subtitle": "Sydney, July22-23 2023",
+		"text": "Founders, developers, brands, artists, gamers and platforms come together to explore how they’re building and navigating the digital landscapes and experiences of the future.\n\nPro and Piranha pass holders can come to the Metaverse and Gaming Zone on Wednesday April 26 for demos of the newest games and latest tech powering this new immersive reality. All attendees are welcome on Thursday, April 27, and Friday, April 28 for various content and programming.",
+		"imageSrc": "/images/demo/stagePage/metaverse.png"
+	},
+	{
+		"_id": "4",
+		"title": "Sports and Entertainment Arena",
+		"subtitle": "Sydney, July22-23 2023",
+		"text": "During crypto’s last run-up, no sectors embraced Web3 more than the sports and entertainment industries. The Sports and Entertainment Arena dives into the new frontiers that blockchain technology is providing for fan engagement as well as opportunities in digital collectibles, sponsorships, partnerships, NFT-powered TV shows and more.\n\nPro and Piranha pass holders can stop by on Wednesday, April 26, for activations and contests. All attendees are welcome on Thursday, April 27, and Friday, April 28 for additional programming.",
+		"imageSrc": "/images/demo/stagePage/sports.png"
+	},
+	{
+		"_id": "5",
+		"title": "Money Reimagined Summit",
+		"subtitle": "Sydney, July22-23 2023",
+		"text": "At the all-day Money Reimagined Summit, we map out the future of finance and investing with a gathering of institutional and retail investors, hedge fund managers, OTC digital asset traders, exchange providers, venture capitalists, smart contract developers, bankers, compliance officers, lawyers, custodians and everyone in between. Together we’ll address the opportunities and pitfalls that lie in integrating the radical, decentralized finance world of DeFi with traditional “TradFi” finance. We’ll explore the lessons learned from a brutal crypto winter and figure out where crypto solutions fit within the challenging post-pandemic global macro environment. This summit takes place on Wednesday, April 26, and is open only to Pro and Piranha pass holders.",
+		"imageSrc": "/images/demo/stagePage/moneyReimagined.png"
+	},
+	{
+		"_id": "6",
+		"title": "StageX",
+		"subtitle": "Sydney, July22-23 2023",
+		"text": "Stage X showcases the timely conversations in an industry that never sleeps. Whether it’s late-breaking news or the newest developments in crypto, blockchain or Web3, you will hear about it here. There is no set theme here; Stage X is designed to capture it all and provide the flexibility for timely content. This stage is open to all attendees on Thursday, April 27, and Friday, April 28.",
+		"imageSrc": "/images/demo/stagePage/stageX.png"
+	},
+	{
+		"_id": "7",
+		"title": "Crypto Policy Forum",
+		"subtitle": "Sydney, July22-23 2023",
+		"text": "The Crypto Policy Forum convenes leaders from government and the crypto and blockchain community to discuss, debate and determine where the affairs of the state should start and end within the Web3 economy. The Forum explores the advance of central bank digital currencies, the tensions around stablecoin regulation, the widening enforcement of anti-money laundering and counter-terrorism rules against cryptocurrency services and the challenges in applying 20th century securities laws to 21st century decentralized protocols.\n\nSpeakers and participants seek an international consensus on how to optimize a regulatory approach that protects users and boosts confidence in the digital asset industry without overly constraining innovation or killing the objective of equitable financial access for all. The Crypto Policy Forum is open to pass holders and takes place on Thursday, April 27.",
+		"imageSrc": "/images/demo/stagePage/cryptoPolicy.png"
+	},
+	{
+		"_id": "8",
+		"title": "Web3 Creator and Brand Summit",
+		"subtitle": "Sydney, July22-23 2023",
+		"text": "Web3 and the creator/ownership-centric economy are rewriting both the technological and relationship layers that power brands, creators and fandoms. The Web3 Creator and Brand Summit is a day of exploration and learning as attendees hear from some of the most influential artists, entrepreneurs and companies that are rewriting the rules of business and culture. The first half of the day highlights the disruptive creators and builders in the ecosystem while the second half sheds light on how brands are utilizing the tools of Web3 to evolve their offerings and customer base. The Web3 and Brand summit takes place on Wednesday, April 26, and is open only to Pro and Piranha pass holders.",
+		"imageSrc": "/images/demo/stagePage/web3Creator.png"
+	},
+	{
+		"_id": "9",
+		"title": "Big Ideas Stage",
+		"subtitle": "Sydney, July22-23 2023",
+		"text": "Provocative thinkers offer a rich diet of brainfood about the profound implications of crypto and blockchains for the future of the internet, money, finance, politics and more. The Big Ideas Stage brings together an eclectic mix of crypto developers and entrepreneurs, researchers and other big brains for talks, all with the aim of scoping out possibilities for a better tomorrow. Big Ideas content is showcased on Thursday, April 27, and Friday, April 28, and is open to all pass holders.",
+		"imageSrc": "/images/demo/stagePage/bigIdeas.png"
+	},
+	{
+		"_id": "10",
+		"title": "Speakers AMA Stage",
+		"subtitle": "Sydney, July22-23 2023",
+		"text": "Speakers continue their larger-stage conversations, or start new ones, in a more casual setting. The Speaker AMA Stage allows for more informal chats and interaction with the audience. This stage is open to all on Thursday, April 27, and Friday, April 28.",
+		"imageSrc": "/images/demo/stagePage/speakersAma.png"
+	},
+	{
+		"_id": "11",
+		"title": "CoinDesk Learn Stage",
+		"subtitle": "Sydney, July22-23 2023",
+		"text": "No matter if you are a crypto beginner or a seasoned expert, there is always something new to learn. CoinDesk Learn offers a series of pre-festival webinars plus two days of in-person workshops at Consensus for a variety of audiences from crypto newbies to marketing professionals to institutional investors. Topics range from using technical analysis for trading to reading on-chain data to creating DAOs to identifying scams and avoiding rug pulls to dos and don’ts in the metaverse. CoinDesk Learn is open to all and held on Thursday, April 27, and Friday, April 28, as well as the series of webinars.",
+		"imageSrc": "/images/demo/stagePage/coinDeskLearn.png"
+	},
+	{
+		"_id": "12",
+		"title": "DAO House",
+		"subtitle": "Sydney, July22-23 2023",
+		"text": "The DAO House serves as Consensus' community center for DAO organizers and members to congregate, network, collaborate on new ideas and hear from some of the most dynamic communities and builders in the space. The DAO house is open April 26-28, with Wednesday featuring networking events exclusive to Pro and Piranha pass holders.",
+		"imageSrc": "/images/demo/stagePage/daoHouse.png"
+	},
+	{
+		"_id": "13",
+		"title": "NFT Gallery",
+		"subtitle": "Sydney, July22-23 2023",
+		"text": "A visual immersion into the future of art, community and commerce on the blockchain. The Consensus NFT Gallery brings the massively creative world of non-fungible tokens to life via a physical/digital location showcasing not only the creative artists in the space but also educating those looking to get more involved on the development, culture, and marketing side of NFTs. The NFT gallery will be open to Pro and Piranha pass holders on Wednesday, April 26, and will feature programming for all pass holders April 27-28.",
+		"imageSrc": "/images/demo/stagePage/nftGallery.png"
+	}
 ]
