@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import FeatureCounter from './components/FeatureCounter';
+import Countdown from '@/components/Shares/Countdown';
 import { sectionSubtitle, sectionTitle } from '@/styles/mixin';
-import { color, devices, sizes } from '@/styles/variables';
+import { color, devices } from '@/styles/variables';
 
 const { blackColor, whiteColor } = color;
 
@@ -12,51 +12,50 @@ const HomeCountdownContainer = styled.div`
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-`;
-
-const Content = styled.div`
-	max-width: ${`${sizes.largeLaptop}px`};
-	padding: 100px 40px 140px;
-	position: relative;
-	@media ${devices.mobile} {
-		padding: 100px 100px 140px;
+	color: ${whiteColor};
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 100px 30px;
+	width: 100%;
+	@media ${devices.tablet} {
+		padding: 100px 60px;
 	}
 	@media ${devices.laptop} {
-		margin: 0 auto;
+		flex-direction: row;
+		align-items: center;
 	}
 `;
 
 const TitleContainer = styled.div`
-	color: ${whiteColor};
 	margin-bottom: 60px;
 	@media ${devices.laptop} {
+		max-width: 280px;
 		margin-right: 80px;
 		margin-bottom: 0;
-		max-width: ${`${sizes.largeLaptop}px`};
 	}
 `;
 
 const Title = styled.h2`
 	${sectionTitle};
-	max-width: unset;
+	font-size: 28px;
+	margin: 0;
 `;
 
 const Subtitle = styled.p`
 	${sectionSubtitle};
 `;
 
-const HomeCounter: React.FC = () => {
+const HomeCountdown: React.FC = () => {
 	return (
 		<HomeCountdownContainer>
-			<Content>
-				<TitleContainer>
-					<Subtitle>Together for a positive future</Subtitle>
-					<Title>Why Web3 Convention</Title>
-				</TitleContainer>
-				<FeatureCounter />
-			</Content>
+			<TitleContainer>
+				<Subtitle>22-23 July 2023</Subtitle>
+				<Title>Count Every Second Until Event</Title>
+			</TitleContainer>
+			<Countdown />
 		</HomeCountdownContainer>
 	);
 };
 
-export default HomeCounter;
+export default HomeCountdown;

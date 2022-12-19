@@ -65,7 +65,7 @@ const HomeParallax: React.FC = () => {
 		>
 			<Subtitle>web2_web3</Subtitle>
 			<Title>Welcome to a World where Web3 is now a thing</Title>
-			<ThemeButton href="/comingSoon">But Tickets</ThemeButton>
+			<ThemeButton href="/comingSoon">Buy Tickets</ThemeButton>
 		</HomeParallaxContainer>
 	);
 };

@@ -39,6 +39,10 @@ p a {
 	display: flex;
 }
 
+.flex-1 {
+	flex: 1 1 0%;
+}
+
 /* Justify Content */
 
 .justify-center {
@@ -47,11 +51,17 @@ p a {
 .justify-between {
 	justify-content: space-between;
 }
+.justify-end {
+	justify-content: flex-end;
+}
 
 /* Align Items */
 
 .items-center {
 	align-items: center;
+}
+.self-center {
+	align-self: center;
 }
 
 /* Flex Direction */
@@ -86,6 +96,11 @@ p a {
 /* Overflow */
 .overflow-hidden {
 	overflow: hidden;
+}
+
+/* Text align */
+.text-center {
+	text-align: center;
 }
 
 /* keyframes */
