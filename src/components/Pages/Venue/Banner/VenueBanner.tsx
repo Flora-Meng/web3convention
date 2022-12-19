@@ -12,18 +12,16 @@ const { whiteColor, primaryColor } = color;
 const BannerContainer = styled.div`
 	position: relative;
 	top: 50%;
-	@media ${devices.laptop} {
-		transform: translate(0, calc(-50% - 100px));
-	}
-	@media ${devices.largeLaptop} {
-		transform: translate(0, calc(-50% - 120px));
-	}
+	transform: translate(0, -100%);
 `;
 
-const TextSection = styled.div`
+const TextContainer = styled.div`
 	color: ${whiteColor};
 	margin: 0 auto;
 	max-width: 1600px;
+	@media ${devices.miniMobile} {
+		width: calc(100vw - 100px);
+	}
 	@media ${devices.laptop} {
 		width: calc(100vw - 200px);
 	}
@@ -31,7 +29,10 @@ const TextSection = styled.div`
 
 const BannerSubtitle = styled(Subtitle)`
 	color: ${primaryColor};
-	@media ${devices.laptop} {
+	@media ${devices.miniMobile} {
+		font-size: 10px;
+	}
+	@media ${devices.tablet} {
 		font-size: 13px;
 	}
 	@media ${devices.largeLaptop} {
@@ -43,10 +44,14 @@ const BannerSubtitle = styled(Subtitle)`
 `;
 
 const BannerTitle = styled(Title)`
-	margin-bottom: 120px;
 	white-space: pre-wrap;
-	@media ${devices.laptop} {
-		font-size: 50px;
+	@media ${devices.miniMobile} {
+		//margin-bottom: 60px;
+		font-size: 40px;
+	}
+	@media ${devices.tablet} {
+		//margin-bottom: 120px;
+		font-size: 60px;
 	}
 	@media ${devices.largeLaptop} {
 		font-size: 70px;
@@ -56,15 +61,15 @@ const BannerTitle = styled(Title)`
 	}
 `;
 
-const VenueBanner = () => {
+const StageBanner = () => {
 	return (
 		<BannerContainer>
-			<TextSection>
+			<TextContainer>
 				<BannerSubtitle isCurrent>{banner.subtitle}</BannerSubtitle>
 				<BannerTitle isCurrent>{banner.title}</BannerTitle>
-			</TextSection>
+			</TextContainer>
 		</BannerContainer>
 	);
 };
 
-export default VenueBanner;
+export default StageBanner;
