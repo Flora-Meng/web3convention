@@ -219,6 +219,7 @@ const HomeTeam: React.FC = () => {
 										alt={teamMember.name}
 										fill
 										unoptimized
+										loading="lazy"
 									/>
 								</ImageContainer>
 								<InfoContainer>

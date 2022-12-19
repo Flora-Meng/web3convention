@@ -83,6 +83,7 @@ const HomeImageList: React.FC = () => {
 							alt={item.label}
 							fill
 							unoptimized
+							loading="lazy"
 						/>
 						<Label>
 							<Subtitle>{item.subtitle}</Subtitle>
