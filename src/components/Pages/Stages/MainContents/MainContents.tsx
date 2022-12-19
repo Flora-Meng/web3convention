@@ -24,7 +24,7 @@ const MainContents = () => {
 				<ContentRow
 					key={content._id}
 					rowCount={index}
-					text={content.text}
+					description={content.text}
 					imageSrc={content.imageSrc}
 					title={content.title}
 					subTitle={content.subtitle}

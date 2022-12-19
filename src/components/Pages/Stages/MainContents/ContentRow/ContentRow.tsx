@@ -9,7 +9,7 @@ interface ContentRowProps {
 	rowCount: number;
 	title: string;
 	subTitle: string;
-	text: string;
+	description: string;
 	imageSrc: string;
 }
 
@@ -151,7 +151,7 @@ const DescriptionContainer = styled.div`
 `;
 
 const ContentRow: React.FC<ContentRowProps> = props => {
-	const { rowCount, title, subTitle, text, imageSrc } = props;
+	const { rowCount, title, subTitle, description, imageSrc } = props;
 	const isEven = rowCount % 2;
 	if (window.innerWidth <= sizes.laptop) {
 		return (
@@ -159,7 +159,7 @@ const ContentRow: React.FC<ContentRowProps> = props => {
 				<TextContainer>
 					<Subtitle>{subTitle}</Subtitle>
 					<Title>{title}</Title>
-					<DescriptionContainer>{text}</DescriptionContainer>
+					<DescriptionContainer>{description}</DescriptionContainer>
 				</TextContainer>
 				<OddRowImgContainer>
 					<Image
@@ -181,7 +181,7 @@ const ContentRow: React.FC<ContentRowProps> = props => {
 			<section>
 				<Subtitle>{subTitle}</Subtitle>
 				<Title>{title}</Title>
-				<DescriptionContainer>{text}</DescriptionContainer>
+				<DescriptionContainer>{description}</DescriptionContainer>
 			</section>
 		</EvenRowContainer>
 	) : (
@@ -189,7 +189,7 @@ const ContentRow: React.FC<ContentRowProps> = props => {
 			<section>
 				<Subtitle>{subTitle}</Subtitle>
 				<Title>{title}</Title>
-				<DescriptionContainer>{text}</DescriptionContainer>
+				<DescriptionContainer>{description}</DescriptionContainer>
 			</section>
 			<OddRowImgContainer>
 				<Image loader={imageLoader} src={imageSrc} alt="content image" fill unoptimized />
