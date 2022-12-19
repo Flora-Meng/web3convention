@@ -7,6 +7,9 @@ import { devices } from '@/styles/variables';
 const MainSection = styled.div`
 	margin: 0 auto;
 	max-width: 1600px;
+	@media ${devices.miniMobile} {
+		width: calc(100vw - 100px);
+	}
 	@media ${devices.laptop} {
 		width: calc(100vw - 200px);
 	}
