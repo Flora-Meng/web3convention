@@ -6,8 +6,7 @@ import IntroCard from '@/components/Pages/Venue/VenuIntro/IntroCard';
 const IntroContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
-	margin: 100px auto;
-	max-width: 1600px;
+	margin: 120px auto;
 	position: relative;
 	width: 80%;
 `;

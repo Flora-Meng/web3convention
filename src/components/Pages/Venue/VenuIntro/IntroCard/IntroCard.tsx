@@ -18,7 +18,7 @@ const ContentContainer = styled(CardContent)`
 const IntroCard: React.FC<IntroCardProps> = props => {
 	const { imageSrc, title, description } = props;
 	return (
-		<Card sx={{ maxWidth: 506, maxHeight: 500 }}>
+		<Card sx={{ maxWidth: 550, maxHeight: 500 }} variant="outlined">
 			<CardMedia component="img" alt={title} height="65%" image={imageSrc} />
 			<ContentContainer>
 				<Typography gutterBottom variant="h5" component="div">

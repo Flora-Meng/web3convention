@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
+import HomeBanner from '@/components/Pages/Home/HomeBanner';
 import VenueBanner from '@/components/Pages/Venue/Banner';
-import VenueIntro from '@/components/Pages/Venue/VenuIntro/VenueIntro';
+import VenueIntroCards from '@/components/Pages/Venue/VenuIntro/VenueIntro';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 
@@ -19,7 +20,8 @@ const VenuePage = () => {
 				<Header />
 				<VenueBanner />
 			</BannerBackground>
-			<VenueIntro />
+			<VenueIntroCards />
+			<HomeBanner />
 			<Footer />
 		</>
 	);
