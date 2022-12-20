@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import FeatureCounter from './components/FeatureCounter';
+import CounterSlider from '@/components/Shares/CounterSlider';
 import { sectionSubtitle, sectionTitle } from '@/styles/mixin';
 import { color, devices, sizes } from '@/styles/variables';
 
@@ -8,10 +8,6 @@ const { blackColor, whiteColor } = color;
 
 const HomeCountdownContainer = styled.div`
 	background-color: ${blackColor};
-	background-image: url('/images/demo/countdown-bg-img.jpg');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
 `;
 
 const Content = styled.div`
@@ -19,7 +15,7 @@ const Content = styled.div`
 	padding: 100px 40px 140px;
 	position: relative;
 	@media ${devices.mobile} {
-		padding: 100px 100px 140px;
+		padding: 100px 60px 140px;
 	}
 	@media ${devices.laptop} {
 		margin: 0 auto;
@@ -45,15 +41,51 @@ const Subtitle = styled.p`
 	${sectionSubtitle};
 `;
 
+const counterList = [
+	{
+		name: 'Exhibitors',
+		count: 150
+	},
+	{
+		name: 'Attendees',
+		count: 10000
+	},
+	{
+		name: 'Speakers',
+		count: 100
+	},
+	{
+		name: 'Creators',
+		count: 500
+	},
+	{
+		name: 'Whales',
+		count: 900
+	},
+	{
+		name: 'Parties',
+		count: 4
+	},
+	{
+		name: 'Venture Capitalists',
+		count: 100
+	},
+	{
+		name: 'Women Attendees',
+		count: 43,
+		suffix: '%'
+	}
+];
+
 const HomeCounter: React.FC = () => {
 	return (
 		<HomeCountdownContainer>
 			<Content>
 				<TitleContainer>
-					<Subtitle>Together for a positive future</Subtitle>
-					<Title>Why Web3 Convention</Title>
+					<Subtitle>Web3 Convention 2023</Subtitle>
+					<Title>Why Web3 Convention?</Title>
 				</TitleContainer>
-				<FeatureCounter />
+				<CounterSlider counterList={counterList} />
 			</Content>
 		</HomeCountdownContainer>
 	);
