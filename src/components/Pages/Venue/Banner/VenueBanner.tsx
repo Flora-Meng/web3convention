@@ -46,11 +46,9 @@ const BannerSubtitle = styled(Subtitle)`
 const BannerTitle = styled(Title)`
 	white-space: pre-wrap;
 	@media ${devices.miniMobile} {
-		//margin-bottom: 60px;
 		font-size: 40px;
 	}
 	@media ${devices.tablet} {
-		//margin-bottom: 120px;
 		font-size: 60px;
 	}
 	@media ${devices.largeLaptop} {
