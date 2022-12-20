@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import intro from './IntroCard/intro.json';
-import IntroCard from '@/components/Pages/Venue/VenuIntroCards/IntroCard';
+import VenueIntroCard from '@/components/Pages/Venue/VenuIntroCards/IntroCard';
 
 const Container = styled.div`
 	display: flex;
@@ -14,7 +14,7 @@ const VenueIntroCards: React.FC = () => {
 	return (
 		<Container>
 			{intro.map(cardContent => (
-				<IntroCard
+				<VenueIntroCard
 					key={cardContent._id}
 					imageSrc={cardContent.imageSrc}
 					title={cardContent.title}

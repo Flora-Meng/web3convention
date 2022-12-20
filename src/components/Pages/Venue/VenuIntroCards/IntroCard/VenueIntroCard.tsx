@@ -14,20 +14,20 @@ interface IntroCardProps {
 const ContentContainer = styled(CardContent)`
 	margin: 0 2.5%;
 	position: relative;
-	top: 16%;
+	top: 12.5%;
 	transform: translate(0, -50%);
 `;
 
-const IntroCard: React.FC<IntroCardProps> = props => {
+const VenueIntroCard: React.FC<IntroCardProps> = props => {
 	const { imageSrc, title, description } = props;
 	return (
-		<Card sx={{ width: '28vw', height: '21vw' }} variant="outlined">
-			<CardMedia component="img" alt={title} height="68%" image={imageSrc} />
+		<Card sx={{ width: '28vw', height: '30vw' }} variant="outlined">
+			<CardMedia component="img" alt={title} height="75%" image={imageSrc} />
 			<ContentContainer>
 				<Typography gutterBottom variant="h5" component="div">
 					{title}
 				</Typography>
-				<Typography variant="body1" color="text.secondary">
+				<Typography variant="body2" color="text.secondary">
 					{description}
 				</Typography>
 			</ContentContainer>
@@ -35,4 +35,4 @@ const IntroCard: React.FC<IntroCardProps> = props => {
 	);
 };
 
-export default IntroCard;
+export default VenueIntroCard;

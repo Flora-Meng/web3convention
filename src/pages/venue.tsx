@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import VenueCoverTitle from '@/components/Pages/Venue/CoverTitle';
+import VenueGallery from '@/components/Pages/Venue/VenueGallery';
 import VenueIntroCards from '@/components/Pages/Venue/VenuIntroCards/VenueIntroCards';
 import PageBanner from '@/components/Shares/PageBanner';
 import bannerInfo from '@/components/Shares/PageBanner/venueBannerInfo.json';
@@ -23,6 +24,7 @@ const VenuePage = () => {
 			</Cover>
 			<VenueIntroCards />
 			<PageBanner bannerInfo={bannerInfo} />
+			<VenueGallery />
 			<Footer />
 		</>
 	);

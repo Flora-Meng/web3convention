@@ -1,1 +1,1 @@
-export { default } from './IntroCard';
+export { default } from './VenueIntroCard';
