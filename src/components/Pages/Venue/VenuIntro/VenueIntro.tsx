@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import intro from './IntroCard/intro.json';
 import IntroCard from '@/components/Pages/Venue/VenuIntro/IntroCard';
 
-const IntroContainer = styled.div`
+const Container = styled.div`
 	display: flex;
 	justify-content: space-between;
 	margin: 120px auto;
@@ -12,7 +12,7 @@ const IntroContainer = styled.div`
 `;
 const VenueIntro: React.FC = () => {
 	return (
-		<IntroContainer>
+		<Container>
 			{intro.map(cardContent => (
 				<IntroCard
 					key={cardContent._id}
@@ -21,7 +21,7 @@ const VenueIntro: React.FC = () => {
 					description={cardContent.text}
 				/>
 			))}
-		</IntroContainer>
+		</Container>
 	);
 };
 

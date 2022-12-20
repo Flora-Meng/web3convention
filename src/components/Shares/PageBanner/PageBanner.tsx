@@ -1,11 +1,19 @@
 import styled from 'styled-components';
 
-import bannerInfo from './bannerInfo.json';
 import ThemeButton from '@/components/Shares/ThemeButton';
 import { animation, animationFillMode, sectionSubtitle } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
 
 const { whiteColor } = color;
+
+interface PageBannerProps {
+	bannerInfo: {
+		title: string;
+		subtitle: string;
+		imageSrc: string;
+		description: string;
+	};
+}
 
 interface LeftGridProps {
 	imageSrc: string;
@@ -80,7 +88,8 @@ const Description = styled.p`
 	${animationFillMode()};
 `;
 
-const HomeBanner: React.FC = () => {
+const PageBanner: React.FC<PageBannerProps> = props => {
+	const { bannerInfo } = props;
 	return (
 		<div className="flex">
 			<LeftGrid imageSrc={bannerInfo.imageSrc} />
@@ -96,4 +105,4 @@ const HomeBanner: React.FC = () => {
 	);
 };
 
-export default HomeBanner;
+export default PageBanner;

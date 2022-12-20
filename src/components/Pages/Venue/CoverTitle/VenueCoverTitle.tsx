@@ -4,21 +4,18 @@ import {
 	Subtitle,
 	Title
 } from '@/components/Pages/Home/HomeCarousel/components/CarouseItem/CarouseItem';
-import banner from '@/components/Pages/Venue/Banner/venuePageBanner.json';
+import cover from '@/components/Pages/Venue/CoverTitle/venueCover.json';
 import { color, devices } from '@/styles/variables';
 
 const { whiteColor, primaryColor } = color;
 
-const BannerContainer = styled.div`
-	position: relative;
-	top: 50%;
-	transform: translate(0, -100%);
-`;
-
-const TextContainer = styled.div`
+const Container = styled.div`
 	color: ${whiteColor};
 	margin: 0 auto;
 	max-width: 1600px;
+	position: relative;
+	top: 50%;
+	transform: translate(0, -100%);
 	@media ${devices.miniMobile} {
 		width: calc(100vw - 100px);
 	}
@@ -27,7 +24,7 @@ const TextContainer = styled.div`
 	}
 `;
 
-const BannerSubtitle = styled(Subtitle)`
+const CoverSubtitle = styled(Subtitle)`
 	color: ${primaryColor};
 	@media ${devices.miniMobile} {
 		font-size: 10px;
@@ -43,7 +40,7 @@ const BannerSubtitle = styled(Subtitle)`
 	}
 `;
 
-const BannerTitle = styled(Title)`
+const CoverTitle = styled(Title)`
 	white-space: pre-wrap;
 	@media ${devices.miniMobile} {
 		font-size: 40px;
@@ -59,15 +56,13 @@ const BannerTitle = styled(Title)`
 	}
 `;
 
-const StageBanner = () => {
+const VenueCoverTitle = () => {
 	return (
-		<BannerContainer>
-			<TextContainer>
-				<BannerSubtitle isCurrent>{banner.subtitle}</BannerSubtitle>
-				<BannerTitle isCurrent>{banner.title}</BannerTitle>
-			</TextContainer>
-		</BannerContainer>
+		<Container>
+			<CoverSubtitle isCurrent>{cover.subtitle}</CoverSubtitle>
+			<CoverTitle isCurrent>{cover.title}</CoverTitle>
+		</Container>
 	);
 };
 
-export default StageBanner;
+export default VenueCoverTitle;
