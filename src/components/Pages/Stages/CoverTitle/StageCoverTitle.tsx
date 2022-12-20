@@ -27,7 +27,7 @@ const Container = styled.div`
 		transform: translate(0, calc(-50% - 80px));
 		width: calc(100vw - 200px);
 	}
-	@media ${devices.largeLaptop} {
+	@media ${devices.desktop} {
 		transform: translate(0, calc(-50% - 120px));
 	}
 `;
@@ -58,10 +58,14 @@ const CoverTitle = styled(Title)`
 		margin-bottom: 120px;
 		font-size: 60px;
 	}
+	@media ${devices.laptop} {
+		margin-bottom: 80px;
+	}
 	@media ${devices.largeLaptop} {
 		font-size: 70px;
 	}
 	@media ${devices.desktop} {
+		margin-bottom: 100px;
 		font-size: 90px;
 	}
 `;
