@@ -28,7 +28,7 @@ const Container = styled.div`
 		width: calc(100vw - 200px);
 	}
 	@media ${devices.desktop} {
-		transform: translate(0, calc(-50% - 120px));
+		transform: translate(0, calc(-50% - 100px));
 	}
 `;
 
@@ -55,7 +55,7 @@ const CoverTitle = styled(Title)`
 		font-size: 40px;
 	}
 	@media ${devices.tablet} {
-		margin-bottom: 120px;
+		margin-bottom: 100px;
 		font-size: 60px;
 	}
 	@media ${devices.laptop} {
