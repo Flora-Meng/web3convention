@@ -14,11 +14,11 @@ interface StyledButton {
 }
 
 const StyledButton = styled(Button)`
-	border-radius: 5em;
+	border-radius: 50px;
 	font-size: 12px;
 	font-weight: 700;
 	letter-spacing: 0.05em;
-	line-height: 2em;
+	line-height: 24px;
 	padding: 11px 33px;
 	text-transform: uppercase;
 	${disableMUIButtonHoverCss};

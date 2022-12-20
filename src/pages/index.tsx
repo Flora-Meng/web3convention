@@ -11,6 +11,7 @@ import HomeSubscription from '@/components/Pages/Home/HomeSubscription';
 import HomeTeam from '@/components/Pages/Home/HomeTeam';
 import PageBanner from '@/components/Shares/PageBanner';
 import bannerInfo from '@/components/Shares/PageBanner/homeBannerInfo.json';
+import HomeTicket from '@/components/Pages/Home/HomeTicket';
 // import HomeTestimonial from '@/components/Pages/Home/HomeTestimonial';
 import DefaultLayout from '@/layouts/DefaultLayout';
 import PageHead from '@/layouts/PageHead';
@@ -23,11 +24,11 @@ const Homepage: ComponentType = () => {
 			'Web3 Convention is crypto’s most iconic event, bringing together  all sides of blockchain, Web3 and the metaverse. Brush shoulders with entrepreneurs, executives, Web3 creators, asset managers, individual investors, NFT collectors, brand and marketing professionals, government officials blockchain developers, cloud computing providers, and more.',
 		keywords:
 			'Web3Convention, ICC Sydney, Web3, Blockchain, NFT, Whale Yacht Party, Pitch Space',
-		title: 'Web3 Convention 2023 | July 22-22, 2023'
+		title: 'Web3 Convention 2023 | July 22-23, 2023'
 	};
 	return (
 		<>
-			<PageHead title="Web3 Convention 2023 | July 22-22, 2023" meta={meta} />
+			<PageHead title="Web3 Convention 2023 | July 22-23, 2023" meta={meta} />
 			<HomeCarousel />
 			<HomeCountdown />
 			<HomeImageList />
@@ -41,6 +42,7 @@ const Homepage: ComponentType = () => {
 			{/* <HomeTestimonial /> */}
 			<HomeSponsor />
 			<HomeParallax />
+			<HomeTicket />
 		</>
 	);
 };

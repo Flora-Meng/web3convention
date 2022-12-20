@@ -32,10 +32,7 @@ const CarouseItemContainer = styled.div<CarouseItemContainerProps>`
 	background-position: 50% 50%;
 	background-size: cover;
 	color: ${whiteColor};
-	height: calc(100vh - 76px);
-	@media ${devices.laptop} {
-		height: 100vh;
-	}
+	height: 70vh;
 `;
 
 const InfoContainer = styled.div`
@@ -129,7 +126,9 @@ const CarouseItem: React.FC<CarouseItemProps> = ({
 				<Title isCurrent={isCurrent}>{title}</Title>
 				<Description isCurrent={isCurrent}>{description}</Description>
 				<ButtonContainer isCurrent={isCurrent}>
-					<ThemeButton href="/comingSoon">registration</ThemeButton>
+					<ThemeButton href="https://www.eventbrite.com.au/e/web3-convention-tickets-491154535437">
+						registration
+					</ThemeButton>
 				</ButtonContainer>
 			</InfoContainer>
 		</CarouseItemContainer>
