@@ -77,7 +77,7 @@ const linkConfigList = [
 	},
 	{
 		label: 'Buy Tickets',
-		href: '/comingSoon'
+		href: 'https://www.eventbrite.com.au/e/web3-convention-tickets-491154535437'
 	},
 	{
 		label: 'Schedule',

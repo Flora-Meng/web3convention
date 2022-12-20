@@ -97,6 +97,7 @@ const OriginalPrice = styled.p`
 const PriceFeatureContainer = styled.ul`
 	font-size: 16px;
 	list-style-type: none;
+	padding-left: 0;
 `;
 
 const FeatureIconContainer = styled.div`
@@ -246,7 +247,7 @@ const HomeTicket: React.FC = () => {
 								))}
 							</PriceFeatureContainer>
 							<div className="text-center">
-								<StyledLink href="/comingSoon">
+								<StyledLink href="https://www.eventbrite.com.au/e/web3-convention-tickets-491154535437">
 									<span>buy now</span>
 								</StyledLink>
 							</div>

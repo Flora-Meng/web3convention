@@ -89,7 +89,9 @@ const HomeBanner: React.FC = () => {
 					<Subtitle>{bannerInfo.subtitle}</Subtitle>
 					<Title>{bannerInfo.title}</Title>
 					<Description>{bannerInfo.description}</Description>
-					<ThemeButton href="/comingSoon">registration</ThemeButton>
+					<ThemeButton href="https://www.eventbrite.com.au/e/web3-convention-tickets-491154535437">
+						registration
+					</ThemeButton>
 				</InfoContainer>
 			</RightGrid>
 		</div>

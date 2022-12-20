@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import { sectionSubtitle, sectionTitle } from '@/styles/mixin';
@@ -153,12 +153,15 @@ const DescriptionContainer = styled.div`
 
 const ContentRow: React.FC<ContentRowProps> = props => {
 	const { rowCount, title, subTitle, description, imageSrc } = props;
+	const [isWideLayout, setIsWideLayout] = useState<boolean | undefined>(undefined);
 	const isEven = rowCount % 2;
-	let pageWidth = 0;
 	useEffect(() => {
-		pageWidth = window.innerWidth;
+		window.addEventListener('resize', () => setIsWideLayout(window.innerWidth >= sizes.laptop));
+		setIsWideLayout(window.innerWidth >= sizes.laptop);
 	}, []);
-	if (pageWidth <= sizes.laptop) {
+
+	if (isWideLayout === undefined) return null;
+	if (!isWideLayout) {
 		return (
 			<OddRowContainer>
 				<TextContainer>
