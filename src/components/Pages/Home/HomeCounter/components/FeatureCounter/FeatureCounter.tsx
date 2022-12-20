@@ -115,7 +115,7 @@ const FeatureCounter: React.FC = () => {
 						</ImageContainer>
 						<Counter>
 							<CountUp end={feature.count} duration={1} enableScrollSpy />
-							<span>{feature.extra ? ` ${feature.extra}` : '+'}</span>
+							{/* <span>{feature.extra ? ` ${feature.extra}` : '+'}</span> */}
 						</Counter>
 						<Title>{feature.title}</Title>
 					</Grid>
