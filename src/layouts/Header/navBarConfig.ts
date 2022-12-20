@@ -5,15 +5,15 @@ export const navItemsConfig: { [K in ENavItem]: INavItem } = {
 	[ENavItem.HOME]: {
 		title: 'home',
 		path: '/'
+	},
+	[ENavItem.STAGES]: {
+		title: 'stages',
+		path: '/stages'
+	},
+	[ENavItem.VENUE]: {
+		title: 'venue',
+		path: '/venue'
 	}
-	// [ENavItem.STAGES]: {
-	// 	title: 'stages',
-	// 	path: '/stages'
-	// },
-	// [ENavItem.VENUE]: {
-	// 	title: 'venue',
-	// 	path: '/venue'
-	// },
 	// [ENavItem.CONVENTION]: {
 	// 	title: 'conventions',
 	// 	path: '/comingSoon'

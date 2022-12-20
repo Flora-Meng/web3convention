@@ -8,7 +8,7 @@ const Container = styled.div`
 	justify-content: space-between;
 	margin: 120px auto;
 	position: relative;
-	width: 80%;
+	width: calc(100vw - 200px);
 `;
 const VenueIntroCards: React.FC = () => {
 	return (
