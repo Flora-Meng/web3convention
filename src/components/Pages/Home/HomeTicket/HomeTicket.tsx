@@ -137,7 +137,7 @@ const ticketConfig = [
 		earlyBirdPrice: 148,
 		earlyBirdPriceIncGST: true,
 		earlyBirdEndDate: '2023-06-21T14:00:00.000Z',
-		thumbnailSrc: '/images/demo/pricing-item-1.jpg',
+		thumbnailSrc: '/images/tickets/general-admission.png',
 		features: [
 			'Expo Hall (22 July 10am-6pm & 23 July 10am-4:30pm)',
 			'Unique NFT Ticket',
@@ -159,7 +159,7 @@ const ticketConfig = [
 		earlyBirdPrice: 1498,
 		earlyBirdPriceIncGST: false,
 		earlyBirdEndDate: '2023-06-21T14:00:00.000Z',
-		thumbnailSrc: '/images/demo/pricing-item-2.jpg',
+		thumbnailSrc: '/images/tickets/premium-admission.png',
 		features: [
 			'Expo Hall (22 July 10am-6pm & 23 July 10am-4:30pm)',
 			'Whale Pass',
@@ -181,7 +181,7 @@ const ticketConfig = [
 		title: 'Student Pass',
 		price: 78,
 		priceIncGST: false,
-		thumbnailSrc: '/images/demo/pricing-item-3.jpg',
+		thumbnailSrc: '/images/tickets/student-pass.png',
 		features: [
 			'Expo Hall (22 July 10am-6pm & 23 July 10am-4:30pm)',
 			'Access to all 4 Theatres',
