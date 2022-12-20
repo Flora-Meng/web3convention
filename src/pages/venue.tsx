@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import VenueCoverTitle from '@/components/Pages/Venue/CoverTitle';
-import VenueIntroCards from '@/components/Pages/Venue/VenuIntro/VenueIntro';
+import VenueIntroCards from '@/components/Pages/Venue/VenuIntroCards/VenueIntroCards';
 import PageBanner from '@/components/Shares/PageBanner';
 import bannerInfo from '@/components/Shares/PageBanner/venueBannerInfo.json';
 import Footer from '@/layouts/Footer';

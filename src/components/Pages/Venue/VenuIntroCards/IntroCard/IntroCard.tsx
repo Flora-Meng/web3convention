@@ -12,7 +12,7 @@ interface IntroCardProps {
 }
 
 const ContentContainer = styled(CardContent)`
-	margin: 20px;
+	margin: 18px;
 `;
 
 const IntroCard: React.FC<IntroCardProps> = props => {

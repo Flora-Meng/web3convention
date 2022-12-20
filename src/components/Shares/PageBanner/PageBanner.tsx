@@ -65,8 +65,7 @@ const Title = styled.h2`
 	font-size: 42px;
 	font-weight: 700;
 	line-height: 1.1;
-	margin: 0;
-	margin-bottom: 24px;
+	margin: 0 0 24px 0;
 	opacity: 0;
 	${animation('fade-in-opacity-transform-to-up', '0.5s', 'ease', '0.5s', '1')};
 	${animationFillMode()};
@@ -80,8 +79,7 @@ const Subtitle = styled.p`
 const Description = styled.p`
 	font-size: 15px;
 	line-height: 1.8;
-	margin: 0;
-	margin-bottom: 40px;
+	margin: 0 0 40px 0;
 	opacity: 0;
 	padding-right: 20px;
 	${animation('fade-in-opacity-transform-to-up', '0.5s', 'ease', '0.7s', '1')};

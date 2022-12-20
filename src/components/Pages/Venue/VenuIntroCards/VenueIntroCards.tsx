@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import intro from './IntroCard/intro.json';
-import IntroCard from '@/components/Pages/Venue/VenuIntro/IntroCard';
+import IntroCard from '@/components/Pages/Venue/VenuIntroCards/IntroCard';
 
 const Container = styled.div`
 	display: flex;
@@ -10,7 +10,7 @@ const Container = styled.div`
 	position: relative;
 	width: 80%;
 `;
-const VenueIntro: React.FC = () => {
+const VenueIntroCards: React.FC = () => {
 	return (
 		<Container>
 			{intro.map(cardContent => (
@@ -25,4 +25,4 @@ const VenueIntro: React.FC = () => {
 	);
 };
 
-export default VenueIntro;
+export default VenueIntroCards;
