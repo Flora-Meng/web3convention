@@ -69,7 +69,7 @@ const featureList = [
 	{
 		imageSrc: '/images/features/feature-applaud.webp',
 		title: 'Speakers',
-		count: 100
+		count: 150
 	},
 	{
 		imageSrc: '/images/features/feature-trophy.webp',
@@ -77,34 +77,8 @@ const featureList = [
 		count: 500
 	},
 	{
-		imageSrc: '/images/features/feature-bowknot.webp',
-		title: 'Whales',
-		count: 900
-	},
-	{
-		imageSrc: '/images/features/feature-connection.webp',
-		title: 'Parties',
-		count: 4
-	},
-	{
 		imageSrc: '/images/features/feature-graph.webp',
 		title: 'Venture Capitalists',
-		count: 100
-	},
-	{
-		imageSrc: '/images/features/feature-target.webp',
-		title: 'Campagin',
-		count: 4,
-		extra: 'Month'
-	},
-	{
-		imageSrc: '/images/features/feature-email.webp',
-		title: 'Email Database',
-		count: 60000
-	},
-	{
-		imageSrc: '/images/features/feature-certificate.webp',
-		title: 'Influencers',
 		count: 100
 	}
 ];
