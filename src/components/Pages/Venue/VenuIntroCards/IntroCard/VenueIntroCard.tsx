@@ -77,7 +77,7 @@ const Title = styled.text`
 		margin-bottom: 8px;
 	}
 	@media ${devices.desktop} {
-		font-size: 22px;
+		font-size: 21px;
 		margin-bottom: 9px;
 	}
 `;

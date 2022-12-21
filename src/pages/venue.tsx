@@ -35,8 +35,8 @@ const VenuePage = () => {
 			<PageBanner bannerInfo={bannerInfo} />
 			<PageGallery imageList={imageList} />
 			<Wrapper apiKey="AIzaSyDCKxgat91L8LiFigmKSwlcuO1_IUoBR5g" render={render}>
-				<Map center={position} zoom={15}>
-					<Marker position={position} />
+				<Map center={position} zoom={17}>
+					<Marker position={position} clickable={false} />
 				</Map>
 			</Wrapper>
 			<Footer />
