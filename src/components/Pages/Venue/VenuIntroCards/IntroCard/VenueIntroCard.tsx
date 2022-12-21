@@ -26,8 +26,8 @@ const CardContainer = styled(Card)`
 		width: 26vw;
 	}
 	@media ${devices.desktop} {
-		max-width: 500px;
-		max-height: 500px;
+		max-width: 480px;
+		max-height: 480px;
 	}
 `;
 
