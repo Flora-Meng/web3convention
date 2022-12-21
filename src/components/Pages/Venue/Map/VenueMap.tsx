@@ -1,10 +1,13 @@
+import { Status, Wrapper } from '@googlemaps/react-wrapper';
 import React, { useEffect, useRef, useState } from 'react';
+
+import Marker from '@/components/Pages/Venue/Map/Marker';
 
 interface MapProps extends google.maps.MapOptions {
 	children?: React.ReactNode;
 }
 
-const Map: React.FC<MapProps> = props => {
+const GoogleMap: React.FC<MapProps> = props => {
 	const { children, center, zoom } = props;
 	const ref = useRef<HTMLDivElement>(null);
 	const [map, setMap] = useState<google.maps.Map>();
@@ -32,4 +35,18 @@ const Map: React.FC<MapProps> = props => {
 	);
 };
 
-export default Map;
+const VenueMap = () => {
+	const render = (status: Status) => {
+		return <h1>{status}</h1>;
+	};
+	const position = { lat: -33.87483118669751, lng: 151.19950922205194 };
+	return (
+		<Wrapper apiKey="AIzaSyDCKxgat91L8LiFigmKSwlcuO1_IUoBR5g" render={render}>
+			<GoogleMap center={position} zoom={17}>
+				<Marker position={position} clickable={false} />
+			</GoogleMap>
+		</Wrapper>
+	);
+};
+
+export default VenueMap;
