@@ -11,6 +11,7 @@ const { primaryColor } = color;
 interface StyledButton {
 	children: React.ReactNode;
 	href?: string;
+	onClick?: React.MouseEventHandler;
 }
 
 const StyledButton = styled(Button)`
@@ -72,9 +73,9 @@ const ButtonContent = styled.p`
 	}
 `;
 
-const ThemeButton: React.FC<StyledButton> = ({ children, href }) => {
+const ThemeButton: React.FC<StyledButton> = ({ children, href, ...props }) => {
 	const renderButton = (
-		<StyledButton variant="contained" disableElevation disableRipple>
+		<StyledButton variant="contained" disableElevation disableRipple {...props}>
 			<ButtonContent>
 				<span>{children}</span>
 				<ArrowForwardIosIcon />

@@ -34,10 +34,12 @@ export const devices: IDevices = {
 
 export const color: IColor = {
 	primaryColor: '#53f6c6',
-	darkPrimaryColor: 'rgb(80, 214, 174)',
+	darkPrimaryColor: '#50D6AE',
 	whiteColor: '#fff',
 	textColor: '#282828',
-	blackColor: '#000'
+	blackColor: '#000',
+	warningColor: '#fb394a',
+	InfoColor: '#77b1f5'
 };
 
 export const inputColor: IInputColor = {
