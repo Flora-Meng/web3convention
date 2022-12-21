@@ -1,16 +1,10 @@
 import { FormControl, InputAdornment } from '@mui/material';
-import Button from '@mui/material/Button';
 import FormHelperText from '@mui/material/FormHelperText';
 import Input from '@mui/material/Input';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-import {
-	disableMUIButtonHoverCss,
-	sectionSubtitle,
-	sectionTitle,
-	tagDecoration
-} from '@/styles/mixin';
+import { sectionSubtitle, sectionTitle, tagDecoration } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
 
 const { blackColor, darkPrimaryColor, textColor, whiteColor } = color;
@@ -63,22 +57,32 @@ const StyledInput = styled(Input)`
 	}
 `;
 
-const StyledSubmitButton = styled(Button)`
+const StyledInputAdornment = styled(InputAdornment)`
+	height: fit-content;
+	margin-left: 0;
+`;
+
+const StyledSubmitButton = styled.button`
+	-moz-transition: color 0.5s;
+	-webkit-transition: color 0.5s;
 	background-color: transparent;
+	border: none;
 	color: ${blackColor};
+	cursor: pointer;
+	font-size: 16px;
 	font-weight: 700;
 	height: inherit;
-	padding: 50px 40x 50px 30px;
-	text-transform: uppercase;
-	${disableMUIButtonHoverCss};
+	padding: 0 16px;
+	transition: color 0.5s;
 	&:hover {
 		color: ${darkPrimaryColor};
 	}
 	span {
+		text-transform: uppercase;
 		${tagDecoration};
 	}
 	@media ${devices.tablet} {
-		padding: 50px 70px 50px 60px;
+		padding: 60px;
 	}
 `;
 
@@ -112,18 +116,11 @@ const HomeSubscription: React.FC = () => {
 						value={emailInput}
 						onChange={event => setEmailInput(event.target.value)}
 						endAdornment={
-							<InputAdornment position="end">
-								<StyledSubmitButton
-									variant="contained"
-									disableRipple
-									disableElevation
-									disableTouchRipple
-									disableFocusRipple
-									onClick={handleSubmitEmail}
-								>
+							<StyledInputAdornment position="end">
+								<StyledSubmitButton onClick={handleSubmitEmail}>
 									<span>Send</span>
 								</StyledSubmitButton>
-							</InputAdornment>
+							</StyledInputAdornment>
 						}
 					/>
 				</StyledFormControl>

@@ -1,6 +1,5 @@
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
-import Button from '@mui/material/Button';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -14,19 +13,23 @@ import imageLoader from '@/utils/loader';
 
 const { primaryColor, textColor, whiteColor } = color;
 
-const DrawerButton = styled(Button)({
-	color: textColor,
-	backgroundColor: whiteColor,
-	minWidth: 'unset',
-	height: 'fit-content',
-	borderRadius: 0,
-	boxShadow: '1px 1px 8px 0 rgb(80 214 174 / 63)',
-	marginLeft: '18px',
-	padding: '12px',
-	'&:hover': {
-		backgroundColor: whiteColor
+const DrawerButton = styled.button`
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	background-color: ${whiteColor};
+	border: none;
+	border-radius: 0;
+	color: ${textColor};
+	cursor: pointer;
+	height: fit-content;
+	margin-left: 18px;
+	min-width: unset;
+	padding: 12px;
+	transition: all 0.5s;
+	&:hover {
+		box-shadow: 1px 1px 8px 0 rgb(80 214 174 / 63);
 	}
-});
+`;
 
 const DrawerContainer = styled.div`
 	background-color: ${textColor};
@@ -99,7 +102,7 @@ const NavDrawer: React.FC = () => {
 
 	return (
 		<>
-			<DrawerButton disableRipple onClick={open}>
+			<DrawerButton onClick={open}>
 				<MenuIcon fontSize="small" />
 			</DrawerButton>
 			<SwipeableDrawer anchor="right" open={drawerStatus} onClose={close} onOpen={open}>

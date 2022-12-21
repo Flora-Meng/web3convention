@@ -1,4 +1,3 @@
-import Button from '@mui/material/Button';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
 
@@ -19,19 +18,17 @@ const NavButtonContainer = styled.div`
 	}
 `;
 
-const CustomizedButton = styled(Button)({
-	justifyContent: 'flex-start',
-	color: textColor,
-	position: 'relative',
-	fontSize: '14px',
-	fontWeight: 600,
-	lineHeight: 1.4,
-	'&:hover': {
-		backgroundColor: 'unset',
-		borderColor: 'unset',
-		boxShadow: 'none'
-	}
-});
+const CustomizedButton = styled.button`
+	background-color: transparent;
+	border: none;
+	color: ${textColor};
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 8px 0;
+	text-align: left;
+	width: 100%;
+`;
 
 const ButtonCtx = styled.span`
 	${navBarTitleDecoration('calc(100% + 4px)')};
@@ -42,7 +39,7 @@ const NavBarButton: React.FC<NavBarButtonProps> = ({ buttonCtx, linkHref }) => {
 
 	return (
 		<NavButtonContainer>
-			<CustomizedButton disableRipple onClick={() => router.push(linkHref)}>
+			<CustomizedButton onClick={() => router.push(linkHref)}>
 				<ButtonCtx>{buttonCtx}</ButtonCtx>
 			</CustomizedButton>
 		</NavButtonContainer>
