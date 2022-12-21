@@ -5,11 +5,17 @@ import VenueIntroCard from '@/components/Pages/Venue/VenuIntroCards/IntroCard';
 import { devices } from '@/styles/variables';
 
 const Container = styled.div`
-	display: flex;
-	justify-content: space-between;
 	max-width: 1600px;
 	position: relative;
 	@media ${devices.miniMobile} {
+		display: grid;
+		row-gap: 20px;
+		width: calc(100vw - 100px);
+		margin: 40px auto;
+	}
+	@media ${devices.tablet} {
+		display: flex;
+		justify-content: space-between;
 		width: calc(100vw - 100px);
 		margin: 80px auto;
 	}

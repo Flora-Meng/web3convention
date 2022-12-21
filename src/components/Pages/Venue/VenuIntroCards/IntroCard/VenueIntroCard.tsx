@@ -14,8 +14,12 @@ interface IntroCardProps {
 
 const CardContainer = styled(Card)`
 	@media ${devices.miniMobile} {
-		height: 20vw;
-		width: 20vw;
+		aspect-ratio: 1;
+		width: 100%;
+	}
+	@media ${devices.tablet} {
+		aspect-ratio: 3/5;
+		width: 28vw;
 	}
 	@media ${devices.laptop} {
 		height: 26vw;
@@ -28,7 +32,7 @@ const CardContainer = styled(Card)`
 `;
 
 const CoverContainer = styled(CardMedia)`
-	@media ${devices.laptop} {
+	@media ${devices.miniMobile} {
 		height: 66%;
 	}
 	@media ${devices.largeLaptop} {
@@ -37,11 +41,14 @@ const CoverContainer = styled(CardMedia)`
 `;
 const ContentContainer = styled(CardContent)`
 	display: grid;
-	margin: 0 2.5%;
 	position: relative;
 	transform: translate(0, -50%);
-	@media ${devices.laptop} {
+	@media ${devices.miniMobile} {
 		top: 17%;
+		margin: 0 2%;
+	}
+	@media ${devices.mobile} {
+		margin: 0 2.5%;
 	}
 	@media ${devices.largeLaptop} {
 		top: 12%;
@@ -50,7 +57,16 @@ const ContentContainer = styled(CardContent)`
 
 const Title = styled.text`
 	@media ${devices.miniMobile} {
-		font-size: 10px;
+		font-size: 4vw;
+		margin-bottom: 1.4vw;
+	}
+	@media ${devices.mobile} {
+		font-size: 25px;
+		margin-bottom: 12px;
+	}
+	@media ${devices.tablet} {
+		font-size: 18px;
+		margin-bottom: 5px;
 	}
 	@media ${devices.laptop} {
 		font-size: 15px;
@@ -68,13 +84,19 @@ const Title = styled.text`
 
 const Description = styled.text`
 	@media ${devices.miniMobile} {
-		font-size: 10px;
+		font-size: 2.5vw;
+	}
+	@media ${devices.mobile} {
+		font-size: 15px;
+	}
+	@media ${devices.tablet} {
+		font-size: 11px;
 	}
 	@media ${devices.laptop} {
 		font-size: 10px;
 	}
 	@media ${devices.largeLaptop} {
-		font-size: 10px;
+		font-size: 12px;
 	}
 	@media ${devices.desktop} {
 		font-size: 14px;

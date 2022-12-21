@@ -15,7 +15,7 @@ const Container = styled.div`
 	max-width: 1600px;
 	position: relative;
 	top: 50%;
-	transform: translate(0, -100%);
+	transform: translate(0, -92%);
 	@media ${devices.miniMobile} {
 		width: calc(100vw - 100px);
 	}
