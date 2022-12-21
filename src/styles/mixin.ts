@@ -44,16 +44,6 @@ export const activeNavBarTitleDecoration = () => css`
 	transform-origin: 0 50%;
 `;
 
-/* button */
-
-export const disableMUIButtonHoverCss = () => css`
-	&:hover {
-		background-color: unset;
-		border-color: unset;
-		box-shadow: none;
-	}
-`;
-
 export const tagDecoration = () => css`
 	&::before {
 		content: '<';

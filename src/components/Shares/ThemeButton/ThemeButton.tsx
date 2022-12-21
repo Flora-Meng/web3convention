@@ -1,28 +1,28 @@
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import Button from '@mui/material/Button';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import { disableMUIButtonHoverCss } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
 
 const { primaryColor } = color;
 
-interface StyledButton {
+interface ThemeButtonProps {
 	children: React.ReactNode;
 	href?: string;
 	onClick?: React.MouseEventHandler;
 }
 
-const StyledButton = styled(Button)`
+const StyledButton = styled.button`
+	background-color: ${primaryColor};
+	border: none;
 	border-radius: 50px;
+	cursor: pointer;
 	font-size: 12px;
 	font-weight: 700;
 	letter-spacing: 0.05em;
 	line-height: 24px;
 	padding: 11px 33px;
 	text-transform: uppercase;
-	${disableMUIButtonHoverCss};
 	&:hover {
 		background-color: ${primaryColor};
 		svg {
@@ -73,9 +73,9 @@ const ButtonContent = styled.p`
 	}
 `;
 
-const ThemeButton: React.FC<StyledButton> = ({ children, href, ...props }) => {
+const ThemeButton: React.FC<ThemeButtonProps> = ({ children, href, ...props }) => {
 	const renderButton = (
-		<StyledButton variant="contained" disableElevation disableRipple {...props}>
+		<StyledButton {...props}>
 			<ButtonContent>
 				<span>{children}</span>
 				<ArrowForwardIosIcon />

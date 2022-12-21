@@ -1,4 +1,3 @@
-import HomeBanner from '@/components/Pages/Home/HomeBanner';
 import HomeCarousel from '@/components/Pages/Home/HomeCarousel';
 import HomeCountdown from '@/components/Pages/Home/HomeCountdown';
 import HomeCounter from '@/components/Pages/Home/HomeCounter';
@@ -11,6 +10,10 @@ import HomeSponsor from '@/components/Pages/Home/HomeSponsor';
 import HomeSubscription from '@/components/Pages/Home/HomeSubscription';
 import HomeTeam from '@/components/Pages/Home/HomeTeam';
 import HomeTicket from '@/components/Pages/Home/HomeTicket';
+import PageBanner from '@/components/Shares/PageBanner';
+import bannerInfo from '@/components/Shares/PageBanner/homeBannerInfo.json';
+// import PageGallery from '@/components/Shares/PageGallery';
+// import imageList from '@/components/Shares/PageGallery/homeImageList.json';
 // import HomeTestimonial from '@/components/Pages/Home/HomeTestimonial';
 import DefaultLayout from '@/layouts/DefaultLayout';
 import PageHead from '@/layouts/PageHead';
@@ -31,13 +34,13 @@ const Homepage: ComponentType = () => {
 			<HomeCarousel />
 			<HomeCountdown />
 			<HomeImageList />
-			<HomeBanner />
+			<PageBanner bannerInfo={bannerInfo} />
 			<HomeEvent />
 			<HomeCounter />
 			<HomePosts />
 			<HomeTeam />
 			<HomeSubscription />
-			{/* <HomeGallery /> */}
+			{/* <PageGallery imageList={imageList} /> */}
 			{/* <HomeTestimonial /> */}
 			<HomeSponsor />
 			<HomeParallax />

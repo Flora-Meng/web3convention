@@ -3,12 +3,10 @@ import LinkedinIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import Grid from '@mui/material/Grid';
-import IconButton from '@mui/material/IconButton';
 import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import { disableMUIButtonHoverCss } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
@@ -53,9 +51,11 @@ const FollowLabel = styled.p`
 	margin-right: 10px;
 `;
 
-const StyledIconButton = styled(IconButton)`
+const StyledIconButton = styled.button`
+	background-color: transparent;
+	border: none;
 	color: ${blackColor};
-	${disableMUIButtonHoverCss};
+	cursor: pointer;
 	&:hover {
 		color: ${whiteColor};
 	}
@@ -86,22 +86,22 @@ const CopyRight: React.FC = () => (
 			</Grid>
 			<Grid item {...gridColumn} className="flex items-center justify-end self-center">
 				<FollowLabel>Follow us</FollowLabel>
-				<StyledIconButton aria-label="add an alarm">
+				<StyledIconButton>
 					<Link href="https://twitter.com/Web3Convention" target="_blank">
 						<TwitterIcon />
 					</Link>
 				</StyledIconButton>
-				<StyledIconButton aria-label="add an alarm">
+				<StyledIconButton>
 					<Link href="https://www.linkedin.com/company/web3convention" target="_blank">
 						<LinkedinIcon />
 					</Link>
 				</StyledIconButton>
-				<StyledIconButton aria-label="add an alarm">
+				<StyledIconButton>
 					<Link href="https://www.instagram.com/web3convention" target="_blank">
 						<InstagramIcon />
 					</Link>
 				</StyledIconButton>
-				<StyledIconButton aria-label="add an alarm">
+				<StyledIconButton>
 					<Link
 						href="https://www.youtube.com/channel/UCTJEa6rxybFHmmlx6YAf1iA"
 						target="_blank"

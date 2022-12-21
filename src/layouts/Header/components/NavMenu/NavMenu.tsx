@@ -1,4 +1,3 @@
-import Button from '@mui/material/Button';
 import Tooltip, { TooltipProps, tooltipClasses } from '@mui/material/Tooltip';
 import { isEmpty } from 'lodash';
 import Link from 'next/link';
@@ -8,11 +7,7 @@ import styled from 'styled-components';
 import SubMenu from './components/SubMenu';
 import ENavItem from '@/constants/nav';
 import { navItemsConfig, subNavItemsConfig } from '@/layouts/Header/navBarConfig';
-import {
-	activeNavBarTitleDecoration,
-	disableMUIButtonHoverCss,
-	navBarTitleDecoration
-} from '@/styles/mixin';
+import { activeNavBarTitleDecoration, navBarTitleDecoration } from '@/styles/mixin';
 import { color, headerHeight } from '@/styles/variables';
 
 const { whiteColor } = color;
@@ -31,13 +26,15 @@ const CustomWidthTooltip = styled(({ className, ...props }: TooltipProps) => (
 	}
 });
 
-const StyledButton = styled(Button)`
+const StyledButton = styled.button`
+	background-color: transparent;
+	border: none;
 	color: ${whiteColor};
+	cursor: pointer;
 	font-size: 14px;
 	font-weight: 600;
 	height: ${headerHeight};
 	padding: 0 20px;
-	${disableMUIButtonHoverCss()}
 `;
 
 const NavButtonContainer = styled.div<INavButtonContainerProps>`
@@ -62,7 +59,7 @@ const NavMenu: React.FC = () => {
 
 	const renderNavItem = (navItem: ENavItem) => (
 		<NavButtonContainer active={navItem === pathKey[1]}>
-			<StyledButton disableRipple>
+			<StyledButton>
 				<ButtonCtx>{navItemsConfig[navItem].title}</ButtonCtx>
 			</StyledButton>
 		</NavButtonContainer>

@@ -1,5 +1,4 @@
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
 import Grid from '@mui/material/Grid';
@@ -16,12 +15,7 @@ import instagramImage04 from '@/assets/images/demo//instagram-image-04.jpg';
 import instagramImage05 from '@/assets/images/demo//instagram-image-05.jpg';
 import instagramImage06 from '@/assets/images/demo//instagram-image-06.jpg';
 import instagramImage01 from '@/assets/images/demo/instagram-image-01.jpg';
-import {
-	animationHoverImage,
-	animationHoverImageParent,
-	disableMUIButtonHoverCss,
-	tagDecoration
-} from '@/styles/mixin';
+import { animationHoverImage, animationHoverImageParent, tagDecoration } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
@@ -106,14 +100,20 @@ const StyledInputStartAdornment = styled(InputAdornment)`
 	}
 `;
 
-const StyledSubmitButton = styled(Button)`
+const StyledSubmitButton = styled.button`
+	-moz-transition: color 0.5s;
+	-webkit-transition: color 0.5s;
 	background-color: transparent;
+	border: none;
 	color: ${whiteColor};
-	${disableMUIButtonHoverCss};
+	cursor: pointer;
+	padding: 0 4px;
+	transition: color 0.5s;
 	&:hover {
 		color: ${primaryColor};
 	}
 	span {
+		text-transform: uppercase;
 		${tagDecoration};
 	}
 `;
@@ -254,11 +254,7 @@ const FooterContent = () => {
 							}
 							endAdornment={
 								<InputAdornment position="end">
-									<StyledSubmitButton
-										variant="contained"
-										disableRipple
-										onClick={handleSubmitEmail}
-									>
+									<StyledSubmitButton onClick={handleSubmitEmail}>
 										<span>Send</span>
 									</StyledSubmitButton>
 								</InputAdornment>
