@@ -72,17 +72,17 @@ const CoverTitle = styled(Title)`
 
 const CoverDescription = styled(Description)`
 	@media ${devices.miniMobile} {
-		font-size: 12px;
+		font-size: 14px;
 	}
 	@media ${devices.tablet} {
 		max-width: 70%;
-		font-size: 15px;
+		font-size: 16px;
 	}
 	@media ${devices.laptop} {
-		font-size: 12px;
+		font-size: 16px;
 	}
 	@media ${devices.largeLaptop} {
-		font-size: 15px;
+		font-size: 16px;
 	}
 	@media ${devices.desktop} {
 		font-size: 18px;

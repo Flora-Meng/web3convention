@@ -16,7 +16,7 @@ interface ContentRowProps {
 
 const EvenRowContainer = styled.div`
 	display: grid;
-	grid-template-columns: 75% 1fr;
+	grid-template-columns: 60% 1fr;
 	@media ${devices.laptop} {
 		margin: 80px 0;
 	}
@@ -37,7 +37,7 @@ const OddRowContainer = styled.div`
 		margin: 80px 0 150px 0;
 	}
 	@media ${devices.laptop} {
-		grid-template-columns: 25% 1fr;
+		grid-template-columns: 40% 1fr;
 		margin: 80px 0;
 	}
 	@media ${devices.largeLaptop} {
@@ -138,7 +138,7 @@ const DescriptionContainer = styled.div`
 		font-size: 22px;
 	}
 	@media ${devices.laptop} {
-		font-size: 12px;
+		font-size: 14px;
 	}
 	@media ${devices.largeLaptop} {
 		font-size: 15px;

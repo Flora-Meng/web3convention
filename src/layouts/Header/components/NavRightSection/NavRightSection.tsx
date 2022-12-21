@@ -34,17 +34,17 @@ const StyledBadge = styled(Badge)({
 const NavRightSection: React.FC = () => {
 	return (
 		<>
-			<NavIconButton>
+			{/* <NavIconButton>
 				<SearchIcon fontSize="small" />
 			</NavIconButton>
 			<NavIconButton>
 				<ConfirmationNumberOutlinedIcon fontSize="small" />
-			</NavIconButton>
-			<NavIconButton>
+			</NavIconButton> */}
+			{/* <NavIconButton>
 				<StyledBadge badgeContent={0} color="primary" showZero>
 					<ShoppingBagOutlinedIcon fontSize="small" />
 				</StyledBadge>
-			</NavIconButton>
+			</NavIconButton> */}
 			<NavDrawer />
 		</>
 	);
