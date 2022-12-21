@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { color, devices } from '@/styles/variables';
 
-const { primaryColor } = color;
+const { primaryColor, textColor } = color;
 
 interface ThemeButtonProps {
 	children: React.ReactNode;
@@ -16,6 +16,7 @@ const StyledButton = styled.button`
 	background-color: ${primaryColor};
 	border: none;
 	border-radius: 50px;
+	color: ${textColor};
 	cursor: pointer;
 	font-size: 12px;
 	font-weight: 700;

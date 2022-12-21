@@ -40,7 +40,7 @@ const Title = styled.h2`
 	}
 `;
 
-const StyledFormControl = styled(FormControl)`
+const InputContainer = styled.div`
 	background-color: ${whiteColor};
 	box-shadow: 0 5px 21px 0 rgb(83 246 198 / 37%);
 	padding: 20px 0;
@@ -59,6 +59,7 @@ const StyledInput = styled(Input)`
 	}
 	input {
 		border-bottom: none;
+		border-radius: 0;
 		border-right: 2px solid ${darkPrimaryColor};
 		padding: 30px 0 30px 30px;
 	}
@@ -69,12 +70,11 @@ const StyledInputAdornment = styled(InputAdornment)`
 	margin-left: 0;
 `;
 
-const StyledSubmitButton = styled.button`
+const StyledButton = styled.button`
 	-moz-transition: color 0.5s;
 	-webkit-transition: color 0.5s;
 	background-color: transparent;
 	border: none;
-	color: ${blackColor};
 	cursor: pointer;
 	font-size: 14px;
 	font-weight: 700;
@@ -85,6 +85,7 @@ const StyledSubmitButton = styled.button`
 		color: ${darkPrimaryColor};
 	}
 	span {
+		color: ${blackColor};
 		text-transform: uppercase;
 		${tagDecoration};
 	}
@@ -170,22 +171,24 @@ const HomeSubscription: React.FC = () => {
 			<Content>
 				<Subtitle>{`Don't miss`}</Subtitle>
 				<Title>Keep you posted!</Title>
-				<StyledFormControl fullWidth>
-					<StyledInput
-						placeholder="_Your Email"
-						value={emailInput}
-						onChange={event => setEmailInput(event.target.value)}
-						endAdornment={
-							<StyledInputAdornment position="end">
-								<StyledSubmitButton onClick={handleSubmitEmail}>
-									<span>Send</span>
-								</StyledSubmitButton>
-							</StyledInputAdornment>
-						}
-						onFocus={() => setInputMessage('')}
-						onKeyDown={handleKeyPress}
-					/>
-				</StyledFormControl>
+				<InputContainer>
+					<FormControl fullWidth>
+						<StyledInput
+							placeholder="_Your Email"
+							value={emailInput}
+							onChange={event => setEmailInput(event.target.value)}
+							endAdornment={
+								<StyledInputAdornment position="end">
+									<StyledButton onClick={handleSubmitEmail}>
+										<span>Send</span>
+									</StyledButton>
+								</StyledInputAdornment>
+							}
+							onFocus={() => setInputMessage('')}
+							onKeyDown={handleKeyPress}
+						/>
+					</FormControl>
+				</InputContainer>
 				{inputMessage && <EmailHelperText>{inputMessage}</EmailHelperText>}
 				<SubscriptionModal message={message} open={openModal} handleClose={handleClose} />
 			</Content>
