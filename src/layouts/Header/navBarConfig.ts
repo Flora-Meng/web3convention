@@ -6,10 +6,10 @@ export const navItemsConfig: { [K in ENavItem]: INavItem } = {
 		title: 'home',
 		path: '/'
 	},
-	[ENavItem.STAGES]: {
-		title: 'stages',
-		path: '/stages'
-	},
+	// [ENavItem.STAGES]: {
+	// 	title: 'stages',
+	// 	path: '/stages'
+	// },
 	[ENavItem.VENUE]: {
 		title: 'venue',
 		path: '/venue'

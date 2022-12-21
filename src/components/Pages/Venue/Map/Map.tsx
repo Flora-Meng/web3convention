@@ -21,7 +21,7 @@ const Map: React.FC<MapProps> = props => {
 	}, [ref, map]);
 	return (
 		<>
-			<div ref={ref} style={{ height: '50vh', width: '100%' }} />
+			<div ref={ref} style={{ height: '60vh', width: '100%' }} />
 			{React.Children.map(children, child => {
 				if (React.isValidElement(child)) {
 					return React.cloneElement<google.maps.Map | any>(child, { map });
