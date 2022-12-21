@@ -49,7 +49,6 @@ const OddRowContainer = styled.div`
 `;
 
 const EvenRowImgContainer = styled.div`
-	aspect-ratio: 5/3;
 	position: relative;
 	@media ${devices.laptop} {
 		margin-right: 30px;
@@ -63,7 +62,6 @@ const EvenRowImgContainer = styled.div`
 `;
 
 const OddRowImgContainer = styled.div`
-	aspect-ratio: 5/3;
 	position: relative;
 	@media ${devices.laptop} {
 		margin-left: 30px;
@@ -154,12 +152,12 @@ const DescriptionContainer = styled.div`
 const ContentRow: React.FC<ContentRowProps> = props => {
 	const { rowCount, title, subTitle, description, imageSrc } = props;
 	const [isWideLayout, setIsWideLayout] = useState<boolean | undefined>(undefined);
+	const [ratio, setRatio] = useState(1);
 	const isEven = rowCount % 2;
 	useEffect(() => {
 		window.addEventListener('resize', () => setIsWideLayout(window.innerWidth >= sizes.laptop));
 		setIsWideLayout(window.innerWidth >= sizes.laptop);
 	}, []);
-
 	if (isWideLayout === undefined) return null;
 	if (!isWideLayout) {
 		return (
@@ -169,13 +167,16 @@ const ContentRow: React.FC<ContentRowProps> = props => {
 					<Title>{title}</Title>
 					<DescriptionContainer>{description}</DescriptionContainer>
 				</TextContainer>
-				<OddRowImgContainer>
+				<OddRowImgContainer style={{ aspectRatio: ratio }}>
 					<Image
 						loader={imageLoader}
 						src={imageSrc}
 						alt="content image"
 						fill
 						unoptimized
+						onLoadingComplete={({ naturalWidth, naturalHeight }) => {
+							setRatio(naturalWidth / naturalHeight);
+						}}
 					/>
 				</OddRowImgContainer>
 			</OddRowContainer>
@@ -183,8 +184,17 @@ const ContentRow: React.FC<ContentRowProps> = props => {
 	}
 	return isEven ? (
 		<EvenRowContainer>
-			<EvenRowImgContainer>
-				<Image loader={imageLoader} src={imageSrc} alt="content image" fill unoptimized />
+			<EvenRowImgContainer style={{ aspectRatio: ratio }}>
+				<Image
+					loader={imageLoader}
+					src={imageSrc}
+					alt="content image"
+					fill
+					unoptimized
+					onLoadingComplete={({ naturalWidth, naturalHeight }) => {
+						setRatio(naturalWidth / naturalHeight);
+					}}
+				/>
 			</EvenRowImgContainer>
 			<section>
 				<Subtitle>{subTitle}</Subtitle>
@@ -199,8 +209,17 @@ const ContentRow: React.FC<ContentRowProps> = props => {
 				<Title>{title}</Title>
 				<DescriptionContainer>{description}</DescriptionContainer>
 			</section>
-			<OddRowImgContainer>
-				<Image loader={imageLoader} src={imageSrc} alt="content image" fill unoptimized />
+			<OddRowImgContainer style={{ aspectRatio: ratio }}>
+				<Image
+					loader={imageLoader}
+					src={imageSrc}
+					alt="content image"
+					fill
+					unoptimized
+					onLoadingComplete={({ naturalWidth, naturalHeight }) => {
+						setRatio(naturalWidth / naturalHeight);
+					}}
+				/>
 			</OddRowImgContainer>
 		</OddRowContainer>
 	);

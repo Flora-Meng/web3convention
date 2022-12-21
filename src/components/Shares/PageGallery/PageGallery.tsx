@@ -5,9 +5,17 @@ import { useState } from 'react';
 import styled from 'styled-components';
 
 import ImageModal from './components/ImageModal';
-import imageList from './imageList.json';
 import { animationHoverImage, animationHoverImageParent } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
+
+interface PageGalleryProps {
+	imageList: {
+		_id: string;
+		imageSrc: string;
+		rows?: number;
+		cols?: number;
+	}[];
+}
 
 const { primaryColor } = color;
 
@@ -22,6 +30,7 @@ const HomeGalleryContainer = styled(ImageList)`
 
 const StyledImageListItem = styled(ImageListItem)`
 	cursor: pointer;
+
 	&:hover div {
 		-moz-transform: translate3d(0, 0, 0);
 		-moz-transition: -moz-transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
@@ -66,7 +75,8 @@ const CallMadeIconContainer = styled.div`
 	}
 `;
 
-const HomeGallery: React.FC = () => {
+const PageGallery: React.FC<PageGalleryProps> = props => {
+	const { imageList } = props;
 	const [open, setOpen] = useState<boolean>(false);
 	const [selectImageIndex, setSelectImageIndex] = useState<number>();
 	const handleOpen = (imageIndex: number) => {
@@ -125,4 +135,4 @@ const HomeGallery: React.FC = () => {
 	);
 };
 
-export default HomeGallery;
+export default PageGallery;

@@ -1,6 +1,7 @@
 enum ENavItem {
-	HOME = 'home'
-	// STAGES = 'stages'
+	HOME = 'home',
+	// STAGES = 'stages',
+	VENUE = 'venue'
 	// CONVENTION = 'convention',
 	// PARTNER = 'partner',
 	// TICKET = 'ticket',
