@@ -14,7 +14,15 @@
 	},
 	"files.eol": "\n",
 	"editor.tabSize": 4,
-	"cSpell.words": ["stylelint", "swipeable", "unoptimized", "hackathon", "webp", "metaverse"],
+	"cSpell.words": [
+		"stylelint",
+		"swipeable",
+		"unoptimized",
+		"hackathon",
+		"webp",
+		"metaverse",
+		"sendgrid"
+	],
 	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": true,
 		"source.fixAll.stylelint": true

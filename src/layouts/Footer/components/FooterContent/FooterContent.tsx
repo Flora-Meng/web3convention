@@ -19,7 +19,7 @@ import { animationHoverImage, animationHoverImageParent, tagDecoration } from '@
 import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
-const { blackColor, primaryColor, whiteColor } = color;
+const { blackColor, primaryColor, warningColor, whiteColor } = color;
 
 // Styles
 
@@ -119,7 +119,7 @@ const StyledSubmitButton = styled.button`
 `;
 
 const EmailHelperText = styled(FormHelperText)`
-	color: red;
+	color: ${warningColor};
 	margin-left: 0;
 `;
 
