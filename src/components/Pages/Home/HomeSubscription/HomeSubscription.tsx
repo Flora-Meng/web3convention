@@ -1,5 +1,4 @@
 import { FormControl, InputAdornment } from '@mui/material';
-import FormHelperText from '@mui/material/FormHelperText';
 import Input from '@mui/material/Input';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
@@ -71,31 +70,30 @@ const StyledInputAdornment = styled(InputAdornment)`
 `;
 
 const StyledButton = styled.button`
-	-moz-transition: color 0.5s;
-	-webkit-transition: color 0.5s;
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
 	font-size: 14px;
 	font-weight: 700;
-	height: inherit;
-	padding: 0 16px;
-	transition: color 0.5s;
-	&:hover {
+	padding: 20px 16px;
+	&:hover span {
 		color: ${darkPrimaryColor};
 	}
 	span {
+		-moz-transition: color 0.5s;
+		-webkit-transition: color 0.5s;
+		${tagDecoration};
 		color: ${blackColor};
 		text-transform: uppercase;
-		${tagDecoration};
+		transition: color 0.5s;
 	}
 	@media ${devices.tablet} {
 		font-size: 16px;
-		padding: 0 60px;
+		padding: 40px 60px;
 	}
 `;
 
-const EmailHelperText = styled(FormHelperText)`
+const EmailHelperText = styled.p`
 	color: ${warningColor};
 	font-size: 14px;
 	margin-left: 0;
