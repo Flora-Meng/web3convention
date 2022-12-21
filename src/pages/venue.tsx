@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 import VenueCoverTitle from '@/components/Pages/Venue/CoverTitle';
-import VenueGallery from '@/components/Pages/Venue/VenueGallery';
 import VenueIntroCards from '@/components/Pages/Venue/VenuIntroCards/VenueIntroCards';
 import PageBanner from '@/components/Shares/PageBanner';
 import bannerInfo from '@/components/Shares/PageBanner/venueBannerInfo.json';
+import PageGallery from '@/components/Shares/PageGallery';
+import imageList from '@/components/Shares/PageGallery/venueImageList.json';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 
@@ -24,7 +25,7 @@ const VenuePage = () => {
 			</Cover>
 			<VenueIntroCards />
 			<PageBanner bannerInfo={bannerInfo} />
-			<VenueGallery />
+			<PageGallery imageList={imageList} />
 			<Footer />
 		</>
 	);

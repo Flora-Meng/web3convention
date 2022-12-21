@@ -2,13 +2,24 @@ import styled from 'styled-components';
 
 import intro from './IntroCard/intro.json';
 import VenueIntroCard from '@/components/Pages/Venue/VenuIntroCards/IntroCard';
+import { devices } from '@/styles/variables';
 
 const Container = styled.div`
 	display: flex;
 	justify-content: space-between;
-	margin: 120px auto;
+	max-width: 1600px;
 	position: relative;
-	width: calc(100vw - 200px);
+	@media ${devices.miniMobile} {
+		width: calc(100vw - 100px);
+		margin: 80px auto;
+	}
+	@media ${devices.laptop} {
+		width: calc(100vw - 200px);
+		margin: 100px auto;
+	}
+	@media ${devices.desktop} {
+		margin: 120px auto;
+	}
 `;
 const VenueIntroCards: React.FC = () => {
 	return (
