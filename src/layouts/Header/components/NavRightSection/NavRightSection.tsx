@@ -2,20 +2,21 @@ import ConfirmationNumberOutlinedIcon from '@mui/icons-material/ConfirmationNumb
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import Badge from '@mui/material/Badge';
-import Button from '@mui/material/Button';
 import styled from 'styled-components';
 
 import NavDrawer from './components/NavDrawer';
-import { disableMUIButtonHoverCss } from '@/styles/mixin';
 import { color } from '@/styles/variables';
 
 const { primaryColor, whiteColor } = color;
 
-const NavIconButton = styled(Button)`
+const NavIconButton = styled.button`
+	background-color: transparent;
+	border: none;
 	color: ${whiteColor};
+	cursor: pointer;
+	margin: 0 6px;
 	min-width: unset;
 	&:hover {
-		${disableMUIButtonHoverCss()};
 		color: ${primaryColor};
 	}
 `;
@@ -33,13 +34,13 @@ const StyledBadge = styled(Badge)({
 const NavRightSection: React.FC = () => {
 	return (
 		<>
-			<NavIconButton disableRipple>
+			<NavIconButton>
 				<SearchIcon fontSize="small" />
 			</NavIconButton>
-			<NavIconButton disableRipple>
+			<NavIconButton>
 				<ConfirmationNumberOutlinedIcon fontSize="small" />
 			</NavIconButton>
-			<NavIconButton disableRipple>
+			<NavIconButton>
 				<StyledBadge badgeContent={0} color="primary" showZero>
 					<ShoppingBagOutlinedIcon fontSize="small" />
 				</StyledBadge>
