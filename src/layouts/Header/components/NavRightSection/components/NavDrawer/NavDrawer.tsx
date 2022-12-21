@@ -122,10 +122,10 @@ const NavDrawer: React.FC = () => {
 						/>
 					</ImageContainer>
 					<Tagline>{`Don't_miss`}</Tagline>
-					<Title>Wire Festival</Title>
+					<Title>Web3 & Web2 Convention</Title>
 					<p className="leading-relaxed">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam blandit
-						hendrerit faucibus turpis dui.
+						Web3 Convention is the technology convention that brings together people and
+						companies redefining the global tech industry.
 					</p>
 					<div className="flex flex-col">
 						{linkConfigList.map(({ label, href }) => (

@@ -8,7 +8,7 @@ import Header from '@/layouts/Header';
 const Cover = styled.div`
 	background-attachment: fixed;
 	background-image: url('/images/demo/stagePage/cover.jpeg');
-	background-size: cover;
+	background-repeat: no-repeat;
 	height: 70vh;
 `;
 const StagePage = () => {
