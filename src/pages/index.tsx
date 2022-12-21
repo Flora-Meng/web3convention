@@ -12,8 +12,8 @@ import HomeTeam from '@/components/Pages/Home/HomeTeam';
 import HomeTicket from '@/components/Pages/Home/HomeTicket';
 import PageBanner from '@/components/Shares/PageBanner';
 import bannerInfo from '@/components/Shares/PageBanner/homeBannerInfo.json';
-import PageGallery from '@/components/Shares/PageGallery';
-import imageList from '@/components/Shares/PageGallery/homeImageList.json';
+// import PageGallery from '@/components/Shares/PageGallery';
+// import imageList from '@/components/Shares/PageGallery/homeImageList.json';
 // import HomeTestimonial from '@/components/Pages/Home/HomeTestimonial';
 import DefaultLayout from '@/layouts/DefaultLayout';
 import PageHead from '@/layouts/PageHead';
@@ -40,7 +40,7 @@ const Homepage: ComponentType = () => {
 			<HomePosts />
 			<HomeTeam />
 			<HomeSubscription />
-			<PageGallery imageList={imageList} />
+			{/* <PageGallery imageList={imageList} /> */}
 			{/* <HomeTestimonial /> */}
 			<HomeSponsor />
 			<HomeParallax />
