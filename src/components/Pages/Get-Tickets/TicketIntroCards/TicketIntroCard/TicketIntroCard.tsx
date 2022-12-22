@@ -42,14 +42,12 @@ const ContentContainer = styled(CardContent)`
 	text-align: center;
 	transform: translate(0, -50%);
 	@media ${devices.miniMobile} {
-		top: 12%;
-		margin: 0 2%;
+		top: 11%;
+		margin: 0 2.5%;
 		height: 23.5%;
 	}
 	@media ${devices.mobile} {
-		margin: 0 2.5%;
 		top: 12%;
-		height: 23.5%;
 	}
 	@media ${devices.laptop} {
 		top: 2.2vw;

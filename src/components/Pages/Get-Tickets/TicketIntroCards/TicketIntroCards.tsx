@@ -10,10 +10,10 @@ const Container = styled.div`
 	@media ${devices.miniMobile} {
 		display: grid;
 		row-gap: 30px;
-		width: 100vw;
-		margin: 20px auto;
+		margin: 0 0 30px 0;
 	}
 	@media ${devices.mobile} {
+		margin: 30px auto;
 		width: calc(100vw - 100px);
 	}
 	@media ${devices.tablet} {
