@@ -20,6 +20,8 @@
 	},
 	"dependencies": {
 		"@aws-sdk/client-sqs": "^3.236.0",
+		"@emotion/react": "^11.10.5",
+		"@emotion/styled": "^11.10.5",
 		"@googlemaps/react-wrapper": "^1.1.35",
 		"@mui/icons-material": "^5.10.16",
 		"@mui/material": "^5.10.16",
