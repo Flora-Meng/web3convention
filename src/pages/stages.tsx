@@ -6,11 +6,11 @@ import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 
 const Cover = styled.div`
-    background-image: url(/images//mainstage.jpeg);
-    background-repeat: no-repeat;
+	background-image: url(/images//mainstage.jpeg);
 	background-position: 50%;
-    background-size: 100%;
-    height: 50vh;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	height: 50vh;
 `;
 const StagePage = () => {
 	return (
