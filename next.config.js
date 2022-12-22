@@ -1,4 +1,7 @@
 /** @type {import('next').NextConfig} */
+
+const withTM = require('next-transpile-modules')(['@mui/material', '@mui/icons-material']);
+
 const nextConfig = {
 	reactStrictMode: true,
 	compiler: {
@@ -27,4 +30,4 @@ const nextConfig = {
 	}
 };
 
-module.exports = nextConfig;
+module.exports = withTM(nextConfig);
