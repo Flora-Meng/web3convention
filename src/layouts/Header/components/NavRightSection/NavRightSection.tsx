@@ -1,6 +1,6 @@
-import ConfirmationNumberOutlinedIcon from '@mui/icons-material/ConfirmationNumberOutlined';
-import SearchIcon from '@mui/icons-material/Search';
-import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
+// import ConfirmationNumberOutlinedIcon from '@mui/icons-material/ConfirmationNumberOutlined';
+// import SearchIcon from '@mui/icons-material/Search';
+// import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import Badge from '@mui/material/Badge';
 import styled from 'styled-components';
 
@@ -34,17 +34,17 @@ const StyledBadge = styled(Badge)({
 const NavRightSection: React.FC = () => {
 	return (
 		<>
-			<NavIconButton>
+			{/* <NavIconButton>
 				<SearchIcon fontSize="small" />
 			</NavIconButton>
 			<NavIconButton>
 				<ConfirmationNumberOutlinedIcon fontSize="small" />
-			</NavIconButton>
-			<NavIconButton>
+			</NavIconButton> */}
+			{/* <NavIconButton>
 				<StyledBadge badgeContent={0} color="primary" showZero>
 					<ShoppingBagOutlinedIcon fontSize="small" />
 				</StyledBadge>
-			</NavIconButton>
+			</NavIconButton> */}
 			<NavDrawer />
 		</>
 	);

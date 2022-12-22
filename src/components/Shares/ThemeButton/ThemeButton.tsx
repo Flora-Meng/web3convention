@@ -4,17 +4,19 @@ import styled from 'styled-components';
 
 import { color, devices } from '@/styles/variables';
 
-const { primaryColor } = color;
+const { primaryColor, textColor } = color;
 
 interface ThemeButtonProps {
 	children: React.ReactNode;
 	href?: string;
+	onClick?: React.MouseEventHandler;
 }
 
 const StyledButton = styled.button`
 	background-color: ${primaryColor};
 	border: none;
 	border-radius: 50px;
+	color: ${textColor};
 	cursor: pointer;
 	font-size: 12px;
 	font-weight: 700;
@@ -72,9 +74,9 @@ const ButtonContent = styled.p`
 	}
 `;
 
-const ThemeButton: React.FC<ThemeButtonProps> = ({ children, href }) => {
+const ThemeButton: React.FC<ThemeButtonProps> = ({ children, href, ...props }) => {
 	const renderButton = (
-		<StyledButton>
+		<StyledButton {...props}>
 			<ButtonContent>
 				<span>{children}</span>
 				<ArrowForwardIosIcon />

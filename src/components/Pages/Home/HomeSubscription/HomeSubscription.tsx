@@ -1,13 +1,15 @@
 import { FormControl, InputAdornment } from '@mui/material';
-import FormHelperText from '@mui/material/FormHelperText';
 import Input from '@mui/material/Input';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
+import SubscriptionModal from '@/components/Shares/SubscriptionModal';
+import { addSubscriptionEmail, checkNewSubscriptionEmail } from '@/services/sendGrid';
 import { sectionSubtitle, sectionTitle, tagDecoration } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
+import { isEmail } from '@/utils/validator';
 
-const { blackColor, darkPrimaryColor, textColor, whiteColor } = color;
+const { blackColor, darkPrimaryColor, textColor, whiteColor, warningColor } = color;
 
 const HomeSubscriptionContainer = styled.div`
 	background: linear-gradient(180deg, ${blackColor} 70%, ${whiteColor} 30%);
@@ -21,6 +23,7 @@ const HomeSubscriptionContainer = styled.div`
 const Content = styled.div`
 	margin: 0 auto;
 	max-width: 1300px;
+	position: relative;
 `;
 
 const Subtitle = styled.p`
@@ -36,7 +39,7 @@ const Title = styled.h2`
 	}
 `;
 
-const StyledFormControl = styled(FormControl)`
+const InputContainer = styled.div`
 	background-color: ${whiteColor};
 	box-shadow: 0 5px 21px 0 rgb(83 246 198 / 37%);
 	padding: 20px 0;
@@ -44,6 +47,9 @@ const StyledFormControl = styled(FormControl)`
 
 const StyledInput = styled(Input)`
 	color: ${textColor};
+	@media ${devices.laptop} {
+		font-size: 18px;
+	}
 	&::before {
 		display: none;
 	}
@@ -52,6 +58,7 @@ const StyledInput = styled(Input)`
 	}
 	input {
 		border-bottom: none;
+		border-radius: 0;
 		border-right: 2px solid ${darkPrimaryColor};
 		padding: 30px 0 30px 30px;
 	}
@@ -62,47 +69,99 @@ const StyledInputAdornment = styled(InputAdornment)`
 	margin-left: 0;
 `;
 
-const StyledSubmitButton = styled.button`
-	-moz-transition: color 0.5s;
-	-webkit-transition: color 0.5s;
+const StyledButton = styled.button`
 	background-color: transparent;
 	border: none;
-	color: ${blackColor};
 	cursor: pointer;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 700;
-	height: inherit;
-	padding: 0 16px;
-	transition: color 0.5s;
-	&:hover {
+	padding: 20px 16px;
+	&:hover span {
 		color: ${darkPrimaryColor};
 	}
 	span {
-		text-transform: uppercase;
+		-moz-transition: color 0.5s;
+		-webkit-transition: color 0.5s;
 		${tagDecoration};
+		color: ${blackColor};
+		text-transform: uppercase;
+		transition: color 0.5s;
 	}
 	@media ${devices.tablet} {
-		padding: 60px;
+		font-size: 16px;
+		padding: 40px 60px;
 	}
 `;
 
-const EmailHelperText = styled(FormHelperText)`
-	color: red;
+const EmailHelperText = styled.p`
+	color: ${warningColor};
+	font-size: 14px;
 	margin-left: 0;
+	margin-top: 10px;
+	position: absolute;
 `;
 
 const HomeSubscription: React.FC = () => {
 	const [emailInput, setEmailInput] = useState<string>('');
 	const [inputMessage, setInputMessage] = useState<string>('');
+	const [message, setMessage] = useState<IMessage>();
+	const [openModal, setOpenModal] = useState<boolean>(false);
 
 	useEffect(() => {
 		if (inputMessage) setInputMessage('');
 	}, [emailInput]);
 
-	const handleSubmitEmail = () => {
-		if (!emailInput) {
-			setInputMessage('Email is invalid.');
+	const handleSubmitEmail = async () => {
+		if (!isEmail(emailInput)) {
+			setInputMessage('Email is invalid. Please update your email.');
+		} else {
+			// Check whether the email has been subscripted
+			const checkResponse = await checkNewSubscriptionEmail(emailInput);
+
+			if (checkResponse[0].statusCode === 200) {
+				if (checkResponse[1].contact_count === 0) {
+					// The email is not in the subscription list and add to subscription list
+					const addEmailResponse = await addSubscriptionEmail(emailInput);
+
+					if (addEmailResponse[0].statusCode === 202) {
+						setMessage({
+							type: 'success',
+							message: 'Subscription successfully!'
+						});
+						setOpenModal(true);
+						setEmailInput('');
+					} else {
+						setMessage({
+							type: 'error',
+							message: 'Subscription failed. Please try again later.'
+						});
+						setOpenModal(true);
+					}
+				} else {
+					setMessage({
+						type: 'info',
+						message: 'Your have already subscripted.'
+					});
+					setOpenModal(true);
+				}
+			} else {
+				setMessage({
+					type: 'error',
+					message: 'Check subscription status failed. Please try again later.'
+				});
+				setOpenModal(true);
+			}
 		}
+	};
+
+	const handleKeyPress = (e: React.KeyboardEvent<HTMLElement>) => {
+		if (e.key === 'Enter') {
+			handleSubmitEmail();
+		}
+	};
+
+	const handleClose = () => {
+		setOpenModal(false);
 	};
 
 	return (
@@ -110,21 +169,26 @@ const HomeSubscription: React.FC = () => {
 			<Content>
 				<Subtitle>{`Don't miss`}</Subtitle>
 				<Title>Keep you posted!</Title>
-				<StyledFormControl fullWidth>
-					<StyledInput
-						placeholder="_Your Email"
-						value={emailInput}
-						onChange={event => setEmailInput(event.target.value)}
-						endAdornment={
-							<StyledInputAdornment position="end">
-								<StyledSubmitButton onClick={handleSubmitEmail}>
-									<span>Send</span>
-								</StyledSubmitButton>
-							</StyledInputAdornment>
-						}
-					/>
-				</StyledFormControl>
+				<InputContainer>
+					<FormControl fullWidth>
+						<StyledInput
+							placeholder="_Your Email"
+							value={emailInput}
+							onChange={event => setEmailInput(event.target.value)}
+							endAdornment={
+								<StyledInputAdornment position="end">
+									<StyledButton onClick={handleSubmitEmail}>
+										<span>Send</span>
+									</StyledButton>
+								</StyledInputAdornment>
+							}
+							onFocus={() => setInputMessage('')}
+							onKeyDown={handleKeyPress}
+						/>
+					</FormControl>
+				</InputContainer>
 				{inputMessage && <EmailHelperText>{inputMessage}</EmailHelperText>}
+				<SubscriptionModal message={message} open={openModal} handleClose={handleClose} />
 			</Content>
 		</HomeSubscriptionContainer>
 	);
