@@ -50,7 +50,7 @@ const ContentContainer = styled(CardContent)`
 		top: 12%;
 	}
 	@media ${devices.laptop} {
-		top: 2.2vw;
+		top: 2.1vw;
 	}
 	@media ${devices.largeLaptop} {
 		top: 10%;
@@ -108,9 +108,6 @@ const Description = styled.text`
 	}
 `;
 
-const LinkContainer = styled.div`
-	text-align: center;
-`;
 export const StyledLink = styled(Link)`
 	display: inline-block;
 	font-weight: 700;
@@ -149,12 +146,10 @@ const TicketIntroCard: React.FC<IntroCardProps> = props => {
 			<ContentContainer>
 				<Title>{title}</Title>
 				<Description>{description}</Description>
-			</ContentContainer>
-			<LinkContainer>
 				<StyledLink href="https://www.eventbrite.com.au/e/web3-convention-tickets-491154535437">
 					<span>buy now</span>
 				</StyledLink>
-			</LinkContainer>
+			</ContentContainer>
 		</CardContainer>
 	);
 };
