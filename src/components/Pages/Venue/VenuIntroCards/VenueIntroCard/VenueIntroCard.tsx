@@ -36,7 +36,7 @@ const CoverContainer = styled(CardMedia)`
 		height: 66%;
 	}
 	@media ${devices.largeLaptop} {
-		height: 76%;
+		height: 73%;
 	}
 `;
 const ContentContainer = styled(CardContent)`
@@ -51,11 +51,13 @@ const ContentContainer = styled(CardContent)`
 		margin: 0 2.5%;
 	}
 	@media ${devices.largeLaptop} {
-		top: 12%;
+		margin: 0 3%;
+		top: 13.5%;
 	}
 `;
 
 const Title = styled.text`
+	font-weight: 500;
 	@media ${devices.miniMobile} {
 		font-size: 4vw;
 		margin-bottom: 1.4vw;

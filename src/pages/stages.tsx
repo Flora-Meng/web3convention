@@ -4,13 +4,19 @@ import StageCoverTitle from '@/components/Pages/Stages/CoverTitle/StageCoverTitl
 import MainContents from '@/components/Pages/Stages/MainContents';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
+import { devices } from '@/styles/variables';
 
 const Cover = styled.div`
-	background-image: url(/images//mainstage.jpeg);
+	background-image: url('/images/mainstage.jpeg');
 	background-position: 50%;
 	background-repeat: no-repeat;
-	background-size: 100%;
-	height: 50vh;
+	background-size: cover;
+	@media ${devices.miniMobile} {
+		height: 85vh;
+	}
+	@media ${devices.tablet} {
+		height: 50vh;
+	}
 `;
 const StagePage = () => {
 	return (

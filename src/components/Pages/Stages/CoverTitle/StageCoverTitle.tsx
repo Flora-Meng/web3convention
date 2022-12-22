@@ -5,7 +5,7 @@ import {
 	Subtitle,
 	Title
 } from '@/components/Pages/Home/HomeCarousel/components/CarouseItem/CarouseItem';
-import cover from '@/components/Pages/Stages/CoverTitle/stageCover.json';
+import coverText from '@/components/Pages/Stages/CoverTitle/stageCoverText.json';
 import { color, devices } from '@/styles/variables';
 
 const { whiteColor, primaryColor } = color;
@@ -24,11 +24,11 @@ const Container = styled.div`
 		transform: translate(0, calc(-50% - 30px));
 	}
 	@media ${devices.laptop} {
-		transform: translate(0, calc(-50% - 80px));
+		transform: translate(0, calc(-50% - 70px));
 		width: calc(100vw - 200px);
 	}
 	@media ${devices.desktop} {
-		transform: translate(0, calc(-50% - 100px));
+		transform: translate(0, calc(-50% - 90px));
 	}
 `;
 
@@ -38,35 +38,35 @@ const CoverSubtitle = styled(Subtitle)`
 		font-size: 10px;
 	}
 	@media ${devices.tablet} {
-		font-size: 13px;
+		font-size: 12px;
 	}
 	@media ${devices.largeLaptop} {
-		font-size: 16px;
+		font-size: 15px;
 	}
 	@media ${devices.desktop} {
-		font-size: 18px;
+		font-size: 17px;
 	}
 `;
 
 const CoverTitle = styled(Title)`
 	white-space: pre-wrap;
 	@media ${devices.miniMobile} {
-		margin-bottom: 60px;
-		font-size: 40px;
+		margin-bottom: 50px;
+		font-size: 32px;
 	}
 	@media ${devices.tablet} {
-		margin-bottom: 100px;
-		font-size: 60px;
+		margin-bottom: 80px;
+		font-size: 32px;
 	}
 	@media ${devices.laptop} {
-		margin-bottom: 80px;
+		margin-bottom: 34px;
 	}
 	@media ${devices.largeLaptop} {
-		font-size: 70px;
+		font-size: 50px;
 	}
 	@media ${devices.desktop} {
-		margin-bottom: 100px;
-		font-size: 90px;
+		margin-bottom: 90px;
+		font-size: 75px;
 	}
 `;
 
@@ -75,25 +75,22 @@ const CoverDescription = styled(Description)`
 		font-size: 14px;
 	}
 	@media ${devices.tablet} {
-		max-width: 70%;
-		font-size: 16px;
-	}
-	@media ${devices.laptop} {
-		font-size: 16px;
+		max-width: 85%;
+		font-size: 15px;
 	}
 	@media ${devices.largeLaptop} {
-		font-size: 16px;
+		max-width: 70%;
 	}
 	@media ${devices.desktop} {
-		font-size: 18px;
+		font-size: 17px;
 	}
 `;
 const StageCoverTitle = () => {
 	return (
 		<Container>
-			<CoverSubtitle isCurrent>{cover.subtitle}</CoverSubtitle>
-			<CoverTitle isCurrent>{cover.title}</CoverTitle>
-			<CoverDescription isCurrent>{cover.text}</CoverDescription>
+			<CoverSubtitle isCurrent>{coverText.subtitle}</CoverSubtitle>
+			<CoverTitle isCurrent>{coverText.title}</CoverTitle>
+			<CoverDescription isCurrent>{coverText.text}</CoverDescription>
 		</Container>
 	);
 };

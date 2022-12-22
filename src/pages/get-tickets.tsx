@@ -9,12 +9,12 @@ import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 
 const Cover = styled.div`
-	background-attachment: fixed;
-	background-image: url('/images/demo/coming-soon-overlay.jpg');
-	background-position: bottom;
+	background-image: url('/images/demo/ticketPage/ticketPageCover.jpeg');
+	background-position: center;
 	background-size: cover;
 	height: 50vh;
 `;
+
 const BackgroundBanner = styled.div`
 	background-color: #f8f6f6;
 	display: grid;

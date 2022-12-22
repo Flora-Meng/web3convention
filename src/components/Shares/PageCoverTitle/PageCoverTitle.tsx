@@ -50,7 +50,7 @@ const CoverSubtitle = styled(Subtitle)`
 const CoverTitle = styled(Title)`
 	white-space: pre-wrap;
 	@media ${devices.miniMobile} {
-		font-size: 40px;
+		font-size: 38px;
 	}
 	@media ${devices.tablet} {
 		font-size: 60px;
