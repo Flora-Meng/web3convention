@@ -18,12 +18,19 @@ export const addSubscriptionEmail = async (email: string) => {
 	});
 };
 
+export const checkAddSubscriptionEmailStatus = async (jobId: string) => {
+	return client.request({
+		url: `/v3/marketing/contacts/imports/${jobId}`,
+		method: 'GET'
+	});
+};
+
 export const checkNewSubscriptionEmail = async (email: string) => {
 	return client.request({
 		url: `/v3/marketing/contacts/search`,
 		method: 'POST',
 		body: {
-			query: `email = '${email}'`
+			query: `email = '${email}' AND CONTAINS(list_ids, '${contactListIdByEnv}')`
 		}
 	});
 };
