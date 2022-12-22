@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import SubscriptionModal from '@/components/Shares/SubscriptionModal';
-import { addSubscriptionEmail, checkNewSubscriptionEmail } from '@/services/sendGrid';
+import useSubscription from '@/hooks/userSubscription';
 import { sectionSubtitle, sectionTitle, tagDecoration } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
 import { isEmail } from '@/utils/validator';
@@ -104,8 +104,10 @@ const EmailHelperText = styled.p`
 const HomeSubscription: React.FC = () => {
 	const [emailInput, setEmailInput] = useState<string>('');
 	const [inputMessage, setInputMessage] = useState<string>('');
-	const [message, setMessage] = useState<IMessage>();
-	const [openModal, setOpenModal] = useState<boolean>(false);
+	const { message, openModal, setOpenModal, submitEmail } = useSubscription(
+		emailInput,
+		setEmailInput
+	);
 
 	useEffect(() => {
 		if (inputMessage) setInputMessage('');
@@ -115,42 +117,7 @@ const HomeSubscription: React.FC = () => {
 		if (!isEmail(emailInput)) {
 			setInputMessage('Email is invalid. Please update your email.');
 		} else {
-			// Check whether the email has been subscripted
-			const checkResponse = await checkNewSubscriptionEmail(emailInput);
-
-			if (checkResponse[0].statusCode === 200) {
-				if (checkResponse[1].contact_count === 0) {
-					// The email is not in the subscription list and add to subscription list
-					const addEmailResponse = await addSubscriptionEmail(emailInput);
-
-					if (addEmailResponse[0].statusCode === 202) {
-						setMessage({
-							type: 'success',
-							message: 'Subscription successfully!'
-						});
-						setOpenModal(true);
-						setEmailInput('');
-					} else {
-						setMessage({
-							type: 'error',
-							message: 'Subscription failed. Please try again later.'
-						});
-						setOpenModal(true);
-					}
-				} else {
-					setMessage({
-						type: 'info',
-						message: 'Your have already subscripted.'
-					});
-					setOpenModal(true);
-				}
-			} else {
-				setMessage({
-					type: 'error',
-					message: 'Check subscription status failed. Please try again later.'
-				});
-				setOpenModal(true);
-			}
+			submitEmail();
 		}
 	};
 
