@@ -1,3 +1,4 @@
+import { styled as muiStyled } from '@mui/material/styles';
 import Grid from '@mui/material/Unstable_Grid2';
 import Link from 'next/link';
 import styled from 'styled-components';
@@ -16,11 +17,11 @@ const AgendaTableContainer = styled.div`
 	max-width: ${`${sizes.laptop}px`};
 	position: relative;
 `;
-const TableHead = styled(Grid)`
+const TableHead = muiStyled(Grid)`
 	margin-bottom: 20px;
 `;
 
-const TableHeadItem = styled(Grid)`
+const TableHeadItem = muiStyled(Grid)`
 	position: relative;
 	text-align: center;
 	&:not(:last-child) {
@@ -55,7 +56,7 @@ const HeadSubtitle = styled.p`
 	margin: 0;
 `;
 
-const GridItemContainer = styled(Grid)`
+const GridItemContainer = muiStyled(Grid)`
 	@media ${devices.mobile} {
 		height: 60px;
 	}
