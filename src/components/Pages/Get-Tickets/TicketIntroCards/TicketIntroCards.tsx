@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import intro from './VenueIntroCard/intro.json';
-import VenueIntroCard from '@/components/Pages/Venue/VenuIntroCards/VenueIntroCard';
+import intro from './TicketIntroCard/intro.json';
+import TicketIntroCard from '@/components/Pages/Get-Tickets/TicketIntroCards/TicketIntroCard';
 import { devices } from '@/styles/variables';
 
 const Container = styled.div`
@@ -9,29 +9,32 @@ const Container = styled.div`
 	position: relative;
 	@media ${devices.miniMobile} {
 		display: grid;
-		row-gap: 20px;
+		row-gap: 30px;
+		width: 100vw;
+		margin: 20px auto;
+	}
+	@media ${devices.mobile} {
 		width: calc(100vw - 100px);
-		margin: 40px auto;
 	}
 	@media ${devices.tablet} {
 		display: flex;
 		justify-content: space-between;
 		width: calc(100vw - 100px);
-		margin: 80px auto;
+		margin: 50px auto;
 	}
 	@media ${devices.laptop} {
 		width: calc(100vw - 200px);
-		margin: 100px auto;
+		margin: 70px auto;
 	}
 	@media ${devices.desktop} {
-		margin: 120px auto;
+		margin: 90px auto;
 	}
 `;
-const VenueIntroCards: React.FC = () => {
+const TicketIntroCards: React.FC = () => {
 	return (
 		<Container>
 			{intro.map(cardContent => (
-				<VenueIntroCard
+				<TicketIntroCard
 					key={cardContent._id}
 					imageSrc={cardContent.imageSrc}
 					title={cardContent.title}
@@ -42,4 +45,4 @@ const VenueIntroCards: React.FC = () => {
 	);
 };
 
-export default VenueIntroCards;
+export default TicketIntroCards;
