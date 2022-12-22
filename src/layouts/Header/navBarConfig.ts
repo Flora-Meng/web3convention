@@ -14,8 +14,8 @@ export const navItemsConfig: { [K in ENavItem]: INavItem } = {
 		title: 'venue',
 		path: '/venue'
 	},
-	[ENavItem.GET_TICKETS]: {
-		title: 'get tickets',
+	[ENavItem.TICKETS]: {
+		title: 'tickets',
 		path: '/get-tickets'
 	}
 	// [ENavItem.CONVENTION]: {
