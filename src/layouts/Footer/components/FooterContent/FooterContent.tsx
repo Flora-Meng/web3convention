@@ -1,6 +1,5 @@
 import Box from '@mui/material/Box';
 import FormControl from '@mui/material/FormControl';
-import FormHelperText from '@mui/material/FormHelperText';
 import Grid from '@mui/material/Grid';
 import Input from '@mui/material/Input';
 import InputAdornment from '@mui/material/InputAdornment';
@@ -15,6 +14,8 @@ import instagramImage04 from '@/assets/images/demo//instagram-image-04.jpg';
 import instagramImage05 from '@/assets/images/demo//instagram-image-05.jpg';
 import instagramImage06 from '@/assets/images/demo//instagram-image-06.jpg';
 import instagramImage01 from '@/assets/images/demo/instagram-image-01.jpg';
+import SubscriptionModal from '@/components/Shares/SubscriptionModal';
+import useSubscription from '@/hooks/userSubscription';
 import { animationHoverImage, animationHoverImageParent, tagDecoration } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
@@ -118,9 +119,11 @@ const StyledSubmitButton = styled.button`
 	}
 `;
 
-const EmailHelperText = styled(FormHelperText)`
+const EmailHelperText = styled.p`
 	color: ${warningColor};
-	margin-left: 0;
+	margin: 0;
+	position: absolute;
+	top: 100%;
 `;
 
 // Configuration
@@ -174,6 +177,10 @@ const itemData = [
 const FooterContent = () => {
 	const [emailInput, setEmailInput] = useState<string>('');
 	const [inputMessage, setInputMessage] = useState<string>('');
+	const { message, openModal, setOpenModal, submitEmail } = useSubscription(
+		emailInput,
+		setEmailInput
+	);
 
 	useEffect(() => {
 		if (inputMessage) setInputMessage('');
@@ -182,7 +189,19 @@ const FooterContent = () => {
 	const handleSubmitEmail = () => {
 		if (!emailInput) {
 			setInputMessage('Email is invalid.');
+		} else {
+			submitEmail();
 		}
+	};
+
+	const handleKeyPress = (e: React.KeyboardEvent<HTMLElement>) => {
+		if (e.key === 'Enter') {
+			handleSubmitEmail();
+		}
+	};
+
+	const handleClose = () => {
+		setOpenModal(false);
 	};
 
 	return (
@@ -243,10 +262,12 @@ const FooterContent = () => {
 				<Grid item mobile={12} tablet={6} laptop={3} largeLaptop={3}>
 					<Title>Join the Newsletter</Title>
 					<ContentText>Stay informed about the latest events.</ContentText>
-					<FormControl fullWidth variant="outlined">
+					<FormControl fullWidth variant="outlined" className="relative">
 						<StyledInput
 							value={emailInput}
 							onChange={event => setEmailInput(event.target.value)}
+							onFocus={() => setInputMessage('')}
+							onKeyDown={handleKeyPress}
 							startAdornment={
 								<StyledInputStartAdornment position="start">
 									Email*
@@ -264,6 +285,7 @@ const FooterContent = () => {
 					</FormControl>
 				</Grid>
 			</ContainerGrid>
+			<SubscriptionModal message={message} open={openModal} handleClose={handleClose} />
 		</ContentContainer>
 	);
 };
