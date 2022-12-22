@@ -11,20 +11,20 @@ const Container = styled.div`
 		display: grid;
 		row-gap: 20px;
 		width: calc(100vw - 100px);
-		margin: 20px auto;
+		margin: 30px auto;
 	}
 	@media ${devices.tablet} {
 		display: flex;
 		justify-content: space-between;
 		width: calc(100vw - 100px);
-		margin: 50px auto;
+		margin: 60px auto;
 	}
 	@media ${devices.laptop} {
 		width: calc(100vw - 200px);
-		margin: 70px auto;
+		margin: 80px auto;
 	}
 	@media ${devices.desktop} {
-		margin: 90px auto;
+		margin: 100px auto;
 	}
 `;
 const VenueIntroCards: React.FC = () => {
