@@ -76,7 +76,7 @@ const CoverDescription = styled(Description)`
 	}
 	@media ${devices.tablet} {
 		max-width: 85%;
-		font-size: 15px;
+		font-size: 16px;
 	}
 	@media ${devices.largeLaptop} {
 		max-width: 70%;
