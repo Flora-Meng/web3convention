@@ -9,7 +9,7 @@ const Cover = styled.div`
 	background-image: url(/images//mainstage.jpeg);
 	background-position: 50%;
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-size: cover;
 	height: 50vh;
 `;
 const StagePage = () => {
