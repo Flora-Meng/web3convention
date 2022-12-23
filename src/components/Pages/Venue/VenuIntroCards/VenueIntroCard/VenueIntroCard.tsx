@@ -51,7 +51,6 @@ const ContentContainer = styled(CardContent)`
 		margin: 0 2.5%;
 	}
 	@media ${devices.largeLaptop} {
-		margin: 0 3%;
 		top: 13.5%;
 	}
 `;
