@@ -53,10 +53,9 @@ const ContentContainer = styled(CardContent)`
 		top: 2.1vw;
 	}
 	@media ${devices.largeLaptop} {
-		top: 10%;
+		top: 11%;
 	}
 	@media ${devices.desktop} {
-		height: 25.5%;
 		top: 12%;
 	}
 `;
