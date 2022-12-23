@@ -5,7 +5,15 @@ const withTM = require('next-transpile-modules')(['@mui/material', '@mui/icons-m
 const nextConfig = {
 	reactStrictMode: true,
 	compiler: {
-		styledComponents: true
+		styledComponents: {
+			topLevelImportPaths: [
+				'@mui/material',
+				'@mui/material/styles',
+				'@mui/styled-engine-sc',
+				'@mui/styled-engine'
+			],
+			ssr: true
+		}
 	},
 	images: {
 		loader: 'custom'
