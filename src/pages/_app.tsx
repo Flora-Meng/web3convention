@@ -1,4 +1,5 @@
 import { ThemeProvider } from '@mui/material';
+import { StyledEngineProvider } from '@mui/material/styles';
 import type { AppProps } from 'next/app';
 import Script from 'next/script';
 import { Fragment } from 'react';
@@ -31,7 +32,9 @@ const App = ({ Component, pageProps }: Props) => {
 					gtag('config', 'G-QGRPQF01S7');
 				`}
 			</Script>
-			<Layout>{getLayout(<Component {...pageProps} />)}</Layout>
+			<StyledEngineProvider injectFirst>
+				<Layout>{getLayout(<Component {...pageProps} />)}</Layout>
+			</StyledEngineProvider>
 		</ThemeProvider>
 	);
 };
