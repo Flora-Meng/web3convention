@@ -19,6 +19,7 @@ import useSubscription from '@/hooks/userSubscription';
 import { animationHoverImage, animationHoverImageParent, tagDecoration } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
+import { isEmail } from '@/utils/validator';
 
 const { blackColor, primaryColor, warningColor, whiteColor } = color;
 
@@ -187,7 +188,7 @@ const FooterContent = () => {
 	}, [emailInput]);
 
 	const handleSubmitEmail = () => {
-		if (!emailInput) {
+		if (!isEmail(emailInput)) {
 			setInputMessage('Email is invalid.');
 		} else {
 			submitEmail();
