@@ -52,8 +52,7 @@ const PriceContainer = styled.div`
 
 const Price = styled.h3`
 	font-size: 40px;
-	margin: 0;
-	margin-right: 50px;
+	margin: 0 50px 0 0;
 	position: relative;
 	@media ${devices.tablet} {
 		font-size: 40px;
@@ -81,9 +80,7 @@ const PriceSub = styled.p`
 
 const TicketTitle = styled.h2`
 	font-size: 19px;
-	margin: 0;
-	margin-bottom: 6px;
-	margin-top: 12px;
+	margin: 12px 0 6px 0;
 	@media ${devices.laptop} {
 		font-size: 24px;
 	}
@@ -196,7 +193,7 @@ const ticketConfig = [
 	}
 ];
 
-const HomeTicket: React.FC = () => {
+const PageTicket: React.FC = () => {
 	return (
 		<HomeTicketContainer>
 			<Subtitle>unmissable_events</Subtitle>
@@ -259,4 +256,4 @@ const HomeTicket: React.FC = () => {
 	);
 };
 
-export default HomeTicket;
+export default PageTicket;

@@ -4,10 +4,17 @@ import {
 	Subtitle,
 	Title
 } from '@/components/Pages/Home/HomeCarousel/components/CarouseItem/CarouseItem';
-import cover from '@/components/Pages/Venue/CoverTitle/venueCover.json';
 import { color, devices } from '@/styles/variables';
 
 const { whiteColor, primaryColor } = color;
+
+interface PageCoverTitleProps {
+	coverText: {
+		_id: string;
+		title: string;
+		subtitle: string;
+	};
+}
 
 const Container = styled.div`
 	color: ${whiteColor};
@@ -15,7 +22,7 @@ const Container = styled.div`
 	max-width: 1600px;
 	position: relative;
 	top: 50%;
-	transform: translate(0, -92%);
+	transform: translate(0, -95%);
 	@media ${devices.miniMobile} {
 		width: calc(100vw - 100px);
 	}
@@ -43,7 +50,7 @@ const CoverSubtitle = styled(Subtitle)`
 const CoverTitle = styled(Title)`
 	white-space: pre-wrap;
 	@media ${devices.miniMobile} {
-		font-size: 40px;
+		font-size: 38px;
 	}
 	@media ${devices.tablet} {
 		font-size: 60px;
@@ -56,13 +63,14 @@ const CoverTitle = styled(Title)`
 	}
 `;
 
-const VenueCoverTitle = () => {
+const PageCoverTitle: React.FC<PageCoverTitleProps> = props => {
+	const { coverText } = props;
 	return (
 		<Container>
-			<CoverSubtitle isCurrent>{cover.subtitle}</CoverSubtitle>
-			<CoverTitle isCurrent>{cover.title}</CoverTitle>
+			<CoverSubtitle isCurrent>{coverText.subtitle}</CoverSubtitle>
+			<CoverTitle isCurrent>{coverText.title}</CoverTitle>
 		</Container>
 	);
 };
 
-export default VenueCoverTitle;
+export default PageCoverTitle;

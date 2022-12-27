@@ -18,13 +18,13 @@ const EvenRowContainer = styled.div`
 	display: grid;
 	grid-template-columns: 60% 1fr;
 	@media ${devices.laptop} {
-		margin: 80px 0;
+		margin: 70px 0;
 	}
 	@media ${devices.largeLaptop} {
-		margin: 120px 0;
+		margin: 110px 0;
 	}
 	@media ${devices.desktop} {
-		margin: 140px 0;
+		margin: 130px 0;
 	}
 `;
 
@@ -38,13 +38,13 @@ const OddRowContainer = styled.div`
 	}
 	@media ${devices.laptop} {
 		grid-template-columns: 40% 1fr;
-		margin: 80px 0;
+		margin: 70px 0;
 	}
 	@media ${devices.largeLaptop} {
-		margin: 120px 0;
+		margin: 110px 0;
 	}
 	@media ${devices.desktop} {
-		margin: 140px 0;
+		margin: 130px 0;
 	}
 `;
 

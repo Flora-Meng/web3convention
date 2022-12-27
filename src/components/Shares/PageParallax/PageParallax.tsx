@@ -31,14 +31,13 @@ const Subtitle = styled.p`
 const Title = styled.h2`
 	font-size: 50px;
 	line-height: 1;
-	margin: 0;
-	margin-bottom: 28px;
+	margin: 0 0 28px 0;
 	@media ${devices.tablet} {
 		font-size: 60px;
 	}
 `;
 
-const HomeParallax: React.FC = () => {
+const PageParallax: React.FC = () => {
 	const [backgroundPositionTop, setBackgroundPositionTop] = useState<number>();
 	const ParallaxContainer = useRef<HTMLDivElement>(null);
 
@@ -69,4 +68,4 @@ const HomeParallax: React.FC = () => {
 	);
 };
 
-export default HomeParallax;
+export default PageParallax;

@@ -4,14 +4,14 @@ import HomeCounter from '@/components/Pages/Home/HomeCounter';
 import HomeEvent from '@/components/Pages/Home/HomeEvent';
 // import HomeGallery from '@/components/Pages/Home/HomeGallery';
 import HomeImageList from '@/components/Pages/Home/HomeImageList';
-import HomeParallax from '@/components/Pages/Home/HomeParallax';
 import HomePosts from '@/components/Pages/Home/HomePosts';
 import HomeSponsor from '@/components/Pages/Home/HomeSponsor';
 import HomeSubscription from '@/components/Pages/Home/HomeSubscription';
 import HomeTeam from '@/components/Pages/Home/HomeTeam';
-import HomeTicket from '@/components/Pages/Home/HomeTicket';
 import PageBanner from '@/components/Shares/PageBanner';
 import bannerInfo from '@/components/Shares/PageBanner/homeBannerInfo.json';
+import PageParallax from '@/components/Shares/PageParallax';
+import PageTicket from '@/components/Shares/PageTicket';
 // import PageGallery from '@/components/Shares/PageGallery';
 // import imageList from '@/components/Shares/PageGallery/homeImageList.json';
 // import HomeTestimonial from '@/components/Pages/Home/HomeTestimonial';
@@ -43,8 +43,8 @@ const Homepage: ComponentType = () => {
 			{/* <PageGallery imageList={imageList} /> */}
 			{/* <HomeTestimonial /> */}
 			<HomeSponsor />
-			<HomeParallax />
-			<HomeTicket />
+			<PageParallax />
+			<PageTicket />
 		</>
 	);
 };
