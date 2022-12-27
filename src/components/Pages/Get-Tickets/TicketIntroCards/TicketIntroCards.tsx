@@ -5,7 +5,7 @@ import TicketIntroCard from '@/components/Pages/Get-Tickets/TicketIntroCards/Tic
 import { devices } from '@/styles/variables';
 
 const Container = styled.div`
-	max-width: 1600px;
+	max-width: 1800px;
 	position: relative;
 	@media ${devices.miniMobile} {
 		display: grid;
@@ -14,16 +14,16 @@ const Container = styled.div`
 	}
 	@media ${devices.mobile} {
 		margin: 30px auto;
-		width: calc(100vw - 100px);
+		padding: 0 50px;
+		width: 100%;
 	}
 	@media ${devices.tablet} {
 		display: flex;
 		justify-content: space-between;
-		width: calc(100vw - 100px);
 		margin: 50px auto;
 	}
 	@media ${devices.laptop} {
-		width: calc(100vw - 200px);
+		padding: 0 100px;
 		margin: 70px auto;
 	}
 	@media ${devices.desktop} {
