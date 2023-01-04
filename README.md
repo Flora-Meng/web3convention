@@ -63,6 +63,13 @@ $PROJECT_ROOT
 │   ├── utils
 ```
 
+## Env
+
+The .env.local file has been added to the .gitignore file, which means the sections working with secret credentials,
+e.g. AWS SDK and SendGrid, will not be functioning in local environment.
+
+Please contact DevOps to get the secrets and create the file manually in local, if needed.
+
 ## Project dependencies/tools/language Guideline
 
 Git:
@@ -104,7 +111,3 @@ MDN:
 Eslint
 
 -   https://eslint.org/docs/rules/
-
-```
-
-```
