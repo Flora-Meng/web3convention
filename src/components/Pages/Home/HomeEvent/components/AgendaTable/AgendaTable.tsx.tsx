@@ -87,24 +87,24 @@ const headConfig: {
 	title: string;
 	subtitle: string;
 }[] = [
-	{
-		title: WEEKDAY[4],
-		subtitle: '21 July'
-	},
-	{
-		title: WEEKDAY[5],
-		subtitle: '22 July'
-	},
-	{
-		title: WEEKDAY[6],
-		subtitle: '23 July'
-	}
-];
+		{
+			title: WEEKDAY[4],
+			subtitle: '21 July'
+		},
+		{
+			title: WEEKDAY[5],
+			subtitle: '22 July'
+		},
+		{
+			title: WEEKDAY[6],
+			subtitle: '23 July'
+		}
+	];
 
 const agendaConfig = [
 	{
 		_id: '1-1',
-		title: 'Web3 Hackathon started from May 25',
+		title: 'Web3 Hackathon started from June 25',
 		columns: 1,
 		offset: 0
 	},
@@ -123,6 +123,12 @@ const agendaConfig = [
 	{
 		_id: '3-23',
 		title: 'Seminar',
+		columns: 2,
+		offset: 1
+	},
+	{
+		_id: '11-23',
+		title: 'Data & AI & Cloud Computing',
 		columns: 2,
 		offset: 1
 	},
@@ -195,6 +201,12 @@ const agendaConfig = [
 	{
 		_id: '12-2',
 		title: 'Whale Yacht Party',
+		columns: 1,
+		offset: 1
+	},
+	{
+		_id: '13-2',
+		title: 'Partner After Party',
 		columns: 1,
 		offset: 1
 	}

@@ -3,7 +3,7 @@
 		"_id": "1",
 		"title": "Mainstage",
 		"subtitle": "Sydney, July22-23 2023",
-		"text": "The Mainstage is reserved for keynotes and insights on the most significant topics surrounding crypto, blockchain, Web3 and the metaverse. The Mainstage will feature market-moving news and marquee names in crypto and beyond.",
+		"text": "The Mainstage is reserved for Keynotes and the most significant topics with broad relevance to the market. These speaking slots are extremely competitive and require some type of market-moving news and/or marquee names from either inside or outside of the industry. \n\nThe conference topics revolve around the hottest advanced technologies such as AI, data, blockchain, cloud computing, NFT, next-generation internet, regulations+, etc ",
 		"imageSrc": "/images/demo/main-slider-background-2.jpg"
 	},
 	{
@@ -15,34 +15,41 @@
 	},
 	{
 		"_id": "3",
+		"title": "Data & AI",
+		"subtitle": "Sydney, July22-23 2023",
+		"text": "The conference is primarily focused on Data & AI, as well as next-generation internet technologies. It features well-known guests and industry experts who will come together to discuss the potential applications of data, AI, and next-generation internet technologies, as well as their future possibilities for development. This is a must-attend event for anyone interested in staying up-to-date on the latest trends and developments in these exciting fields.",
+		"imageSrc": "/images/demo/main-home-banner-1.jpg"
+	},
+	{
+		"_id": "4",
 		"title": "NFT House",
 		"subtitle": "Sydney, July22-23 2023",
 		"text": "The NFT HOUSE is the perfect place to immerse yourself in the future of art x commerce on the blockchain. The Gallery introduces a new way to experience art and commerce. By combining the innovative technology of blockchain with a visually captivating atmosphere, this gallery creates a realm for people to explore the undiscovered possibilities of combining non-fungible tokens with creativity and profit. \n\nIt will feature unique content centred around Non-Fungible Tokens (NFTs). The gallery will be a lively space that houses panels, exhibitions and an artist incubator program to help aspiring creators learn more about art x commerce on the blockchain. It’s sure to be an experience you won’t soon forget!",
 		"imageSrc": "/images/demo/stagePage/nftGallery.png"
 	},
 	{
-		"_id": "4",
+		"_id": "5",
 		"title": "Metaverse and Gaming Zone",
 		"subtitle": "Sydney, July22-23 2023",
 		"text": "Founders, developers, brands, artists, gamers and platforms come together to explore how they’re building and navigating the digital landscapes and experiences of the future.\n\n",
 		"imageSrc": "/images/demo/stagePage/metaverse.png"
 	},
 	{
-		"_id": "5",
+		"_id": "6",
 		"title": "Web3 Workshop",
 		"subtitle": "Sydney, July22-23 2023",
 		"text": "As a primer to Web3 Convention, Web3 Convention will conduct an indepth Web3 Workshop for brands, agencies and/or communities who are looking for a hands-on guide to onboarding themselves and their teams in Web3 and the metaverse. The Workshops will be highly customized depending on the Sponsor’s team’s needs. Sessions will be conducted in person.",
 		"imageSrc": "/images/demo/stagePage/moneyReimagined.png"
 	},
 	{
-		"_id": "6",
+		"_id": "7",
 		"title": "VIP Lounge",
 		"subtitle": "Sydney, July22-23 2023",
-		"text": "Throughout crypto winter, blockchain technology has made huge leaps and bounds in transitioning to web3. To accommodate this growth, the VIP Lounge at web3convention provides crypto enthusiasts with a place to connect with peers, learn about the ground breaking developments in this industry and network with potential partners. \n\nWhether you’re just starting out in crypto or are working on projects that will shape the future of this ecosystem, the VIP Lounge is where you can participate in meaningful discussions and see how blockchain leads towards innovative solutions. As technological advancements continue to establish a new digital economy, web3convention is bringing together movement leaders for an exciting journey ahead. Oh, of course, champagne and drinks unlimited provided.",
+		"text": "To accommodate this growth, the VIP Lounge at web3convention provides VIP with a place to connect with peers, learn about the ground breaking developments in this industry and network with potential partners. \n\nWhether you’re just starting out in Web3 or are working on projects that will shape the future of this ecosystem, the VIP Lounge is where you can participate in meaningful discussions and see how blockchain leads towards innovative solutions. As technological advancements continue to establish a new digital economy, web3convention is bringing together movement leaders for an exciting journey ahead. Oh, of course, champagne and drinks unlimited provided.",
 		"imageSrc": "/images/networking.jpeg"
 	},
 	{
-		"_id": "7",
+		"_id": "8",
 		"title": "Whale Yacht Party",
 		"subtitle": "Sydney, July22-23 2023",
 		"text": "Are you a Whale looking for an exclusive and unique experience? Then our Whale Yacht Night event is just what you are looking for! Not only will you get the chance to network with others in the Whale community, but you will also be able to participate in activities designed exclusively for Whales. \n\nAt Whale Yacht Night, you can let loose and relax with the promise of exclusive experiences that await. From special entertainment and content to engaging conversations with other Whales - you won't find a better opportunity for networking and building meaningful relationships. \n\nWhether you're looking to make friends, gain insight from special guests or make business contacts, our exclusive Whale-Only event is an amazing way to connect in this vibrant community.",

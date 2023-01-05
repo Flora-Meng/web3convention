@@ -224,10 +224,7 @@ const HomeTeam: React.FC = () => {
 								</ImageContainer>
 								<InfoContainer>
 									<Info className="home-team-info-container flex flex-col">
-										<Subtitle>{teamMember.jobTitle}</Subtitle>
-										<Link href={postLink}>
-											<Title>{teamMember.name}</Title>
-										</Link>
+
 										<PostDescription className="home-team-info-container__description">
 											{teamMember.description}
 										</PostDescription>
@@ -266,6 +263,10 @@ const HomeTeam: React.FC = () => {
 												}
 											)}
 										</SocialMediaContainer>
+										<Subtitle>{teamMember.jobTitle}</Subtitle>
+										<Link href={postLink}>
+											<Title>{teamMember.name}</Title>
+										</Link>
 									</Info>
 								</InfoContainer>
 							</GridItemContainer>

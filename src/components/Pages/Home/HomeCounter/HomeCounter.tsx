@@ -59,7 +59,7 @@ const counterList = [
 		count: 500
 	},
 	{
-		name: 'Whales',
+		name: 'VIPs',
 		count: 900
 	},
 	{
