@@ -224,7 +224,6 @@ const HomeTeam: React.FC = () => {
 								</ImageContainer>
 								<InfoContainer>
 									<Info className="home-team-info-container flex flex-col">
-
 										<PostDescription className="home-team-info-container__description">
 											{teamMember.description}
 										</PostDescription>

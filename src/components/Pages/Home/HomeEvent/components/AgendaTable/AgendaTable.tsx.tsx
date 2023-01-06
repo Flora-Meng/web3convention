@@ -87,19 +87,19 @@ const headConfig: {
 	title: string;
 	subtitle: string;
 }[] = [
-		{
-			title: WEEKDAY[4],
-			subtitle: '21 July'
-		},
-		{
-			title: WEEKDAY[5],
-			subtitle: '22 July'
-		},
-		{
-			title: WEEKDAY[6],
-			subtitle: '23 July'
-		}
-	];
+	{
+		title: WEEKDAY[4],
+		subtitle: '21 July'
+	},
+	{
+		title: WEEKDAY[5],
+		subtitle: '22 July'
+	},
+	{
+		title: WEEKDAY[6],
+		subtitle: '23 July'
+	}
+];
 
 const agendaConfig = [
 	{
