@@ -1,12 +1,14 @@
+import dayjs from 'dayjs';
+import duration from 'dayjs/plugin/duration';
 import { upperFirst } from 'lodash';
-import { useEffect } from 'react';
+import ReactCountdown, { CountdownTimeDelta } from 'react-countdown';
 import styled from 'styled-components';
 
 import ECountdownKey from '@/constants/countdown';
-import useCountdown from '@/hooks/useCountdown';
 import { ISize } from '@/interfaces/variables';
 import { EDeviceSize, color, devices } from '@/styles/variables';
 
+dayjs.extend(duration);
 const { primaryColor } = color;
 
 interface CountdownProps {
@@ -84,27 +86,33 @@ const Countdown: React.FC<CountdownProps> = ({
 	countdownDate = COUNTDOWN_DATE,
 	NumberFontSizeConfig
 }) => {
-	const { timer, countdownInfo } = useCountdown(countdownDate);
+	const renderCountdown = ({ total, hours, minutes, seconds }: CountdownTimeDelta) => {
+		const countdownInfo = [
+			dayjs.duration(total).months(),
+			dayjs.duration(total).days(),
+			hours,
+			minutes,
+			seconds
+		];
 
-	useEffect(() => {
-		return () => clearInterval(timer);
-	}, []);
+		return Object.values(ECountdownKey).map((countdownKey, index) => {
+			const countdownNumber = (countdownInfo && countdownInfo[index]) || 0;
+			return (
+				<CountdownItemContainer key={countdownKey}>
+					<CountdownNumber NumberFontSizeConfig={NumberFontSizeConfig}>
+						{countdownInfo ? countdownNumber.toString().padStart(2, '0') : ''}
+					</CountdownNumber>
+					<CountdownUnit>
+						{upperFirst(countdownKey)}
+						{countdownNumber === 1 ? '' : 's'}
+					</CountdownUnit>
+				</CountdownItemContainer>
+			);
+		});
+	};
 	return (
 		<CountdownContainer>
-			{Object.values(ECountdownKey).map(countdownKey => {
-				const countdownNumber = (countdownInfo && countdownInfo[countdownKey]) || 0;
-				return (
-					<CountdownItemContainer key={countdownKey}>
-						<CountdownNumber NumberFontSizeConfig={NumberFontSizeConfig}>
-							{countdownInfo ? countdownNumber.toString().padStart(2, '0') : ''}
-						</CountdownNumber>
-						<CountdownUnit>
-							{upperFirst(countdownKey)}
-							{countdownNumber === 1 ? '' : 's'}
-						</CountdownUnit>
-					</CountdownItemContainer>
-				);
-			})}
+			<ReactCountdown date={dayjs(countdownDate).toISOString()} renderer={renderCountdown} />
 		</CountdownContainer>
 	);
 };

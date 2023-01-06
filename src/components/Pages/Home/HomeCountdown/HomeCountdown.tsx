@@ -1,6 +1,6 @@
+import dynamic from 'next/dynamic';
 import styled from 'styled-components';
 
-import Countdown from '@/components/Shares/Countdown';
 import { sectionSubtitle, sectionTitle } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
 
@@ -19,7 +19,7 @@ const HomeCountdownContainer = styled.div`
 	padding: 100px 30px;
 	width: 100%;
 	@media ${devices.tablet} {
-		padding: 100px 60px;
+		padding: 60px;
 	}
 	@media ${devices.laptop} {
 		flex-direction: row;
@@ -45,7 +45,9 @@ const Title = styled.h2`
 const Subtitle = styled.p`
 	${sectionSubtitle};
 `;
-
+const DynamicCountdown = dynamic(() => import('@/components/Shares/Countdown'), {
+	ssr: false
+});
 const HomeCountdown: React.FC = () => {
 	return (
 		<HomeCountdownContainer>
@@ -53,7 +55,7 @@ const HomeCountdown: React.FC = () => {
 				<Subtitle>22-23 July 2023</Subtitle>
 				<Title>Count Every Second Until Event</Title>
 			</TitleContainer>
-			<Countdown />
+			<DynamicCountdown />
 		</HomeCountdownContainer>
 	);
 };
