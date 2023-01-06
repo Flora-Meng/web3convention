@@ -5,7 +5,7 @@ import {
 	Subtitle,
 	Title
 } from '@/components/Pages/Home/HomeCarousel/components/CarouseItem/CarouseItem';
-import coverText from '@/components/Pages/Stages/CoverTitle/stageCoverText.json';
+import coverText from '@/components/Pages/Hackathon/CoverTitle/hackathonCoverText.json';
 import { color, devices } from '@/styles/variables';
 
 const { whiteColor, primaryColor } = color;
