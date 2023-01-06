@@ -7,6 +7,7 @@ import { backdrop, sectionSubtitle, sectionTitle } from '@/styles/mixin';
 import { devices } from '@/styles/variables';
 
 const HomeEventContainer = styled.div`
+	overflow: hidden;
 	position: relative;
 `;
 
@@ -71,61 +72,67 @@ const agendaConfig = [
 		offset: 0
 	},
 	{
-		_id: '1-1',
-		title: 'Idea Brainstorming & Team Formation Session',
-		columns: 1,
-		offset: 0
-	},
-	{
-		_id: '2-2',
+		_id: '1-2',
 		title: 'Project Feedback Session',
 		columns: 1,
 		offset: 0
 	},
 	{
-		_id: '2-2',
-		title: 'Project Submissions Due!',
-		columns: 1,
-		offset: 0
-	},
-	{
-		_id: '3-3',
+		_id: '1-3',
 		title: 'Pitches',
 		columns: 1,
 		offset: 0
 	},
 	{
 		_id: '2-1',
-		title: 'Uni Hackathon Kickoff',
+		title: 'Idea Brainstorming & Team Formation Session',
 		columns: 1,
 		offset: 0
 	},
 	{
-		_id: '2-1',
+		_id: '2-2',
+		title: 'Web3 & Cloud Workshop',
+		columns: 1,
+		offset: 0
+	},
+	{
+		_id: '2-3',
+		title: 'Project Judging',
+		columns: 1,
+		offset: 0
+	},
+	{
+		_id: '4-1',
 		title: 'Opening Ceremonies',
 		columns: 1,
 		offset: 0
 	},
 	{
-		_id: '3-23',
-		title: 'Project Judging',
+		_id: '3-2',
+		title: 'Project Submissions Due!',
 		columns: 1,
-		offset: 2
+		offset: 0
 	},
 	{
-		_id: '11-23',
+		_id: '3-3',
 		title: 'Results',
 		columns: 1,
-		offset: 2
+		offset: 0
 	},
 	{
-		_id: '4-23',
+		_id: '3-1',
+		title: 'Uni Hackathon Kickoff',
+		columns: 1,
+		offset: 0
+	},
+	{
+		_id: '4-3',
 		title: 'Closing Ceremonies',
 		columns: 1,
-		offset: 2
+		offset: 1
 	},
 	{
-		_id: '4-23',
+		_id: '4-1',
 		title: 'Web 3 Hackathon Kickoff',
 		columns: 1,
 		offset: 2

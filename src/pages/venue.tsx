@@ -28,6 +28,11 @@ const VenuePage = () => {
 			'Web3Convention, ICC Sydney, Web3, Blockchain, NFT, Whale Yacht Party, Pitch Space',
 		title: 'Web3 Convention 2023 | July 22-23, 2023 | Venue'
 	};
+	const buttonConfig = {
+		text: 'REGISTRATION',
+		url: 'https://www.eventbrite.com.au/e/web3-convention-tickets-491154535437',
+		extra: 'Interested in partnering? business@web3convention.com'
+	};
 	return (
 		<>
 			<PageHead meta={meta} />
@@ -36,7 +41,7 @@ const VenuePage = () => {
 				<PageCoverTitle coverText={coverText} />
 			</Cover>
 			<VenueIntroCards />
-			<PageBanner bannerInfo={bannerInfo} />
+			<PageBanner bannerInfo={bannerInfo} buttonConfig={buttonConfig} />
 			<PageGallery imageList={imageList} />
 			<VenueMap />
 			<Footer />

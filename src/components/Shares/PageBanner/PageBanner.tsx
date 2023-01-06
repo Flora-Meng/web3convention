@@ -13,6 +13,11 @@ interface PageBannerProps {
 		imageSrc: string;
 		description: string;
 	};
+	buttonConfig: {
+		text: string;
+		url: string;
+		extra?: string;
+	};
 }
 
 interface LeftGridProps {
@@ -82,12 +87,17 @@ const Description = styled.p`
 	margin: 0 0 40px 0;
 	opacity: 0;
 	padding-right: 20px;
+	white-space: pre-wrap;
 	${animation('fade-in-opacity-transform-to-up', '0.5s', 'ease', '0.7s', '1')};
 	${animationFillMode()};
 `;
 
+const ButtonExtraDescription = styled.p`
+	color: white;
+`;
+
 const PageBanner: React.FC<PageBannerProps> = props => {
-	const { bannerInfo } = props;
+	const { bannerInfo, buttonConfig } = props;
 	return (
 		<div className="flex">
 			<LeftGrid imageSrc={bannerInfo.imageSrc} />
@@ -96,9 +106,8 @@ const PageBanner: React.FC<PageBannerProps> = props => {
 					<Subtitle>{bannerInfo.subtitle}</Subtitle>
 					<Title>{bannerInfo.title}</Title>
 					<Description>{bannerInfo.description}</Description>
-					<ThemeButton href="https://www.eventbrite.com.au/e/web3-convention-tickets-491154535437">
-						registration
-					</ThemeButton>
+					<ThemeButton href={buttonConfig.url}>{buttonConfig.text}</ThemeButton>
+					<ButtonExtraDescription>{buttonConfig.extra}</ButtonExtraDescription>
 				</InfoContainer>
 			</RightGrid>
 		</div>

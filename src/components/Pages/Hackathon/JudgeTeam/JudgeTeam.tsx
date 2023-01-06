@@ -178,10 +178,10 @@ const SectionTitle = styled.h2`
 
 const ExpectedSpeakerContainer = styled.div`
 	max-width: ${`${sizes.largeLaptop}px`};
-	padding: 100px 40px 140px;
+	padding: 50px 40px 60px;
 	position: relative;
 	@media ${devices.mobile} {
-		padding: 100px 100px 140px;
+		padding: 50px 100px 60px;
 	}
 	@media ${devices.laptop} {
 		margin: 0 auto;

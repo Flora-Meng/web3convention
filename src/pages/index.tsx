@@ -28,13 +28,18 @@ const Homepage: ComponentType = () => {
 			'Web3Convention, ICC Sydney, Web3, Blockchain, NFT, Whale Yacht Party, Pitch Space',
 		title: 'Web3 Convention 2023 | July 22-23, 2023'
 	};
+	const buttonConfig = {
+		text: 'REGISTRATION',
+		url: 'https://www.eventbrite.com.au/e/web3-convention-tickets-491154535437',
+		extra: 'Interested in partnering? business@web3convention.com'
+	};
 	return (
 		<>
 			<PageHead title="Web3 Convention 2023 | July 22-23, 2023" meta={meta} />
 			<HomeCarousel />
 			<HomeCountdown />
 			<HomeImageList />
-			<PageBanner bannerInfo={bannerInfo} />
+			<PageBanner bannerInfo={bannerInfo} buttonConfig={buttonConfig} />
 			<HomeEvent />
 			<HomeCounter />
 			<HomePosts />

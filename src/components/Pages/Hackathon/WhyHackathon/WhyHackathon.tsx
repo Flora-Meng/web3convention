@@ -53,10 +53,6 @@ const counterList = [
 	{
 		name: 'Judges',
 		count: 10
-	},
-	{
-		name: 'Days',
-		count: 30
 	}
 ];
 

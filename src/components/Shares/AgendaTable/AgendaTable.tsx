@@ -2,7 +2,6 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import { WEEKDAY } from '@/constants/event';
 import { color, devices, sizes } from '@/styles/variables';
 
 const { textColor } = color;

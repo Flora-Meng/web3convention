@@ -2,8 +2,11 @@ import styled from 'styled-components';
 
 import Agenda from '@/components/Pages/Hackathon/Agenda';
 import StageCoverTitle from '@/components/Pages/Hackathon/CoverTitle/HackathonCoverTitle';
+import JudgeCriteria from '@/components/Pages/Hackathon/JudgeCriteria';
 import JudgeTeam from '@/components/Pages/Hackathon/JudgeTeam';
 import WhyHackathon from '@/components/Pages/Hackathon/WhyHackathon';
+import PageBanner from '@/components/Shares/PageBanner';
+import uniHackathon from '@/components/Shares/PageBanner/uniHackathon.json';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 import PageHead from '@/layouts/PageHead';
@@ -21,6 +24,7 @@ const Cover = styled.div`
 		height: 50vh;
 	}
 `;
+
 const HackathonPage = () => {
 	const meta = {
 		description:
@@ -29,6 +33,11 @@ const HackathonPage = () => {
 			'Web3Convention, ICC Sydney, Web3, Blockchain, NFT, Whale Yacht Party, Pitch Space',
 		title: 'Web3 Hackathon, Web3 Convention 2023 | July 22-23, 2023 | Stages'
 	};
+	const buttonConfig = {
+		text: 'Apply to hack',
+		url: '#',
+		extra: 'Interested in partnering? business@web3convention.com'
+	};
 	return (
 		<>
 			<PageHead meta={meta} />
@@ -36,9 +45,11 @@ const HackathonPage = () => {
 				<Header />
 				<StageCoverTitle />
 			</Cover>
+			<PageBanner bannerInfo={uniHackathon} buttonConfig={buttonConfig} />
 			<Agenda />
 			<WhyHackathon />
 			<JudgeTeam />
+			<JudgeCriteria />
 			<Footer />
 		</>
 	);

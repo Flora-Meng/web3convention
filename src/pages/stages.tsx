@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import StageCoverTitle from '@/components/Pages/Hackathon/CoverTitle/HackathonCoverTitle';
+import StageCoverTitle from '@/components/Pages/Stages/CoverTitle/StageCoverTitle';
 import MainContents from '@/components/Pages/Stages/MainContents';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
