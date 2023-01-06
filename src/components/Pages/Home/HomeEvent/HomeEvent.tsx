@@ -9,6 +9,7 @@ import { backdrop, sectionSubtitle, sectionTitle } from '@/styles/mixin';
 import { devices } from '@/styles/variables';
 
 const HomeEventContainer = styled.div`
+	overflow: hidden;
 	position: relative;
 `;
 

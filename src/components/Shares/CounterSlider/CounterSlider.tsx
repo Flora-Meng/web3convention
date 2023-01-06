@@ -24,7 +24,7 @@ const CounterSliderContainer = styled.div<IThemeProps>`
 	color: ${({ theme }) => (theme === 'dark' ? whiteColor : textColor)};
 	margin: 0 auto;
 	@media ${devices.mobile} {
-		padding: 0 30px;
+		padding: 0 20px;
 	}
 `;
 
@@ -44,10 +44,10 @@ const CounterName = styled.h4`
 `;
 
 const Count = styled.div`
-	font-size: 46px;
+	font-size: 36px;
 	font-weight: 700;
 	@media ${devices.mobile} {
-		font-size: 60px;
+		font-size: 56px;
 	}
 	@media ${devices.tablet} {
 		font-size: 50px;
