@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
+import coverText from '@/components/Pages/Hackathon/CoverTitle/hackathonCoverText.json';
 import {
 	Description,
 	Subtitle,
 	Title
 } from '@/components/Pages/Home/HomeCarousel/components/CarouseItem/CarouseItem';
-import coverText from '@/components/Pages/Hackathon/CoverTitle/hackathonCoverText.json';
 import { color, devices } from '@/styles/variables';
 
 const { whiteColor, primaryColor } = color;

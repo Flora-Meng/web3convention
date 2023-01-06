@@ -88,10 +88,7 @@ const GridItem = styled.div<GridItemProps>`
 
 const itemColors = ['#d19de7', '#6aeef2', '#bcbff5', '#f4cad4', '#8af9d5'];
 
-const AgendaTable: React.FC<AgendaTableProps> = ({
-	headConfig = [],
-	agendaConfig = []
-}) => {
+const AgendaTable: React.FC<AgendaTableProps> = ({ headConfig = [], agendaConfig = [] }) => {
 	return (
 		<AgendaTableContainer>
 			<TableHead container columnSpacing={1}>

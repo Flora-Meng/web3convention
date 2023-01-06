@@ -49,19 +49,19 @@ const headConfig: {
 	title: string;
 	subtitle: string;
 }[] = [
-		{
-			title: 'Kickoff',
-			subtitle: '15 April'
-		},
-		{
-			title: 'Peroid',
-			subtitle: '15 April to 16 June'
-		},
-		{
-			title: 'Prizes',
-			subtitle: '16 June to 22 June'
-		}
-	];
+	{
+		title: 'Kickoff',
+		subtitle: '15 April'
+	},
+	{
+		title: 'Peroid',
+		subtitle: '15 April to 16 June'
+	},
+	{
+		title: 'Prizes',
+		subtitle: '16 June to 22 June'
+	}
+];
 
 const agendaConfig = [
 	{
@@ -132,7 +132,6 @@ const agendaConfig = [
 	}
 ];
 const Agenda: React.FC = () => {
-
 	useEffect(() => {
 		// const { filterType } = router.query;
 		// setCurrentFilterType(filterType === ALL_EVENTS ? undefined : (filterType as EEventType));

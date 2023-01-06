@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
+import Agenda from '@/components/Pages/Hackathon/Agenda';
 import StageCoverTitle from '@/components/Pages/Hackathon/CoverTitle/HackathonCoverTitle';
 import JudgeTeam from '@/components/Pages/Hackathon/JudgeTeam';
 import WhyHackathon from '@/components/Pages/Hackathon/WhyHackathon';
-import Agenda from '@/components/Pages/Hackathon/Agenda';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 import PageHead from '@/layouts/PageHead';
