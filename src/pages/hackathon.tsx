@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Agenda from '@/components/Pages/Hackathon/Agenda';
 import StageCoverTitle from '@/components/Pages/Hackathon/CoverTitle/HackathonCoverTitle';
 import JudgeCriteria from '@/components/Pages/Hackathon/JudgeCriteria';
-import JudgeTeam from '@/components/Pages/Hackathon/JudgeTeam';
+// import JudgeTeam from '@/components/Pages/Hackathon/JudgeTeam';
 import WhyHackathon from '@/components/Pages/Hackathon/WhyHackathon';
 import PageBanner from '@/components/Shares/PageBanner';
 import uniHackathon from '@/components/Shares/PageBanner/uniHackathon.json';
@@ -48,7 +48,7 @@ const HackathonPage = () => {
 			<PageBanner bannerInfo={uniHackathon} buttonConfig={buttonConfig} />
 			<Agenda />
 			<WhyHackathon />
-			<JudgeTeam />
+			{/* <JudgeTeam /> */}
 			<JudgeCriteria />
 			<Footer />
 		</>
