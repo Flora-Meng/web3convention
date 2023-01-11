@@ -192,6 +192,23 @@ const Backdrop = styled.div`
 	${backdrop}
 `;
 
+const LogoWrapper = styled.div`
+	-moz-box-shadow: 9px 9px 49px 4px rgba(0, 0, 0, 0.29);
+	-webkit-box-shadow: 9px 9px 49px 4px rgba(0, 0, 0, 0.29);
+	background-color: white;
+	border-radius: 15px;
+	box-shadow: 9px 9px 49px 4px rgba(0, 0, 0, 0.29);
+	height: 30px;
+	padding: 7px 15px;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	img.logo {
+		height: 100%;
+		transform: none;
+	}
+`;
+
 const HomeTeam: React.FC = () => {
 	return (
 		<ExpectedSpeakerContainer>
@@ -224,6 +241,15 @@ const HomeTeam: React.FC = () => {
 								</ImageContainer>
 								<InfoContainer>
 									<Info className="home-team-info-container flex flex-col">
+										{teamMember.companySrc && (
+											<LogoWrapper>
+												<img
+													className="logo"
+													src={teamMember.companySrc}
+													alt={teamMember.name}
+												/>
+											</LogoWrapper>
+										)}
 										<PostDescription className="home-team-info-container__description">
 											{teamMember.description}
 										</PostDescription>
