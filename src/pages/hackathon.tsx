@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
 import Agenda from '@/components/Pages/Hackathon/Agenda';
+import Challenge from '@/components/Pages/Hackathon/Challenge';
 import StageCoverTitle from '@/components/Pages/Hackathon/CoverTitle/HackathonCoverTitle';
 import JudgeCriteria from '@/components/Pages/Hackathon/JudgeCriteria';
 import JudgeTeam from '@/components/Pages/Hackathon/JudgeTeam';
+import Prizes from '@/components/Pages/Hackathon/Prizes';
 import WhyHackathon from '@/components/Pages/Hackathon/WhyHackathon';
 import PageBanner from '@/components/Shares/PageBanner';
 import uniHackathon from '@/components/Shares/PageBanner/uniHackathon.json';
@@ -28,9 +30,9 @@ const Cover = styled.div`
 const HackathonPage = () => {
 	const meta = {
 		description:
-			"Web3 Convention is an event to explore the future of Web 2.0 and Web 3.0 and will host in the best convention centre in Australia.  The convention aims to bridge the gap between Web2 and Web3 communities.Hosted in Australia's premier convention centre, attendees can take part in events focused on blockchain, Data & AI, cloud computing, startup pitching, digital transformation, venture capital.",
+			'Web3 Hackathon is Australia most premier annual hackathon event catered to a global audience to support the next generation of Web3 innovation and products.',
 		keywords:
-			'Web3Convention, ICC Sydney, Web3, Blockchain, NFT, Whale Yacht Party, Pitch Space',
+			'University Hackathon, Web3 Hackathon, Web3, Blockchain, NFT, Whale Yacht Party, Pitch Space',
 		title: 'Web3 Hackathon, Web3 Convention 2024 | April, 2024 | Stages'
 	};
 	const buttonConfig = {
@@ -45,9 +47,11 @@ const HackathonPage = () => {
 				<Header />
 				<StageCoverTitle />
 			</Cover>
+			<Challenge />
 			<PageBanner bannerInfo={uniHackathon} buttonConfig={buttonConfig} />
 			<Agenda />
 			<WhyHackathon />
+			<Prizes />
 			<JudgeTeam />
 			<JudgeCriteria />
 			<Footer />

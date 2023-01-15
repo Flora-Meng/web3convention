@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
 import { sectionSubtitle, sectionTitle } from '@/styles/mixin';
-import { devices } from '@/styles/variables';
+import { devices, sizes } from '@/styles/variables';
 
 const ContentContainer = styled.div`
+	margin: auto;
+	max-width: ${`${sizes.largeLaptop}px`};
 	padding: 50px 30px 50px;
 	@media ${devices.mobile} {
 		padding: 50px 100px 50px;
