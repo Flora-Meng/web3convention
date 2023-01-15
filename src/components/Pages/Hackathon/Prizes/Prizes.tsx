@@ -50,7 +50,7 @@ const StageCoverTitle = () => {
 				<li>$200</li>
 			</ul>
 			<p>
-				<strong>People's Choice</strong>
+				<strong>People&apos;s Choice</strong>
 			</p>
 			<ul>
 				<li>$200</li>
