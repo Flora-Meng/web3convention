@@ -28,7 +28,7 @@ const GetTicketsPage = () => {
 			'Web3 Convention is an event to explore the future of Web 2.0 and Web 3.0 and will host in the best convention centre in Australia.  The convention aims to bridge the gap between Web2 and Web3 communities.',
 		keywords:
 			'Web3Convention, ICC Sydney, Web3, Blockchain, NFT, Whale Yacht Party, Pitch Space',
-		title: 'Web3 Convention 2023 | July 22-23, 2023 | Tickets'
+		title: 'Web3 Convention 2024 | April 2024 | Tickets'
 	};
 	return (
 		<>

@@ -64,7 +64,7 @@ const HomeEvent: React.FC = () => {
 				<Backdrop>events</Backdrop>
 			</MaskContainer>
 			<ContentContainer>
-				<Subtitle>Web3 Convention 2023</Subtitle>
+				<Subtitle>Web3 Convention 2024</Subtitle>
 				<Title>Convention Agenda</Title>
 				{/* <EventFilter
 					currentFilterType={currentFilterType}

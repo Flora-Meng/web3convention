@@ -61,7 +61,7 @@ const WhyHackathon: React.FC = () => {
 		<HomeCountdownContainer>
 			<Content>
 				<TitleContainer>
-					<Subtitle>Web3 Convention 2023</Subtitle>
+					<Subtitle>Web3 Convention 2024</Subtitle>
 					<Title>Why Web3 Hackathon?</Title>
 				</TitleContainer>
 				<CounterSlider counterList={counterList} />

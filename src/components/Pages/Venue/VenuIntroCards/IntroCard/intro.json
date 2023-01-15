@@ -8,14 +8,14 @@
 	{
 		"_id": "2",
 		"title": "Sydney's Central Precinct",
-		"subtitle": "Sydney, July22-23 2023",
+		"subtitle": "Sydney, April 2024",
 		"text": "ICC is situated at the intersection of Sydney’s academic, cultural and technology precincts.",
 		"imageSrc": "/images/demo/venuePage/venueIntro2.png"
 	},
 	{
 		"_id": "3",
 		"title": "Innovation Heart",
-		"subtitle": "Sydney, July22-23 2023",
+		"subtitle": "Sydney, April 2024",
 		"text": "ICC functions as an incubator for ideas, a champion of change and an advocate for community.",
 		"imageSrc": "/images/demo/venuePage/venueIntro3.png"
 	}

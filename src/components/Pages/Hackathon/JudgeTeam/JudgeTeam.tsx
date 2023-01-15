@@ -94,7 +94,7 @@ const InfoContainer = styled.div`
 
 const Info = styled.div`
 	height: 100%;
-	padding: 20px 24px;
+	padding: 25px 24px 20px;
 	position: relative;
 	width: 100%;
 	z-index: 0;
@@ -153,7 +153,7 @@ const PostDescription = styled.p`
 	-webkit-transition: opacity 0.5s;
 	opacity: 0;
 	transition: opacity 0.5s;
-	${textEllipsis(4)};
+	${textEllipsis(6)};
 `;
 
 const SocialMediaContainer = styled.div`
@@ -198,8 +198,8 @@ const LogoWrapper = styled.div`
 	background-color: white;
 	border-radius: 15px;
 	box-shadow: 9px 9px 49px 4px rgba(0, 0, 0, 0.29);
-	height: 30px;
-	padding: 7px 15px;
+	height: 33px;
+	padding: 5px 15px;
 	position: absolute;
 	right: 5px;
 	top: 5px;
@@ -254,39 +254,40 @@ const JudgeTeam: React.FC = () => {
 											{teamMember.description}
 										</PostDescription>
 										<SocialMediaContainer className="home-team-info-container__social-media">
-											{Object.entries(teamMember.socialMedia).map(
-												([socialMedia, link]) => {
-													if (!link) return null;
-													let socialMediaIcon = null;
-													switch (socialMedia) {
-														case ESocialMedia.LINKED_IN: {
-															socialMediaIcon = <LinkedInIcon />;
-															break;
+											{teamMember.socialMedia &&
+												Object.entries(teamMember.socialMedia).map(
+													([socialMedia, link]) => {
+														if (!link) return null;
+														let socialMediaIcon = null;
+														switch (socialMedia) {
+															case ESocialMedia.LINKED_IN: {
+																socialMediaIcon = <LinkedInIcon />;
+																break;
+															}
+															case ESocialMedia.FACEBOOK: {
+																socialMediaIcon = <FacebookIcon />;
+																break;
+															}
+															case ESocialMedia.TWITTER: {
+																socialMediaIcon = <TwitterIcon />;
+																break;
+															}
+															default: {
+																break;
+															}
 														}
-														case ESocialMedia.FACEBOOK: {
-															socialMediaIcon = <FacebookIcon />;
-															break;
-														}
-														case ESocialMedia.TWITTER: {
-															socialMediaIcon = <TwitterIcon />;
-															break;
-														}
-														default: {
-															break;
-														}
+														return (
+															<Link
+																href={link}
+																target="_blank"
+																rel="noopener noreferrer"
+																key={`${teamMember._id}-${socialMedia}`}
+															>
+																{socialMediaIcon}
+															</Link>
+														);
 													}
-													return (
-														<Link
-															href={link}
-															target="_blank"
-															rel="noopener noreferrer"
-															key={`${teamMember._id}-${socialMedia}`}
-														>
-															{socialMediaIcon}
-														</Link>
-													);
-												}
-											)}
+												)}
 										</SocialMediaContainer>
 										<Subtitle>{teamMember.jobTitle}</Subtitle>
 										<Link href={postLink}>

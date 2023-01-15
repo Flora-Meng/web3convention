@@ -87,7 +87,7 @@ const ComingSoon: React.FC = () => {
 				</DropDownButton>
 			</Header>
 			<Content className="flex flex-col justify-center flex-1">
-				<Subtitle>Sydney, July22-23 2023</Subtitle>
+				<Subtitle>Sydney, April 2024</Subtitle>
 				<Title>Opening soon</Title>
 				<Countdown
 					NumberFontSizeConfig={{

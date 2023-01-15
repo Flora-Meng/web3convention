@@ -88,16 +88,16 @@ const headConfig: {
 	subtitle: string;
 }[] = [
 	{
-		title: WEEKDAY[4],
-		subtitle: '21 July'
-	},
-	{
 		title: WEEKDAY[5],
-		subtitle: '22 July'
+		subtitle: '19 April'
 	},
 	{
 		title: WEEKDAY[6],
-		subtitle: '23 July'
+		subtitle: '20 April'
+	},
+	{
+		title: WEEKDAY[0],
+		subtitle: '21 April'
 	}
 ];
 

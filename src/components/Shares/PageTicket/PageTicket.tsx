@@ -133,10 +133,10 @@ const ticketConfig = [
 		priceIncGST: false,
 		earlyBirdPrice: 148,
 		earlyBirdPriceIncGST: true,
-		earlyBirdEndDate: '2023-06-21T14:00:00.000Z',
+		earlyBirdEndDate: '2024-03-21T14:00:00.000Z',
 		thumbnailSrc: '/images/tickets/general-admission.png',
 		features: [
-			'Expo Hall (22 July 10am-6pm & 23 July 10am-4:30pm)',
+			'Expo Hall (20 April 10am-6pm & 21 April 10am-4:30pm)',
 			'Unique NFT Ticket',
 			'Access to all 4 Theatres',
 			'Access to the Workshop Zone',
@@ -155,10 +155,10 @@ const ticketConfig = [
 		priceIncGST: true,
 		earlyBirdPrice: 1498,
 		earlyBirdPriceIncGST: false,
-		earlyBirdEndDate: '2023-06-21T14:00:00.000Z',
+		earlyBirdEndDate: '2024-03-21T14:00:00.000Z',
 		thumbnailSrc: '/images/tickets/premium-admission.png',
 		features: [
-			'Expo Hall (22 July 10am-6pm & 23 July 10am-4:30pm)',
+			'Expo Hall (20 April 10am-6pm & 21 April 10am-4:30pm)',
 			'Whale Pass',
 			'VIP Yacht Party',
 			<span>
@@ -180,7 +180,7 @@ const ticketConfig = [
 		priceIncGST: false,
 		thumbnailSrc: '/images/tickets/student-pass.png',
 		features: [
-			'Expo Hall (22 July 10am-6pm & 23 July 10am-4:30pm)',
+			'Expo Hall (20 April 10am-6pm & 21 April 10am-4:30pm)',
 			'Access to all 4 Theatres',
 			'Access to the Workshop Zone',
 			'Access to the Metaverse',

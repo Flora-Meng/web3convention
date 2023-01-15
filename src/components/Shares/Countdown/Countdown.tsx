@@ -80,7 +80,7 @@ const CountdownUnit = styled.p`
 	margin: 0;
 `;
 
-const COUNTDOWN_DATE = '2023-07-22T22:00:00.000Z';
+const COUNTDOWN_DATE = '2024-04-20T22:00:00.000Z';
 
 const Countdown: React.FC<CountdownProps> = ({
 	countdownDate = COUNTDOWN_DATE,
@@ -88,7 +88,7 @@ const Countdown: React.FC<CountdownProps> = ({
 }) => {
 	const renderCountdown = ({ total, hours, minutes, seconds }: CountdownTimeDelta) => {
 		const countdownInfo = [
-			dayjs.duration(total).months(),
+			dayjs.duration(total).months() + 12,
 			dayjs.duration(total).days(),
 			hours,
 			minutes,
