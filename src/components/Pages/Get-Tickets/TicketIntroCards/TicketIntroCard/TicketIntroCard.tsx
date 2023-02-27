@@ -145,7 +145,7 @@ const TicketIntroCard: React.FC<IntroCardProps> = props => {
 			<ContentContainer>
 				<Title>{title}</Title>
 				<Description>{description}</Description>
-				<StyledLink href="https://www.eventbrite.com.au/e/web3-convention-tickets-491154535437">
+				<StyledLink href="#">
 					<span>buy now</span>
 				</StyledLink>
 			</ContentContainer>

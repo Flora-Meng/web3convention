@@ -1,22 +1,22 @@
 [
 	{
 		"_id": "1",
-		"title": "At Sydney",
-		"text": "At Sydney, ICC affords delegates, exhibitors and visitors convenient access to Australia’s most cosmopolitan city.",
+		"title": "At Melbourne",
+		"text": "At Melbourne, affords delegates, exhibitors and visitors convenient access to Australia’s most cosmopolitan city.",
 		"imageSrc": "/images/demo/venuePage/venueIntro1.png"
 	},
 	{
 		"_id": "2",
-		"title": "Sydney's Central Precinct",
-		"subtitle": "Sydney, April 2024",
-		"text": "ICC is situated at the intersection of Sydney’s academic, cultural and technology precincts.",
+		"title": "Melbourne's Central Precinct",
+		"subtitle": "Melbourne, May 2024",
+		"text": "MCEC is situated at the intersection of Melbourne’s academic, cultural and technology precincts.",
 		"imageSrc": "/images/demo/venuePage/venueIntro2.png"
 	},
 	{
 		"_id": "3",
 		"title": "Innovation Heart",
-		"subtitle": "Sydney, April 2024",
-		"text": "ICC functions as an incubator for ideas, a champion of change and an advocate for community.",
+		"subtitle": "Melbourne, May 2024",
+		"text": "MCEC functions as an incubator for ideas, a champion of change and an advocate for community.",
 		"imageSrc": "/images/demo/venuePage/venueIntro3.png"
 	}
 ]

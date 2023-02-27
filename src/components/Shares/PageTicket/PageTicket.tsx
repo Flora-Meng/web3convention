@@ -244,7 +244,7 @@ const PageTicket: React.FC = () => {
 								))}
 							</PriceFeatureContainer>
 							<div className="text-center">
-								<StyledLink href="https://www.eventbrite.com.au/e/web3-convention-tickets-491154535437">
+								<StyledLink href="#">
 									<span>buy now</span>
 								</StyledLink>
 							</div>

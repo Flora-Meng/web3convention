@@ -131,8 +131,8 @@ const EmailHelperText = styled.p`
 
 const linkConfigList = [
 	{
-		label: 'ICC Sydney',
-		path: 'https://www.iccsydney.com.au/'
+		label: 'Melbourne Convention and Exhibition Centre (MCEC)',
+		path: 'https://mcec.com.au/'
 	},
 	{
 		label: 'Apply to speak at Web3 Convention',
@@ -219,11 +219,11 @@ const FooterContent = () => {
 						priority
 					/>
 					<ContentText>
-						ICC Sydney: International Convention & Exhibition Centre
+						Melbourne Convention and Exhibition Centre
 						<br />
-						14 Darling Dr, Sydney NSW 2000
+						Convention center in South Wharf, Victoria
 					</ContentText>
-					<ContentText>+61 431 538 855</ContentText>
+					<ContentText>+61 451 010 217</ContentText>
 					<ContentText>business@web3convention.com</ContentText>
 				</Grid>
 				<Grid item mobile={12} tablet={6} laptop={3} largeLaptop={3}>
