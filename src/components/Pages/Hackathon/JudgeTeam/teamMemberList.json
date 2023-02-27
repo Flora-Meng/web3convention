@@ -63,18 +63,6 @@
 	},
 	{
 		"_id": "7",
-		"name": "Zach Varnier",
-		"description": "",
-		"jobTitle": "Program Director at AXL Ventures",
-		"companySrc": "/images/logo/asset-linkedin-avatar.png",
-		"avatarSrc": "/images/speakers/zach.jpeg",
-		"socialMedia": {
-			"linkedIn": "https://www.linkedin.com/in/zachvarnier/",
-			"twitter": "https://twitter.com/ZachVrv"
-		}
-	},
-	{
-		"_id": "8",
 		"name": "Zahir Tari",
 		"description": " Zahir is a Full Professor and the research director of the RMIT Centre of Cybersecurity Research and Innovation (CCSRI). Zahir’s expertise is in the areas of system’s performance (e.g. P2P, Cloud, IoT) as well as system’s security (e.g. SCADA, SmartGrid, Cloud, IoT). He is the co-author of 8 books (John Wiley, Springer) and he has edited over 25 conference proceedings. Zahir is also a recipient of over 15M$ in funding from ARC (Australian Research Council) and European projects e.g. 7th Framework AU2EU (Australia to European) bid on “Authorisation and Authentication for Entrusted Unions. Finally, Zahir is or has been an associate editor of ACM Computing Surveys, IEEE Transactions on Computers (TC), IEEE Transactions on Parallel and Distributed Systems (TPDS) and IEEE Magazine on Cloud Computing.",
 		"jobTitle": "Professor, Research Director at RMIT",
@@ -85,7 +73,7 @@
 		}
 	},
 	{
-		"_id": "9",
+		"_id": "8",
 		"name": "Aaron Cassar",
 		"description": "",
 		"jobTitle": "CEO at Darqtec",
@@ -97,11 +85,11 @@
 		}
 	},
 	{
-		"_id": "10",
+		"_id": "9",
 		"name": "Lu Ye",
 		"description": "",
 		"jobTitle": "Founder at Cedar",
-		"companySrc": "/images/logo/RMIT_POS3.png",
+		"companySrc": "",
 		"avatarSrc": "/images/speakers/Luye.png"
 	}
 ]
