@@ -30,7 +30,7 @@ enum ESocialMedia {
 }
 
 const HomeTeamContainer = styled(Grid)`
-	background-color: ${blackColor};
+	background-color: white;
 `;
 
 const GridItemContainer = styled.div`

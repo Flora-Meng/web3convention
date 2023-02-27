@@ -50,19 +50,19 @@ const headConfig: {
 	title: string;
 	subtitle: string;
 }[] = [
-	{
-		title: 'Kickoff',
-		subtitle: '15 April'
-	},
-	{
-		title: 'Peroid',
-		subtitle: '15 April to 16 June'
-	},
-	{
-		title: 'Prizes',
-		subtitle: '16 June to 22 June'
-	}
-];
+		{
+			title: 'Kickoff',
+			subtitle: '15 May'
+		},
+		{
+			title: 'Peroid',
+			subtitle: '15 May to 16 July'
+		},
+		{
+			title: 'Prizes',
+			subtitle: '16 July to 17 July'
+		}
+	];
 
 const agendaConfig = [
 	{
