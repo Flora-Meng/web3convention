@@ -3,18 +3,18 @@
 		"_id": "1",
 		"title": "At Melbourne",
 		"text": "At Melbourne, affords delegates, exhibitors and visitors convenient access to Australia’s most cosmopolitan city.",
-		"imageSrc": "/images/demo/venuePage/venueIntro1.png"
+		"imageSrc": "/images/demo/venuePage/venueIntro1.jpeg"
 	},
 	{
 		"_id": "2",
 		"title": "Melbourne's Central Precinct",
 		"text": "MCEC is situated at the intersection of Melbourne’s academic, cultural and technology precincts.",
-		"imageSrc": "/images/demo/venuePage/venueIntro2.png"
+		"imageSrc": "/images/demo/venuePage/venueIntro2.jpeg"
 	},
 	{
 		"_id": "3",
 		"title": "Innovation Heart",
 		"text": "MCEC functions as an incubator for ideas, a champion of change and an advocate for community.",
-		"imageSrc": "/images/demo/venuePage/venueIntro3.png"
+		"imageSrc": "/images/demo/venuePage/venueIntro3.jpeg"
 	}
 ]

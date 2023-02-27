@@ -15,9 +15,9 @@ import PageHead from '@/layouts/PageHead';
 const Cover = styled.div`
 	background-attachment: fixed;
 	background-image: url('/images/demo/venuePage/cover.jpeg');
-	background-position: center;
-	background-size: cover;
-	height: 70vh;
+    background-position: center;
+    background-size: contain;
+	height: 30vh;
 `;
 
 const VenuePage = () => {
