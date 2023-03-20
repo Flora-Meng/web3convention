@@ -1,22 +1,6 @@
 [
 	{
 		"_id": "1",
-		"name": "Xue Li",
-		"description": "Dr Xue Li is honoured as one of \"the most powerful people in Australia\" on Big Data by the Financial Review",
-		"jobTitle": "Professor at University Of Queensland",
-		"avatarSrc": "/images/speakers/xueli.jpeg",
-		"companySrc": "/images/logo/uq-logo-purple.png"
-	},
-	{
-		"_id": "2",
-		"name": "Andy Huang",
-		"description": "",
-		"jobTitle": "Head of AI/ML at Servian",
-		"avatarSrc": "/images/speakers/andy.png",
-		"companySrc": "/images/logo/servian.png"
-	},
-	{
-		"_id": "3",
 		"name": "Yun Zhi Lin",
 		"description": "Yun Zhi is a partner in Deloitte’s Cloud & Engineering team, co-leading 500+engineers in solving complex business-led engineering problems. He leads Deloitte’s Application Modernisation offering, sponsor's Deloitte's Web3 practice and also is a guest lecturer at Macquarie Business School.",
 		"jobTitle": "Partner at Deloitte",
@@ -25,6 +9,27 @@
 		"socialMedia": {
 			"linkedIn": "https://www.linkedin.com/in/mrserverless/",
 			"twitter": "https://twitter.com/mrserverless"
+		}
+	},
+	{
+		"_id": "2",
+		"name": "Kian Jackson",
+		"description": "Kian has over 20 years of experience in the payments industry across Europe and APAC. Kian established the payment acceptance capability for the Novatti Group (ASX: NOV) and leads this part of the business. Kian is also the founder and patent holder of payXcrypto, a Crypto Payment Gateway, that enables wallet holders to pay seamlessly for goods and services online.  ",
+		"jobTitle": "General Manager Novatti",
+		"companySrc": "/images/logo/Novatti.png",
+		"avatarSrc": "/images/speakers/Kian_0687 - Kian Jackson.jpg",
+		"socialMedia": {
+			"linkedIn": "https://www.linkedin.com/in/kianjackson/"
+		}
+	},
+	{
+		"_id": "3",
+		"name": "Dr Bo Li",
+		"description": "Professor,Ph.D. of Economics, Chief Economist. Vice Chairman of Australia Blockchain Alliance.Dean of Hong Kong Blockchain Application and Investment Research Institute. ",
+		"jobTitle": "Professor, Chief Economist of BMI Asset Management",
+		"avatarSrc": "/images/speakers/boli.jpeg",
+		"socialMedia": {
+			"twitter": "https://twitter.com/Robertl83909710"
 		}
 	},
 	{
@@ -52,14 +57,11 @@
 	},
 	{
 		"_id": "6",
-		"name": "Kian Jackson",
-		"description": "Kian has over 20 years of experience in the payments industry across Europe and APAC. Kian established the payment acceptance capability for the Novatti Group (ASX: NOV) and leads this part of the business. Kian is also the founder and patent holder of payXcrypto, a Crypto Payment Gateway, that enables wallet holders to pay seamlessly for goods and services online.  ",
-		"jobTitle": "General Manager Novatti",
-		"companySrc": "/images/logo/Novatti.png",
-		"avatarSrc": "/images/speakers/Kian_0687 - Kian Jackson.jpg",
-		"socialMedia": {
-			"linkedIn": "https://www.linkedin.com/in/kianjackson/"
-		}
+		"name": "Andy Huang",
+		"description": "",
+		"jobTitle": "Head of AI/ML at Servian",
+		"avatarSrc": "/images/speakers/andy.png",
+		"companySrc": "/images/logo/servian.png"
 	},
 	{
 		"_id": "7",
@@ -90,5 +92,36 @@
 		"jobTitle": "Founder at Cedar",
 		"companySrc": "",
 		"avatarSrc": "/images/speakers/Luye.png"
+	},
+	{
+		"_id": "10",
+		"name": "Joseph Liu",
+		"description": "",
+		"jobTitle": "Professor at Monash",
+		"companySrc": "/images/logo/monash-university-vector-logo.png",
+		"avatarSrc": "/images/speakers/joseph.jpg",
+		"socialMedia": {
+			"linkedIn": "https://www.linkedin.com/in/joseph-liu-a5b05886/"
+		}
+	},
+	{
+		"_id": "11",
+		"name": "Mandy Jiang",
+		"description": "Leading company in blockchain ",
+		"jobTitle": "Group CFO at Cloudtech",
+		"companySrc": "/images/logo/cloudtech-group.png",
+		"avatarSrc": "/images/speakers/Mandy-Jiang.jpg"
+	},
+	{
+		"_id": "12",
+		"name": "Jenks Guo",
+		"description": "",
+		"jobTitle": "Developer Advocate at Filecoin",
+		"companySrc": "/images/sponsors/file-coin.png",
+		"avatarSrc": "/images/speakers/Jenks.png",
+		"socialMedia": {
+			"linkedIn": "https://www.linkedin.com/in/jenks-guo-58257438/",
+			"twitter": "https://twitter.com/JenksGuo"
+		}
 	}
 ]
