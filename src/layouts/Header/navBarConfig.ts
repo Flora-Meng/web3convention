@@ -21,6 +21,10 @@ export const navItemsConfig: { [K in ENavItem]: INavItem } = {
 	[ENavItem.HACKATHON]: {
 		title: 'hackathon',
 		path: '/hackathon'
+	},
+	[ENavItem.SPEAKERS]: {
+		title: 'speakers',
+		path: '/speakers'
 	}
 	// [ENavItem.CONVENTION]: {
 	// 	title: 'conventions',
@@ -55,6 +59,16 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 	// 		path: '/comingSoon'
 	// 	}
 	// ]
+	[ENavItem.SPEAKERS]: [
+		{
+			title: 'Speakers',
+			path: '/comingSoon'
+		},
+		{
+			title: 'Apply-to-speak',
+			path: '/apply-to-speak'
+		}
+	]
 };
 
 export default navItemsConfig;
