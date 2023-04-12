@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import StageCoverTitle from '@/components/Pages/Apply-To-Speak/CoverTitle';
+import MainContents from '@/components/Pages/Apply-To-Speak/MainContents/MainContents';
 import Footer from '@/layouts/Footer/Footer';
 import Header from '@/layouts/Header/Header';
 import PageHead from '@/layouts/PageHead/PageHead';
@@ -31,7 +33,9 @@ const ApplyToSpeakPage = () => {
 			<PageHead meta={meta} />
 			<Cover>
 				<Header />
+				<StageCoverTitle />
 			</Cover>
+			<MainContents />
 			<Footer />
 		</>
 	);
