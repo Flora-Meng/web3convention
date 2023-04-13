@@ -1,6 +1,16 @@
+import {
+	Checkbox,
+	FormControl,
+	FormControlLabel,
+	Input,
+	MenuItem,
+	Select,
+	SelectChangeEvent
+} from '@mui/material';
 import { useState } from 'react';
 import styled from 'styled-components';
 
+import ApplicationModal from '@/components/Shares/ApplicationModal/ApplicationModal';
 import ThemeButton from '@/components/Shares/ThemeButton';
 import { color, devices } from '@/styles/variables';
 
@@ -27,13 +37,44 @@ const FromContainer = styled.div`
 	@media ${devices.laptop} {
 	}
 `;
+const StyleSelect = styled(Select)`
+	margin: 0 0 36px;
+	padding: 7px 0;
+`;
 
+const StyledInput = styled(Input)`
+	color: ${textColor};
+	@media ${devices.laptop} {
+		font-size: 18px;
+	}
+	&::before {
+		display: none;
+	}
+	&:after {
+		display: none;
+	}
+	input {
+		border: none;
+		border-bottom: 1px solid ${blackColor};
+		margin: 0 0 36px;
+		padding: 7px 0;
+		&:hover {
+			border-color: ${darkPrimaryColor};
+			transition: border-color 0.3s ease;
+		}
+	}
+`;
+const StyledCheckBox = styled(FormControlLabel)`
+	display: flex;
+	justify-content: center;
+`;
 const MainContents: React.FC = () => {
 	const [data, setData] = useState<IApplyToSpeakProps>({
 		date: '20 April 2024',
 		firstName: '',
 		lastName: '',
 		email: '',
+		countryCode: '',
 		mobileNumber: '',
 		jobTitle: '',
 		companyName: '',
@@ -42,141 +83,180 @@ const MainContents: React.FC = () => {
 		speechTopic: '',
 		agreeToTerms: false
 	});
-	const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+	const [message, setMessage] = useState('error');
+	const [openModal, setOpenModal] = useState(false);
+	const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		event.preventDefault();
 		if (event.target.tagName === 'INPUT') {
-			const inputElement = event.target as HTMLInputElement;
 			if (event.target.type === 'checkbox') {
 				setData({
 					...data,
-					[inputElement.name]: inputElement.checked
+					[event.target.name]: event.target.checked
 				});
 			} else {
 				setData({
 					...data,
-					[inputElement.name]: inputElement.value
+					[event.target.name]: event.target.value
 				});
 			}
-		} else if (event.target.tagName === 'SELECT') {
-			setData({
-				...data,
-				date: event.target.value as DateOption
-			});
 		}
 	};
+	const handleSelectChange = (event: SelectChangeEvent<unknown>) => {
+		event.preventDefault();
+		setData({
+			...data,
+			[event.target.name]: event.target.value
+		});
+	};
+	const handleClose = () => {
+		setOpenModal(false);
+		setMessage('error');
+	};
 	const submitHandle = async () => {
-		console.log(data);
+		if (
+			data.date === '' ||
+			data.firstName === '' ||
+			data.lastName === '' ||
+			data.email === '' ||
+			data.countryCode === '' ||
+			data.mobileNumber === '' ||
+			data.jobTitle === '' ||
+			data.companyName === '' ||
+			data.companyBio === '' ||
+			data.speakerBio === '' ||
+			!data.agreeToTerms
+		) {
+			setMessage('error');
+			setOpenModal(true);
+		} else {
+			setMessage('success');
+			setOpenModal(true);
+		}
 	};
 	return (
 		<ApplyToSpeakContainer>
 			<FromContainer>
-				<label>
+				<FormControl>
 					Date:
-					<select value={data.date} onChange={handleChange}>
-						<option value="20 April 2024">20 April 2024</option>
-						<option value="21 April 2024">21 April 2024</option>
-					</select>
-				</label>
-				<label>
+					<StyleSelect value={data.date} onChange={handleSelectChange}>
+						<MenuItem value="20 April 2024">20 April 2024</MenuItem>
+						<MenuItem value="21 April 2024">21 April 2024</MenuItem>
+					</StyleSelect>
+				</FormControl>
+				<FormControl>
 					First Name:
-					<input
+					<StyledInput
 						type="text"
 						value={data.firstName}
 						name="firstName"
-						onChange={handleChange}
+						onChange={handleInputChange}
 						required
 					/>
-				</label>
-				<label>
+				</FormControl>
+				<FormControl>
 					Last Name:
-					<input
+					<StyledInput
 						type="text"
 						value={data.lastName}
 						name="lastName"
-						onChange={handleChange}
+						onChange={handleInputChange}
 						required
 					/>
-				</label>
-				<label>
+				</FormControl>
+				<FormControl>
 					Email:
-					<input
+					<StyledInput
 						type="email"
 						value={data.email}
 						name="email"
-						onChange={handleChange}
+						onChange={handleInputChange}
 						required
 					/>
-				</label>
-				<label>
+				</FormControl>
+				<FormControl>
+					Country Code:
+					<StyledInput
+						type="tel"
+						placeholder="+61"
+						value={data.countryCode}
+						name="countryCode"
+						onChange={handleInputChange}
+						required
+					/>
+				</FormControl>
+				<FormControl>
 					Mobile Number:
-					<input
+					<StyledInput
 						type="tel"
 						value={data.mobileNumber}
 						name="mobileNumber"
-						onChange={handleChange}
+						onChange={handleInputChange}
 						required
 					/>
-				</label>
-				<label>
+				</FormControl>
+				<FormControl>
 					Job Title:
-					<input
+					<StyledInput
 						type="text"
 						value={data.jobTitle}
 						name="jobTitle"
-						onChange={handleChange}
+						onChange={handleInputChange}
 						required
 					/>
-				</label>
-				<label>
+				</FormControl>
+				<FormControl>
 					Company Name:
-					<input
+					<StyledInput
 						type="text"
 						value={data.companyName}
 						name="companyName"
-						onChange={handleChange}
+						onChange={handleInputChange}
 						required
 					/>
-				</label>
-				<label>
+				</FormControl>
+				<FormControl>
 					Company Bio:
-					<input
+					<StyledInput
 						value={data.companyBio}
 						name="companyBio"
-						onChange={handleChange}
+						onChange={handleInputChange}
 						required
 					/>
-				</label>
-				<label>
+				</FormControl>
+				<FormControl>
 					Speaker Bio:
-					<input
+					<StyledInput
 						value={data.speakerBio}
 						name="speakerBio"
-						onChange={handleChange}
+						onChange={handleInputChange}
 						required
 					/>
-				</label>
-				<label>
+				</FormControl>
+				<FormControl>
 					Speech Topic:
-					<input
+					<StyledInput
 						type="text"
 						value={data.speechTopic}
 						name="speechTopic"
-						onChange={handleChange}
+						onChange={handleInputChange}
 					/>
-				</label>
-
-				<label>
-					<input
-						type="checkbox"
-						checked={data.agreeToTerms}
-						name="agreeToTerms"
-						onChange={handleChange}
-						required
+				</FormControl>
+				<FormControl>
+					<StyledCheckBox
+						control={
+							<Checkbox
+								checked={data.agreeToTerms}
+								name="agreeToTerms"
+								onChange={handleInputChange}
+								required
+							/>
+						}
+						label="I have read and agree to abide with the Terms and conditions."
 					/>
-					I have read and agree to abide with the Terms and conditions.
-				</label>
+				</FormControl>
 				<ThemeButton onClick={submitHandle}>Submit</ThemeButton>
 			</FromContainer>
+			<ApplicationModal open={openModal} handleClose={handleClose} message={message} />
 		</ApplyToSpeakContainer>
 	);
 };
