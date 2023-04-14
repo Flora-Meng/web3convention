@@ -1,14 +1,15 @@
 import { Box, Modal, Typography } from '@mui/material';
 import styled from 'styled-components';
 
-import { color, devices } from '@/styles/variables';
+import { color } from '@/styles/variables';
 
-const { darkPrimaryColor, warningColor, InfoColor } = color;
+const { warningColor, textColor } = color;
 
 interface IMessage {
 	[key: string]: {
 		title: string;
 		description: string;
+		color: string;
 	};
 }
 
@@ -25,41 +26,31 @@ const style = {
 	transform: 'translate(-50%, -50%)',
 	width: 400,
 	bgcolor: 'background.paper',
-	border: '2px solid #000',
 	boxShadow: 24,
 	p: 4
 };
 
-// const StyledBox = styled(Box)`
-// 	background-color: 'background.paper';
-// 	border: '2px solid #000';
-// 	box-shadow: 24;
-// 	left: '50%';
-// 	position: 'absolute';
-// 	top: '50%';
-// 	transform: 'translate(-50%, -50%)';
-// 	width: 400;
-// `;
-
 const messageType: IMessage = {
 	success: {
 		title: 'Thank You!',
-		description: 'Your Application has been accepted!'
+		description: 'Your Application has been accepted!',
+		color: textColor
 	},
 	error: {
 		title: 'Error!',
 		description:
-			'Sorry, there seems to be an error with your application. Please fill in all the required fields.'
+			'Sorry, there seems to be an error with your application. Please fill in all the required fields.',
+		color: warningColor
 	}
 };
 const SuccessApplication: React.FC<ApplicationModalProps> = ({ message, open, handleClose }) => {
 	return message ? (
 		<Modal open={open} onClose={handleClose}>
 			<Box sx={style}>
-				<Typography id="modal-modal-title" variant="h6" component="h2">
+				<Typography variant="h6" component="h2" color={messageType[message].color}>
 					{messageType[message].title}
 				</Typography>
-				<Typography id="modal-modal-description" sx={{ mt: 2 }}>
+				<Typography sx={{ mt: 2 }} color={messageType[message].color}>
 					{messageType[message].description}
 				</Typography>
 			</Box>

@@ -1,3 +1,4 @@
+import { SendMessageCommand } from '@aws-sdk/client-sqs';
 import {
 	Checkbox,
 	FormControl,
@@ -12,9 +13,13 @@ import styled from 'styled-components';
 
 import ApplicationModal from '@/components/Shares/ApplicationModal/ApplicationModal';
 import ThemeButton from '@/components/Shares/ThemeButton';
+import { EMAIL_SERVICE_TYPE } from '@/constants/aws';
+import sqsClient from '@/services/sqs';
+import { sectionSubtitle, sectionTitle } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
+import generateMailParams from '@/utils/generateMailParams';
 
-const { blackColor, darkPrimaryColor, textColor, whiteColor, warningColor } = color;
+const { blackColor, darkPrimaryColor, textColor, whiteColor } = color;
 
 const ApplyToSpeakContainer = styled.div`
 	background: linear-gradient(180deg, ${blackColor}, ${whiteColor});
@@ -30,11 +35,57 @@ const FromContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	padding: 100px 118px 114px;
+	/* padding: 100px 118px 114px; */
 	@media ${devices.mobile} {
 		padding: 40px;
 	}
+	@media ${devices.tablet} {
+		padding: 80px 50px 80px 50px;
+	}
 	@media ${devices.laptop} {
+		padding: 60px 100px 100px;
+	}
+	@media ${devices.largeLaptop} {
+		padding: 100px 118px 114px;
+	}
+`;
+const TittleContainer = styled.div``;
+const Subtitle = styled.p`
+	${sectionSubtitle};
+	margin-bottom: 5px;
+`;
+const Title = styled.h2`
+	${sectionTitle};
+	color: ${blackColor};
+	@media ${devices.mobile} {
+		font-size: 30px;
+	}
+	@media ${devices.tablet} {
+		font-size: 40px;
+	}
+	@media ${devices.laptop} {
+		font-size: 50px;
+	}
+`;
+const FromLabel = styled.span`
+	margin-bottom: 5px;
+	&.mobile {
+		@media ${devices.tablet} {
+			width: 270px;
+		}
+		@media ${devices.laptop} {
+			width: 400px;
+		}
+	}
+	@media ${devices.laptop} {
+		font-size: 24px;
+	}
+`;
+const MobileContainer = styled.div`
+	display: flex;
+	justify-content: space-between;
+	@media ${devices.mobile} {
+		gap: 10px;
 	}
 `;
 const StyleSelect = styled(Select)`
@@ -67,9 +118,12 @@ const StyledInput = styled(Input)`
 const StyledCheckBox = styled(FormControlLabel)`
 	display: flex;
 	justify-content: center;
+	@media ${devices.mobile} {
+		font-size: 10px;
+	}
 `;
 const MainContents: React.FC = () => {
-	const [data, setData] = useState<IApplyToSpeakProps>({
+	const [speakerData, setData] = useState<IApplyToSpeakProps>({
 		date: '20 April 2024',
 		firstName: '',
 		lastName: '',
@@ -90,12 +144,12 @@ const MainContents: React.FC = () => {
 		if (event.target.tagName === 'INPUT') {
 			if (event.target.type === 'checkbox') {
 				setData({
-					...data,
+					...speakerData,
 					[event.target.name]: event.target.checked
 				});
 			} else {
 				setData({
-					...data,
+					...speakerData,
 					[event.target.name]: event.target.value
 				});
 			}
@@ -104,7 +158,7 @@ const MainContents: React.FC = () => {
 	const handleSelectChange = (event: SelectChangeEvent<unknown>) => {
 		event.preventDefault();
 		setData({
-			...data,
+			...speakerData,
 			[event.target.name]: event.target.value
 		});
 	};
@@ -114,129 +168,144 @@ const MainContents: React.FC = () => {
 	};
 	const submitHandle = async () => {
 		if (
-			data.date === '' ||
-			data.firstName === '' ||
-			data.lastName === '' ||
-			data.email === '' ||
-			data.countryCode === '' ||
-			data.mobileNumber === '' ||
-			data.jobTitle === '' ||
-			data.companyName === '' ||
-			data.companyBio === '' ||
-			data.speakerBio === '' ||
-			!data.agreeToTerms
+			speakerData.date === '' ||
+			speakerData.firstName === '' ||
+			speakerData.lastName === '' ||
+			speakerData.email === '' ||
+			speakerData.countryCode === '' ||
+			speakerData.mobileNumber === '' ||
+			speakerData.jobTitle === '' ||
+			speakerData.companyName === '' ||
+			speakerData.companyBio === '' ||
+			speakerData.speakerBio === '' ||
+			!speakerData.agreeToTerms
 		) {
 			setMessage('error');
 			setOpenModal(true);
 		} else {
 			setMessage('success');
 			setOpenModal(true);
+			// Send Email
+			const mailParams = generateMailParams({
+				templateValue: EMAIL_SERVICE_TYPE.WEB3_CONVENTION_SPEAKER_APPLICATION,
+				toValue: speakerData.email,
+				htmlValue: 'Web3 Convention Speakers Team',
+				message:
+					'Thank you for proposing a speaker for Web Summit 2023. We will review your application and get back in touch if we find a good fit.'
+			});
+			await sqsClient.send(new SendMessageCommand(mailParams));
 		}
 	};
 	return (
 		<ApplyToSpeakContainer>
 			<FromContainer>
+				<TittleContainer>
+					<Subtitle>{`Don't miss`}</Subtitle>
+					<Title>Speaker Application</Title>
+				</TittleContainer>
 				<FormControl>
-					Date:
-					<StyleSelect value={data.date} onChange={handleSelectChange}>
+					<FromLabel>Date:</FromLabel>
+					<StyleSelect value={speakerData.date} onChange={handleSelectChange}>
 						<MenuItem value="20 April 2024">20 April 2024</MenuItem>
 						<MenuItem value="21 April 2024">21 April 2024</MenuItem>
 					</StyleSelect>
 				</FormControl>
 				<FormControl>
-					First Name:
+					<FromLabel>First Name:</FromLabel>
 					<StyledInput
 						type="text"
-						value={data.firstName}
+						value={speakerData.firstName}
 						name="firstName"
 						onChange={handleInputChange}
 						required
 					/>
 				</FormControl>
 				<FormControl>
-					Last Name:
+					<FromLabel>Last Name:</FromLabel>
 					<StyledInput
 						type="text"
-						value={data.lastName}
+						value={speakerData.lastName}
 						name="lastName"
 						onChange={handleInputChange}
 						required
 					/>
 				</FormControl>
 				<FormControl>
-					Email:
+					<FromLabel>Email:</FromLabel>
 					<StyledInput
 						type="email"
-						value={data.email}
+						value={speakerData.email}
 						name="email"
 						onChange={handleInputChange}
 						required
 					/>
 				</FormControl>
+				<MobileContainer>
+					<FormControl>
+						<FromLabel className="country-code">Country Code:</FromLabel>
+						<StyledInput
+							type="tel"
+							placeholder="+61"
+							value={speakerData.countryCode}
+							name="countryCode"
+							onChange={handleInputChange}
+							required
+						/>
+					</FormControl>
+					<FormControl>
+						<FromLabel className="mobile">Mobile Number:</FromLabel>
+						<StyledInput
+							type="tel"
+							value={speakerData.mobileNumber}
+							name="mobileNumber"
+							onChange={handleInputChange}
+							required
+						/>
+					</FormControl>
+				</MobileContainer>
 				<FormControl>
-					Country Code:
-					<StyledInput
-						type="tel"
-						placeholder="+61"
-						value={data.countryCode}
-						name="countryCode"
-						onChange={handleInputChange}
-						required
-					/>
-				</FormControl>
-				<FormControl>
-					Mobile Number:
-					<StyledInput
-						type="tel"
-						value={data.mobileNumber}
-						name="mobileNumber"
-						onChange={handleInputChange}
-						required
-					/>
-				</FormControl>
-				<FormControl>
-					Job Title:
+					<FromLabel>Job Title:</FromLabel>
 					<StyledInput
 						type="text"
-						value={data.jobTitle}
+						value={speakerData.jobTitle}
 						name="jobTitle"
 						onChange={handleInputChange}
 						required
 					/>
 				</FormControl>
 				<FormControl>
-					Company Name:
+					<FromLabel>Company Name:</FromLabel>
 					<StyledInput
 						type="text"
-						value={data.companyName}
+						value={speakerData.companyName}
 						name="companyName"
 						onChange={handleInputChange}
 						required
 					/>
 				</FormControl>
 				<FormControl>
-					Company Bio:
+					<FromLabel>Company Bio:</FromLabel>
 					<StyledInput
-						value={data.companyBio}
+						value={speakerData.companyBio}
 						name="companyBio"
 						onChange={handleInputChange}
 						required
 					/>
 				</FormControl>
 				<FormControl>
-					Speaker Bio:
+					<FromLabel>Speaker Bio:</FromLabel>
 					<StyledInput
-						value={data.speakerBio}
+						value={speakerData.speakerBio}
 						name="speakerBio"
 						onChange={handleInputChange}
 						required
 					/>
 				</FormControl>
 				<FormControl>
-					Speech Topic:
+					<FromLabel>Speech Topic:</FromLabel>
 					<StyledInput
 						type="text"
-						value={data.speechTopic}
+						value={speakerData.speechTopic}
 						name="speechTopic"
 						onChange={handleInputChange}
 					/>
@@ -245,7 +314,7 @@ const MainContents: React.FC = () => {
 					<StyledCheckBox
 						control={
 							<Checkbox
-								checked={data.agreeToTerms}
+								checked={speakerData.agreeToTerms}
 								name="agreeToTerms"
 								onChange={handleInputChange}
 								required
