@@ -1,5 +1,4 @@
 import { Box, Modal, Typography } from '@mui/material';
-import styled from 'styled-components';
 
 import { color } from '@/styles/variables';
 
