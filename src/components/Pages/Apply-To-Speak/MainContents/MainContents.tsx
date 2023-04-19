@@ -35,12 +35,11 @@ const FromContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	/* padding: 100px 118px 114px; */
 	@media ${devices.mobile} {
-		padding: 40px;
+		padding: 25px 15px;
 	}
 	@media ${devices.tablet} {
-		padding: 80px 50px 80px 50px;
+		padding: 80px 50px;
 	}
 	@media ${devices.laptop} {
 		padding: 60px 100px 100px;
