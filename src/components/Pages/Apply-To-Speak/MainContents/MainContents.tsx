@@ -26,7 +26,7 @@ const ApplyToSpeakContainer = styled.div`
 	color: ${textColor};
 	padding: 100px 30px 50px;
 	@media ${devices.mobile} {
-		padding: 100px 100px 50px;
+		padding: 15px;
 	}
 `;
 const FromContainer = styled.div`
@@ -36,7 +36,7 @@ const FromContainer = styled.div`
 	flex-direction: column;
 	justify-content: space-evenly;
 	@media ${devices.mobile} {
-		padding: 25px 15px;
+		padding: 40px 25px;
 	}
 	@media ${devices.tablet} {
 		padding: 80px 50px;
