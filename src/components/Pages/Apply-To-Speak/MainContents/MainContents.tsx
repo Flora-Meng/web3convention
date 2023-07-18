@@ -123,7 +123,7 @@ const StyledCheckBox = styled(FormControlLabel)`
 `;
 const MainContents: React.FC = () => {
 	const [speakerData, setData] = useState<IApplyToSpeakProps>({
-		date: '20 April 2024',
+		date: '18 May 2024',
 		firstName: '',
 		lastName: '',
 		email: '',
@@ -205,8 +205,8 @@ const MainContents: React.FC = () => {
 				<FormControl>
 					<FromLabel>Date:</FromLabel>
 					<StyleSelect value={speakerData.date} onChange={handleSelectChange}>
-						<MenuItem value="20 April 2024">20 April 2024</MenuItem>
-						<MenuItem value="21 April 2024">21 April 2024</MenuItem>
+						<MenuItem value="18 May 2024">18 May 2024</MenuItem>
+						<MenuItem value="19 May 2024">19 May 2024</MenuItem>
 					</StyleSelect>
 				</FormControl>
 				<FormControl>

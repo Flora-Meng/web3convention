@@ -2,22 +2,15 @@
 	{
 		"_id": "1",
 		"title": "Web3 Convention",
-		"subtitle": "Melbourne, May 2024",
+		"subtitle": "Brisbane, May 2024",
 		"description": "Web3 Convention is an event to explore the future of Web 2.0 and Web 3.0 and will host in the best convention centre in Australia.  The convention aims to bridge the gap between Web2 and Web3 communities. ",
 		"imageSrc": "/images/demo/main-slider-background-2.jpg"
 	},
 	{
 		"_id": "2",
 		"title": "Web3 Hackathon",
-		"subtitle": "Australia, May25-July23 2023",
+		"subtitle": "Australia, May 25- Aug 18 2023",
 		"description": "Web3 Hackathon is Australia most premier annual hackathon event catered to a global audience to support the next generation of Web3 innovation and products.",
 		"imageSrc": "/images/main-slider-hackathon.webp"
-	},
-	{
-		"_id": "3",
-		"title": "Web3 Uni Hackathon",
-		"subtitle": "Australia, Mar22-May25 2023",
-		"description": "As part of Web3 Convention, W3C will host a web3 hackathon for students from April 15th to July 23rd, 2023 with over $100k in grants and prizes.",
-		"imageSrc": "/images/demo/main-slider-background-1.jpg"
 	}
 ]

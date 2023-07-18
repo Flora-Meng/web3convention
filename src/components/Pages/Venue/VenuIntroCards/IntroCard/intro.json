@@ -1,21 +1,21 @@
 [
 	{
 		"_id": "1",
-		"title": "At Melbourne",
-		"text": "At Melbourne, affords delegates, exhibitors and visitors convenient access to Australia’s most cosmopolitan city.",
+		"title": "At Brisbane",
+		"text": "At Brisbane, affords delegates, exhibitors and visitors convenient access to Australia’s most cosmopolitan city.",
 		"imageSrc": "/images/demo/venuePage/venueIntro1.jpeg"
 	},
 	{
 		"_id": "2",
-		"title": "Melbourne's Central Precinct",
-		"subtitle": "Melbourne, May 2024",
-		"text": "MCEC is situated at the intersection of Melbourne’s academic, cultural and technology precincts.",
+		"title": "Brisbane's Central Precinct",
+		"subtitle": "Brisbane, May 2024",
+		"text": "MCEC is situated at the intersection of Brisbane academic, cultural and technology precincts.",
 		"imageSrc": "/images/demo/venuePage/venueIntro2.png"
 	},
 	{
 		"_id": "3",
 		"title": "Innovation Heart",
-		"subtitle": "Melbourne, May 2024",
+		"subtitle": "Brisbane, May 2024",
 		"text": "MCEC functions as an incubator for ideas, a champion of change and an advocate for community.",
 		"imageSrc": "/images/demo/venuePage/venueIntro3.png"
 	}

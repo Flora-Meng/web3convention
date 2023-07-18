@@ -131,7 +131,7 @@ const EmailHelperText = styled.p`
 
 const linkConfigList = [
 	{
-		label: 'Melbourne Convention and Exhibition Centre (MCEC)',
+		label: 'Brisbane Convention and Exhibition Centre (MCEC)',
 		path: 'https://mcec.com.au/'
 	},
 	{
@@ -219,7 +219,7 @@ const FooterContent = () => {
 						priority
 					/>
 					<ContentText>
-						Melbourne Convention and Exhibition Centre
+						Brisbane Convention and Exhibition Centre
 						<br />
 						Convention center in South Wharf, Victoria
 					</ContentText>

@@ -1,14 +1,14 @@
 [
 	{
 		"_id": "1",
-		"title": "At Melbourne",
-		"text": "At Melbourne, affords delegates, exhibitors and visitors convenient access to Australia’s most cosmopolitan city.",
+		"title": "At Brisbane",
+		"text": "At Brisbane, affords delegates, exhibitors and visitors convenient access to Australia’s most cosmopolitan city.",
 		"imageSrc": "/images/demo/venuePage/venueIntro1.jpeg"
 	},
 	{
 		"_id": "2",
-		"title": "Melbourne's Central Precinct",
-		"text": "MCEC is situated at the intersection of Melbourne’s academic, cultural and technology precincts.",
+		"title": "Brisbane's Central Precinct",
+		"text": "MCEC is situated at the intersection of Brisbane academic, cultural and technology precincts.",
 		"imageSrc": "/images/demo/venuePage/venueIntro2.jpeg"
 	},
 	{
