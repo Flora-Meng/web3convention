@@ -82,7 +82,7 @@ const CopyRight: React.FC = () => (
 				/>
 			</Grid>
 			<Grid item {...gridColumn}>
-				<p>© 2022-2023 Web3 Convention, All Rights Reserved. ACN 664618151 </p>
+				<p>© 2022-2023 Web3 Convention, All Rights Reserved. ACN 668 836 566 </p>
 			</Grid>
 			<Grid item {...gridColumn} className="flex items-center justify-end self-center">
 				<FollowLabel>Follow us</FollowLabel>
