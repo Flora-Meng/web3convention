@@ -27,7 +27,7 @@ const GetTicketsPage = () => {
 		description:
 			'Web3 Convention is an event to explore the future of Web 2.0 and Web 3.0 and will host in the best convention centre in Australia.  The convention aims to bridge the gap between Web2 and Web3 communities.',
 		keywords:
-			'Web3Convention, Brisbane Convention and Exhibition Centre (MCEC), Web3, Blockchain, NFT, Whale Yacht Party, Pitch Space',
+			'Web3Convention, Brisbane Convention and Exhibition Centre (BCEC), Web3, Blockchain, NFT, Whale Yacht Party, Pitch Space',
 		title: 'Web3 Convention 2024 | May 18th 2024 | Tickets'
 	};
 	return (

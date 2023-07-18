@@ -131,8 +131,8 @@ const EmailHelperText = styled.p`
 
 const linkConfigList = [
 	{
-		label: 'Brisbane Convention and Exhibition Centre (MCEC)',
-		path: 'https://mcec.com.au/'
+		label: 'Brisbane Convention and Exhibition Centre (BCEC)',
+		path: 'https://www.bcec.com.au/'
 	},
 	{
 		label: 'Apply to speak at Web3 Convention',

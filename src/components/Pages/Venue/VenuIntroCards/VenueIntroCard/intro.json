@@ -8,13 +8,13 @@
 	{
 		"_id": "2",
 		"title": "Brisbane's Central Precinct",
-		"text": "MCEC is situated at the intersection of Brisbane academic, cultural and technology precincts.",
+		"text": "BCEC is situated at the intersection of Brisbane academic, cultural and technology precincts.",
 		"imageSrc": "/images/demo/venuePage/venueIntro2.jpeg"
 	},
 	{
 		"_id": "3",
 		"title": "Innovation Heart",
-		"text": "MCEC functions as an incubator for ideas, a champion of change and an advocate for community.",
+		"text": "BCEC functions as an incubator for ideas, a champion of change and an advocate for community.",
 		"imageSrc": "/images/demo/venuePage/venueIntro3.jpeg"
 	}
 ]
