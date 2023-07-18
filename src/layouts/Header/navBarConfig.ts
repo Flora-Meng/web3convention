@@ -20,7 +20,7 @@ export const navItemsConfig: { [K in ENavItem]: INavItem } = {
 	},
 	[ENavItem.HACKATHON]: {
 		title: 'hackathon',
-		path: '/hackathon'
+		path: 'https://web3hackfest.net/'
 	},
 	[ENavItem.SPEAKERS]: {
 		title: 'speakers',
