@@ -55,23 +55,23 @@ const CountdownNumber = styled.p<CountdownNumberProps>`
 	margin: 0;
 	@media ${devices.miniMobile} {
 		font-size: ${({ NumberFontSizeConfig }) =>
-			`${(NumberFontSizeConfig && NumberFontSizeConfig[EDeviceSize.miniMobile]) || 36}px`};
+		`${(NumberFontSizeConfig && NumberFontSizeConfig[EDeviceSize.miniMobile]) || 36}px`};
 	}
 	@media ${devices.mobile} {
 		font-size: ${({ NumberFontSizeConfig }) =>
-			`${(NumberFontSizeConfig && NumberFontSizeConfig[EDeviceSize.mobile]) || 36}px`};
+		`${(NumberFontSizeConfig && NumberFontSizeConfig[EDeviceSize.mobile]) || 36}px`};
 	}
 	@media ${devices.tablet} {
 		font-size: ${({ NumberFontSizeConfig }) =>
-			`${(NumberFontSizeConfig && NumberFontSizeConfig[EDeviceSize.tablet]) || 50}px`};
+		`${(NumberFontSizeConfig && NumberFontSizeConfig[EDeviceSize.tablet]) || 50}px`};
 	}
 	@media ${devices.laptop} {
 		font-size: ${({ NumberFontSizeConfig }) =>
-			`${(NumberFontSizeConfig && NumberFontSizeConfig[EDeviceSize.laptop]) || 60}px`};
+		`${(NumberFontSizeConfig && NumberFontSizeConfig[EDeviceSize.laptop]) || 60}px`};
 	}
 	@media ${devices.largeLaptop} {
 		font-size: ${({ NumberFontSizeConfig }) =>
-			`${(NumberFontSizeConfig && NumberFontSizeConfig[EDeviceSize.largeLaptop]) || 80}px`};
+		`${(NumberFontSizeConfig && NumberFontSizeConfig[EDeviceSize.largeLaptop]) || 80}px`};
 	}
 `;
 const CountdownUnit = styled.p`
@@ -80,7 +80,7 @@ const CountdownUnit = styled.p`
 	margin: 0;
 `;
 
-const COUNTDOWN_DATE = '2024-04-20T22:00:00.000Z';
+const COUNTDOWN_DATE = '2024-05-18T22:00:00.000Z';
 
 const Countdown: React.FC<CountdownProps> = ({
 	countdownDate = COUNTDOWN_DATE,
@@ -88,7 +88,7 @@ const Countdown: React.FC<CountdownProps> = ({
 }) => {
 	const renderCountdown = ({ total, hours, minutes, seconds }: CountdownTimeDelta) => {
 		const countdownInfo = [
-			dayjs.duration(total).months() + 12,
+			dayjs.duration(total).months(),
 			dayjs.duration(total).days(),
 			hours,
 			minutes,
