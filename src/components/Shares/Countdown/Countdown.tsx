@@ -55,23 +55,23 @@ const CountdownNumber = styled.p<CountdownNumberProps>`
 	margin: 0;
 	@media ${devices.miniMobile} {
 		font-size: ${({ NumberFontSizeConfig }) =>
-		`${(NumberFontSizeConfig && NumberFontSizeConfig[EDeviceSize.miniMobile]) || 36}px`};
+			`${(NumberFontSizeConfig && NumberFontSizeConfig[EDeviceSize.miniMobile]) || 36}px`};
 	}
 	@media ${devices.mobile} {
 		font-size: ${({ NumberFontSizeConfig }) =>
-		`${(NumberFontSizeConfig && NumberFontSizeConfig[EDeviceSize.mobile]) || 36}px`};
+			`${(NumberFontSizeConfig && NumberFontSizeConfig[EDeviceSize.mobile]) || 36}px`};
 	}
 	@media ${devices.tablet} {
 		font-size: ${({ NumberFontSizeConfig }) =>
-		`${(NumberFontSizeConfig && NumberFontSizeConfig[EDeviceSize.tablet]) || 50}px`};
+			`${(NumberFontSizeConfig && NumberFontSizeConfig[EDeviceSize.tablet]) || 50}px`};
 	}
 	@media ${devices.laptop} {
 		font-size: ${({ NumberFontSizeConfig }) =>
-		`${(NumberFontSizeConfig && NumberFontSizeConfig[EDeviceSize.laptop]) || 60}px`};
+			`${(NumberFontSizeConfig && NumberFontSizeConfig[EDeviceSize.laptop]) || 60}px`};
 	}
 	@media ${devices.largeLaptop} {
 		font-size: ${({ NumberFontSizeConfig }) =>
-		`${(NumberFontSizeConfig && NumberFontSizeConfig[EDeviceSize.largeLaptop]) || 80}px`};
+			`${(NumberFontSizeConfig && NumberFontSizeConfig[EDeviceSize.largeLaptop]) || 80}px`};
 	}
 `;
 const CountdownUnit = styled.p`
