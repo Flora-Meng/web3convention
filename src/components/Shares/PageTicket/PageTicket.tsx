@@ -129,66 +129,61 @@ const ticketConfig = [
 	{
 		_id: '1',
 		title: 'General Admission',
-		price: 190,
+		price: 252,
 		priceIncGST: false,
-		earlyBirdPrice: 148,
+		earlyBirdPrice: 202,
 		earlyBirdPriceIncGST: true,
 		earlyBirdEndDate: '2024-03-21T14:00:00.000Z',
 		thumbnailSrc: '/images/tickets/general-admission.png',
 		features: [
-			'Expo Hall (20 April 10am-6pm & 21 April 10am-4:30pm)',
+			'2 day pass',
 			'Unique NFT Ticket',
-			'Access to all 4 Theatres',
+			'All keynote sessions General networking Industry meetups',
+			'Access to all networking lounges and meetup',
 			'Access to the Workshop Zone',
-			'Access to the Metaverse',
-			'Access to the NFT House',
-			'Access to the DAO House',
-			'Access to all Industry Meetups',
-			'Access to the Networking Lounge',
-			'Access to Web3 After Party, Cyber Nightclub Party(Including bonus $50 admission)'
+			'Access to the event app to network with the community prior to the event',
+			'Access to all Industry Meetups'
 		]
 	},
 	{
 		_id: '2',
 		title: 'Premium Admission',
-		price: 1999,
+		price: 307,
 		priceIncGST: true,
-		earlyBirdPrice: 1498,
+		earlyBirdPrice: 257,
 		earlyBirdPriceIncGST: false,
 		earlyBirdEndDate: '2024-03-21T14:00:00.000Z',
 		thumbnailSrc: '/images/tickets/premium-admission.png',
 		features: [
-			'Expo Hall (20 April 10am-6pm & 21 April 10am-4:30pm)',
-			'Whale Pass',
-			'VIP Yacht Party',
 			<span>
-				all inclusions as per General Admission <strong>PLUS</strong>
+				Everything in General Admission <strong>PLUS</strong>
 			</span>,
-			'Access to the VIP Lounge - Sponsored',
-			'Access to Startup Pitch House',
-			"Exclusive Networking with whales, business leaders, influencers, VC's and innovators",
-			'Massage Therapist',
-			'Coffee & Tea provided',
-			'Catered Lunch and drinks',
-			'Whale Private Room / Area'
+			'Access to the Premium After Party (open bar)',
+			'Access to Web3 After Party, Cyber Nightclub Party'
 		]
 	},
 	{
 		_id: '3',
-		title: 'Student Pass',
-		price: 78,
+		title: 'VIP WHALE PASS',
+		price: 2585,
 		priceIncGST: false,
+		earlyBirdPrice: 2385,
+		earlyBirdPriceIncGST: false,
 		thumbnailSrc: '/images/tickets/student-pass.png',
+		earlyBirdEndDate: '2024-03-21T14:00:00.000Z',
 		features: [
-			'Expo Hall (20 April 10am-6pm & 21 April 10am-4:30pm)',
-			'Access to all 4 Theatres',
-			'Access to the Workshop Zone',
-			'Access to the Metaverse',
-			'Access to the NFT House',
-			'Access to the DAO House',
-			'Access to all Industry Meetups',
-			'Access to the Networking Lounge',
-			'Access to Web3 After Party, Cyber Nightclub Party(Including bonus $50 admission)'
+			'2 day pass',
+			'Exclusive networking opportunities',
+			'Whale VIP Party Pass',
+			<span>
+				All inclusions as per General Admission <strong>PLUS</strong>
+			</span>,
+			'Fast track entry to the event',
+			'Access to the VIP Lounge - Sponsored',
+			"Access to Startup Pitch House Exclusive Networking with whales, business leaders, influencers, VC's and innovators",
+			'Coffee & Tea provided',
+			'Catered Lunch and drinks',
+			'Whale Private Room / Area'
 		]
 	}
 ];
