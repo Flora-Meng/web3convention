@@ -221,7 +221,7 @@ const FooterContent = () => {
 					<ContentText>
 						Brisbane Convention and Exhibition Centre
 						<br />
-						Convention center in South Wharf, Victoria
+						South Brisbane QLD 4101
 					</ContentText>
 					<ContentText>+61 429 991 399</ContentText>
 					<ContentText>business@web3convention.com</ContentText>
