@@ -8,12 +8,6 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-import instagramImage02 from '@/assets/images/demo//instagram-image-02.jpg';
-import instagramImage03 from '@/assets/images/demo//instagram-image-03.jpg';
-import instagramImage04 from '@/assets/images/demo//instagram-image-04.jpg';
-import instagramImage05 from '@/assets/images/demo//instagram-image-05.jpg';
-import instagramImage06 from '@/assets/images/demo//instagram-image-06.jpg';
-import instagramImage01 from '@/assets/images/demo/instagram-image-01.jpg';
 import SubscriptionModal from '@/components/Shares/SubscriptionModal';
 import useSubscription from '@/hooks/userSubscription';
 import { animationHoverImage, animationHoverImageParent, tagDecoration } from '@/styles/mixin';
@@ -148,33 +142,6 @@ const linkConfigList = [
 	}
 ];
 
-const itemData = [
-	{
-		img: instagramImage01,
-		title: 'instagram-image-01'
-	},
-	{
-		img: instagramImage02,
-		title: 'instagram-image-02'
-	},
-	{
-		img: instagramImage03,
-		title: 'instagram-image-03'
-	},
-	{
-		img: instagramImage04,
-		title: 'instagram-image-04'
-	},
-	{
-		img: instagramImage05,
-		title: 'instagram-image-05'
-	},
-	{
-		img: instagramImage06,
-		title: 'instagram-image-06'
-	}
-];
-
 const FooterContent = () => {
 	const [emailInput, setEmailInput] = useState<string>('');
 	const [inputMessage, setInputMessage] = useState<string>('');
@@ -235,30 +202,6 @@ const FooterContent = () => {
 							</StyledLink>
 						))}
 					</div>
-				</Grid>
-				<Grid item mobile={12} tablet={6} laptop={3} largeLaptop={3}>
-					<Title>Instagram</Title>
-					<ImageListContainer container spacing={1}>
-						{itemData.map(item => (
-							<Grid
-								item
-								mobile={6}
-								tablet={4}
-								laptop={6}
-								largeLaptop={4}
-								key={item.title}
-							>
-								<ImageItem href="/comingSoon">
-									<StyledImage
-										loader={imageLoader}
-										src={item.img}
-										alt={item.title}
-										unoptimized
-									/>
-								</ImageItem>
-							</Grid>
-						))}
-					</ImageListContainer>
 				</Grid>
 				<Grid item mobile={12} tablet={6} laptop={3} largeLaptop={3}>
 					<Title>Join the Newsletter</Title>

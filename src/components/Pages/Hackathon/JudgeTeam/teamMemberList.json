@@ -91,14 +91,6 @@
 		}
 	},
 	{
-		"_id": "10",
-		"name": "Lu Ye",
-		"description": "",
-		"jobTitle": "Founder at Cedar",
-		"companySrc": "",
-		"avatarSrc": "/images/speakers/Luye.png"
-	},
-	{
 		"_id": "11",
 		"name": "Joseph Liu",
 		"description": "",
@@ -182,5 +174,21 @@
 		"jobTitle": "Managing Partner",
 		"avatarSrc": "/images/speakers/Kyle_Baron.png",
 		"companySrc": "/images/sponsors/bcw.svg"
+	},
+	{
+		"_id": "20",
+		"name": "Lise Li",
+		"description": "Graduated from the University of International Business and Economics (UIBE) and with years of experience in Fintech industry, Lise is currently dedicated in advocating BSV Blockchain technology as Head of APAC Hub with BSV Association (Switzerland). Lise is also founder and CEO of Keyi Technology which is a Shanghai-based blockchain consulting company.",
+		"jobTitle": "Head of APAC Hub, BSV Association (Switzerland)",
+		"avatarSrc": "/images/speakers/huizi.png",
+		"companySrc": "/images/logo/bitcoinsv.png"
+	},
+	{
+		"_id": "21",
+		"name": "Dr. LEE CHI KIN",
+		"description": "Dr. LEE CHI KIN is a blockchain industry analyst, founder of the Blockchain Industry Analyst Association, and holds a PhD in Philosophy from Shanghai University of Finance and Economics, doctoral in Financial Management from a European university, digital transformation executive certificate from the University of Cambridge",
+		"jobTitle": "Founder of the Blockchain Industry Analyst Association",
+		"avatarSrc": "/images/speakers/lee-chi-kin.jpg",
+		"companySrc": ""
 	}
 ]
