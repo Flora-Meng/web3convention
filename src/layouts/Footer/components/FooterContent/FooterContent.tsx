@@ -236,30 +236,7 @@ const FooterContent = () => {
 						))}
 					</div>
 				</Grid>
-				<Grid item mobile={12} tablet={6} laptop={3} largeLaptop={3}>
-					<Title>Instagram</Title>
-					<ImageListContainer container spacing={1}>
-						{itemData.map(item => (
-							<Grid
-								item
-								mobile={6}
-								tablet={4}
-								laptop={6}
-								largeLaptop={4}
-								key={item.title}
-							>
-								<ImageItem href="/comingSoon">
-									<StyledImage
-										loader={imageLoader}
-										src={item.img}
-										alt={item.title}
-										unoptimized
-									/>
-								</ImageItem>
-							</Grid>
-						))}
-					</ImageListContainer>
-				</Grid>
+				<Grid item mobile={12} tablet={6} laptop={3} largeLaptop={3} />
 				<Grid item mobile={12} tablet={6} laptop={3} largeLaptop={3}>
 					<Title>Join the Newsletter</Title>
 					<ContentText>Stay informed about the latest events.</ContentText>
