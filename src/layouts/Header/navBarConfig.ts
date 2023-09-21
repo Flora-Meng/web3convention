@@ -8,15 +8,15 @@ export const navItemsConfig: { [K in ENavItem]: INavItem } = {
 	},
 	[ENavItem.ABOUT]: {
 		title: 'about',
-		path: '/'
+		path: '/comingSoon'
 	},
 	[ENavItem.EVENTS]: {
 		title: 'events',
-		path: '/'
+		path: '/comingSoon'
 	},
 	[ENavItem.AGENDA]: {
 		title: 'agenda',
-		path: '/'
+		path: '/comingSoon'
 	},
 	[ENavItem.STAGES]: {
 		title: 'stages',
@@ -28,7 +28,7 @@ export const navItemsConfig: { [K in ENavItem]: INavItem } = {
 	},
 	[ENavItem.SPONSORS]: {
 		title: 'sponsors',
-		path: '/'
+		path: '/comingSoon'
 	},
 	[ENavItem.SPEAKERS]: {
 		title: 'speakers',
@@ -36,7 +36,7 @@ export const navItemsConfig: { [K in ENavItem]: INavItem } = {
 	},
 	[ENavItem.ATTEND]: {
 		title: 'attend',
-		path: '/'
+		path: '/comingSoon'
 	},
 	[ENavItem.TICKETS]: {
 		title: 'tickets',
@@ -87,6 +87,12 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 		{
 			title: 'Apply-to-speak',
 			path: '/apply-to-speak'
+		}
+	],
+	[ENavItem.SPONSORS]: [
+		{
+			title: 'Sponsors',
+			path: '/comingSoon'
 		}
 	]
 };

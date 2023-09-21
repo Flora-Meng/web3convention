@@ -70,7 +70,7 @@ const Header = () => {
 			<DropDownNav>
 				<DropDownMenuButton handleClick={() => setOpenDropdownMenu(!openDropdownMenu)} />
 			</DropDownNav>
-			<DropDownMenu showMenu={openDropdownMenu} />
+			<DropDownMenu showMenu={openDropdownMenu} closeMenu={setOpenDropdownMenu} />
 		</HeaderContainer>
 	);
 };
