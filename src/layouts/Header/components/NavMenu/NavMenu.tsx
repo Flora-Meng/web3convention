@@ -31,10 +31,12 @@ const StyledButton = styled.button`
 	border: none;
 	color: ${whiteColor};
 	cursor: pointer;
+	font-family: Arial-BoldMT;
 	font-size: 14px;
 	font-weight: 600;
 	height: ${headerHeight};
-	padding: 0 20px;
+	letter-spacing: normal;
+	padding: 0 19px;
 `;
 
 const NavButtonContainer = styled.div<INavButtonContainerProps>`

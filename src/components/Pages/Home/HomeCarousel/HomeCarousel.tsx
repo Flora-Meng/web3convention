@@ -10,9 +10,7 @@ import { devices, headerHeight } from '@/styles/variables';
 
 const CarouselContainer = styled.div`
 	height: fit-content;
-	@media ${devices.laptop} {
-		margin-top: ${`-${headerHeight}`};
-	}
+	margin-top: ${`-${headerHeight}`};
 	${carouselStyle};
 	.control-dots {
 		bottom: 50px;
