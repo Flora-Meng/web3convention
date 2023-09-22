@@ -47,7 +47,6 @@ const CloseIcon = styled(Close)`
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
-	//font-size: 24px;
 	height: 27px;
 	width: 27px;
 `;
@@ -56,12 +55,6 @@ const StyledFade = styled(Fade)`
 	::-webkit-scrollbar {
 		width: 0 !important;
 	}
-`;
-
-const DropDownWrapper = styled.div`
-	display: flex;
-	flex-direction: column;
-	height: calc(100vh - 16px);
 `;
 
 const DropDownMenu: React.FC<DropDownMenuProps> = ({ showMenu, closeMenu }) => {
