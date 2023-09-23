@@ -69,11 +69,11 @@ export const Title = styled.h2<TextProps>`
 `;
 
 export const Subtitle = styled.p<TextProps>`
-	font-size: 16px;
+	color: #52f6c6;
+	font-size: 18px;
 	font-style: italic;
-	letter-spacing: 0.14rem;
-	margin: 0;
-	margin-bottom: 8px;
+	letter-spacing: 1px;
+	margin: 0 346px 8px 0;
 	opacity: 0;
 	text-shadow: 0 0 10px ${blackColor};
 	${tagDecoration};
