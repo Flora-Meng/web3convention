@@ -1,6 +1,6 @@
 import Close from '@mui/icons-material/Close';
 import Fade from '@mui/material/Fade';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import Menu from './components/Menu';
@@ -59,6 +59,17 @@ const StyledFade = styled(Fade)`
 
 const DropDownMenu: React.FC<DropDownMenuProps> = ({ showMenu, closeMenu }) => {
 	const [openKey, setOpenKey] = useState<ENavItem | undefined>();
+
+	useEffect(() => {
+		if (showMenu) {
+			document.body.style.overflow = 'hidden';
+		} else {
+			document.body.style.overflow = '';
+		}
+		return () => {
+			document.body.style.overflow = '';
+		};
+	}, [showMenu]);
 
 	return (
 		<StyledFade in={showMenu}>
