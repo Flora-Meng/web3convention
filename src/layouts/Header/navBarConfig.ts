@@ -6,6 +6,18 @@ export const navItemsConfig: { [K in ENavItem]: INavItem } = {
 		title: 'home',
 		path: '/'
 	},
+	[ENavItem.ABOUT]: {
+		title: 'about',
+		path: '/comingSoon'
+	},
+	[ENavItem.EVENTS]: {
+		title: 'events',
+		path: '/comingSoon'
+	},
+	[ENavItem.AGENDA]: {
+		title: 'agenda',
+		path: '/comingSoon'
+	},
 	[ENavItem.STAGES]: {
 		title: 'stages',
 		path: '/stages'
@@ -14,6 +26,18 @@ export const navItemsConfig: { [K in ENavItem]: INavItem } = {
 		title: 'venue',
 		path: '/venue'
 	},
+	[ENavItem.SPONSORS]: {
+		title: 'sponsors',
+		path: '/comingSoon'
+	},
+	[ENavItem.SPEAKERS]: {
+		title: 'speakers',
+		path: '/speakers'
+	},
+	[ENavItem.ATTEND]: {
+		title: 'attend',
+		path: '/comingSoon'
+	},
 	[ENavItem.TICKETS]: {
 		title: 'tickets',
 		path: '/get-tickets'
@@ -21,10 +45,6 @@ export const navItemsConfig: { [K in ENavItem]: INavItem } = {
 	[ENavItem.HACKATHON]: {
 		title: 'hackathon',
 		path: 'https://web3hackfest.net/'
-	},
-	[ENavItem.SPEAKERS]: {
-		title: 'speakers',
-		path: '/speakers'
 	}
 	// [ENavItem.CONVENTION]: {
 	// 	title: 'conventions',
@@ -67,6 +87,12 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 		{
 			title: 'Apply-to-speak',
 			path: '/apply-to-speak'
+		}
+	],
+	[ENavItem.SPONSORS]: [
+		{
+			title: 'Sponsors',
+			path: '/comingSoon'
 		}
 	]
 };

@@ -11,17 +11,20 @@ import { color, devices, sizes } from '@/styles/variables';
 
 const { whiteColor } = color;
 
-const HeaderContainer = styled.div`
+const HeaderContainer = styled.div<{ isScrolled: boolean }>`
 	align-items: center;
-	background-color: ${whiteColor};
+	background-color: ${({ isScrolled }) => (isScrolled ? 'rgba(0, 0, 0, 0.88)' : 'transparent')};
 	display: flex;
 	justify-content: space-between;
-	padding: 16px 30px 16px 10px;
-	position: relative;
+	opacity: ${({ isScrolled }) => (isScrolled ? '0.9' : '1')};
+	padding: 18px 24px;
+	position: ${({ isScrolled }) => (isScrolled ? 'fixed' : 'relative')};
+	top: 0;
+	transition: background-color 0.3s ease, top 0.3s ease;
+	width: 100%;
 	z-index: 2;
 	@media ${devices.laptop} {
-		background-color: transparent;
-		padding: 0 30px;
+		padding: 0 40px;
 	}
 `;
 
@@ -41,24 +44,24 @@ const DropDownNav = styled.div`
 const Header = () => {
 	const [openDropdownMenu, setOpenDropdownMenu] = useState<boolean>(false);
 	const [logoSrc, setLogoSrc] = useState<string>('/web3-logo-white.svg');
-
-	const onResize = useCallback(() => {
-		setLogoSrc(
-			document.documentElement.clientWidth > sizes.laptop
-				? '/web3-logo-white.svg'
-				: '/web3-logo.svg'
-		);
-	}, []);
+	const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
 	useEffect(() => {
-		onResize();
-		window.addEventListener('resize', onResize);
+		setLogoSrc(openDropdownMenu ? '/web3-logo.svg' : '/web3-logo-white.svg');
+	}, [openDropdownMenu]);
+
+	const handleScroll = useCallback(() => {
+		setIsScrolled(window.scrollY > 10);
+	}, []);
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll);
 		return () => {
-			window.removeEventListener('resize', onResize);
+			window.removeEventListener('scroll', handleScroll);
 		};
-	});
+	}, [isScrolled]);
+
 	return (
-		<HeaderContainer>
+		<HeaderContainer isScrolled={isScrolled}>
 			<HeaderLogo logoSrc={logoSrc} />
 			<NavBar className="items-center">
 				<NavMenu />
@@ -67,7 +70,7 @@ const Header = () => {
 			<DropDownNav>
 				<DropDownMenuButton handleClick={() => setOpenDropdownMenu(!openDropdownMenu)} />
 			</DropDownNav>
-			<DropDownMenu showMenu={openDropdownMenu} />
+			<DropDownMenu showMenu={openDropdownMenu} closeMenu={setOpenDropdownMenu} />
 		</HeaderContainer>
 	);
 };

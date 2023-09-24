@@ -26,7 +26,7 @@ const HeaderLogo: React.FC<HeaderLogoProps> = ({ logoSrc }) => {
 				unoptimized
 				src={logoSrc}
 				alt="logo"
-				width={140}
+				width={126}
 				height={40}
 				priority
 			/>

@@ -1,7 +1,7 @@
 import MenuIcon from '@mui/icons-material/Menu';
 import styled from 'styled-components';
 
-import { color } from '@/styles/variables';
+import { color, devices } from '@/styles/variables';
 
 const { primaryColor, textColor, whiteColor } = color;
 
@@ -17,10 +17,14 @@ const DrawerButton = styled.button`
 	border-radius: 0;
 	color: ${textColor};
 	cursor: pointer;
-	height: fit-content;
+	height: 40px;
 	min-width: unset;
-	padding: 12px;
+	padding: 10px;
 	transition: all 0.5s;
+	@media ${devices.laptop} {
+		padding: 12px;
+		height: 44px;
+	}
 	&:hover {
 		box-shadow: 1px 1px 8px 0 rgb(80 214 174 / 63);
 		color: ${primaryColor};

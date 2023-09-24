@@ -8,7 +8,7 @@ import SubMenu from './components/SubMenu';
 import ENavItem from '@/constants/nav';
 import { navItemsConfig, subNavItemsConfig } from '@/layouts/Header/navBarConfig';
 import { activeNavBarTitleDecoration, navBarTitleDecoration } from '@/styles/mixin';
-import { color, headerHeight } from '@/styles/variables';
+import { color, devices, headerHeight } from '@/styles/variables';
 
 const { whiteColor } = color;
 
@@ -31,10 +31,16 @@ const StyledButton = styled.button`
 	border: none;
 	color: ${whiteColor};
 	cursor: pointer;
-	font-size: 14px;
+	font-family: Arial-BoldMT;
+	font-size: 10px;
 	font-weight: 600;
 	height: ${headerHeight};
-	padding: 0 20px;
+	letter-spacing: normal;
+	padding: 0 10px;
+	@media ${devices.largeLaptop} {
+		font-size: 14px;
+		padding: 0 19px;
+	}
 `;
 
 const NavButtonContainer = styled.div<INavButtonContainerProps>`

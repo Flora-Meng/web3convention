@@ -41,8 +41,10 @@ const AccordionSummary = styled((props: AccordionSummaryProps) => (
 	<MuiAccordionSummary {...props} />
 ))`
 	border-bottom: 1px solid #edeff2;
-	font-size: 13px;
+	font-family: Arial-BoldMT;
+	font-size: 20px;
 	font-weight: 600;
+	line-height: 30px;
 	padding: 0 4px;
 	text-transform: uppercase;
 	.Mui-expanded {
