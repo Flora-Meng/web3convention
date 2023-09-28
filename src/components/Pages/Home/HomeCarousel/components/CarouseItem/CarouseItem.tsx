@@ -73,7 +73,8 @@ export const Subtitle = styled.p<TextProps>`
 	font-size: 18px;
 	font-style: italic;
 	letter-spacing: 1px;
-	margin: 0 346px 8px 0;
+	margin: 0;
+	margin-bottom: 8px;
 	opacity: 0;
 	text-shadow: 0 0 10px ${blackColor};
 	${tagDecoration};
