@@ -69,9 +69,10 @@ export const Title = styled.h2<TextProps>`
 `;
 
 export const Subtitle = styled.p<TextProps>`
-	font-size: 16px;
+	color: #52f6c6;
+	font-size: 18px;
 	font-style: italic;
-	letter-spacing: 0.14rem;
+	letter-spacing: 1px;
 	margin: 0;
 	margin-bottom: 8px;
 	opacity: 0;

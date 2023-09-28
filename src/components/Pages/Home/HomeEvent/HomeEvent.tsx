@@ -61,7 +61,7 @@ const HomeEvent: React.FC = () => {
 	return (
 		<HomeEventContainer>
 			<MaskContainer>
-				<Backdrop>events</Backdrop>
+				<Backdrop>Events</Backdrop>
 			</MaskContainer>
 			<ContentContainer>
 				<Subtitle>Web3 Convention 2024</Subtitle>

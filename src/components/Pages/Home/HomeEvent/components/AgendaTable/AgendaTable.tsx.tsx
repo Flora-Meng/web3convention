@@ -98,6 +98,10 @@ const headConfig: {
 	{
 		title: WEEKDAY[0],
 		subtitle: '19 May'
+	},
+	{
+		title: WEEKDAY[1],
+		subtitle: '20 May'
 	}
 ];
 
@@ -115,10 +119,23 @@ const agendaConfig = [
 		offset: 0
 	},
 	{
+		_id: '1-4',
+		title: 'Side Event Session',
+		columns: 1,
+		offset: 0
+	},
+
+	{
 		_id: '2-23',
 		title: 'Mainstage',
 		columns: 2,
 		offset: 1
+	},
+	{
+		_id: '2-4',
+		title: 'Networking',
+		columns: 1,
+		offset: 0
 	},
 	{
 		_id: '3-23',
@@ -177,7 +194,7 @@ const agendaConfig = [
 	{
 		_id: '10-23',
 		title: 'Web3 Workshop',
-		columns: 2,
+		columns: 1,
 		offset: 1
 	},
 	{
@@ -190,7 +207,7 @@ const agendaConfig = [
 		_id: '11-2',
 		title: 'Cyber Party',
 		columns: 1,
-		offset: 0
+		offset: 1
 	},
 	{
 		_id: '11-3',
@@ -208,7 +225,7 @@ const agendaConfig = [
 		_id: '13-2',
 		title: 'Partner After Party',
 		columns: 1,
-		offset: 1
+		offset: 0
 	}
 ];
 
@@ -217,7 +234,7 @@ const AgendaTable: React.FC = () => {
 		<AgendaTableContainer>
 			<TableHead container columnSpacing={1}>
 				{headConfig.map(({ title, subtitle }) => (
-					<TableHeadItem key={title} miniMobile={4}>
+					<TableHeadItem key={title} miniMobile={3}>
 						<HeadSubtitle>{subtitle}</HeadSubtitle>
 						<HeadTitle>{title}</HeadTitle>
 					</TableHeadItem>
@@ -227,8 +244,8 @@ const AgendaTable: React.FC = () => {
 				{agendaConfig.map(({ _id, title, columns, offset = 0 }, index) => (
 					<GridItemContainer
 						key={_id}
-						miniMobile={columns * 4}
-						miniMobileOffset={offset * 4}
+						miniMobile={columns * 3}
+						miniMobileOffset={offset * 3}
 					>
 						<Link href="/comingSoon">
 							<GridItem
