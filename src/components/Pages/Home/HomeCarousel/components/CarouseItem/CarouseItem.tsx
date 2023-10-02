@@ -85,7 +85,8 @@ export const Subtitle = styled.p<TextProps>`
 	${({ isCurrent }) => (isCurrent ? animationFillMode() : null)};
 
 	@media ${devices.tablet} {
-		font-size: 18px;
+		font-size: 16px;
+		letter-spacing: 0.89px;
 		margin-bottom: 0;
 	}
 `;
