@@ -15,12 +15,12 @@ interface ThemeButtonProps {
 const StyledButton = styled.button`
 	background-color: ${primaryColor};
 	border: none;
-	border-radius: 50px;
+	border-radius: 30px;
 	color: ${textColor};
 	cursor: pointer;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 700;
-	letter-spacing: 0.05em;
+	letter-spacing: 1px;
 	line-height: 24px;
 	padding: 11px 33px;
 	text-transform: uppercase;

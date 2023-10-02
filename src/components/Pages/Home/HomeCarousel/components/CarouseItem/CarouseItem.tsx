@@ -65,6 +65,7 @@ export const Title = styled.h2<TextProps>`
 	${({ isCurrent }) => (isCurrent ? animationFillMode() : null)};
 	@media ${devices.tablet} {
 		font-size: 90px;
+		margin-bottom: 16px;
 	}
 `;
 
@@ -109,6 +110,7 @@ export const Description = styled.p<TextProps>`
 `;
 
 const ButtonContainer = styled.div<TextProps>`
+	border-radius: 30px;
 	opacity: 0;
 	${({ isCurrent }) =>
 		isCurrent
