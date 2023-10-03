@@ -17,6 +17,9 @@ const MaskContainer = styled.div`
 	margin-left: 20px;
 	position: absolute;
 	top: 0;
+	@media ${devices.tablet} {
+		top: 40px;
+	}
 `;
 
 const Backdrop = styled.div`
