@@ -23,16 +23,18 @@ const TableHead = styled(Grid)`
 const TableHeadItem = styled(Grid)`
 	position: relative;
 	text-align: center;
-	&:not(:last-child) {
-		&::after {
-			background-color: #cacaca;
-			content: '';
-			height: 40px;
-			position: absolute;
-			right: 0;
-			top: 50%;
-			transform: translateY(-36%);
-			width: 2px;
+	@media ${devices.desktop} {
+		&:not(:last-child) {
+			&::after {
+				background-color: #cacaca;
+				content: '';
+				height: 40px;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-36%);
+				width: 2px;
+			}
 		}
 	}
 `;
