@@ -17,7 +17,7 @@ const MaskContainer = styled.div`
 	margin-left: 20px;
 	position: absolute;
 	top: 0;
-	@media ${devices.tablet} {
+	@media ${devices.mobile} {
 		top: 40px;
 	}
 `;
@@ -32,6 +32,9 @@ const Backdrop = styled.div`
 	}
 	@media ${devices.largeLaptop} {
 		font-size: 320px;
+	}
+	@media ${devices.mobile} {
+		font-size: 70px;
 	}
 `;
 
