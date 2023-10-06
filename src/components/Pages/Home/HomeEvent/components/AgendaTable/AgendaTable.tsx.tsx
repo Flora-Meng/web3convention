@@ -23,16 +23,18 @@ const TableHead = styled(Grid)`
 const TableHeadItem = styled(Grid)`
 	position: relative;
 	text-align: center;
-	&:not(:last-child) {
-		&::after {
-			background-color: #cacaca;
-			content: '';
-			height: 40px;
-			position: absolute;
-			right: 0;
-			top: 50%;
-			transform: translateY(-36%);
-			width: 2px;
+	@media ${devices.desktop} {
+		&:not(:last-child) {
+			&::after {
+				background-color: #cacaca;
+				content: '';
+				height: 40px;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-36%);
+				width: 2px;
+			}
 		}
 	}
 `;
@@ -42,7 +44,7 @@ const HeadTitle = styled.p`
 	font-weight: 700;
 	margin: 0;
 	@media ${devices.mobile} {
-		font-size: 22px;
+		font-size: 16px;
 	}
 	@media ${devices.laptop} {
 		font-size: 26px;
@@ -53,6 +55,9 @@ const HeadSubtitle = styled.p`
 	font-size: 16px;
 	font-weight: bold;
 	margin: 0;
+	@media ${devices.mobile} {
+		font-size: 14px;
+	}
 `;
 
 const GridItemContainer = styled(Grid)`

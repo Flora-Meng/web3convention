@@ -65,6 +65,7 @@ export const Title = styled.h2<TextProps>`
 	${({ isCurrent }) => (isCurrent ? animationFillMode() : null)};
 	@media ${devices.tablet} {
 		font-size: 90px;
+		margin-bottom: 16px;
 	}
 `;
 
@@ -85,7 +86,8 @@ export const Subtitle = styled.p<TextProps>`
 	${({ isCurrent }) => (isCurrent ? animationFillMode() : null)};
 
 	@media ${devices.tablet} {
-		font-size: 18px;
+		font-size: 16px;
+		letter-spacing: 0.89px;
 		margin-bottom: 0;
 	}
 `;
@@ -108,6 +110,7 @@ export const Description = styled.p<TextProps>`
 `;
 
 const ButtonContainer = styled.div<TextProps>`
+	border-radius: 30px;
 	opacity: 0;
 	${({ isCurrent }) =>
 		isCurrent
