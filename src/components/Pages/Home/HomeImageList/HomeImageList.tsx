@@ -21,6 +21,7 @@ const ImageItem = styled(Link)`
 	${animationHoverImageParent()};
 	cursor: pointer;
 	height: 50vw;
+	margin: 12px 24px;
 	position: relative;
 	@media ${devices.mobile} {
 		height: 32vw;
@@ -62,10 +63,7 @@ const Title = styled.div`
 
 const HomeImageList: React.FC = () => {
 	return (
-		<ImageListContainer
-			container
-			spacing={{ mobile: 1, tablet: 1, laptop: 1, largeLaptop: 1.5 }}
-		>
+		<ImageListContainer container>
 			{imageList.map(item => (
 				<Grid
 					item
@@ -74,7 +72,7 @@ const HomeImageList: React.FC = () => {
 					laptop={3}
 					largeLaptop={3}
 					key={item._id}
-					className="relative"
+					// className="relative"
 				>
 					<ImageItem href={item.href}>
 						<StyledImage
