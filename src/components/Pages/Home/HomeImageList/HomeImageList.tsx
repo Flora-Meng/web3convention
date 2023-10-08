@@ -4,7 +4,13 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 import imageList from './imageList.json';
-import { animationHoverImage, animationHoverImageParent, tagDecoration } from '@/styles/mixin';
+import {
+	animationHoverImage,
+	animationHoverImageParent,
+	sectionSubtitle,
+	sectionTitle,
+	tagDecoration
+} from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
@@ -61,9 +67,18 @@ const Title = styled.div`
 	margin: 5px 0 20px;
 `;
 
+const SectionTitle = styled.h2`
+	${sectionTitle};
+`;
+
+const SectionSubtitle = styled.p`
+	${sectionSubtitle};
+`;
 const HomeImageList: React.FC = () => {
 	return (
 		<ImageListContainer container>
+			<SectionSubtitle>the_festival</SectionSubtitle>
+			<SectionTitle>Web3 Convention Highlights</SectionTitle>
 			{imageList.map(item => (
 				<Grid
 					item
