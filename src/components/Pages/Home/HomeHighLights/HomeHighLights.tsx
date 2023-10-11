@@ -1,25 +1,37 @@
+import { Box } from '@mui/material';
 import styled from 'styled-components';
 
 import HomeImageList from '../HomeImageList';
 
-import { backdrop } from '@/styles/mixin';
+import { backdrop, sectionSubtitle, sectionTitle } from '@/styles/mixin';
 import { devices } from '@/styles/variables';
 
 const Backdrop = styled.div`
 	${backdrop};
+	font-size: 10vw;
 `;
 
-const HomeHighLightsContainer = styled.div`
+const HomeHighLightsContainer = styled(Box)`
+	display: flex;
+	flex-direction: column;
+	margin: 10vw 15vw;
 	position: relative;
+`;
+const SectionTitle = styled.h2`
+	${sectionTitle};
+`;
+
+const SectionSubtitle = styled.p`
+	${sectionSubtitle};
 `;
 
 const HomeHighLights = () => {
 	return (
 		<HomeHighLightsContainer>
 			<Backdrop>Highlights</Backdrop>
-			<div>
-				<HomeImageList />
-			</div>
+			<SectionSubtitle>the_festival</SectionSubtitle>
+			<SectionTitle>Web3 Convention Highlights</SectionTitle>
+			<HomeImageList />
 		</HomeHighLightsContainer>
 	);
 };

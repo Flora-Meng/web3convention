@@ -67,44 +67,37 @@ const Title = styled.div`
 	margin: 5px 0 20px;
 `;
 
-const SectionTitle = styled.h2`
-	${sectionTitle};
-`;
-
-const SectionSubtitle = styled.p`
-	${sectionSubtitle};
-`;
 const HomeImageList: React.FC = () => {
 	return (
 		<ImageListContainer container>
-			<SectionSubtitle>the_festival</SectionSubtitle>
-			<SectionTitle>Web3 Convention Highlights</SectionTitle>
-			{imageList.map(item => (
-				<Grid
-					item
-					mobile={12}
-					tablet={6}
-					laptop={3}
-					largeLaptop={3}
-					key={item._id}
-					// className="relative"
-				>
-					<ImageItem href={item.href}>
-						<StyledImage
-							loader={imageLoader}
-							src={item.imageSrc}
-							alt={item.label}
-							fill
-							unoptimized
-							loading="lazy"
-						/>
-						<Label>
-							<Subtitle>{item.subtitle}</Subtitle>
-							<Title>{item.label}</Title>
-						</Label>
-					</ImageItem>
-				</Grid>
-			))}
+			{imageList.map((item, idx) => {
+				const laptopWidth = [7, 5, 5, 7];
+				return (
+					<Grid
+						item
+						mobile={12}
+						tablet={6}
+						laptop={laptopWidth[idx % 4]}
+						largeLaptop={laptopWidth[idx % 4]}
+						key={item._id}
+					>
+						<ImageItem href={item.href}>
+							<StyledImage
+								loader={imageLoader}
+								src={item.imageSrc}
+								alt={item.label}
+								fill
+								unoptimized
+								loading="lazy"
+							/>
+							<Label>
+								<Subtitle>{item.subtitle}</Subtitle>
+								<Title>{item.label}</Title>
+							</Label>
+						</ImageItem>
+					</Grid>
+				);
+			})}
 		</ImageListContainer>
 	);
 };
