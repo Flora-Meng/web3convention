@@ -8,13 +8,14 @@ import { devices } from '@/styles/variables';
 
 const Backdrop = styled.div`
 	${backdrop};
-	font-size: 10vw;
+	font-size: 13vw;
+	top: 0;
 `;
 
 const HomeHighLightsContainer = styled(Box)`
 	display: flex;
 	flex-direction: column;
-	margin: 10vw 15vw;
+	margin: 11vw 15vw;
 	position: relative;
 `;
 const SectionTitle = styled.h2`

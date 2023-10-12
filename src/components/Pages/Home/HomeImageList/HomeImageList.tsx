@@ -17,17 +17,16 @@ import imageLoader from '@/utils/loader';
 const { primaryColor, whiteColor } = color;
 
 const ImageListContainer = styled(Grid)`
-	padding: 8px 0;
-	@media ${devices.laptop} {
-		padding: 12px 0;
-	}
+	// padding: 8px 0;
+	// @media ${devices.laptop} {
+	// 	padding: 12px 0;
+	// }
 `;
 
 const ImageItem = styled(Link)`
 	${animationHoverImageParent()};
 	cursor: pointer;
 	height: 50vw;
-	margin: 12px 24px;
 	position: relative;
 	@media ${devices.mobile} {
 		height: 32vw;
@@ -69,7 +68,7 @@ const Title = styled.div`
 
 const HomeImageList: React.FC = () => {
 	return (
-		<ImageListContainer container>
+		<ImageListContainer container justifyContent="space-between" spacing={2}>
 			{imageList.map((item, idx) => {
 				const laptopWidth = [7, 5, 5, 7];
 				return (
