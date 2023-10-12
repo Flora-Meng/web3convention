@@ -15,8 +15,11 @@ const Backdrop = styled.div`
 const HomeHighLightsContainer = styled(Box)`
 	display: flex;
 	flex-direction: column;
-	margin: 11vw 15vw;
+	margin: 20vw 10vw;
 	position: relative;
+	@media ${devices.laptop} {
+		margin: 11vw 15vw;
+	}
 `;
 const SectionTitle = styled.h2`
 	${sectionTitle};

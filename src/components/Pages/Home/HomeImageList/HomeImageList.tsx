@@ -4,24 +4,13 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 import imageList from './imageList.json';
-import {
-	animationHoverImage,
-	animationHoverImageParent,
-	sectionSubtitle,
-	sectionTitle,
-	tagDecoration
-} from '@/styles/mixin';
+import { animationHoverImage, animationHoverImageParent, tagDecoration } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
 const { primaryColor, whiteColor } = color;
 
-const ImageListContainer = styled(Grid)`
-	// padding: 8px 0;
-	// @media ${devices.laptop} {
-	// 	padding: 12px 0;
-	// }
-`;
+const ImageListContainer = styled(Grid)``;
 
 const ImageItem = styled(Link)`
 	${animationHoverImageParent()};
