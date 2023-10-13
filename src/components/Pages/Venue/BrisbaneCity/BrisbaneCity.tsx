@@ -15,11 +15,10 @@ const Container = styled.div`
 	@media ${devices.largeLaptop} {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-around;
-
+		justify-content: space-evenly;
 		margin: 120px 0 400px 0;
 		align-items: center;
-		width: 1200px;
+		width: 100%;
 	}
 `;
 const CityWrapper = styled.div`
@@ -27,6 +26,7 @@ const CityWrapper = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	@media ${devices.largeLaptop} {
+		width: 600px;
 		position: relative;
 	}
 `;
@@ -93,7 +93,7 @@ const CityOverviewImage = styled(Image)`
 		width: 282px;
 		height: 263px;
 		margin: 0;
-		right: 200px;
+		right: 400px;
 		bottom: 200px;
 	}
 `;
@@ -108,7 +108,7 @@ const CityscapeViewImage = styled(Image)`
 		width: 377px;
 		height: 221px;
 		top: 320px;
-		right: 200px;
+		right: 400px;
 	}
 `;
 const BeachSunsetImage = styled(Image)`
@@ -122,7 +122,7 @@ const BeachSunsetImage = styled(Image)`
 		width: 282px;
 		height: 263px;
 		top: 370px;
-		left: 320px;
+		left: 120px;
 	}
 `;
 const DiningSceneImage = styled(Image)`
@@ -136,7 +136,7 @@ const DiningSceneImage = styled(Image)`
 		width: 377px;
 		height: 221px;
 		top: 132px;
-		left: 320px;
+		left: 120px;
 	}
 `;
 
