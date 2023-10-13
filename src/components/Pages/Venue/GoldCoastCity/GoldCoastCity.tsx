@@ -81,7 +81,7 @@ const BeachEvening = styled(Image)`
 	}
 `;
 
-const TheBeautifulCity = () => {
+const GoldCoastCity = () => {
 	return (
 		<Container>
 			<CityWrapper>
@@ -109,4 +109,4 @@ const TheBeautifulCity = () => {
 	);
 };
 
-export default TheBeautifulCity;
+export default GoldCoastCity;
