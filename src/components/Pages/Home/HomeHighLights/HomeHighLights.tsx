@@ -8,17 +8,18 @@ import { devices } from '@/styles/variables';
 
 const Backdrop = styled.div`
 	${backdrop};
-	font-size: 13vw;
-	top: 0;
+	font-size: 60px;
+	left: -10px;
+	top: -50px;
 `;
 
 const HomeHighLightsContainer = styled(Box)`
 	display: flex;
 	flex-direction: column;
-	margin: 20vw 10vw;
+	margin: 81px 24px;
 	position: relative;
 	@media ${devices.laptop} {
-		margin: 11vw 15vw;
+		margin: 182px 340px;
 	}
 `;
 const SectionTitle = styled.h2`
