@@ -10,12 +10,7 @@ import imageLoader from '@/utils/loader';
 
 const { primaryColor, whiteColor } = color;
 
-const ImageListContainer = styled(Grid)`
-	padding: 8px 0;
-	@media ${devices.laptop} {
-		padding: 12px 0;
-	}
-`;
+const ImageListContainer = styled(Grid)``;
 
 const ImageItem = styled(Link)`
 	${animationHoverImageParent()};
@@ -62,36 +57,35 @@ const Title = styled.div`
 
 const HomeImageList: React.FC = () => {
 	return (
-		<ImageListContainer
-			container
-			spacing={{ mobile: 1, tablet: 1, laptop: 1, largeLaptop: 1.5 }}
-		>
-			{imageList.map(item => (
-				<Grid
-					item
-					mobile={12}
-					tablet={6}
-					laptop={3}
-					largeLaptop={3}
-					key={item._id}
-					className="relative"
-				>
-					<ImageItem href={item.href}>
-						<StyledImage
-							loader={imageLoader}
-							src={item.imageSrc}
-							alt={item.label}
-							fill
-							unoptimized
-							loading="lazy"
-						/>
-						<Label>
-							<Subtitle>{item.subtitle}</Subtitle>
-							<Title>{item.label}</Title>
-						</Label>
-					</ImageItem>
-				</Grid>
-			))}
+		<ImageListContainer container justifyContent="space-between" spacing={2}>
+			{imageList.map((item, idx) => {
+				const laptopWidth = [7, 5, 5, 7];
+				return (
+					<Grid
+						item
+						mobile={12}
+						tablet={6}
+						laptop={laptopWidth[idx % 4]}
+						largeLaptop={laptopWidth[idx % 4]}
+						key={item._id}
+					>
+						<ImageItem href={item.href}>
+							<StyledImage
+								loader={imageLoader}
+								src={item.imageSrc}
+								alt={item.label}
+								fill
+								unoptimized
+								loading="lazy"
+							/>
+							<Label>
+								<Subtitle>{item.subtitle}</Subtitle>
+								<Title>{item.label}</Title>
+							</Label>
+						</ImageItem>
+					</Grid>
+				);
+			})}
 		</ImageListContainer>
 	);
 };

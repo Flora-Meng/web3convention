@@ -3,8 +3,8 @@ import HomeCarousel from '@/components/Pages/Home/HomeCarousel';
 import HomeCountdown from '@/components/Pages/Home/HomeCountdown';
 import HomeCounter from '@/components/Pages/Home/HomeCounter';
 import HomeEvent from '@/components/Pages/Home/HomeEvent';
+import HomeHighLights from '@/components/Pages/Home/HomeHighLights/HomeHighLights';
 // import HomeGallery from '@/components/Pages/Home/HomeGallery';
-import HomeImageList from '@/components/Pages/Home/HomeImageList';
 import HomePosts from '@/components/Pages/Home/HomePosts';
 import HomeSponsor from '@/components/Pages/Home/HomeSponsor';
 import HomeSubscription from '@/components/Pages/Home/HomeSubscription';
@@ -38,7 +38,7 @@ const Homepage: ComponentType = () => {
 			<PageHead title="Web3 Convention 2024" meta={meta} />
 			<HomeCarousel />
 			<HomeCountdown />
-			<HomeImageList />
+			<HomeHighLights />
 			<PageBanner bannerInfo={bannerInfo} buttonConfig={buttonConfig} />
 			<HomeEvent />
 			<HomeCounter />
