@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
+import BrisBaneCity from '@/components/Pages/Venue/BrisbaneCity';
+import GoldCoastCity from '@/components/Pages/Venue/GoldCoastCity';
 import VenueMap from '@/components/Pages/Venue/Map';
-import TheBeautifulCity from '@/components/Pages/Venue/TheBeautifulCity';
 import VenueIntroCards from '@/components/Pages/Venue/VenuIntroCards/VenueIntroCards';
 import PageBanner from '@/components/Shares/PageBanner';
 import bannerInfo from '@/components/Shares/PageBanner/venueBannerInfo.json';
@@ -44,7 +45,8 @@ const VenuePage = () => {
 			<VenueIntroCards />
 			<PageBanner bannerInfo={bannerInfo} buttonConfig={buttonConfig} />
 			<PageGallery imageList={imageList} />
-			<TheBeautifulCity />
+			<BrisBaneCity />
+			<GoldCoastCity />
 			<VenueMap />
 			<Footer />
 		</>
