@@ -11,6 +11,11 @@ const Backdrop = styled.div`
 	font-size: 60px;
 	left: -10px;
 	top: -50px;
+	@media ${devices.laptop} {
+		font-size: 200px;
+		top: 0;
+		left: 50px;
+	}
 `;
 
 const HomeHighLightsContainer = styled(Box)`
