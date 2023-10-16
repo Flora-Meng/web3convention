@@ -169,7 +169,7 @@ const ticketConfig = [
 		priceIncGST: false,
 		earlyBirdPrice: 2385,
 		earlyBirdPriceIncGST: false,
-		thumbnailSrc: '/images/tickets/student-pass.png',
+		thumbnailSrc: '/images/tickets/vip.png',
 		earlyBirdEndDate: '2024-03-21T14:00:00.000Z',
 		features: [
 			'2 day pass',
