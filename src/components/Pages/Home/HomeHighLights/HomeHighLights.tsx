@@ -12,9 +12,9 @@ const Backdrop = styled.div`
 	left: -10px;
 	top: -50px;
 	@media ${devices.laptop} {
-		font-size: 200px;
-		top: 0;
-		left: 50px;
+		font-size: 230px;
+		top: -20px;
+		left: 100px;
 	}
 `;
 
