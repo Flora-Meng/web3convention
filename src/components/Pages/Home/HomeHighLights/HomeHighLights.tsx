@@ -10,7 +10,7 @@ const Backdrop = styled.div`
 	${backdrop};
 	font-size: 70px;
 	left: -4px;
-	top: -75px;
+	top: -95px;
 	@media ${devices.laptop} {
 		font-size: 230px;
 		top: -25px;
@@ -21,7 +21,7 @@ const Backdrop = styled.div`
 const HomeHighLightsContainer = styled(Box)`
 	display: flex;
 	flex-direction: column;
-	margin: 81px 24px;
+	margin: 100px 24px;
 	position: relative;
 	@media ${devices.laptop} {
 		margin: 182px 100px;
@@ -29,6 +29,7 @@ const HomeHighLightsContainer = styled(Box)`
 `;
 const SectionTitle = styled.h2`
 	${sectionTitle};
+	margin-bottom: 20px;
 `;
 
 const SectionSubtitle = styled.p`
