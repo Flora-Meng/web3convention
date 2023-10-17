@@ -21,7 +21,7 @@ const Backdrop = styled.div`
 const HomeHighLightsContainer = styled(Box)`
 	display: flex;
 	flex-direction: column;
-	margin: 100px 24px;
+	margin: 120px 24px;
 	position: relative;
 	@media ${devices.laptop} {
 		margin: 182px 100px;
