@@ -8,12 +8,12 @@ import { devices } from '@/styles/variables';
 
 const Backdrop = styled.div`
 	${backdrop};
-	font-size: 60px;
-	left: -10px;
-	top: -50px;
+	font-size: 70px;
+	left: -4px;
+	top: -75px;
 	@media ${devices.laptop} {
 		font-size: 230px;
-		top: -20px;
+		top: -25px;
 		left: 100px;
 	}
 `;
