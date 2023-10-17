@@ -24,7 +24,7 @@ const HomeHighLightsContainer = styled(Box)`
 	margin: 81px 24px;
 	position: relative;
 	@media ${devices.laptop} {
-		margin: 182px 340px;
+		margin: 182px 100px;
 	}
 `;
 const SectionTitle = styled.h2`
