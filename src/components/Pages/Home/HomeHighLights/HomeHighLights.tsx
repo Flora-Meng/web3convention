@@ -30,6 +30,9 @@ const HomeHighLightsContainer = styled(Box)`
 const SectionTitle = styled.h2`
 	${sectionTitle};
 	margin-bottom: 20px;
+	@media ${devices.laptop} {
+		margin-bottom: 64px;
+	}
 `;
 
 const SectionSubtitle = styled.p`
