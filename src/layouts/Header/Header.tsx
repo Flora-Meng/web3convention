@@ -16,7 +16,7 @@ const HeaderContainer = styled.div<{ isScrolled: boolean }>`
 	background-color: ${({ isScrolled }) => (isScrolled ? 'rgba(0, 0, 0, 0.88)' : 'transparent')};
 	display: flex;
 	justify-content: space-between;
-	opacity: ${({ isScrolled }) => (isScrolled ? '0.9' : '1')};
+	opacity: 1;
 	padding: 18px 24px;
 	position: ${({ isScrolled }) => (isScrolled ? 'fixed' : 'relative')};
 	top: 0;

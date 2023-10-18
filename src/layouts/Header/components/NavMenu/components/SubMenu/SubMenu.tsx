@@ -11,8 +11,8 @@ interface SubMenuProps {
 const SubMenuContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	min-width: 230px;
-	padding: 16px;
+	min-width: 214px;
+	padding: 11px 0;
 `;
 
 const SubMenu: React.FC<SubMenuProps> = ({ subNavList }) => {
