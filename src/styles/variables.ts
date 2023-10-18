@@ -12,7 +12,7 @@ export enum EDeviceSize {
 }
 
 export const sizes: ISize = {
-	miniMobile: 320,
+	miniMobile: 375,
 	mobile: 576,
 	tablet: 768,
 	laptop: 1024,

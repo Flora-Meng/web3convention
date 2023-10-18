@@ -12,12 +12,11 @@ interface GridItemProps {
 }
 
 const AgendaTableContainer = styled.div`
-	margin: 50px auto;
-	max-width: ${`${sizes.laptop}px`};
+	max-width: ${`${sizes.desktop}px`};
 	position: relative;
 `;
 const TableHead = styled(Grid)`
-	margin-bottom: 20px;
+	margin-bottom: 16px;
 `;
 
 const TableHeadItem = styled(Grid)`
@@ -28,12 +27,12 @@ const TableHeadItem = styled(Grid)`
 			&::after {
 				background-color: #cacaca;
 				content: '';
-				height: 40px;
+				height: 38px;
 				position: absolute;
 				right: 0;
 				top: 50%;
 				transform: translateY(-36%);
-				width: 2px;
+				width: 1px;
 			}
 		}
 	}
@@ -43,11 +42,14 @@ const HeadTitle = styled.p`
 	font-size: 20px;
 	font-weight: 700;
 	margin: 0;
-	@media ${devices.mobile} {
+	@media ${devices.miniMobile} {
 		font-size: 16px;
 	}
 	@media ${devices.laptop} {
 		font-size: 26px;
+	}
+	@media ${devices.desktop} {
+		font-size: 30px;
 	}
 `;
 
@@ -55,34 +57,43 @@ const HeadSubtitle = styled.p`
 	font-size: 16px;
 	font-weight: bold;
 	margin: 0;
-	@media ${devices.mobile} {
+	@media ${devices.miniMobile} {
 		font-size: 14px;
 	}
-`;
-
-const GridItemContainer = styled(Grid)`
-	@media ${devices.mobile} {
-		height: 60px;
+	@media ${devices.desktop} {
+		font-size: 24px;
 	}
 `;
+
+const GridItemContainer = styled(Grid)``;
 
 const GridItem = styled.div<GridItemProps>`
+	align-items: center;
 	background-color: ${({ bgColor }) => bgColor};
 	color: ${textColor};
-	flex: 1;
-	font-size: 13px;
-	font-weight: 600;
-	height: 100%;
-	padding: 10px 4px;
-	text-align: center;
+	display: flex;
+	height: 52px;
+	justify-content: center;
+	padding: 14px 4px;
+
 	p {
-		margin: 0;
-	}
-	@media ${devices.mobile} {
-		font-size: 13px;
-	}
-	@media ${devices.laptop} {
-		font-size: 16px;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		display: -webkit-box;
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 14px;
+		max-width: 100%;
+		overflow: hidden;
+		text-align: center;
+		text-overflow: ellipsis;
+
+		@media ${devices.mobile} {
+			font-size: 13px;
+		}
+		@media ${devices.laptop} {
+			font-size: 16px;
+		}
 	}
 `;
 
@@ -253,10 +264,7 @@ const AgendaTable: React.FC = () => {
 						miniMobileOffset={offset * 3}
 					>
 						<Link href="/comingSoon">
-							<GridItem
-								bgColor={itemColors[index % 5]}
-								className="flex items-center justify-center"
-							>
+							<GridItem bgColor={itemColors[index % 5]} className="">
 								<p>{title}</p>
 							</GridItem>
 						</Link>

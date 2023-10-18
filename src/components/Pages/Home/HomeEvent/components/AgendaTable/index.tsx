@@ -1,1 +1,1 @@
-export { default } from './AgendaTable.tsx';
+export { default } from './AgendaTable';

@@ -9,16 +9,26 @@ import { backdrop, sectionSubtitle, sectionTitle } from '@/styles/mixin';
 import { devices } from '@/styles/variables';
 
 const HomeEventContainer = styled.div`
+	@media ${devices.miniMobile} {
+		margin: 0 24px;
+	}
+	@media ${devices.desktop} {
+		margin: 0 340px;
+	}
+
 	overflow: hidden;
 	position: relative;
 `;
 
 const MaskContainer = styled.div`
-	margin-left: 20px;
+	/* margin-left: 20px; */
 	position: absolute;
-	top: 0;
+	/* top: 0; */
 	@media ${devices.mobile} {
-		top: 40px;
+		margin-top: 40px;
+	}
+	@media ${devices.desktop} {
+		margin-top: 20px;
 	}
 `;
 
@@ -26,32 +36,46 @@ const Backdrop = styled.div`
 	${backdrop};
 	font-size: 23vw;
 	left: 0;
-	top: -3vw;
+	/* top: -3vw; */
 	@media ${devices.tablet} {
 		left: 60px;
 	}
 	@media ${devices.largeLaptop} {
 		font-size: 320px;
 	}
-	@media ${devices.mobile} {
+	@media ${devices.miniMobile} {
 		font-size: 70px;
+	}
+	@media ${devices.desktop} {
+		font-size: 230px;
+		left: 0;
 	}
 `;
 
 const ContentContainer = styled.div`
-	padding: 100px 30px 160px;
-	@media ${devices.mobile} {
-		padding: 100px 100px 160px;
+	/* margin: 122px 0 90px; */
+	@media ${devices.miniMobile} {
+		margin: 134px 0 40px;
+	}
+	@media ${devices.desktop} {
+		margin: 122px 0 90px;
 	}
 `;
 
 const Title = styled.h2`
 	${sectionTitle};
-	margin-bottom: 20px;
+
+	@media ${devices.desktop} {
+		margin-bottom: 50px;
+	}
+	@media ${devices.miniMobile} {
+		margin-bottom: 39px;
+	}
 `;
 
 const Subtitle = styled.p`
 	${sectionSubtitle};
+	/* margin-bottom: 50px; */
 `;
 
 const HomeEvent: React.FC = () => {

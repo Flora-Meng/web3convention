@@ -129,7 +129,7 @@ export const sectionSubtitle = css`
 	color: ${darkPrimaryColor};
 	font-size: 14px;
 	font-style: italic;
-	letter-spacing: 0.05rem;
+	letter-spacing: 1px;
 	${tagDecoration()};
 	margin: 0;
 	margin-bottom: 6px;
