@@ -22,7 +22,20 @@ const CustomWidthTooltip = styled(({ className, ...props }: TooltipProps) => (
 ))({
 	[`& .${tooltipClasses.tooltip}`]: {
 		backgroundColor: whiteColor,
-		borderRadius: 0
+		borderRadius: 0,
+		transform: 'translateY(-35px) !important',
+		position: 'relative',
+		padding: '0',
+		'&::before': {
+			content: '""',
+			position: 'absolute',
+			top: '-8px',
+			left: 'calc(50% - 8px)',
+			width: '16px',
+			height: '12px',
+			backgroundColor: whiteColor,
+			clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)'
+		}
 	}
 });
 
@@ -32,15 +45,11 @@ const StyledButton = styled.button`
 	color: ${whiteColor};
 	cursor: pointer;
 	font-family: Arial-BoldMT;
-	font-size: 10px;
+	font-size: 14px;
 	font-weight: 600;
 	height: ${headerHeight};
 	letter-spacing: normal;
-	padding: 0 10px;
-	@media ${devices.largeLaptop} {
-		font-size: 14px;
-		padding: 0 19px;
-	}
+	padding: 0 19px;
 `;
 
 const NavButtonContainer = styled.div<INavButtonContainerProps>`
