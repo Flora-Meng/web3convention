@@ -12,9 +12,15 @@ interface NavBarButtonProps {
 }
 
 const NavButtonContainer = styled.div`
-	display: inline-block;
+	align-items: center;
+	display: flex;
+	height: 44px;
+	width: 100%;
 	&:hover span:before {
 		${activeNavBarTitleDecoration()}
+	}
+	&:hover {
+		background-color: #f5f5f5;
 	}
 `;
 
@@ -23,14 +29,14 @@ const CustomizedButton = styled.button`
 	border: none;
 	color: ${textColor};
 	cursor: pointer;
-	font-size: 14px;
-	font-weight: 600;
-	padding: 8px 0;
+	font-family: ArialMT;
+	font-size: 16px;
 	text-align: left;
 	width: 100%;
 `;
 
 const ButtonCtx = styled.span`
+	margin-left: 16px;
 	${navBarTitleDecoration('calc(100% + 4px)')};
 `;
 
