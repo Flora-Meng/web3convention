@@ -1,27 +1,18 @@
-import FacebookIcon from '@mui/icons-material/Facebook';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
-import Link from 'next/link';
+import backgroundGreen from 'public/images/background/not-speaker-background.png';
+import backgroundBlue from 'public/images/background/speaker-background.png';
 import styled from 'styled-components';
 
 import teamMemberList from './teamMemberList.json';
-import {
-	animation,
-	animationFillMode,
-	animationHoverImage,
-	animationHoverImageParent,
-	backdrop,
-	sectionSubtitle,
-	sectionTitle,
-	tagDecoration,
-	textEllipsis
-} from '@/styles/mixin';
+import { backdrop, sectionSubtitle, sectionTitle } from '@/styles/mixin';
 import { color, devices, sizes } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
-const { blackColor, darkPrimaryColor, primaryColor, whiteColor } = color;
+const { blackColor, whiteColor } = color;
+
+const speakerIcon = '/images/icons/speaker-icon.svg';
+const speakerArrow = '/images/icons/speaker-arrow.svg';
 
 enum ESocialMedia {
 	LINKED_IN = 'linkedIn',
@@ -30,158 +21,73 @@ enum ESocialMedia {
 }
 
 const HomeTeamContainer = styled(Grid)`
-	background-color: white;
+	background-color: black;
 `;
 
-const GridItemContainer = styled.div`
-	${animationHoverImageParent('8px')};
-	&:hover {
-		.home-team-info-container::after {
-			opacity: 0.7;
-		}
-		.home-team-info-container__description {
-			opacity: 1;
-		}
-		.home-team-info-container__social-media {
-			a:first-child {
-				${animation('fade-in-opacity-transform-to-right', '0.2s', 'linear', '0.1s', '1')};
-				${animationFillMode()};
-			}
-			a:nth-child(2) {
-				${animation('fade-in-opacity-transform-to-right', '0.2s', 'linear', '0.2s', '1')};
-				${animationFillMode()};
-			}
-			a:nth-child(3) {
-				${animation('fade-in-opacity-transform-to-right', '0.2s', 'linear', '0.3s', '1')};
-				${animationFillMode()};
-			}
-			a:nth-child(4) {
-				${animation('fade-in-opacity-transform-to-right', '0.2s', 'linear', '0.4s', '1')};
-				${animationFillMode()};
-			}
-		}
+const SpeakerArrowIconWrapper = styled.div`
+	display: none;
+	height: 20px;
+	img {
+		height: 100%;
+		width: auto;
 	}
 `;
 
-const ImageContainer = styled.div`
-	cursor: pointer;
-	height: 100vw;
+const GridItemContainer = styled.div<{ isSpeaker: boolean }>`
+	background-image: ${props =>
+		props.isSpeaker ? `url(${backgroundBlue.src})` : `url(${backgroundGreen.src})`};
+	border: solid 0.5px #383333;
+	display: flex;
+	flex-direction: column;
+	height: 300px;
 	position: relative;
-	@media ${devices.mobile} {
-		height: 50vw;
+	width: 235px;
+	@media ${devices.miniMobile} {
+		width: 100%;
+		background-size: cover;
+		background-position: center;
+		padding: 0 40px;
 	}
 	@media ${devices.tablet} {
-		height: 36vw;
+		padding: 0 18px;
 	}
 	@media ${devices.laptop} {
-		height: 340px;
-	}
-`;
-
-const StyledImage = styled(Image)`
-	${animationHoverImage('-8px')};
-	object-fit: cover;
-`;
-
-const InfoContainer = styled.div`
-	color: ${whiteColor};
-	height: 100%;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 100%;
-`;
-
-const Info = styled.div`
-	height: 100%;
-	padding: 25px 24px 20px;
-	position: relative;
-	width: 100%;
-	z-index: 0;
-	&:after {
-		-moz-transition: opacity 0.4s cubic-bezier(0.19, 0.5, 0.46, 0.88);
-		-webkit-transition: opacity 0.4s cubic-bezier(0.19, 0.5, 0.46, 0.88);
-		background: #53f6c6;
-		background: -moz-linear-gradient(225deg, #53f6c6 0, #53f6c6 0, #6e38db 100%);
-		background: -webkit-gradient(
-			linear,
-			right top,
-			left bottom,
-			color-stop(0, #53f6c6),
-			color-stop(0, #53f6c6),
-			color-stop(100%, #6e38db)
-		);
-		background: -webkit-linear-gradient(225deg, #53f6c6 0, #53f6c6 0, #6e38db 100%);
-		background: linear-gradient(225deg, #53f6c6 0, #53f6c6 0, #6e38db 100%);
-		content: '';
-		display: block;
-		height: 100%;
-		left: 0;
-		opacity: 0;
-		position: absolute;
-		top: 0;
-		transition: opacity 0.4s cubic-bezier(0.19, 0.5, 0.46, 0.88);
-		width: 100%;
-		z-index: -1;
-	}
-`;
-
-const Subtitle = styled.p`
-	color: ${darkPrimaryColor};
-	font-size: 14px;
-	font-style: italic;
-	letter-spacing: 0.05rem;
-	${tagDecoration()};
-	margin: 0;
-	${animation('fade-in-opacity-transform-to-up', '1s', 'ease', '0.4s', '1')};
-	${animationFillMode()};
-	opacity: 0;
-`;
-
-const Title = styled.h3`
-	font-size: 26px;
-	font-weight: 700;
-	line-height: 1.2;
-	margin: 0;
-	@media ${devices.tablet} {
-		font-size: 32px;
-	}
-`;
-
-const PostDescription = styled.p`
-	-moz-transition: opacity 0.5s;
-	-webkit-transition: opacity 0.5s;
-	opacity: 0;
-	transition: opacity 0.5s;
-	${textEllipsis(6)};
-`;
-
-const SocialMediaContainer = styled.div`
-	margin-top: auto;
-	a {
-		color: ${primaryColor};
-		margin-right: 12px;
-		opacity: 0;
+		transition: transform 0.3s ease-in-out;
 		&:hover {
-			color: ${whiteColor};
+			transform: translateY(-8px) !important;
+			${SpeakerArrowIconWrapper} {
+				display: block;
+			}
 		}
 	}
 `;
 
 const SectionSubtitle = styled.p`
 	${sectionSubtitle};
+	margin-top: 50px;
 `;
 
 const SectionTitle = styled.h2`
 	${sectionTitle};
+	color: ${whiteColor};
+	margin-bottom: 32px;
+	span {
+		display: block;
+	}
+	@media ${devices.tablet} {
+		span {
+			display: inline;
+		}
+		margin-bottom: 97px;
+	}
 `;
 
 const ExpectedSpeakerContainer = styled.div`
-	max-width: ${`${sizes.largeLaptop}px`};
+	background-color: ${blackColor};
 	padding: 50px 40px 60px;
 	position: relative;
-	@media ${devices.mobile} {
-		padding: 50px 100px 60px;
+	@media ${devices.miniMobile} {
+		padding: 50px 24px 60px;
 	}
 	@media ${devices.laptop} {
 		margin: 0 auto;
@@ -189,23 +95,106 @@ const ExpectedSpeakerContainer = styled.div`
 `;
 
 const Backdrop = styled.div`
-	${backdrop}
+	${backdrop};
+	color: ${whiteColor};
+	&::after {
+		background-image: none;
+	}
+	@media ${devices.miniMobile} {
+		font-size: 70px;
+		transform: translateX(-35px);
+	}
+	@media ${devices.laptop} {
+		left: 176px;
+		font-size: 230px;
+		display: inline-block;
+	}
 `;
 
 const LogoWrapper = styled.div`
-	-moz-box-shadow: 9px 9px 49px 4px rgba(0, 0, 0, 0.29);
-	-webkit-box-shadow: 9px 9px 49px 4px rgba(0, 0, 0, 0.29);
+	align-items: center;
 	background-color: white;
-	border-radius: 15px;
-	box-shadow: 9px 9px 49px 4px rgba(0, 0, 0, 0.29);
+	border-radius: 25px;
+	display: flex;
 	height: 33px;
+	justify-content: center;
+	margin-top: 8px;
+	overflow: hidden;
 	padding: 5px 15px;
 	position: absolute;
-	right: 5px;
-	top: 5px;
+	top: 0px;
+	width: 110px;
+	@media ${devices.miniMobile} {
+		right: -30px;
+	}
+	@media ${devices.tablet} {
+		right: -10px;
+	}
 	img.logo {
-		height: 100%;
+		height: auto;
 		transform: none;
+		width: 100%;
+	}
+`;
+
+const LogoSection = styled.div`
+	display: flex;
+	height: 50px;
+	justify-content: end;
+	position: relative;
+	width: 100%;
+`;
+
+const InfoSection = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	padding-top: 10px;
+`;
+const AvatarContainer = styled.div`
+	background-color: black;
+	border-radius: 50%;
+	height: 103px;
+	overflow: hidden;
+	position: relative;
+	width: 103px;
+`;
+const AvatarImage = styled(Image)`
+	display: block;
+	height: auto;
+	object-fit: cover;
+	object-position: top;
+	position: absolute;
+	width: 100%;
+`;
+const NameContainer = styled.div`
+	color: ${whiteColor};
+	font-family: Arial-BoldMT;
+	font-size: 24px;
+	padding: 16px 0 8px;
+`;
+const JobTitleContainer = styled.div`
+	color: #aaaaaa;
+	font-family: ArialMT;
+	font-size: 14px;
+	margin-right: 10px;
+`;
+
+const IconSection = styled.div`
+	align-items: center;
+	bottom: 16px;
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	width: 80%;
+`;
+const SpeakerIconWrapper = styled.div`
+	display: block;
+	height: 20px;
+	width: 90px;
+	img {
+		height: auto;
+		width: 100%;
 	}
 `;
 
@@ -213,9 +202,13 @@ const JudgeTeam: React.FC = () => {
 	return (
 		<ExpectedSpeakerContainer>
 			<SectionSubtitle>Web3 Hackathon</SectionSubtitle>
-			<SectionTitle>Judges, Speakers & Mentors</SectionTitle>
+			<SectionTitle>
+				<span>Judges, </span>
+				<span>Speakers & </span>
+				<span>Mentors</span>
+			</SectionTitle>
 			<Backdrop>Judges</Backdrop>
-			<HomeTeamContainer container>
+			<HomeTeamContainer container spacing={2}>
 				{teamMemberList.map(teamMember => {
 					const postLink = '/comingSoon';
 					return (
@@ -228,73 +221,52 @@ const JudgeTeam: React.FC = () => {
 							key={teamMember._id}
 							className="relative"
 						>
-							<GridItemContainer>
-								<ImageContainer>
-									<StyledImage
-										loader={imageLoader}
-										src={teamMember.avatarSrc}
-										alt={teamMember.name}
-										fill
-										unoptimized
-										loading="lazy"
-									/>
-								</ImageContainer>
-								<InfoContainer>
-									<Info className="home-team-info-container flex flex-col">
-										{teamMember.companySrc && (
-											<LogoWrapper>
-												<img
-													className="logo"
-													src={teamMember.companySrc}
-													alt={teamMember.name}
-												/>
-											</LogoWrapper>
-										)}
-										<PostDescription className="home-team-info-container__description">
-											{teamMember.description}
-										</PostDescription>
-										<SocialMediaContainer className="home-team-info-container__social-media">
-											{teamMember.socialMedia &&
-												Object.entries(teamMember.socialMedia).map(
-													([socialMedia, link]) => {
-														if (!link) return null;
-														let socialMediaIcon = null;
-														switch (socialMedia) {
-															case ESocialMedia.LINKED_IN: {
-																socialMediaIcon = <LinkedInIcon />;
-																break;
-															}
-															case ESocialMedia.FACEBOOK: {
-																socialMediaIcon = <FacebookIcon />;
-																break;
-															}
-															case ESocialMedia.TWITTER: {
-																socialMediaIcon = <TwitterIcon />;
-																break;
-															}
-															default: {
-																break;
-															}
-														}
-														return (
-															<Link
-																href={link}
-																target="_blank"
-																rel="noopener noreferrer"
-																key={`${teamMember._id}-${socialMedia}`}
-															>
-																{socialMediaIcon}
-															</Link>
-														);
-													}
-												)}
-										</SocialMediaContainer>
-										<Subtitle>{teamMember.jobTitle}</Subtitle>
-										<Link href={postLink}>
-											<Title>{teamMember.name}</Title>
-										</Link>
-									</Info>
-								</InfoContainer>
+							<GridItemContainer isSpeaker={teamMember.isSpeaker === 'true'}>
+								<LogoSection>
+									{teamMember.companySrc && (
+										<LogoWrapper>
+											<img
+												className="logo"
+												src={teamMember.companySrc}
+												alt={teamMember.name}
+											/>
+										</LogoWrapper>
+									)}
+								</LogoSection>
+								<InfoSection>
+									<AvatarContainer>
+										<AvatarImage
+											loader={imageLoader}
+											className="avatar"
+											src={teamMember.avatarSrc}
+											alt={teamMember.name}
+											fill
+											unoptimized
+										/>
+									</AvatarContainer>
+									<NameContainer>{teamMember.name}</NameContainer>
+									<JobTitleContainer>{teamMember.jobTitle}</JobTitleContainer>
+								</InfoSection>
+								<IconSection>
+									{teamMember.isSpeaker ? (
+										<SpeakerIconWrapper>
+											<img
+												className="speakerIcon"
+												src={speakerIcon}
+												alt="Speaker icon"
+											/>
+										</SpeakerIconWrapper>
+									) : (
+										<div style={{ width: '90px' }} />
+									)}
+									<SpeakerArrowIconWrapper>
+										<img
+											className="speakerArrow"
+											src={speakerArrow}
+											alt="Speaker more info"
+										/>
+									</SpeakerArrowIconWrapper>
+								</IconSection>
 							</GridItemContainer>
 						</Grid>
 					);
