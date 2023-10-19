@@ -54,7 +54,7 @@ const GridItemContainer = styled.div<{ isSpeaker: boolean }>`
 	@media ${devices.laptop} {
 		transition: transform 0.3s ease-in-out;
 		&:hover {
-			transform: translateY(-8px) !important;
+			transform: translateY(-8px);
 			${SpeakerArrowIconWrapper} {
 				display: block;
 			}
@@ -197,6 +197,9 @@ const SpeakerIconWrapper = styled.div`
 		width: 100%;
 	}
 `;
+const SpeakerIconPlaceholder = styled.div`
+	width: 90px;
+`;
 
 const JudgeTeam: React.FC = () => {
 	return (
@@ -210,7 +213,6 @@ const JudgeTeam: React.FC = () => {
 			<Backdrop>Judges</Backdrop>
 			<HomeTeamContainer container spacing={2}>
 				{teamMemberList.map(teamMember => {
-					const postLink = '/comingSoon';
 					return (
 						<Grid
 							item
@@ -257,7 +259,7 @@ const JudgeTeam: React.FC = () => {
 											/>
 										</SpeakerIconWrapper>
 									) : (
-										<div style={{ width: '90px' }} />
+										<SpeakerIconPlaceholder />
 									)}
 									<SpeakerArrowIconWrapper>
 										<img
