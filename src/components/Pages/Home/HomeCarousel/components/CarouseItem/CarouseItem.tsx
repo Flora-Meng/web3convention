@@ -54,23 +54,26 @@ export const Title = styled.h2<TextProps>`
 	font-size: 54px;
 	font-weight: 700;
 	line-height: 1.1;
+	letter-spacing: 1px;
+	font-family: Arial;
 	margin: 0;
 	margin-bottom: 16px;
-	opacity: 0;
-	text-shadow: 0 0 10px #000000;
+	// opacity: 0;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 	${({ isCurrent }) =>
 		isCurrent
 			? animation('fade-in-opacity-transform-to-left', '1s', 'ease', '0.7s', '1')
 			: null};
 	${({ isCurrent }) => (isCurrent ? animationFillMode() : null)};
-	@media ${devices.tablet} {
-		font-size: 90px;
-		margin-bottom: 16px;
-	}
+	// @media ${devices.tablet} {
+	// 	font-size: 90px;
+	// 	margin-bottom: 16px;
+	// }
 `;
 
 export const Subtitle = styled.p<TextProps>`
 	color: #52f6c6;
+	font-family: Arial;
 	font-size: 18px;
 	font-style: italic;
 	letter-spacing: 1px;

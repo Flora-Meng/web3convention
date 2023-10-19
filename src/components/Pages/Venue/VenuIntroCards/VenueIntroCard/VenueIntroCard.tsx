@@ -1,10 +1,11 @@
 import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import React from 'react';
 import styled from 'styled-components';
 
-import { devices } from '@/styles/variables';
+import { color, devices } from '@/styles/variables';
+
+const { descriptionColor } = color;
 
 interface IntroCardProps {
 	imageSrc: string;
@@ -13,6 +14,8 @@ interface IntroCardProps {
 }
 
 const CardContainer = styled(Card)`
+	padding: 10px 10px 0 10px;
+
 	@media ${devices.miniMobile} {
 		aspect-ratio: 1;
 		width: 100%;
@@ -25,9 +28,9 @@ const CardContainer = styled(Card)`
 		height: 26vw;
 		width: 26vw;
 	}
-	@media ${devices.desktop} {
-		max-width: 480px;
-		max-height: 480px;
+	@media ${devices.largeLaptop} {
+		max-width: 379px;
+		max-height: 390px;
 	}
 `;
 
@@ -39,7 +42,7 @@ const CoverContainer = styled(CardMedia)`
 		height: 73%;
 	}
 `;
-const ContentContainer = styled(CardContent)`
+const ContentContainer = styled.div`
 	display: grid;
 	position: relative;
 	transform: translate(0, -50%);
@@ -52,13 +55,15 @@ const ContentContainer = styled(CardContent)`
 	}
 	@media ${devices.largeLaptop} {
 		top: 13.5%;
+		margin: 0 2px;
 	}
 `;
 
 const Title = styled.text`
-	font-weight: 500;
+	font-family: Arial;
+	font-weight: 700;
 	@media ${devices.miniMobile} {
-		font-size: 4vw;
+		font-size: 22px;
 		margin-bottom: 1.4vw;
 	}
 	@media ${devices.mobile} {
@@ -70,22 +75,21 @@ const Title = styled.text`
 		margin-bottom: 5px;
 	}
 	@media ${devices.laptop} {
-		font-size: 15px;
+		font-size: 20px;
 		margin-bottom: 5px;
 	}
 	@media ${devices.largeLaptop} {
-		font-size: 18px;
+		font-size: 24px;
 		margin-bottom: 8px;
-	}
-	@media ${devices.desktop} {
-		font-size: 21px;
-		margin-bottom: 9px;
 	}
 `;
 
 const Description = styled.text`
+	color: ${descriptionColor};
+	font-family: Arial;
+	line-height: 1.29;
 	@media ${devices.miniMobile} {
-		font-size: 2.5vw;
+		font-size: 14px;
 	}
 	@media ${devices.mobile} {
 		font-size: 15px;
@@ -94,12 +98,9 @@ const Description = styled.text`
 		font-size: 11px;
 	}
 	@media ${devices.laptop} {
-		font-size: 10px;
+		font-size: 11px;
 	}
 	@media ${devices.largeLaptop} {
-		font-size: 12px;
-	}
-	@media ${devices.desktop} {
 		font-size: 14px;
 	}
 `;

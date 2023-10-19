@@ -13,13 +13,18 @@ import imageList from '@/components/Shares/PageGallery/venueImageList.json';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 import PageHead from '@/layouts/PageHead';
+import { devices } from '@/styles/variables';
 
 const Cover = styled.div`
-	background-attachment: fixed;
-	background-image: url('/images/demo/venuePage/cover.jpeg');
+	background-image: url('/images/demo/venuePage/coverMobile.jpg');
 	background-position: center;
-	background-size: contain;
-	height: 30vh;
+	background-size: cover;
+	height: 478px;
+	@media ${devices.mobile} {
+		background-image: url('/images/demo/venuePage/newCover.jpg');
+		height: 360px;
+		background-size: auto;
+	}
 `;
 
 const VenuePage = () => {
