@@ -9,6 +9,7 @@ import { devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
 const Container = styled.div`
+	margin-bottom: 73px;
 	padding: 24px;
 	@media ${devices.largeLaptop} {
 		display: flex;
@@ -28,6 +29,7 @@ const CityWrapper = styled.div`
 `;
 const Subtitle = styled.p`
 	${sectionSubtitle}
+	letter-spacing: 1px;
 	margin-bottom: 8px;
 `;
 const CityTitle = styled.p`
@@ -56,7 +58,7 @@ const ImageWrapper = styled.div`
 		position: relative;
 	}
 `;
-const BeachMorning = styled(Image)`
+const BeachEvening = styled(Image)`
 	margin: 0 0 28px 0;
 	@media ${devices.tablet} {
 		height: 378px;
@@ -68,7 +70,7 @@ const BeachMorning = styled(Image)`
 		margin: 0;
 	}
 `;
-const BeachEvening = styled(Image)`
+const BeachMorning = styled(Image)`
 	@media ${devices.tablet} {
 		height: 378px;
 	}
@@ -96,6 +98,8 @@ const GoldCoastCity = () => {
 					width={327}
 					height={378}
 					loader={imageLoader}
+					unoptimized
+					priority
 				/>
 				<BeachEvening
 					src={BeachSunset.src}
@@ -103,6 +107,8 @@ const GoldCoastCity = () => {
 					width={327}
 					height={204}
 					loader={imageLoader}
+					unoptimized
+					priority
 				/>
 			</ImageWrapper>
 		</Container>
