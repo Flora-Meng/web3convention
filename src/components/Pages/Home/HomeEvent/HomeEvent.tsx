@@ -21,9 +21,7 @@ const HomeEventContainer = styled.div`
 `;
 
 const MaskContainer = styled.div`
-	/* margin-left: 20px; */
 	position: absolute;
-	/* top: 0; */
 	@media ${devices.mobile} {
 		margin-top: 40px;
 	}
@@ -36,7 +34,6 @@ const Backdrop = styled.div`
 	${backdrop};
 	font-size: 23vw;
 	left: 0;
-	/* top: -3vw; */
 	@media ${devices.tablet} {
 		left: 60px;
 	}
@@ -53,7 +50,6 @@ const Backdrop = styled.div`
 `;
 
 const ContentContainer = styled.div`
-	/* margin: 122px 0 90px; */
 	@media ${devices.miniMobile} {
 		margin: 134px 0 40px;
 	}
@@ -75,7 +71,6 @@ const Title = styled.h2`
 
 const Subtitle = styled.p`
 	${sectionSubtitle};
-	/* margin-bottom: 50px; */
 `;
 
 const HomeEvent: React.FC = () => {
