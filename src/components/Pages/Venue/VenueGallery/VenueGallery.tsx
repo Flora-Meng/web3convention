@@ -61,7 +61,7 @@ const VenueGallery = () => {
 			<ImageWrapper>
 				<StyledImage
 					src={Dinning.src}
-					alt="Presentation"
+					alt="Dinner"
 					width={327}
 					height={283}
 					loader={imageLoader}
@@ -75,14 +75,14 @@ const VenueGallery = () => {
 				/>
 				<StyledImage
 					src={Gala.src}
-					alt="Presentation"
+					alt="Gala Setup"
 					width={327}
 					height={283}
 					loader={imageLoader}
 				/>
 				<ConsoleImage
 					src={Console.src}
-					alt="Presentation"
+					alt="Mixing Console"
 					width={327}
 					height={283}
 					loader={imageLoader}
