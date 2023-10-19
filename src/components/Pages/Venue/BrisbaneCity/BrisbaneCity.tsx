@@ -101,7 +101,6 @@ const CityscapeViewImage = styled(Image)`
 	margin: 0 0 28px 0;
 	@media ${devices.tablet} {
 		width: 327px;
-		height: auto;
 	}
 	@media ${devices.largeLaptop} {
 		position: absolute;
@@ -129,7 +128,6 @@ const DiningSceneImage = styled(Image)`
 	margin: 0 0 28px 0;
 	@media ${devices.tablet} {
 		width: 327px;
-		height: auto;
 	}
 	@media ${devices.largeLaptop} {
 		position: absolute;
@@ -156,6 +154,8 @@ const BrisBaneCity = () => {
 					width={327}
 					height={305}
 					loader={imageLoader}
+					unoptimized
+					priority
 				/>
 				<CityscapeViewImage
 					src={CityscapeView.src}
@@ -163,6 +163,8 @@ const BrisBaneCity = () => {
 					width={327}
 					height={192}
 					loader={imageLoader}
+					unoptimized
+					priority
 				/>
 				<BeachSunsetImage
 					src={BeachSunset.src}
@@ -170,6 +172,8 @@ const BrisBaneCity = () => {
 					width={327}
 					height={305}
 					loader={imageLoader}
+					unoptimized
+					priority
 				/>
 				<DiningSceneImage
 					src={DiningScene.src}
@@ -177,6 +181,8 @@ const BrisBaneCity = () => {
 					width={327}
 					height={192}
 					loader={imageLoader}
+					unoptimized
+					priority
 				/>
 			</ImageWrapper>
 		</Container>

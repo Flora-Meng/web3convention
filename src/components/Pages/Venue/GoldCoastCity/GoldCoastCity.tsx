@@ -98,6 +98,8 @@ const GoldCoastCity = () => {
 					width={327}
 					height={378}
 					loader={imageLoader}
+					unoptimized
+					priority
 				/>
 				<BeachEvening
 					src={BeachSunset.src}
@@ -105,6 +107,8 @@ const GoldCoastCity = () => {
 					width={327}
 					height={204}
 					loader={imageLoader}
+					unoptimized
+					priority
 				/>
 			</ImageWrapper>
 		</Container>
