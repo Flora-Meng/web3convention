@@ -40,7 +40,8 @@ const LeftGrid = styled(GridItem)`
 
 const RightGrid = styled(GridItem)`
 	color: ${whiteColor};
-	padding-left: 20px;
+	height: auto;
+	padding: 30px 0 30px 20px;
 	width: 100vw;
 	@media ${devices.tablet} {
 		padding-left: 50px;

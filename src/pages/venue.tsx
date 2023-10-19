@@ -3,13 +3,12 @@ import styled from 'styled-components';
 import BrisBaneCity from '@/components/Pages/Venue/BrisbaneCity';
 import GoldCoastCity from '@/components/Pages/Venue/GoldCoastCity';
 import VenueMap from '@/components/Pages/Venue/Map';
+import VenueGallery from '@/components/Pages/Venue/VenueGallery';
 import VenueIntroCards from '@/components/Pages/Venue/VenuIntroCards/VenueIntroCards';
 import PageBanner from '@/components/Shares/PageBanner';
 import bannerInfo from '@/components/Shares/PageBanner/venueBannerInfo.json';
 import PageCoverTitle from '@/components/Shares/PageCoverTitle';
 import coverText from '@/components/Shares/PageCoverTitle/venueCoverText.json';
-import PageGallery from '@/components/Shares/PageGallery';
-import imageList from '@/components/Shares/PageGallery/venueImageList.json';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 import PageHead from '@/layouts/PageHead';
@@ -49,7 +48,7 @@ const VenuePage = () => {
 			</Cover>
 			<VenueIntroCards />
 			<PageBanner bannerInfo={bannerInfo} buttonConfig={buttonConfig} />
-			<PageGallery imageList={imageList} />
+			<VenueGallery />
 			<BrisBaneCity />
 			<GoldCoastCity />
 			<VenueMap />
