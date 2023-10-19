@@ -264,7 +264,7 @@ const AgendaTable: React.FC = () => {
 						miniMobileOffset={offset * 3}
 					>
 						<Link href="/comingSoon">
-							<GridItem bgColor={itemColors[index % 5]} className="">
+							<GridItem bgColor={itemColors[index % 5]}>
 								<p>{title}</p>
 							</GridItem>
 						</Link>
