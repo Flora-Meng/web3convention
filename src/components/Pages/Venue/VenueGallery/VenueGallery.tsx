@@ -43,8 +43,8 @@ const ImageWrapper = styled.div`
 const StyledImage = styled(Image)`
 	margin-bottom: 32px;
 	@media ${devices.largeLaptop} {
-		width: 360px;
-		height: auto;
+		width: auto;
+		height: 300px;
 		margin-right: 16px;
 	}
 `;
