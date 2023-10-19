@@ -221,7 +221,7 @@ const JudgeTeam: React.FC = () => {
 							key={teamMember._id}
 							className="relative"
 						>
-							<GridItemContainer isSpeaker={teamMember.isSpeaker === 'true'}>
+							<GridItemContainer isSpeaker={teamMember.isSpeaker === true}>
 								<LogoSection>
 									{teamMember.companySrc && (
 										<LogoWrapper>

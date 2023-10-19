@@ -5,7 +5,7 @@
 		"description": "",
 		"jobTitle": "Chief Economist",
 		"avatarSrc": "/images/speakers/Robert.jpg",
-		"isSpeaker": "true"
+		"isSpeaker": true
 	},
 	{
 		"_id": "2",
@@ -26,7 +26,7 @@
 			"linkedIn": "https://www.linkedin.com/in/mrserverless/",
 			"twitter": "https://twitter.com/mrserverless"
 		},
-		"isSpeaker": "true"
+		"isSpeaker": true
 	},
 	{
 		"_id": "4",
@@ -61,7 +61,7 @@
 		"socialMedia": {
 			"linkedIn": "https://www.linkedin.com/in/kianjackson/"
 		},
-		"isSpeaker": "true"
+		"isSpeaker": true
 	},
 	{
 		"_id": "7",
@@ -73,7 +73,7 @@
 		"socialMedia": {
 			"linkedIn": "https://www.linkedin.com/in/zahir-tari-70aaa28/"
 		},
-		"isSpeaker": "true"
+		"isSpeaker": true
 	},
 	{
 		"_id": "8",
