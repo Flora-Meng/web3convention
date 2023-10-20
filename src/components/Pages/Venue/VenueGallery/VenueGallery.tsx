@@ -14,7 +14,7 @@ const Container = styled.div`
 	@media ${devices.largeLaptop} {
 		height: 700px;
 		position: relative;
-		padding: 150px 6px 150px 6px;
+		padding: 150px 6px;
 	}
 `;
 const BoldText = styled.p`
