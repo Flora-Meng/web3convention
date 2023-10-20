@@ -8,6 +8,7 @@ import {
 	Select,
 	SelectChangeEvent
 } from '@mui/material';
+import Image from 'next/image';
 import { useState } from 'react';
 import styled from 'styled-components';
 
@@ -16,26 +17,37 @@ import ThemeButton from '@/components/Shares/ThemeButton';
 import { EMAIL_SERVICE_TYPE } from '@/constants/aws';
 import sqsClient from '@/services/sqs';
 import { sectionSubtitle, sectionTitle } from '@/styles/mixin';
-import { color, devices } from '@/styles/variables';
+import { color, devices, inputColor, sizes } from '@/styles/variables';
 import generateMailParams from '@/utils/generateMailParams';
+import imageLoader from '@/utils/loader';
 
-const { blackColor, darkPrimaryColor, textColor, whiteColor } = color;
+const { blackColor, darkPrimaryColor } = color;
+const { placeholderColor } = inputColor;
 
 const ApplyToSpeakContainer = styled.div`
-	background: linear-gradient(180deg, ${blackColor}, ${whiteColor});
-	color: ${textColor};
-	padding: 100px 30px 50px;
+	background-color: ${blackColor};
+	color: ${placeholderColor};
+	display: flex;
+	justify-content: center;
+	/* padding: 100px 30px 50px; */
 	@media ${devices.mobile} {
-		padding: 15px;
+		/* padding: 15px; */
 	}
 `;
+const Wrapper = styled.div`
+	display: flex;
+	justify-content: space-evenly;
+	max-width: ${`${sizes.largeLaptop}px`};
+	width: 100%;
+`;
+
 const FromContainer = styled.div`
-	background-color: ${whiteColor};
-	box-shadow: 0 5px 21px 0 rgba(83, 246, 198, 0.37);
+	background-color: ${blackColor};
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	@media ${devices.mobile} {
+	width: 50%;
+	/* @media ${devices.mobile} {
 		padding: 40px 25px;
 	}
 	@media ${devices.tablet} {
@@ -46,7 +58,7 @@ const FromContainer = styled.div`
 	}
 	@media ${devices.largeLaptop} {
 		padding: 100px 118px 114px;
-	}
+	} */
 `;
 const TittleContainer = styled.div``;
 const Subtitle = styled.p`
@@ -55,7 +67,6 @@ const Subtitle = styled.p`
 `;
 const Title = styled.h2`
 	${sectionTitle};
-	color: ${blackColor};
 	@media ${devices.mobile} {
 		font-size: 30px;
 	}
@@ -82,7 +93,6 @@ const FromLabel = styled.span`
 `;
 const MobileContainer = styled.div`
 	display: flex;
-	justify-content: space-between;
 	@media ${devices.mobile} {
 		gap: 10px;
 	}
@@ -93,7 +103,7 @@ const StyleSelect = styled(Select)`
 `;
 
 const StyledInput = styled(Input)`
-	color: ${textColor};
+	color: ${placeholderColor};
 	@media ${devices.laptop} {
 		font-size: 18px;
 	}
@@ -105,7 +115,7 @@ const StyledInput = styled(Input)`
 	}
 	input {
 		border: none;
-		border-bottom: 1px solid ${blackColor};
+		border-bottom: 1px solid ${placeholderColor};
 		margin: 0 0 36px;
 		padding: 7px 0;
 		&:hover {
@@ -115,12 +125,27 @@ const StyledInput = styled(Input)`
 	}
 `;
 const StyledCheckBox = styled(FormControlLabel)`
-	display: flex;
-	justify-content: center;
 	@media ${devices.mobile} {
 		font-size: 10px;
 	}
 `;
+
+const Logo = styled(Image)`
+	height: auto;
+	margin-bottom: 16px;
+	opacity: 0.2;
+	padding-left: 134px;
+	width: 50%;
+
+	@media ${devices.tablet} {
+		margin-bottom: 0;
+	}
+`;
+
+const ButtonContainer = styled.div`
+	margin-top: 48px;
+`;
+
 const MainContents: React.FC = () => {
 	const [speakerData, setData] = useState<IApplyToSpeakProps>({
 		date: '18 May 2024',
@@ -197,133 +222,150 @@ const MainContents: React.FC = () => {
 	};
 	return (
 		<ApplyToSpeakContainer>
-			<FromContainer>
-				<TittleContainer>
-					<Subtitle>{`Don't miss`}</Subtitle>
-					<Title>Speaker Application</Title>
-				</TittleContainer>
-				<FormControl>
-					<FromLabel>Date:</FromLabel>
-					<StyleSelect value={speakerData.date} onChange={handleSelectChange}>
-						<MenuItem value="18 May 2024">18 May 2024</MenuItem>
-						<MenuItem value="19 May 2024">19 May 2024</MenuItem>
-					</StyleSelect>
-				</FormControl>
-				<FormControl>
-					<FromLabel>First Name:</FromLabel>
-					<StyledInput
-						type="text"
-						value={speakerData.firstName}
-						name="firstName"
-						onChange={handleInputChange}
-						required
-					/>
-				</FormControl>
-				<FormControl>
-					<FromLabel>Last Name:</FromLabel>
-					<StyledInput
-						type="text"
-						value={speakerData.lastName}
-						name="lastName"
-						onChange={handleInputChange}
-						required
-					/>
-				</FormControl>
-				<FormControl>
-					<FromLabel>Email:</FromLabel>
-					<StyledInput
-						type="email"
-						value={speakerData.email}
-						name="email"
-						onChange={handleInputChange}
-						required
-					/>
-				</FormControl>
-				<MobileContainer>
+			<Wrapper>
+				<FromContainer>
+					{/* <TittleContainer>
+						<Subtitle>{`Don't miss`}</Subtitle>
+						<Title>Speaker Application</Title>
+					</TittleContainer> */}
 					<FormControl>
-						<FromLabel className="country-code">Country Code:</FromLabel>
-						<StyledInput
-							type="tel"
-							placeholder="+61"
-							value={speakerData.countryCode}
-							name="countryCode"
-							onChange={handleInputChange}
-							required
-						/>
+						<FromLabel>Date:</FromLabel>
+						<StyleSelect value={speakerData.date} onChange={handleSelectChange}>
+							<MenuItem value="18 May 2024">18 May 2024</MenuItem>
+							<MenuItem value="19 May 2024">19 May 2024</MenuItem>
+						</StyleSelect>
 					</FormControl>
-					<FormControl>
-						<FromLabel className="mobile">Mobile Number:</FromLabel>
-						<StyledInput
-							type="tel"
-							value={speakerData.mobileNumber}
-							name="mobileNumber"
-							onChange={handleInputChange}
-							required
-						/>
-					</FormControl>
-				</MobileContainer>
-				<FormControl>
-					<FromLabel>Job Title:</FromLabel>
-					<StyledInput
-						type="text"
-						value={speakerData.jobTitle}
-						name="jobTitle"
-						onChange={handleInputChange}
-						required
-					/>
-				</FormControl>
-				<FormControl>
-					<FromLabel>Company Name:</FromLabel>
-					<StyledInput
-						type="text"
-						value={speakerData.companyName}
-						name="companyName"
-						onChange={handleInputChange}
-						required
-					/>
-				</FormControl>
-				<FormControl>
-					<FromLabel>Company Bio:</FromLabel>
-					<StyledInput
-						value={speakerData.companyBio}
-						name="companyBio"
-						onChange={handleInputChange}
-						required
-					/>
-				</FormControl>
-				<FormControl>
-					<FromLabel>Speaker Bio:</FromLabel>
-					<StyledInput
-						value={speakerData.speakerBio}
-						name="speakerBio"
-						onChange={handleInputChange}
-						required
-					/>
-				</FormControl>
-				<FormControl>
-					<FromLabel>Speech Topic:</FromLabel>
-					<StyledInput
-						type="text"
-						value={speakerData.speechTopic}
-						name="speechTopic"
-						onChange={handleInputChange}
-					/>
-				</FormControl>
-				<FormControl>
-					<StyledCheckBox
-						control={
-							<Checkbox
-								checked={speakerData.agreeToTerms}
-								name="agreeToTerms"
+					<MobileContainer>
+						<FormControl fullWidth>
+							<FromLabel>First Name:</FromLabel>
+							<StyledInput
+								type="text"
+								value={speakerData.firstName}
+								name="firstName"
 								onChange={handleInputChange}
 								required
 							/>
-						}
-						label="I have read and agree to abide with the Terms and conditions."
-					/>
-				</FormControl>
-				<ThemeButton onClick={submitHandle}>Submit</ThemeButton>
-			</FromContainer>
+						</FormControl>
+						<FormControl fullWidth>
+							<FromLabel>Last Name:</FromLabel>
+							<StyledInput
+								type="text"
+								value={speakerData.lastName}
+								name="lastName"
+								onChange={handleInputChange}
+								required
+							/>
+						</FormControl>
+					</MobileContainer>
+					<FormControl>
+						<FromLabel>Email:</FromLabel>
+						<StyledInput
+							type="email"
+							value={speakerData.email}
+							name="email"
+							onChange={handleInputChange}
+							required
+						/>
+					</FormControl>
+					<MobileContainer>
+						<FormControl fullWidth>
+							<FromLabel className="country-code">Country Code:</FromLabel>
+							<StyledInput
+								type="tel"
+								placeholder="+61"
+								value={speakerData.countryCode}
+								name="countryCode"
+								onChange={handleInputChange}
+								required
+							/>
+						</FormControl>
+						<FormControl fullWidth>
+							<FromLabel className="mobile">Mobile Number:</FromLabel>
+							<StyledInput
+								type="tel"
+								value={speakerData.mobileNumber}
+								name="mobileNumber"
+								onChange={handleInputChange}
+								required
+							/>
+						</FormControl>
+					</MobileContainer>
+					<FormControl>
+						<FromLabel>Job Title:</FromLabel>
+						<StyledInput
+							type="text"
+							value={speakerData.jobTitle}
+							name="jobTitle"
+							onChange={handleInputChange}
+							required
+						/>
+					</FormControl>
+					<FormControl>
+						<FromLabel>Company Name:</FromLabel>
+						<StyledInput
+							type="text"
+							value={speakerData.companyName}
+							name="companyName"
+							onChange={handleInputChange}
+							required
+						/>
+					</FormControl>
+					<FormControl>
+						<FromLabel>Company Bio:</FromLabel>
+						<StyledInput
+							value={speakerData.companyBio}
+							name="companyBio"
+							onChange={handleInputChange}
+							required
+						/>
+					</FormControl>
+					<FormControl>
+						<FromLabel>Speaker Bio:</FromLabel>
+						<StyledInput
+							value={speakerData.speakerBio}
+							name="speakerBio"
+							onChange={handleInputChange}
+							required
+						/>
+					</FormControl>
+					<FormControl>
+						<FromLabel>Speech Topic:</FromLabel>
+						<StyledInput
+							type="text"
+							value={speakerData.speechTopic}
+							name="speechTopic"
+							onChange={handleInputChange}
+						/>
+					</FormControl>
+					<FormControl>
+						<StyledCheckBox
+							control={
+								<Checkbox
+									checked={speakerData.agreeToTerms}
+									name="agreeToTerms"
+									onChange={handleInputChange}
+									required
+								/>
+							}
+							label="I have read and agree to abide with the Terms and conditions."
+						/>
+					</FormControl>
+					<ButtonContainer>
+						<ThemeButton onClick={submitHandle} width="180px">
+							Submit
+						</ThemeButton>
+					</ButtonContainer>
+				</FromContainer>
+				<Logo
+					loader={imageLoader}
+					unoptimized
+					src="/web3-logo-white.svg"
+					alt="logo"
+					width={140}
+					height={40}
+					priority
+				/>
+			</Wrapper>
 			<ApplicationModal open={openModal} handleClose={handleClose} message={message} />
 		</ApplyToSpeakContainer>
 	);

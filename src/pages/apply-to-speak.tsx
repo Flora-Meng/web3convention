@@ -9,15 +9,16 @@ import { devices } from '@/styles/variables';
 
 const Cover = styled.div`
 	background-image: url('/images/hackathon-bg.jpeg');
-	background-position: 50%;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	height: 360px;
 	@media ${devices.miniMobile} {
-		height: 85vh;
+		height: 478px;
 	}
-	@media ${devices.tablet} {
+	/* @media ${devices.tablet} {
 		height: 50vh;
-	}
+	} */
 `;
 
 const ApplyToSpeakPage = () => {
@@ -35,6 +36,7 @@ const ApplyToSpeakPage = () => {
 				<Header />
 				<StageCoverTitle />
 			</Cover>
+
 			<MainContents />
 			<Footer />
 		</>

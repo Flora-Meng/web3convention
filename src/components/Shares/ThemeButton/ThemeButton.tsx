@@ -12,7 +12,11 @@ interface ThemeButtonProps {
 	onClick?: React.MouseEventHandler;
 }
 
-const StyledButton = styled.button`
+type StyledButtonProps = {
+	width?: string;
+};
+
+const StyledButton = styled.button<StyledButtonProps>`
 	background-color: ${primaryColor};
 	border: none;
 	border-radius: 30px;
@@ -24,6 +28,7 @@ const StyledButton = styled.button`
 	line-height: 24px;
 	padding: 11px 33px;
 	text-transform: uppercase;
+	width: ${props => props.width || 'auto'};
 	&:hover {
 		background-color: ${primaryColor};
 		svg {
@@ -74,9 +79,14 @@ const ButtonContent = styled.p`
 	}
 `;
 
-const ThemeButton: React.FC<ThemeButtonProps> = ({ children, href, ...props }) => {
+const ThemeButton: React.FC<ThemeButtonProps & { width?: string }> = ({
+	children,
+	width,
+	href,
+	...props
+}) => {
 	const renderButton = (
-		<StyledButton {...props}>
+		<StyledButton {...props} width={width}>
 			<ButtonContent>
 				<span>{children}</span>
 				<ArrowForwardIosIcon />
