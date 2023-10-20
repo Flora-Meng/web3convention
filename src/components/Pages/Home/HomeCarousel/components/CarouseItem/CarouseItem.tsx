@@ -51,7 +51,6 @@ const InfoContainer = styled.div`
 `;
 
 export const Title = styled.h2<TextProps>`
-	font-family: Arial;
 	font-size: 54px;
 	font-weight: 700;
 	letter-spacing: 1px;
