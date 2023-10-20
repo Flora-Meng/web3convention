@@ -16,7 +16,6 @@ import ApplicationModal from '@/components/Shares/ApplicationModal/ApplicationMo
 import ThemeButton from '@/components/Shares/ThemeButton';
 import { EMAIL_SERVICE_TYPE } from '@/constants/aws';
 import sqsClient from '@/services/sqs';
-import { sectionSubtitle, sectionTitle } from '@/styles/mixin';
 import { color, devices, inputColor, sizes } from '@/styles/variables';
 import generateMailParams from '@/utils/generateMailParams';
 import imageLoader from '@/utils/loader';
@@ -29,53 +28,43 @@ const ApplyToSpeakContainer = styled.div`
 	color: ${placeholderColor};
 	display: flex;
 	justify-content: center;
-	/* padding: 100px 30px 50px; */
-	@media ${devices.mobile} {
-		/* padding: 15px; */
+	@media ${devices.miniMobile} {
+		padding: 18px 24px;
 	}
 `;
 const Wrapper = styled.div`
-	display: flex;
-	justify-content: space-evenly;
 	max-width: ${`${sizes.largeLaptop}px`};
 	width: 100%;
+	@media ${devices.Mobile} {
+		display: flex;
+		flex-direction: column;
+	}
+	@media ${devices.largeLaptop} {
+		display: flex;
+		flex-direction: row;
+	}
+`;
+
+const Logo = styled(Image)`
+	height: auto;
+	margin-bottom: 16px;
+	opacity: 0.2;
+
+	@media ${devices.miniMobile} {
+		width: 100%;
+		padding-left: 0;
+		margin-top: 48px;
+	}
+	@media ${devices.largeLaptop} {
+		padding-left: 134px;
+		width: 50%;
+	}
 `;
 
 const FromContainer = styled.div`
 	background-color: ${blackColor};
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	width: 50%;
-	/* @media ${devices.mobile} {
-		padding: 40px 25px;
-	}
-	@media ${devices.tablet} {
-		padding: 80px 50px;
-	}
-	@media ${devices.laptop} {
-		padding: 60px 100px 100px;
-	}
-	@media ${devices.largeLaptop} {
-		padding: 100px 118px 114px;
-	} */
-`;
-const TittleContainer = styled.div``;
-const Subtitle = styled.p`
-	${sectionSubtitle};
-	margin-bottom: 5px;
-`;
-const Title = styled.h2`
-	${sectionTitle};
-	@media ${devices.mobile} {
-		font-size: 30px;
-	}
-	@media ${devices.tablet} {
-		font-size: 40px;
-	}
-	@media ${devices.laptop} {
-		font-size: 50px;
-	}
+	display: grid;
+	grid-template-columns: 1fr;
 `;
 const FromLabel = styled.span`
 	margin-bottom: 5px;
@@ -92,9 +81,17 @@ const FromLabel = styled.span`
 	}
 `;
 const MobileContainer = styled.div`
-	display: flex;
-	@media ${devices.mobile} {
+	@media ${devices.miniMobile} {
 		gap: 10px;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-auto-rows: auto;
+	}
+	@media ${devices.largeLaptop} {
+		gap: 32px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-auto-rows: auto;
 	}
 `;
 const StyleSelect = styled(Select)`
@@ -130,20 +127,12 @@ const StyledCheckBox = styled(FormControlLabel)`
 	}
 `;
 
-const Logo = styled(Image)`
-	height: auto;
-	margin-bottom: 16px;
-	opacity: 0.2;
-	padding-left: 134px;
-	width: 50%;
-
-	@media ${devices.tablet} {
-		margin-bottom: 0;
-	}
-`;
-
 const ButtonContainer = styled.div`
 	margin-top: 48px;
+
+	@media ${devices.largeLaptop} {
+		width: 180px;
+	}
 `;
 
 const MainContents: React.FC = () => {
@@ -224,10 +213,6 @@ const MainContents: React.FC = () => {
 		<ApplyToSpeakContainer>
 			<Wrapper>
 				<FromContainer>
-					{/* <TittleContainer>
-						<Subtitle>{`Don't miss`}</Subtitle>
-						<Title>Speaker Application</Title>
-					</TittleContainer> */}
 					<FormControl>
 						<FromLabel>Date:</FromLabel>
 						<StyleSelect value={speakerData.date} onChange={handleSelectChange}>
@@ -351,7 +336,7 @@ const MainContents: React.FC = () => {
 						/>
 					</FormControl>
 					<ButtonContainer>
-						<ThemeButton onClick={submitHandle} width="180px">
+						<ThemeButton onClick={submitHandle} width="100%">
 							Submit
 						</ThemeButton>
 					</ButtonContainer>

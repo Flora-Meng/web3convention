@@ -14,7 +14,7 @@ const Container = styled.div`
 	margin: 0 auto;
 	max-width: 1440px;
 	position: relative;
-	@media ${devices.mobile} {
+	@media ${devices.miniMobile} {
 		padding: 0 20px 0 20px;
 		margin-top: 150px;
 	}
