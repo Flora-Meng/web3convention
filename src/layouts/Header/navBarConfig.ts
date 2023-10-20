@@ -23,6 +23,10 @@ export const navItemsConfig: { [K in ENavItem]: INavItem } = {
 export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 	[ENavItem.ABOUT]: [
 		{
+			title: 'Stage',
+			path: '/stages'
+		},
+		{
 			title: 'Venue',
 			path: '/venue'
 		}
