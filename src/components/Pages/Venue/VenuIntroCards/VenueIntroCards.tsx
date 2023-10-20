@@ -2,43 +2,50 @@ import styled from 'styled-components';
 
 import intro from './VenueIntroCard/intro.json';
 import VenueIntroCard from '@/components/Pages/Venue/VenuIntroCards/VenueIntroCard';
-import { devices } from '@/styles/variables';
+import { color, devices } from '@/styles/variables';
+
+const { blackColor } = color;
+
+const OuterContainer = styled.div`
+	background-color: ${blackColor};
+	padding: 40px 0px 145px 0px;
+	@media ${devices.mobile} {
+		padding: 90px 0px 164px 0px;
+	}
+`;
 
 const Container = styled.div`
-	max-width: 1600px;
+	margin: 0px auto;
+	max-width: 1200px;
 	position: relative;
 	@media ${devices.miniMobile} {
 		display: grid;
 		row-gap: 20px;
-		width: calc(100vw - 100px);
-		margin: 30px auto;
+		width: calc(100vw - 48px);
 	}
 	@media ${devices.tablet} {
 		display: flex;
 		justify-content: space-between;
 		width: calc(100vw - 100px);
-		margin: 60px auto;
 	}
 	@media ${devices.laptop} {
 		width: calc(100vw - 200px);
-		margin: 80px auto;
-	}
-	@media ${devices.desktop} {
-		margin: 100px auto;
 	}
 `;
 const VenueIntroCards: React.FC = () => {
 	return (
-		<Container>
-			{intro.map(cardContent => (
-				<VenueIntroCard
-					key={cardContent._id}
-					imageSrc={cardContent.imageSrc}
-					title={cardContent.title}
-					description={cardContent.text}
-				/>
-			))}
-		</Container>
+		<OuterContainer>
+			<Container>
+				{intro.map(cardContent => (
+					<VenueIntroCard
+						key={cardContent._id}
+						imageSrc={cardContent.imageSrc}
+						title={cardContent.title}
+						description={cardContent.text}
+					/>
+				))}
+			</Container>
+		</OuterContainer>
 	);
 };
 
