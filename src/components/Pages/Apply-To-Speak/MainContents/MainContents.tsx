@@ -12,6 +12,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 
 import renderFormControl from './components/RenderFormControl';
+import formControlsData from './form-controls-data';
 import ApplicationModal from '@/components/Shares/ApplicationModal/ApplicationModal';
 import ThemeButton from '@/components/Shares/ThemeButton';
 import { EMAIL_SERVICE_TYPE } from '@/constants/aws';
@@ -119,25 +120,6 @@ const ButtonContainer = styled.div`
 	}
 `;
 
-const formControlsData = [
-	{ labelText: 'First Name:', type: 'text', name: 'firstName', required: true },
-	{ labelText: 'Last Name:', type: 'text', name: 'lastName', required: true },
-	{ labelText: 'Email:', type: 'email', name: 'email', required: true },
-	{
-		labelText: 'Country Code:',
-		type: 'tel',
-		name: 'countryCode',
-		required: true,
-		placeholder: '+61'
-	},
-	{ labelText: 'Mobile Number:', type: 'tel', name: 'mobileNumber', required: true },
-	{ labelText: 'Job Title:', type: 'text', name: 'jobTitle', required: true },
-	{ labelText: 'Company Name:', type: 'text', name: 'companyName', required: true },
-	{ labelText: 'Company Bio:', type: 'text', name: 'companyBio', required: true },
-	{ labelText: 'Speaker Bio:', type: 'text', name: 'speakerBio', required: true },
-	{ labelText: 'Speech Topic:', type: 'text', name: 'speechTopic', required: false }
-];
-
 const MainContents: React.FC = () => {
 	const [speakerData, setData] = useState<IApplyToSpeakProps>({
 		date: '18 May 2024',
@@ -182,20 +164,11 @@ const MainContents: React.FC = () => {
 		setOpenModal(false);
 		setMessage('error');
 	};
+	const hasEmptyValues = (object: IApplyToSpeakProps): boolean => {
+		return Object.values(object).some(value => value === '' || value === undefined);
+	};
 	const submitHandle = async () => {
-		if (
-			speakerData.date === '' ||
-			speakerData.firstName === '' ||
-			speakerData.lastName === '' ||
-			speakerData.email === '' ||
-			speakerData.countryCode === '' ||
-			speakerData.mobileNumber === '' ||
-			speakerData.jobTitle === '' ||
-			speakerData.companyName === '' ||
-			speakerData.companyBio === '' ||
-			speakerData.speakerBio === '' ||
-			!speakerData.agreeToTerms
-		) {
+		if (hasEmptyValues(speakerData) || !speakerData.agreeToTerms) {
 			setMessage('error');
 			setOpenModal(true);
 		} else {
