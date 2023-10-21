@@ -15,11 +15,11 @@ const Container = styled.div`
 	max-width: 1440px;
 	position: relative;
 	@media ${devices.miniMobile} {
-		padding: 0 20px 0 20px;
+		padding: 0 20px 0 18px;
 		margin-top: 150px;
 	}
 	@media ${devices.tablet} {
-		padding: 0 30px 0 40px;
+		padding: 0 30px 0 18px;
 		margin-top: 50px;
 	}
 `;
