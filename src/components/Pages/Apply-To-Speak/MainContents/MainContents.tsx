@@ -63,8 +63,27 @@ const Logo = styled(Image)`
 
 const FromContainer = styled.div`
 	background-color: ${blackColor};
-	display: grid;
-	grid-template-columns: 1fr;
+	@media ${devices.largeLaptop} {
+		display: grid;
+		gap: 32px;
+		grid-auto-rows: auto;
+		grid-template-columns: repeat(2, 1fr);
+		> *:nth-child(1),
+		> *:nth-child(4),
+		> *:nth-child(7),
+		> *:nth-child(8),
+		> *:nth-child(9),
+		> *:nth-child(10),
+		> *:nth-child(11) {
+			grid-column: span 2;
+		}
+	}
+
+	@media ${devices.miniMobile} {
+		display: grid;
+		gap: 15px;
+		grid-auto-rows: auto;
+	}
 `;
 const FromLabel = styled.span`
 	margin-bottom: 5px;
@@ -80,20 +99,7 @@ const FromLabel = styled.span`
 		font-size: 24px;
 	}
 `;
-const MobileContainer = styled.div`
-	@media ${devices.miniMobile} {
-		gap: 10px;
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-auto-rows: auto;
-	}
-	@media ${devices.largeLaptop} {
-		gap: 32px;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-auto-rows: auto;
-	}
-`;
+
 const StyleSelect = styled(Select)`
 	margin: 0 0 36px;
 	padding: 7px 0;
@@ -135,6 +141,33 @@ const ButtonContainer = styled.div`
 	}
 `;
 
+const formControlsData = [
+	{ labelText: 'First Name:', type: 'text', name: 'firstName', required: true },
+	{ labelText: 'Last Name:', type: 'text', name: 'lastName', required: true },
+	{ labelText: 'Email:', type: 'email', name: 'email', required: true },
+	{
+		labelText: 'Country Code:',
+		type: 'tel',
+		name: 'countryCode',
+		required: true,
+		placeholder: '+61'
+	},
+	{ labelText: 'Mobile Number:', type: 'tel', name: 'mobileNumber', required: true },
+	{ labelText: 'Job Title:', type: 'text', name: 'jobTitle', required: true },
+	{ labelText: 'Company Name:', type: 'text', name: 'companyName', required: true },
+	{ labelText: 'Company Bio:', type: 'text', name: 'companyBio', required: true }, // Assuming type as 'text'
+	{ labelText: 'Speaker Bio:', type: 'text', name: 'speakerBio', required: true },
+	{ labelText: 'Speech Topic:', type: 'text', name: 'speechTopic', required: false }
+];
+
+interface FormControlData {
+	labelText: string;
+	type: string;
+	name: string;
+	placeholder?: string;
+	required: boolean;
+}
+
 const MainContents: React.FC = () => {
 	const [speakerData, setData] = useState<IApplyToSpeakProps>({
 		date: '18 May 2024',
@@ -152,6 +185,7 @@ const MainContents: React.FC = () => {
 	});
 	const [message, setMessage] = useState('error');
 	const [openModal, setOpenModal] = useState(false);
+
 	const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		event.preventDefault();
 		if (event.target.tagName === 'INPUT') {
@@ -209,6 +243,20 @@ const MainContents: React.FC = () => {
 			await sqsClient.send(new SendMessageCommand(mailParams));
 		}
 	};
+	const renderFormControl = (control: FormControlData) => (
+		<FormControl key={control.name}>
+			<FromLabel>{control.labelText}</FromLabel>
+			<StyledInput
+				type={control.type}
+				value={speakerData[control.name as keyof IApplyToSpeakProps]}
+				name={control.name}
+				onChange={handleInputChange}
+				required={control.required}
+				placeholder={control.placeholder ? control.placeholder : undefined}
+			/>
+		</FormControl>
+	);
+
 	return (
 		<ApplyToSpeakContainer>
 			<Wrapper>
@@ -220,108 +268,9 @@ const MainContents: React.FC = () => {
 							<MenuItem value="19 May 2024">19 May 2024</MenuItem>
 						</StyleSelect>
 					</FormControl>
-					<MobileContainer>
-						<FormControl fullWidth>
-							<FromLabel>First Name:</FromLabel>
-							<StyledInput
-								type="text"
-								value={speakerData.firstName}
-								name="firstName"
-								onChange={handleInputChange}
-								required
-							/>
-						</FormControl>
-						<FormControl fullWidth>
-							<FromLabel>Last Name:</FromLabel>
-							<StyledInput
-								type="text"
-								value={speakerData.lastName}
-								name="lastName"
-								onChange={handleInputChange}
-								required
-							/>
-						</FormControl>
-					</MobileContainer>
-					<FormControl>
-						<FromLabel>Email:</FromLabel>
-						<StyledInput
-							type="email"
-							value={speakerData.email}
-							name="email"
-							onChange={handleInputChange}
-							required
-						/>
-					</FormControl>
-					<MobileContainer>
-						<FormControl fullWidth>
-							<FromLabel className="country-code">Country Code:</FromLabel>
-							<StyledInput
-								type="tel"
-								placeholder="+61"
-								value={speakerData.countryCode}
-								name="countryCode"
-								onChange={handleInputChange}
-								required
-							/>
-						</FormControl>
-						<FormControl fullWidth>
-							<FromLabel className="mobile">Mobile Number:</FromLabel>
-							<StyledInput
-								type="tel"
-								value={speakerData.mobileNumber}
-								name="mobileNumber"
-								onChange={handleInputChange}
-								required
-							/>
-						</FormControl>
-					</MobileContainer>
-					<FormControl>
-						<FromLabel>Job Title:</FromLabel>
-						<StyledInput
-							type="text"
-							value={speakerData.jobTitle}
-							name="jobTitle"
-							onChange={handleInputChange}
-							required
-						/>
-					</FormControl>
-					<FormControl>
-						<FromLabel>Company Name:</FromLabel>
-						<StyledInput
-							type="text"
-							value={speakerData.companyName}
-							name="companyName"
-							onChange={handleInputChange}
-							required
-						/>
-					</FormControl>
-					<FormControl>
-						<FromLabel>Company Bio:</FromLabel>
-						<StyledInput
-							value={speakerData.companyBio}
-							name="companyBio"
-							onChange={handleInputChange}
-							required
-						/>
-					</FormControl>
-					<FormControl>
-						<FromLabel>Speaker Bio:</FromLabel>
-						<StyledInput
-							value={speakerData.speakerBio}
-							name="speakerBio"
-							onChange={handleInputChange}
-							required
-						/>
-					</FormControl>
-					<FormControl>
-						<FromLabel>Speech Topic:</FromLabel>
-						<StyledInput
-							type="text"
-							value={speakerData.speechTopic}
-							name="speechTopic"
-							onChange={handleInputChange}
-						/>
-					</FormControl>
+
+					{formControlsData.map(renderFormControl)}
+
 					<FormControl>
 						<StyledCheckBox
 							control={
