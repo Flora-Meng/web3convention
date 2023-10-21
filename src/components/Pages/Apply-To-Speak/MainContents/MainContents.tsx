@@ -185,7 +185,6 @@ const MainContents: React.FC = () => {
 	});
 	const [message, setMessage] = useState('error');
 	const [openModal, setOpenModal] = useState(false);
-
 	const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		event.preventDefault();
 		if (event.target.tagName === 'INPUT') {
