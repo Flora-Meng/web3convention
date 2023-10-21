@@ -155,7 +155,7 @@ const formControlsData = [
 	{ labelText: 'Mobile Number:', type: 'tel', name: 'mobileNumber', required: true },
 	{ labelText: 'Job Title:', type: 'text', name: 'jobTitle', required: true },
 	{ labelText: 'Company Name:', type: 'text', name: 'companyName', required: true },
-	{ labelText: 'Company Bio:', type: 'text', name: 'companyBio', required: true }, // Assuming type as 'text'
+	{ labelText: 'Company Bio:', type: 'text', name: 'companyBio', required: true },
 	{ labelText: 'Speaker Bio:', type: 'text', name: 'speakerBio', required: true },
 	{ labelText: 'Speech Topic:', type: 'text', name: 'speechTopic', required: false }
 ];
