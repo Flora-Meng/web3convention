@@ -3,7 +3,6 @@ import {
 	Checkbox,
 	FormControl,
 	FormControlLabel,
-	Input,
 	MenuItem,
 	Select,
 	SelectChangeEvent
@@ -12,6 +11,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import styled from 'styled-components';
 
+import renderFormControl from './components/RenderFormControl';
 import ApplicationModal from '@/components/Shares/ApplicationModal/ApplicationModal';
 import ThemeButton from '@/components/Shares/ThemeButton';
 import { EMAIL_SERVICE_TYPE } from '@/constants/aws';
@@ -20,7 +20,7 @@ import { color, devices, inputColor, sizes } from '@/styles/variables';
 import generateMailParams from '@/utils/generateMailParams';
 import imageLoader from '@/utils/loader';
 
-const { blackColor, darkPrimaryColor } = color;
+const { blackColor } = color;
 const { placeholderColor } = inputColor;
 
 const ApplyToSpeakContainer = styled.div`
@@ -105,28 +105,6 @@ const StyleSelect = styled(Select)`
 	padding: 7px 0;
 `;
 
-const StyledInput = styled(Input)`
-	color: ${placeholderColor};
-	@media ${devices.laptop} {
-		font-size: 18px;
-	}
-	&::before {
-		display: none;
-	}
-	&:after {
-		display: none;
-	}
-	input {
-		border: none;
-		border-bottom: 1px solid ${placeholderColor};
-		margin: 0 0 36px;
-		padding: 7px 0;
-		&:hover {
-			border-color: ${darkPrimaryColor};
-			transition: border-color 0.3s ease;
-		}
-	}
-`;
 const StyledCheckBox = styled(FormControlLabel)`
 	@media ${devices.mobile} {
 		font-size: 10px;
@@ -159,14 +137,6 @@ const formControlsData = [
 	{ labelText: 'Speaker Bio:', type: 'text', name: 'speakerBio', required: true },
 	{ labelText: 'Speech Topic:', type: 'text', name: 'speechTopic', required: false }
 ];
-
-interface FormControlData {
-	labelText: string;
-	type: string;
-	name: string;
-	placeholder?: string;
-	required: boolean;
-}
 
 const MainContents: React.FC = () => {
 	const [speakerData, setData] = useState<IApplyToSpeakProps>({
@@ -242,19 +212,6 @@ const MainContents: React.FC = () => {
 			await sqsClient.send(new SendMessageCommand(mailParams));
 		}
 	};
-	const renderFormControl = (control: FormControlData) => (
-		<FormControl key={control.name}>
-			<FromLabel>{control.labelText}</FromLabel>
-			<StyledInput
-				type={control.type}
-				value={speakerData[control.name as keyof IApplyToSpeakProps]}
-				name={control.name}
-				onChange={handleInputChange}
-				required={control.required}
-				placeholder={control.placeholder ? control.placeholder : undefined}
-			/>
-		</FormControl>
-	);
 
 	return (
 		<ApplyToSpeakContainer>
