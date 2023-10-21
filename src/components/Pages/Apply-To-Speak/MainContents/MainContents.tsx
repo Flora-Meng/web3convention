@@ -15,7 +15,7 @@ import renderFormControl from './components/RenderFormControl';
 import formControlsData from './form-controls-data';
 import ApplicationModal from '@/components/Shares/ApplicationModal/ApplicationModal';
 import ThemeButton from '@/components/Shares/ThemeButton';
-import { DATE_OPTIONS, DateOption } from '@/constants/apply-to-speak-dates';
+import { DATE_OPTIONS } from '@/constants/apply-to-speak-dates';
 import { EMAIL_SERVICE_TYPE } from '@/constants/aws';
 import sqsClient from '@/services/sqs';
 import { color, devices, inputColor, sizes } from '@/styles/variables';
