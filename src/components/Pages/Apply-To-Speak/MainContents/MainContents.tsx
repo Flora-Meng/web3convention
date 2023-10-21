@@ -15,6 +15,7 @@ import renderFormControl from './components/RenderFormControl';
 import formControlsData from './form-controls-data';
 import ApplicationModal from '@/components/Shares/ApplicationModal/ApplicationModal';
 import ThemeButton from '@/components/Shares/ThemeButton';
+import { DATE_OPTIONS, DateOption } from '@/constants/apply-to-speak-dates';
 import { EMAIL_SERVICE_TYPE } from '@/constants/aws';
 import sqsClient from '@/services/sqs';
 import { color, devices, inputColor, sizes } from '@/styles/variables';
@@ -193,8 +194,11 @@ const MainContents: React.FC = () => {
 					<FormControl>
 						<FromLabel>Date:</FromLabel>
 						<StyleSelect value={speakerData.date} onChange={handleSelectChange}>
-							<MenuItem value="18 May 2024">18 May 2024</MenuItem>
-							<MenuItem value="19 May 2024">19 May 2024</MenuItem>
+							{DATE_OPTIONS.map(option => (
+								<MenuItem value={option.value} key={option.value}>
+									{option.label}
+								</MenuItem>
+							))}
 						</StyleSelect>
 					</FormControl>
 
