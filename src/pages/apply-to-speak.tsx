@@ -8,17 +8,14 @@ import PageHead from '@/layouts/PageHead/PageHead';
 import { devices } from '@/styles/variables';
 
 const Cover = styled.div`
-	background-image: url('/images/hackathon-bg.jpeg');
+	background-image: url('/images/background/applyToSpeakHeaderBG.png');
 	background-position: center;
-	background-repeat: no-repeat;
 	background-size: cover;
 	height: 360px;
+
 	@media ${devices.miniMobile} {
 		height: 478px;
 	}
-	/* @media ${devices.tablet} {
-		height: 50vh;
-	} */
 `;
 
 const ApplyToSpeakPage = () => {
