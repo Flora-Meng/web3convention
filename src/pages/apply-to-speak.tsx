@@ -33,7 +33,6 @@ const ApplyToSpeakPage = () => {
 				<Header />
 				<StageCoverTitle />
 			</Cover>
-
 			<MainContents />
 			<Footer />
 		</>
