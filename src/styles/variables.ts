@@ -12,7 +12,7 @@ export enum EDeviceSize {
 }
 
 export const sizes: ISize = {
-	miniMobile: 320,
+	miniMobile: 375,
 	mobile: 576,
 	tablet: 768,
 	laptop: 1024,
@@ -39,7 +39,8 @@ export const color: IColor = {
 	textColor: '#282828',
 	blackColor: '#000',
 	warningColor: '#fb394a',
-	InfoColor: '#77b1f5'
+	InfoColor: '#77b1f5',
+	descriptionColor: '#333'
 };
 
 export const inputColor: IInputColor = {

@@ -19,12 +19,15 @@ interface PageCoverTitleProps {
 const Container = styled.div`
 	color: ${whiteColor};
 	margin: 0 auto;
-	max-width: 1600px;
+	max-width: 1200px;
 	position: relative;
-	top: 50%;
+	top: 70%;
 	transform: translate(0, -95%);
+	@media ${devices.mobile} {
+		top: 50%;
+	}
 	@media ${devices.miniMobile} {
-		width: calc(100vw - 100px);
+		width: calc(100vw - 48px);
 	}
 	@media ${devices.laptop} {
 		width: calc(100vw - 200px);
@@ -34,15 +37,12 @@ const Container = styled.div`
 const CoverSubtitle = styled(Subtitle)`
 	color: ${primaryColor};
 	@media ${devices.miniMobile} {
-		font-size: 10px;
-	}
-	@media ${devices.tablet} {
-		font-size: 13px;
-	}
-	@media ${devices.largeLaptop} {
 		font-size: 16px;
 	}
-	@media ${devices.desktop} {
+	@media ${devices.tablet} {
+		font-size: 16px;
+	}
+	@media ${devices.largeLaptop} {
 		font-size: 18px;
 	}
 `;
@@ -50,16 +50,13 @@ const CoverSubtitle = styled(Subtitle)`
 const CoverTitle = styled(Title)`
 	white-space: pre-wrap;
 	@media ${devices.miniMobile} {
-		font-size: 38px;
+		font-size: 54px;
 	}
 	@media ${devices.tablet} {
 		font-size: 60px;
 	}
 	@media ${devices.largeLaptop} {
 		font-size: 70px;
-	}
-	@media ${devices.desktop} {
-		font-size: 90px;
 	}
 `;
 

@@ -74,7 +74,7 @@ const AccordionDetails = styled(MuiAccordionDetails)`
 
 const SubNavItem = styled.div<NavItemProps>`
 	border-bottom: 1px solid #edeff2;
-	font-size: 13px;
+	font-size: 15px;
 	font-weight: 600;
 	p {
 		margin: 12px 0;
