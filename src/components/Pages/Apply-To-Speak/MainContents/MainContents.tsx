@@ -5,8 +5,10 @@ import {
 	FormControlLabel,
 	MenuItem,
 	Select,
-	SelectChangeEvent
+	SelectChangeEvent,
+	TextField
 } from '@mui/material';
+import { TextFieldProps as MuiTextFieldProps } from '@mui/material/TextField';
 import Image from 'next/image';
 import { useState } from 'react';
 import styled from 'styled-components';
@@ -22,8 +24,12 @@ import { color, devices, inputColor, sizes } from '@/styles/variables';
 import generateMailParams from '@/utils/generateMailParams';
 import imageLoader from '@/utils/loader';
 
-const { blackColor } = color;
+const { blackColor, darkPrimaryColor } = color;
 const { placeholderColor } = inputColor;
+
+type TextFieldProps = MuiTextFieldProps & {
+	customColor?: string;
+};
 
 const ApplyToSpeakContainer = styled.div`
 	background-color: ${blackColor};
@@ -64,7 +70,7 @@ const Logo = styled(Image)`
 `;
 
 const FromContainer = styled.div`
-	background-color: ${blackColor};
+	/* background-color: ${blackColor}; */
 	@media ${devices.largeLaptop} {
 		display: grid;
 		gap: 32px;
@@ -87,7 +93,7 @@ const FromContainer = styled.div`
 		grid-auto-rows: auto;
 	}
 `;
-const FromLabel = styled.span`
+const FormLabel = styled.span`
 	margin-bottom: 5px;
 	&.mobile {
 		@media ${devices.tablet} {
@@ -102,9 +108,26 @@ const FromLabel = styled.span`
 	}
 `;
 
-const StyleSelect = styled(Select)`
+const StyleSelect = styled(TextField)<TextFieldProps>`
+	color: ${placeholderColor};
 	margin: 0 0 36px;
 	padding: 7px 0;
+
+	& .MuiInputBase-input {
+		color: ${placeholderColor};
+	}
+	.MuiInput-underline:after {
+		border-bottom: 1px solid ${darkPrimaryColor};
+	}
+	& .MuiInput-underline:before {
+		border-bottom-color: ${placeholderColor};
+	}
+	&:hover .MuiInput-underline:not(.Mui-disabled):before {
+		border-bottom: 1px solid ${darkPrimaryColor};
+	}
+`;
+const StyleMenu = styled(MenuItem)`
+	color: ${placeholderColor};
 `;
 
 const StyledCheckBox = styled(FormControlLabel)`
@@ -154,7 +177,9 @@ const MainContents: React.FC = () => {
 			}
 		}
 	};
-	const handleSelectChange = (event: SelectChangeEvent<unknown>) => {
+	const handleSelectChange = (
+		event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+	) => {
 		event.preventDefault();
 		setData({
 			...speakerData,
@@ -192,12 +217,19 @@ const MainContents: React.FC = () => {
 			<Wrapper>
 				<FromContainer>
 					<FormControl>
-						<FromLabel>Date:</FromLabel>
-						<StyleSelect value={speakerData.date} onChange={handleSelectChange}>
+						<FormLabel>Date:</FormLabel>
+						<StyleSelect
+							name="date"
+							value={speakerData.date}
+							onChange={handleSelectChange}
+							select
+							variant="standard"
+							// focused
+						>
 							{DATE_OPTIONS.map(option => (
-								<MenuItem value={option.value} key={option.value}>
+								<StyleMenu key={option.value} value={option.value}>
 									{option.label}
-								</MenuItem>
+								</StyleMenu>
 							))}
 						</StyleSelect>
 					</FormControl>
