@@ -21,7 +21,7 @@ const Container = styled.div`
 	margin: 0 auto;
 	max-width: 1200px;
 	position: relative;
-	top: 70%;
+	top: 360px;
 	transform: translate(0, -95%);
 	@media ${devices.mobile} {
 		top: 50%;
