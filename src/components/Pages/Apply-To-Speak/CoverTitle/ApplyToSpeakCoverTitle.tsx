@@ -19,7 +19,7 @@ const Container = styled.div`
 		margin-top: 150px;
 	}
 	@media ${devices.tablet} {
-		padding: 0 30px 0 18px;
+		padding: 0 30px 0 0;
 		margin-top: 50px;
 	}
 `;

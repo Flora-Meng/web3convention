@@ -24,7 +24,7 @@ import { color, devices, inputColor, sizes } from '@/styles/variables';
 import generateMailParams from '@/utils/generateMailParams';
 import imageLoader from '@/utils/loader';
 
-const { blackColor, darkPrimaryColor } = color;
+const { blackColor, darkPrimaryColor, lightTextColor } = color;
 const { placeholderColor } = inputColor;
 
 type TextFieldProps = MuiTextFieldProps & {
@@ -70,7 +70,6 @@ const Logo = styled(Image)`
 `;
 
 const FromContainer = styled.div`
-	/* background-color: ${blackColor}; */
 	@media ${devices.largeLaptop} {
 		display: grid;
 		gap: 32px;
