@@ -88,6 +88,10 @@ const FromContainer = styled.div`
 		}
 	}
 
+	> *:nth-child(6) {
+		margin-bottom: 80px;
+	}
+
 	@media ${devices.miniMobile} {
 		display: grid;
 		gap: 15px;
