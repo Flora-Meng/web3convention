@@ -84,7 +84,7 @@ const FromContainer = styled.div`
 		margin-bottom: 80px;
 	}
 	> *:nth-child(13) {
-		margin-top: 33px;
+		margin: 33px 0 49px;
 	}
 
 	@media ${devices.miniMobile} {
