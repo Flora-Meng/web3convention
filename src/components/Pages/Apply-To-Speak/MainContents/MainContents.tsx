@@ -27,6 +27,7 @@ const ApplyToSpeakContainer = styled.div`
 	background-color: ${blackColor};
 	color: ${placeholderColor};
 	display: flex;
+	font-family: Arial;
 	justify-content: center;
 	@media ${devices.miniMobile} {
 		padding: 18px 24px;
