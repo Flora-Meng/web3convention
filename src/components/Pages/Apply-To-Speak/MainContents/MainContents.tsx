@@ -1,13 +1,5 @@
 import { SendMessageCommand } from '@aws-sdk/client-sqs';
-import {
-	Checkbox,
-	FormControl,
-	FormControlLabel,
-	MenuItem,
-	Select,
-	SelectChangeEvent,
-	TextField
-} from '@mui/material';
+import { Checkbox, FormControl, FormControlLabel, MenuItem, TextField } from '@mui/material';
 import { TextFieldProps as MuiTextFieldProps } from '@mui/material/TextField';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -24,7 +16,7 @@ import { color, devices, inputColor, sizes } from '@/styles/variables';
 import generateMailParams from '@/utils/generateMailParams';
 import imageLoader from '@/utils/loader';
 
-const { blackColor, darkPrimaryColor, lightTextColor } = color;
+const { blackColor, darkPrimaryColor } = color;
 const { placeholderColor } = inputColor;
 
 type TextFieldProps = MuiTextFieldProps & {
@@ -91,6 +83,9 @@ const FromContainer = styled.div`
 	> *:nth-child(6) {
 		margin-bottom: 80px;
 	}
+	> *:nth-child(13) {
+		margin-top: 33px;
+	}
 
 	@media ${devices.miniMobile} {
 		display: grid;
@@ -139,11 +134,18 @@ const StyledCheckBox = styled(FormControlLabel)`
 	@media ${devices.mobile} {
 		font-size: 10px;
 	}
+	margin-top: -35px;
+	& .MuiCheckbox-root {
+		color: ${placeholderColor};
+	}
+
+	& .Mui-checked {
+		color: ${darkPrimaryColor};
+	}
 `;
 
 const ButtonContainer = styled.div`
 	margin-left: 0;
-	/* margin-top: 48px; */
 
 	@media ${devices.largeLaptop} {
 		width: 180px;
@@ -230,7 +232,6 @@ const MainContents: React.FC = () => {
 							onChange={handleSelectChange}
 							select
 							variant="standard"
-							// focused
 						>
 							{DATE_OPTIONS.map(option => (
 								<StyleMenu key={option.value} value={option.value}>
