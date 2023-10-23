@@ -81,7 +81,9 @@ const FromContainer = styled.div`
 		> *:nth-child(8),
 		> *:nth-child(9),
 		> *:nth-child(10),
-		> *:nth-child(11) {
+		> *:nth-child(11),
+		> *:nth-child(12),
+		> *:nth-child(13) {
 			grid-column: span 2;
 		}
 	}
@@ -136,7 +138,8 @@ const StyledCheckBox = styled(FormControlLabel)`
 `;
 
 const ButtonContainer = styled.div`
-	margin-top: 48px;
+	margin-left: 0;
+	/* margin-top: 48px; */
 
 	@media ${devices.largeLaptop} {
 		width: 180px;
