@@ -14,12 +14,9 @@ interface IntroCardProps {
 }
 
 const CardContainer = styled(Card)`
+	aspect-ratio: 1;
 	padding: 10px 10px 0 10px;
-
-	@media ${devices.miniMobile} {
-		aspect-ratio: 1;
-		width: 100%;
-	}
+	width: 100%;
 	@media ${devices.tablet} {
 		aspect-ratio: 3/5;
 		width: 28vw;
@@ -35,16 +32,17 @@ const CardContainer = styled(Card)`
 `;
 
 const CoverContainer = styled(CardMedia)`
-	@media ${devices.miniMobile} {
-		height: 66%;
-	}
+	height: 66%;
+
 	@media ${devices.largeLaptop} {
 		height: 73%;
 	}
 `;
 const ContentContainer = styled.div`
 	display: grid;
+	margin: 0 2%;
 	position: relative;
+	top: 17%;
 	transform: translate(0, -50%);
 	@media ${devices.miniMobile} {
 		top: 17%;
@@ -61,7 +59,9 @@ const ContentContainer = styled.div`
 
 const Title = styled.text`
 	font-family: Arial;
+	font-size: 18px;
 	font-weight: 700;
+	margin-bottom: 1.4vw;
 	@media ${devices.miniMobile} {
 		font-size: 22px;
 		margin-bottom: 1.4vw;
@@ -87,6 +87,7 @@ const Title = styled.text`
 const Description = styled.text`
 	color: ${descriptionColor};
 	font-family: Arial;
+	font-size: 12px;
 	line-height: 1.29;
 	@media ${devices.miniMobile} {
 		font-size: 14px;

@@ -15,14 +15,13 @@ const OuterContainer = styled.div`
 `;
 
 const Container = styled.div`
+	display: grid;
 	margin: 0px auto;
-	max-width: 1200px;
+	max-width: 1440px;
 	position: relative;
-	@media ${devices.miniMobile} {
-		display: grid;
-		row-gap: 20px;
-		width: calc(100vw - 48px);
-	}
+	row-gap: 20px;
+	width: calc(100vw - 48px);
+
 	@media ${devices.tablet} {
 		display: flex;
 		justify-content: space-between;
