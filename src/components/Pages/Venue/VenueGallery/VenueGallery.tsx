@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 
-import Presentation from '@/assets/images/brisbane-auditorium-presentation.png';
-import Gala from '@/assets/images/brisbane-event-gala-setup.png';
-import Dinning from '@/assets/images/brisbane-gallery-dining-setup.png';
-import Console from '@/assets/images/brisbane-stage-mixing-console.png';
+import Lobby from '@/assets/images/brisbane-busy-lobby.jpg';
+import ConcertLight from '@/assets/images/brisbane-concert-lights.jpg';
+import Building from '@/assets/images/brisbane-modern-building.jpg';
+import TradeShow from '@/assets/images/brisbane-trade-show.jpg';
 import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
@@ -43,12 +43,12 @@ const ImageWrapper = styled.div`
 const StyledImage = styled(Image)`
 	margin-bottom: 32px;
 	@media ${devices.largeLaptop} {
-		width: auto;
+		width: 345px;
 		height: 300px;
 		margin-right: 16px;
 	}
 `;
-const ConsoleImage = styled(StyledImage)`
+const LobbyImage = styled(StyledImage)`
 	margin-bottom: 113px;
 	@media ${devices.largeLaptop} {
 		margin-right: 0;
@@ -61,7 +61,7 @@ const VenueGallery = () => {
 			<BoldText>BCEC</BoldText>
 			<ImageWrapper>
 				<StyledImage
-					src={Dinning.src}
+					src={ConcertLight.src}
 					alt="Dinner"
 					width={327}
 					height={283}
@@ -70,7 +70,7 @@ const VenueGallery = () => {
 					priority
 				/>
 				<StyledImage
-					src={Presentation.src}
+					src={TradeShow.src}
 					alt="Presentation"
 					width={327}
 					height={283}
@@ -79,7 +79,7 @@ const VenueGallery = () => {
 					priority
 				/>
 				<StyledImage
-					src={Gala.src}
+					src={Building.src}
 					alt="Gala Setup"
 					width={327}
 					height={283}
@@ -87,8 +87,8 @@ const VenueGallery = () => {
 					unoptimized
 					priority
 				/>
-				<ConsoleImage
-					src={Console.src}
+				<LobbyImage
+					src={Lobby.src}
 					alt="Mixing Console"
 					width={327}
 					height={283}
