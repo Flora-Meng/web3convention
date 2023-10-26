@@ -37,7 +37,8 @@ const ImageWrapper = styled.div`
 	flex-direction: column;
 	@media ${devices.largeLaptop} {
 		flex-direction: row;
-		justify-content: center;
+		justify-content: space-evenly;
+		width: 100%;
 	}
 `;
 const StyledImage = styled(Image)`
@@ -46,6 +47,10 @@ const StyledImage = styled(Image)`
 		width: 345px;
 		height: 300px;
 		margin-right: 16px;
+	}
+	@media ${devices.desktop} {
+		width: 460px;
+		height: 350px;
 	}
 `;
 const LobbyImage = styled(StyledImage)`
