@@ -9,7 +9,7 @@ import { devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
 const Container = styled.div`
-	margin-bottom: 73px;
+	margin-bottom: 49px;
 	padding: 24px;
 	@media ${devices.largeLaptop} {
 		display: flex;
@@ -58,21 +58,10 @@ const ImageWrapper = styled.div`
 		position: relative;
 	}
 `;
-const BeachEvening = styled(Image)`
-	margin: 0 0 28px 0;
-	@media ${devices.tablet} {
-		height: 378px;
-		margin: 0 28px 0px 0;
-	}
-	@media ${devices.largeLaptop} {
-		width: 589px;
-		height: 680px;
-		margin: 0;
-	}
-`;
 const BeachMorning = styled(Image)`
 	@media ${devices.tablet} {
 		height: 378px;
+		margin: 0 28px 0px 0;
 	}
 	@media ${devices.largeLaptop} {
 		position: absolute;
@@ -80,6 +69,17 @@ const BeachMorning = styled(Image)`
 		height: 368px;
 		top: 380px;
 		left: 440px;
+	}
+`;
+const BeachEvening = styled(Image)`
+	margin-bottom: 28px;
+	@media ${devices.tablet} {
+		height: 378px;
+	}
+	@media ${devices.largeLaptop} {
+		width: 589px;
+		height: 680px;
+		margin: 0;
 	}
 `;
 
@@ -92,18 +92,18 @@ const GoldCoastCity = () => {
 				<CityDescription>{cityInformation.GoldCoast.description}</CityDescription>
 			</CityWrapper>
 			<ImageWrapper>
-				<BeachMorning
-					src={BeachDaytime.src}
-					alt="Gold Coast Beach 1"
+				<BeachEvening
+					src={BeachSunset.src}
+					alt="Gold Coast Beach 2"
 					width={327}
 					height={378}
 					loader={imageLoader}
 					unoptimized
 					priority
 				/>
-				<BeachEvening
-					src={BeachSunset.src}
-					alt="Gold Coast Beach 2"
+				<BeachMorning
+					src={BeachDaytime.src}
+					alt="Gold Coast Beach 1"
 					width={327}
 					height={204}
 					loader={imageLoader}
