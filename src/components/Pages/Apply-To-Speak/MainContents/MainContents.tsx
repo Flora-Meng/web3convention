@@ -6,7 +6,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 
 import renderFormControl from './components/RenderFormControl';
-import formControlsData from './form-controls-data';
+import { formControlsJobData, formControlsSpeakerData } from './form-controls-data';
 import ApplicationModal from '@/components/Shares/ApplicationModal/ApplicationModal';
 import ThemeButton from '@/components/Shares/ThemeButton';
 import { DATE_OPTIONS } from '@/constants/apply-to-speak-dates';
@@ -17,7 +17,7 @@ import generateMailParams from '@/utils/generateMailParams';
 import imageLoader from '@/utils/loader';
 
 const { blackColor, darkPrimaryColor } = color;
-const { placeholderColor } = inputColor;
+const { formLabelColor } = inputColor;
 
 type TextFieldProps = MuiTextFieldProps & {
 	customColor?: string;
@@ -25,7 +25,7 @@ type TextFieldProps = MuiTextFieldProps & {
 
 const ApplyToSpeakContainer = styled.div`
 	background-color: ${blackColor};
-	color: ${placeholderColor};
+	color: ${formLabelColor};
 	display: flex;
 	font-family: Arial;
 	justify-content: center;
@@ -62,30 +62,19 @@ const Logo = styled(Image)`
 	}
 `;
 
-const FromContainer = styled.div`
+const FormWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+`;
+
+const FormContainer = styled.div`
+	margin-bottom: 80px;
 	@media ${devices.largeLaptop} {
 		display: grid;
 		gap: 32px;
 		grid-auto-rows: auto;
 		grid-template-columns: repeat(2, 1fr);
-		> *:nth-child(1),
-		> *:nth-child(4),
-		> *:nth-child(7),
-		> *:nth-child(8),
-		> *:nth-child(9),
-		> *:nth-child(10),
-		> *:nth-child(11),
-		> *:nth-child(12),
-		> *:nth-child(13) {
-			grid-column: span 2;
-		}
-	}
-
-	> *:nth-child(6) {
-		margin-bottom: 80px;
-	}
-	> *:nth-child(13) {
-		margin: 33px 0 49px;
 	}
 
 	@media ${devices.miniMobile} {
@@ -110,34 +99,35 @@ const FormLabel = styled.span`
 `;
 
 const StyleSelect = styled(TextField)<TextFieldProps>`
-	color: ${placeholderColor};
+	color: ${formLabelColor};
 	margin: 0 0 36px;
 	padding: 7px 0;
 
 	& .MuiInputBase-input {
-		color: ${placeholderColor};
+		color: ${formLabelColor};
 	}
 	.MuiInput-underline:after {
 		border-bottom: 1px solid ${darkPrimaryColor};
 	}
 	& .MuiInput-underline:before {
-		border-bottom-color: ${placeholderColor};
+		border-bottom-color: ${formLabelColor};
 	}
 	&:hover .MuiInput-underline:not(.Mui-disabled):before {
 		border-bottom: 1px solid ${darkPrimaryColor};
 	}
 `;
 const StyleMenu = styled(MenuItem)`
-	color: ${placeholderColor};
+	color: ${formLabelColor};
 `;
 
 const StyledCheckBox = styled(FormControlLabel)`
-	@media ${devices.mobile} {
-		font-size: 10px;
+	@media ${devices.miniMobile} {
+		font-size: 12 px;
+		line-height: 1.5;
 	}
-	margin-top: -35px;
+	margin: -13px 0 75px;
 	& .MuiCheckbox-root {
-		color: ${placeholderColor};
+		color: ${formLabelColor};
 	}
 
 	& .Mui-checked {
@@ -224,7 +214,7 @@ const MainContents: React.FC = () => {
 	return (
 		<ApplyToSpeakContainer>
 			<Wrapper>
-				<FromContainer>
+				<FormWrapper>
 					<FormControl>
 						<FormLabel>Date:</FormLabel>
 						<StyleSelect
@@ -241,8 +231,19 @@ const MainContents: React.FC = () => {
 							))}
 						</StyleSelect>
 					</FormControl>
+					<FormContainer>
+						{formControlsSpeakerData.map(control =>
+							renderFormControl(
+								control,
+								control.labelText === 'First Name:' ||
+									control.labelText === 'Last Name:' ||
+									control.labelText === 'Country Code:' ||
+									control.labelText === 'Mobile Number:'
+							)
+						)}
+					</FormContainer>
 
-					{formControlsData.map(renderFormControl)}
+					{formControlsJobData.map(control => renderFormControl(control, false))}
 
 					<FormControl>
 						<StyledCheckBox
@@ -262,7 +263,7 @@ const MainContents: React.FC = () => {
 							Submit
 						</ThemeButton>
 					</ButtonContainer>
-				</FromContainer>
+				</FormWrapper>
 				<Logo
 					loader={imageLoader}
 					unoptimized

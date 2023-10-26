@@ -7,7 +7,8 @@ import { color, devices, inputColor } from '@/styles/variables';
 const { darkPrimaryColor } = color;
 const { placeholderColor } = inputColor;
 
-const FromLabel = styled.span`
+const FormLabel = styled.span`
+	font-size: 16px;
 	margin-bottom: 5px;
 	&.mobile {
 		@media ${devices.tablet} {
@@ -16,9 +17,6 @@ const FromLabel = styled.span`
 		@media ${devices.laptop} {
 			width: 400px;
 		}
-	}
-	@media ${devices.laptop} {
-		font-size: 24px;
 	}
 `;
 
@@ -45,16 +43,25 @@ const StyledInput = styled(Input)`
 	}
 `;
 
-const renderFormControl = (control: IFormControlData) => (
-	<FormControl key={control.name}>
-		<FromLabel>{control.labelText}</FromLabel>
-		<StyledInput
-			type={control.type}
-			name={control.name}
-			required={control.required}
-			placeholder={control.placeholder ? control.placeholder : undefined}
-		/>
-	</FormControl>
+const FormGrid = styled.div<{ isTwoColumn: boolean }>`
+	@media ${devices.largeLaptop} {
+		grid-column: ${props => (props.isTwoColumn ? 'span 1' : 'span 2')};
+	}
+	width: 100%;
+`;
+
+const renderFormControl = (control: IFormControlData, isTwoColumn: boolean) => (
+	<FormGrid isTwoColumn={isTwoColumn}>
+		<FormControl key={control.name} fullWidth>
+			<FormLabel>{control.labelText}</FormLabel>
+			<StyledInput
+				type={control.type}
+				name={control.name}
+				required={control.required}
+				placeholder={control.placeholder ? control.placeholder : undefined}
+			/>
+		</FormControl>
+	</FormGrid>
 );
 
 export default renderFormControl;
