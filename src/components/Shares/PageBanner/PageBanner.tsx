@@ -28,7 +28,7 @@ const GridItem = styled.div<LeftGridProps>`
 	background-image: url(${({ imageSrc }) => imageSrc});
 	background-position: 50% 50%;
 	background-size: cover;
-	height: 745px;
+	height: auto;
 `;
 
 const LeftGrid = styled(GridItem)`
