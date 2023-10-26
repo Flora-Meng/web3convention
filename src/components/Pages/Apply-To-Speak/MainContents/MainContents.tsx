@@ -84,6 +84,7 @@ const FormContainer = styled.div`
 	}
 `;
 const FormLabel = styled.span`
+	font-size: 16px;
 	margin-bottom: 5px;
 	&.mobile {
 		@media ${devices.tablet} {
@@ -93,11 +94,7 @@ const FormLabel = styled.span`
 			width: 400px;
 		}
 	}
-	@media ${devices.laptop} {
-		font-size: 24px;
-	}
 `;
-
 const StyleSelect = styled(TextField)<TextFieldProps>`
 	color: ${formLabelColor};
 	margin: 0 0 36px;
