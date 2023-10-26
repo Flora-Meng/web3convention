@@ -136,8 +136,6 @@ const StyledCheckBox = styled(FormControlLabel)`
 `;
 
 const ButtonContainer = styled.div`
-	margin-left: 0;
-
 	@media ${devices.largeLaptop} {
 		width: 180px;
 	}
