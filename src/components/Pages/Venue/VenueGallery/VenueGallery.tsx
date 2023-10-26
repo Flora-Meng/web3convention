@@ -14,7 +14,7 @@ const Container = styled.div`
 	@media ${devices.largeLaptop} {
 		height: 700px;
 		position: relative;
-		padding: 150px 6px;
+		padding: 150px 16px;
 	}
 `;
 const BoldText = styled.p`
@@ -51,6 +51,7 @@ const StyledImage = styled(Image)`
 const ConsoleImage = styled(StyledImage)`
 	margin-bottom: 113px;
 	@media ${devices.largeLaptop} {
+		margin-right: 0;
 		margin-bottom: 32px;
 	}
 `;
@@ -65,6 +66,8 @@ const VenueGallery = () => {
 					width={327}
 					height={283}
 					loader={imageLoader}
+					unoptimized
+					priority
 				/>
 				<StyledImage
 					src={Presentation.src}
@@ -72,6 +75,8 @@ const VenueGallery = () => {
 					width={327}
 					height={283}
 					loader={imageLoader}
+					unoptimized
+					priority
 				/>
 				<StyledImage
 					src={Gala.src}
@@ -79,6 +84,8 @@ const VenueGallery = () => {
 					width={327}
 					height={283}
 					loader={imageLoader}
+					unoptimized
+					priority
 				/>
 				<ConsoleImage
 					src={Console.src}
@@ -86,6 +93,8 @@ const VenueGallery = () => {
 					width={327}
 					height={283}
 					loader={imageLoader}
+					unoptimized
+					priority
 				/>
 			</ImageWrapper>
 		</Container>
