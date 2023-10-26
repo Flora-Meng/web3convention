@@ -11,15 +11,16 @@ const { whiteColor, primaryColor } = color;
 
 const Container = styled.div`
 	color: ${whiteColor};
+	font-family: Arial;
 	margin: 0 auto;
 	max-width: 1440px;
 	position: relative;
-	@media ${devices.mobile} {
-		padding: 0 20px 0 20px;
+	@media ${devices.miniMobile} {
+		padding: 0 20px 0 18px;
 		margin-top: 150px;
 	}
 	@media ${devices.tablet} {
-		padding: 0 30px 0 40px;
+		padding: 0 30px 0 0;
 		margin-top: 50px;
 	}
 `;

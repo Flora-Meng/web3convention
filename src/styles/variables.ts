@@ -12,7 +12,7 @@ export enum EDeviceSize {
 }
 
 export const sizes: ISize = {
-	miniMobile: 375,
+	miniMobile: 320,
 	mobile: 576,
 	tablet: 768,
 	laptop: 1024,
@@ -45,7 +45,8 @@ export const color: IColor = {
 
 export const inputColor: IInputColor = {
 	borderColor: '#cacaca',
-	placeholderColor: '#d3d4d5'
+	placeholderColor: '#d3d4d5',
+	formLabelColor: '#a4a4a4'
 };
 
 export const headerHeight = '100px';
