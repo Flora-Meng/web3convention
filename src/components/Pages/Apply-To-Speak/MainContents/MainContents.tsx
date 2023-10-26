@@ -11,9 +11,11 @@ import ApplicationModal from '@/components/Shares/ApplicationModal/ApplicationMo
 import ThemeButton from '@/components/Shares/ThemeButton';
 import { DATE_OPTIONS } from '@/constants/apply-to-speak-dates';
 import { EMAIL_SERVICE_TYPE } from '@/constants/aws';
+import useHandleInputChange from '@/hooks/useHandleInputChange';
 import sqsClient from '@/services/sqs';
 import { color, devices, inputColor, sizes } from '@/styles/variables';
 import generateMailParams from '@/utils/generateMailParams';
+import hasEmptyValues from '@/utils/hasEmptyValues';
 import imageLoader from '@/utils/loader';
 
 const { blackColor, darkPrimaryColor } = color;
@@ -34,14 +36,13 @@ const ApplyToSpeakContainer = styled.div`
 	}
 `;
 const Wrapper = styled.div`
+	display: flex;
 	max-width: ${`${sizes.largeLaptop}px`};
 	width: 100%;
 	@media ${devices.Mobile} {
-		display: flex;
 		flex-direction: column;
 	}
 	@media ${devices.largeLaptop} {
-		display: flex;
 		flex-direction: row;
 	}
 `;
@@ -69,16 +70,15 @@ const FormWrapper = styled.div`
 `;
 
 const FormContainer = styled.div`
+	display: grid;
 	margin-bottom: 80px;
 	@media ${devices.largeLaptop} {
-		display: grid;
 		gap: 32px;
 		grid-auto-rows: auto;
 		grid-template-columns: repeat(2, 1fr);
 	}
 
 	@media ${devices.miniMobile} {
-		display: grid;
 		gap: 15px;
 		grid-auto-rows: auto;
 	}
@@ -139,7 +139,7 @@ const ButtonContainer = styled.div`
 `;
 
 const MainContents: React.FC = () => {
-	const [speakerData, setData] = useState<IApplyToSpeakProps>({
+	const { state: speakerData, handleInputChange } = useHandleInputChange({
 		date: '18 May 2024',
 		firstName: '',
 		lastName: '',
@@ -155,38 +155,19 @@ const MainContents: React.FC = () => {
 	});
 	const [message, setMessage] = useState('error');
 	const [openModal, setOpenModal] = useState(false);
-	const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-		event.preventDefault();
-		if (event.target.tagName === 'INPUT') {
-			if (event.target.type === 'checkbox') {
-				setData({
-					...speakerData,
-					[event.target.name]: event.target.checked
-				});
-			} else {
-				setData({
-					...speakerData,
-					[event.target.name]: event.target.value
-				});
-			}
-		}
-	};
 	const handleSelectChange = (
 		event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
 	) => {
 		event.preventDefault();
-		setData({
-			...speakerData,
-			[event.target.name]: event.target.value
-		});
+		const { name, value } = event.target;
+		handleInputChange({ target: { name, value } } as React.ChangeEvent<HTMLInputElement>);
 	};
+
 	const handleClose = () => {
 		setOpenModal(false);
 		setMessage('error');
 	};
-	const hasEmptyValues = (object: IApplyToSpeakProps): boolean => {
-		return Object.values(object).some(value => value === '' || value === undefined);
-	};
+
 	const submitHandle = async () => {
 		if (hasEmptyValues(speakerData) || !speakerData.agreeToTerms) {
 			setMessage('error');
