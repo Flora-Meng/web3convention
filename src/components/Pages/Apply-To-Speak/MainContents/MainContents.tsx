@@ -48,7 +48,6 @@ const Wrapper = styled.div`
 
 const Logo = styled(Image)`
 	height: auto;
-	margin-bottom: 16px;
 	opacity: 0.2;
 
 	@media ${devices.miniMobile} {
@@ -59,6 +58,7 @@ const Logo = styled(Image)`
 	@media ${devices.largeLaptop} {
 		padding-left: 134px;
 		width: 50%;
+		padding-bottom: 108px;
 	}
 `;
 
