@@ -28,7 +28,7 @@ const GridItem = styled.div<LeftGridProps>`
 	background-image: url(${({ imageSrc }) => imageSrc});
 	background-position: 50% 50%;
 	background-size: cover;
-	height: 745px;
+	height: auto;
 `;
 
 const LeftGrid = styled(GridItem)`
@@ -40,7 +40,8 @@ const LeftGrid = styled(GridItem)`
 
 const RightGrid = styled(GridItem)`
 	color: ${whiteColor};
-	padding-left: 20px;
+	height: auto;
+	padding: 30px 0 30px 20px;
 	width: 100vw;
 	@media ${devices.tablet} {
 		padding-left: 50px;

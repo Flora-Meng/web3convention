@@ -19,16 +19,15 @@ interface PageCoverTitleProps {
 const Container = styled.div`
 	color: ${whiteColor};
 	margin: 0 auto;
-	max-width: 1200px;
+	max-width: 1440px;
 	position: relative;
-	top: 70%;
+	top: 300px;
 	transform: translate(0, -95%);
+	width: calc(100vw - 40px);
 	@media ${devices.mobile} {
 		top: 50%;
 	}
-	@media ${devices.miniMobile} {
-		width: calc(100vw - 48px);
-	}
+
 	@media ${devices.laptop} {
 		width: calc(100vw - 200px);
 	}
@@ -48,7 +47,9 @@ const CoverSubtitle = styled(Subtitle)`
 `;
 
 const CoverTitle = styled(Title)`
+	font-size: 48px;
 	white-space: pre-wrap;
+
 	@media ${devices.miniMobile} {
 		font-size: 54px;
 	}

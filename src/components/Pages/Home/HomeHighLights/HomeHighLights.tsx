@@ -8,27 +8,32 @@ import { devices } from '@/styles/variables';
 
 const Backdrop = styled.div`
 	${backdrop};
-	font-size: 60px;
-	left: -10px;
-	top: -50px;
+	font-size: 70px;
+	left: -4px;
+	top: -95px;
 	@media ${devices.laptop} {
-		font-size: 200px;
-		top: 0;
-		left: 50px;
+		font-size: 230px;
+		top: -25px;
+		left: 100px;
 	}
 `;
 
 const HomeHighLightsContainer = styled(Box)`
 	display: flex;
 	flex-direction: column;
-	margin: 81px 24px;
+	margin: 120px auto;
+	max-width: 320px;
 	position: relative;
 	@media ${devices.laptop} {
-		margin: 182px 340px;
+		max-width: 1440px;
 	}
 `;
 const SectionTitle = styled.h2`
 	${sectionTitle};
+	margin-bottom: 20px;
+	@media ${devices.laptop} {
+		margin-bottom: 64px;
+	}
 `;
 
 const SectionSubtitle = styled.p`
