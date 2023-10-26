@@ -39,7 +39,7 @@ const VenueMap = () => {
 	const render = (status: Status) => {
 		return <h1>{status}</h1>;
 	};
-	const position = { lat: -37.824560656658456, lng: 144.9554286682185 };
+	const position = { lat: -27.476389, lng: 153.018333 };
 	return (
 		<Wrapper apiKey="AIzaSyDCKxgat91L8LiFigmKSwlcuO1_IUoBR5g" render={render}>
 			<GoogleMap center={position} zoom={17}>
