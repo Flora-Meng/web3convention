@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import PageCoverTitle from '@/components/Shares/PageCoverTitle';
-import coverText from '@/components/Shares/PageCoverTitle/venueCoverText.json';
+import coverText from '@/components/Shares/PageCoverTitle/generalEventsCoverText.json';
 import Header from '@/layouts/Header/Header';
 import PageHead from '@/layouts/PageHead/PageHead';
 import { devices } from '@/styles/variables';
