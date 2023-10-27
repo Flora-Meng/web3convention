@@ -8,7 +8,7 @@ import SubMenu from './components/SubMenu';
 import ENavItem from '@/constants/nav';
 import { navItemsConfig, subNavItemsConfig } from '@/layouts/Header/navBarConfig';
 import { activeNavBarTitleDecoration, navBarTitleDecoration } from '@/styles/mixin';
-import { color, devices, headerHeight } from '@/styles/variables';
+import { color, headerHeight } from '@/styles/variables';
 
 const { whiteColor } = color;
 
