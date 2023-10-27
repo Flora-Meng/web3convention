@@ -1,16 +1,17 @@
+import React from 'react';
 import styled from 'styled-components';
 
-import StageCoverTitle from '@/components/Pages/Apply-To-Speak/CoverTitle';
-import MainContents from '@/components/Pages/Apply-To-Speak/MainContents/MainContents';
-import Footer from '@/layouts/Footer/Footer';
+import PageCoverTitle from '@/components/Shares/PageCoverTitle';
+import coverText from '@/components/Shares/PageCoverTitle/venueCoverText.json';
 import Header from '@/layouts/Header/Header';
 import PageHead from '@/layouts/PageHead/PageHead';
 import { devices } from '@/styles/variables';
 
 const Cover = styled.div`
-	background-image: url('/images/background/applyToSpeakHeaderBG.png');
+	background-image: url('/images/background/generalEventsHeaderBG.png');
 	background-position: center;
 	background-size: cover;
+
 	@media ${devices.miniMobile} {
 		height: 478px;
 	}
@@ -19,7 +20,7 @@ const Cover = styled.div`
 	}
 `;
 
-const ApplyToSpeakPage = () => {
+const GeneralEventsPage = () => {
 	const meta = {
 		description:
 			'Web3 Hackathon is Australia most premier annual hackathon event catered to a global audience to support the next generation of Web3 innovation and products.',
@@ -32,11 +33,11 @@ const ApplyToSpeakPage = () => {
 			<PageHead meta={meta} />
 			<Cover>
 				<Header />
-				<StageCoverTitle />
+				<PageCoverTitle coverText={coverText} />
 			</Cover>
-			<MainContents />
-			<Footer />
+			<h1>this is GeneralEventsPage</h1>
 		</>
 	);
 };
-export default ApplyToSpeakPage;
+
+export default GeneralEventsPage;
