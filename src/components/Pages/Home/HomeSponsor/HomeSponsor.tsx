@@ -4,31 +4,20 @@ import styled from 'styled-components';
 
 import sponsorList from './sponsorList.json';
 import { backdrop, sectionSubtitle, sectionTitle } from '@/styles/mixin';
-import { devices, sizes } from '@/styles/variables';
+import { devices } from '@/styles/variables';
 
 const HomeSponsorContainer = styled.div`
-	max-width: ${`${sizes.largeLaptop}px`};
-	padding: 100px 40px 140px;
+	padding: 100px 15px;
 	position: relative;
-	@media ${devices.mobile} {
-		padding: 100px 100px 140px;
-	}
 	@media ${devices.laptop} {
 		margin: 0 auto;
 	}
 `;
 
-const TitleContainer = styled.div`
+const Container = styled.div`
+	margin: 0 auto;
+	max-width: 1440px;
 	padding: 0 30px 0 50px;
-	@media ${devices.tablet} {
-		padding-left: 4vw;
-	}
-	@media ${devices.laptop} {
-		padding-left: 1.4vw;
-	}
-	@media ${devices.largeLaptop} {
-		padding-left: 2vw;
-	}
 `;
 
 const Title = styled.h2`
@@ -73,24 +62,24 @@ const Backdrop = styled.div`
 const HomeSponsor: React.FC = () => {
 	return (
 		<HomeSponsorContainer>
-			<TitleContainer>
+			<Container>
 				<Subtitle>event_testimonials</Subtitle>
 				<Title>Expected Partners & Sponsors</Title>
 				<Backdrop>Sponsors</Backdrop>
-			</TitleContainer>
-			<Grid container spacing={3}>
-				{sponsorList.map(sponsor => (
-					<Grid item key={sponsor._id} className="flex justify-center">
-						<ImageContainer href="/#">
-							<StyledImage src={sponsor.logoSrc} alt={`sponsor_${sponsor._id}`} />
-							<StyledImage
-								src={sponsor.logoSrcHighlight || sponsor.logoSrc}
-								alt={`sponsor_${sponsor._id}_highLight`}
-							/>
-						</ImageContainer>
-					</Grid>
-				))}
-			</Grid>
+				<Grid container spacing={3}>
+					{sponsorList.map(sponsor => (
+						<Grid item key={sponsor._id} className="flex justify-center">
+							<ImageContainer href="/#">
+								<StyledImage src={sponsor.logoSrc} alt={`sponsor_${sponsor._id}`} />
+								<StyledImage
+									src={sponsor.logoSrcHighlight || sponsor.logoSrc}
+									alt={`sponsor_${sponsor._id}_highLight`}
+								/>
+							</ImageContainer>
+						</Grid>
+					))}
+				</Grid>
+			</Container>
 		</HomeSponsorContainer>
 	);
 };

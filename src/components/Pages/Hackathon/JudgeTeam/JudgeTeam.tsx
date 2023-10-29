@@ -84,14 +84,16 @@ const SectionTitle = styled.h2`
 
 const ExpectedSpeakerContainer = styled.div`
 	background-color: ${blackColor};
-	padding: 50px 40px 60px;
+	padding: 50px 15px;
 	position: relative;
-	@media ${devices.miniMobile} {
-		padding: 50px 24px 60px;
-	}
 	@media ${devices.laptop} {
 		margin: 0 auto;
 	}
+`;
+const Container = styled.div`
+	margin: 0 auto;
+	max-width: 1440px;
+	padding: 0 30px 0 50px;
 `;
 
 const Backdrop = styled.div`
@@ -204,76 +206,78 @@ const SpeakerIconPlaceholder = styled.div`
 const JudgeTeam: React.FC = () => {
 	return (
 		<ExpectedSpeakerContainer>
-			<SectionSubtitle>Web3 Hackathon</SectionSubtitle>
-			<SectionTitle>
-				<span>Judges, </span>
-				<span>Speakers & </span>
-				<span>Mentors</span>
-			</SectionTitle>
-			<Backdrop>Judges</Backdrop>
-			<HomeTeamContainer container spacing={2}>
-				{teamMemberList.map(teamMember => {
-					return (
-						<Grid
-							item
-							mobile={12}
-							tablet={6}
-							laptop={4}
-							largeLaptop={2.4}
-							key={teamMember._id}
-							className="relative"
-						>
-							<GridItemContainer isSpeaker={teamMember.isSpeaker === true}>
-								<LogoSection>
-									{teamMember.companySrc && (
-										<LogoWrapper>
-											<img
-												className="logo"
-												src={teamMember.companySrc}
+			<Container>
+				<SectionSubtitle>Web3 Hackathon</SectionSubtitle>
+				<SectionTitle>
+					<span>Judges, </span>
+					<span>Speakers & </span>
+					<span>Mentors</span>
+				</SectionTitle>
+				<Backdrop>Judges</Backdrop>
+				<HomeTeamContainer container spacing={2}>
+					{teamMemberList.map(teamMember => {
+						return (
+							<Grid
+								item
+								mobile={12}
+								tablet={6}
+								laptop={4}
+								largeLaptop={2.4}
+								key={teamMember._id}
+								className="relative"
+							>
+								<GridItemContainer isSpeaker={teamMember.isSpeaker === true}>
+									<LogoSection>
+										{teamMember.companySrc && (
+											<LogoWrapper>
+												<img
+													className="logo"
+													src={teamMember.companySrc}
+													alt={teamMember.name}
+												/>
+											</LogoWrapper>
+										)}
+									</LogoSection>
+									<InfoSection>
+										<AvatarContainer>
+											<AvatarImage
+												loader={imageLoader}
+												className="avatar"
+												src={teamMember.avatarSrc}
 												alt={teamMember.name}
+												fill
+												unoptimized
 											/>
-										</LogoWrapper>
-									)}
-								</LogoSection>
-								<InfoSection>
-									<AvatarContainer>
-										<AvatarImage
-											loader={imageLoader}
-											className="avatar"
-											src={teamMember.avatarSrc}
-											alt={teamMember.name}
-											fill
-											unoptimized
-										/>
-									</AvatarContainer>
-									<NameContainer>{teamMember.name}</NameContainer>
-									<JobTitleContainer>{teamMember.jobTitle}</JobTitleContainer>
-								</InfoSection>
-								<IconSection>
-									{teamMember.isSpeaker ? (
-										<SpeakerIconWrapper>
+										</AvatarContainer>
+										<NameContainer>{teamMember.name}</NameContainer>
+										<JobTitleContainer>{teamMember.jobTitle}</JobTitleContainer>
+									</InfoSection>
+									<IconSection>
+										{teamMember.isSpeaker ? (
+											<SpeakerIconWrapper>
+												<img
+													className="speakerIcon"
+													src={speakerIcon}
+													alt="Speaker icon"
+												/>
+											</SpeakerIconWrapper>
+										) : (
+											<SpeakerIconPlaceholder />
+										)}
+										<SpeakerArrowIconWrapper>
 											<img
-												className="speakerIcon"
-												src={speakerIcon}
-												alt="Speaker icon"
+												className="speakerArrow"
+												src={speakerArrow}
+												alt="Speaker more info"
 											/>
-										</SpeakerIconWrapper>
-									) : (
-										<SpeakerIconPlaceholder />
-									)}
-									<SpeakerArrowIconWrapper>
-										<img
-											className="speakerArrow"
-											src={speakerArrow}
-											alt="Speaker more info"
-										/>
-									</SpeakerArrowIconWrapper>
-								</IconSection>
-							</GridItemContainer>
-						</Grid>
-					);
-				})}
-			</HomeTeamContainer>
+										</SpeakerArrowIconWrapper>
+									</IconSection>
+								</GridItemContainer>
+							</Grid>
+						);
+					})}
+				</HomeTeamContainer>
+			</Container>
 		</ExpectedSpeakerContainer>
 	);
 };

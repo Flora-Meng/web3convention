@@ -1,12 +1,6 @@
-import Image from 'next/image';
 import styled from 'styled-components';
 
-import Lobby from '@/assets/images/brisbane-busy-lobby.jpg';
-import ConcertLight from '@/assets/images/brisbane-concert-lights.jpg';
-import Building from '@/assets/images/brisbane-modern-building.jpg';
-import TradeShow from '@/assets/images/brisbane-trade-show.jpg';
 import { color, devices } from '@/styles/variables';
-import imageLoader from '@/utils/loader';
 
 const Container = styled.div`
 	background-color: ${color.blackColor};
@@ -31,7 +25,7 @@ const BoldText = styled.p`
 		font-size: 230px;
 	}
 `;
-const ImageWrapper = styled.div`
+const ImageContainer = styled.div`
 	align-items: center;
 	display: flex;
 	flex-direction: column;
@@ -41,67 +35,45 @@ const ImageWrapper = styled.div`
 		width: 100%;
 	}
 `;
-const StyledImage = styled(Image)`
-	margin-bottom: 32px;
-	@media ${devices.largeLaptop} {
-		width: 345px;
-		height: 300px;
-		margin-right: 16px;
-	}
-	@media ${devices.desktop} {
-		width: 460px;
-		height: 350px;
-	}
+const ImageWrapper = styled.div`
+	height: 300px;
+	overflow: hidden;
+	width: 400px;
 `;
-const LobbyImage = styled(StyledImage)`
-	margin-bottom: 113px;
-	@media ${devices.largeLaptop} {
-		margin-right: 0;
-		margin-bottom: 32px;
-	}
+const StyledImage = styled.img`
+	height: auto;
+	width: 100%;
 `;
 const VenueGallery = () => {
 	return (
 		<Container>
 			<BoldText>BCEC</BoldText>
-			<ImageWrapper>
-				<StyledImage
-					src={ConcertLight.src}
-					alt="Dinner"
-					width={327}
-					height={283}
-					loader={imageLoader}
-					unoptimized
-					priority
-				/>
-				<StyledImage
-					src={TradeShow.src}
-					alt="Presentation"
-					width={327}
-					height={283}
-					loader={imageLoader}
-					unoptimized
-					priority
-				/>
-				<StyledImage
-					src={Building.src}
-					alt="Gala Setup"
-					width={327}
-					height={283}
-					loader={imageLoader}
-					unoptimized
-					priority
-				/>
-				<LobbyImage
-					src={Lobby.src}
-					alt="Mixing Console"
-					width={327}
-					height={283}
-					loader={imageLoader}
-					unoptimized
-					priority
-				/>
-			</ImageWrapper>
+			<ImageContainer>
+				<ImageWrapper>
+					<StyledImage
+						src="/images/venue/brisbane-concert-lights.jpg"
+						alt="Dinner"
+						width={327}
+						height={283}
+					/>
+				</ImageWrapper>
+				<ImageWrapper>
+					<StyledImage
+						src="/images/venue/brisbane-trade-show.jpg"
+						alt="Presentation"
+						width={327}
+						height={283}
+					/>
+				</ImageWrapper>
+				<ImageWrapper>
+					<StyledImage
+						src="/images/venue/brisbane-modern-building.jpg"
+						alt="Gala Setup"
+						width={327}
+						height={283}
+					/>
+				</ImageWrapper>
+			</ImageContainer>
 		</Container>
 	);
 };

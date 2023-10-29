@@ -9,15 +9,13 @@ import { backdrop, sectionSubtitle, sectionTitle } from '@/styles/mixin';
 import { devices } from '@/styles/variables';
 
 const HomeEventContainer = styled.div`
-	@media ${devices.miniMobile} {
-		margin: 0 24px;
-	}
-	@media ${devices.desktop} {
-		margin: 0 340px;
-	}
-
 	overflow: hidden;
 	position: relative;
+`;
+const Container = styled.div`
+	margin: 0 auto;
+	max-width: 1440px;
+	padding: 50px 0;
 `;
 
 const MaskContainer = styled.div`
@@ -50,12 +48,7 @@ const Backdrop = styled.div`
 `;
 
 const ContentContainer = styled.div`
-	@media ${devices.miniMobile} {
-		margin: 134px 0 40px;
-	}
-	@media ${devices.desktop} {
-		margin: 122px 0 90px;
-	}
+	margin: 10px 0 40px;
 `;
 
 const Title = styled.h2`
@@ -85,17 +78,18 @@ const HomeEvent: React.FC = () => {
 
 	return (
 		<HomeEventContainer>
-			<MaskContainer>
-				<Backdrop>Events</Backdrop>
-			</MaskContainer>
-			<ContentContainer>
-				<Subtitle>Web3 Convention 2024</Subtitle>
-				<Title>Convention Agenda</Title>
-				{/* <EventFilter
+			<Container>
+				<MaskContainer>
+					<Backdrop>Events</Backdrop>
+				</MaskContainer>
+				<ContentContainer>
+					<Subtitle>Web3 Convention 2024</Subtitle>
+					<Title>Convention Agenda</Title>
+					{/* <EventFilter
 					currentFilterType={currentFilterType}
 					setCurrentFilterType={setCurrentFilterType}
 				/> */}
-				{/* {isMobile ? (
+					{/* {isMobile ? (
 					<EventAccordion
 						list={eventList as IEvent[]}
 						currentFilterType={currentFilterType}
@@ -106,8 +100,9 @@ const HomeEvent: React.FC = () => {
 						currentFilterType={currentFilterType}
 					/>
 				)} */}
-				<AgendaTable />
-			</ContentContainer>
+					<AgendaTable />
+				</ContentContainer>
+			</Container>
 		</HomeEventContainer>
 	);
 };
