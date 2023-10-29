@@ -66,7 +66,7 @@ const MemberModal: React.FC<MemberModalProps> = ({ children, open, handleClose }
 				{children}
 				<StyledButton onClick={handleClose}>
 					<Image
-						src="/images/modal-button.png"
+						src="/images/icons/modal-button.svg"
 						alt="button"
 						loader={imageLoader}
 						unoptimized
