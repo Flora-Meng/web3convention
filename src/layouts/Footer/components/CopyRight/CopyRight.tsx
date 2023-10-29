@@ -15,26 +15,12 @@ const { blackColor, primaryColor, whiteColor } = color;
 const ContentContainer = styled.section`
 	align-items: center;
 	background-color: ${primaryColor};
-	flex-direction: column;
-	font-size: 14px;
-	padding: 30px 0;
-	@media ${devices.mobile} {
-		max-width: unset;
-		padding: 30px 50px;
-	}
-	@media ${devices.tablet} {
-		height: 100px;
-		flex-direction: row;
-		justify-content: space-between;
-		padding: 0 100px;
-	}
+	padding: 25px 0;
 `;
 
 const ContainerGrid = styled(Grid)`
-	max-width: 300px;
-	@media ${devices.mobile} {
-		max-width: unset;
-	}
+	margin: 0 auto;
+	max-width: 1440px;
 `;
 
 const Logo = styled(Image)`
@@ -68,7 +54,7 @@ const gridColumn = {
 };
 
 const CopyRight: React.FC = () => (
-	<ContentContainer className="flex">
+	<ContentContainer>
 		<ContainerGrid container className="justify-between">
 			<Grid item {...gridColumn} className="self-center">
 				<Logo

@@ -17,10 +17,7 @@ import imageLoader from '@/utils/loader';
 
 const HomeTicketContainer = styled.div`
 	max-width: ${`${sizes.largeLaptop}px`};
-	padding: 100px 30px 140px;
-	@media ${devices.mobile} {
-		padding: 100px 80px 140px;
-	}
+	padding: 50px 15px;
 	@media ${devices.laptop} {
 		margin: 0 auto;
 	}

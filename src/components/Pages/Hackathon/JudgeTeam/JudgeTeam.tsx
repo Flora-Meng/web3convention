@@ -206,14 +206,16 @@ const SectionTitle = styled.h2`
 
 const ExpectedSpeakerContainer = styled.div`
 	background-color: ${blackColor};
-	padding: 50px 40px 60px;
+	padding: 50px 15px;
 	position: relative;
-	@media ${devices.miniMobile} {
-		padding: 50px 24px 60px;
-	}
 	@media ${devices.laptop} {
 		margin: 0 auto;
 	}
+`;
+const Container = styled.div`
+	margin: 0 auto;
+	max-width: 1440px;
+	padding: 0 30px 0 50px;
 `;
 
 const Backdrop = styled.div`
@@ -343,160 +345,162 @@ const JudgeTeam: React.FC = () => {
 	const postLink = '/comingSoon';
 	return (
 		<ExpectedSpeakerContainer>
-			<SectionSubtitle>Web3 Hackathon</SectionSubtitle>
-			<SectionTitle>
-				<span>Judges, </span>
-				<span>Speakers & </span>
-				<span>Mentors</span>
-			</SectionTitle>
-			<Backdrop>Judges</Backdrop>
-			<HomeTeamContainer container spacing={2}>
-				<MemberModal open={open} handleClose={handleClose}>
-					<InfoHeader>
-						{teamMemberInfo.avatarSrc && (
-							<ModalAvatarContainer>
-								<AvatarImage
-									src={teamMemberInfo.avatarSrc}
-									alt={teamMemberInfo.name}
-									loader={imageLoader}
-									fill
-									unoptimized
-									loading="lazy"
-								/>
-							</ModalAvatarContainer>
-						)}
-						{teamMemberInfo.companySrc && (
-							<LogoContainer>
-								<img
-									src={teamMemberInfo.companySrc}
-									alt={teamMemberInfo.name}
-									className="logo"
-								/>
-							</LogoContainer>
-						)}
-					</InfoHeader>
-					<InfoMainContainer>
-						<MemberName>{teamMemberInfo.name}</MemberName>
-						<ModalIcons>
-							{teamMemberInfo.isSpeaker ? (
-								<SpeakerIconWrapper>
-									<img
-										className="speakerIcon"
-										src={speakerIcon}
-										alt="Speaker icon"
+			<Container>
+				<SectionSubtitle>Web3 Hackathon</SectionSubtitle>
+				<SectionTitle>
+					<span>Judges, </span>
+					<span>Speakers & </span>
+					<span>Mentors</span>
+				</SectionTitle>
+				<Backdrop>Judges</Backdrop>
+				<HomeTeamContainer container spacing={2}>
+					<MemberModal open={open} handleClose={handleClose}>
+						<InfoHeader>
+							{teamMemberInfo.avatarSrc && (
+								<ModalAvatarContainer>
+									<AvatarImage
+										src={teamMemberInfo.avatarSrc}
+										alt={teamMemberInfo.name}
+										loader={imageLoader}
+										fill
+										unoptimized
+										loading="lazy"
 									/>
-								</SpeakerIconWrapper>
-							) : (
-								<ModalSpeakerIconPlaceholder />
+								</ModalAvatarContainer>
 							)}
-							<MemberSocialMedia>
-								{teamMemberInfo.socialMedia &&
-									Object.entries(teamMemberInfo.socialMedia).map(
-										([socialMedia, link]) => {
-											if (!link) return null;
-											let socialMediaIcon = null;
-											switch (socialMedia) {
-												case ESocialMedia.LINKED_IN: {
-													socialMediaIcon = <LinkedInIcon />;
-													break;
-												}
-												case ESocialMedia.FACEBOOK: {
-													socialMediaIcon = <FacebookIcon />;
-													break;
-												}
-												case ESocialMedia.TWITTER: {
-													socialMediaIcon = <TwitterIcon />;
-													break;
-												}
-												default: {
-													break;
-												}
-											}
-											return (
-												<Link
-													href={link}
-													target="_blank"
-													rel="noopener noreferrer"
-													key={`${teamMemberInfo._id}-${socialMedia}`}
-												>
-													{socialMediaIcon}
-												</Link>
-											);
-										}
-									)}
-							</MemberSocialMedia>
-						</ModalIcons>
-					</InfoMainContainer>
-					<Link href={postLink}>
-						<ModalSubtitle>{teamMemberInfo.jobTitle}</ModalSubtitle>
-					</Link>
-					<ModalPostDescription>{teamMemberInfo.description}</ModalPostDescription>
-				</MemberModal>
-				{teamMemberList.map(teamMember => {
-					return (
-						<Grid
-							item
-							mobile={12}
-							tablet={6}
-							laptop={4}
-							largeLaptop={2.4}
-							key={teamMember._id}
-							className="relative"
-							onClick={() => {
-								handleOpen(teamMember);
-							}}
-						>
-							<GridItemContainer isSpeaker={teamMember.isSpeaker === true}>
-								<LogoSection>
-									{teamMember.companySrc && (
-										<LogoWrapper>
-											<img
-												className="logo"
-												src={teamMember.companySrc}
-												alt={teamMember.name}
-											/>
-										</LogoWrapper>
-									)}
-								</LogoSection>
-								<InfoSection>
-									<AvatarContainer>
-										<AvatarImage
-											loader={imageLoader}
-											className="avatar"
-											src={teamMember.avatarSrc}
-											alt={teamMember.name}
-											fill
-											unoptimized
-										/>
-									</AvatarContainer>
-									<NameContainer>{teamMember.name}</NameContainer>
-									<JobTitleContainer>{teamMember.jobTitle}</JobTitleContainer>
-								</InfoSection>
-								<IconSection>
-									{teamMember.isSpeaker ? (
-										<SpeakerIconWrapper>
-											<img
-												className="speakerIcon"
-												src={speakerIcon}
-												alt="Speaker icon"
-											/>
-										</SpeakerIconWrapper>
-									) : (
-										<SpeakerIconPlaceholder />
-									)}
-									<SpeakerArrowIconWrapper>
+							{teamMemberInfo.companySrc && (
+								<LogoContainer>
+									<img
+										src={teamMemberInfo.companySrc}
+										alt={teamMemberInfo.name}
+										className="logo"
+									/>
+								</LogoContainer>
+							)}
+						</InfoHeader>
+						<InfoMainContainer>
+							<MemberName>{teamMemberInfo.name}</MemberName>
+							<ModalIcons>
+								{teamMemberInfo.isSpeaker ? (
+									<SpeakerIconWrapper>
 										<img
-											className="speakerArrow"
-											src={speakerArrow}
-											alt="Speaker more info"
+											className="speakerIcon"
+											src={speakerIcon}
+											alt="Speaker icon"
 										/>
-									</SpeakerArrowIconWrapper>
-								</IconSection>
-							</GridItemContainer>
-						</Grid>
-					);
-				})}
-			</HomeTeamContainer>
+									</SpeakerIconWrapper>
+								) : (
+									<ModalSpeakerIconPlaceholder />
+								)}
+								<MemberSocialMedia>
+									{teamMemberInfo.socialMedia &&
+										Object.entries(teamMemberInfo.socialMedia).map(
+											([socialMedia, link]) => {
+												if (!link) return null;
+												let socialMediaIcon = null;
+												switch (socialMedia) {
+													case ESocialMedia.LINKED_IN: {
+														socialMediaIcon = <LinkedInIcon />;
+														break;
+													}
+													case ESocialMedia.FACEBOOK: {
+														socialMediaIcon = <FacebookIcon />;
+														break;
+													}
+													case ESocialMedia.TWITTER: {
+														socialMediaIcon = <TwitterIcon />;
+														break;
+													}
+													default: {
+														break;
+													}
+												}
+												return (
+													<Link
+														href={link}
+														target="_blank"
+														rel="noopener noreferrer"
+														key={`${teamMemberInfo._id}-${socialMedia}`}
+													>
+														{socialMediaIcon}
+													</Link>
+												);
+											}
+										)}
+								</MemberSocialMedia>
+							</ModalIcons>
+						</InfoMainContainer>
+						<Link href={postLink}>
+							<ModalSubtitle>{teamMemberInfo.jobTitle}</ModalSubtitle>
+						</Link>
+						<ModalPostDescription>{teamMemberInfo.description}</ModalPostDescription>
+					</MemberModal>
+					{teamMemberList.map(teamMember => {
+						return (
+							<Grid
+								item
+								mobile={12}
+								tablet={6}
+								laptop={4}
+								largeLaptop={2.4}
+								key={teamMember._id}
+								className="relative"
+								onClick={() => {
+									handleOpen(teamMember);
+								}}
+							>
+								<GridItemContainer isSpeaker={teamMember.isSpeaker === true}>
+									<LogoSection>
+										{teamMember.companySrc && (
+											<LogoWrapper>
+												<img
+													className="logo"
+													src={teamMember.companySrc}
+													alt={teamMember.name}
+												/>
+											</LogoWrapper>
+										)}
+									</LogoSection>
+									<InfoSection>
+										<AvatarContainer>
+											<AvatarImage
+												loader={imageLoader}
+												className="avatar"
+												src={teamMember.avatarSrc}
+												alt={teamMember.name}
+												fill
+												unoptimized
+											/>
+										</AvatarContainer>
+										<NameContainer>{teamMember.name}</NameContainer>
+										<JobTitleContainer>{teamMember.jobTitle}</JobTitleContainer>
+									</InfoSection>
+									<IconSection>
+										{teamMember.isSpeaker ? (
+											<SpeakerIconWrapper>
+												<img
+													className="speakerIcon"
+													src={speakerIcon}
+													alt="Speaker icon"
+												/>
+											</SpeakerIconWrapper>
+										) : (
+											<SpeakerIconPlaceholder />
+										)}
+										<SpeakerArrowIconWrapper>
+											<img
+												className="speakerArrow"
+												src={speakerArrow}
+												alt="Speaker more info"
+											/>
+										</SpeakerArrowIconWrapper>
+									</IconSection>
+								</GridItemContainer>
+							</Grid>
+						);
+					})}
+				</HomeTeamContainer>
+			</Container>
 		</ExpectedSpeakerContainer>
 	);
 };

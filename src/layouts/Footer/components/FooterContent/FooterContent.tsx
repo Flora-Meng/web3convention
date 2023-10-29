@@ -10,7 +10,7 @@ import styled from 'styled-components';
 
 import SubscriptionModal from '@/components/Shares/SubscriptionModal';
 import useSubscription from '@/hooks/userSubscription';
-import { animationHoverImage, animationHoverImageParent, tagDecoration } from '@/styles/mixin';
+import { tagDecoration } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 import { isEmail } from '@/utils/validator';
@@ -23,19 +23,10 @@ const ContentContainer = styled(Box)`
 	background-color: ${blackColor};
 	color: ${whiteColor};
 	padding: 50px 0;
-	@media ${devices.mobile} {
-		padding: 50px;
-	}
-	@media ${devices.laptop} {
-		padding: 100px;
-	}
 `;
 
 const ContainerGrid = styled(Grid)`
-	max-width: 300px;
-	@media ${devices.mobile} {
-		max-width: unset;
-	}
+	max-width: 1440px;
 `;
 
 const Title = styled.h5`
@@ -57,23 +48,6 @@ const StyledLink = styled(Link)`
 
 const Logo = styled(Image)`
 	margin-bottom: 20px;
-`;
-
-const ImageListContainer = styled(Grid)`
-	@media ${devices.largeLaptop} {
-		max-width: 270px;
-	}
-`;
-
-const ImageItem = styled(Link)`
-	${animationHoverImageParent()};
-	@media ${devices.tablet} {
-		width: 82px;
-	}
-`;
-
-const StyledImage = styled(Image)`
-	${animationHoverImage()};
 `;
 
 const ContentText = styled.p`
