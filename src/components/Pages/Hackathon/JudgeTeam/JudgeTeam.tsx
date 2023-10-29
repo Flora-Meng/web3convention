@@ -1,15 +1,21 @@
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
+import Link from 'next/link';
 import backgroundGreen from 'public/images/background/not-speaker-background.png';
 import backgroundBlue from 'public/images/background/speaker-background.png';
+import { useState } from 'react';
 import styled from 'styled-components';
 
 import teamMemberList from './teamMemberList.json';
+import MemberModal from '@/components/Shares/MemberModal';
 import { backdrop, sectionSubtitle, sectionTitle } from '@/styles/mixin';
-import { color, devices, sizes } from '@/styles/variables';
+import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
-const { blackColor, whiteColor } = color;
+const { blackColor, whiteColor, primaryColor } = color;
 
 const speakerIcon = '/images/icons/speaker-icon.svg';
 const speakerArrow = '/images/icons/speaker-arrow.svg';
@@ -18,6 +24,20 @@ enum ESocialMedia {
 	LINKED_IN = 'linkedIn',
 	TWITTER = 'twitter',
 	FACEBOOK = 'facebook'
+}
+
+interface TeamMemberProps {
+	_id: string;
+	name: string;
+	description?: string;
+	jobTitle?: string;
+	avatarSrc?: string;
+	companySrc?: string;
+	isSpeaker?: boolean;
+	socialMedia?: {
+		linkedIn?: string;
+		twitter?: string;
+	};
 }
 
 const HomeTeamContainer = styled(Grid)`
@@ -37,6 +57,7 @@ const GridItemContainer = styled.div<{ isSpeaker: boolean }>`
 	background-image: ${props =>
 		props.isSpeaker ? `url(${backgroundBlue.src})` : `url(${backgroundGreen.src})`};
 	border: solid 0.5px #383333;
+	cursor: pointer;
 	display: flex;
 	flex-direction: column;
 	height: 300px;
@@ -59,6 +80,107 @@ const GridItemContainer = styled.div<{ isSpeaker: boolean }>`
 				display: block;
 			}
 		}
+	}
+`;
+
+const ModalAvatarContainer = styled.div`
+	background-color: black;
+	border-radius: 50%;
+	height: 136px;
+	overflow: hidden;
+	position: relative;
+	width: 136px;
+`;
+
+const LogoContainer = styled.div`
+	align-items: center;
+	background-color: ${whiteColor};
+	border-radius: 25px;
+	display: flex;
+	height: 32px;
+	justify-content: center;
+	overflow: hidden;
+	padding: 5px 15px;
+	position: relative;
+	width: 108px;
+	img.logo {
+		height: auto;
+		transform: none;
+		width: 100%;
+	}
+`;
+
+const InfoMainContainer = styled.div`
+	align-items: baseline;
+	display: flex;
+	flex-direction: column;
+	margin-top: 24px;
+	@media ${devices.mobile} {
+		gap: 12px;
+		flex-direction: row;
+	}
+`;
+
+const MemberName = styled.div`
+	color: #fff;
+	font-family: Arial;
+	font-size: 34px;
+	font-weight: bold;
+	height: 38px;
+`;
+
+const MemberSocialMedia = styled.div`
+	align-items: baseline;
+	display: flex;
+	gap: 10px;
+	height: 20px;
+	margin-left: 12px;
+	object-fit: contain;
+	width: 20px;
+	a {
+		color: ${primaryColor};
+
+		&:hover {
+			color: ${whiteColor};
+		}
+	}
+`;
+
+const ModalIcons = styled.div`
+	align-items: base-line;
+	display: flex;
+	margin-top: 15px;
+	@media ${devices.mobile} {
+		margin-top: unset;
+	}
+`;
+
+const InfoHeader = styled.div`
+	display: flex;
+	justify-content: space-between;
+`;
+
+const ModalSubtitle = styled.p`
+	color: #aaa;
+	font-family: Arial;
+	font-size: 20px;
+	height: 22px;
+	width: 212px;
+`;
+
+const ModalPostDescription = styled.p`
+	color: #e8e8e8;
+	font-family: Arial;
+	font-size: 16px;
+	line-height: 1.5;
+	margin-top: 10px;
+	max-height: 20vh;
+	overflow: scroll;
+	text-wrap: wrap;
+	@media ${devices.mobile} {
+		margin-top: 20px;
+		max-height: unset;
+		overflow: unset;
 	}
 `;
 
@@ -201,7 +323,24 @@ const SpeakerIconPlaceholder = styled.div`
 	width: 90px;
 `;
 
+const ModalSpeakerIconPlaceholder = styled.div`
+	width: 12px;
+`;
+
 const JudgeTeam: React.FC = () => {
+	const [open, setOpen] = useState(false);
+	const [teamMemberInfo, setTeamMemberInfo] = useState<TeamMemberProps | Record<string, never>>(
+		{}
+	);
+	const handleOpen = (teamMember: TeamMemberProps) => {
+		setOpen(true);
+		setTeamMemberInfo(teamMember);
+	};
+	const handleClose = () => {
+		setOpen(false);
+		setTeamMemberInfo({});
+	};
+	const postLink = '/comingSoon';
 	return (
 		<ExpectedSpeakerContainer>
 			<SectionSubtitle>Web3 Hackathon</SectionSubtitle>
@@ -212,6 +351,87 @@ const JudgeTeam: React.FC = () => {
 			</SectionTitle>
 			<Backdrop>Judges</Backdrop>
 			<HomeTeamContainer container spacing={2}>
+				<MemberModal open={open} handleClose={handleClose}>
+					<InfoHeader>
+						{teamMemberInfo.avatarSrc && (
+							<ModalAvatarContainer>
+								<AvatarImage
+									src={teamMemberInfo.avatarSrc}
+									alt={teamMemberInfo.name}
+									loader={imageLoader}
+									fill
+									unoptimized
+									loading="lazy"
+								/>
+							</ModalAvatarContainer>
+						)}
+						{teamMemberInfo.companySrc && (
+							<LogoContainer>
+								<img
+									src={teamMemberInfo.companySrc}
+									alt={teamMemberInfo.name}
+									className="logo"
+								/>
+							</LogoContainer>
+						)}
+					</InfoHeader>
+					<InfoMainContainer>
+						<MemberName>{teamMemberInfo.name}</MemberName>
+						<ModalIcons>
+							{teamMemberInfo.isSpeaker ? (
+								<SpeakerIconWrapper>
+									<img
+										className="speakerIcon"
+										src={speakerIcon}
+										alt="Speaker icon"
+									/>
+								</SpeakerIconWrapper>
+							) : (
+								<ModalSpeakerIconPlaceholder />
+							)}
+							<MemberSocialMedia>
+								{teamMemberInfo.socialMedia &&
+									Object.entries(teamMemberInfo.socialMedia).map(
+										([socialMedia, link]) => {
+											if (!link) return null;
+											let socialMediaIcon = null;
+											switch (socialMedia) {
+												case ESocialMedia.LINKED_IN: {
+													socialMediaIcon = <LinkedInIcon />;
+													break;
+												}
+												case ESocialMedia.FACEBOOK: {
+													socialMediaIcon = <FacebookIcon />;
+													break;
+												}
+												case ESocialMedia.TWITTER: {
+													socialMediaIcon = <TwitterIcon />;
+													break;
+												}
+												default: {
+													break;
+												}
+											}
+											return (
+												<Link
+													href={link}
+													target="_blank"
+													rel="noopener noreferrer"
+													key={`${teamMemberInfo._id}-${socialMedia}`}
+												>
+													{socialMediaIcon}
+												</Link>
+											);
+										}
+									)}
+							</MemberSocialMedia>
+						</ModalIcons>
+					</InfoMainContainer>
+					<Link href={postLink}>
+						<ModalSubtitle>{teamMemberInfo.jobTitle}</ModalSubtitle>
+					</Link>
+					<ModalPostDescription>{teamMemberInfo.description}</ModalPostDescription>
+				</MemberModal>
 				{teamMemberList.map(teamMember => {
 					return (
 						<Grid
@@ -222,6 +442,9 @@ const JudgeTeam: React.FC = () => {
 							largeLaptop={2.4}
 							key={teamMember._id}
 							className="relative"
+							onClick={() => {
+								handleOpen(teamMember);
+							}}
 						>
 							<GridItemContainer isSpeaker={teamMember.isSpeaker === true}>
 								<LogoSection>

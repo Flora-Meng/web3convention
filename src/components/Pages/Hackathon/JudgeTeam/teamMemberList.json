@@ -2,7 +2,7 @@
 	{
 		"_id": "1",
 		"name": "Robert Lee",
-		"description": "",
+		"description": "Robert Lee is President and CEO of Franklin Templeton. In a career at Franklin Templeton spanning over 30 years, she has been a key driver in the company's transformation to what is now one of the most respected global firms focused on investment management, technology, innovation, diversity and corporate and social responsibility. Ms. Johnson has received a number of recognitions and is involved with several industry and nonprofit organizations. She earned her B.A. in economics from the University of California at Davis.",
 		"jobTitle": "Chief Economist",
 		"avatarSrc": "/images/speakers/Robert.jpg",
 		"isSpeaker": true
@@ -42,7 +42,7 @@
 	{
 		"_id": "5",
 		"name": "Daniel Monge",
-		"description": "",
+		"description": "Daniel Monge is President and CEO of Franklin Templeton. In a career at Franklin Templeton spanning over 30 years, she has been a key driver in the company's transformation to what is now one of the most respected global firms focused on investment management.",
 		"jobTitle": "NFT APAC Co-Founder",
 		"companySrc": "/images/logo/nft-apac.jpeg",
 		"avatarSrc": "/images/speakers/daniel-monge.jpeg",
