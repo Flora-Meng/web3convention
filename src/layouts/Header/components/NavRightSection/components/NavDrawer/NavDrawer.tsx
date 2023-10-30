@@ -80,7 +80,7 @@ const linkConfigList = [
 	},
 	{
 		label: 'Buy Tickets',
-		href: 'https://www.eventbrite.com.au/e/web3-convention-tickets-491154535437'
+		href: 'https://w3con.eventsair.com/web3convention/registration'
 	},
 	{
 		label: 'Schedule',

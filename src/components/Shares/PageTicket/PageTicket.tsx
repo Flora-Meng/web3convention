@@ -236,7 +236,7 @@ const PageTicket: React.FC = () => {
 								))}
 							</PriceFeatureContainer>
 							<div className="text-center">
-								<StyledLink href="#">
+								<StyledLink href="https://w3con.eventsair.com/web3convention/registration">
 									<span>buy now</span>
 								</StyledLink>
 							</div>
