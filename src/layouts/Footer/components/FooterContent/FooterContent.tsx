@@ -26,7 +26,10 @@ const ContentContainer = styled(Box)`
 `;
 
 const ContainerGrid = styled(Grid)`
-	max-width: 1440px;
+	width: calc(100vw - 48px);
+	@media (${devices.largeLaptop}) {
+		max-width: 1440px;
+	}
 `;
 
 const Title = styled.h5`
@@ -155,7 +158,7 @@ const FooterContent = () => {
 						unoptimized
 						src="/web3-logo-white.svg"
 						alt="logo"
-						width={140}
+						width={120}
 						height={40}
 						priority
 					/>
