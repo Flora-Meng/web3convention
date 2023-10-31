@@ -30,7 +30,7 @@ const Homepage: ComponentType = () => {
 	};
 	const buttonConfig = {
 		text: 'REGISTRATION',
-		url: 'https://www.eventbrite.com.au/e/web3-convention-tickets-491154535437',
+		url: 'https://w3con.eventsair.com/web3convention/registration',
 		extra: 'Interested in partnering? business@web3convention.com'
 	};
 	return (
