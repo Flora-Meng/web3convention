@@ -37,8 +37,8 @@ const ImageContainer = styled.div`
 `;
 const ImageWrapper = styled.div`
 	height: 300px;
+	max-width: 400px;
 	overflow: hidden;
-	width: 400px;
 `;
 const StyledImage = styled.img`
 	height: auto;
