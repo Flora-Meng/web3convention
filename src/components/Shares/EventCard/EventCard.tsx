@@ -10,7 +10,7 @@ import imageLoader from '@/utils/loader';
 
 const dateIcon = '/images/icons/date.svg';
 const locationIcon = '/images/icons/location.svg';
-const exhibitorIcon = '/images/exhibition/exhibitor.png';
+const exhibitorIcon = '/images/icons/exhibitor.svg';
 const logoBackground = '/images/exhibition/invalid-name.png';
 
 const { primaryColor, InfoColor, cardBackgroundColor } = color;
@@ -28,7 +28,6 @@ const StyledCard = styled(Card)`
 	background-color: ${cardBackgroundColor};
 	display: flex;
 	flex-direction: column;
-	font-family: Arial;
 	height: 410px;
 	transition: transform 0.3s ease;
 	width: 350px;
@@ -101,7 +100,6 @@ const CompanyInfo = styled.div`
 
 const CompanyName = styled.span`
 	color: white;
-	font-family: Arial;
 	font-size: 16px;
 	height: 24px;
 	letter-spacing: 1px;
@@ -162,9 +160,11 @@ const EventCard: React.FC<EventCardProps> = ({
 }) => {
 	return (
 		<StyledCard>
-			<CardMediaLink href="/events/eventId">
-				<Image src={exhibitionSrc} alt={title} loader={imageLoader} unoptimized fill />
-			</CardMediaLink>
+			{exhibitionSrc && (
+				<CardMediaLink href="/events/eventId">
+					<Image src={exhibitionSrc} alt={title} loader={imageLoader} unoptimized fill />
+				</CardMediaLink>
+			)}
 			<StyledCardContent>
 				<Link href="/events/eventId">
 					<StyledTypography>{title}</StyledTypography>
