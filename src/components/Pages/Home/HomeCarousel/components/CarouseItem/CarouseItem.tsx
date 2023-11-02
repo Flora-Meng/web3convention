@@ -91,7 +91,7 @@ export const Subtitle = styled.p<TextProps>`
 `;
 
 export const Description = styled.p<TextProps>`
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 24px;
 	margin: 0;
 	margin-bottom: 20px;
