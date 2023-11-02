@@ -37,6 +37,7 @@ const CarouseItemContainer = styled.div<CarouseItemContainerProps>`
 
 const InfoContainer = styled.div`
 	margin-left: 30px;
+	margin-top: 80px;
 	text-align: left;
 	@media ${devices.tablet} {
 		width: 585px;
@@ -91,9 +92,9 @@ export const Subtitle = styled.p<TextProps>`
 
 export const Description = styled.p<TextProps>`
 	font-size: 18px;
-	line-height: 1.8;
+	line-height: 24px;
 	margin: 0;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 	opacity: 0;
 	padding-right: 20px;
 	${({ isCurrent }) =>
@@ -103,6 +104,11 @@ export const Description = styled.p<TextProps>`
 	${({ isCurrent }) => (isCurrent ? animationFillMode() : null)};
 	@media ${devices.tablet} {
 		line-height: 1.5;
+	}
+	@media ${devices.mobile} {
+		font-size: 18px;
+		line-height: 1.8;
+		margin-bottom: 40px;
 	}
 `;
 
