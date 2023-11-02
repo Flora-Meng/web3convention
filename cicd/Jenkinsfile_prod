@@ -2,12 +2,12 @@ pipeline {
   agent any
   
   environment {
-    REGION      = 'ap-southeast-2'
-    ImgName     = 'web3convention-nextjs-prod'
-    CntName     = 'web3convention-nextjs-prod' 
-    DockerFile  = 'Dockerfile.prod'
-    CntPort     = '10091'
-  	DISTRIBUTION_ID     = 'E132Q7PFNW0XCC' //if the CDN change, this need to update
+    REGION          = 'ap-southeast-2'
+    ImgName         = 'web3convention-nextjs-prod'
+    CntName         = 'web3convention-nextjs-prod' 
+    DockerFile      = 'Dockerfile.prod'
+    CntPort         = '10091'
+  	DISTRIBUTION_ID = 'E132Q7PFNW0XCC' //if the CDN change, this need to update
   }
 
   options {
