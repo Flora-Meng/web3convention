@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import eventInfo from '../components/Shares/EventCard/eventInfo.json';
-
-import EventCard from '@/components/Shares/EventCard';
 import PageCoverTitle from '@/components/Shares/PageCoverTitle';
 import coverText from '@/components/Shares/PageCoverTitle/generalEventsCoverText.json';
 import Header from '@/layouts/Header/Header';
@@ -46,7 +43,6 @@ const GeneralEventsPage = () => {
 				</PageCoverTitleContainer>
 			</Cover>
 			<h1>this is GeneralEventsPage</h1>
-			<EventCard {...eventInfo[0]} />
 		</>
 	);
 };

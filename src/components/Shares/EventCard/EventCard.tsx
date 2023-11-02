@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
 
+import eventInfoList from './eventInfoList.json';
 import { color } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
@@ -14,16 +15,8 @@ const exhibitorIcon = '/images/icons/exhibitor.svg';
 const logoBackground = '/images/exhibition/invalid-name.png';
 
 const { primaryColor, InfoColor, cardBackgroundColor } = color;
-interface EventCardProps {
-	title: string;
-	date?: string;
-	location?: string;
-	description?: string;
-	exhibitionSrc?: string;
-	companySrc?: string;
-	companyName?: string;
-	isExhibitor?: boolean;
-}
+const eventInfo = eventInfoList[0];
+
 const StyledCard = styled(Card)`
 	background-color: ${cardBackgroundColor};
 	display: flex;
@@ -148,28 +141,25 @@ const StyledTooltip = styled(({ className, ...props }: TooltipProps) => (
 	}
 });
 
-const EventCard: React.FC<EventCardProps> = ({
-	title,
-	date,
-	location,
-	description,
-	exhibitionSrc,
-	companySrc,
-	companyName,
-	isExhibitor
-}) => {
+const EventCard: React.FC = () => {
 	return (
 		<StyledCard>
-			{exhibitionSrc && (
+			{eventInfo.exhibitionSrc && (
 				<CardMediaLink href="/events/eventId">
-					<Image src={exhibitionSrc} alt={title} loader={imageLoader} unoptimized fill />
+					<Image
+						src={eventInfo.exhibitionSrc}
+						alt={eventInfo.title}
+						loader={imageLoader}
+						unoptimized
+						fill
+					/>
 				</CardMediaLink>
 			)}
 			<StyledCardContent>
 				<Link href="/events/eventId">
-					<StyledTypography>{title}</StyledTypography>
+					<StyledTypography>{eventInfo.title}</StyledTypography>
 				</Link>
-				{date && (
+				{eventInfo.date && (
 					<InfoContainer>
 						<ImageContainer>
 							<Image
@@ -180,10 +170,10 @@ const EventCard: React.FC<EventCardProps> = ({
 								unoptimized
 							/>
 						</ImageContainer>
-						<DateInfo>{date}</DateInfo>
+						<DateInfo>{eventInfo.date}</DateInfo>
 					</InfoContainer>
 				)}
-				{location && (
+				{eventInfo.location && (
 					<InfoContainer>
 						<ImageContainer>
 							<Image
@@ -194,20 +184,24 @@ const EventCard: React.FC<EventCardProps> = ({
 								unoptimized
 							/>
 						</ImageContainer>
-						<DateInfo>{location}</DateInfo>
+						<DateInfo>{eventInfo.location}</DateInfo>
 					</InfoContainer>
 				)}
 			</StyledCardContent>
 			<CompanyInfo>
 				<StyledLink href="/company/companyId">
 					<CompanyAvatar>
-						<img src={companySrc} alt={companyName} className="company" />
+						<img
+							src={eventInfo.companySrc}
+							alt={eventInfo.companyName}
+							className="company"
+						/>
 					</CompanyAvatar>
-					<CompanyName>{companyName}</CompanyName>
+					<CompanyName>{eventInfo.companyName}</CompanyName>
 				</StyledLink>
-				{isExhibitor ? (
+				{eventInfo.isExhibitor ? (
 					<ExhibitorIconWrapper>
-						<StyledTooltip title={description} arrow>
+						<StyledTooltip title={eventInfo.description} arrow>
 							<img
 								className="exhibitorIcon"
 								src={exhibitorIcon}
