@@ -15,16 +15,20 @@ const { blackColor, primaryColor, whiteColor } = color;
 // Styles
 
 const ContentContainer = styled(Box)`
+	align-items: center;
 	background-color: ${blackColor};
 	color: ${whiteColor};
+	display: flex;
+	flex-direction: column;
 	padding: 50px 0;
 `;
 
 const ContainerGrid = styled(Grid)`
-	width: calc(100vw - 48px);
 	@media (${devices.largeLaptop}) {
 		max-width: 1440px;
+		gap: 130px;
 	}
+	width: calc(100vw - 48px);
 `;
 
 const Title = styled.h5`
@@ -44,8 +48,16 @@ const StyledLink = styled(Link)`
 	}
 `;
 
+const LogoContainer = styled.div`
+	display: flex;
+	justify-content: start;
+	@media (${devices.largeLaptop}) {
+		max-width: 1440px;
+	}
+	width: calc(100vw - 48px);
+`;
 const Logo = styled(Image)`
-	margin-bottom: 20px;
+	margin: 0 0 20px 10px;
 `;
 
 const ContentText = styled.p`
@@ -55,9 +67,11 @@ const ContentText = styled.p`
 `;
 
 const QRcodeGridItem = styled(Grid)`
-	margin: 0 24px 24px 0;
-	@media (${devices.miniMobile}) {
+	@media ${devices.miniMobile} {
 		margin: 0 18px 6px 0;
+	}
+	@media ${devices.largerLaptop} {
+		margin: 0 24px 24px 0;
 	}
 `;
 
@@ -97,17 +111,20 @@ const FooterContent = () => {
 
 	return (
 		<ContentContainer sx={{ flexGrow: 1 }} className="flex justify-center">
+			<LogoContainer>
+				<Logo
+					loader={imageLoader}
+					unoptimized
+					src="/web3-logo-white.svg"
+					alt="logo"
+					width={150}
+					height={50}
+					priority
+				/>
+			</LogoContainer>
 			<ContainerGrid container spacing={3}>
 				<Grid item mobile={12} tablet={6} laptop={3} largeLaptop={3}>
-					<Logo
-						loader={imageLoader}
-						unoptimized
-						src="/web3-logo-white.svg"
-						alt="logo"
-						width={120}
-						height={40}
-						priority
-					/>
+					<Title>Get in touch</Title>
 					<ContentText>
 						Brisbane Convention and Exhibition Centre
 						<br />
