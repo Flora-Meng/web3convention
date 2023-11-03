@@ -95,6 +95,14 @@ const linkConfigList = [
 		path: '/comingSoon'
 	}
 ];
+const qrCodes = [
+	{ _id: 'e', src: '/images/qr-code/e.png', alt: 'E QR' },
+	{ _id: 'linkedin', src: '/images/qr-code/linkedin.png', alt: 'Linkedin QR' },
+	{ _id: 'x', src: '/images/qr-code/x.png', alt: 'X QR' },
+	{ _id: 'instagram', src: '/images/qr-code/instagram.png', alt: 'Instagram QR' },
+	{ _id: 'youtube', src: '/images/qr-code/youtube.png', alt: 'Youtube QR' },
+	{ _id: 'web3', src: '/images/qr-code/web3.png', alt: 'web3 QR' }
+];
 
 const FooterContent = () => {
 	const [emailInput, setEmailInput] = useState<string>('');
@@ -146,12 +154,12 @@ const FooterContent = () => {
 				<Grid item mobile={12} tablet={6} laptop={3} largeLaptop={3}>
 					<Title>Scan to connect</Title>
 					<Grid container>
-						{[1, 2, 3, 4, 5, 6].map(i => (
+						{qrCodes.map(qrCode => (
 							<QRcodeGridItem item mobile={3} tablet={3} laptop={3} largeLaptop={3}>
 								<Image
 									loader={imageLoader}
-									src={`/images/qr-code/${i}.png`}
-									alt={`Image ${i}`}
+									src={qrCode.src}
+									alt={qrCode.alt}
 									width={86}
 									height={86}
 								/>
