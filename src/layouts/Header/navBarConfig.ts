@@ -58,14 +58,14 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 		}
 	],
 	[ENavItem.SPONSOR]: [
-		{
-			title: '2024 Sponsors',
-			path: '/2024-sponsors'
-		},
-		{
-			title: 'Why Sponsor',
-			path: '/why-sponsor'
-		},
+		// {
+		// 	title: '2024 Sponsors',
+		// 	path: '/2024-sponsors'
+		// },
+		// {
+		// 	title: 'Why Sponsor',
+		// 	path: '/why-sponsor'
+		// },
 		{
 			title: 'Become a Sponsor',
 			path: 'https://w3con.eventsair.com/SponsorshipPortal/Account/Login?ReturnUrl=%2FSponsorshipPortal%2Fweb3convention%2Fsponsorship'
