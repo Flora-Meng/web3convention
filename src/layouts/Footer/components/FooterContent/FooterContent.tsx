@@ -67,6 +67,7 @@ const ContentText = styled.p`
 `;
 
 const QRcodeGridItem = styled(Grid)`
+	text-align: center;
 	@media ${devices.miniMobile} {
 		margin: 0 18px 6px 0;
 	}
@@ -96,12 +97,11 @@ const linkConfigList = [
 	}
 ];
 const qrCodes = [
-	{ _id: 'e', src: '/images/qr-code/e.png', alt: 'E QR' },
-	{ _id: 'linkedin', src: '/images/qr-code/linkedin.png', alt: 'Linkedin QR' },
-	{ _id: 'x', src: '/images/qr-code/x.png', alt: 'X QR' },
-	{ _id: 'instagram', src: '/images/qr-code/instagram.png', alt: 'Instagram QR' },
-	{ _id: 'youtube', src: '/images/qr-code/youtube.png', alt: 'Youtube QR' },
-	{ _id: 'web3', src: '/images/qr-code/web3.png', alt: 'web3 QR' }
+	{ _id: 'eventbrite', src: '/images/qr-code/eventbrite.png', alt: 'Eventbrite' },
+	{ _id: 'instagram', src: '/images/qr-code/instagram.png', alt: 'Instagram' },
+	{ _id: 'linkedin', src: '/images/qr-code/linkedin.png', alt: 'Linkedin' },
+	{ _id: 'twitter', src: '/images/qr-code/twitter.png', alt: 'Twitter' },
+	{ _id: 'youtube', src: '/images/qr-code/youtube.png', alt: 'Youtube' }
 ];
 
 const FooterContent = () => {
@@ -163,6 +163,7 @@ const FooterContent = () => {
 									width={86}
 									height={86}
 								/>
+								{qrCode.alt}
 							</QRcodeGridItem>
 						))}
 					</Grid>
