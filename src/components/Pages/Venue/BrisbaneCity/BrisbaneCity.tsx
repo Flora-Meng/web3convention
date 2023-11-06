@@ -68,6 +68,7 @@ const ImageWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	overflow: hidden;
 	@media ${devices.tablet} {
 		display: grid;
 		grid-template-columns: 330px 330px;

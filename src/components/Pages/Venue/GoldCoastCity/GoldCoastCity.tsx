@@ -51,6 +51,7 @@ const ImageWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	overflow: hidden;
 	@media ${devices.tablet} {
 		flex-direction: row;
 	}
