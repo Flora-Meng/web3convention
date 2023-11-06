@@ -33,7 +33,7 @@ export const devices: IDevices = {
 };
 
 export const color: IColor = {
-	primaryColor: '#53f6c6',
+	primaryColor: '#52f6c6',
 	darkPrimaryColor: '#50D6AE',
 	whiteColor: '#fff',
 	textColor: '#282828',
