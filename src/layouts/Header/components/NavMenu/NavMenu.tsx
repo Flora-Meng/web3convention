@@ -31,7 +31,7 @@ const CustomWidthTooltip = styled(({ className, ...props }: TooltipProps) => (
 			position: 'absolute',
 			top: '-8px',
 			left: 'calc(50% - 8px)',
-			width: '16px',
+			width: '6px',
 			height: '12px',
 			backgroundColor: whiteColor,
 			clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)'

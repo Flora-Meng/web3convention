@@ -17,7 +17,7 @@ const NavButtonContainer = styled.div`
 	align-items: center;
 	display: flex;
 	height: 44px;
-	width: 100%;
+	width: 300px;
 	&:hover span:before {
 		${activeNavBarTitleDecoration()}
 	}
@@ -33,15 +33,17 @@ const CustomizedButton = styled.button`
 	cursor: pointer;
 	font-family: ArialMT;
 	font-size: 16px;
+	padding-right: 24px;
 	text-align: left;
-	width: 100%;
+	width: auto;
 `;
 
 const ButtonCtx = styled.span`
 	align-items: center;
 	display: flex;
 	gap: 24px;
-	margin-left: 16px;
+	margin-left: 24px;
+
 	${navBarTitleDecoration('calc(100% + 4px)')};
 `;
 
@@ -52,14 +54,16 @@ const NavBarButton: React.FC<NavBarButtonProps> = ({ buttonCtx, linkHref }) => {
 		<NavButtonContainer>
 			<CustomizedButton onClick={() => router.push(linkHref)}>
 				<ButtonCtx>
-					<Image
-						src="/images/icons/starIconForNav.png"
-						alt="Star Icon"
-						width={17}
-						height={18}
-						priority
-						loader={imageLoader}
-					/>
+					{buttonCtx === 'General Events' && (
+						<Image
+							src="/images/icons/starIconForNav.png"
+							alt="Star Icon"
+							width={17}
+							height={18}
+							priority
+							loader={imageLoader}
+						/>
+					)}
 					{buttonCtx}
 				</ButtonCtx>
 			</CustomizedButton>
