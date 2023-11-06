@@ -74,7 +74,7 @@ const GridItem = styled.div<GridItemProps>`
 	display: flex;
 	height: 52px;
 	justify-content: center;
-	padding: 14px 4px;
+	padding: 14px 0px;
 
 	p {
 		-webkit-box-orient: vertical;
@@ -124,28 +124,34 @@ const headConfig: {
 const agendaConfig = [
 	{
 		_id: '1-1',
-		title: 'Exhibitors Bump in',
+		title: 'Side Events',
 		columns: 1,
 		offset: 0
 	},
 	{
 		_id: '1-23',
-		title: 'Open Expo Hall',
+		title: 'Web3 Convention',
 		columns: 2,
 		offset: 0
 	},
 	{
 		_id: '1-4',
-		title: 'Side Event Session',
+		title: 'Side Event Sessions',
+		columns: 1,
+		offset: 0
+	},
+	{
+		_id: '2-1',
+		title: 'Side Event Sessions',
 		columns: 1,
 		offset: 0
 	},
 
 	{
 		_id: '2-23',
-		title: 'Mainstage',
+		title: 'Keynote Speech',
 		columns: 2,
-		offset: 1
+		offset: 0
 	},
 	{
 		_id: '2-4',
@@ -154,97 +160,93 @@ const agendaConfig = [
 		offset: 0
 	},
 	{
-		_id: '3-23',
-		title: 'Seminar',
-		columns: 2,
-		offset: 1
+		_id: '3-1',
+		title: 'Exhibitors Move in',
+		columns: 1,
+		offset: 0
 	},
 	{
-		_id: '11-23',
-		title: 'Data & AI & Cloud Computing',
+		_id: '3-23',
+		title: 'Data & AI',
 		columns: 2,
-		offset: 1
+		offset: 0
 	},
+	{
+		_id: '3-4',
+		title: '',
+		columns: 0,
+		offset: 0
+	},
+
+	{
+		_id: '4-1',
+		title: 'Kickoff Party',
+		columns: 1,
+		offset: 0
+	},
+
 	{
 		_id: '4-23',
-		title: 'Metaverse and Gaming Zone',
+		title: 'NFT Gallery',
 		columns: 2,
-		offset: 1
+		offset: 0
 	},
 	{
 		_id: '5-23',
-		title: 'NFT House',
-		columns: 2,
-		offset: 1
-	},
-	{
-		_id: '6-23',
-		title: 'DAO House',
-		columns: 2,
-		offset: 1
-	},
-	{
-		_id: '7-23',
 		title: 'VIP Lounge',
 		columns: 2,
 		offset: 1
 	},
 	{
-		_id: '8-23',
-		title: 'Web3 Hackathon',
+		_id: '6-23',
+		title: 'Web3 Workshop',
 		columns: 2,
 		offset: 1
 	},
 	{
+		_id: '7-23',
+		title: 'Side Event Sessions',
+		columns: 2,
+		offset: 1
+	},
+	{
+		_id: '8-23',
+		title: 'Sponsor/Startup Pitches',
+		columns: 2,
+		offset: 1
+	},
+
+	{
 		_id: '9-2',
-		title: 'Sponsor & Startup Pitches <Pitch House>',
-		columns: 1,
-		offset: 1
-	},
-	{
-		_id: '9-3',
-		title: 'Web3 Hackathon Final Pitches<Pitch House>',
-		columns: 1,
-		offset: 0
-	},
-	{
-		_id: '10-23',
-		title: 'Web3 Workshop',
-		columns: 1,
-		offset: 1
-	},
-	{
-		_id: '11-1',
-		title: 'Kickoff Party',
-		columns: 1,
-		offset: 0
-	},
-	{
-		_id: '11-2',
 		title: 'Cyber Party',
 		columns: 1,
 		offset: 1
 	},
 	{
-		_id: '11-3',
-		title: 'After Party',
+		_id: '9-3',
+		title: 'Hackathon Pitches',
 		columns: 1,
 		offset: 0
 	},
 	{
-		_id: '12-2',
+		_id: '10-2',
 		title: 'Whale Yacht Party',
 		columns: 1,
 		offset: 1
 	},
 	{
-		_id: '13-2',
-		title: 'Partner After Party',
+		_id: '10-3',
+		title: 'After Party',
 		columns: 1,
 		offset: 0
+	},
+	{
+		_id: '11-3',
+		title: 'Dao House',
+		columns: 1,
+		offset: 1
 	}
 ];
-
 const AgendaTable: React.FC = () => {
 	return (
 		<AgendaTableContainer>
