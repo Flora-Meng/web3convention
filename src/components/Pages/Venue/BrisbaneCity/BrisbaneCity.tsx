@@ -68,6 +68,7 @@ const ImageWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	overflow: hidden;
 	@media ${devices.tablet} {
 		display: grid;
 		grid-template-columns: 330px 330px;
@@ -76,6 +77,7 @@ const ImageWrapper = styled.div`
 		align-items: center;
 	}
 	@media ${devices.largeLaptop} {
+		overflow: visible;
 		display: flex;
 		position: relative;
 		width: 500px;

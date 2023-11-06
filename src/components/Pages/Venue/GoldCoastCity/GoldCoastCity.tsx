@@ -51,10 +51,12 @@ const ImageWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	overflow: hidden;
 	@media ${devices.tablet} {
 		flex-direction: row;
 	}
 	@media ${devices.largeLaptop} {
+		overflow: visible;
 		position: relative;
 	}
 `;
@@ -75,11 +77,11 @@ const BeachEvening = styled(Image)`
 	margin-bottom: 28px;
 	@media ${devices.tablet} {
 		height: 378px;
+		margin: 0;
 	}
 	@media ${devices.largeLaptop} {
 		width: 589px;
 		height: 680px;
-		margin: 0;
 	}
 `;
 
