@@ -77,6 +77,7 @@ const ImageWrapper = styled.div`
 		align-items: center;
 	}
 	@media ${devices.largeLaptop} {
+		overflow: visible;
 		display: flex;
 		position: relative;
 		width: 500px;
