@@ -82,7 +82,7 @@ const GridItem = styled.div<GridItemProps>`
 		display: -webkit-box;
 		font-size: 12px;
 		font-weight: 600;
-		line-height: 14px;
+		line-height: 15px;
 		max-width: 100%;
 		overflow: hidden;
 		text-align: center;
@@ -92,6 +92,7 @@ const GridItem = styled.div<GridItemProps>`
 			font-size: 13px;
 		}
 		@media ${devices.laptop} {
+			line-height: 18px;
 			font-size: 16px;
 		}
 	}
