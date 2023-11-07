@@ -1,9 +1,12 @@
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { ClickAwayListener } from '@mui/material';
+import Image from 'next/image';
 import React, { ChangeEvent, useState } from 'react';
 import styled from 'styled-components';
 
 import { color } from '@/styles/variables';
+import imageLoader from '@/utils/loader';
+import { isAlphaNumericSpace } from '@/utils/validator';
 
 const { whiteColor, darkPrimaryColor, primaryColor } = color;
 const MainContainer = styled.div`
@@ -25,15 +28,15 @@ const StyledInput = styled.input`
 	padding: 10px 15px;
 	width: 100%;
 `;
-const LocationIcon = styled.img`
+const LocationIcon = styled(Image)`
 	margin-right: 10px;
 `;
-const SearchHistory = styled.img`
+const SearchHistory = styled(Image)`
 	color: ${primaryColor};
 	font-size: 1.4em;
 	margin-right: 10px;
 `;
-const UseCurrentLocation = styled.img`
+const UseCurrentLocation = styled(Image)`
 	color: ${primaryColor};
 	font-size: 1.4em;
 	margin-right: 10px;
@@ -66,8 +69,9 @@ const DropdownOption = styled.button`
 	width: 100%;
 `;
 const CurrentLocation = styled(DropdownOption)`
-	background-color: #1f1f1f !important;
+	background-color: #1f1f1f;
 `;
+
 const CurrentLocationContainer = styled(DropdownOption)`
 	display: flex;
 	padding: 10px 0;
@@ -109,7 +113,7 @@ const ChooseLocation = () => {
 		let value = event.target.value.toLowerCase();
 		setInputError('');
 
-		if (/[^a-z0-9\s]/gi.test(value)) {
+		if (!isAlphaNumericSpace(value)) {
 			setInputError('Special characters are not allowed.');
 			value = value.replace(/[^a-z0-9\s]/gi, '');
 		}
@@ -128,7 +132,14 @@ const ChooseLocation = () => {
 		<ClickAwayListener onClickAway={handleClickAway}>
 			<MainContainer>
 				<TextAndIconContainer>
-					<LocationIcon src="/images/icons/location.png" alt="location icon" />
+					{/* <LocationIcon src="/images/icons/location.png" alt="location icon" /> */}
+					<LocationIcon
+						loader={imageLoader}
+						src="/images/icons/location.png"
+						alt="location icon"
+						width={22}
+						height={22}
+					/>
 					<StyledInput
 						placeholder="Choose a location"
 						value={inputValue}
@@ -144,14 +155,16 @@ const ChooseLocation = () => {
 					/>
 				</TextAndIconContainer>
 				{inputError && <ErrorMessage>{inputError}</ErrorMessage>}
-
 				{isExpanded && (
 					<DropdownContent>
 						<CurrentLocationContainer>
 							<CurrentLocation>
 								<UseCurrentLocation
+									loader={imageLoader}
 									src="/images/icons/current-location.svg"
 									alt="current location"
+									width={13}
+									height={13}
 								/>
 								Use my current location
 							</CurrentLocation>
@@ -162,8 +175,11 @@ const ChooseLocation = () => {
 								onClick={() => handleOptionClick(location)}
 							>
 								<SearchHistory
+									loader={imageLoader}
 									src="/images/icons/search-history.svg"
 									alt="search history"
+									width={13}
+									height={13}
 								/>
 								<LocationText>
 									{location}
