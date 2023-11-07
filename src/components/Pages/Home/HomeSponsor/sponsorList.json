@@ -22,7 +22,7 @@
 	{
 		"groupName": "Sponsor",
 		"sponsor": [
-			{
+            {
 				"_id": "4",
 				"logoSrc": "/images/sponsors/coinstash.png",
 				"logoSrcHighlight": "/images/sponsors/coinstash.png"
@@ -44,10 +44,10 @@
 			}
 		]
 	},
-	{
+    {
 		"groupName": "Strategic Partners",
 		"sponsor": [
-			{
+            {
 				"_id": "8",
 				"logoSrc": "/images/sponsors/file-coin.png",
 				"logoSrcHighlight": "/images/sponsors/file-coin.png"
@@ -82,12 +82,12 @@
 				"logoSrc": "/images/sponsors/blockpour.png",
 				"logoSrcHighlight": "/images/sponsors/blockpour.png"
 			},
-			{
+            {
 				"_id": "15",
 				"logoSrc": "/images/sponsors/bcw.jpg",
 				"logoSrcHighlight": "/images/sponsors/bcw.jpg"
 			},
-			{
+            {
 				"_id": "16",
 				"logoSrc": "/images/sponsors/ethereum.png",
 				"logoSrcHighlight": "/images/sponsors/ethereum.png"
@@ -102,67 +102,67 @@
 				"logoSrc": "/images/sponsors/n-capital.png",
 				"logoSrcHighlight": "/images/sponsors/n-capital.png"
 			},
-			{
+            {
 				"_id": "19",
 				"logoSrc": "/images/sponsors/buidlerdao.png",
 				"logoSrcHighlight": "/images/sponsors/buidlerdao.png"
 			},
-			{
+            {
 				"_id": "20",
 				"logoSrc": "/images/sponsors/reblonde.png",
 				"logoSrcHighlight": "/images/sponsors/reblonde.png"
 			},
-			{
+            {
 				"_id": "21",
 				"logoSrc": "/images/sponsors/consensus-vc.png",
 				"logoSrcHighlight": "/images/sponsors/consensus-vc.png"
 			},
-			{
+            {
 				"_id": "22",
 				"logoSrc": "/images/sponsors/alchemy-pay.png",
 				"logoSrcHighlight": "/images/sponsors/alchemy-pay.png"
 			},
-			{
+            {
 				"_id": "23",
 				"logoSrc": "/images/sponsors/go2-mars.png",
 				"logoSrcHighlight": "/images/sponsors/go2-mars.png"
 			},
-			{
+            {
 				"_id": "24",
 				"logoSrc": "/images/sponsors/atticc.png",
 				"logoSrcHighlight": "/images/sponsors/atticc.png"
 			},
-			{
+            {
 				"_id": "25",
 				"logoSrc": "/images/sponsors/cyber-connect.png",
 				"logoSrcHighlight": "/images/sponsors/cyber-connect.png"
 			},
-			{
+            {
 				"_id": "26",
 				"logoSrc": "/images/sponsors/hushkey.png",
 				"logoSrcHighlight": "/images/sponsors/hushkey.png"
 			},
-			{
+            {
 				"_id": "27",
 				"logoSrc": "/images/sponsors/smart-token.png",
 				"logoSrcHighlight": "/images/sponsors/smart-token.png"
 			}
 		]
 	},
-	{
+    {
 		"groupName": "Community Partner",
 		"sponsor": [
-			{
+            {
 				"_id": "28",
 				"logoSrc": "/images/sponsors/offchain.png",
 				"logoSrcHighlight": "/images/sponsors/offchain.png"
 			},
-			{
+            {
 				"_id": "29",
 				"logoSrc": "/images/sponsors/ba-logo.png",
 				"logoSrcHighlight": "/images/sponsors/ba-logo.png"
 			},
-			{
+            {
 				"_id": "30",
 				"logoSrc": "./images/sponsors/avatar-dao.png",
 				"logoSrcHighlight": "/images/sponsors/avatar-dao.png"
@@ -172,32 +172,29 @@
 				"logoSrc": "./images/sponsors/crossspace.png",
 				"logoSrcHighlight": "/images/sponsors/crossspace.png"
 			},
-			{
+            {
 				"_id": "32",
 				"logoSrc": "./images/sponsors/etherpoap.png",
 				"logoSrcHighlight": "/images/sponsors/etherpoap.png"
-			},
-			{
+			},{
 				"_id": "33",
 				"logoSrc": "./images/sponsors/linkz-dao.png",
 				"logoSrcHighlight": "/images/sponsors/linkz-dao.png"
-			},
-			{
+			},{
 				"_id": "34",
 				"logoSrc": "./images/sponsors/mars-dao.png",
 				"logoSrcHighlight": "/images/sponsors/mars-dao.png"
-			},
-			{
+			},{
 				"_id": "35",
 				"logoSrc": "./images/sponsors/moledao.png",
 				"logoSrcHighlight": "/images/sponsors/moledao.png"
 			}
 		]
 	},
-	{
+    {
 		"groupName": "Media Partner",
 		"sponsor": [
-			{
+            {
 				"_id": "36",
 				"logoSrc": "/images/sponsors/cointelegraph.png",
 				"logoSrcHighlight": "/images/sponsors/cointelegraph.png"
@@ -207,17 +204,17 @@
 				"logoSrc": "/images/sponsors/blocklike.png",
 				"logoSrcHighlight": "/images/sponsors/blocklike.png"
 			},
-			{
+            {
 				"_id": "38",
 				"logoSrc": "/images/sponsors/chain-catcher.png",
 				"logoSrcHighlight": "/images/sponsors/chain-catcher.png"
 			},
-			{
+            {
 				"_id": "39",
 				"logoSrc": "/images/sponsors/foresight-news.png",
 				"logoSrcHighlight": "/images/sponsors/foresight-news.png"
 			},
-			{
+            {
 				"_id": "40",
 				"logoSrc": "/images/sponsors/mars-bit.png",
 				"logoSrcHighlight": "/images/sponsors/mars-bit.png"
