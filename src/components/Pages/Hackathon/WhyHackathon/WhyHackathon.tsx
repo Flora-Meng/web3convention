@@ -44,15 +44,15 @@ const Subtitle = styled.p`
 const counterList = [
 	{
 		name: 'Prizes(AUD)',
-		count: 10000
+		count: 100000
 	},
 	{
 		name: 'Sponsors',
-		count: 5
+		count: 10
 	},
 	{
 		name: 'Judges',
-		count: 10
+		count: 20
 	}
 ];
 

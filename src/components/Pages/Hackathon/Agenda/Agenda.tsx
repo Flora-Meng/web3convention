@@ -65,9 +65,81 @@ const headConfig: {
 ];
 
 const agendaConfig = [
+	// {
+	// 	_id: '1-1',
+	// 	title: 'Deadline to Apply',
+	// 	columns: 1,
+	// 	offset: 0
+	// },
+	// {
+	// 	_id: '1-2',
+	// 	title: 'Project Feedback Session',
+	// 	columns: 1,
+	// 	offset: 0
+	// },
+	// {
+	// 	_id: '1-3',
+	// 	title: 'Pitches',
+	// 	columns: 1,
+	// 	offset: 0
+	// },
+	// {
+	// 	_id: '2-1',
+	// 	title: 'Idea Brainstorming & Team Formation Session',
+	// 	columns: 1,
+	// 	offset: 0
+	// },
+	// {
+	// 	_id: '2-2',
+	// 	title: 'Web3 & Cloud Workshop',
+	// 	columns: 1,
+	// 	offset: 0
+	// },
+	// {
+	// 	_id: '2-3',
+	// 	title: 'Project Judging',
+	// 	columns: 1,
+	// 	offset: 0
+	// },
+	// {
+	// 	_id: '4-1',
+	// 	title: 'Opening Ceremonies',
+	// 	columns: 1,
+	// 	offset: 0
+	// },
+	// {
+	// 	_id: '3-2',
+	// 	title: 'Project Submissions Due!',
+	// 	columns: 1,
+	// 	offset: 0
+	// },
+	// {
+	// 	_id: '3-3',
+	// 	title: 'Results',
+	// 	columns: 1,
+	// 	offset: 0
+	// },
+	// {
+	// 	_id: '3-1',
+	// 	title: 'Uni Hackathon Kickoff',
+	// 	columns: 1,
+	// 	offset: 0
+	// },
+	// {
+	// 	_id: '4-3',
+	// 	title: 'Closing Ceremonies',
+	// 	columns: 1,
+	// 	offset: 1
+	// },
+	// {
+	// 	_id: '4-1',
+	// 	title: 'Web 3 Hackathon Kickoff',
+	// 	columns: 1,
+	// 	offset: 2
+	// }
 	{
 		_id: '1-1',
-		title: 'Deadline to Apply',
+		title: 'Online project submission commences',
 		columns: 1,
 		offset: 0
 	},
@@ -79,13 +151,13 @@ const agendaConfig = [
 	},
 	{
 		_id: '1-3',
-		title: 'Pitches',
+		title: 'pitches',
 		columns: 1,
 		offset: 0
 	},
 	{
 		_id: '2-1',
-		title: 'Idea Brainstorming & Team Formation Session',
+		title: 'Discord set-up and hosting first AMA',
 		columns: 1,
 		offset: 0
 	},
@@ -102,16 +174,10 @@ const agendaConfig = [
 		offset: 0
 	},
 	{
-		_id: '4-1',
-		title: 'Opening Ceremonies',
-		columns: 1,
-		offset: 0
-	},
-	{
 		_id: '3-2',
-		title: 'Project Submissions Due!',
+		title: 'Project Submissions Due',
 		columns: 1,
-		offset: 0
+		offset: 1
 	},
 	{
 		_id: '3-3',
@@ -120,22 +186,22 @@ const agendaConfig = [
 		offset: 0
 	},
 	{
-		_id: '3-1',
-		title: 'Uni Hackathon Kickoff',
-		columns: 1,
-		offset: 0
-	},
-	{
-		_id: '4-3',
-		title: 'Closing Ceremonies',
+		_id: '4-2',
+		title: 'Judging and Finalists Announcement',
 		columns: 1,
 		offset: 1
 	},
 	{
-		_id: '4-1',
-		title: 'Web 3 Hackathon Kickoff',
+		_id: '4-3',
+		title: 'Hackathon Award Ceremony',
 		columns: 1,
-		offset: 2
+		offset: 0
+	},
+	{
+		_id: '5-2',
+		title: 'Idea Brainstorming & Team Formation Session',
+		columns: 1,
+		offset: 1
 	}
 ];
 const Agenda: React.FC = () => {
