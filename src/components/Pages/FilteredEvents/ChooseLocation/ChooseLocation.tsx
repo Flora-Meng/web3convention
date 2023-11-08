@@ -132,7 +132,6 @@ const ChooseLocation = () => {
 		<ClickAwayListener onClickAway={handleClickAway}>
 			<MainContainer>
 				<TextAndIconContainer>
-					{/* <LocationIcon src="/images/icons/location.png" alt="location icon" /> */}
 					<LocationIcon
 						loader={imageLoader}
 						src="/images/icons/location.png"
