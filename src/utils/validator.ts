@@ -39,3 +39,13 @@ export const websiteUrlReg =
 	/(https|http)?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/;
 
 export const isWebsiteUrl = (link: string): boolean => websiteUrlReg.test(link);
+
+export const alphaNumericSpaceReg = /^[a-z0-9\s]*$/i;
+
+/**
+ * @description
+ * Check whether the input is only alpha-numeric and spaces
+ * @param {string} input the input string
+ * @return {boolean} return a boolean
+ */
+export const isAlphaNumericSpace = (input: string): boolean => alphaNumericSpaceReg.test(input);
