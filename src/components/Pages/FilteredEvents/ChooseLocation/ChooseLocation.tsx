@@ -10,7 +10,6 @@ import { isAlphaNumericSpace } from '@/utils/validator';
 
 const { whiteColor, darkPrimaryColor, primaryColor } = color;
 const MainContainer = styled.div`
-	font-family: Arial;
 	width: 100%;
 `;
 const StyledInput = styled.input`
@@ -21,7 +20,7 @@ const StyledInput = styled.input`
 	cursor: pointer;
 	display: flex;
 	font-size: 20px;
-	height: 7vh;
+	height: 60px;
 	justify-content: space-between;
 	letter-spacing: 1px;
 	outline: none;
@@ -31,13 +30,7 @@ const StyledInput = styled.input`
 const LocationIcon = styled(Image)`
 	margin-right: 10px;
 `;
-const SearchHistory = styled(Image)`
-	color: ${primaryColor};
-	font-size: 1.4em;
-	margin-right: 10px;
-`;
-const UseCurrentLocation = styled(Image)`
-	color: ${primaryColor};
+const DropdownContentIcon = styled(Image)`
 	font-size: 1.4em;
 	margin-right: 10px;
 `;
@@ -85,6 +78,13 @@ const CurrentLocationContainer = styled(DropdownOption)`
 		transform: translateX(-50%);
 		width: 95%;
 	}
+`;
+interface StyledIconProps {
+	isExpanded: boolean;
+}
+const StyledKeyboardArrowDownIcon = styled(KeyboardArrowDownIcon)<StyledIconProps>`
+	color: #fff;
+	transform: ${({ isExpanded }) => (isExpanded ? 'rotate(180deg)' : 'rotate(0deg)')};
 `;
 const ErrorMessage = styled.div`
 	color: red;
@@ -146,12 +146,9 @@ const ChooseLocation = () => {
 						onChange={handleInputChange}
 						onFocus={() => setIsExpanded(true)}
 					/>
-					<KeyboardArrowDownIcon
+					<StyledKeyboardArrowDownIcon
 						onClick={() => setIsExpanded(!isExpanded)}
-						style={{
-							color: '#fff',
-							transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)'
-						}}
+						isExpanded={isExpanded}
 					/>
 				</TextAndIconContainer>
 				{inputError && <ErrorMessage>{inputError}</ErrorMessage>}
@@ -159,7 +156,7 @@ const ChooseLocation = () => {
 					<DropdownContent>
 						<CurrentLocationContainer>
 							<CurrentLocation>
-								<UseCurrentLocation
+								<DropdownContentIcon
 									loader={imageLoader}
 									src="/images/icons/current-location.svg"
 									alt="current location"
@@ -174,7 +171,7 @@ const ChooseLocation = () => {
 								key={location}
 								onClick={() => handleOptionClick(location)}
 							>
-								<SearchHistory
+								<DropdownContentIcon
 									loader={imageLoader}
 									src="/images/icons/search-history.svg"
 									alt="search history"
