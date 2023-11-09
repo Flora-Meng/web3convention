@@ -7,6 +7,7 @@ import { color } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
 const { textColor } = color;
+const STAR_ICON_PATH = '/images/icons/starIconForNav.png';
 
 interface NavBarButtonProps {
 	buttonCtx: string;
@@ -56,7 +57,7 @@ const NavBarButton: React.FC<NavBarButtonProps> = ({ buttonCtx, linkHref }) => {
 				<ButtonCtx>
 					{buttonCtx === 'General Events' && (
 						<Image
-							src="/images/icons/starIconForNav.png"
+							src={STAR_ICON_PATH}
 							alt="Star Icon"
 							width={17}
 							height={18}
