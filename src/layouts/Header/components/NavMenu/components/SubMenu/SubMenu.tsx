@@ -23,7 +23,7 @@ const SubMenu: React.FC<SubMenuProps> = ({ subNavList }) => {
 					buttonCtx={subNavItem.title}
 					key={subNavItem.title}
 					linkHref={subNavItem.path}
-					src={subNavItem.src}
+					icon={subNavItem.icon}
 				/>
 			))}
 		</SubMenuContainer>
