@@ -12,6 +12,7 @@ const STAR_ICON_PATH = '/images/icons/starIconForNav.png';
 interface NavBarButtonProps {
 	buttonCtx: string;
 	linkHref: string;
+	src?: string;
 }
 
 const NavButtonContainer = styled.div`
@@ -48,16 +49,16 @@ const ButtonCtx = styled.span`
 	${navBarTitleDecoration('calc(100% + 4px)')};
 `;
 
-const NavBarButton: React.FC<NavBarButtonProps> = ({ buttonCtx, linkHref }) => {
+const NavBarButton: React.FC<NavBarButtonProps> = ({ buttonCtx, linkHref, src = undefined }) => {
 	const router = useRouter();
 
 	return (
 		<NavButtonContainer>
 			<CustomizedButton onClick={() => router.push(linkHref)}>
 				<ButtonCtx>
-					{buttonCtx === 'General Events' && (
+					{src && (
 						<Image
-							src={STAR_ICON_PATH}
+							src={src}
 							alt="Star Icon"
 							width={17}
 							height={18}
@@ -65,6 +66,7 @@ const NavBarButton: React.FC<NavBarButtonProps> = ({ buttonCtx, linkHref }) => {
 							loader={imageLoader}
 						/>
 					)}
+
 					{buttonCtx}
 				</ButtonCtx>
 			</CustomizedButton>
