@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import styled from 'styled-components';
 
 import { sectionSubtitle, sectionTitle } from '@/styles/mixin';
@@ -19,37 +20,29 @@ const Subtitle = styled.p`
 	${sectionSubtitle};
 `;
 
-const StageCoverTitle = () => {
+const Benefits = () => {
 	return (
 		<ContentContainer>
 			<Subtitle>Web3 Hackathon 2023</Subtitle>
-			<Title>Prizes</Title>
-			<h3>$50,000 in Hackathon prizes</h3>
-			<p>
-				<strong>1st Place</strong>
-			</p>
+			<Title>Benefits</Title>
+			<h3>Additional benefits for the finalists</h3>
 			<ul>
-				<li>$16,000</li>
+				<li>Seed investment opportunities valued at upwards of $50,000</li>
 			</ul>
-			<p>
-				<strong>2nd Place</strong>
-			</p>
 			<ul>
-				<li>$10,000</li>
+				<li>Paid media consulting and exposure for the winning team; valued at $7,000</li>
 			</ul>
-			<p>
-				<strong> 3rd Place</strong>
-			</p>
 			<ul>
-				<li>$8,000</li>
+				<li>
+					Mentoring and technical advisory services for the top-3 ranked teams; valued at
+					$25,000
+				</li>
 			</ul>
-			<p>
-				<strong>
-					16 special awards with a $1000 cash prize for the remaining top finalists
-				</strong>
-			</p>
+			<ul>
+				<li>Much more to be announced soon. Watch this space.</li>
+			</ul>
 		</ContentContainer>
 	);
 };
 
-export default StageCoverTitle;
+export default Benefits;

@@ -13,7 +13,7 @@ interface PageBannerProps {
 		imageSrc: string;
 		description: string;
 	};
-	buttonConfig: {
+	buttonConfig?: {
 		text: string;
 		url: string;
 		extra?: string;
@@ -107,8 +107,15 @@ const PageBanner: React.FC<PageBannerProps> = props => {
 					<Subtitle>{bannerInfo.subtitle}</Subtitle>
 					<Title>{bannerInfo.title}</Title>
 					<Description>{bannerInfo.description}</Description>
-					<ThemeButton href={buttonConfig.url}>{buttonConfig.text}</ThemeButton>
-					<ButtonExtraDescription>{buttonConfig.extra}</ButtonExtraDescription>
+
+					{buttonConfig && (
+						<>
+							<ThemeButton href={buttonConfig.url}>{buttonConfig.text}</ThemeButton>
+							<ButtonExtraDescription>
+								{buttonConfig.extra}
+							</ButtonExtraDescription>{' '}
+						</>
+					)}
 				</InfoContainer>
 			</RightGrid>
 		</div>
