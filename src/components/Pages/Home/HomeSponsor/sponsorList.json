@@ -1,77 +1,237 @@
 [
 	{
-		"_id": "1",
-		"logoSrc": "/images/sponsors/binance-Logo.wine.png",
-		"logoSrcHighlight": "/images/sponsors/binance-Logo.wine.png"
+		"groupName": "Host & Co-host",
+		"sponsor": [
+			{
+				"_id": "1",
+				"logoSrc": "./images/sponsors/abc.png",
+				"logoSrcHighlight": "/images/sponsors/abc.png"
+			},
+			{
+				"_id": "2",
+				"logoSrc": "/images/sponsors/jr-academy.jpg",
+				"logoSrcHighlight": "/images/sponsors/jr-academy.jpg"
+			},
+			{
+				"_id": "3",
+				"logoSrc": "/images/sponsors/cloudtech.png",
+				"logoSrcHighlight": "/images/sponsors/cloudtech.png"
+			}
+		]
 	},
 	{
-		"_id": "2",
-		"logoSrc": "/images/sponsors/microsoft.webp",
-		"logoSrcHighlight": "/images/sponsors/microsoft.webp"
+		"groupName": "Sponsor",
+		"sponsor": [
+			{
+				"_id": "4",
+				"logoSrc": "/images/sponsors/coinstash.png",
+				"logoSrcHighlight": "/images/sponsors/coinstash.png"
+			},
+			{
+				"_id": "5",
+				"logoSrc": "/images/sponsors/debox.jpg",
+				"logoSrcHighlight": "/images/sponsors/debox.jpg"
+			},
+			{
+				"_id": "6",
+				"logoSrc": "/images/sponsors/gameta.jpg",
+				"logoSrcHighlight": "/images/sponsors/gameta.jpg"
+			},
+			{
+				"_id": "7",
+				"logoSrc": "/images/sponsors/mirror-world.png",
+				"logoSrcHighlight": "/images/sponsors/mirror-world.png"
+			}
+		]
 	},
 	{
-		"_id": "3",
-		"logoSrc": "/images/sponsors/f5.png",
-		"logoSrcHighlight": "/images/sponsors/f5.png"
+		"groupName": "Strategic Partners",
+		"sponsor": [
+			{
+				"_id": "8",
+				"logoSrc": "/images/sponsors/file-coin.png",
+				"logoSrcHighlight": "/images/sponsors/file-coin.png"
+			},
+			{
+				"_id": "9",
+				"logoSrc": "/images/sponsors/luna-pr.png",
+				"logoSrcHighlight": "/images/sponsors/luna-pr.png"
+			},
+			{
+				"_id": "10",
+				"logoSrc": "/images/sponsors/polygon.png",
+				"logoSrcHighlight": "/images/sponsors/polygon.png"
+			},
+			{
+				"_id": "11",
+				"logoSrc": "/images/sponsors/quest-n.png",
+				"logoSrcHighlight": "/images/sponsors/quest-n.png"
+			},
+			{
+				"_id": "12",
+				"logoSrc": "/images/sponsors/ipollo.png",
+				"logoSrcHighlight": "/images/sponsors/ipollo.png"
+			},
+			{
+				"_id": "13",
+				"logoSrc": "/images/sponsors/openai.png",
+				"logoSrcHighlight": "/images/sponsors/openai.png"
+			},
+			{
+				"_id": "14",
+				"logoSrc": "/images/sponsors/blockpour.png",
+				"logoSrcHighlight": "/images/sponsors/blockpour.png"
+			},
+			{
+				"_id": "15",
+				"logoSrc": "/images/sponsors/bcw.jpg",
+				"logoSrcHighlight": "/images/sponsors/bcw.jpg"
+			},
+			{
+				"_id": "16",
+				"logoSrc": "/images/sponsors/ethereum.png",
+				"logoSrcHighlight": "/images/sponsors/ethereum.png"
+			},
+			{
+				"_id": "17",
+				"logoSrc": "/images/sponsors/tide.png",
+				"logoSrcHighlight": "/images/sponsors/tide.png"
+			},
+			{
+				"_id": "18",
+				"logoSrc": "/images/sponsors/n-capital.png",
+				"logoSrcHighlight": "/images/sponsors/n-capital.png"
+			},
+			{
+				"_id": "19",
+				"logoSrc": "/images/sponsors/buidlerdao.png",
+				"logoSrcHighlight": "/images/sponsors/buidlerdao.png"
+			},
+			{
+				"_id": "20",
+				"logoSrc": "/images/sponsors/reblonde.png",
+				"logoSrcHighlight": "/images/sponsors/reblonde.png"
+			},
+			{
+				"_id": "21",
+				"logoSrc": "/images/sponsors/consensus-vc.png",
+				"logoSrcHighlight": "/images/sponsors/consensus-vc.png"
+			},
+			{
+				"_id": "22",
+				"logoSrc": "/images/sponsors/alchemy-pay.png",
+				"logoSrcHighlight": "/images/sponsors/alchemy-pay.png"
+			},
+			{
+				"_id": "23",
+				"logoSrc": "/images/sponsors/go2-mars.png",
+				"logoSrcHighlight": "/images/sponsors/go2-mars.png"
+			},
+			{
+				"_id": "24",
+				"logoSrc": "/images/sponsors/atticc.png",
+				"logoSrcHighlight": "/images/sponsors/atticc.png"
+			},
+			{
+				"_id": "25",
+				"logoSrc": "/images/sponsors/cyber-connect.png",
+				"logoSrcHighlight": "/images/sponsors/cyber-connect.png"
+			},
+			{
+				"_id": "26",
+				"logoSrc": "/images/sponsors/hushkey.png",
+				"logoSrcHighlight": "/images/sponsors/hushkey.png"
+			},
+			{
+				"_id": "27",
+				"logoSrc": "/images/sponsors/smart-token.png",
+				"logoSrcHighlight": "/images/sponsors/smart-token.png"
+			}
+		]
 	},
 	{
-		"_id": "4",
-		"logoSrc": "/images/sponsors/aws.png",
-		"logoSrcHighlight": "/images/sponsors/aws.png"
+		"groupName": "Community Partner",
+		"sponsor": [
+			{
+				"_id": "28",
+				"logoSrc": "/images/sponsors/offchain.png",
+				"logoSrcHighlight": "/images/sponsors/offchain.png"
+			},
+			{
+				"_id": "29",
+				"logoSrc": "/images/sponsors/ba-logo.png",
+				"logoSrcHighlight": "/images/sponsors/ba-logo.png"
+			},
+			{
+				"_id": "30",
+				"logoSrc": "./images/sponsors/avatar-dao.png",
+				"logoSrcHighlight": "/images/sponsors/avatar-dao.png"
+			},
+			{
+				"_id": "31",
+				"logoSrc": "./images/sponsors/crossspace.png",
+				"logoSrcHighlight": "/images/sponsors/crossspace.png"
+			},
+			{
+				"_id": "32",
+				"logoSrc": "./images/sponsors/etherpoap.png",
+				"logoSrcHighlight": "/images/sponsors/etherpoap.png"
+			},
+			{
+				"_id": "33",
+				"logoSrc": "./images/sponsors/linkz-dao.png",
+				"logoSrcHighlight": "/images/sponsors/linkz-dao.png"
+			},
+			{
+				"_id": "34",
+				"logoSrc": "./images/sponsors/mars-dao.png",
+				"logoSrcHighlight": "/images/sponsors/mars-dao.png"
+			},
+			{
+				"_id": "35",
+				"logoSrc": "./images/sponsors/moledao.png",
+				"logoSrcHighlight": "/images/sponsors/moledao.png"
+			}
+		]
 	},
 	{
-		"_id": "5",
-		"logoSrc": "/images/sponsors/snowflake_Logo.svg.png",
-		"logoSrcHighlight": "/images/sponsors/snowflake_Logo.svg.png"
-	},
-	{
-		"_id": "6",
-		"logoSrc": "/images/sponsors/ethereum.png",
-		"logoSrcHighlight": "/images/sponsors/ethereum.png"
-	},
-	{
-		"_id": "7",
-		"logoSrc": "/images/sponsors/solona.png",
-		"logoSrcHighlight": "/images/sponsors/solona.png"
-	},
-	{
-		"_id": "8",
-		"logoSrc": "/images/sponsors/opensea.png",
-		"logoSrcHighlight": "/images/sponsors/opensea.png"
-	},
-	{
-		"_id": "9",
-		"logoSrc": "/images/sponsors/ibm.png",
-		"logoSrcHighlight": "/images/sponsors/ibm.png"
-	},
-	{
-		"_id": "10",
-		"logoSrc": "/images/sponsors/polygon.png",
-		"logoSrcHighlight": "/images/sponsors/polygon.png"
-	},
-	{
-		"_id": "11",
-		"logoSrc": "/images/sponsors/1password.png",
-		"logoSrcHighlight": "/images/sponsors/1password.png"
-	},
-	{
-		"_id": "12",
-		"logoSrc": "/images/sponsors/OKEx.png",
-		"logoSrcHighlight": "/images/sponsors/OKEx.png"
-	},
-	{
-		"_id": "13",
-		"logoSrc": "/images/sponsors/file-coin.png",
-		"logoSrcHighlight": "/images/sponsors/file-coin.png"
-	},
-	{
-		"_id": "14",
-		"logoSrc": "/images/sponsors/thoughtworks.png",
-		"logoSrcHighlight": "/images/sponsors/thoughtworks.png"
-	},
-	{
-		"_id": "15",
-		"logoSrc": "/images/sponsors/gitlab-logo-gray-rgb.png",
-		"logoSrcHighlight": "/images/sponsors/gitlab-logo-gray-rgb.png"
+		"groupName": "Media Partner",
+		"sponsor": [
+			{
+				"_id": "36",
+				"logoSrc": "/images/sponsors/cointelegraph.png",
+				"logoSrcHighlight": "/images/sponsors/cointelegraph.png"
+			},
+			{
+				"_id": "37",
+				"logoSrc": "/images/sponsors/blocklike.png",
+				"logoSrcHighlight": "/images/sponsors/blocklike.png"
+			},
+			{
+				"_id": "38",
+				"logoSrc": "/images/sponsors/chain-catcher.png",
+				"logoSrcHighlight": "/images/sponsors/chain-catcher.png"
+			},
+			{
+				"_id": "39",
+				"logoSrc": "/images/sponsors/foresight-news.png",
+				"logoSrcHighlight": "/images/sponsors/foresight-news.png"
+			},
+			{
+				"_id": "40",
+				"logoSrc": "/images/sponsors/mars-bit.png",
+				"logoSrcHighlight": "/images/sponsors/mars-bit.png"
+			},
+			{
+				"_id": "41",
+				"logoSrc": "/images/sponsors/odaily.png",
+				"logoSrcHighlight": "/images/sponsors/odaily.png"
+			},
+			{
+				"_id": "42",
+				"logoSrc": "/images/sponsors/cointime.png",
+				"logoSrcHighlight": "/images/sponsors/cointime.png"
+			}
+		]
 	}
 ]

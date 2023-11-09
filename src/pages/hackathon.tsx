@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import Agenda from '@/components/Pages/Hackathon/Agenda';
+import Benefits from '@/components/Pages/Hackathon/Benefits';
 import Challenge from '@/components/Pages/Hackathon/Challenge';
 import StageCoverTitle from '@/components/Pages/Hackathon/CoverTitle/HackathonCoverTitle';
 import JudgeCriteria from '@/components/Pages/Hackathon/JudgeCriteria';
@@ -35,11 +36,7 @@ const HackathonPage = () => {
 			'University Hackathon, Web3 Hackathon, Web3, Blockchain, NFT, Whale Yacht Party, Pitch Space',
 		title: 'Web3 Hackathon, Web3 Convention 2024 | April, 2024 | Stages'
 	};
-	const buttonConfig = {
-		text: 'Apply to hack',
-		url: '#',
-		extra: 'Interested in partnering? business@web3convention.com'
-	};
+
 	return (
 		<>
 			<PageHead meta={meta} />
@@ -48,10 +45,11 @@ const HackathonPage = () => {
 				<StageCoverTitle />
 			</Cover>
 			<Challenge />
-			<PageBanner bannerInfo={uniHackathon} buttonConfig={buttonConfig} />
+			<PageBanner bannerInfo={uniHackathon} />
 			<Agenda />
 			<WhyHackathon />
 			<Prizes />
+			<Benefits />
 			<JudgeTeam />
 			<JudgeCriteria />
 			<Footer />

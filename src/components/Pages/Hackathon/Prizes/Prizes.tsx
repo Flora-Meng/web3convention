@@ -24,37 +24,30 @@ const StageCoverTitle = () => {
 		<ContentContainer>
 			<Subtitle>Web3 Hackathon 2023</Subtitle>
 			<Title>Prizes</Title>
-			<h3>$15,000 in Uni Hackathon prizes</h3>
+			<h3>$50,000 in Hackathon prizes</h3>
 			<p>
 				<strong>1st Place</strong>
 			</p>
 			<ul>
-				<li>$8,500</li>
+				<li>$16,000</li>
 			</ul>
 			<p>
 				<strong>2nd Place</strong>
 			</p>
 			<ul>
-				<li>$3,500</li>
+				<li>$10,000</li>
 			</ul>
 			<p>
 				<strong> 3rd Place</strong>
 			</p>
 			<ul>
-				<li>$1500</li>
+				<li>$8,000</li>
 			</ul>
 			<p>
-				<strong>Best Beginner Hack</strong>
+				<strong>
+					16 special awards with a $1000 cash prize for the remaining top finalists
+				</strong>
 			</p>
-			<ul>
-				<li>$200</li>
-			</ul>
-			<p>
-				<strong>People&apos;s Choice</strong>
-			</p>
-			<ul>
-				<li>$200</li>
-			</ul>
 		</ContentContainer>
 	);
 };
