@@ -7,8 +7,6 @@ import { color } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
 const { textColor } = color;
-const STAR_ICON_PATH = '/images/icons/starIconForNav.png';
-
 interface NavBarButtonProps {
 	buttonCtx: string;
 	linkHref: string;
