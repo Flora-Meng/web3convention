@@ -40,7 +40,8 @@ export const color: IColor = {
 	blackColor: '#000',
 	warningColor: '#fb394a',
 	InfoColor: '#77b1f5',
-	descriptionColor: '#333'
+	descriptionColor: '#333',
+	cardBackgroundColor: '#1a1a1a'
 };
 
 export const inputColor: IInputColor = {
