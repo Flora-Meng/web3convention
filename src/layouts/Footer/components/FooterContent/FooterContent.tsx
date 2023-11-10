@@ -58,7 +58,7 @@ const LogoContainer = styled.div`
 	width: calc(100vw - 48px);
 `;
 const Logo = styled(Image)`
-	margin: 0 0 20px 10px;
+	margin: 0 0 40px 10px;
 `;
 
 const ContentText = styled.p`
