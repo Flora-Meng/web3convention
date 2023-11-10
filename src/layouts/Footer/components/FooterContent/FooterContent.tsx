@@ -28,6 +28,7 @@ const ContainerGrid = styled(Grid)`
 		max-width: 1440px;
 		gap: 130px;
 	}
+	justify-content: space-between;
 	width: calc(100vw - 48px);
 `;
 
@@ -130,7 +131,7 @@ const FooterContent = () => {
 					priority
 				/>
 			</LogoContainer>
-			<ContainerGrid container spacing={3}>
+			<ContainerGrid container spacing={1}>
 				<Grid item mobile={12} tablet={6} laptop={3} largeLaptop={3}>
 					<Title>Get in touch</Title>
 					<ContentText>
