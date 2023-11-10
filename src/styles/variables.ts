@@ -41,7 +41,8 @@ export const color: IColor = {
 	warningColor: '#fb394a',
 	InfoColor: '#77b1f5',
 	descriptionColor: '#333',
-	cardBackgroundColor: '#1a1a1a'
+	cardBackgroundColor: '#1a1a1a',
+	greyColor: '#b2b2b2'
 };
 
 export const inputColor: IInputColor = {
