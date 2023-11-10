@@ -42,7 +42,7 @@ const ButtonCtx = styled.span`
 	align-items: center;
 	display: flex;
 	gap: 24px;
-	margin: 0 24px 0 24px;
+	margin: 0 24px;
 
 	${navBarTitleDecoration('calc(100% + 4px)')};
 `;
