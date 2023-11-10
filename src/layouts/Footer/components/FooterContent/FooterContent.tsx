@@ -33,15 +33,15 @@ const ContainerGrid = styled(Grid)`
 `;
 
 const Title = styled.h5`
-	font-size: 18px;
-	line-height: 40px;
+	font-size: 16px;
+	line-height: 1.25;
 	margin: 0;
 	margin-bottom: 20px;
 `;
 
 const StyledLink = styled(Link)`
 	font-size: 14px;
-	line-height: 1.5;
+	line-height: 1.43;
 	margin-bottom: 12px;
 	&:hover {
 		color: ${primaryColor};
@@ -63,11 +63,13 @@ const Logo = styled(Image)`
 
 const ContentText = styled.p`
 	font-size: 14px;
-	line-height: 1.5;
+	line-height: 1.43;
 	margin-top: 0;
 `;
 
 const QRcodeGridItem = styled(Grid)`
+	font-size: 14px;
+	line-height: 1.43;
 	text-align: center;
 	@media ${devices.miniMobile} {
 		margin: 0 18px 6px 0;
