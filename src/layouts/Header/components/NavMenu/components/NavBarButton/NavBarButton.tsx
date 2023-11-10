@@ -48,7 +48,7 @@ const ButtonCtx = styled.span`
 	${navBarTitleDecoration('calc(100% + 4px)')};
 `;
 
-const NavBarButton: React.FC<NavBarButtonProps> = ({ buttonCtx, linkHref, icon = undefined }) => {
+const NavBarButton: React.FC<NavBarButtonProps> = ({ buttonCtx, linkHref, icon }) => {
 	const router = useRouter();
 
 	return (
