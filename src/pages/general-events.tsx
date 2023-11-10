@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import PageCoverTitle from '@/components/Shares/PageCoverTitle';
 import coverText from '@/components/Shares/PageCoverTitle/generalEventsCoverText.json';
+import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header/Header';
 import PageHead from '@/layouts/PageHead/PageHead';
 import { devices } from '@/styles/variables';
@@ -11,18 +12,14 @@ const Cover = styled.div`
 	background-image: url('/images/background/generalEventsHeaderBG.png');
 	background-position: center;
 	background-size: cover;
-	@media ${devices.miniMobile} {
-		height: 478px;
-	}
-	@media ${devices.largerLaptop} {
-		height: 360px;
-	}
-`;
-
-const PageCoverTitleContainer = styled.div`
 	font-family: Arial;
+	height: 478px;
 	letter-spacing: 0.78px;
-	margin-top: 104px;
+	@media ${devices.mobile} {
+		background-image: url('/images/background/generalEventsHeaderBG.png');
+		height: 360px;
+		background-size: auto;
+	}
 `;
 
 const GeneralEventsPage = () => {
@@ -38,10 +35,10 @@ const GeneralEventsPage = () => {
 			<PageHead meta={meta} />
 			<Cover>
 				<Header />
-				<PageCoverTitleContainer>
-					<PageCoverTitle coverText={coverText} />
-				</PageCoverTitleContainer>
+				<PageCoverTitle coverText={coverText} />
 			</Cover>
+			<Footer />
+
 			<h1>this is GeneralEventsPage</h1>
 		</>
 	);

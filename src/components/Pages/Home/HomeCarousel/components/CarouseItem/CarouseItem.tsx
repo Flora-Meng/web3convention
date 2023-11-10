@@ -133,8 +133,8 @@ const CarouseItem: React.FC<CarouseItemProps> = ({
 				<Title isCurrent={isCurrent}>{title}</Title>
 				<Description isCurrent={isCurrent}>{description}</Description>
 				<ButtonContainer isCurrent={isCurrent}>
-					<ThemeButton href="https://w3con.eventsair.com/web3convention/registration">
-						registration
+					<ThemeButton href="https://w3con.eventsair.com/web3convention/sponsorship">
+						PARTNER WITH US
 					</ThemeButton>
 				</ButtonContainer>
 			</InfoContainer>

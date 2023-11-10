@@ -1,7 +1,7 @@
 [
 	{
 		"_id": "1",
-		"label": "NFT House",
+		"label": "NFT Gallery",
 		"subtitle": "Web3 Convention 2024",
 		"imageSrc": "/images/nft.png",
 		"href": "/#"
@@ -15,7 +15,7 @@
 	},
 	{
 		"_id": "3",
-		"label": "Whale Yacht Party",
+		"label": "Whale (VIP) party",
 		"subtitle": "Web3 Convention 2024",
 		"imageSrc": "/images/starship-sydney-cruise.webp",
 		"href": "/#"

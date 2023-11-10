@@ -35,6 +35,10 @@ const Logo = styled(Image)`
 	}
 `;
 
+const CopyrightText = styled.p`
+	white-space: nowrap;
+`;
+
 const FollowLabel = styled.p`
 	flex-shrink: 0;
 	margin-bottom: 24px;
@@ -84,7 +88,9 @@ const CopyRight: React.FC = () => {
 					/>
 				</Grid>
 				<Grid item {...gridColumn}>
-					<p>© 2022-2023 Web3 Convention, All Rights Reserved. ACN 668 836 566 </p>
+					<CopyrightText>
+						© 2022-2023 Web3 Convention, All Rights Reserved. ACN 668 836 566
+					</CopyrightText>
 				</Grid>
 				<Grid
 					item

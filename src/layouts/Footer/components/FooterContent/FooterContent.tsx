@@ -28,19 +28,20 @@ const ContainerGrid = styled(Grid)`
 		max-width: 1440px;
 		gap: 130px;
 	}
+	justify-content: space-between;
 	width: calc(100vw - 48px);
 `;
 
 const Title = styled.h5`
-	font-size: 18px;
-	line-height: 40px;
+	font-size: 16px;
+	line-height: 1.25;
 	margin: 0;
 	margin-bottom: 20px;
 `;
 
 const StyledLink = styled(Link)`
 	font-size: 14px;
-	line-height: 1.5;
+	line-height: 1.43;
 	margin-bottom: 12px;
 	&:hover {
 		color: ${primaryColor};
@@ -57,16 +58,18 @@ const LogoContainer = styled.div`
 	width: calc(100vw - 48px);
 `;
 const Logo = styled(Image)`
-	margin: 0 0 20px 10px;
+	margin: 0 0 40px 10px;
 `;
 
 const ContentText = styled.p`
 	font-size: 14px;
-	line-height: 1.5;
+	line-height: 1.43;
 	margin-top: 0;
 `;
 
 const QRcodeGridItem = styled(Grid)`
+	font-size: 14px;
+	line-height: 1.43;
 	text-align: center;
 	@media ${devices.miniMobile} {
 		margin: 0 18px 6px 0;
@@ -130,7 +133,7 @@ const FooterContent = () => {
 					priority
 				/>
 			</LogoContainer>
-			<ContainerGrid container spacing={3}>
+			<ContainerGrid container spacing={1}>
 				<Grid item mobile={12} tablet={6} laptop={3} largeLaptop={3}>
 					<Title>Get in touch</Title>
 					<ContentText>

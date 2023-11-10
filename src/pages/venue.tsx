@@ -35,8 +35,8 @@ const VenuePage = () => {
 		title: 'Web3 Convention 2024 | Venue'
 	};
 	const buttonConfig = {
-		text: 'REGISTRATION',
-		url: 'https://w3con.eventsair.com/web3convention/registration',
+		text: 'BOOK TICKETS',
+		url: 'https://w3con.eventsair.com/web3convention/registration/Site/Register',
 		extra: 'Interested in partnering? business@web3convention.com'
 	};
 	return (

@@ -119,7 +119,7 @@ const StyleMenu = styled(MenuItem)`
 
 const StyledCheckBox = styled(FormControlLabel)`
 	@media ${devices.miniMobile} {
-		font-size: 12 px;
+		font-size: 12px;
 		line-height: 1.5;
 	}
 	margin: -13px 0 75px;
@@ -129,6 +129,10 @@ const StyledCheckBox = styled(FormControlLabel)`
 
 	& .Mui-checked {
 		color: ${darkPrimaryColor};
+	}
+
+	& .MuiFormControlLabel-label {
+		font-weight: bold;
 	}
 `;
 
@@ -231,7 +235,7 @@ const MainContents: React.FC = () => {
 									required
 								/>
 							}
-							label="I have read and agree to abide with the Terms and conditions."
+							label="I have read and agree to abide with the Terms and Conditions"
 						/>
 					</FormControl>
 					<ButtonContainer>

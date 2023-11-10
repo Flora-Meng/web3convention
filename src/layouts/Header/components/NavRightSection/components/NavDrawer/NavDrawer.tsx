@@ -75,15 +75,15 @@ const ImageContainer = styled.div`
 
 const linkConfigList = [
 	{
-		label: 'Registration Page',
-		href: '/comingSoon'
+		label: 'Buy Ticket',
+		href: 'https://w3con.eventsair.com/web3convention/registration/Site/Register'
 	},
 	{
-		label: 'Buy Tickets',
-		href: 'https://w3con.eventsair.com/web3convention/registration'
+		label: 'Ticket Types',
+		href: '/get-tickets'
 	},
 	{
-		label: 'Schedule',
+		label: 'Agenda',
 		href: '/comingSoon'
 	},
 	{
@@ -122,7 +122,7 @@ const NavDrawer: React.FC = () => {
 						/>
 					</ImageContainer>
 					<Tagline>{`Don't_miss`}</Tagline>
-					<Title>Web3 & Web2 Convention</Title>
+					<Title>Web3 Convention</Title>
 					<p className="leading-relaxed">
 						Web3 Convention is the technology convention that brings together people and
 						companies redefining the global tech industry.
