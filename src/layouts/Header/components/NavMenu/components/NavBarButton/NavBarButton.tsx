@@ -35,14 +35,14 @@ const CustomizedButton = styled.button`
 	font-family: ArialMT;
 	font-size: 16px;
 	text-align: left;
-	width: auto;
+	width: fit-content;
 `;
 
 const ButtonCtx = styled.span`
 	align-items: center;
 	display: flex;
 	gap: 24px;
-	margin-left: 24px;
+	margin: 0 24px 0 24px;
 
 	${navBarTitleDecoration('calc(100% + 4px)')};
 `;
