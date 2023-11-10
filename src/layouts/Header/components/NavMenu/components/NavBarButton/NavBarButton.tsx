@@ -18,7 +18,7 @@ const NavButtonContainer = styled.div`
 	align-items: center;
 	display: flex;
 	height: 44px;
-	width: 300px;
+	width: 100%;
 	&:hover span:before {
 		${activeNavBarTitleDecoration()}
 	}
@@ -34,7 +34,6 @@ const CustomizedButton = styled.button`
 	cursor: pointer;
 	font-family: ArialMT;
 	font-size: 16px;
-	padding-right: 24px;
 	text-align: left;
 	width: auto;
 `;
