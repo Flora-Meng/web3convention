@@ -38,7 +38,13 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 	[ENavItem.EVENTS]: [
 		{
 			title: 'General Events',
-			path: '/general-events'
+			path: '/general-events',
+			icon: {
+				src: '/images/icons/starIconForNav.png',
+				width: 17,
+				height: 18,
+				alt: 'Star Icon'
+			}
 		},
 		{
 			title: 'Hackathon',

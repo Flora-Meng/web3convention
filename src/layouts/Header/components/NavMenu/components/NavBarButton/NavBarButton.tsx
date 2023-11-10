@@ -2,15 +2,16 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
 
+import { IIconProps } from '@/interfaces/icon';
 import { activeNavBarTitleDecoration, navBarTitleDecoration } from '@/styles/mixin';
 import { color } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
 const { textColor } = color;
-
 interface NavBarButtonProps {
 	buttonCtx: string;
 	linkHref: string;
+	icon?: IIconProps;
 }
 
 const NavButtonContainer = styled.div`
@@ -34,32 +35,36 @@ const CustomizedButton = styled.button`
 	font-family: ArialMT;
 	font-size: 16px;
 	text-align: left;
-	width: 100%;
+	width: fit-content;
 `;
 
 const ButtonCtx = styled.span`
 	align-items: center;
 	display: flex;
-	gap: 24px;
-	margin-left: 16px;
+	gap: 16px;
+	margin: 0 16px;
+
 	${navBarTitleDecoration('calc(100% + 4px)')};
 `;
 
-const NavBarButton: React.FC<NavBarButtonProps> = ({ buttonCtx, linkHref }) => {
+const NavBarButton: React.FC<NavBarButtonProps> = ({ buttonCtx, linkHref, icon }) => {
 	const router = useRouter();
 
 	return (
 		<NavButtonContainer>
 			<CustomizedButton onClick={() => router.push(linkHref)}>
 				<ButtonCtx>
-					<Image
-						src="/images/icons/starIconForNav.png"
-						alt="Star Icon"
-						width={17}
-						height={18}
-						priority
-						loader={imageLoader}
-					/>
+					{icon && (
+						<Image
+							src={icon.src}
+							alt={icon.alt}
+							width={icon.width}
+							height={icon.height}
+							priority
+							loader={imageLoader}
+						/>
+					)}
+
 					{buttonCtx}
 				</ButtonCtx>
 			</CustomizedButton>

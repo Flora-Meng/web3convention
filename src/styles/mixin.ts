@@ -42,6 +42,7 @@ export const activeNavBarTitleDecoration = () => css`
 	-webkit-transform-origin: 0 50%;
 	transform: scaleX(1) translateZ(0);
 	transform-origin: 0 50%;
+	width: 100%;
 `;
 
 export const tagDecoration = () => css`
