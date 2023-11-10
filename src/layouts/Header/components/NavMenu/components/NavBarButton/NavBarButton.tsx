@@ -41,7 +41,7 @@ const CustomizedButton = styled.button`
 const ButtonCtx = styled.span`
 	align-items: center;
 	display: flex;
-	gap: 24px;
+	gap: 16px;
 	margin: 0 16px;
 
 	${navBarTitleDecoration('calc(100% + 4px)')};
