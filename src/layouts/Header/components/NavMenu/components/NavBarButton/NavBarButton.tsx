@@ -35,7 +35,7 @@ const CustomizedButton = styled.button`
 	font-family: ArialMT;
 	font-size: 16px;
 	text-align: left;
-	width: auto;
+	width: 100%;
 `;
 
 const ButtonCtx = styled.span`
