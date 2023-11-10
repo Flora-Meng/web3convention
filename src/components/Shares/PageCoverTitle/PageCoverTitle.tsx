@@ -13,7 +13,7 @@ interface PageCoverTitleProps {
 		_id: string;
 		title: string;
 		subtitle: string;
-		additionalSubtitle: string;
+		additionalSubtitle?: string;
 	};
 }
 
@@ -67,7 +67,9 @@ const PageCoverTitle: React.FC<PageCoverTitleProps> = props => {
 	return (
 		<Container>
 			<CoverSubtitle isCurrent>{coverText.subtitle}</CoverSubtitle>
-			<CoverSubtitle isCurrent>{coverText.additionalAubtitle}</CoverSubtitle>
+			{coverText.additionalSubtitle && (
+				<CoverSubtitle isCurrent>{coverText.additionalSubtitle}</CoverSubtitle>
+			)}
 			<CoverTitle isCurrent>{coverText.title}</CoverTitle>
 		</Container>
 	);
