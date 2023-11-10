@@ -13,7 +13,7 @@ interface PageCoverTitleProps {
 		_id: string;
 		title: string;
 		subtitle: string;
-		additionalAubtitle: string;
+		additionalSubtitle: string;
 	};
 }
 
