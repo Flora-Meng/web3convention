@@ -19,6 +19,9 @@ const { blackColor, whiteColor, primaryColor } = color;
 
 const speakerIcon = '/images/icons/speaker-icon.svg';
 const speakerArrow = '/images/icons/speaker-arrow.svg';
+const linkedlnIcon = '/images/icons/linkedln.svg';
+const facebookIcon = '/images/icons/Facebook_f_logo.svg';
+const twitterIcon = '/images/icons/twitter.svg';
 
 enum ESocialMedia {
 	LINKED_IN = 'linkedIn',
@@ -124,17 +127,18 @@ const InfoMainContainer = styled.div`
 const MemberName = styled.div`
 	color: #fff;
 	font-family: Arial;
-	font-size: 34px;
+	font-size: 32px;
 	font-weight: bold;
 	height: 38px;
+	@media ${devices.mobile} {
+		font-size: 34px;
+	}
 `;
 
 const MemberSocialMedia = styled.div`
-	align-items: baseline;
 	display: flex;
 	gap: 10px;
 	height: 20px;
-	margin-left: 12px;
 	object-fit: contain;
 	width: 20px;
 	a {
@@ -147,8 +151,8 @@ const MemberSocialMedia = styled.div`
 `;
 
 const ModalIcons = styled.div`
-	align-items: base-line;
 	display: flex;
+	gap: 12px;
 	margin-top: 15px;
 	@media ${devices.mobile} {
 		margin-top: unset;
@@ -160,27 +164,30 @@ const InfoHeader = styled.div`
 	justify-content: space-between;
 `;
 
-const ModalSubtitle = styled.p`
+const ModalSubtitle = styled.span`
 	color: #aaa;
-	font-family: Arial;
-	font-size: 20px;
+	font-size: 18px;
 	height: 22px;
 	width: 212px;
+	@media ${devices.mobile} {
+		font-size: 20px;
+	}
 `;
 
 const ModalPostDescription = styled.p`
 	color: #e8e8e8;
 	font-family: Arial;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 1.5;
-	margin-top: 10px;
+	margin-top: 24px;
 	max-height: 20vh;
 	overflow-y: scroll;
 	text-wrap: wrap;
 	@media ${devices.mobile} {
-		margin-top: 20px;
+		margin-top: 40px;
 		max-height: unset;
 		overflow: unset;
+		font-size: 16px;
 	}
 `;
 
@@ -291,6 +298,11 @@ const AvatarImage = styled(Image)`
 	position: absolute;
 	width: 100%;
 `;
+const NameAndTitle = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+`;
 const NameContainer = styled.div`
 	color: ${whiteColor};
 	font-family: Arial-BoldMT;
@@ -312,6 +324,12 @@ const IconSection = styled.div`
 	position: absolute;
 	width: 80%;
 `;
+
+const IconContainer = styled.div`
+	height: 20px;
+	position: relative;
+	width: 20px;
+`;
 const SpeakerIconWrapper = styled.div`
 	display: block;
 	height: 20px;
@@ -326,7 +344,7 @@ const SpeakerIconPlaceholder = styled.div`
 `;
 
 const ModalSpeakerIconPlaceholder = styled.div`
-	width: 12px;
+	width: 0px;
 `;
 
 const JudgeTeam: React.FC = () => {
@@ -379,19 +397,27 @@ const JudgeTeam: React.FC = () => {
 							)}
 						</InfoHeader>
 						<InfoMainContainer>
-							<MemberName>{teamMemberInfo.name}</MemberName>
+							<NameAndTitle>
+								<MemberName>{teamMemberInfo.name}</MemberName>
+								<Link href={postLink}>
+									<ModalSubtitle>{teamMemberInfo.jobTitle}</ModalSubtitle>
+								</Link>
+							</NameAndTitle>
 							<ModalIcons>
-								{teamMemberInfo.isSpeaker ? (
-									<SpeakerIconWrapper>
-										<img
-											className="speakerIcon"
-											src={speakerIcon}
-											alt="Speaker icon"
-										/>
-									</SpeakerIconWrapper>
-								) : (
-									<ModalSpeakerIconPlaceholder />
-								)}
+								{
+									teamMemberInfo.isSpeaker && (
+										<SpeakerIconWrapper>
+											<img
+												className="speakerIcon"
+												src={speakerIcon}
+												alt="Speaker icon"
+											/>
+										</SpeakerIconWrapper>
+									)
+									// : (
+									// 	<ModalSpeakerIconPlaceholder />
+									// )
+								}
 								<MemberSocialMedia>
 									{teamMemberInfo.socialMedia &&
 										Object.entries(teamMemberInfo.socialMedia).map(
@@ -400,15 +426,48 @@ const JudgeTeam: React.FC = () => {
 												let socialMediaIcon = null;
 												switch (socialMedia) {
 													case ESocialMedia.LINKED_IN: {
-														socialMediaIcon = <LinkedInIcon />;
+														socialMediaIcon = (
+															<IconContainer>
+																<Image
+																	src={linkedlnIcon}
+																	alt="linkedln"
+																	loader={imageLoader}
+																	fill
+																	unoptimized
+																	loading="lazy"
+																/>
+															</IconContainer>
+														);
 														break;
 													}
 													case ESocialMedia.FACEBOOK: {
-														socialMediaIcon = <FacebookIcon />;
+														socialMediaIcon = (
+															<IconContainer>
+																<Image
+																	src={facebookIcon}
+																	alt="facebook"
+																	loader={imageLoader}
+																	fill
+																	unoptimized
+																	loading="lazy"
+																/>
+															</IconContainer>
+														);
 														break;
 													}
 													case ESocialMedia.TWITTER: {
-														socialMediaIcon = <TwitterIcon />;
+														socialMediaIcon = (
+															<IconContainer>
+																<Image
+																	src={twitterIcon}
+																	alt="twitter"
+																	loader={imageLoader}
+																	fill
+																	unoptimized
+																	loading="lazy"
+																/>
+															</IconContainer>
+														);
 														break;
 													}
 													default: {
@@ -430,9 +489,6 @@ const JudgeTeam: React.FC = () => {
 								</MemberSocialMedia>
 							</ModalIcons>
 						</InfoMainContainer>
-						<Link href={postLink}>
-							<ModalSubtitle>{teamMemberInfo.jobTitle}</ModalSubtitle>
-						</Link>
 						<ModalPostDescription>{teamMemberInfo.description}</ModalPostDescription>
 					</MemberModal>
 					{teamMemberList.map(teamMember => {
