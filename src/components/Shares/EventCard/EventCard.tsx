@@ -37,7 +37,6 @@ const InfoContainer = styled.div`
 	color: #b2b2b2;
 	display: flex;
 	font-size: 16px;
-	height: 24px;
 	letter-spacing: 1px;
 	line-height: 1.5;
 `;

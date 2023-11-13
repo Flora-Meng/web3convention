@@ -34,7 +34,9 @@ export const timeFormatOptions: Intl.DateTimeFormatOptions = {
 	day: 'numeric',
 	hour: 'numeric',
 	minute: 'numeric',
-	hour12: true
+	timeZoneName: 'short',
+	hour12: true,
+	timeZone: 'Australia/Sydney'
 };
 
 export const ALL_EVENTS = 'all-events';
