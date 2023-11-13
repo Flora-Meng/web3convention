@@ -27,6 +27,16 @@ export const WEEKDAY = [
 	'Saturday'
 ];
 
+export const timeFormatOptions: Intl.DateTimeFormatOptions = {
+	weekday: 'long',
+	year: 'numeric',
+	month: 'short',
+	day: 'numeric',
+	hour: 'numeric',
+	minute: 'numeric',
+	hour12: true
+};
+
 export const ALL_EVENTS = 'all-events';
 
 export default EWeekday;
