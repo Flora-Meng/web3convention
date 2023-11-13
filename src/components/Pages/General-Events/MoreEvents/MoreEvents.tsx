@@ -10,7 +10,6 @@ const { primaryColor } = color;
 
 const MoreEventContainer = styled.div`
 	background-color: black;
-	margin-top: 1128px;
 `;
 const Container = styled.div`
 	display: flex;
@@ -54,12 +53,7 @@ const MoreEvents: React.FC = () => {
 			<Container>
 				<WebConvention>WEB3.Convention</WebConvention>
 				<SectionTitle>MoreEvents</SectionTitle>
-				<StyledGrid
-					container
-					spacing={9.375}
-					rowSpacing={1}
-					columnSpacing={{ xs: 1, md: 2 }}
-				>
+				<StyledGrid container spacing={9.375} rowSpacing={1} columnSpacing={1}>
 					{moreEvents.map(eventInfo => (
 						<Grid item key={eventInfo._id} mobile={12} tablet={4} laptop={4}>
 							<EventCard eventInfo={eventInfo} />
