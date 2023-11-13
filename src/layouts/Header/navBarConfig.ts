@@ -40,10 +40,20 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 			title: 'General Events',
 			path: '/general-events',
 			icon: {
-				src: '/images/icons/starIconForNav.png',
-				width: 17,
+				src: '/images/icons/starIcon.png',
+				width: 35,
 				height: 18,
 				alt: 'Star Icon'
+			}
+		},
+		{
+			title: '2024 Web3 & AI Convention',
+			path: '/web3-convention-2024',
+			icon: {
+				src: '/images/icons/starIcon2024.png',
+				width: 35,
+				height: 18,
+				alt: 'Star Icon 2024'
 			}
 		},
 		{
