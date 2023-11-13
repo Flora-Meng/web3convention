@@ -12,6 +12,8 @@ interface ICarouseItem {
 	subtitle: string;
 	description: string;
 	imageSrc: string;
+	buttonText: string;
+	buttonLink: string;
 }
 
 interface CarouseItemProps {
@@ -123,7 +125,7 @@ const ButtonContainer = styled.div<TextProps>`
 `;
 
 const CarouseItem: React.FC<CarouseItemProps> = ({
-	carouselInfo: { title, subtitle, description, imageSrc },
+	carouselInfo: { title, subtitle, description, imageSrc, buttonText, buttonLink },
 	isCurrent
 }) => {
 	return (
@@ -133,9 +135,7 @@ const CarouseItem: React.FC<CarouseItemProps> = ({
 				<Title isCurrent={isCurrent}>{title}</Title>
 				<Description isCurrent={isCurrent}>{description}</Description>
 				<ButtonContainer isCurrent={isCurrent}>
-					<ThemeButton href="https://w3con.eventsair.com/web3convention/sponsorship">
-						PARTNER WITH US
-					</ThemeButton>
+					<ThemeButton href={buttonLink}>{buttonText}</ThemeButton>
 				</ButtonContainer>
 			</InfoContainer>
 		</CarouseItemContainer>
