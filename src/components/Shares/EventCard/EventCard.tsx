@@ -1,11 +1,13 @@
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Tooltip, { TooltipProps, tooltipClasses } from '@mui/material/Tooltip';
+import dayjs from 'dayjs';
+import timezone from 'dayjs/plugin/timezone';
+import utc from 'dayjs/plugin/utc';
 import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import { timeFormatOptions } from '@/constants/event';
 import { color } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
@@ -142,6 +144,10 @@ interface EventCardProps {
 	eventInfo: IMeetup;
 }
 
+dayjs.extend(utc);
+dayjs.extend(timezone);
+const format = 'dddd, MMM D, hA';
+
 const EventCard: React.FC<EventCardProps> = ({ eventInfo }) => {
 	const { _id, bannersUploader, address, exhibitors, period, title, description } = eventInfo;
 	const company = exhibitors?.[0] || {};
@@ -174,7 +180,7 @@ const EventCard: React.FC<EventCardProps> = ({ eventInfo }) => {
 							/>
 						</ImageContainer>
 						<DateInfo>
-							{new Date(period.start).toLocaleDateString('en-US', timeFormatOptions)}
+							{`${dayjs(period.start).tz('Australia/Sydney').format(format)} GMT+8`}
 						</DateInfo>
 					</InfoContainer>
 				)}

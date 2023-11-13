@@ -27,18 +27,6 @@ export const WEEKDAY = [
 	'Saturday'
 ];
 
-export const timeFormatOptions: Intl.DateTimeFormatOptions = {
-	weekday: 'long',
-	year: 'numeric',
-	month: 'short',
-	day: 'numeric',
-	hour: 'numeric',
-	minute: 'numeric',
-	timeZoneName: 'short',
-	hour12: true,
-	timeZone: 'Australia/Sydney'
-};
-
 export const ALL_EVENTS = 'all-events';
 
 export default EWeekday;
