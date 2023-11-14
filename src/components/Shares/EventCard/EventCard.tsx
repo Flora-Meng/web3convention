@@ -24,15 +24,11 @@ const StyledCard = styled(Card)`
 	display: flex;
 	flex-direction: column;
 	height: 410px;
-	margin: 0 auto;
 	transition: transform 0.3s ease;
 	&:hover {
 		transform: translateY(-10px);
 	}
 	width: 350px;
-	@media ${devices.mobile} {
-		margin: unset;
-	}
 `;
 const StyledTypography = styled.span`
 	color: white;

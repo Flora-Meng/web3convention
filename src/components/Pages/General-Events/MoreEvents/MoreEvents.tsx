@@ -21,7 +21,12 @@ const Container = styled.div`
 	margin: 0 auto;
 	max-width: 1200px;
 `;
-const WebConvention = styled.span`
+const WebConvention = styled.div`
+	display: flex;
+	flex-direction: column;
+	padding-left: 12px;
+`;
+const Title = styled.span`
 	color: ${primaryColor};
 	font-size: 14px;
 	font-style: italic;
@@ -39,7 +44,11 @@ const SectionTitle = styled.span`
 `;
 
 const StyledGrid = styled(Grid)`
-	margin-top: 50px;
+	flex-direction: column;
+	@media ${devices.mobile} {
+		justify-content: space-between;
+		flex-direction: row;
+	}
 `;
 const StyledLink = styled(Link)`
 	display: flex;
@@ -54,6 +63,12 @@ color: ${primaryColor};
 border: solid 1px ${primaryColor};
 background-color: rgba(82, 246, 198, 0.1);
 }
+`;
+const GridItem = styled(Grid)`
+	margin: 50px auto 0;
+	@media ${devices.mobile} {
+		margin: 30px 0 0 0;
+	}
 `;
 const MoreEvents: React.FC = () => {
 	const [moreEvents, setMoreEvents] = useState<IMeetup[]>([]);
@@ -70,13 +85,15 @@ const MoreEvents: React.FC = () => {
 	return (
 		<MoreEventContainer>
 			<Container>
-				<WebConvention>WEB3.Convention</WebConvention>
-				<SectionTitle>MoreEvents</SectionTitle>
-				<StyledGrid container rowSpacing={9.375} columnSpacing={9.375}>
+				<WebConvention>
+					<Title>WEB3.Convention</Title>
+					<SectionTitle>MoreEvents</SectionTitle>
+				</WebConvention>
+				<StyledGrid container spacing={1}>
 					{moreEvents.map(eventInfo => (
-						<Grid item key={eventInfo._id} mobile={12} tablet={4} laptop={4}>
+						<GridItem item key={eventInfo._id}>
 							<EventCard eventInfo={eventInfo} />
-						</Grid>
+						</GridItem>
 					))}
 				</StyledGrid>
 			</Container>

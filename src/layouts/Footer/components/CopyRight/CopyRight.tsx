@@ -36,7 +36,10 @@ const Logo = styled(Image)`
 `;
 
 const CopyrightText = styled.p`
-	white-space: nowrap;
+	white-space: wrap;
+	@media ${devices.mobile} {
+		white-space: nowrap;
+	}
 `;
 
 const FollowLabel = styled.p`
