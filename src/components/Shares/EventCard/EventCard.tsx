@@ -8,7 +8,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import { color } from '@/styles/variables';
+import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
 const dateIcon = '/images/icons/date.svg';
@@ -24,10 +24,14 @@ const StyledCard = styled(Card)`
 	display: flex;
 	flex-direction: column;
 	height: 410px;
+	margin: 0 auto;
 	transition: transform 0.3s ease;
-	width: 350px;
 	&:hover {
 		transform: translateY(-10px);
+	}
+	width: 350px;
+	@media ${devices.mobile} {
+		margin: unset;
 	}
 `;
 const StyledTypography = styled.span`
