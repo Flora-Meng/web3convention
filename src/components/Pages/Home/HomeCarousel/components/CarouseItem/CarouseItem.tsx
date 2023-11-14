@@ -12,8 +12,6 @@ interface ICarouseItem {
 	subtitle: string;
 	description: string;
 	imageSrc: string;
-	buttonText: string;
-	buttonLink: string;
 }
 
 interface CarouseItemProps {
@@ -117,6 +115,7 @@ export const Description = styled.p<TextProps>`
 const ButtonContainer = styled.div<TextProps>`
 	border-radius: 30px;
 	opacity: 0;
+	padding-bottom: 10px;
 	${({ isCurrent }) =>
 		isCurrent
 			? animation('fade-in-opacity-transform-to-left', '1s', 'ease', '1.1s', '1')
@@ -125,7 +124,7 @@ const ButtonContainer = styled.div<TextProps>`
 `;
 
 const CarouseItem: React.FC<CarouseItemProps> = ({
-	carouselInfo: { title, subtitle, description, imageSrc, buttonText, buttonLink },
+	carouselInfo: { title, subtitle, description, imageSrc },
 	isCurrent
 }) => {
 	return (
@@ -135,7 +134,20 @@ const CarouseItem: React.FC<CarouseItemProps> = ({
 				<Title isCurrent={isCurrent}>{title}</Title>
 				<Description isCurrent={isCurrent}>{description}</Description>
 				<ButtonContainer isCurrent={isCurrent}>
-					<ThemeButton href={buttonLink}>{buttonText}</ThemeButton>
+					<ThemeButton
+						width="215px"
+						href="https://w3con.eventsair.com/web3convention/registration/Site/Register"
+					>
+						BOOK TICKETS
+					</ThemeButton>
+				</ButtonContainer>
+				<ButtonContainer isCurrent={isCurrent}>
+					<ThemeButton
+						width="215px"
+						href="https://w3con.eventsair.com/web3convention/sponsorship"
+					>
+						PARTNER WITH US
+					</ThemeButton>
 				</ButtonContainer>
 			</InfoContainer>
 		</CarouseItemContainer>
