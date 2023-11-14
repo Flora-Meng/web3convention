@@ -20,6 +20,7 @@ const { primaryColor, InfoColor, cardBackgroundColor } = color;
 
 const StyledCard = styled(Card)`
 	background-color: ${cardBackgroundColor};
+	border-radius: 0;
 	display: flex;
 	flex-direction: column;
 	height: 410px;
@@ -206,7 +207,7 @@ const EventCard: React.FC<EventCardProps> = ({ eventInfo }) => {
 					</CompanyAvatar>
 					<CompanyName>{company.name}</CompanyName>
 				</StyledLink>
-				{exhibitors?.length !== 0 ? (
+				{exhibitors.length !== 0 ? (
 					<ExhibitorIconWrapper>
 						<StyledTooltip title={description} arrow>
 							<img
