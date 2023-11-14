@@ -56,13 +56,12 @@ const StyledLink = styled(Link)`
 	margin-top: 75px;
 `;
 const StyledButton = styled.button`
-width:200px;
-height:52px;
-border-radius: 30px;
-color: ${primaryColor};
-border: solid 1px ${primaryColor};
-background-color: rgba(82, 246, 198, 0.1);
-}
+	background-color: rgba(82, 246, 198, 0.1);
+	border: solid 1px ${primaryColor};
+	border-radius: 30px;
+	color: ${primaryColor};
+	height: 52px;
+	width: 200px;
 `;
 const GridItem = styled(Grid)`
 	margin: 50px auto 0;
