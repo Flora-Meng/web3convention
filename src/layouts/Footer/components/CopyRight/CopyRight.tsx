@@ -36,8 +36,7 @@ const Logo = styled(Image)`
 `;
 
 const CopyrightText = styled.p`
-	white-space: wrap;
-	@media ${devices.mobile} {
+	@media ${devices.largeLaptop} {
 		white-space: nowrap;
 	}
 `;

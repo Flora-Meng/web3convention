@@ -235,7 +235,7 @@ const MainContents: React.FC = () => {
 									required
 								/>
 							}
-							label="I have read and agree to abide with the Terms and Conditions"
+							label="I have read and agree to abide by the Terms and Conditions"
 						/>
 					</FormControl>
 					<ButtonContainer>

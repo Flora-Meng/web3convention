@@ -231,7 +231,7 @@ const agendaConfig = [
 	},
 	{
 		_id: '10-2',
-		title: 'Whale Yacht Party',
+		title: 'Whale (VIP) party',
 		columns: 1,
 		offset: 1
 	},

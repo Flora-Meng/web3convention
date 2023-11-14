@@ -21,7 +21,7 @@ const StyledBox = styled(Box)`
 	background-position: top left;
 	background-repeat: no-repeat;
 	background-size: 80%;
-	border: solid 1px #969696;
+	border: solid 1px #e49f2b;
 	border-radius: 8px;
 	box-shadow: 24px;
 	display: flex;
@@ -36,11 +36,13 @@ const StyledBox = styled(Box)`
 	@media ${devices.mobile} {
 		width: 500px;
 		padding: 40px 70px;
+		border: solid 1px #ce709a;
 	}
 
 	@media ${devices.laptop} {
 		width: 714px;
 		padding: 40px 70px;
+		border: solid 1px #ce709a;
 	}
 `;
 

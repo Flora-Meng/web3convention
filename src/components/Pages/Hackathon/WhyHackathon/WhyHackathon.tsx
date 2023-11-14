@@ -51,7 +51,7 @@ const counterList = [
 		count: 10
 	},
 	{
-		name: 'Judges',
+		name: 'Judges and Mentors',
 		count: 20
 	}
 ];
@@ -61,7 +61,7 @@ const WhyHackathon: React.FC = () => {
 		<HomeCountdownContainer>
 			<Content>
 				<TitleContainer>
-					<Subtitle>Web3 Convention 2024</Subtitle>
+					<Subtitle>Web3 Hackathon 2023</Subtitle>
 					<Title>Why Web3 Hackathon?</Title>
 				</TitleContainer>
 				<CounterSlider counterList={counterList} />
