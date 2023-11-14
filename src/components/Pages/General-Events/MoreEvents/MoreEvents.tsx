@@ -74,7 +74,7 @@ const MoreEvents: React.FC = () => {
 				<SectionTitle>MoreEvents</SectionTitle>
 				<StyledGrid container rowSpacing={9.375} columnSpacing={9.375}>
 					{moreEvents.map(eventInfo => (
-						<Grid item key={eventInfo._id} tablet={4} laptop={4}>
+						<Grid item key={eventInfo._id} mobile={12} tablet={4} laptop={4}>
 							<EventCard eventInfo={eventInfo} />
 						</Grid>
 					))}
