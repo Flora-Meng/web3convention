@@ -49,6 +49,7 @@ const CoverSubtitle = styled(Subtitle)`
 
 const CoverTitle = styled(Title)`
 	font-size: 48px;
+	letter-spacing: 0.78px;
 	white-space: pre-wrap;
 
 	@media ${devices.miniMobile} {

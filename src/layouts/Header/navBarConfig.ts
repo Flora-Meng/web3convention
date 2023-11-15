@@ -38,13 +38,11 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 	[ENavItem.EVENTS]: [
 		{
 			title: 'General Events',
-			path: '/general-events',
-			icon: {
-				src: '/images/icons/starIconForNav.png',
-				width: 17,
-				height: 18,
-				alt: 'Star Icon'
-			}
+			path: '/general-events'
+		},
+		{
+			title: '2024 Web3 & AI Convention',
+			path: '/web3-convention-2024'
 		},
 		{
 			title: 'Hackathon',
