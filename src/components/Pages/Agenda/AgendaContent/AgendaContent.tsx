@@ -51,9 +51,6 @@ const AgendaContent: React.FC = () => {
 	return (
 		<HomeEventContainer>
 			<Container>
-				<MaskContainer>
-					<Backdrop>Events</Backdrop>
-				</MaskContainer>
 				<ContentContainer>
 					<AgendaTable />
 				</ContentContainer>
