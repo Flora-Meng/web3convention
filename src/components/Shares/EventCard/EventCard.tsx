@@ -8,7 +8,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import { color } from '@/styles/variables';
+import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
 const dateIcon = '/images/icons/date.svg';
@@ -20,14 +20,15 @@ const { primaryColor, InfoColor, cardBackgroundColor } = color;
 
 const StyledCard = styled(Card)`
 	background-color: ${cardBackgroundColor};
+	border-radius: 0;
 	display: flex;
 	flex-direction: column;
 	height: 410px;
 	transition: transform 0.3s ease;
-	width: 350px;
 	&:hover {
 		transform: translateY(-10px);
 	}
+	width: 350px;
 `;
 const StyledTypography = styled.span`
 	color: white;
@@ -206,7 +207,7 @@ const EventCard: React.FC<EventCardProps> = ({ eventInfo }) => {
 					</CompanyAvatar>
 					<CompanyName>{company.name}</CompanyName>
 				</StyledLink>
-				{exhibitors?.length !== 0 ? (
+				{exhibitors.length !== 0 ? (
 					<ExhibitorIconWrapper>
 						<StyledTooltip title={description} arrow>
 							<img

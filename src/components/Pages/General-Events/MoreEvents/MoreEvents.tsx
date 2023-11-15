@@ -1,22 +1,32 @@
 import Grid from '@mui/material/Grid';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import EventCard from '@/components/Shares/EventCard';
-import { fetchMeetups } from '@/services/meetups';
+import { fetchMeetups } from '@/services/meetup';
 import { color, devices } from '@/styles/variables';
 
-const { primaryColor } = color;
+const { blackColor, primaryColor } = color;
 
 const MoreEventContainer = styled.div`
-	background-color: black;
+	background-color: ${blackColor};
+	background-image: url('/images/modal-background.png');
+	background-position: center left;
+	background-repeat: no-repeat;
 `;
 const Container = styled.div`
 	display: flex;
 	flex-direction: column;
-	margin-left: 360px;
+	margin: 0 auto;
+	max-width: 1200px;
 `;
-const WebConvention = styled.span`
+const WebConvention = styled.div`
+	display: flex;
+	flex-direction: column;
+	padding-left: 12px;
+`;
+const Title = styled.span`
 	color: ${primaryColor};
 	font-size: 14px;
 	font-style: italic;
@@ -34,7 +44,30 @@ const SectionTitle = styled.span`
 `;
 
 const StyledGrid = styled(Grid)`
-	margin-top: 50px;
+	flex-direction: column;
+	@media ${devices.mobile} {
+		justify-content: space-between;
+		flex-direction: row;
+	}
+`;
+const StyledLink = styled(Link)`
+	display: flex;
+	justify-content: center;
+	margin-top: 75px;
+`;
+const StyledButton = styled.button`
+	background-color: rgba(82, 246, 198, 0.1);
+	border: solid 1px ${primaryColor};
+	border-radius: 30px;
+	color: ${primaryColor};
+	height: 52px;
+	width: 200px;
+`;
+const GridItem = styled(Grid)`
+	margin: 50px auto 0;
+	@media ${devices.mobile} {
+		margin: 30px 0 0 0;
+	}
 `;
 const MoreEvents: React.FC = () => {
 	const [moreEvents, setMoreEvents] = useState<IMeetup[]>([]);
@@ -51,16 +84,21 @@ const MoreEvents: React.FC = () => {
 	return (
 		<MoreEventContainer>
 			<Container>
-				<WebConvention>WEB3.Convention</WebConvention>
-				<SectionTitle>MoreEvents</SectionTitle>
-				<StyledGrid container spacing={9.375} rowSpacing={1} columnSpacing={1}>
+				<WebConvention>
+					<Title>WEB3.Convention</Title>
+					<SectionTitle>MoreEvents</SectionTitle>
+				</WebConvention>
+				<StyledGrid container spacing={1}>
 					{moreEvents.map(eventInfo => (
-						<Grid item key={eventInfo._id} mobile={12} tablet={4} laptop={4}>
+						<GridItem item key={eventInfo._id}>
 							<EventCard eventInfo={eventInfo} />
-						</Grid>
+						</GridItem>
 					))}
 				</StyledGrid>
 			</Container>
+			<StyledLink href="/filtered-event">
+				<StyledButton type="button">SEE MORE</StyledButton>
+			</StyledLink>
 		</MoreEventContainer>
 	);
 };
