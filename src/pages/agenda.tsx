@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import PreviousPartnerSection from '@/components/Pages/PreviousPartner/PreviousPartnerSection';
+import AgendaContent from '@/components/Pages/Agenda/AgendaContent';
 import PageCoverTitle from '@/components/Shares/PageCoverTitle';
-import coverText from '@/components/Shares/PageCoverTitle/previousPartnerCoverText.json';
+import coverText from '@/components/Shares/PageCoverTitle/agendaCoverText.json';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 import PageHead from '@/layouts/PageHead';
@@ -20,13 +20,13 @@ const Cover = styled.div`
 	}
 `;
 
-const PreviousPartnerPage = () => {
+const AgendaPage = () => {
 	const meta = {
 		description:
 			"Web3 Convention is an event to explore the future of Web 2.0 and Web 3.0 and will host in the best convention centre in Australia.  The convention aims to bridge the gap between Web2 and Web3 communities.Hosted in Australia's premier convention centre, attendees can take part in events focused on blockchain, Data & AI, cloud computing, startup pitching, digital transformation, venture capital.",
 		keywords:
 			'Web3Convention, Brisbane Convention and Exhibition Centre (BCEC), Web3, Blockchain, NFT, Whale Yacht Party, Pitch Space',
-		title: 'Web3 Convention 2024 | Previous-Partner'
+		title: 'Web3 Convention 2024 | Agenda'
 	};
 
 	return (
@@ -34,12 +34,12 @@ const PreviousPartnerPage = () => {
 			<PageHead meta={meta} />
 			<Cover>
 				<Header />
-				<PageCoverTitle coverText={coverText} translateValue="translate(0, -200%)" />
+				<PageCoverTitle coverText={coverText} translateValue="translate(0, -190%)" />
 			</Cover>
-			<PreviousPartnerSection />
+			<AgendaContent />
 			<Footer />
 		</>
 	);
 };
 
-export default PreviousPartnerPage;
+export default AgendaPage;

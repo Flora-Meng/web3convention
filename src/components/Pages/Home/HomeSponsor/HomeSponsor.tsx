@@ -84,7 +84,7 @@ const ImageContainer = styled(Link)`
 `;
 
 const Backdrop = styled.div`
-	${backdrop}
+	${backdrop};
 	left: 9vw;
 	@media ${devices.mobile} {
 		left: 5vw;

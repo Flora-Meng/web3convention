@@ -12,18 +12,19 @@ interface PageCoverTitleProps {
 	coverText: {
 		_id: string;
 		title: string;
-		subtitle: string;
+		subtitle?: string;
 		additionalSubtitle?: string;
 	};
+	translateValue?: string;
 }
 
-const Container = styled.div`
+const Container = styled.div<PageCoverTitleProps>`
 	color: ${whiteColor};
 	margin: 0 auto;
 	max-width: 1440px;
 	position: relative;
 	top: 300px;
-	transform: translate(0, -95%);
+	transform: ${props => props.translateValue || 'translate(0, -95%)'};
 	width: calc(100vw - 40px);
 	@media ${devices.mobile} {
 		top: 50%;
@@ -64,10 +65,11 @@ const CoverTitle = styled(Title)`
 `;
 
 const PageCoverTitle: React.FC<PageCoverTitleProps> = props => {
-	const { coverText } = props;
+	const { coverText, translateValue } = props;
+
 	return (
-		<Container>
-			<CoverSubtitle isCurrent>{coverText.subtitle}</CoverSubtitle>
+		<Container translateValue={translateValue} coverText={coverText}>
+			{coverText.subtitle && <CoverSubtitle isCurrent>{coverText.subtitle}</CoverSubtitle>}
 			{coverText.additionalSubtitle && (
 				<CoverSubtitle isCurrent>{coverText.additionalSubtitle}</CoverSubtitle>
 			)}
