@@ -38,7 +38,7 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 		},
 		{
 			title: 'Side Events',
-			path: '/general-events',
+			path: '/side-events',
 			icon: {
 				src: '/images/icons/starIconForNav.png',
 				width: 17,

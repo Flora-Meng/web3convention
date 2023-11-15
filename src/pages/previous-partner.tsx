@@ -9,14 +9,13 @@ import PageHead from '@/layouts/PageHead';
 import { devices } from '@/styles/variables';
 
 const Cover = styled.div`
-	background-image: url('/images/demo/venuePage/coverMobile.jpg');
+	background-image: url('/images/demo/previousPartnerPage/partner-cover.png');
 	background-position: center;
 	background-size: cover;
 	height: 478px;
 	@media ${devices.mobile} {
-		background-image: url('/images/demo/venuePage/newCover.jpg');
+		background-image: url('/images/demo/previousPartnerPage/partner-cover.png');
 		height: 360px;
-		background-size: auto;
 	}
 `;
 
