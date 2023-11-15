@@ -9,14 +9,13 @@ import PageHead from '@/layouts/PageHead/PageHead';
 import { devices } from '@/styles/variables';
 
 const Cover = styled.div`
-	background-image: url('/images/background//web3Convention2024BG.png');
+	background-image: url('/images/background/web3Convention2024BG.png');
 	background-position: center;
 	background-size: cover;
-	font-family: Arial;
 	height: 478px;
 	letter-spacing: 0.78px;
 	@media ${devices.mobile} {
-		background-image: url('/images/background//web3Convention2024BG.png');
+		background-image: url('/images/background/web3Convention2024BG.png');
 		height: 360px;
 		background-size: auto;
 	}
