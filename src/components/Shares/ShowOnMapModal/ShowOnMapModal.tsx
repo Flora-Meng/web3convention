@@ -1,5 +1,4 @@
 import dayjs from 'dayjs';
-import utc from 'dayjs/plugin/utc';
 import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
@@ -18,7 +17,6 @@ const Container = styled.div`
 	border-image: linear-gradient(to bottom, #52f6c6 0%, #529bf6) 1 / 0 4px 0 0;
 	border-image-slice: 1;
 	display: flex;
-	flex-direction: row;
 	height: 148px;
 	margin-bottom: 16px;
 	max-width: 717px;
@@ -64,12 +62,8 @@ interface EventCardProps {
 }
 
 const ShowOnMapModal: React.FC<EventCardProps> = ({ event }) => {
-	dayjs.extend(utc);
 	const { _id, descriptionImage, title, location, city, period } = event;
-	let cityNames = '';
-	if (city) {
-		cityNames = city.map(detail => detail.name).join(', ');
-	}
+	const cityNames = city ? city.map(detail => detail.name).join(', ') : '';
 
 	const formattedDate = dayjs(period.start).utc().local().format('ddd, MMM D, YYYY, hA [GMT]Z');
 	return (
