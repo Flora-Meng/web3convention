@@ -127,22 +127,20 @@ const PreviousPartnerSection: React.FC = () => {
 		<SponsorSectionContainer>
 			<Container>
 				<SponsorGroup>
-					{sponsorList.map((sponsorGroup, index) => (
+					{sponsorList.map((sponsorGroup) => (
 						<SponsorGroup>
 							<StyledTypography>{sponsorGroup.groupName}</StyledTypography>
-							<SponsorContainer className={`group-${index}`}>
+							<SponsorContainer>
 								{sponsorGroup.sponsor.map(sponsor => (
-									<Rectangle key={sponsor._id} className={`group-${index}`}>
+									<Rectangle key={sponsor._id}>
 										<ImageContainer href="/#">
 											<StyledImage
 												src={sponsor.logoSrc}
 												alt={`sponsor_${sponsor._id}`}
-												className={`group-${index}`}
 											/>
 											<StyledImage
 												src={sponsor.logoSrcHighlight || sponsor.logoSrc}
 												alt={`sponsor_${sponsor._id}_highLight`}
-												className={`group-${index}`}
 											/>
 										</ImageContainer>
 									</Rectangle>
