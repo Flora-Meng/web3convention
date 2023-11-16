@@ -1,9 +1,10 @@
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { ClickAwayListener } from '@mui/material';
 import Image from 'next/image';
-import React, { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent, useEffect, useState } from 'react';
 import styled from 'styled-components';
 
+import fetchCitiesList from '@/services/cities';
 import { color } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 import { isAlphaNumericSpace } from '@/utils/validator';
@@ -133,6 +134,14 @@ const ChooseLocation = () => {
 		setInputValue(location);
 		setIsExpanded(false);
 	};
+	const fetchCities = async () => {
+		const response = await fetchCitiesList();
+		setSearchedLocations(response.data);
+	};
+
+	useEffect(() => {
+		fetchCities();
+	}, []);
 
 	return (
 		<ClickAwayListener onClickAway={handleClickAway}>
@@ -165,16 +174,17 @@ const ChooseLocation = () => {
 									loader={imageLoader}
 									src="/images/icons/current-location.svg"
 									alt="current location"
+									// onClick={handleUseCurrentLocation}
 									width={13}
 									height={13}
 								/>
 								Use my current location
 							</CurrentLocation>
 						</CurrentLocationContainer>
-						{searchedLocations.map(location => (
+						{searchedLocations.map(city => (
 							<DropdownOption
-								key={location}
-								onClick={() => handleOptionClick(location)}
+								key={city._id}
+								onClick={() => handleOptionClick(city.name)}
 							>
 								<DropdownContentIcon
 									loader={imageLoader}
@@ -184,8 +194,8 @@ const ChooseLocation = () => {
 									height={13}
 								/>
 								<LocationText>
-									{location}
-									<LocationLabel>NEW, Australia</LocationLabel>
+									{city.name}
+									<LocationLabel>{city.country}</LocationLabel>
 								</LocationText>
 							</DropdownOption>
 						))}
