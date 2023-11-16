@@ -54,7 +54,17 @@ const events = [
 			mimetype: 'image/png',
 			size: 1910668,
 			filename: 'f7de7e86350619b1fd35d3c0c499171d.png'
-		}
+		},
+		cityDetails: [
+			{
+				_id: '651f950bb1d6d61e950a41ab',
+				slug: 'brisbane',
+				country: 'Australia',
+				name: 'Brisbane',
+				isOffice: false,
+				__v: 0
+			}
+		]
 	},
 	{
 		_id: '65430c97337c631470c465b3',
@@ -98,7 +108,17 @@ const events = [
 			mimetype: 'image/png',
 			size: 998981,
 			filename: '229db0bcfbedd7f6171f4d260588026a.png'
-		}
+		},
+		cityDetails: [
+			{
+				_id: '651f950bb1d6d61e950a41ab',
+				slug: 'brisbane',
+				country: 'Australia',
+				name: 'Brisbane',
+				isOffice: false,
+				__v: 0
+			}
+		]
 	}
 ];
 
