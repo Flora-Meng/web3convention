@@ -3,7 +3,7 @@ enum ENavItem {
 	EVENTS = 'events',
 	AGENDA = 'agenda',
 	ATTEND = 'attend',
-	PARTNER = 'sponsor'
+	PARTNER = 'partner'
 }
 
 export default ENavItem;

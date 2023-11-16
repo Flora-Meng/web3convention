@@ -3,8 +3,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 import sponsorList from '@/components/Pages/Home/HomeSponsor/sponsorList.json';
-import { sectionTitle } from '@/styles/mixin';
-import { color, devices, sizes } from '@/styles/variables';
+import { color, devices } from '@/styles/variables';
 
 const { blackColor, whiteColor } = color;
 
@@ -127,8 +126,8 @@ const PreviousPartnerSection: React.FC = () => {
 		<SponsorSectionContainer>
 			<Container>
 				<SponsorGroup>
-					{sponsorList.map((sponsorGroup) => (
-						<SponsorGroup>
+					{sponsorList.map((sponsorGroup, index) => (
+						<SponsorGroup key={index}>
 							<StyledTypography>{sponsorGroup.groupName}</StyledTypography>
 							<SponsorContainer>
 								{sponsorGroup.sponsor.map(sponsor => (
