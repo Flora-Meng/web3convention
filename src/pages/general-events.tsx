@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import MoreEvents from '@/components/Pages/General-Events/MoreEvents';
 import PageCoverTitle from '@/components/Shares/PageCoverTitle';
 import coverText from '@/components/Shares/PageCoverTitle/generalEventsCoverText.json';
+import ShowOnMapModal from '@/components/Shares/ShowOnMapModal';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header/Header';
 import PageHead from '@/layouts/PageHead/PageHead';
