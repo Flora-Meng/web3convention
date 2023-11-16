@@ -44,7 +44,6 @@ const CardImage = styled.div`
 const EventInfoContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-
 	gap: 16px;
 	padding: 8px 0 8px 32px;
 `;
@@ -131,9 +130,10 @@ dayjs.extend(utc);
 dayjs.extend(timezone);
 const format = 'dddd, MMM D, hA';
 
-const FilterEvent: React.FC<EventCardProps> = ({ eventInfo }) => {
+const EventItem: React.FC<EventCardProps> = ({ eventInfo }) => {
 	const { _id, bannersUploader, address, exhibitors, period, title } = eventInfo;
 	const company = exhibitors?.[0] || {};
+	const sydneyTime = dayjs(period.start).tz('Australia/Sydney');
 	return (
 		<Link href={`/events/${_id}`}>
 			<StyledCard>
@@ -164,9 +164,7 @@ const FilterEvent: React.FC<EventCardProps> = ({ eventInfo }) => {
 								</ImageContainer>
 								<DateInfo>
 									{' '}
-									{`${dayjs(period.start)
-										.tz('Australia/Sydney')
-										.format(format)} GMT+8`}
+									{`${sydneyTime.format(format)} ${sydneyTime.format('z')}`}
 								</DateInfo>
 							</InfoContainer>
 						)}
@@ -214,4 +212,4 @@ const FilterEvent: React.FC<EventCardProps> = ({ eventInfo }) => {
 		</Link>
 	);
 };
-export default FilterEvent;
+export default EventItem;

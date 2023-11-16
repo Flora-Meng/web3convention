@@ -152,6 +152,7 @@ const format = 'dddd, MMM D, hA';
 const EventCard: React.FC<EventCardProps> = ({ eventInfo }) => {
 	const { _id, bannersUploader, address, exhibitors, period, title, description } = eventInfo;
 	const company = exhibitors?.[0] || {};
+	const sydneyTime = dayjs(period.start).tz('Australia/Sydney');
 	return (
 		<StyledCard>
 			{bannersUploader?.url && (
@@ -181,7 +182,7 @@ const EventCard: React.FC<EventCardProps> = ({ eventInfo }) => {
 							/>
 						</ImageContainer>
 						<DateInfo>
-							{`${dayjs(period.start).tz('Australia/Sydney').format(format)} GMT+8`}
+							{`${sydneyTime.format(format)} ${sydneyTime.format('z')}`}
 						</DateInfo>
 					</InfoContainer>
 				)}
