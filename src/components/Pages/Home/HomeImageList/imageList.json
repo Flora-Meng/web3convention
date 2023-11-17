@@ -2,28 +2,28 @@
 	{
 		"_id": "1",
 		"label": "NFT Gallery",
-		"subtitle": "Web3 Convention 2024",
+		"subtitle": "AI + Web3 Convention 2024",
 		"imageSrc": "/images/nft.png",
 		"href": "/#"
 	},
 	{
 		"_id": "2",
 		"label": "Pitch Space",
-		"subtitle": "Web3 Convention 2024",
+		"subtitle": "AI + Web3 Convention 2024",
 		"imageSrc": "/images/pitch.png",
 		"href": "/#"
 	},
 	{
 		"_id": "3",
 		"label": "Whale (VIP) party",
-		"subtitle": "Web3 Convention 2024",
+		"subtitle": "AI + Web3 Convention",
 		"imageSrc": "/images/starship-sydney-cruise.webp",
 		"href": "/#"
 	},
 	{
 		"_id": "4",
 		"label": "Web2 & Web3",
-		"subtitle": "Web3 Convention 2024",
+		"subtitle": "AI + Web3 Convention",
 		"imageSrc": "/images/vr.png",
 		"href": "/#"
 	}

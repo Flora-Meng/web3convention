@@ -17,7 +17,7 @@ const PageHead: React.FC<PageHeadProps> = props => {
 		title
 	} = props;
 	const pageTitle = title ? `${title}｜` : '';
-	const defaultTitle = 'Web3 Convention';
+	const defaultTitle = 'AI + Web3 Convention';
 
 	const metaList = [
 		{
