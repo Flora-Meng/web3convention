@@ -5,6 +5,7 @@ import React, { ChangeEvent, useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import fetchCitiesList from '@/services/cities';
+import getStateFromCoordinates from '@/services/getStateFromCoordinates';
 import { color } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 import { isAlphaNumericSpace } from '@/utils/validator';
@@ -106,12 +107,18 @@ const LocationLabel = styled.div`
 	font-size: 12px;
 `;
 
+interface ICity {
+	_id: string;
+	name: string;
+	state: string;
+	country: string;
+}
+
 const ChooseLocation = () => {
 	// searching history list, will be replaced.
-	const [searchedLocations, setSearchedLocations] = useState<string[]>(['Sydney', 'Melbourne']);
+	const [searchedLocations, setSearchedLocations] = useState<ICity[]>([]);
 	const [isExpanded, setIsExpanded] = useState(false);
 	const [inputValue, setInputValue] = useState('');
-
 	const handleClickAway = () => {
 		setIsExpanded(false);
 	};
@@ -129,6 +136,39 @@ const ChooseLocation = () => {
 			value = value.slice(0, 50);
 		}
 		setInputValue(value);
+	};
+	const extractLocalityName = response => {
+		if (response.length > 0) {
+			const localityComponent = response
+				.map(result => result.address_components)
+				.flat()
+				.find(component => component.types.includes('locality'));
+			return localityComponent ? localityComponent.long_name : '';
+		}
+	};
+	const handleUseCurrentLocation = () => {
+		navigator.geolocation.getCurrentPosition(
+			async position => {
+				const { latitude, longitude } = position.coords;
+				try {
+					const response = await getStateFromCoordinates(
+						latitude.toString(),
+						longitude.toString()
+					);
+					const localityName = extractLocalityName(response.data.results);
+					if (localityName) {
+						setInputValue(localityName);
+					} else {
+						setInputError('Something Wrong With Location');
+					}
+				} catch (error) {
+					console.error('Error fetching state from coordinates:', error);
+				}
+			},
+			error => {
+				console.error('Error getting current location:', error);
+			}
+		);
 	};
 	const handleOptionClick = (location: string) => {
 		setInputValue(location);
@@ -169,19 +209,18 @@ const ChooseLocation = () => {
 				{isExpanded && (
 					<DropdownContent>
 						<CurrentLocationContainer>
-							<CurrentLocation>
+							<CurrentLocation onClick={handleUseCurrentLocation}>
 								<DropdownContentIcon
 									loader={imageLoader}
 									src="/images/icons/current-location.svg"
 									alt="current location"
-									// onClick={handleUseCurrentLocation}
 									width={13}
 									height={13}
 								/>
 								Use my current location
 							</CurrentLocation>
 						</CurrentLocationContainer>
-						{searchedLocations.map(city => (
+						{searchedLocations.map((city: ICity) => (
 							<DropdownOption
 								key={city._id}
 								onClick={() => handleOptionClick(city.name)}
@@ -195,7 +234,9 @@ const ChooseLocation = () => {
 								/>
 								<LocationText>
 									{city.name}
-									<LocationLabel>{city.country}</LocationLabel>
+									<LocationLabel>
+										{city.state},{city.country}
+									</LocationLabel>
 								</LocationText>
 							</DropdownOption>
 						))}
