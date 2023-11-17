@@ -107,7 +107,7 @@ const ComingSoonModal: React.FC<ComingSoonModalProps> = ({ open, onClose }) => {
 				</Head>
 				<Body>
 					<Subtitle>Good_things_happen</Subtitle>
-					<Title>Welcome to Web3 Convention</Title>
+					<Title>Welcome to AI + Web3 Convention</Title>
 					<LinkNav>
 						{linkList.map(({ text, href }) => (
 							<StyledLink href={href} key={text}>

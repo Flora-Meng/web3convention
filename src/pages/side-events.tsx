@@ -30,7 +30,7 @@ const GeneralEventsPage = () => {
 			'Web3 Hackathon is Australia most premier annual hackathon event catered to a global audience to support the next generation of Web3 innovation and products.',
 		keywords:
 			'University Hackathon, Web3 Hackathon, Web3, Blockchain, NFT, Whale Yacht Party, Pitch Space',
-		title: 'Web3 Hackathon, Web3 Convention 2024 | April, 2024 | Stages'
+		title: 'Web3 Hackathon, AI + Web3 Convention 2024 | April, 2024 | Stages'
 	};
 	return (
 		<>

@@ -114,9 +114,9 @@ const NavDrawer: React.FC = () => {
 						/>
 					</ImageContainer>
 					<Tagline>{`Don't_miss`}</Tagline>
-					<Title>Web3 Convention</Title>
+					<Title>AI + Web3 Convention</Title>
 					<p className="leading-relaxed">
-						Web3 Convention is the technology convention that brings together people and
+						AI + Web3 Convention is the technology convention that brings together people and
 						companies redefining the global tech industry.
 					</p>
 					<div className="flex flex-col">

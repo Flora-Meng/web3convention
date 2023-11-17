@@ -22,6 +22,7 @@ const CarouselContainer = styled.div`
 
 const HomeCarousel: React.FC = () => {
 	const [current, setCurrent] = useState<number>(0);
+	const showIndicators = carouselList.length > 1;
 	return (
 		<CarouselContainer>
 			<Carousel
@@ -35,6 +36,7 @@ const HomeCarousel: React.FC = () => {
 				interval={6000}
 				transitionTime={1000}
 				animationHandler="fade"
+				showIndicators={showIndicators}
 			>
 				{carouselList.map((carouselInfo, index) => (
 					<CarouseItem
