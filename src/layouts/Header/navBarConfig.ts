@@ -18,18 +18,14 @@ export const navItemsConfig: { [K in ENavItem]: INavItem } = {
 		title: 'attend',
 		path: '/comingSoon'
 	},
-	[ENavItem.SPONSOR]: {
-		title: 'sponsor',
+	[ENavItem.PARTNER]: {
+		title: 'partner',
 		path: '/comingSoon'
 	}
 };
 
 export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 	[ENavItem.ABOUT]: [
-		{
-			title: 'Stages',
-			path: '/stages'
-		},
 		{
 			title: 'Venue',
 			path: '/venue'
@@ -41,8 +37,8 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 			path: '/general-events'
 		},
 		{
-			title: '2024 Web3 & AI Convention',
-			path: '/web3-convention-2024'
+			title: 'Side Events',
+			path: '/side-events'
 		},
 		{
 			title: 'Hackathon',
@@ -51,27 +47,31 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 	],
 	[ENavItem.AGENDA]: [
 		{
-			title: 'Apply-to-Speak',
+			title: 'Agenda Overview',
+			path: '/agenda'
+		},
+		{
+			title: 'Apply to Speak',
 			path: '/apply-to-speak'
 		}
 	],
 	[ENavItem.ATTEND]: [
 		{
-			title: 'Tickets',
+			title: 'Ticket Types',
 			path: '/get-tickets'
+		},
+		{
+			title: 'Book Tickets',
+			path: 'https://w3con.eventsair.com/web3convention/registration/Site/Register'
 		}
 	],
-	[ENavItem.SPONSOR]: [
-		// {
-		// 	title: '2024 Sponsors',
-		// 	path: '/2024-sponsors'
-		// },
-		// {
-		// 	title: 'Why Sponsor',
-		// 	path: '/why-sponsor'
-		// },
+	[ENavItem.PARTNER]: [
 		{
-			title: 'Become a Sponsor',
+			title: 'Previous Partner',
+			path: '/previous-partner'
+		},
+		{
+			title: 'Partner with Us',
 			path: 'https://w3con.eventsair.com/SponsorshipPortal/Account/Login?ReturnUrl=%2FSponsorshipPortal%2Fweb3convention%2Fsponsorship'
 		}
 	]

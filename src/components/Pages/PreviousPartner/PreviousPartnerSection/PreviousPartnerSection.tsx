@@ -2,19 +2,20 @@ import { Typography } from '@mui/material';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import sponsorList from './sponsorList.json';
-import { backdrop, sectionSubtitle, sectionTitle } from '@/styles/mixin';
-import { devices, sizes } from '@/styles/variables';
+import sponsorList from '@/components/Pages/Home/HomeSponsor/sponsorList.json';
+import { color, devices } from '@/styles/variables';
 
-const HomeSponsorContainer = styled.div`
-	max-width: ${`${sizes.largeLaptop}px`};
-	padding: 100px 40px 140px;
+const { blackColor, whiteColor } = color;
+
+const SponsorSectionContainer = styled.div`
+	background-color: ${blackColor};
+	padding: 90px 40px 140px;
 	position: relative;
 	@media ${devices.mobile} {
-		padding: 100px 100px 140px;
+		padding: 90px 100px 140px;
 	}
 	@media ${devices.tablet} {
-		padding: 100px 50px 140px;
+		padding: 90px 50px 140px;
 	}
 	@media ${devices.laptop} {
 		margin: 0 auto;
@@ -35,24 +36,8 @@ const Container = styled.div`
 	}
 `;
 
-const Title = styled.h2`
-	${sectionTitle};
-	font-size: 40px;
-	font-weight: bold;
-	margin-bottom: 10vw;
-	white-space: normal;
-	width: 20vw;
-	@media ${devices.mobile} {
-		width: 100%;
-		margin-bottom: 7vw;
-	}
-`;
-
-const Subtitle = styled.p`
-	${sectionSubtitle};
-`;
-
 const StyledTypography = styled(Typography)`
+	color: ${whiteColor};
 	font-size: 16px;
 	font-weight: bold;
 	line-height: 1.5;
@@ -80,14 +65,6 @@ const ImageContainer = styled(Link)`
 	}
 	&:hover img:last-child {
 		opacity: 1;
-	}
-`;
-
-const Backdrop = styled.div`
-	${backdrop};
-	left: 9vw;
-	@media ${devices.mobile} {
-		left: 5vw;
 	}
 `;
 
@@ -144,30 +121,25 @@ const SponsorGroup = styled.div`
 	}
 `;
 
-const HomeSponsor: React.FC = () => {
+const PreviousPartnerSection: React.FC = () => {
 	return (
-		<HomeSponsorContainer>
+		<SponsorSectionContainer>
 			<Container>
-				<Subtitle>event_testimonials</Subtitle>
-				<Title>Previous Partner</Title>
-				<Backdrop>Sponsors</Backdrop>
 				<SponsorGroup>
-					{sponsorList.map((sponsorGroup, index) => (
-						<SponsorGroup>
+					{sponsorList.map(sponsorGroup => (
+						<SponsorGroup key={sponsorGroup.groupId}>
 							<StyledTypography>{sponsorGroup.groupName}</StyledTypography>
-							<SponsorContainer className={`group-${index}`}>
+							<SponsorContainer>
 								{sponsorGroup.sponsor.map(sponsor => (
-									<Rectangle key={sponsor._id} className={`group-${index}`}>
+									<Rectangle key={sponsor._id}>
 										<ImageContainer href="/#">
 											<StyledImage
 												src={sponsor.logoSrc}
 												alt={`sponsor_${sponsor._id}`}
-												className={`group-${index}`}
 											/>
 											<StyledImage
 												src={sponsor.logoSrcHighlight || sponsor.logoSrc}
 												alt={`sponsor_${sponsor._id}_highLight`}
-												className={`group-${index}`}
 											/>
 										</ImageContainer>
 									</Rectangle>
@@ -177,8 +149,8 @@ const HomeSponsor: React.FC = () => {
 					))}
 				</SponsorGroup>
 			</Container>
-		</HomeSponsorContainer>
+		</SponsorSectionContainer>
 	);
 };
 
-export default HomeSponsor;
+export default PreviousPartnerSection;

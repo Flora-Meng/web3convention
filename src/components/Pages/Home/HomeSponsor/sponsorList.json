@@ -1,5 +1,6 @@
 [
 	{
+		"groupId": 1,
 		"groupName": "Host & Co-host",
 		"sponsor": [
 			{
@@ -20,6 +21,7 @@
 		]
 	},
 	{
+		"groupId": 2,
 		"groupName": "Sponsor",
 		"sponsor": [
 			{
@@ -45,6 +47,7 @@
 		]
 	},
 	{
+		"groupId": 3,
 		"groupName": "Strategic Partners",
 		"sponsor": [
 			{
@@ -150,6 +153,7 @@
 		]
 	},
 	{
+		"groupId": 4,
 		"groupName": "Community Partner",
 		"sponsor": [
 			{
@@ -195,6 +199,7 @@
 		]
 	},
 	{
+		"groupId": 5,
 		"groupName": "Media Partner",
 		"sponsor": [
 			{

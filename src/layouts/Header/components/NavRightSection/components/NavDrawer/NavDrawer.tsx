@@ -75,20 +75,12 @@ const ImageContainer = styled.div`
 
 const linkConfigList = [
 	{
-		label: 'Buy Ticket',
+		label: 'Book Ticket',
 		href: 'https://w3con.eventsair.com/web3convention/registration/Site/Register'
 	},
 	{
-		label: 'Ticket Types',
-		href: '/get-tickets'
-	},
-	{
-		label: 'Agenda',
-		href: '/comingSoon'
-	},
-	{
-		label: 'Speakers',
-		href: '/comingSoon'
+		label: 'Partner with Us',
+		href: 'https://w3con.eventsair.com/web3convention/sponsorship'
 	}
 ];
 
