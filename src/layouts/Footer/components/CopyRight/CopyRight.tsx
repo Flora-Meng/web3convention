@@ -74,7 +74,7 @@ const CopyRight: React.FC = () => {
 				</Grid>
 				<Grid item {...gridColumn}>
 					<CopyrightText>
-						© 2022-2023 Web3 Convention, All Rights Reserved. ACN 668 836 566
+						© 2022-2023 AI + Web3 Convention, All Rights Reserved. ACN 668 836 566
 					</CopyrightText>
 				</Grid>
 				<Grid item {...gridColumn}>

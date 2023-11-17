@@ -121,14 +121,14 @@ const MultipleButtonsContainer = styled.div`
 	flex-direction: column;
 	@media ${devices.tablet} {
 		flex-direction: row;
-		justify-content: space-between;
+		justify-content: flex-start;
 	}
 `;
 
 const ButtonContainer = styled.div<TextProps>`
 	border-radius: 30px;
 	opacity: 0;
-	padding-bottom: 10px;
+	padding: 0 50px 10px 0;
 	${({ isCurrent }) =>
 		isCurrent
 			? animation('fade-in-opacity-transform-to-left', '1s', 'ease', '1.1s', '1')
