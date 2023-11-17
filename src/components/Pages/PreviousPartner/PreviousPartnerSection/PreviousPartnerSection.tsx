@@ -126,8 +126,8 @@ const PreviousPartnerSection: React.FC = () => {
 		<SponsorSectionContainer>
 			<Container>
 				<SponsorGroup>
-					{sponsorList.map((sponsorGroup, index) => (
-						<SponsorGroup key={index}>
+					{sponsorList.map(sponsorGroup => (
+						<SponsorGroup key={sponsorGroup.groupId}>
 							<StyledTypography>{sponsorGroup.groupName}</StyledTypography>
 							<SponsorContainer>
 								{sponsorGroup.sponsor.map(sponsor => (
