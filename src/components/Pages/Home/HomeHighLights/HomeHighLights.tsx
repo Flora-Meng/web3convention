@@ -42,7 +42,7 @@ const HomeHighLights = () => {
 			<Container>
 				<Backdrop>Highlights</Backdrop>
 				<SectionSubtitle>the_festival</SectionSubtitle>
-				<SectionTitle>Web3 Convention Highlights</SectionTitle>
+				<SectionTitle>AI + Web3 Convention Highlights</SectionTitle>
 				<HomeImageList />
 			</Container>
 		</HomeHighLightsContainer>

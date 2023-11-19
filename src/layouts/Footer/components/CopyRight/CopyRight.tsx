@@ -1,17 +1,12 @@
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedinIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import YouTubeIcon from '@mui/icons-material/YouTube';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
-import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 
 import { color, devices, sizes } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
-const { blackColor, primaryColor, whiteColor } = color;
+const { primaryColor } = color;
 
 const ContentContainer = styled.section`
 	align-items: center;
@@ -41,27 +36,15 @@ const CopyrightText = styled.p`
 	}
 `;
 
-const FollowLabel = styled.p`
-	flex-shrink: 0;
-	margin-bottom: 24px;
-	margin-right: 10px;
-`;
-
-const StyledIconButton = styled.button`
-	background-color: transparent;
-	border: none;
-	color: ${blackColor};
-	cursor: pointer;
-	&:hover {
-		color: ${whiteColor};
-	}
-`;
-
 const gridColumn = {
 	mobile: 12,
 	tablet: 12,
 	laptop: 4
 };
+
+const EmptyBox = styled.div`
+	width: 120px;
+`;
 
 const CopyRight: React.FC = () => {
 	const isMobileWidth = typeof window !== 'undefined' && window.innerWidth <= sizes.tablet;
@@ -91,43 +74,11 @@ const CopyRight: React.FC = () => {
 				</Grid>
 				<Grid item {...gridColumn}>
 					<CopyrightText>
-						© 2022-2023 Web3 Convention, All Rights Reserved. ACN 668 836 566
+						© 2022-2023 AI + Web3 Convention, All Rights Reserved. ACN 668 836 566
 					</CopyrightText>
 				</Grid>
-				<Grid
-					item
-					{...gridColumn}
-					className={`flex items-center justify-${
-						isMobile ? 'between' : 'end'
-					} self-center`}
-				>
-					<FollowLabel>Follow us</FollowLabel>
-					<StyledIconButton>
-						<Link href="https://twitter.com/Web3Convention" target="_blank">
-							<TwitterIcon />
-						</Link>
-					</StyledIconButton>
-					<StyledIconButton>
-						<Link
-							href="https://www.linkedin.com/company/web3convention"
-							target="_blank"
-						>
-							<LinkedinIcon />
-						</Link>
-					</StyledIconButton>
-					<StyledIconButton>
-						<Link href="https://www.instagram.com/web3convention" target="_blank">
-							<InstagramIcon />
-						</Link>
-					</StyledIconButton>
-					<StyledIconButton>
-						<Link
-							href="https://www.youtube.com/channel/UCTJEa6rxybFHmmlx6YAf1iA"
-							target="_blank"
-						>
-							<YouTubeIcon />
-						</Link>
-					</StyledIconButton>
+				<Grid item {...gridColumn}>
+					<EmptyBox />
 				</Grid>
 			</ContainerGrid>
 		</ContentContainer>

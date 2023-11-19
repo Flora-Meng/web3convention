@@ -12,8 +12,6 @@ interface ICarouseItem {
 	subtitle: string;
 	description: string;
 	imageSrc: string;
-	buttonText: string;
-	buttonLink: string;
 }
 
 interface CarouseItemProps {
@@ -46,6 +44,7 @@ const InfoContainer = styled.div`
 		margin-left: 60px;
 	}
 	@media ${devices.laptop} {
+		width: 597px;
 		margin-left: 120px;
 	}
 	@media ${devices.desktop} {
@@ -112,11 +111,24 @@ export const Description = styled.p<TextProps>`
 		line-height: 1.8;
 		margin-bottom: 40px;
 	}
+	@media ${devices.laptop} {
+		padding-right: 0;
+	}
+`;
+
+const MultipleButtonsContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	@media ${devices.tablet} {
+		flex-direction: row;
+		justify-content: flex-start;
+	}
 `;
 
 const ButtonContainer = styled.div<TextProps>`
 	border-radius: 30px;
 	opacity: 0;
+	padding: 0 50px 10px 0;
 	${({ isCurrent }) =>
 		isCurrent
 			? animation('fade-in-opacity-transform-to-left', '1s', 'ease', '1.1s', '1')
@@ -125,7 +137,7 @@ const ButtonContainer = styled.div<TextProps>`
 `;
 
 const CarouseItem: React.FC<CarouseItemProps> = ({
-	carouselInfo: { title, subtitle, description, imageSrc, buttonText, buttonLink },
+	carouselInfo: { title, subtitle, description, imageSrc },
 	isCurrent
 }) => {
 	return (
@@ -134,9 +146,24 @@ const CarouseItem: React.FC<CarouseItemProps> = ({
 				<Subtitle isCurrent={isCurrent}>{subtitle}</Subtitle>
 				<Title isCurrent={isCurrent}>{title}</Title>
 				<Description isCurrent={isCurrent}>{description}</Description>
-				<ButtonContainer isCurrent={isCurrent}>
-					<ThemeButton href={buttonLink}>{buttonText}</ThemeButton>
-				</ButtonContainer>
+				<MultipleButtonsContainer>
+					<ButtonContainer isCurrent={isCurrent}>
+						<ThemeButton
+							width="215px"
+							href="https://w3con.eventsair.com/web3convention/registration/Site/Register"
+						>
+							BOOK TICKETS
+						</ThemeButton>
+					</ButtonContainer>
+					<ButtonContainer isCurrent={isCurrent}>
+						<ThemeButton
+							width="215px"
+							href="https://w3con.eventsair.com/web3convention/sponsorship"
+						>
+							PARTNER WITH US
+						</ThemeButton>
+					</ButtonContainer>
+				</MultipleButtonsContainer>
 			</InfoContainer>
 		</CarouseItemContainer>
 	);

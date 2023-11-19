@@ -142,6 +142,7 @@ const FooterContent = () => {
 						South Brisbane QLD 4101
 					</ContentText>
 					<ContentText>+61 429 991 399</ContentText>
+					<ContentText>info@web3convention.com</ContentText>
 					<ContentText>business@web3convention.com</ContentText>
 				</Grid>
 				<Grid item mobile={12} tablet={6} laptop={3} largeLaptop={3}>

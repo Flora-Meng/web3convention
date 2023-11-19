@@ -75,20 +75,12 @@ const ImageContainer = styled.div`
 
 const linkConfigList = [
 	{
-		label: 'Buy Ticket',
+		label: 'Book Ticket',
 		href: 'https://w3con.eventsair.com/web3convention/registration/Site/Register'
 	},
 	{
-		label: 'Ticket Types',
-		href: '/get-tickets'
-	},
-	{
-		label: 'Agenda',
-		href: '/comingSoon'
-	},
-	{
-		label: 'Speakers',
-		href: '/comingSoon'
+		label: 'Partner with Us',
+		href: 'https://w3con.eventsair.com/web3convention/sponsorship'
 	}
 ];
 
@@ -122,10 +114,10 @@ const NavDrawer: React.FC = () => {
 						/>
 					</ImageContainer>
 					<Tagline>{`Don't_miss`}</Tagline>
-					<Title>Web3 Convention</Title>
+					<Title>AI + Web3 Convention</Title>
 					<p className="leading-relaxed">
-						Web3 Convention is the technology convention that brings together people and
-						companies redefining the global tech industry.
+						AI + Web3 Convention is the technology convention that brings together
+						people and companies redefining the global tech industry.
 					</p>
 					<div className="flex flex-col">
 						{linkConfigList.map(({ label, href }) => (

@@ -82,8 +82,8 @@ const HomeCounter: React.FC = () => {
 		<HomeCountdownContainer>
 			<Content>
 				<TitleContainer>
-					<Subtitle>Web3 Convention 2024</Subtitle>
-					<Title>Why Web3 Convention?</Title>
+					<Subtitle>AI + Web3 Convention 2024</Subtitle>
+					<Title>Why AI + Web3 Convention?</Title>
 				</TitleContainer>
 				<CounterSlider counterList={counterList} />
 			</Content>

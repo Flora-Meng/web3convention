@@ -131,7 +131,7 @@ const agendaConfig = [
 	},
 	{
 		_id: '1-23',
-		title: 'Web3 Convention',
+		title: 'AI + Web3 Convention',
 		columns: 2,
 		offset: 0
 	},

@@ -23,6 +23,8 @@ type Banner = {
 	url: string;
 };
 
+type DescriptionImage = { url: string };
+
 interface IMeetup {
 	_id: string;
 	title: string;
@@ -32,4 +34,6 @@ interface IMeetup {
 	exhibitors: Exhibitor[];
 	city: CityInfo[];
 	bannersUploader: Banner;
+	location: string;
+	descriptionImage: DescriptionImageInfo;
 }

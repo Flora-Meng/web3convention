@@ -130,10 +130,6 @@ const StyledCheckBox = styled(FormControlLabel)`
 	& .Mui-checked {
 		color: ${darkPrimaryColor};
 	}
-
-	& .MuiFormControlLabel-label {
-		font-weight: bold;
-	}
 `;
 
 const ButtonContainer = styled.div`

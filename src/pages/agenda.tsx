@@ -1,14 +1,8 @@
 import styled from 'styled-components';
 
-import BrisBaneCity from '@/components/Pages/Venue/BrisbaneCity';
-import GoldCoastCity from '@/components/Pages/Venue/GoldCoastCity';
-import VenueMap from '@/components/Pages/Venue/Map';
-import VenueGallery from '@/components/Pages/Venue/VenueGallery';
-import VenueIntroCards from '@/components/Pages/Venue/VenuIntroCards/VenueIntroCards';
-import PageBanner from '@/components/Shares/PageBanner';
-import bannerInfo from '@/components/Shares/PageBanner/venueBannerInfo.json';
+import AgendaContent from '@/components/Pages/Agenda/AgendaContent';
 import PageCoverTitle from '@/components/Shares/PageCoverTitle';
-import coverText from '@/components/Shares/PageCoverTitle/venueCoverText.json';
+import coverText from '@/components/Shares/PageCoverTitle/agendaCoverText.json';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 import PageHead from '@/layouts/PageHead';
@@ -26,35 +20,26 @@ const Cover = styled.div`
 	}
 `;
 
-const VenuePage = () => {
+const AgendaPage = () => {
 	const meta = {
 		description:
 			"AI + Web3 Convention is an event to explore the future of Web 2.0 and Web 3.0 and will host in the best convention centre in Australia.  The convention aims to bridge the gap between Web2 and Web3 communities.Hosted in Australia's premier convention centre, attendees can take part in events focused on blockchain, Data & AI, cloud computing, startup pitching, digital transformation, venture capital.",
 		keywords:
 			'Web3Convention, Brisbane Convention and Exhibition Centre (BCEC), Web3, Blockchain, NFT, Whale Yacht Party, Pitch Space',
-		title: 'AI + Web3 Convention 2024 | Venue'
+		title: 'AI + Web3 Convention 2024 | Agenda'
 	};
-	const buttonConfig = {
-		text: 'BOOK TICKETS',
-		url: 'https://w3con.eventsair.com/web3convention/registration/Site/Register',
-		extra: 'Interested in partnering? business@web3convention.com'
-	};
+
 	return (
 		<>
 			<PageHead meta={meta} />
 			<Cover>
 				<Header />
-				<PageCoverTitle coverText={coverText} />
+				<PageCoverTitle coverText={coverText} translateValue="translate(0, -190%)" />
 			</Cover>
-			<VenueIntroCards />
-			<PageBanner bannerInfo={bannerInfo} buttonConfig={buttonConfig} />
-			<VenueGallery />
-			<BrisBaneCity />
-			<GoldCoastCity />
-			<VenueMap />
+			<AgendaContent />
 			<Footer />
 		</>
 	);
 };
 
-export default VenuePage;
+export default AgendaPage;
