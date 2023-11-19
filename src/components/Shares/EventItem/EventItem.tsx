@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import { color } from '@/styles/variables';
+import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
 const dateIcon = '/images/icons/date.svg';
@@ -24,22 +24,35 @@ const StyledCard = styled(Card)`
 	border-radius: 0;
 	cursor: pointer;
 	display: flex;
-	height: 216px;
-	width: 1081px;
+	height: 410px;
 	&:hover {
 		transform: translateY(-10px);
+	}
+	@media ${devices.mobile} {
+		height: 216px;
+		max-width: 1081px;
 	}
 `;
 
 const CardContainer = styled.div`
 	display: flex;
-	flex-grow: 1;
+	flex-direction: column;
 	padding: 16px;
+	width: 100%;
+	@media ${devices.mobile} {
+		flex-direction: row;
+		flex-grow: 1;
+		width: unset;
+	}
 `;
 const CardImage = styled.div`
-	height: 184px;
+	height: 154px;
 	position: relative;
-	width: 388px;
+	width: 100%;
+	@media ${devices.mobile} {
+		height: 184px;
+		width: 388px;
+	}
 `;
 const EventInfoContainer = styled.div`
 	display: flex;
@@ -67,12 +80,15 @@ const InfoContainer = styled.div`
 `;
 const ImageContainer = styled.div`
 	height: 14px;
+	min-width: 14px;
 	position: relative;
-	width: 14px;
 `;
 const DateInfo = styled.span`
 	font-size: 16px;
 	margin-left: 8px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 `;
 const CompanyAvatar = styled.div`
 	background-image: url(${logoBackground});
@@ -81,7 +97,7 @@ const CompanyAvatar = styled.div`
 	height: 46px;
 	position: relative;
 	width: 39px;
-	img.company {
+	img.companyImage {
 		border-radius: 50%;
 		height: 35px;
 		margin: 9px 2px 2px 2px;
@@ -121,14 +137,18 @@ const StyledLink = styled(Link)`
 	gap: 6px;
 `;
 const CardFooter = styled.div`
-	background: linear-gradient(${primaryColor}, ${InfoColor});
-	height: 100%;
-	width: 4px;
+	display: none;
+	@media ${devices.mobile} {
+		display: block;
+		background: linear-gradient(${primaryColor}, ${InfoColor});
+		height: 100%;
+		width: 4px;
+	}
 `;
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
-const format = 'dddd, MMM D, hA';
+const format = 'dddd, MMM D, hA [GMT]Z';
 
 const EventItem: React.FC<EventCardProps> = ({ eventInfo }) => {
 	const { _id, bannersUploader, address, exhibitors, period, title } = eventInfo;
@@ -151,6 +171,7 @@ const EventItem: React.FC<EventCardProps> = ({ eventInfo }) => {
 					)}
 					<EventInfoContainer>
 						<StyledTitle>{title}</StyledTitle>
+
 						{period?.start && (
 							<InfoContainer>
 								<ImageContainer>
@@ -163,8 +184,7 @@ const EventItem: React.FC<EventCardProps> = ({ eventInfo }) => {
 									/>
 								</ImageContainer>
 								<DateInfo>
-									{' '}
-									{`${sydneyTime.format(format)} ${sydneyTime.format('z')}`}
+									{dayjs(period.start).utc().local().format(format)}
 								</DateInfo>
 							</InfoContainer>
 						)}
@@ -182,13 +202,14 @@ const EventItem: React.FC<EventCardProps> = ({ eventInfo }) => {
 								<DateInfo>{address}</DateInfo>
 							</InfoContainer>
 						)}
+
 						<CompanyInfo>
 							<StyledLink href={`/company/${company._id}`}>
 								<CompanyAvatar>
 									<img
 										src={company.logo?.url}
 										alt={company.name}
-										className="company"
+										className="companyImage"
 									/>
 								</CompanyAvatar>
 								<CompanyName>{company.name}</CompanyName>

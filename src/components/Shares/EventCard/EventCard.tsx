@@ -45,8 +45,8 @@ const InfoContainer = styled.div`
 `;
 const ImageContainer = styled.div`
 	height: 14px;
+	min-width: 14px;
 	position: relative;
-	width: 14px;
 `;
 const DateInfo = styled.span`
 	font-size: 16px;
@@ -147,12 +147,11 @@ interface EventCardProps {
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
-const format = 'dddd, MMM D, hA';
+const format = 'dddd, MMM D, hA [GMT]Z';
 
 const EventCard: React.FC<EventCardProps> = ({ eventInfo }) => {
 	const { _id, bannersUploader, address, exhibitors, period, title, description } = eventInfo;
 	const company = exhibitors?.[0] || {};
-	const sydneyTime = dayjs(period.start).tz('Australia/Sydney');
 	return (
 		<StyledCard>
 			{bannersUploader?.url && (
@@ -181,9 +180,7 @@ const EventCard: React.FC<EventCardProps> = ({ eventInfo }) => {
 								unoptimized
 							/>
 						</ImageContainer>
-						<DateInfo>
-							{`${sydneyTime.format(format)} ${sydneyTime.format('z')}`}
-						</DateInfo>
+						<DateInfo>{dayjs(period.start).utc().local().format(format)}</DateInfo>
 					</InfoContainer>
 				)}
 				{address && (
