@@ -8,4 +8,12 @@ export const fetchMeetups = () => {
 	});
 };
 
+export const fetchFeaturedEvents = () => {
+	return request({
+		baseURL,
+		method: 'GET',
+		url: '/api/meetups?meetupEventType=web3&featured=generalEvent&state=published'
+	});
+};
+
 export default fetchMeetups;

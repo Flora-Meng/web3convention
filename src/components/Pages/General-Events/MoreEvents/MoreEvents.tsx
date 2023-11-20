@@ -89,14 +89,14 @@ const MoreEvents: React.FC = () => {
 					<SectionTitle>MoreEvents</SectionTitle>
 				</WebConvention>
 				<StyledGrid container spacing={1}>
-					{moreEvents.map(eventInfo => (
+					{moreEvents?.map(eventInfo => (
 						<GridItem item key={eventInfo._id}>
 							<EventCard eventInfo={eventInfo} />
 						</GridItem>
 					))}
 				</StyledGrid>
 			</Container>
-			<StyledLink href="/filtered-event">
+			<StyledLink href="/filtered-events">
 				<StyledButton type="button">SEE MORE</StyledButton>
 			</StyledLink>
 		</MoreEventContainer>
