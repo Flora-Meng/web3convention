@@ -42,7 +42,9 @@ export const color: IColor = {
 	InfoColor: '#77b1f5',
 	descriptionColor: '#333',
 	cardBackgroundColor: '#1a1a1a',
-	greyColor: '#b2b2b2'
+	greyColor: '#b2b2b2',
+	buttonBackgroundColor: '#242424',
+	inputTextColor: '#858585'
 };
 
 export const inputColor: IInputColor = {

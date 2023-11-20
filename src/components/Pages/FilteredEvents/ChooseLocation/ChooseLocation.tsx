@@ -8,15 +8,16 @@ import { color } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 import { isAlphaNumericSpace } from '@/utils/validator';
 
-const { whiteColor, darkPrimaryColor, primaryColor } = color;
+const { whiteColor, darkPrimaryColor, inputTextColor } = color;
 const MainContainer = styled.div`
+	position: relative;
 	width: 100%;
 `;
 const StyledInput = styled.input`
 	align-items: center;
 	background-color: transparent;
 	border: none;
-	color: #858585;
+	color: ${inputTextColor};
 	cursor: pointer;
 	display: flex;
 	font-size: 20px;
@@ -49,6 +50,9 @@ const DropdownContent = styled.div`
 	border: 1px solid #3c3c3c;
 	border-radius: 5px;
 	margin-top: 10px;
+	position: absolute;
+	top: 70px;
+	width: 100%;
 `;
 const DropdownOption = styled.button`
 	align-items: center;
@@ -57,12 +61,14 @@ const DropdownOption = styled.button`
 	color: ${whiteColor};
 	cursor: pointer;
 	display: flex;
+	height: 60px;
 	padding: 10px 15px;
 	text-align: left;
 	width: 100%;
 `;
 const CurrentLocation = styled(DropdownOption)`
 	background-color: #1f1f1f;
+	height: 45px;
 `;
 
 const CurrentLocationContainer = styled(DropdownOption)`
@@ -82,8 +88,8 @@ const CurrentLocationContainer = styled(DropdownOption)`
 interface StyledIconProps {
 	isExpanded: boolean;
 }
-const StyledKeyboardArrowDownIcon = styled(KeyboardArrowDownIcon)<StyledIconProps>`
-	color: #fff;
+const StyledKeyboardArrowDownIcon = styled(KeyboardArrowDownIcon) <StyledIconProps>`
+	color: ${whiteColor};
 	transform: ${({ isExpanded }) => (isExpanded ? 'rotate(180deg)' : 'rotate(0deg)')};
 `;
 const ErrorMessage = styled.div`
@@ -95,7 +101,7 @@ const LocationText = styled.div`
 	gap: 3px;
 `;
 const LocationLabel = styled.div`
-	color: #858585;
+	color: ${inputTextColor};
 	font-size: 12px;
 `;
 
