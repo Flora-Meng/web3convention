@@ -26,7 +26,6 @@ const Button = styled.button<ButtonProps>`
 	border: solid 1px ${({ isActive }) => (isActive ? primaryColor : 'transparent')};
 	border-radius: 18px;
 	color: ${({ isActive }) => (isActive ? primaryColor : whiteColor)};
-
 	cursor: pointer;
 	font-size: 16px;
 	height: 36px;
@@ -57,7 +56,6 @@ const DateInput = styled.input`
 	line-height: 1.5;
 	text-align: center;
 	width: 100%;
-
 	&:focus {
 		outline: none;
 	}
