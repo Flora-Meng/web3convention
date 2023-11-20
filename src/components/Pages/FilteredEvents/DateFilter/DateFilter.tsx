@@ -72,28 +72,42 @@ const StyledRemoveIcon = styled(RemoveIcon)`
 	font-size: 8px;
 `;
 
-const Date = () => {
-	const [active, setActive] = useState('');
+enum DateButtonType {
+	TODAY = 'today',
+	TOMORROW = 'tomorrow',
+	THIS_WEEK = 'thisWeek',
+	THIS_MONTH = 'thisMonth',
+	NEXT_MONTH = 'nextMonth',
+	CUSTOM = 'custom'
+}
+
+interface ButtonConfig {
+	id: DateButtonType;
+	text: string;
+}
+const BUTTONS: ButtonConfig[] = [
+	{ id: DateButtonType.TODAY, text: 'Today' },
+	{ id: DateButtonType.TOMORROW, text: 'Tomorrow' },
+	{ id: DateButtonType.THIS_WEEK, text: 'This week' },
+	{ id: DateButtonType.THIS_MONTH, text: 'This month' },
+	{ id: DateButtonType.NEXT_MONTH, text: 'Next month' },
+	{ id: DateButtonType.CUSTOM, text: 'Custom' }
+];
+
+const DateFilter = () => {
 	const [showDatePicker, setShowDatePicker] = useState(false);
-	const buttons = [
-		{ id: 'today', text: 'Today' },
-		{ id: 'tomorrow', text: 'Tomorrow' },
-		{ id: 'thisWeek', text: 'This week' },
-		{ id: 'thisMonth', text: 'This month' },
-		{ id: 'nextMonth', text: 'Next month' },
-		{ id: 'custom', text: 'custom' }
-	];
+	const [activeButton, setActiveButton] = useState<DateButtonType | undefined>();
 	return (
 		<MainContainer>
 			<StyledTypography>Date</StyledTypography>
 			<ButtonGroup>
-				{buttons.map(button => (
+				{BUTTONS.map(button => (
 					<Button
 						key={button.id}
-						isActive={active === button.id}
+						isActive={activeButton === button.id}
 						onClick={() => {
-							setActive(button.id);
-							if (button.id === 'custom') {
+							setActiveButton(button.id);
+							if (button.id === DateButtonType.CUSTOM) {
 								setShowDatePicker(!showDatePicker);
 							} else {
 								setShowDatePicker(false);
@@ -116,4 +130,4 @@ const Date = () => {
 	);
 };
 
-export default Date;
+export default DateFilter;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import ChooseLocation from './ChooseLocation';
-import Date from './Date';
+import DateFilter from './DateFilter';
 import { color, devices } from '@/styles/variables';
 
 const { blackColor } = color;
@@ -38,7 +38,7 @@ const MainContents = () => {
 		<MainContainer>
 			<FilteredContainer>
 				<ChooseLocation />
-				<Date />
+				<DateFilter />
 			</FilteredContainer>
 			<EventContainer>
 				<h2>this is EventContainer</h2>
