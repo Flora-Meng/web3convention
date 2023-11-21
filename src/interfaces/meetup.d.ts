@@ -6,6 +6,7 @@ type Exhibitor = {
 	name: string;
 	description: string;
 	logo: LogoInfo;
+	_id: string;
 };
 
 type CityInfo = {
