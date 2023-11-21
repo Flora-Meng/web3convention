@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import FeaturedEvents from '@/components/Pages/General-Events/FeaturedEvents';
 import MoreEvents from '@/components/Pages/General-Events/MoreEvents';
 import PageCoverTitle from '@/components/Shares/PageCoverTitle';
 import coverText from '@/components/Shares/PageCoverTitle/generalEventsCoverText.json';
@@ -39,6 +40,7 @@ const GeneralEventsPage = () => {
 				<Header />
 				<PageCoverTitle coverText={coverText} />
 			</Cover>
+			<FeaturedEvents />
 			<MoreEvents />
 			<Footer />
 
