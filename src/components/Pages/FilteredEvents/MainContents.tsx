@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import ChooseLocation from './ChooseLocation';
+import DateFilter from './DateFilter';
 import { color, devices } from '@/styles/variables';
 
 const { blackColor } = color;
@@ -20,7 +21,7 @@ const MainContainer = styled.div`
 const FilteredContainer = styled.div`
 	width: 100%;
 	@media ${devices.mobile} {
-		width: 30%;
+		width: 420px;
 	}
 `;
 const EventContainer = styled.div`
@@ -37,6 +38,7 @@ const MainContents = () => {
 		<MainContainer>
 			<FilteredContainer>
 				<ChooseLocation />
+				<DateFilter />
 			</FilteredContainer>
 			<EventContainer>
 				<h2>this is EventContainer</h2>
