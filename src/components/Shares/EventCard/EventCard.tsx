@@ -89,7 +89,7 @@ const CompanyInfo = styled.div`
 	display: flex;
 	gap: 15px;
 	height: 39px;
-	margin: 0 0 16px 9px;
+	margin: 0 0 16px 16px;
 `;
 
 const CompanyName = styled.span`

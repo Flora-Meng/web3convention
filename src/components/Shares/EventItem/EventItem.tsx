@@ -112,6 +112,7 @@ const CompanyInfo = styled.div`
 	display: flex;
 	gap: 10px;
 	height: 46px;
+	margin-left: 3px;
 	margin-top: 3px;
 `;
 
