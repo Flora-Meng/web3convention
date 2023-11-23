@@ -29,7 +29,7 @@ const PageCoverTitleAdjuster = styled.div`
 	transform: translateY(-100%);
 	@media ${devices.mobile} {
 		padding-top: 20px; // Increase this value to move the title higher on mobile
-		transform: translateY(158%);// This moves the title up by its own height on mobile
+		transform: translateY(136%);// This moves the title up by its own height on mobile
 	}
 `;
 const SideEventPage = () => {
