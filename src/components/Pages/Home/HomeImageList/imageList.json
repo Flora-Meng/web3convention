@@ -1,30 +1,30 @@
 [
 	{
 		"_id": "1",
-		"label": "NFT Gallery",
+		"label": "Australian AI + Web3 Charity Dinner",
+		"subtitle": "AI + Web3 Convention 2024",
+		"imageSrc": "/images/charity-dinner.webp",
+		"href": "/#"
+	},
+	{
+		"_id": "2",
+		"label": "NFT Beauty",
 		"subtitle": "AI + Web3 Convention 2024",
 		"imageSrc": "/images/nft.png",
 		"href": "/#"
 	},
 	{
-		"_id": "2",
-		"label": "Pitch Space",
+		"_id": "3",
+		"label": "Startup Competition",
 		"subtitle": "AI + Web3 Convention 2024",
 		"imageSrc": "/images/pitch.png",
 		"href": "/#"
 	},
 	{
-		"_id": "3",
-		"label": "Whale (VIP) party",
-		"subtitle": "AI + Web3 Convention",
-		"imageSrc": "/images/starship-sydney-cruise.webp",
-		"href": "/#"
-	},
-	{
 		"_id": "4",
-		"label": "Web2 & Web3",
-		"subtitle": "AI + Web3 Convention",
-		"imageSrc": "/images/vr.png",
+		"label": "Cyber Party",
+		"subtitle": "AI + Web3 Convention 2024",
+		"imageSrc": "/images/cyber-party.webp",
 		"href": "/#"
 	}
 ]
