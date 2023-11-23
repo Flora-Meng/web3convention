@@ -20,7 +20,7 @@ const Container = styled.div`
 	height: 148px;
 	margin-bottom: 16px;
 	max-width: 717px;
-	padding: 16px; ;
+	padding: 16px;
 `;
 const ImageWrapper = styled.div`
 	height: auto;
