@@ -47,33 +47,32 @@ const counterList = [
 		count: 150
 	},
 	{
-		name: 'Attendees',
+		name: 'Onsite Attendees',
 		count: 10000
 	},
 	{
+		name: 'Online Attendees',
+		count: 200000
+	},
+	{
 		name: 'Speakers',
-		count: 100
+		count: 200
 	},
 	{
 		name: 'Creators',
 		count: 500
 	},
 	{
-		name: 'VIPs',
-		count: 900
-	},
-	{
-		name: 'Parties',
-		count: 4
-	},
-	{
 		name: 'Venture Capitalists',
 		count: 100
 	},
 	{
-		name: 'Women Attendees',
-		count: 43,
-		suffix: '%'
+		name: 'University Students',
+		count: 80000
+	},
+	{
+		name: 'Influencers',
+		count: 100
 	}
 ];
 
@@ -83,7 +82,7 @@ const HomeCounter: React.FC = () => {
 			<Content>
 				<TitleContainer>
 					<Subtitle>AI + Web3 Convention 2024</Subtitle>
-					<Title>Why AI + Web3 Convention?</Title>
+					<Title>Who attends AI + Web3 Convention?</Title>
 				</TitleContainer>
 				<CounterSlider counterList={counterList} />
 			</Content>
