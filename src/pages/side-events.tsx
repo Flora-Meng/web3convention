@@ -25,11 +25,11 @@ const Cover = styled.div`
 	}
 `;
 const PageCoverTitleAdjuster = styled.div`
-	height: 75px; // Increase this value to move the title higher on mobile
+	height: 75px; 
 	transform: translateY(-100%);
 	@media ${devices.mobile} {
-		height: 100px; // Increase this value to move the title higher on mobile
-		transform: translateY(136%);// This moves the title up by its own height on mobile
+		height: 100px; 
+		transform: translateY(136%);
 	}
 `;
 const SideEventPage = () => {
