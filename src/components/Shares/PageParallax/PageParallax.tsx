@@ -62,9 +62,9 @@ const PageParallax: React.FC = () => {
 			}}
 		>
 			<Subtitle>web2_web3</Subtitle>
-			<Title>Welcome to a World where Web3 is now a thing</Title>
+			<Title>Brisbane Convention & Exhibition Centre</Title>
 			<ThemeButton href="https://w3con.eventsair.com/web3convention/registration/Site/Register">
-				BOOK TICKETS
+				VIEW MORE
 			</ThemeButton>
 		</HomeParallaxContainer>
 	);
