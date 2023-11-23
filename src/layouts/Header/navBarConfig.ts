@@ -33,17 +33,18 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 	],
 	[ENavItem.EVENTS]: [
 		{
-			title: 'General Events',
-			path: '/general-events'
+			title: 'Convention',
+			path: '/convention'
 		},
 		{
 			title: 'Side Events',
 			path: '/side-events'
 		},
-		{
-			title: '2024 Web3 & AI Convention',
-			path: '/web3-convention-2024'
-		},
+		// 暂时隐藏，非删除
+		// {
+		// 	title: '2024 Web3 & AI Convention',
+		// 	path: '/web3-convention-2024'
+		// },
 		{
 			title: 'Hackathon',
 			path: '/hackathon'
