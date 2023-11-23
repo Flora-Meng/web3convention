@@ -44,7 +44,7 @@ const Homepage: ComponentType = () => {
 			<HomeCounter />
 			<HomePosts />
 			<JudgeTeam />
-			<HomeSubscription />
+			{/* <HomeSubscription /> */}
 			{/* <PageGallery imageList={imageList} /> */}
 			{/* <HomeTestimonial /> */}
 			<HomeSponsor />
