@@ -8,6 +8,14 @@
 		"companySrc": ""
 	},
 	{
+		"_id": "1",
+		"name": "Robert Lee",
+		"description": "Robert Lee is President and CEO of Franklin Templeton. In a career at Franklin Templeton spanning over 30 years, she has been a key driver in the company's transformation to what is now one of the most respected global firms focused on investment management, technology, innovation, diversity and corporate and social responsibility. Ms. Johnson has received a number of recognitions and is involved with several industry and nonprofit organizations. She earned her B.A. in economics from the University of California at Davis.",
+		"jobTitle": "Chief Economist",
+		"avatarSrc": "/images/speakers/Robert.jpg",
+		"isSpeaker": true
+	},
+	{
 		"_id": "21",
 		"name": "Dr. LEE CHI KIN",
 		"description": "Dr. LEE CHI KIN is a blockchain industry analyst, founder of the Blockchain Industry Analyst Association, and holds a PhD in Philosophy from Shanghai University of Finance and Economics, doctoral in Financial Management from a European university, digital transformation executive certificate from the University of Cambridge",
@@ -22,14 +30,6 @@
 		"jobTitle": "Head of APAC Hub, BSV Association (Switzerland)",
 		"avatarSrc": "/images/speakers/huizi.png",
 		"companySrc": "/images/logo/bitcoinsv.png"
-	},
-	{
-		"_id": "1",
-		"name": "Robert Lee",
-		"description": "Robert Lee is President and CEO of Franklin Templeton. In a career at Franklin Templeton spanning over 30 years, she has been a key driver in the company's transformation to what is now one of the most respected global firms focused on investment management, technology, innovation, diversity and corporate and social responsibility. Ms. Johnson has received a number of recognitions and is involved with several industry and nonprofit organizations. She earned her B.A. in economics from the University of California at Davis.",
-		"jobTitle": "Chief Economist",
-		"avatarSrc": "/images/speakers/Robert.jpg",
-		"isSpeaker": true
 	},
 	{
 		"_id": "2",
