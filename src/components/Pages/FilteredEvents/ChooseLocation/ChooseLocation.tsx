@@ -137,38 +137,36 @@ const ChooseLocation = () => {
 		}
 		setInputValue(value);
 	};
-	const extractLocalityName = response => {
-		if (response.length > 0) {
-			const localityComponent = response
-				.map(result => result.address_components)
-				.flat()
-				.find(component => component.types.includes('locality'));
-			return localityComponent ? localityComponent.long_name : '';
-		}
+	const extractLocalityName = (response: GeocodeResult[]) => {
+		if (!response || response.length === 0) return '';
+
+		const localityComponent = response
+			.flatMap(result => result.address_components)
+			.find(component => component.types.includes('locality'));
+
+		return localityComponent ? localityComponent.long_name : '';
 	};
 	const handleUseCurrentLocation = () => {
-		navigator.geolocation.getCurrentPosition(
-			async position => {
-				const { latitude, longitude } = position.coords;
-				try {
-					const response = await getStateFromCoordinates(
-						latitude.toString(),
-						longitude.toString()
-					);
-					const localityName = extractLocalityName(response.data.results);
-					if (localityName) {
-						setInputValue(localityName);
-					} else {
-						setInputError('Something Wrong With Location');
-					}
-				} catch (error) {
-					console.error('Error fetching state from coordinates:', error);
+		navigator.geolocation.getCurrentPosition(async position => {
+			const { latitude, longitude } = position.coords;
+			try {
+				const response = await getStateFromCoordinates(
+					latitude.toString(),
+					longitude.toString()
+				);
+				const localityName = extractLocalityName(response.data.results);
+
+				if (localityName) {
+					setInputValue(localityName);
+					setInputError('');
+					setIsExpanded(false);
+				} else {
+					setInputError('Unable to determine location name');
 				}
-			},
-			error => {
-				console.error('Error getting current location:', error);
+			} catch (error) {
+				setInputError('Error getting current location');
 			}
-		);
+		});
 	};
 	const handleOptionClick = (location: string) => {
 		setInputValue(location);
