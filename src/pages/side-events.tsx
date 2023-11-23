@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import FeaturedEvents from '@/components/Pages/General-Events/FeaturedEvents';
-import MoreEvents from '@/components/Pages/General-Events/MoreEvents';
+import FeaturedEvents from '@/components/Pages/Side-Event/FeaturedEvents';
+import MoreEvents from '@/components/Pages/Side-Event/MoreEvents';
 import PageCoverTitle from '@/components/Shares/PageCoverTitle';
 import coverText from '@/components/Shares/PageCoverTitle/generalEventsCoverText.json';
 import ShowOnMapModal from '@/components/Shares/ShowOnMapModal';
@@ -25,7 +25,7 @@ const Cover = styled.div`
 	}
 `;
 
-const GeneralEventsPage = () => {
+const SideEventPage = () => {
 	const meta = {
 		description:
 			'Web3 Hackathon is Australia most premier annual hackathon event catered to a global audience to support the next generation of Web3 innovation and products.',
@@ -43,10 +43,8 @@ const GeneralEventsPage = () => {
 			<FeaturedEvents />
 			<MoreEvents />
 			<Footer />
-
-			<h1>this is GeneralEventsPage</h1>
 		</>
 	);
 };
 
-export default GeneralEventsPage;
+export default SideEventPage;
