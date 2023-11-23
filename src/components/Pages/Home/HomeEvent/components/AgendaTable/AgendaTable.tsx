@@ -131,26 +131,26 @@ const agendaConfig = [
 	},
 	{
 		_id: '1-23',
-		title: 'AI + Web3 Convention',
+		title: 'Keynote Speech',
 		columns: 2,
 		offset: 0
 	},
 	{
 		_id: '1-4',
-		title: 'Side Event Sessions',
+		title: 'Side Event',
 		columns: 1,
 		offset: 0
 	},
 	{
 		_id: '2-1',
-		title: 'Side Event Sessions',
+		title: 'Exhibitors Move in',
 		columns: 1,
 		offset: 0
 	},
 
 	{
 		_id: '2-23',
-		title: 'Keynote Speech',
+		title: 'AI Insight Symposium',
 		columns: 2,
 		offset: 0
 	},
@@ -162,88 +162,55 @@ const agendaConfig = [
 	},
 	{
 		_id: '3-1',
-		title: 'Exhibitors Move in',
+		title: 'Kickoff Party',
 		columns: 1,
 		offset: 0
 	},
 	{
 		_id: '3-23',
-		title: 'Data & AI',
+		title: 'Web3 Innovation Symposium',
 		columns: 2,
 		offset: 0
 	},
-	{
-		_id: '3-4',
-		title: '',
-		columns: 0,
-		offset: 0
-	},
-
-	{
-		_id: '4-1',
-		title: 'Kickoff Party',
-		columns: 1,
-		offset: 0
-	},
-
 	{
 		_id: '4-23',
-		title: 'NFT Gallery',
+		title: 'FutureTech Symposium',
 		columns: 2,
-		offset: 0
+		offset: 1
 	},
 	{
 		_id: '5-23',
-		title: 'VIP Lounge',
+		title: 'NFT Beauty',
 		columns: 2,
 		offset: 1
 	},
 	{
 		_id: '6-23',
-		title: 'Web3 Workshop',
+		title: 'Sponsor/Startup Pitches',
 		columns: 2,
 		offset: 1
 	},
 	{
 		_id: '7-23',
-		title: 'Side Event Sessions',
+		title: 'Side Events',
 		columns: 2,
 		offset: 1
 	},
 	{
-		_id: '8-23',
-		title: 'Sponsor/Startup Pitches',
-		columns: 2,
+		_id: '8-2',
+		title: 'Australian AI + Web3 Charity Dinner',
+		columns: 1,
 		offset: 1
 	},
-
+	{
+		_id: '8-3',
+		title: '',
+		columns: 0,
+		offset: 1
+	},
 	{
 		_id: '9-2',
 		title: 'Cyber Party',
-		columns: 1,
-		offset: 1
-	},
-	{
-		_id: '9-3',
-		title: 'Hackathon Pitches',
-		columns: 1,
-		offset: 0
-	},
-	{
-		_id: '10-2',
-		title: 'Whale (VIP) party',
-		columns: 1,
-		offset: 1
-	},
-	{
-		_id: '10-3',
-		title: 'After Party',
-		columns: 1,
-		offset: 0
-	},
-	{
-		_id: '11-3',
-		title: 'Dao House',
 		columns: 1,
 		offset: 1
 	}
