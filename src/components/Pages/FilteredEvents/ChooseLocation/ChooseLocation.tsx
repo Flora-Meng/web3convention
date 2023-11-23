@@ -114,7 +114,11 @@ interface ICity {
 	country: string;
 }
 
-const ChooseLocation = () => {
+interface ChooseLocationProps {
+	onLocationChange: (location: string) => void;
+}
+
+const ChooseLocation: React.FC<ChooseLocationProps> = ({ onLocationChange }) => {
 	// searching history list, will be replaced.
 	const [searchedLocations, setSearchedLocations] = useState<ICity[]>([]);
 	const [isExpanded, setIsExpanded] = useState(false);
@@ -158,6 +162,7 @@ const ChooseLocation = () => {
 
 				if (localityName) {
 					setInputValue(localityName);
+					onLocationChange(localityName);
 					setInputError('');
 					setIsExpanded(false);
 				} else {
@@ -171,6 +176,7 @@ const ChooseLocation = () => {
 	const handleOptionClick = (location: string) => {
 		setInputValue(location);
 		setIsExpanded(false);
+		onLocationChange(location);
 	};
 	const fetchCities = async () => {
 		const response = await fetchCitiesList();
