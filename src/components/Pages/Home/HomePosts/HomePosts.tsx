@@ -100,7 +100,7 @@ const HomePosts: React.FC = () => {
 	return (
 		<HomePostsContainer>
 			<Subtitle>the_festival</Subtitle>
-			<Title>AI + Web3 Convention Highlights</Title>
+			<Title>Side Events</Title>
 			<Grid container spacing={6}>
 				{postList.map((post, index) => {
 					const postLink = '/comingSoon';
