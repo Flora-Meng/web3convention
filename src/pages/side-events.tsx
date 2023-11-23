@@ -25,10 +25,10 @@ const Cover = styled.div`
 	}
 `;
 const PageCoverTitleAdjuster = styled.div`
-	padding-top: 20px; // Increase this value to move the title higher on mobile
+	height: 75px; // Increase this value to move the title higher on mobile
 	transform: translateY(-100%);
 	@media ${devices.mobile} {
-		padding-top: 20px; // Increase this value to move the title higher on mobile
+		height: 100px; // Increase this value to move the title higher on mobile
 		transform: translateY(136%);// This moves the title up by its own height on mobile
 	}
 `;
