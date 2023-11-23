@@ -35,7 +35,7 @@ const Counter = styled.div`
 
 const CounterName = styled.h4`
 	color: ${({ theme }) => (theme === 'dark' ? primaryColor : darkPrimaryColor)};
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: 700;
 	margin: 0;
 	@media ${devices.laptop} {
@@ -44,19 +44,19 @@ const CounterName = styled.h4`
 `;
 
 const Count = styled.div`
-	font-size: 36px;
+	font-size: 32px;
 	font-weight: 700;
 	@media ${devices.mobile} {
-		font-size: 56px;
+		font-size: 32px;
 	}
 	@media ${devices.tablet} {
-		font-size: 50px;
+		font-size: 40px;
 	}
 	@media ${devices.laptop} {
-		font-size: 70px;
+		font-size: 50px;
 	}
 	@media ${devices.largeLaptop} {
-		font-size: 76px;
+		font-size: 64px;
 	}
 `;
 
