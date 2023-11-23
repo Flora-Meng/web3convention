@@ -1,7 +1,10 @@
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import ChooseLocation from './ChooseLocation';
 import DateFilter from './DateFilter';
+import EventItem from '@/components/Shares/EventItem';
+import fetchMeetups from '@/services/meetup';
 import { color, devices } from '@/styles/variables';
 
 const { blackColor } = color;
@@ -25,7 +28,7 @@ const FilteredContainer = styled.div`
 	}
 `;
 const EventContainer = styled.div`
-	background-color: #1a1a1a;
+	background-color: ${blackColor};
 	margin-left: 0;
 	width: 100%;
 	@media ${devices.mobile} {
@@ -33,15 +36,55 @@ const EventContainer = styled.div`
 		margin-left: 4.5vw;
 	}
 `;
+const SingleEventContainer = styled.div`
+	margin-bottom: 40px;
+`;
 const MainContents = () => {
+	const [filterEvent, setFilterEvent] = useState<IMeetup[]>([]);
+	const [selectedLocation, setSelectedLocation] = useState('');
+
+	const fetchEvent = async () => {
+		const response = await fetchMeetups();
+		setFilterEvent(response.data);
+	};
+
+	useEffect(() => {
+		fetchEvent();
+	}, []);
+
+	const handleLocationChange = (location: string) => {
+		setSelectedLocation(location);
+	};
 	return (
 		<MainContainer>
 			<FilteredContainer>
-				<ChooseLocation />
+				<ChooseLocation onLocationChange={handleLocationChange} />
 				<DateFilter />
 			</FilteredContainer>
 			<EventContainer>
-				<h2>this is EventContainer</h2>
+				{filterEvent.filter(
+					event =>
+						!selectedLocation ||
+						(event.city &&
+							event.city.length > 0 &&
+							event.city[0].name === selectedLocation)
+				).length > 0 ? (
+					filterEvent
+						.filter(
+							event =>
+								!selectedLocation ||
+								(event.city &&
+									event.city.length > 0 &&
+									event.city[0].name === selectedLocation)
+						)
+						.map(eventInfo => (
+							<SingleEventContainer key={eventInfo._id}>
+								<EventItem eventInfo={eventInfo} />
+							</SingleEventContainer>
+						))
+				) : (
+					<div>No results found</div>
+				)}
 			</EventContainer>
 		</MainContainer>
 	);
