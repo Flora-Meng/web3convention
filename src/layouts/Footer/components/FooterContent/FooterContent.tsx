@@ -60,7 +60,12 @@ const LogoContainer = styled.div`
 const Logo = styled(Image)`
 	margin: 0 0 40px 10px;
 `;
-
+const EmailPrefix = styled.span`
+	display: inline-grid;
+	font-size: 12px;
+	font-weight: bold;
+	min-width: 80px;
+`;
 const ContentText = styled.p`
 	font-size: 14px;
 	line-height: 1.43;
@@ -87,11 +92,11 @@ const linkConfigList = [
 		path: 'https://www.bcec.com.au/'
 	},
 	{
-		label: 'Apply to speak at Web3 Convention',
+		label: 'Apply to speak at AI + Web3 Convention',
 		path: '/comingSoon'
 	},
 	{
-		label: 'Volunteer at Web3 Convention',
+		label: 'Volunteer at AI + Web3 Convention',
 		path: '/comingSoon'
 	},
 	{
@@ -142,8 +147,12 @@ const FooterContent = () => {
 						South Brisbane QLD 4101
 					</ContentText>
 					<ContentText>+61 429 991 399</ContentText>
-					<ContentText>info@web3convention.com</ContentText>
-					<ContentText>business@web3convention.com</ContentText>
+					<ContentText>
+						<EmailPrefix>Information</EmailPrefix>info@web3convention.com
+					</ContentText>
+					<ContentText>
+						<EmailPrefix>Partnership</EmailPrefix>business@web3convention.com
+					</ContentText>
 				</Grid>
 				<Grid item mobile={12} tablet={6} laptop={3} largeLaptop={3}>
 					<Title>Useful Links</Title>
