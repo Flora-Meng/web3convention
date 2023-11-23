@@ -60,7 +60,9 @@ const InfoContainer = styled.div`
 	}
 	@media ${devices.laptop} {
 		margin-left: 80px;
-		width: 400px;
+		margin-right: 80px;
+		width: auto;
+		max-width: 552px;
 	}
 	@media ${devices.desktop} {
 		margin-left: 120px;
@@ -93,9 +95,19 @@ const Description = styled.p`
 	${animationFillMode()};
 `;
 
-const ButtonExtraDescription = styled.p`
-	color: white;
+const ButtonContainer = styled.div`
+	display: flex;
+	gap: 30px;
+	margin-bottom: 50px;
+	@media ${devices.tablet} {
+		margin-bottom: 100px;
+	}
 `;
+
+const partnerButtonConfig = {
+	text: 'PARTNER WITH US',
+	url: 'https://w3con.eventsair.com/SponsorshipPortal/Account/Login?ReturnUrl=%2FSponsorshipPortal%2Fweb3convention%2Fsponsorship'
+};
 
 const PageBanner: React.FC<PageBannerProps> = props => {
 	const { bannerInfo, buttonConfig } = props;
@@ -108,14 +120,14 @@ const PageBanner: React.FC<PageBannerProps> = props => {
 					<Title>{bannerInfo.title}</Title>
 					<Description>{bannerInfo.description}</Description>
 
-					{buttonConfig && (
-						<>
+					<ButtonContainer>
+						{buttonConfig && (
 							<ThemeButton href={buttonConfig.url}>{buttonConfig.text}</ThemeButton>
-							<ButtonExtraDescription>
-								{buttonConfig.extra}
-							</ButtonExtraDescription>{' '}
-						</>
-					)}
+						)}
+						<ThemeButton href={partnerButtonConfig.url}>
+							{partnerButtonConfig.text}
+						</ThemeButton>
+					</ButtonContainer>
 				</InfoContainer>
 			</RightGrid>
 		</div>
