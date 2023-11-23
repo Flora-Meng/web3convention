@@ -24,7 +24,14 @@ const Cover = styled.div`
 		background-size: auto;
 	}
 `;
-
+const PageCoverTitleAdjuster = styled.div`
+	padding-top: 20px; // Increase this value to move the title higher on mobile
+	transform: translateY(-100%);
+	@media ${devices.mobile} {
+		padding-top: 20px; // Increase this value to move the title higher on mobile
+		transform: translateY(158%);// This moves the title up by its own height on mobile
+	}
+`;
 const SideEventPage = () => {
 	const meta = {
 		description:
@@ -38,7 +45,9 @@ const SideEventPage = () => {
 			<PageHead meta={meta} />
 			<Cover>
 				<Header />
-				<PageCoverTitle coverText={coverText} />
+				<PageCoverTitleAdjuster>
+					<PageCoverTitle coverText={coverText} />
+				</PageCoverTitleAdjuster>
 			</Cover>
 			<FeaturedEvents />
 			<MoreEvents />
