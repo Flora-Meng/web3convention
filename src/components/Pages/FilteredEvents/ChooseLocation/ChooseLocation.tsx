@@ -88,7 +88,7 @@ const CurrentLocationContainer = styled(DropdownOption)`
 interface StyledIconProps {
 	isExpanded: boolean;
 }
-const StyledKeyboardArrowDownIcon = styled(KeyboardArrowDownIcon) <StyledIconProps>`
+const StyledKeyboardArrowDownIcon = styled(KeyboardArrowDownIcon)<StyledIconProps>`
 	color: ${whiteColor};
 	transform: ${({ isExpanded }) => (isExpanded ? 'rotate(180deg)' : 'rotate(0deg)')};
 `;
