@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import EventCard from '@/components/Shares/EventCard';
-import { fetchMeetups } from '@/services/meetup';
+import { fetchMoreEvents } from '@/services/meetup';
 import { color, devices } from '@/styles/variables';
 
 const { blackColor, primaryColor } = color;
@@ -73,7 +73,7 @@ const MoreEvents: React.FC = () => {
 	const [moreEvents, setMoreEvents] = useState<IMeetup[]>([]);
 
 	const fetchData = async () => {
-		const response = await fetchMeetups();
+		const response = await fetchMoreEvents();
 		setMoreEvents(response.data);
 	};
 

@@ -21,7 +21,8 @@ export const navItemsConfig: { [K in ENavItem]: INavItem } = {
 	[ENavItem.PARTNER]: {
 		title: 'partner',
 		path: '/comingSoon'
-	}
+	},
+	[ENavItem.SPONSOR]: { title: 'sponsor', path: '/sponsor' }
 };
 
 export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
@@ -78,6 +79,12 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 		{
 			title: 'Partner with Us',
 			path: 'https://w3con.eventsair.com/SponsorshipPortal/Account/Login?ReturnUrl=%2FSponsorshipPortal%2Fweb3convention%2Fsponsorship'
+		}
+	],
+	[ENavItem.SPONSOR]: [
+		{
+			title: 'Why Sponsor?',
+			path: '/why-sponsor'
 		}
 	]
 };

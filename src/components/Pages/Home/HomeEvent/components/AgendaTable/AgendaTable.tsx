@@ -180,7 +180,7 @@ const agendaConfig = [
 	},
 	{
 		_id: '5-23',
-		title: 'NFT Beauty',
+		title: 'NFT Gallery',
 		columns: 2,
 		offset: 1
 	},

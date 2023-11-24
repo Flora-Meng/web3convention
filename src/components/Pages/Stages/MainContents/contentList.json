@@ -1,65 +1,79 @@
 [
 	{
 		"_id": "1",
-		"title": "Mainstage",
-		"subtitle": "Brisbane, May 2024",
-		"text": "The Mainstage is reserved for Keynotes and the most significant topics with broad relevance to the market. These speaking slots are extremely competitive and require some type of market-moving news and/or marquee names from either inside or outside of the industry. \n\nThe conference topics revolve around the hottest advanced technologies such as AI, data, blockchain, cloud computing, NFT, next-generation internet, regulations+, etc ",
-		"imageSrc": "/images/demo/main-slider-background-2.jpg"
+		"title": "Australian AI + Web3 Charity Dinner",
+		"subtitle": "Brisbane, 18 May, 2024",
+		"text": "Embark on a transformative journey at the Australian AI + Web3 Charity Dinner. Experience an evening dedicated to advancing poverty alleviation, sustainable development, feminism, and the empowerment of Aboriginal communities in Australia. Join us in weaving a tapestry of impact and fostering positive change. Together, let's embrace a future where innovation and empathy converge for a better world.",
+		"imageSrc": "/images/charity-dinner-large.webp"
 	},
 	{
 		"_id": "2",
-		"title": "Pitch Space",
-		"subtitle": "Brisbane, May 2024",
-		"text": "If you are a startup looking for investors, then the Startup Investor Stage is the place to be. Pitch Space provides an exciting and lucrative opportunity for startups to connect with venture capitalists and other funding institutions during their two days of pitching. It's an exclusive opportunity for startups and sponsors to come together and make something truly remarkable happen. \n\n Participants of the hackathon will be able to make their pitches directly to potential investors with no need for prior connections. At Pitch Space, startups are sure to find their way into investor portfolios that can transform their business ideas to successful empires. \n\n So don't miss out on your own 'shark tank' style event, where everyone comes out a winner!",
+		"title": "Startup Competition",
+		"subtitle": "Brisbane, 18-19 May, 2024",
+		"text": "To provide a platform for budding entrepreneurs to showcase their AI and Web3 innovations, and to connect them with leading venture capital firms and investors for potential collaboration and investment. \n\nVision: \"To scout, nurture, and elevate the brightest and most innovative minds in the AI & Web3 landscape.\" \n\nOpportunity: \"AI & Web3 are more than buzzwords—they're shaping the next epoch of technological innovation. By sponsoring, VCs play a pivotal role in catalyzing this wave.\"",
 		"imageSrc": "/images/pitch.jpeg"
 	},
 	{
 		"_id": "3",
-		"title": "Data & AI",
-		"subtitle": "Brisbane, May 2024",
-		"text": "The conference is primarily focused on Data & AI, as well as next-generation internet technologies. It features well-known guests and industry experts who will come together to discuss the potential applications of data, AI, and next-generation internet technologies, as well as their future possibilities for development. This is a must-attend event for anyone interested in staying up-to-date on the latest trends and developments in these exciting fields.",
+		"title": "Capital Connect",
+		"subtitle": "Brisbane, 18-19 May, 2024",
+		"text": "Embark on an entrepreneurial journey at the Pitch House, where innovation is the main act. Here, the spotlight is on our Start-up Competition, where visionary minds showcase their groundbreaking ideas. Investors, seize the opportunity to explore exclusive start-up slots and be at the forefront of innovation. Join us at the Pitch House, where pioneering ideas take the stage, and the future unfolds through entrepreneurial brilliance and investment potential. Welcome to a space where innovation meets opportunity!",
 		"imageSrc": "/images/demo/main-home-banner-1.jpg"
 	},
 	{
 		"_id": "4",
-		"title": "NFT House",
-		"subtitle": "Brisbane, May 2024",
-		"text": "The NFT HOUSE is the perfect place to immerse yourself in the future of art x commerce on the blockchain. The Gallery introduces a new way to experience art and commerce. By combining the innovative technology of blockchain with a visually captivating atmosphere, this gallery creates a realm for people to explore the undiscovered possibilities of combining non-fungible tokens with creativity and profit. \n\nIt will feature unique content centred around Non-Fungible Tokens (NFTs). The gallery will be a lively space that houses panels, exhibitions and an artist incubator program to help aspiring creators learn more about art x commerce on the blockchain. It’s sure to be an experience you won’t soon forget!",
+		"title": "NFT Gallery",
+		"subtitle": "Brisbane, 18-19 May, 2024",
+		"text": "Immerse yourself in the cutting-edge fusion of art and technology at NFT Gallery, a captivating exhibition during the AI + Web3 Convention. Discover the Gallery of NFT artworks, where digital innovation meets artistic expression. Join us in this unique experience, where a portion of auction proceeds goes towards supporting charitable initiatives.",
 		"imageSrc": "/images/demo/stagePage/nftGallery.png"
 	},
 	{
 		"_id": "5",
-		"title": "Metaverse and Gaming Zone",
-		"subtitle": "Brisbane, May 2024",
-		"text": "Founders, developers, brands, artists, gamers and platforms come together to explore how they’re building and navigating the digital landscapes and experiences of the future.\n\n",
-		"imageSrc": "/images/demo/stagePage/metaverse.png"
+		"title": "Cyber Party",
+		"subtitle": "Brisbane, 18 May, 2024",
+		"text": "Join us for the ultimate night of connection and celebration at Cyber Party! As the sun sets on our convention, the energy moves to the bars, transforming into a vibrant atmosphere where attendees come together to unwind, network, and make lasting memories. Immerse yourself in the rhythm of the night, where conversations flow, ideas spark, and connections flourish. Let the Cyber Party be the highlight of your convention experience as we toast to innovation, camaraderie, and the shared passion that unites us all. See you on the dance floor!",
+		"imageSrc": "/images/convention/cyber-party.webp"
 	},
 	{
 		"_id": "6",
-		"title": "Web3 Workshop",
-		"subtitle": "Brisbane, May 2024",
-		"text": "As a primer to AI + Web3 Convention, Web3 Convention will conduct an indepth Web3 Workshop for brands, agencies and/or communities who are looking for a hands-on guide to onboarding themselves and their teams in Web3 and the metaverse. The Workshops will be highly customized depending on the Sponsor’s team’s needs. Sessions will be conducted in person.",
-		"imageSrc": "/images/demo/stagePage/moneyReimagined.png"
+		"title": "Community House",
+		"subtitle": "Brisbane, 18-19 May, 2024",
+		"text": "Step into the beating heart of our convention at Community House, a dynamic space where diverse events and functional zones converge. Immerse yourself in insightful discussions and explore our Community Exhibition, featuring the captivating NFT Beauty showcase. Whether you crave quiet corners for focused talks or collaborative spaces to connect, our curated environment adapts to your needs. Community House is more than a space; it's a living ecosystem that thrives on diversity and energy. Join us for a unique experience where connections, innovation, and inspiration seamlessly come together. Welcome to the heart of it all—welcome to Community House.",
+		"imageSrc": "/images/convention/community-house.webp"
 	},
 	{
 		"_id": "7",
 		"title": "VIP Lounge",
-		"subtitle": "Brisbane, May 2024",
+		"subtitle": "Brisbane, 18-19 May, 2024",
 		"text": "To accommodate this growth, the VIP Lounge at web3convention provides VIP with a place to connect with peers, learn about the ground breaking developments in this industry and network with potential partners. \n\nWhether you’re just starting out in Web3 or are working on projects that will shape the future of this ecosystem, the VIP Lounge is where you can participate in meaningful discussions and see how blockchain leads towards innovative solutions. As technological advancements continue to establish a new digital economy, web3convention is bringing together movement leaders for an exciting journey ahead. Oh, of course, champagne and drinks unlimited provided.",
 		"imageSrc": "/images/networking.jpeg"
 	},
 	{
-		"_id": "10",
-		"title": "Speakers AMA Stage",
-		"subtitle": "Brisbane, May 2024",
-		"text": "Speakers continue their larger-stage conversations, or start new ones, in a more casual setting. The Speaker AMA Stage allows for more informal chats and interaction with the audience.",
-		"imageSrc": "/images/demo/stagePage/speakersAma.png"
+		"_id": "8",
+		"title": "Keynote Theatre",
+		"subtitle": "Brisbane, 18-19 May, 2024",
+		"text": "The Keynote Theatre is reserved for Keynotes and the most significant topics with broad relevance to the market. These speaking slots are extremely competitive and require some type of market-moving news and/or marquee names from either inside or outside of the industry. The conference topics revolve around the hottest advanced technologies such as AI, data, blockchain, cloud computing, NFT, next-generation internet, regulations+, etc.",
+		"imageSrc": "/images/demo/main-slider-background-2.jpg"
 	},
 	{
-		"_id": "12",
-		"title": "DAO House",
-		"subtitle": "Brisbane, May 2024",
-		"text": "AI + Web3 Convention will centre its Decentralized Autonomous Organizations content in the first-ever DAO House. The space's most dynamic communities and creators will be seen and heard. Additionally, Web3 Convention will partner with many Influential DAOs and offer the area for their collaborators to meet and connect in members-only parties and meetups. Open to all attendees when there is not a private DAO meetup happening. ",
-		"imageSrc": "/images/demo/stagePage/daoHouse.png"
+		"_id": "9",
+		"title": "AI Insight Hub",
+		"subtitle": "Brisbane, 18-19 May, 2024",
+		"text": "Welcome to the AI Insight Hub, the intellectual nucleus of our convention. In this dynamic theatre, thought leaders and experts converge to share insights on the forefront of AI. Immerse yourself in enlightening speeches that delve into the latest trends, innovations, and the future of artificial intelligence. Join us at the AI Insight Hub, where knowledge takes center stage, and the power of AI unfolds before your eyes. Get ready to expand your understanding and be part of the AI conversation shaping the world.",
+		"imageSrc": "/images/convention/ai-insight-hub.webp"
+	},
+	{
+		"_id": "10",
+		"title": "Web3 Innovation Hub",
+		"subtitle": "Brisbane, 18-19 May, 2024",
+		"text": "Enter the future at the Web3 Innovation Hub, the stage where groundbreaking discussions on Web3 unfold. In this dynamic theatre, thought leaders illuminate the latest trends, innovations, and the transformative power of decentralised technologies. Join us for riveting speeches that explore the limitless possibilities of Web3, as we delve into the next chapter of the internet. Be part of the conversation at the Web3 Innovation Hub, where the future is now, and innovation takes centre stage. Welcome to the forefront of decentralised technology!",
+		"imageSrc": "/images/convention/web3-innovation-hub.webp"
+	},
+	{
+		"_id": "11",
+		"title": "FutureTech Hub",
+		"subtitle": "Brisbane, 18-19 May, 2024",
+		"text": "Step into the FutureTech Hub, the premier theatre where thought leaders unravel the latest advancements in cutting-edge technology. Immerse yourself in captivating speeches exploring the limitless potential of FutureTech. This dynamic space is where innovation takes centre stage, showcasing the transformative power of emerging technologies. Join us at the FutureTech Hub, where the future unfolds through enlightening discussions and groundbreaking insights. Welcome to the forefront of technological evolution!",
+		"imageSrc": "/images/convention/future-tech-hub.webp"
 	}
 ]

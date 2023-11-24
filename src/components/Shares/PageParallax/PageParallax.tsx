@@ -1,71 +1,52 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import styled from 'styled-components';
 
 import ThemeButton from '@/components/Shares/ThemeButton';
-import { sectionSubtitle } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
 
 const { whiteColor } = color;
 
 const HomeParallaxContainer = styled.div`
-	background-attachment: fixed;
-	background-image: url('/images/demo/main-home-parallax.jpg');
-	background-position: center 0;
+	background-image: url('/images/brisbane-convention-y.webp');
+	background-repeat: no-repeat;
 	background-size: cover;
 	color: ${whiteColor};
-	padding: 130px 16px;
+	padding: 120px 24px;
 	text-align: center;
 	@media ${devices.tablet} {
-		padding: 130px 100px;
+		background-image: url('/images/brisbane-convention.webp');
+		background-size: auto;
+		background-position: center;
+		padding: 148px 100px;
 	}
 `;
-
-const Subtitle = styled.p`
-	${sectionSubtitle};
-	color: ${whiteColor};
-	font-size: 18px;
-	letter-spacing: 0.15rem;
-	margin-bottom: 8px;
-`;
-
 const Title = styled.h2`
-	font-size: 50px;
+	font-size: 40px;
 	line-height: 1;
-	margin: 0 0 28px 0;
+	margin-bottom: 60px;
 	@media ${devices.tablet} {
-		font-size: 60px;
+		margin-bottom: 24px;
+	}
+`;
+const SubTitle = styled.h3`
+	font-size: 16px;
+	font-weight: normal;
+	:last-of-type {
+		margin-bottom: 80px;
 	}
 `;
 
 const PageParallax: React.FC = () => {
-	const [backgroundPositionTop, setBackgroundPositionTop] = useState<number>();
 	const ParallaxContainer = useRef<HTMLDivElement>(null);
 
-	const handleScroll = () => {
-		if (ParallaxContainer.current) {
-			setBackgroundPositionTop(
-				Math.round(ParallaxContainer.current.getBoundingClientRect().top / 5)
-			);
-		}
-	};
-
-	useEffect(() => {
-		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
-	}, []);
-
 	return (
-		<HomeParallaxContainer
-			ref={ParallaxContainer}
-			style={{
-				backgroundPosition: `center ${backgroundPositionTop}px`
-			}}
-		>
-			<Subtitle>web2_web3</Subtitle>
+		<HomeParallaxContainer ref={ParallaxContainer}>
 			<Title>Brisbane Convention & Exhibition Centre</Title>
-			<ThemeButton href="https://w3con.eventsair.com/web3convention/registration/Site/Register">
-				VIEW MORE
-			</ThemeButton>
+			<SubTitle>
+				Venue: Exhibition Hall 4, Brisbane Convention & Exhibition Centre, Australia
+			</SubTitle>
+			<SubTitle>Date: 18-19 May, 2024</SubTitle>
+			<ThemeButton href="https://web3convention.com/venue">VIEW MORE</ThemeButton>
 		</HomeParallaxContainer>
 	);
 };

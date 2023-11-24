@@ -1,9 +1,11 @@
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { ClickAwayListener } from '@mui/material';
 import Image from 'next/image';
-import React, { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent, useEffect, useState } from 'react';
 import styled from 'styled-components';
 
+import fetchCitiesList from '@/services/cities';
+import getStateFromCoordinates from '@/services/getStateFromCoordinates';
 import { color } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 import { isAlphaNumericSpace } from '@/utils/validator';
@@ -105,12 +107,22 @@ const LocationLabel = styled.div`
 	font-size: 12px;
 `;
 
-const ChooseLocation = () => {
+interface ICity {
+	_id: string;
+	name: string;
+	state: string;
+	country: string;
+}
+
+interface ChooseLocationProps {
+	onLocationChange: (location: string) => void;
+}
+
+const ChooseLocation: React.FC<ChooseLocationProps> = ({ onLocationChange }) => {
 	// searching history list, will be replaced.
-	const [searchedLocations, setSearchedLocations] = useState<string[]>(['Sydney', 'Melbourne']);
+	const [searchedLocations, setSearchedLocations] = useState<ICity[]>([]);
 	const [isExpanded, setIsExpanded] = useState(false);
 	const [inputValue, setInputValue] = useState('');
-
 	const handleClickAway = () => {
 		setIsExpanded(false);
 	};
@@ -129,10 +141,51 @@ const ChooseLocation = () => {
 		}
 		setInputValue(value);
 	};
+	const extractLocalityName = (response: GeocodeResult[]) => {
+		if (!response || response.length === 0) return '';
+
+		const localityComponent = response
+			.flatMap(result => result.address_components)
+			.find(component => component.types.includes('locality'));
+
+		return localityComponent ? localityComponent.long_name : '';
+	};
+	const handleUseCurrentLocation = () => {
+		navigator.geolocation.getCurrentPosition(async position => {
+			const { latitude, longitude } = position.coords;
+			try {
+				const response = await getStateFromCoordinates(
+					latitude.toString(),
+					longitude.toString()
+				);
+				const localityName = extractLocalityName(response.data.results);
+
+				if (localityName) {
+					setInputValue(localityName);
+					onLocationChange(localityName);
+					setInputError('');
+					setIsExpanded(false);
+				} else {
+					setInputError('Unable to determine location name');
+				}
+			} catch (error) {
+				setInputError('Error getting current location');
+			}
+		});
+	};
 	const handleOptionClick = (location: string) => {
 		setInputValue(location);
 		setIsExpanded(false);
+		onLocationChange(location);
 	};
+	const fetchCities = async () => {
+		const response = await fetchCitiesList();
+		setSearchedLocations(response.data);
+	};
+
+	useEffect(() => {
+		fetchCities();
+	}, []);
 
 	return (
 		<ClickAwayListener onClickAway={handleClickAway}>
@@ -160,7 +213,7 @@ const ChooseLocation = () => {
 				{isExpanded && (
 					<DropdownContent>
 						<CurrentLocationContainer>
-							<CurrentLocation>
+							<CurrentLocation onClick={handleUseCurrentLocation}>
 								<DropdownContentIcon
 									loader={imageLoader}
 									src="/images/icons/current-location.svg"
@@ -171,10 +224,10 @@ const ChooseLocation = () => {
 								Use my current location
 							</CurrentLocation>
 						</CurrentLocationContainer>
-						{searchedLocations.map(location => (
+						{searchedLocations.map((city: ICity) => (
 							<DropdownOption
-								key={location}
-								onClick={() => handleOptionClick(location)}
+								key={city._id}
+								onClick={() => handleOptionClick(city.name)}
 							>
 								<DropdownContentIcon
 									loader={imageLoader}
@@ -184,8 +237,10 @@ const ChooseLocation = () => {
 									height={13}
 								/>
 								<LocationText>
-									{location}
-									<LocationLabel>NEW, Australia</LocationLabel>
+									{city.name}
+									<LocationLabel>
+										{city.state},{city.country}
+									</LocationLabel>
 								</LocationText>
 							</DropdownOption>
 						))}

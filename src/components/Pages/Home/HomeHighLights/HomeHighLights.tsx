@@ -27,6 +27,7 @@ const Container = styled.div`
 const SectionTitle = styled.h2`
 	${sectionTitle};
 	margin-bottom: 20px;
+	max-width: fit-content;
 	@media ${devices.laptop} {
 		margin-bottom: 64px;
 	}
@@ -42,7 +43,7 @@ const HomeHighLights = () => {
 			<Container>
 				<Backdrop>Highlights</Backdrop>
 				<SectionSubtitle>the_festival</SectionSubtitle>
-				<SectionTitle>AI + Web3 Convention Highlights</SectionTitle>
+				<SectionTitle>Convention Highlights</SectionTitle>
 				<HomeImageList />
 			</Container>
 		</HomeHighLightsContainer>

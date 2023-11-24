@@ -68,7 +68,7 @@ const counterList = [
 	},
 	{
 		name: 'University Students',
-		count: 80000
+		count: 8000
 	},
 	{
 		name: 'Influencers',
