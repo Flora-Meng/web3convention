@@ -4,28 +4,16 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 import postList from './postList.json';
-import PostBackgroundImage01 from '@/assets/images/blog-background-img-1.png';
-import PostBackgroundImage02 from '@/assets/images/blog-background-img-2.png';
-import PostBackgroundImage03 from '@/assets/images/blog-background-img-3.png';
-import {
-	// activeNavBarTitleDecoration,
-	animation,
-	animationFillMode,
-	// animationHoverImage,
-	animationHoverImageParent,
-	// navBarTitleDecoration,
-	sectionSubtitle,
-	sectionTitle,
-	textEllipsis
-} from '@/styles/mixin';
+import ThemeButton from '@/components/Shares/ThemeButton';
+import { animationHoverImageParent, sectionSubtitle, sectionTitle } from '@/styles/mixin';
 import { devices, sizes } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
 const HomePostsContainer = styled.div`
 	max-width: ${`${sizes.largeLaptop}px`};
-	padding: 100px 40px 140px;
+	padding: 100px 40px 60px;
 	@media ${devices.mobile} {
-		padding: 100px 100px 140px;
+		padding: 100px 100px 120px;
 	}
 	@media ${devices.laptop} {
 		margin: 0 auto;
@@ -67,41 +55,19 @@ const PostTitle = styled.h3`
 	}
 `;
 
-const PostDescription = styled.p`
-	${textEllipsis(2)}
+const ViewMore = styled.div`
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	margin-top: 88px;
 `;
-
-// const StyledLink = styled(Link)`
-// 	display: inline-block;
-// 	font-size: 13px;
-// 	font-weight: 700;
-// 	text-transform: uppercase;
-// 	span {
-// 		${navBarTitleDecoration('calc(100% + 4px)', '50%', '-2px')};
-// 	}
-// 	&:hover span:before {
-// 		${activeNavBarTitleDecoration()}
-// 	}
-// `;
-
-const PostBackGroundImage = styled(Image)`
-	left: 20px;
-	opacity: 0;
-	position: absolute;
-	top: -120px;
-	z-index: -1;
-	${animation('fade-in-opacity-transform-to-right', '0.5s', 'ease', '0.5s', '1')};
-	${animationFillMode()};
-`;
-
-const postBackGroundImage = [PostBackgroundImage01, PostBackgroundImage02, PostBackgroundImage03];
 
 const HomePosts: React.FC = () => {
 	return (
 		<HomePostsContainer>
 			<Subtitle>the_festival</Subtitle>
 			<Title>Side Events</Title>
-			<Grid container spacing={6}>
+			<Grid container spacing={1}>
 				{postList.map((post, index) => {
 					const postLink = '/comingSoon';
 					return (
@@ -110,7 +76,7 @@ const HomePosts: React.FC = () => {
 							mobile={12}
 							tablet={12}
 							laptop={6}
-							largeLaptop={4}
+							largeLaptop={3}
 							key={post._id}
 							className="relative"
 						>
@@ -127,21 +93,13 @@ const HomePosts: React.FC = () => {
 							<Link href={postLink}>
 								<PostTitle>{post.title}</PostTitle>
 							</Link>
-							<PostDescription>{post.description}</PostDescription>
-							{/* <StyledLink href={postLink}>
-								<span>read more</span>
-							</StyledLink> */}
-							<PostBackGroundImage
-								loader={imageLoader}
-								src={postBackGroundImage[index]}
-								alt={`post-bg-${index}`}
-								unoptimized
-								loading="lazy"
-							/>
 						</Grid>
 					);
 				})}
 			</Grid>
+			<ViewMore>
+				<ThemeButton href="https://web3convention.com/side-events">VIEW MORE</ThemeButton>
+			</ViewMore>
 		</HomePostsContainer>
 	);
 };

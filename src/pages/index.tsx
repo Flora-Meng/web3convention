@@ -42,7 +42,6 @@ const Homepage: ComponentType = () => {
 			<PageBanner bannerInfo={bannerInfo} buttonConfig={buttonConfig} />
 			<HomeEvent />
 			<HomeCounter />
-			<HomePosts />
 			<JudgeTeam />
 			{/* <HomeSubscription /> */}
 			{/* <PageGallery imageList={imageList} /> */}
@@ -50,6 +49,7 @@ const Homepage: ComponentType = () => {
 			<HomeSponsor />
 			<PageParallax />
 			<PageTicket />
+			<HomePosts />
 		</>
 	);
 };
