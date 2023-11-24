@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 import FeaturedEvents from '@/components/Pages/Side-Event/FeaturedEvents';
 import MoreEvents from '@/components/Pages/Side-Event/MoreEvents';
-import SideEventCoverTitle from '@/components/Shares/PageCoverTitle/SideEventCoverTitle';
 import coverText from '@/components/Shares/PageCoverTitle/generalEventsCoverText.json';
+import SideEventCoverTitle from '@/components/Shares/PageCoverTitle/SideEventCoverTitle';
 import ShowOnMapModal from '@/components/Shares/ShowOnMapModal';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header/Header';
