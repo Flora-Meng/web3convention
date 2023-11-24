@@ -8,7 +8,7 @@ const WhySponsorPage = () => {
 	return (
 		<>
 			<SessionTypesSection />
-			<Footer />;
+			<Footer />
 		</>
 	);
 };
