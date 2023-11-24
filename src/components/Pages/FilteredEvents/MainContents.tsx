@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import ChooseLocation from './ChooseLocation';
 import DateFilter from './DateFilter';
 import EventItem from '@/components/Shares/EventItem';
-import fetchMeetups from '@/services/meetup';
+import { fetchMeetups } from '@/services/meetup';
 import { color, devices } from '@/styles/variables';
 
 const { blackColor } = color;
