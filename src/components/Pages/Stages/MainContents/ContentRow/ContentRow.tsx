@@ -161,7 +161,7 @@ const ContentRow: React.FC<ContentRowProps> = props => {
 	if (isWideLayout === undefined) return null;
 	if (!isWideLayout) {
 		return (
-			<OddRowContainer>
+			<OddRowContainer itemID={title}>
 				<TextContainer>
 					<Subtitle>{subTitle}</Subtitle>
 					<Title>{title}</Title>

@@ -5,13 +5,14 @@ import styled from 'styled-components';
 
 import postList from './postList.json';
 import ThemeButton from '@/components/Shares/ThemeButton';
-import { animationHoverImageParent, sectionSubtitle, sectionTitle } from '@/styles/mixin';
+import { animationHoverImageParent, backdrop, sectionSubtitle, sectionTitle } from '@/styles/mixin';
 import { devices, sizes } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
 const HomePostsContainer = styled.div`
 	max-width: ${`${sizes.largeLaptop}px`};
 	padding: 100px 40px 60px;
+	position: relative;
 	@media ${devices.mobile} {
 		padding: 100px 100px 120px;
 	}
@@ -22,6 +23,14 @@ const HomePostsContainer = styled.div`
 
 const Title = styled.h2`
 	${sectionTitle};
+`;
+
+const Backdrop = styled.div`
+	${backdrop};
+	left: 9vw;
+	@media ${devices.mobile} {
+		left: 5vw;
+	}
 `;
 
 const Subtitle = styled.p`
@@ -65,8 +74,9 @@ const ViewMore = styled.div`
 const HomePosts: React.FC = () => {
 	return (
 		<HomePostsContainer>
-			<Subtitle>the_festival</Subtitle>
+			<Subtitle>AI + Web3 Convention 2024</Subtitle>
 			<Title>Side Events</Title>
+			<Backdrop>Side</Backdrop>
 			<Grid container spacing={1}>
 				{postList.map((post, index) => {
 					const postLink = '/comingSoon';

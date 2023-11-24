@@ -22,7 +22,7 @@
 	},
 	{
 		"groupId": 2,
-		"groupName": "Sponsor",
+		"groupName": "Sponsors",
 		"sponsor": [
 			{
 				"_id": "4",
@@ -154,7 +154,7 @@
 	},
 	{
 		"groupId": 4,
-		"groupName": "Community Partner",
+		"groupName": "Community Partners",
 		"sponsor": [
 			{
 				"_id": "28",
@@ -200,7 +200,7 @@
 	},
 	{
 		"groupId": 5,
-		"groupName": "Media Partner",
+		"groupName": "Media Partners",
 		"sponsor": [
 			{
 				"_id": "36",

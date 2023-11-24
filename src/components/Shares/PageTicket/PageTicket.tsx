@@ -8,6 +8,7 @@ import styled from 'styled-components';
 
 import {
 	activeNavBarTitleDecoration,
+	backdrop,
 	navBarTitleDecoration,
 	sectionSubtitle,
 	sectionTitle
@@ -18,6 +19,7 @@ import imageLoader from '@/utils/loader';
 const HomeTicketContainer = styled.div`
 	max-width: ${`${sizes.largeLaptop}px`};
 	padding: 50px 15px;
+	position: relative;
 	@media ${devices.laptop} {
 		margin: 0 auto;
 	}
@@ -37,6 +39,14 @@ const StyledLi = styled.li`
 	margin-left: 30px;
 	padding-left: 10px;
 	position: relative;
+`;
+
+const Backdrop = styled.div`
+	${backdrop};
+	left: 9vw;
+	@media ${devices.mobile} {
+		left: 5vw;
+	}
 `;
 
 const PriceContainer = styled.div`
@@ -126,9 +136,9 @@ const ticketConfig = [
 	{
 		_id: '1',
 		title: 'General Admission',
-		price: 252,
+		price: 218,
 		priceIncGST: false,
-		earlyBirdPrice: 202,
+		earlyBirdPrice: 110,
 		earlyBirdPriceIncGST: true,
 		earlyBirdEndDate: '2024-03-21T14:00:00.000Z',
 		thumbnailSrc: '/images/tickets/general-admission.png',
@@ -145,9 +155,9 @@ const ticketConfig = [
 	{
 		_id: '2',
 		title: 'Premium Admission',
-		price: 307,
+		price: 268,
 		priceIncGST: true,
-		earlyBirdPrice: 257,
+		earlyBirdPrice: 134,
 		earlyBirdPriceIncGST: false,
 		earlyBirdEndDate: '2024-03-21T14:00:00.000Z',
 		thumbnailSrc: '/images/tickets/premium-admission.png',
@@ -164,7 +174,7 @@ const ticketConfig = [
 		title: 'VIP WHALE PASS',
 		price: 2585,
 		priceIncGST: false,
-		earlyBirdPrice: 2385,
+		earlyBirdPrice: 1295,
 		earlyBirdPriceIncGST: false,
 		thumbnailSrc: '/images/tickets/vip.png',
 		earlyBirdEndDate: '2024-03-21T14:00:00.000Z',
@@ -188,8 +198,9 @@ const ticketConfig = [
 const PageTicket: React.FC = () => {
 	return (
 		<HomeTicketContainer>
-			<Subtitle>unmissable_events</Subtitle>
-			<Title>Are you with us? Get tickets</Title>
+			<Subtitle>AI + Web3 Convention 2024</Subtitle>
+			<Title>Are you with us? Book tickets</Title>
+			<Backdrop>Tickets</Backdrop>
 			<Grid container spacing={6}>
 				{ticketConfig.map(ticket => {
 					const earlyBirdPriceValid =

@@ -62,7 +62,7 @@ const InfoContainer = styled.div`
 		margin-left: 80px;
 		margin-right: 80px;
 		width: auto;
-		max-width: 552px;
+		max-width: 545px;
 	}
 	@media ${devices.desktop} {
 		margin-left: 120px;
@@ -97,9 +97,12 @@ const Description = styled.p`
 
 const ButtonContainer = styled.div`
 	display: flex;
+	flex-direction: column;
 	gap: 30px;
 	margin-bottom: 50px;
 	@media ${devices.tablet} {
+		display: flex;
+		flex-direction: row;
 		margin-bottom: 100px;
 	}
 `;

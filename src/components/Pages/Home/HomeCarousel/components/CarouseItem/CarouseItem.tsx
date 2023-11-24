@@ -132,11 +132,13 @@ const HighlightItem = styled.div`
 `;
 const HighlightItemTitle = styled.p`
 	background-color: ${color.primaryColor};
+	box-sizing: content-box;
 	color: ${color.blackColor};
 	font-size: 16px;
 	font-weight: bold;
 	margin: 0 8px 0 0;
-	padding: 6px 18px;
+	padding: 6px 0;
+	text-align: center;
 	width: 80px;
 `;
 const HighlightItemDescription = styled.p`

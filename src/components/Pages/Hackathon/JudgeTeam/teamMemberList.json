@@ -194,13 +194,5 @@
 		"jobTitle": "Head of Strategy",
 		"avatarSrc": "/images/speakers/Jason_Choi.png",
 		"companySrc": "/images/sponsors/chiron.png"
-	},
-	{
-		"_id": "19",
-		"name": "Kyle Baron",
-		"description": "",
-		"jobTitle": "Managing Partner",
-		"avatarSrc": "/images/speakers/Kyle_Baron.png",
-		"companySrc": "/images/sponsors/bcw.svg"
 	}
 ]
