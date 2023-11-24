@@ -80,7 +80,7 @@ const HomeEvent: React.FC = () => {
 		<HomeEventContainer>
 			<Container>
 				<MaskContainer>
-					<Backdrop>Events</Backdrop>
+					<Backdrop>Agenda</Backdrop>
 				</MaskContainer>
 				<ContentContainer>
 					<Subtitle>AI + Web3 Convention 2024</Subtitle>

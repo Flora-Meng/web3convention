@@ -364,13 +364,13 @@ const JudgeTeam: React.FC = () => {
 	return (
 		<ExpectedSpeakerContainer>
 			<Container>
-				<SectionSubtitle>Web3 Hackathon</SectionSubtitle>
+				<SectionSubtitle>AI + Web3 Convention 2024</SectionSubtitle>
 				<SectionTitle>
 					<span>Judges, </span>
 					<span>Speakers & </span>
 					<span>Mentors</span>
 				</SectionTitle>
-				<Backdrop>Judges</Backdrop>
+				<Backdrop>Guests</Backdrop>
 				<HomeTeamContainer container spacing={2}>
 					<MemberModal open={open} handleClose={handleClose}>
 						<InfoHeader>

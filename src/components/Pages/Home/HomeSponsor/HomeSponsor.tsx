@@ -148,9 +148,9 @@ const HomeSponsor: React.FC = () => {
 	return (
 		<HomeSponsorContainer>
 			<Container>
-				<Subtitle>event_testimonials</Subtitle>
-				<Title>Previous Partner</Title>
-				<Backdrop>Sponsors</Backdrop>
+				<Subtitle>AI + Web3 Convention 2024</Subtitle>
+				<Title>Previous Partners</Title>
+				<Backdrop>Partners</Backdrop>
 				<SponsorGroup>
 					{sponsorList.map((sponsorGroup, index) => (
 						<SponsorGroup>

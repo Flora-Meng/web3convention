@@ -41,14 +41,14 @@ const Homepage: ComponentType = () => {
 			<HomeHighLights />
 			<PageBanner bannerInfo={bannerInfo} buttonConfig={buttonConfig} />
 			<HomeEvent />
-			<HomeCounter />
 			<JudgeTeam />
+			<PageTicket />
+			<HomeCounter />
 			{/* <HomeSubscription /> */}
 			{/* <PageGallery imageList={imageList} /> */}
 			{/* <HomeTestimonial /> */}
 			<HomeSponsor />
 			<PageParallax />
-			<PageTicket />
 			<HomePosts />
 		</>
 	);

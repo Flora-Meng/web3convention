@@ -65,7 +65,7 @@ const ViewMore = styled.div`
 const HomePosts: React.FC = () => {
 	return (
 		<HomePostsContainer>
-			<Subtitle>the_festival</Subtitle>
+			<Subtitle>AI + Web3 Convention 2024</Subtitle>
 			<Title>Side Events</Title>
 			<Grid container spacing={1}>
 				{postList.map((post, index) => {

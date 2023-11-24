@@ -42,7 +42,7 @@ const HomeHighLights = () => {
 		<HomeHighLightsContainer>
 			<Container>
 				<Backdrop>Highlights</Backdrop>
-				<SectionSubtitle>the_festival</SectionSubtitle>
+				<SectionSubtitle>Brisbane, 18-19 May, 2024</SectionSubtitle>
 				<SectionTitle>Convention Highlights</SectionTitle>
 				<HomeImageList />
 			</Container>

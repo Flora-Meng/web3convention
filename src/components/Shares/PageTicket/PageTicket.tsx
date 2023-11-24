@@ -188,8 +188,8 @@ const ticketConfig = [
 const PageTicket: React.FC = () => {
 	return (
 		<HomeTicketContainer>
-			<Subtitle>unmissable_events</Subtitle>
-			<Title>Are you with us? Get tickets</Title>
+			<Subtitle>AI + Web3 Convention 2024</Subtitle>
+			<Title>Are you with us? Book tickets</Title>
 			<Grid container spacing={6}>
 				{ticketConfig.map(ticket => {
 					const earlyBirdPriceValid =
