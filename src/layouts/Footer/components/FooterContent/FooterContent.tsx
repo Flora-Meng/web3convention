@@ -168,19 +168,19 @@ const FooterContent = () => {
 				/>
 			</LogoContainer>
 			<ContainerGrid container spacing={1}>
-				<Grid item mobile={12} tablet={6} laptop={3} largeLaptop={3}>
+				<Grid item mobile={12} tablet={6} laptop={2.5} largeLaptop={2.5}>
 					<Title>Get in touch</Title>
 					<ContentText>
 						Brisbane Convention and Exhibition Centre
 						<br />
 						South Brisbane QLD 4101
 					</ContentText>
-					<ContentText>+61 429 991 399</ContentText>
+					<ContentText>Tel: +61 429 991 399</ContentText>
 					<ContentText>Information: info@web3convention.com</ContentText>
 					<ContentText>Partnership: business@web3convention.com</ContentText>
 				</Grid>
-				<Grid item mobile={12} tablet={6} laptop={1.5} largeLaptop={1.5}>
-					<Title>Our Events</Title>
+				<Grid item mobile={12} tablet={6} laptop={2} largeLaptop={2}>
+					<Title>Convention Highlights</Title>
 					<div className="flex flex-col">
 						<StyledLink href={eventLink}>
 							Australian AI + Web3 Charity Dinner

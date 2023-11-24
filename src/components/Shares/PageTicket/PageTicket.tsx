@@ -8,6 +8,7 @@ import styled from 'styled-components';
 
 import {
 	activeNavBarTitleDecoration,
+	backdrop,
 	navBarTitleDecoration,
 	sectionSubtitle,
 	sectionTitle
@@ -18,6 +19,7 @@ import imageLoader from '@/utils/loader';
 const HomeTicketContainer = styled.div`
 	max-width: ${`${sizes.largeLaptop}px`};
 	padding: 50px 15px;
+	position: relative;
 	@media ${devices.laptop} {
 		margin: 0 auto;
 	}
@@ -37,6 +39,14 @@ const StyledLi = styled.li`
 	margin-left: 30px;
 	padding-left: 10px;
 	position: relative;
+`;
+
+const Backdrop = styled.div`
+	${backdrop};
+	left: 9vw;
+	@media ${devices.mobile} {
+		left: 5vw;
+	}
 `;
 
 const PriceContainer = styled.div`
@@ -190,6 +200,7 @@ const PageTicket: React.FC = () => {
 		<HomeTicketContainer>
 			<Subtitle>AI + Web3 Convention 2024</Subtitle>
 			<Title>Are you with us? Book tickets</Title>
+			<Backdrop>Tickets</Backdrop>
 			<Grid container spacing={6}>
 				{ticketConfig.map(ticket => {
 					const earlyBirdPriceValid =
