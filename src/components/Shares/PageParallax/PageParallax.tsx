@@ -23,9 +23,16 @@ const HomeParallaxContainer = styled.div`
 const Title = styled.h2`
 	font-size: 40px;
 	line-height: 1;
-	margin-bottom: 80px;
+	margin-bottom: 60px;
 	@media ${devices.tablet} {
-		margin-bottom: 40px;
+		margin-bottom: 24px;
+	}
+`;
+const SubTitle = styled.h3`
+	font-size: 16px;
+	font-weight: normal;
+	:last-of-type {
+		margin-bottom: 80px;
 	}
 `;
 
@@ -35,6 +42,10 @@ const PageParallax: React.FC = () => {
 	return (
 		<HomeParallaxContainer ref={ParallaxContainer}>
 			<Title>Brisbane Convention & Exhibition Centre</Title>
+			<SubTitle>
+				Venue: Exhibition Hall 4, Brisbane Convention & Exhibition Centre, Australia
+			</SubTitle>
+			<SubTitle>Date: 18-19 May, 2024</SubTitle>
 			<ThemeButton href="https://web3convention.com/venue">VIEW MORE</ThemeButton>
 		</HomeParallaxContainer>
 	);
