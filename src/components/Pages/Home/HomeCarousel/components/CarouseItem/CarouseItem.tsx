@@ -32,10 +32,11 @@ const CarouseItemContainer = styled.div<CarouseItemContainerProps>`
 	background-position: 50% 50%;
 	background-size: cover;
 	color: ${whiteColor};
-	height: 70vh;
+	min-height: 70vh;
 `;
 
 const InfoContainer = styled.div`
+	margin-bottom: 50px;
 	margin-left: 30px;
 	margin-top: 80px;
 	text-align: left;
@@ -115,6 +116,37 @@ export const Description = styled.p<TextProps>`
 		padding-right: 0;
 	}
 `;
+const HighlightContainer = styled.div``;
+const HighlightItem = styled.div`
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 24px;
+	:last-of-type {
+		margin-bottom: 56px;
+	}
+	@media ${devices.tablet} {
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 8px;
+	}
+`;
+const HighlightItemTitle = styled.p`
+	background-color: ${color.primaryColor};
+	color: ${color.blackColor};
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0 8px 0 0;
+	padding: 6px 18px;
+	width: 80px;
+`;
+const HighlightItemDescription = styled.p`
+	color: ${color.whiteColor};
+	font-size: 16px;
+	margin-top: 8px;
+	@media ${devices.tablet} {
+		margin: 0 0;
+	}
+`;
 
 const MultipleButtonsContainer = styled.div`
 	display: flex;
@@ -146,6 +178,18 @@ const CarouseItem: React.FC<CarouseItemProps> = ({
 				<Subtitle isCurrent={isCurrent}>{subtitle}</Subtitle>
 				<Title isCurrent={isCurrent}>{title}</Title>
 				<Description isCurrent={isCurrent}>{description}</Description>
+				<HighlightContainer>
+					<HighlightItem>
+						<HighlightItemTitle>DATE</HighlightItemTitle>
+						<HighlightItemDescription>18-19 May, 2024</HighlightItemDescription>
+					</HighlightItem>
+					<HighlightItem>
+						<HighlightItemTitle>VENUE</HighlightItemTitle>
+						<HighlightItemDescription>
+							Exhibition Hall 4, Brisbane Convention & Exhibition Centre, Australia
+						</HighlightItemDescription>
+					</HighlightItem>
+				</HighlightContainer>
 				<MultipleButtonsContainer>
 					<ButtonContainer isCurrent={isCurrent}>
 						<ThemeButton
