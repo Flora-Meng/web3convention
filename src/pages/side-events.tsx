@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import FeaturedEvents from '@/components/Pages/Side-Event/FeaturedEvents';
 import MoreEvents from '@/components/Pages/Side-Event/MoreEvents';
-import PageCoverTitle from '@/components/Shares/PageCoverTitle';
+import SideEventCoverTitle from '@/components/Shares/PageCoverTitle/SideEventCoverTitle';
 import coverText from '@/components/Shares/PageCoverTitle/generalEventsCoverText.json';
 import ShowOnMapModal from '@/components/Shares/ShowOnMapModal';
 import Footer from '@/layouts/Footer';
@@ -24,7 +24,6 @@ const Cover = styled.div`
 		background-size: auto;
 	}
 `;
-
 const SideEventPage = () => {
 	const meta = {
 		description:
@@ -38,7 +37,7 @@ const SideEventPage = () => {
 			<PageHead meta={meta} />
 			<Cover>
 				<Header />
-				<PageCoverTitle coverText={coverText} />
+				<SideEventCoverTitle coverText={coverText} />
 			</Cover>
 			<FeaturedEvents />
 			<MoreEvents />
