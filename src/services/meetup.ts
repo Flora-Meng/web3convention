@@ -16,10 +16,18 @@ export const fetchFeaturedEvents = () => {
 	});
 };
 
-export const fetchMoreEvents = () => {
+export const fetchConventionEvents = () => {
 	return request({
 		baseURL,
 		method: 'GET',
-		url: '/api/meetups?meetupEventType=web3&web3EventType=sideEvent&state=published&featured=default'
+		url: '/api/meetups?meetupEventType=web3&web3EventType=web3AiConvention&featured=default'
 	});
 };
+export const fetchFeaturedConventionEvents = () => {
+	return request({
+		baseURL,
+		method: 'GET',
+		url: '/api/meetups?meetupEventType=web3&web3EventType=web3AiConvention&featured=popularEvents'
+	});
+};
+export default fetchMeetups;
