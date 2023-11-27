@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import ChooseLocation from './ChooseLocation';
 import DateFilter from './DateFilter';
+import ShowMapSection from './ShowMapSection/ShowMapSection';
 import EventItem from '@/components/Shares/EventItem';
 import { fetchMeetups } from '@/services/meetup';
 import { color, devices } from '@/styles/variables';
@@ -22,6 +23,8 @@ const MainContainer = styled.div`
 	}
 `;
 const FilteredContainer = styled.div`
+	display: flex;
+	flex-direction: column;
 	width: 100%;
 	@media ${devices.mobile} {
 		width: 420px;
@@ -58,6 +61,7 @@ const MainContents = () => {
 	return (
 		<MainContainer>
 			<FilteredContainer>
+				<ShowMapSection />
 				<ChooseLocation onLocationChange={handleLocationChange} />
 				<DateFilter />
 			</FilteredContainer>
