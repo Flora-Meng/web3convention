@@ -7,6 +7,7 @@ import imageLoader from '@/utils/loader';
 
 const Container = styled.div`
 	background-color: ${color.blackColor};
+	font-family: Arial;
 	padding: 24px;
 	width: 100%;
 `;
@@ -32,25 +33,25 @@ const StyledGridContainer = styled.div`
 	gap: 50px;
 	position: relative;
 	@media ${devices.tablet} {
-		gap: 30px;
+		column-gap: 40px;
+		row-gap: 60px;
 		grid-template-columns: repeat(2, 1fr);
 	}
 	@media ${devices.largeLaptop} {
-		column-gap: 0px;
+		column-gap: 60px;
 		row-gap: 66px;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(3, 360px);
 	}
 `;
 const StyledGridItem = styled.div`
 	background-color: #131313;
 	border-radius: 4px;
-	height: 420;
+	height: 354px;
 	max-width: 360px;
-	padding: 20px 24px;
+	padding: 20px 14px;
 	position: relative;
 	@media ${devices.largeLaptop} {
-		padding: 47px 24px 33px;
-		height: 338px;
+		padding: 47px 24px 31px;
 	}
 `;
 const SubTitle = styled.p`
@@ -63,6 +64,7 @@ const Description = styled.p`
 	color: ${color.whiteColor};
 	font-size: 16px;
 	line-height: 1.5;
+	margin: 0;
 `;
 const StyledNumber = styled.span`
 	color: ${color.primaryColor};
@@ -77,7 +79,7 @@ const StyledImage = styled(Image)`
 		display: block;
 		position: absolute;
 		bottom: 100px;
-		left: 633px;
+		left: 591px;
 	}
 `;
 
