@@ -67,6 +67,8 @@ const EmptyBox = styled.div`
 const CopyRight: React.FC = () => {
 	const [isMobile, setIsMobile] = useState<boolean>();
 	useEffect(() => {
+		const isMobileWidth = typeof window !== 'undefined' && window.innerWidth <= sizes.tablet;
+		setIsMobile(isMobileWidth);
 		const resizeHandler = () => {
 			setIsMobile(window.innerWidth <= sizes.tablet);
 		};
