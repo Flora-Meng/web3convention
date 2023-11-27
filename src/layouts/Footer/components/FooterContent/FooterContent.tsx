@@ -108,7 +108,7 @@ const qrCodes = [
 		_id: 'eventbrite',
 		src: '/images/qr-code/eventbrite.webp',
 		alt: 'Eventbrite',
-		link: 'https://twitter.com/Web3Convention'
+		link: 'https://web3convention.eventbrite.com/'
 	},
 	{
 		_id: 'instagram',
@@ -120,19 +120,19 @@ const qrCodes = [
 		_id: 'linkedin',
 		src: '/images/qr-code/linkedin.webp',
 		alt: 'Linkedin',
-		link: 'https://www.youtube.com/channel/UCTJEa6rxybFHmmlx6YAf1iA'
+		link: 'https://www.linkedin.com/company/web3convention/'
 	},
 	{
 		_id: 'X',
 		src: '/images/qr-code/x.webp',
 		alt: 'X',
-		link: 'https://web3convention.eventbrite.com/'
+		link: 'https://twitter.com/Web3Convention'
 	},
 	{
 		_id: 'youtube',
 		src: '/images/qr-code/youtube.webp',
 		alt: 'Youtube',
-		link: 'https://www.linkedin.com/company/web3convention/'
+		link: 'https://www.youtube.com/channel/UCTJEa6rxybFHmmlx6YAf1iA'
 	},
 	{
 		_id: 'facebook',
