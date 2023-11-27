@@ -1,6 +1,6 @@
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import { color, devices, sizes } from '@/styles/variables';
@@ -11,13 +11,24 @@ const ContentContainer = styled.section`
 	align-items: center;
 	background-color: ${primaryColor};
 	font-size: 14px;
-	padding: 12px 0;
+	padding: 32px 0;
+	@media ${devices.largeLaptop} {
+		padding: 12px 0;
+	}
 `;
 const ContainerGrid = styled(Grid)`
 	margin: 0 auto;
 	width: calc(100vw - 75px);
-	@media (${devices.largeLaptop}) {
+	@media ${devices.largeLaptop} {
 		max-width: 1440px;
+	}
+`;
+const LogoGrid = styled(Grid)`
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	@media ${devices.largeLaptop} {
+		justify-content: start;
 	}
 `;
 const Logo = styled(Image)`
@@ -35,8 +46,14 @@ const CopyrightGrid = styled(Grid)`
 `;
 const CopyrightText = styled.p`
 	margin: 0 0;
+	:last-of-type {
+		margin-top: 10px;
+	}
 	@media ${devices.largeLaptop} {
 		white-space: nowrap;
+		:last-of-type {
+			margin-top: 0;
+		}
 	}
 `;
 const gridColumn = {
@@ -48,8 +65,7 @@ const EmptyBox = styled.div`
 	width: 120px;
 `;
 const CopyRight: React.FC = () => {
-	const isMobileWidth = typeof window !== 'undefined' && window.innerWidth <= sizes.tablet;
-	const [isMobile, setIsMobile] = useState(isMobileWidth);
+	const [isMobile, setIsMobile] = useState<boolean>();
 	useEffect(() => {
 		const resizeHandler = () => {
 			setIsMobile(window.innerWidth <= sizes.tablet);
@@ -60,7 +76,7 @@ const CopyRight: React.FC = () => {
 	return (
 		<ContentContainer>
 			<ContainerGrid container className="justify-between">
-				<Grid item {...gridColumn} className="self-center">
+				<LogoGrid item {...gridColumn} className="self-center">
 					<Logo
 						loader={imageLoader}
 						unoptimized
@@ -70,26 +86,20 @@ const CopyRight: React.FC = () => {
 						height={40}
 						priority
 					/>
-				</Grid>
+				</LogoGrid>
 				<CopyrightGrid item {...gridColumn}>
-					{isMobile ? (
+					{isMobile && (
 						<>
 							<CopyrightText>© 2023 AI+Web3 Convention</CopyrightText>
-							<CopyrightText>All Rights Reserved</CopyrightText>
-							<CopyrightText>ACN 668 836 566</CopyrightText>
-							<CopyrightText>Terms And Conditions</CopyrightText>
-							<CopyrightText>Anti-harassment Policy</CopyrightText>
-						</>
-					) : (
-						<>
-							<CopyrightText>
-								© 2023 AI+Web3 Convention, All Rights Reserved. ACN 668 836 566
-							</CopyrightText>
-							<CopyrightText>
-								Terms And Conditions | Anti-harassment Policy
-							</CopyrightText>
+							<CopyrightText>All Rights Reserved,ACN 668 836 566</CopyrightText>
 						</>
 					)}
+					{!isMobile && (
+						<CopyrightText>
+							© 2023 AI+Web3 Convention, All Rights Reserved. ACN 668 836 566
+						</CopyrightText>
+					)}
+					<CopyrightText>Terms And Conditions | Anti-harassment Policy</CopyrightText>
 				</CopyrightGrid>
 				<Grid item {...gridColumn}>
 					<EmptyBox />
