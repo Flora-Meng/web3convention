@@ -213,13 +213,7 @@ const PageTicket: React.FC = () => {
 						ticket.earlyBirdPrice && dayjs().isBefore(dayjs(ticket.earlyBirdEndDate));
 					const price = earlyBirdPriceValid ? ticket.earlyBirdPrice : ticket.price;
 					return (
-						<TicketGrid
-							// item
-							miniMobile={12}
-							laptop={5}
-							largeLaptop={2.9}
-							key={ticket._id}
-						>
+						<TicketGrid miniMobile={12} laptop={5} largeLaptop={2.9} key={ticket._id}>
 							<TicketTitleContainer>
 								<TicketTitle>{ticket.title}</TicketTitle>
 							</TicketTitleContainer>
