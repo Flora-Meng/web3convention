@@ -137,7 +137,7 @@ const agendaConfig = [
 	},
 	{
 		_id: '1-4',
-		title: 'Side Event',
+		title: 'Side Events',
 		columns: 1,
 		offset: 0
 	},
