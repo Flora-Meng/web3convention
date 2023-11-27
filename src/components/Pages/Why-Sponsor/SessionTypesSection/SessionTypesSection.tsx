@@ -5,6 +5,7 @@ import { color, devices } from '@/styles/variables';
 
 const Container = styled.div`
 	background-color: ${color.blackColor};
+	font-family: Arial;
 	padding: 24px;
 	width: 100%;
 	@media ${devices.largeLaptop} {
