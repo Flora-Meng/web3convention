@@ -1,19 +1,11 @@
-import CheckIcon from '@mui/icons-material/Check';
 import Grid from '@mui/material/Grid';
 import dayjs from 'dayjs';
-import { isString } from 'lodash';
 import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import {
-	activeNavBarTitleDecoration,
-	backdrop,
-	navBarTitleDecoration,
-	sectionSubtitle,
-	sectionTitle
-} from '@/styles/mixin';
-import { devices, sizes } from '@/styles/variables';
+import { backdrop, sectionSubtitle, sectionTitle } from '@/styles/mixin';
+import { color, devices, sizes } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
 const HomeTicketContainer = styled.div`
@@ -34,13 +26,6 @@ const Subtitle = styled.p`
 	${sectionSubtitle};
 `;
 
-const StyledLi = styled.li`
-	line-height: 2;
-	margin-left: 30px;
-	padding-left: 10px;
-	position: relative;
-`;
-
 const Backdrop = styled.div`
 	${backdrop};
 	left: 9vw;
@@ -49,87 +34,81 @@ const Backdrop = styled.div`
 	}
 `;
 
-const PriceContainer = styled.div`
+const TicketGrid = styled(Grid)`
+	border: solid 1px ${color.black};
+	border-radius: 2px;
+`;
+
+const TicketTitleContainer = styled.div`
+	align-items: center;
+	background-color: ${color.primaryColor};
 	display: flex;
-	flex-wrap: wrap;
-	@media ${devices.laptop} {
-		margin: 10px 6px;
-	}
+	justify-content: center;
+	padding-bottom: 12px;
+	padding-top: 12px;
+	width: 100%;
 `;
-
-const Price = styled.h3`
-	font-size: 40px;
-	margin: 0 50px 0 0;
-	position: relative;
-	@media ${devices.tablet} {
-		font-size: 40px;
-	}
-	@media ${devices.laptop} {
-		font-size: 44px;
-	}
+const TicketTitle = styled.h3`
+	color: ${color.black};
+	font-size: 22px;
+	font-weight: bold;
+	margin: 0 0;
 `;
-
-const PriceSup = styled.p`
-	font-size: 18px;
-	left: calc(100% + 8px);
-	margin: 0;
-	position: absolute;
-	top: 10px;
+const BookContainer = styled.div`
+	align-items: center;
+	border-bottom: dashed 1px ${color.black};
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 12px;
+	padding-bottom: 24px;
+	padding-top: 16px;
 `;
-
+const PriceContainer = styled.div`
+	align-items: end;
+	display: flex;
+	flex-direction: row;
+	gap: 4px;
+`;
+const Price = styled.p`
+	color: ${color.white};
+	font-size: 48px;
+	font-weight: bold;
+	line-height: 48px;
+	margin: 0 0;
+`;
 const PriceSub = styled.p`
-	font-size: 12px;
-	left: calc(100% + 8px);
-	margin: 0;
-	position: absolute;
-	top: 36px;
+	font-size: 16px;
+	margin: 0 0;
 `;
-
-const TicketTitle = styled.h2`
-	font-size: 19px;
-	margin: 12px 0 6px 0;
-	@media ${devices.laptop} {
-		font-size: 24px;
-	}
-`;
-
 const OriginalPrice = styled.p`
-	margin: 0;
-	text-decoration: line-through;
-`;
-
-const PriceFeatureContainer = styled.ul`
+	color: #666;
 	font-size: 16px;
-	list-style-type: none;
-	padding-left: 0;
+	text-decoration-line: line-through;
 `;
-
-const FeatureIconContainer = styled.div`
-	left: -16px;
-	position: absolute;
-	top: 4px;
+const BookBtn = styled(Link)`
+	background-color: ${color.primaryColor};
+	border-radius: 30px;
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: 10px;
+	padding: 16px 26px;
 `;
-
-const ImageContainer = styled.div`
-	height: 240px;
-	position: relative;
-	img {
-		object-fit: contain;
-	}
+const FeatureContainer = styled.div`
+	margin: 24px 0;
+	width: 100%;
 `;
-
-const StyledLink = styled(Link)`
-	display: inline-block;
-	font-size: 16px;
-	font-weight: 700;
-	margin: 8px 0;
-	text-transform: uppercase;
-	span {
-		${navBarTitleDecoration('calc(100% + 4px)', '50%', '-2px')};
-	}
-	&:hover span:before {
-		${activeNavBarTitleDecoration()}
-	}
+const FeatureItemContainer = styled.div<{ bgColor: string }>`
+	align-items: center;
+	background-color: ${props => props.bgColor || ''};
+	display: flex;
+	padding: 6px 14px;
+	width: 100%;
+`;
+const FeatureItemText = styled.p`
+	font-size: 14px;
+	line-height: 14px;
+	margin-left: 8px;
 `;
 
 const ticketConfig = [
@@ -162,11 +141,14 @@ const ticketConfig = [
 		earlyBirdEndDate: '2024-03-21T14:00:00.000Z',
 		thumbnailSrc: '/images/tickets/premium-admission.png',
 		features: [
-			<span>
-				Everything in General Admission <strong>PLUS</strong>
-			</span>,
-			'Access to the Premium After Party (open bar)',
-			'Access to Web3 After Party, Cyber Nightclub Party'
+			'2 day pass',
+			'Unique NFT Ticket',
+			'All keynote sessions General networking Industry meetups',
+			'Access to all networking lounges and meetup',
+			'Access to the Workshop Zone',
+			'Access to the event app to network with the community prior to the event',
+			'Access to all Industry Meetups',
+			'Access to Cyber Party'
 		]
 	},
 	{
@@ -180,17 +162,41 @@ const ticketConfig = [
 		earlyBirdEndDate: '2024-03-21T14:00:00.000Z',
 		features: [
 			'2 day pass',
+			'Unique NFT Ticket',
+			'All keynote sessions General networking Industry meetups',
+			'Access to all networking lounges and meetup',
+			'Access to the Workshop Zone',
+			'Access to the event app to network with the community prior to the event',
+			'Access to all Industry Meetups',
+			'Access to Cyber Party',
 			'Exclusive networking opportunities',
-			'Whale VIP Party Pass',
-			<span>
-				All inclusions as per General Admission <strong>PLUS</strong>
-			</span>,
+			'Australian AI + Web3 Charity Dinner Pass',
 			'Fast track entry to the event',
 			'Access to the VIP Lounge - Sponsored',
-			"Access to Startup Pitch House Exclusive Networking with whales, business leaders, influencers, VC's and innovators",
+			'Access to Startup Pitch House',
 			'Coffee & Tea provided',
-			'Catered Lunch and drinks',
-			'Whale Private Room / Area'
+			'Catered lunch and drinks',
+			"Exclusive networking with whales, business leaders, influencers, VC's and innovators"
+		]
+	},
+	{
+		_id: '4',
+		title: 'Student Pass',
+		price: 98,
+		priceIncGST: false,
+		earlyBirdPrice: 49,
+		earlyBirdPriceIncGST: false,
+		thumbnailSrc: '/images/tickets/vip.png',
+		earlyBirdEndDate: '2024-03-21T14:00:00.000Z',
+		features: [
+			'2 day pass',
+			'Unique NFT Ticket',
+			'All keynote sessions General networking Industry meetups',
+			'Access to all networking lounges and meetup',
+			'Access to the Workshop Zone',
+			'Access to the event app to network with the community prior to the event',
+			'Access to all Industry Meetups',
+			'Access to Cyber Party'
 		]
 	}
 ];
@@ -201,57 +207,45 @@ const PageTicket: React.FC = () => {
 			<Subtitle>AI + Web3 Convention 2024</Subtitle>
 			<Title>Are you with us? Book tickets</Title>
 			<Backdrop>Tickets</Backdrop>
-			<Grid container spacing={6}>
+			<Grid container gap="8px">
 				{ticketConfig.map(ticket => {
 					const earlyBirdPriceValid =
 						ticket.earlyBirdPrice && dayjs().isBefore(dayjs(ticket.earlyBirdEndDate));
 					const price = earlyBirdPriceValid ? ticket.earlyBirdPrice : ticket.price;
-					const incGST = earlyBirdPriceValid
-						? ticket.earlyBirdPriceIncGST
-						: ticket.priceIncGST;
 					return (
-						<Grid item miniMobile={12} laptop={6} largeLaptop={4} key={ticket._id}>
-							<ImageContainer>
-								<Image
-									loader={imageLoader}
-									unoptimized
-									src={ticket.thumbnailSrc}
-									alt={ticket.title}
-									fill
-								/>
-							</ImageContainer>
-							<PriceContainer>
-								<Price>
-									{price}
-									<PriceSup>$</PriceSup>
-									{!incGST && <PriceSub>+GST</PriceSub>}
-								</Price>
-								<div className="flex flex-col">
-									<TicketTitle>{ticket.title}</TicketTitle>
-									{earlyBirdPriceValid && (
-										<OriginalPrice>
-											${ticket.price}
-											{!ticket.priceIncGST ? '+GST' : ''}
-										</OriginalPrice>
-									)}
-								</div>
-							</PriceContainer>
-							<PriceFeatureContainer>
-								{ticket.features.map(feature => (
-									<StyledLi key={feature.toString()}>
-										<FeatureIconContainer>
-											<CheckIcon fontSize="small" />
-										</FeatureIconContainer>
-										{isString(feature) ? <span>{feature}</span> : feature}
-									</StyledLi>
+						<TicketGrid miniMobile={12} laptop={5} largeLaptop={2.9} key={ticket._id}>
+							<TicketTitleContainer>
+								<TicketTitle>{ticket.title}</TicketTitle>
+							</TicketTitleContainer>
+							<BookContainer>
+								<PriceContainer>
+									<PriceSub>$</PriceSub>
+									<Price>{price}</Price>
+									<PriceSub>+GST</PriceSub>
+								</PriceContainer>
+								<OriginalPrice>${ticket.price}+GST</OriginalPrice>
+								<BookBtn href="https://w3con.eventsair.com/web3convention/registration/Site/Register">
+									BOOK NOW
+								</BookBtn>
+							</BookContainer>
+							<FeatureContainer>
+								{ticket.features.map((feature, index) => (
+									<FeatureItemContainer
+										bgColor={index % 2 === 0 ? '#f4f4f4' : '#fff'}
+									>
+										<Image
+											src="/images/icons/price-feature.svg"
+											alt="price-feature"
+											loader={imageLoader}
+											unoptimized
+											width={12}
+											height={12}
+										/>
+										<FeatureItemText>{feature}</FeatureItemText>
+									</FeatureItemContainer>
 								))}
-							</PriceFeatureContainer>
-							<div className="text-center">
-								<StyledLink href="https://w3con.eventsair.com/web3convention/registration/Site/Register">
-									<span>BOOK TICKETS</span>
-								</StyledLink>
-							</div>
-						</Grid>
+							</FeatureContainer>
+						</TicketGrid>
 					);
 				})}
 			</Grid>
