@@ -28,6 +28,7 @@ const ContainerGrid = styled(Grid)`
 		max-width: 1440px;
 		gap: 130px;
 	}
+	gap: 50px;
 	justify-content: space-between;
 	width: calc(100vw - 48px);
 `;
