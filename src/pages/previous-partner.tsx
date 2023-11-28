@@ -13,10 +13,18 @@ const Cover = styled.div`
 	background-position: center;
 	background-size: cover;
 	height: 478px;
+	position: relative;
 	@media ${devices.mobile} {
 		background-image: url('/images/demo/previousPartnerPage/partner-cover.png');
 		height: 360px;
 	}
+`;
+
+const HeaderContainer = styled.div`
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 2;
 `;
 
 const PreviousPartnerPage = () => {
@@ -32,8 +40,10 @@ const PreviousPartnerPage = () => {
 		<>
 			<PageHead meta={meta} />
 			<Cover>
-				<Header />
-				<PageCoverTitle coverText={coverText} translateValue="translate(0, -200%)" />
+				<HeaderContainer>
+					<Header />
+				</HeaderContainer>
+				<PageCoverTitle coverText={coverText} />
 			</Cover>
 			<PreviousPartnerSection />
 			<Footer />

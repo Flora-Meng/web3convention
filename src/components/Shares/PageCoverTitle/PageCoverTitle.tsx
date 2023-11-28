@@ -19,17 +19,14 @@ interface PageCoverTitleProps {
 }
 
 const Container = styled.div<PageCoverTitleProps>`
+	align-items: center;
 	color: ${whiteColor};
+	display: flex;
+	height: inherit;
 	margin: 0 auto;
 	max-width: 1440px;
 	position: relative;
-	top: 300px;
-	transform: ${props => props.translateValue || 'translate(0, -95%)'};
 	width: calc(100vw - 40px);
-	@media ${devices.mobile} {
-		top: 50%;
-	}
-
 	@media ${devices.laptop} {
 		width: calc(100vw - 200px);
 	}
@@ -59,7 +56,7 @@ const CoverTitle = styled(Title)`
 	@media ${devices.tablet} {
 		font-size: 60px;
 	}
-	@media ${devices.largeLaptop} {
+	@media ${devices.desktop} {
 		font-size: 70px;
 	}
 `;
@@ -69,11 +66,15 @@ const PageCoverTitle: React.FC<PageCoverTitleProps> = props => {
 
 	return (
 		<Container translateValue={translateValue} coverText={coverText}>
-			{coverText.subtitle && <CoverSubtitle isCurrent>{coverText.subtitle}</CoverSubtitle>}
-			{coverText.additionalSubtitle && (
-				<CoverSubtitle isCurrent>{coverText.additionalSubtitle}</CoverSubtitle>
-			)}
-			<CoverTitle isCurrent>{coverText.title}</CoverTitle>
+			<div>
+				{coverText.subtitle && (
+					<CoverSubtitle isCurrent>{coverText.subtitle}</CoverSubtitle>
+				)}
+				{coverText.additionalSubtitle && (
+					<CoverSubtitle isCurrent>{coverText.additionalSubtitle}</CoverSubtitle>
+				)}
+				<CoverTitle isCurrent>{coverText.title}</CoverTitle>
+			</div>
 		</Container>
 	);
 };
