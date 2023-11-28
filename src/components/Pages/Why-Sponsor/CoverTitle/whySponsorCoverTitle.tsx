@@ -12,27 +12,23 @@ import { color, devices } from '@/styles/variables';
 const { whiteColor, primaryColor } = color;
 
 const Container = styled.div`
+	padding: 24px;
+	@media ${devices.largeLaptop} {
+		height: 800px;
+	}
+	width: 100%;
+`;
+const MainContent = styled.div`
 	color: ${whiteColor};
 	margin: 0 auto;
-	max-width: 1600px;
-	position: relative;
-	top: 50%;
-	@media ${devices.miniMobile} {
-		transform: translate(0, calc(-50% - 40px));
-		width: calc(100vw - 100px);
-	}
+	max-width: 700px;
 	@media ${devices.tablet} {
-		transform: translate(0, calc(-50% - 30px));
+		padding: 0 40px;
 	}
-	@media ${devices.laptop} {
-		transform: translate(0, calc(-50% - 70px));
-		width: calc(100vw - 200px);
-	}
-	@media ${devices.desktop} {
-		transform: translate(0, calc(-50% - 90px));
+	@media ${devices.largeLaptop} {
+		max-width: 1440px;
 	}
 `;
-
 const CoverSubtitle = styled(Subtitle)`
 	color: ${primaryColor};
 	@media ${devices.miniMobile} {
@@ -48,60 +44,42 @@ const CoverSubtitle = styled(Subtitle)`
 		font-size: 17px;
 	}
 `;
-
 const CoverTitle = styled(Title)`
 	white-space: pre-wrap;
 	@media ${devices.miniMobile} {
-		margin-bottom: 20px;
-		font-size: 30px;
-	}
-	@media ${devices.tablet} {
 		font-size: 36px;
 	}
 	@media ${devices.laptop} {
-		font-size: 50px;
-		margin-bottom: 24px;
-	}
-	@media ${devices.desktop} {
-		font-size: 75px;
+		font-size: 55px;
 	}
 `;
-
 const CoverDescription = styled(Description)`
 	@media ${devices.miniMobile} {
-		font-size: 14px;
+		line-height: 1.8;
 	}
-	@media ${devices.tablet} {
-		max-width: 85%;
-		font-size: 16px;
+	@media ${devices.mobile} {
+		font-size: 14px;
+		max-width: 80%;
+		line-height: 1.33;
 	}
 	@media ${devices.laptop} {
-		max-width: 70%;
-	}
-	@media ${devices.desktop} {
-		font-size: 17px;
+		font-size: 18px;
 	}
 `;
-
-const CoverAdditionalDescription = styled(Description)`
+const CoverAdditionalDescription = styled.div`
 	color: ${primaryColor};
 	line-height: 1;
-	margin-top: 5px;
+	margin-top: 10px;
 	@media ${devices.miniMobile} {
 		font-size: 10px;
 	}
 	@media ${devices.tablet} {
-		max-width: 85%;
 		font-size: 12px;
 		line-height: 1.33;
 	}
 	@media ${devices.desktop} {
 		font-size: 14px;
 	}
-`;
-
-const ButtonWrapper = styled.div`
-	margin-top: 20px;
 `;
 
 const sponsorButtonConfig = {
@@ -112,15 +90,13 @@ const sponsorButtonConfig = {
 const StageCoverTitle = () => {
 	return (
 		<Container>
-			<CoverSubtitle isCurrent>{coverText.subtitle}</CoverSubtitle>
-			<CoverTitle isCurrent>{coverText.title}</CoverTitle>
-			<CoverDescription isCurrent>{coverText.text}</CoverDescription>
-			<ButtonWrapper>
+			<MainContent>
+				<CoverSubtitle isCurrent>{coverText.subtitle}</CoverSubtitle>
+				<CoverTitle isCurrent>{coverText.title}</CoverTitle>
+				<CoverDescription isCurrent>{coverText.text}</CoverDescription>
 				<ThemeButton href={sponsorButtonConfig.url}>{sponsorButtonConfig.text}</ThemeButton>
-			</ButtonWrapper>
-			<CoverAdditionalDescription isCurrent>
-				{coverText.additionalText}
-			</CoverAdditionalDescription>
+				<CoverAdditionalDescription>{coverText.additionalText}</CoverAdditionalDescription>
+			</MainContent>
 		</Container>
 	);
 };
