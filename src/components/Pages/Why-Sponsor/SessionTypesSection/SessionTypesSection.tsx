@@ -8,18 +8,15 @@ const Container = styled.div`
 	font-family: Arial;
 	padding: 24px;
 	width: 100%;
-	@media ${devices.largeLaptop} {
-		height: 800px;
-	}
 `;
 const ContentWrapper = styled.div`
 	margin: 0 auto;
-	max-width: 700px;
+	max-width: 1440px;
 	@media ${devices.tablet} {
 		padding: 0 40px;
 	}
 	@media ${devices.largeLaptop} {
-		max-width: 1440px;
+		margin-bottom: 190px;
 	}
 `;
 const Title = styled.h2`
@@ -28,7 +25,7 @@ const Title = styled.h2`
 	font-weight: bold;
 `;
 const StyledGridContainer = styled.div`
-	@media ${devices.largeLaptop} {
+	@media ${devices.laptop} {
 		display: grid;
 		row-gap: 48px;
 		grid-template-columns: repeat(2, 1fr);
