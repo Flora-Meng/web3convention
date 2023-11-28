@@ -13,13 +13,16 @@ const Cover = styled.div`
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+
 	@media ${devices.miniMobile} {
 		height: 470px;
 	}
+
 	@media ${devices.desktop} {
 		height: 500px;
 	}
 `;
+
 const WhySponsorPage = () => {
 	const meta = {
 		description:
