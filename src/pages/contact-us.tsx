@@ -1,23 +1,21 @@
 import styled from 'styled-components';
 
-import AgendaContent from '@/components/Pages/Agenda/AgendaContent';
+import ContactTable from '@/components/Pages/ContactUs/ContactTable';
 import PageCoverTitle from '@/components/Shares/PageCoverTitle';
-import coverText from '@/components/Shares/PageCoverTitle/agendaCoverText.json';
+import coverText from '@/components/Shares/PageCoverTitle/ContactUsCoverText.json';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 import PageHead from '@/layouts/PageHead';
 import { devices } from '@/styles/variables';
 
 const Cover = styled.div`
-	background-image: url('/images/demo/venuePage/coverMobile.jpg');
+	background-image: url('/images/demo/contactUsPage/cover.png');
 	background-position: center;
 	background-size: cover;
 	height: 478px;
 	position: relative;
 	@media ${devices.mobile} {
-		background-image: url('/images/demo/venuePage/newCover.jpg');
 		height: 360px;
-		background-size: auto;
 	}
 `;
 
@@ -28,9 +26,9 @@ const HeaderContainer = styled.div`
 	z-index: 2;
 `;
 
-const AgendaPage = () => {
+const ContactUsPage = () => {
 	const meta = {
-		title: 'AI + Web3 Convention 2024 | Agenda'
+		title: 'AI + Web3 Convention 2024 | Contact Us'
 	};
 
 	return (
@@ -42,10 +40,10 @@ const AgendaPage = () => {
 				</HeaderContainer>
 				<PageCoverTitle coverText={coverText} />
 			</Cover>
-			<AgendaContent />
+			<ContactTable />
 			<Footer />
 		</>
 	);
 };
 
-export default AgendaPage;
+export default ContactUsPage;
