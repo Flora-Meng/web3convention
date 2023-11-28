@@ -165,6 +165,7 @@ const ContactTable = () => {
 					alt="success-icon"
 					width={444}
 					height={162}
+					unoptimized
 				/>
 				<Snackbar
 					anchorOrigin={{ vertical: 'top', horizontal: 'center' }}

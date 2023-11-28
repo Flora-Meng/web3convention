@@ -240,6 +240,7 @@ const PageTicket: React.FC = () => {
 							<FeatureContainer>
 								{ticket.features.map((feature, index) => (
 									<FeatureItemContainer
+										key={feature}
 										bgColor={index % 2 === 0 ? '#f4f4f4' : '#fff'}
 									>
 										<Image

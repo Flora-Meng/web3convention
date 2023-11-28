@@ -206,7 +206,14 @@ const FooterContent = () => {
 					<Title>Scan to connect</Title>
 					<Grid container>
 						{qrCodes.map(qrCode => (
-							<QRcodeGridItem item mobile={3} tablet={3} laptop={3} largeLaptop={3}>
+							<QRcodeGridItem
+								item
+								mobile={3}
+								tablet={3}
+								laptop={3}
+								largeLaptop={3}
+								key={qrCode._id}
+							>
 								<Link href={qrCode.link} target="_blank">
 									<Image
 										loader={imageLoader}
@@ -214,6 +221,7 @@ const FooterContent = () => {
 										alt={qrCode.alt}
 										width={86}
 										height={86}
+										unoptimized
 									/>
 								</Link>
 								{qrCode.alt}

@@ -153,7 +153,7 @@ const HomeSponsor: React.FC = () => {
 				<Backdrop>Partners</Backdrop>
 				<SponsorGroup>
 					{sponsorList.map((sponsorGroup, index) => (
-						<SponsorGroup>
+						<SponsorGroup key={sponsorGroup.groupId}>
 							<StyledTypography>{sponsorGroup.groupName}</StyledTypography>
 							<SponsorContainer className={`group-${index}`}>
 								{sponsorGroup.sponsor.map(sponsor => (
