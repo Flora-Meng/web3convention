@@ -10,8 +10,8 @@ const { blackColor, primaryColor } = color;
 
 const ConventionEventContainer = styled.div`
 	background-color: ${blackColor};
-	// background-image: url('/images/modal-background.png');
-	background-position: center left;
+	background-image: url('/images/dotsBackground.png');
+	background-position: bottom left;
 	background-repeat: no-repeat;
 `;
 const MoreEventsContainer = styled.div`
@@ -77,6 +77,17 @@ const StyledItem = styled.div`
 `;
 
 const ConventionEvents: React.FC = () => {
+	const [conventionEvents, setConventionEvents] = useState<IMeetup[]>([]);
+
+	const fetchData = async () => {
+		const response = await fetchConventionEvents();
+		setConventionEvents(response.data);
+	};
+
+	useEffect(() => {
+		fetchData();
+	}, []);
+
 	const [featuredEvents, setFeaturedEvents] = useState<IMeetup[]>([]);
 	const fetchFeaturedData = async () => {
 		const response = await fetchFeaturedConventionEvents();
@@ -93,7 +104,6 @@ const ConventionEvents: React.FC = () => {
 					<Title>{'< Melbourne, April 2024 / >'}</Title>
 					<SectionTitle>Featured Events</SectionTitle>
 				</WebConvention>
-
 				<StyledContainer>
 					{featuredEvents?.slice(0, 3).map(featuredEventInfo => (
 						<StyledItem key={featuredEventInfo._id}>
@@ -101,7 +111,23 @@ const ConventionEvents: React.FC = () => {
 						</StyledItem>
 					))}
 				</StyledContainer>
+				<MoreEventsContainer>
+					<WebConvention>
+						<Title>{'< Melbourne, April 2024 / >'}</Title>
+						<SectionTitle>More Events</SectionTitle>
+					</WebConvention>
+					<StyledContainer>
+						{conventionEvents?.map(eventInfo => (
+							<StyledItem key={eventInfo._id}>
+								<AiEventCard eventInfo={eventInfo} />
+							</StyledItem>
+						))}
+					</StyledContainer>
+				</MoreEventsContainer>
 			</Container>
+			<StyledLink href="/filtered-events">
+				<StyledButton type="button">SEE MORE</StyledButton>
+			</StyledLink>
 		</ConventionEventContainer>
 	);
 };
