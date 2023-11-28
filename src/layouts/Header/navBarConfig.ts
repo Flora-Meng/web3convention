@@ -29,6 +29,10 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 		{
 			title: 'Venue',
 			path: '/venue'
+		},
+		{
+			title: 'Contact Us',
+			path: '/contact-us'
 		}
 	],
 	[ENavItem.EVENTS]: [
