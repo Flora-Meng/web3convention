@@ -21,10 +21,6 @@ export const navItemsConfig: { [K in ENavItem]: INavItem } = {
 	[ENavItem.PARTNER]: {
 		title: 'partner',
 		path: '/comingSoon'
-	},
-	[ENavItem.SPONSOR]: {
-		title: 'sponsor',
-		path: '/sponsor'
 	}
 };
 
