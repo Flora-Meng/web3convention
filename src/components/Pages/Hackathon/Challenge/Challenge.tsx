@@ -165,29 +165,6 @@ const Media = styled.div`
 	}
 `;
 
-const GridItem = styled.div`
-	// padding: 10px;
-	// text-align: center;
-`;
-
-const GridContainerOrg = styled.div`
-	display: grid;
-	gap: 10px;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(2, 1fr);
-	width: 100%;
-
-	@media ${devices.largeLaptop} {
-		grid-template-columns: repeat(4, 1fr);
-		grid-template-rows: repeat(1, 1fr);
-	}
-
-	@media (max-width: 768px) {
-		grid-template-columns: repeat(1, 1fr);
-		grid-template-rows: repeat(4, 1fr);
-	}
-`;
-
 const GridContainerStr = styled.div`
 	display: grid;
 	gap: 10px;
@@ -209,7 +186,6 @@ const GridContainerStr = styled.div`
 const GridItemOrg = styled.div`
 	padding: 10px;
 	position: relative;
-	// text-align: center;
 `;
 const Challenge = () => {
 	return (

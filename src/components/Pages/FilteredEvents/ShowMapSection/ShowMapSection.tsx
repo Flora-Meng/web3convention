@@ -3,7 +3,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 
 import ShowOnMapModal from './ShowOnMapModal';
-import { color, devices } from '@/styles/variables';
+import { color } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
 const { primaryColor } = color;

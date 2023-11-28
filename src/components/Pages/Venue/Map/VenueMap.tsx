@@ -27,6 +27,7 @@ const GoogleMap: React.FC<MapProps> = props => {
 			<div ref={ref} style={{ height: '60vh', width: '100%' }} />
 			{React.Children.map(children, child => {
 				if (React.isValidElement(child)) {
+					// eslint-disable-next-line @typescript-eslint/no-explicit-any
 					return React.cloneElement<google.maps.Map | any>(child, { map });
 				}
 				return null;

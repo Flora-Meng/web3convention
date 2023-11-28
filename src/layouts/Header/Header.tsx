@@ -7,9 +7,7 @@ import DropDownMenu from './components/DropDownMenu';
 import DropDownMenuButton from './components/DropDownMenuButton';
 import NavMenu from './components/NavMenu';
 import NavRightSection from './components/NavRightSection';
-import { color, devices, sizes } from '@/styles/variables';
-
-const { whiteColor } = color;
+import { devices } from '@/styles/variables';
 
 const HeaderContainer = styled.div<{ isScrolled: boolean }>`
 	align-items: center;

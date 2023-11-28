@@ -7,7 +7,7 @@ import HomeHighLights from '@/components/Pages/Home/HomeHighLights/HomeHighLight
 // import HomeGallery from '@/components/Pages/Home/HomeGallery';
 import HomePosts from '@/components/Pages/Home/HomePosts';
 import HomeSponsor from '@/components/Pages/Home/HomeSponsor';
-import HomeSubscription from '@/components/Pages/Home/HomeSubscription';
+// import HomeSubscription from '@/components/Pages/Home/HomeSubscription';
 import PageBanner from '@/components/Shares/PageBanner';
 import bannerInfo from '@/components/Shares/PageBanner/homeBannerInfo.json';
 import PageParallax from '@/components/Shares/PageParallax';
