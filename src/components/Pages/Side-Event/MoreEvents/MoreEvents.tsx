@@ -60,6 +60,7 @@ const StyledButton = styled.button`
 	border: solid 1px ${primaryColor};
 	border-radius: 30px;
 	color: ${primaryColor};
+	cursor: pointer;
 	height: 52px;
 	width: 200px;
 `;
