@@ -1,6 +1,4 @@
-import FacebookIcon from '@mui/icons-material/Facebook';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
+/* eslint-disable @next/next/no-img-element */
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -341,10 +339,6 @@ const SpeakerIconWrapper = styled.div`
 `;
 const SpeakerIconPlaceholder = styled.div`
 	width: 90px;
-`;
-
-const ModalSpeakerIconPlaceholder = styled.div`
-	width: 0px;
 `;
 
 const JudgeTeam: React.FC = () => {

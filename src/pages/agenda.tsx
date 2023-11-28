@@ -13,11 +13,19 @@ const Cover = styled.div`
 	background-position: center;
 	background-size: cover;
 	height: 478px;
+	position: relative;
 	@media ${devices.mobile} {
 		background-image: url('/images/demo/venuePage/newCover.jpg');
 		height: 360px;
 		background-size: auto;
 	}
+`;
+
+const HeaderContainer = styled.div`
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 2;
 `;
 
 const AgendaPage = () => {
@@ -33,8 +41,10 @@ const AgendaPage = () => {
 		<>
 			<PageHead meta={meta} />
 			<Cover>
-				<Header />
-				<PageCoverTitle coverText={coverText} translateValue="translate(0, -190%)" />
+				<HeaderContainer>
+					<Header />
+				</HeaderContainer>
+				<PageCoverTitle coverText={coverText} />
 			</Cover>
 			<AgendaContent />
 			<Footer />

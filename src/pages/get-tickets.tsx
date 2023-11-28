@@ -14,12 +14,20 @@ const Cover = styled.div`
 	background-position: center;
 	background-size: cover;
 	height: 50vh;
+	position: relative;
 `;
 
 const BackgroundBanner = styled.div`
 	background-color: #f8f6f6;
 	display: grid;
 	max-height: 100%;
+`;
+
+const HeaderContainer = styled.div`
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 2;
 `;
 
 const GetTicketsPage = () => {
@@ -35,7 +43,9 @@ const GetTicketsPage = () => {
 			<PageHead meta={meta} />
 			<BackgroundBanner>
 				<Cover>
-					<Header />
+					<HeaderContainer>
+						<Header />
+					</HeaderContainer>
 					<PageCoverTitle coverText={coverText} />
 				</Cover>
 				<TicketIntroCards />

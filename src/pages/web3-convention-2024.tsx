@@ -14,11 +14,19 @@ const Cover = styled.div`
 	background-size: cover;
 	height: 478px;
 	letter-spacing: 0.78px;
+	position: relative;
 	@media ${devices.mobile} {
 		background-image: url('/images/background/web3Convention2024BG.png');
 		height: 360px;
 		background-size: auto;
 	}
+`;
+
+const HeaderContainer = styled.div`
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 2;
 `;
 
 const Web3Convention2024Page = () => {
@@ -33,7 +41,9 @@ const Web3Convention2024Page = () => {
 		<>
 			<PageHead meta={meta} />
 			<Cover>
-				<Header />
+				<HeaderContainer>
+					<Header />
+				</HeaderContainer>
 				<PageCoverTitle coverText={coverText} />
 			</Cover>
 			<Footer />

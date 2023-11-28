@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Tooltip, { TooltipProps, tooltipClasses } from '@mui/material/Tooltip';
@@ -8,7 +9,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import { color, devices } from '@/styles/variables';
+import { color } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
 const dateIcon = '/images/icons/date.svg';

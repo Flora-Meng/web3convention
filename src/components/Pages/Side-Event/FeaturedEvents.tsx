@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import EventCard from '@/components/Shares/EventCard';
 import { fetchFeaturedEvents } from '@/services/meetup';
-import { backdrop, sectionSubtitle, sectionTitle } from '@/styles/mixin';
+import { sectionSubtitle, sectionTitle } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
 
 const { blackColor, whiteColor } = color;

@@ -19,10 +19,25 @@ const Cover = styled.div`
 	background-position: center;
 	background-size: cover;
 	height: 478px;
+	position: relative;
 	@media ${devices.mobile} {
 		background-image: url('/images/demo/venuePage/newCover.jpg');
 		height: 360px;
 		background-size: auto;
+	}
+`;
+
+const HeaderContainer = styled.div`
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+`;
+
+const TitleContainer = styled.div`
+	height: inherit;
+	@media ${devices.mobile} {
+		padding-top: 40px;
 	}
 `;
 
@@ -43,8 +58,12 @@ const VenuePage = () => {
 		<>
 			<PageHead meta={meta} />
 			<Cover>
-				<Header />
-				<PageCoverTitle coverText={coverText} />
+				<HeaderContainer>
+					<Header />
+				</HeaderContainer>
+				<TitleContainer>
+					<PageCoverTitle coverText={coverText} />
+				</TitleContainer>
 			</Cover>
 			<VenueIntroCards />
 			<PageBanner bannerInfo={bannerInfo} buttonConfig={buttonConfig} />

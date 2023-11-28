@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';

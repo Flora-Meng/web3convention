@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Card from '@mui/material/Card';
 import dayjs from 'dayjs';
 import timezone from 'dayjs/plugin/timezone';

@@ -78,7 +78,7 @@ const HomePosts: React.FC = () => {
 			<Title>Side Events</Title>
 			<Backdrop>Side</Backdrop>
 			<Grid container spacing={1}>
-				{postList.map((post, index) => {
+				{postList.map(post => {
 					const postLink = '/comingSoon';
 					return (
 						<Grid
