@@ -10,7 +10,7 @@ import imageLoader from '@/utils/loader';
 
 const HomeTicketContainer = styled.div`
 	max-width: ${`${sizes.largeLaptop}px`};
-	padding: 50px 15px;
+	padding: 80px 15px;
 	position: relative;
 	@media ${devices.laptop} {
 		margin: 0 auto;
@@ -19,18 +19,31 @@ const HomeTicketContainer = styled.div`
 
 const Title = styled.h2`
 	${sectionTitle};
+	margin-bottom: 32px;
 	max-width: 360px;
 `;
 
 const Subtitle = styled.p`
 	${sectionSubtitle};
 `;
+const Highlight = styled.p`
+	background-color: #f66f52;
+	border-radius: 2px;
+	color: ${color.whiteColor};
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 32px;
+	padding: 5px 16px;
+	width: fit-content;
+`;
 
 const Backdrop = styled.div`
 	${backdrop};
-	left: 9vw;
+	left: 5vw;
+	z-index: -1;
 	@media ${devices.mobile} {
-		left: 5vw;
+		top: -32px;
+		left: 2vw;
 	}
 `;
 
@@ -122,38 +135,36 @@ const ticketConfig = [
 		earlyBirdEndDate: '2024-03-21T14:00:00.000Z',
 		thumbnailSrc: '/images/tickets/general-admission.png',
 		features: [
-			'2 day pass',
-			'Unique NFT Ticket',
-			'All keynote sessions General networking Industry meetups',
-			'Access to all networking lounges and meetup',
-			'Access to the Workshop Zone',
+			'2-day pass',
+			'All keynote sessions',
+			'General networking',
 			'Access to the event app to network with the community prior to the event',
-			'Access to all Industry Meetups'
+			'Access to all side events',
+			'Access to Community House'
 		]
 	},
 	{
 		_id: '2',
-		title: 'Premium Admission',
+		title: 'Premium GA',
 		price: 268,
 		priceIncGST: true,
-		earlyBirdPrice: 134,
+		earlyBirdPrice: 135,
 		earlyBirdPriceIncGST: false,
 		earlyBirdEndDate: '2024-03-21T14:00:00.000Z',
 		thumbnailSrc: '/images/tickets/premium-admission.png',
 		features: [
-			'2 day pass',
-			'Unique NFT Ticket',
-			'All keynote sessions General networking Industry meetups',
-			'Access to all networking lounges and meetup',
-			'Access to the Workshop Zone',
+			'2-day pass',
+			'All keynote sessions',
+			'General networking',
 			'Access to the event app to network with the community prior to the event',
-			'Access to all Industry Meetups',
+			'Access to all side events',
+			'Access to Community House',
 			'Access to Cyber Party'
 		]
 	},
 	{
 		_id: '3',
-		title: 'VIP WHALE PASS',
+		title: 'VIP/Whale Pass',
 		price: 2585,
 		priceIncGST: false,
 		earlyBirdPrice: 1295,
@@ -161,22 +172,20 @@ const ticketConfig = [
 		thumbnailSrc: '/images/tickets/vip.png',
 		earlyBirdEndDate: '2024-03-21T14:00:00.000Z',
 		features: [
-			'2 day pass',
-			'Unique NFT Ticket',
-			'All keynote sessions General networking Industry meetups',
-			'Access to all networking lounges and meetup',
-			'Access to the Workshop Zone',
+			'2-day pass',
+			'All keynote sessions',
+			'General networking',
 			'Access to the event app to network with the community prior to the event',
-			'Access to all Industry Meetups',
+			'Access to all side events',
+			'Access to Community House',
 			'Access to Cyber Party',
-			'Exclusive networking opportunities',
 			'Australian AI + Web3 Charity Dinner Pass',
 			'Fast track entry to the event',
 			'Access to the VIP Lounge - Sponsored',
 			'Access to Startup Pitch House',
+			"Exclusive networking with whales, business leaders, influencers, VC's and innovators",
 			'Coffee & Tea provided',
-			'Catered lunch and drinks',
-			"Exclusive networking with whales, business leaders, influencers, VC's and innovators"
+			'Catered lunch and drinks'
 		]
 	},
 	{
@@ -189,13 +198,12 @@ const ticketConfig = [
 		thumbnailSrc: '/images/tickets/vip.png',
 		earlyBirdEndDate: '2024-03-21T14:00:00.000Z',
 		features: [
-			'2 day pass',
-			'Unique NFT Ticket',
-			'All keynote sessions General networking Industry meetups',
-			'Access to all networking lounges and meetup',
-			'Access to the Workshop Zone',
+			'2-day pass',
+			'All keynote sessions',
+			'General networking',
 			'Access to the event app to network with the community prior to the event',
-			'Access to all Industry Meetups',
+			'Access to all side events',
+			'Access to Community House',
 			'Access to Cyber Party'
 		]
 	}
@@ -205,7 +213,8 @@ const PageTicket: React.FC = () => {
 	return (
 		<HomeTicketContainer>
 			<Subtitle>AI + Web3 Convention 2024</Subtitle>
-			<Title>Are you with us? Book tickets</Title>
+			<Title>Are You with Us? Book Tickets</Title>
+			<Highlight>50% discount until 31 December, 2023, Book your tickets now.</Highlight>
 			<Backdrop>Tickets</Backdrop>
 			<Grid container gap="8px">
 				{ticketConfig.map(ticket => {
@@ -219,7 +228,7 @@ const PageTicket: React.FC = () => {
 							</TicketTitleContainer>
 							<BookContainer>
 								<PriceContainer>
-									<PriceSub>$</PriceSub>
+									<PriceSub>AUD</PriceSub>
 									<Price>{price}</Price>
 									<PriceSub>+GST</PriceSub>
 								</PriceContainer>

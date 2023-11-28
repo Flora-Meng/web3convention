@@ -92,13 +92,13 @@ const CopyRight: React.FC = () => {
 				<CopyrightGrid item {...gridColumn}>
 					{isMobile && (
 						<>
-							<CopyrightText>© 2023 AI+Web3 Convention</CopyrightText>
+							<CopyrightText>© 2023 AI + Web3 Convention</CopyrightText>
 							<CopyrightText>All Rights Reserved,ACN 668 836 566</CopyrightText>
 						</>
 					)}
 					{!isMobile && (
 						<CopyrightText>
-							© 2023 AI+Web3 Convention, All Rights Reserved. ACN 668 836 566
+							© 2023 AI + Web3 Convention, All Rights Reserved. ACN 668 836 566
 						</CopyrightText>
 					)}
 					<CopyrightText>Terms And Conditions | Anti-harassment Policy</CopyrightText>
