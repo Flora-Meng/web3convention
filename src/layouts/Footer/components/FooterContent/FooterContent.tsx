@@ -202,7 +202,7 @@ const FooterContent = () => {
 					<ContentText>Partnership: business@web3convention.com</ContentText>
 				</Grid>
 				<Grid item mobile={12} tablet={6} laptop={6} largeLaptop={1.5}>
-					<Title>Convention Highlights</Title>
+					<Title>Our Events</Title>
 					<div className="flex flex-col">
 						<StyledLink href={eventLink}>Charity Dinner</StyledLink>
 						<StyledLink href={eventLink}>Startup Competition</StyledLink>
@@ -232,7 +232,6 @@ const FooterContent = () => {
 					</div>
 				</Grid>
 				<Grid item mobile={12} tablet={6} laptop={4} largeLaptop={2.4}>
-					<Title>Scan to connect</Title>
 					<Grid container spacing={3}>
 						{qrCodes.map(qrCode => (
 							<QRcodeGridItem

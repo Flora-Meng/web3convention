@@ -87,13 +87,14 @@ const ComingSoon: React.FC = () => {
 				</DropDownButton>
 			</Header>
 			<Content className="flex flex-col justify-center flex-1">
-				<Subtitle>Melbourne, May 2024</Subtitle>
+				<Subtitle>Brisbane, 18-19 May, 2024</Subtitle>
 				<Title>Opening soon</Title>
 				<Countdown
 					NumberFontSizeConfig={{
 						[EDeviceSize.miniMobile]: 40,
 						[EDeviceSize.mobile]: 50
 					}}
+					countdownDate="2024-05-17T14:00:00.000Z"
 				/>
 			</Content>
 			<ComingSoonModal open={open} onClose={onClose} />
