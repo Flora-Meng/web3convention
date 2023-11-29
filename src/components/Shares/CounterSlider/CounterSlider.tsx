@@ -59,6 +59,7 @@ const Count = styled.div`
 		font-size: 64px;
 	}
 `;
+
 const CounterSlider: React.FC<CounterSliderProps> = ({
 	counterList = [],
 	theme = 'dark',
