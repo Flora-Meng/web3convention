@@ -24,11 +24,9 @@ const ContentContainer = styled(Box)`
 `;
 
 const ContainerGrid = styled(Grid)`
-	@media (${devices.largeLaptop}) {
+	@media ${devices.largeLaptop} {
 		max-width: 1440px;
-		gap: 130px;
 	}
-	gap: 50px;
 	justify-content: space-between;
 	width: calc(100vw - 48px);
 `;
@@ -53,7 +51,7 @@ const StyledLink = styled(Link)`
 const LogoContainer = styled.div`
 	display: flex;
 	justify-content: start;
-	@media (${devices.largeLaptop}) {
+	@media ${devices.largeLaptop} {
 		max-width: 1440px;
 	}
 	width: calc(100vw - 48px);
@@ -68,19 +66,37 @@ const ContentText = styled.p`
 `;
 
 const QRcodeGridItem = styled(Grid)`
+	align-items: center;
+	display: flex;
+	flex-direction: column;
 	font-size: 14px;
 	line-height: 1.43;
-	text-align: center;
-	@media ${devices.miniMobile} {
-		margin: 0 18px 6px 0;
-	}
-	@media ${devices.largerLaptop} {
-		margin: 0 24px 24px 0;
-	}
 `;
 
 const eventLink = '/convention';
 // Configuration
+const partnersConfig = [
+	{
+		label: '2024 Partners',
+		path: '/comingSoon'
+	},
+	{
+		label: 'Previous Partners',
+		path: '/previous-partner'
+	},
+	{
+		label: 'Sponsor Partners',
+		path: '/comingSoon'
+	},
+	{
+		label: 'Community Partners',
+		path: '/comingSoon'
+	},
+	{
+		label: 'Media Partners',
+		path: '/comingSoon'
+	}
+];
 const linkConfigList = [
 	{
 		label: 'Book Tickets',
@@ -91,16 +107,16 @@ const linkConfigList = [
 		path: 'https://w3con.eventsair.com/SponsorshipPortal/Account/Login?ReturnUrl=%2FSponsorshipPortal%2Fweb3convention%2Fsponsorship'
 	},
 	{
+		label: 'Agenda',
+		path: '/agenda'
+	},
+	{
 		label: 'Apply to Speak',
 		path: '/apply-to-speak'
 	},
 	{
 		label: 'Volunteers',
 		path: 'https://w3con.eventsair.com/web3convention/registration/Site/Register'
-	},
-	{
-		label: 'Agenda',
-		path: 'agenda'
 	}
 ];
 const qrCodes = [
@@ -168,31 +184,44 @@ const FooterContent = () => {
 					priority
 				/>
 			</LogoContainer>
-			<ContainerGrid container spacing={1}>
-				<Grid item mobile={12} tablet={6} laptop={2.5} largeLaptop={2.5}>
+			<ContainerGrid
+				container
+				spacing={{
+					mobile: 3,
+					largeLaptop: 0
+				}}
+			>
+				<Grid item mobile={12} tablet={6} laptop={6} largeLaptop={2.8}>
 					<Title>Get in touch</Title>
-					<ContentText>
-						Brisbane Convention and Exhibition Centre
-						<br />
-						South Brisbane QLD 4101
-					</ContentText>
+					<div className="flex flex-col">
+						<StyledLink href="/comingSoon">About Us</StyledLink>
+						<StyledLink href="/contact-us">Contact Us</StyledLink>
+					</div>
 					<ContentText>Tel: +61 429 991 399</ContentText>
 					<ContentText>Information: info@web3convention.com</ContentText>
 					<ContentText>Partnership: business@web3convention.com</ContentText>
 				</Grid>
-				<Grid item mobile={12} tablet={6} laptop={2} largeLaptop={2}>
+				<Grid item mobile={12} tablet={6} laptop={6} largeLaptop={1.5}>
 					<Title>Convention Highlights</Title>
 					<div className="flex flex-col">
-						<StyledLink href={eventLink}>
-							Australian AI + Web3 Charity Dinner
-						</StyledLink>
+						<StyledLink href={eventLink}>Charity Dinner</StyledLink>
 						<StyledLink href={eventLink}>Startup Competition</StyledLink>
 						<StyledLink href={eventLink}>Capital Connect</StyledLink>
 						<StyledLink href={eventLink}>Cyber Party</StyledLink>
-						<StyledLink href={eventLink}>AI / Web3 / FutureTech Hub</StyledLink>
+						<StyledLink href={eventLink}>Side Events</StyledLink>
 					</div>
 				</Grid>
-				<Grid item mobile={12} tablet={6} laptop={1.2} largeLaptop={1.2}>
+				<Grid item mobile={12} tablet={6} laptop={6} largeLaptop={1.5}>
+					<Title>Partners</Title>
+					<div className="flex flex-col">
+						{partnersConfig.map(linkConfig => (
+							<StyledLink href={linkConfig.path} key={linkConfig.label}>
+								{linkConfig.label}
+							</StyledLink>
+						))}
+					</div>
+				</Grid>
+				<Grid item mobile={12} tablet={6} laptop={6} largeLaptop={1.5}>
 					<Title>Useful Links</Title>
 					<div className="flex flex-col">
 						{linkConfigList.map(linkConfig => (
@@ -202,16 +231,16 @@ const FooterContent = () => {
 						))}
 					</div>
 				</Grid>
-				<Grid item mobile={12} tablet={6} laptop={3} largeLaptop={3}>
+				<Grid item mobile={12} tablet={6} laptop={4} largeLaptop={2.4}>
 					<Title>Scan to connect</Title>
-					<Grid container>
+					<Grid container spacing={3}>
 						{qrCodes.map(qrCode => (
 							<QRcodeGridItem
 								item
-								mobile={3}
-								tablet={3}
-								laptop={3}
-								largeLaptop={3}
+								mobile={4}
+								tablet={4}
+								laptop={4}
+								largeLaptop={4}
 								key={qrCode._id}
 							>
 								<Link href={qrCode.link} target="_blank">
@@ -219,8 +248,8 @@ const FooterContent = () => {
 										loader={imageLoader}
 										src={qrCode.src}
 										alt={qrCode.alt}
-										width={86}
-										height={86}
+										width={74}
+										height={74}
 										unoptimized
 									/>
 								</Link>
