@@ -57,7 +57,7 @@ const ContentContainer = styled.div`
 	}
 `;
 
-const Title = styled.text`
+const Title = styled.h3`
 	font-family: Arial;
 	font-size: 18px;
 	font-weight: 700;
@@ -84,7 +84,7 @@ const Title = styled.text`
 	}
 `;
 
-const Description = styled.text`
+const Description = styled.p`
 	color: ${descriptionColor};
 	font-family: Arial;
 	font-size: 12px;
