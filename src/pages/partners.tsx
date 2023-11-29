@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+import WhyPartners from '@/components/Pages/Partners/WhyPartners';
 import PageCoverTitle from '@/components/Shares/PageCoverTitle';
 import coverText from '@/components/Shares/PageCoverTitle/partnersCoverText.json';
 import ThemeButton from '@/components/Shares/ThemeButton';
@@ -86,6 +87,7 @@ const PartnersPage = () => {
 					</PageCoverTitle>
 				</TitleContainer>
 			</Cover>
+			<WhyPartners />
 			<Footer />
 		</>
 	);
