@@ -77,7 +77,8 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 	[ENavItem.PARTNER]: [
 		{
 			title: 'Partner with Us',
-			path: 'https://w3con.eventsair.com/SponsorshipPortal/Account/Login?ReturnUrl=%2FSponsorshipPortal%2Fweb3convention%2Fsponsorship'
+			// path: 'https://w3con.eventsair.com/SponsorshipPortal/Account/Login?ReturnUrl=%2FSponsorshipPortal%2Fweb3convention%2Fsponsorship'
+			path: '/partners'
 		},
 		{
 			title: 'Why Partner?',
