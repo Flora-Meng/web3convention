@@ -8,34 +8,38 @@ import {dark} from "@mui/material/styles/createPalette";
 const { blackColor, whiteColor } = color;
 
 const HomeCountdownContainer = styled.div`
-	background-color: ${whiteColor};
+    position: relative;
 `;
 
 const Content = styled.div`
+  margin: 0 auto;
   max-width: 1200px;
   padding: 140px 24px 100px;
   position: relative;
   @media ${devices.mobile} {
     padding: 140px 0px 100px;
   }
-  @media ${devices.largeLaptop} {
+  @media ${devices.laptop} {
     margin: 0 auto;
   }
 `;
 
 const TitleContainer = styled.div`
 	color: ${blackColor};
-	margin-bottom: 60px;
 	@media ${devices.laptop} {
 		margin-right: 80px;
-		margin-bottom: 0;
+        margin-bottom: 60px;
 		max-width: ${`${sizes.largeLaptop}px`};
 	}
 `;
 
 const Title = styled.h2`
 	${sectionTitle};
-	max-width: unset;
+    max-width: 264px;
+    margin-bottom: 20px;
+    @media ${devices.mobile} {
+      max-width: 100%;
+    }
 `;
 
 const Subtitle = styled.p`
@@ -77,12 +81,14 @@ const counterList = [
     }
 ];
 const Backdrop = styled.div`
-	${backdrop};
-    color: ${blackColor};
-	left: 9vw;
-	@media ${devices.mobile} {
-		left: 5vw;
-	}
+  ${backdrop};
+  font-size: 70px;
+  left: 24px;
+  top: 25px;
+  @media ${devices.laptop} {
+    font-size: 230px;
+    left: calc((100% - 1200px) / 2);
+  }
 `;
 
 const Attendees: React.FC = () => {
@@ -90,9 +96,9 @@ const Attendees: React.FC = () => {
         <HomeCountdownContainer>
             <Content>
                 <TitleContainer>
+                    <Backdrop>Who</Backdrop>
                     <Subtitle>AI + Web3 Convention 2024</Subtitle>
                     <Title>Who attends AI + Web3 Convention?</Title>
-                    <Backdrop>Who</Backdrop>
                 </TitleContainer>
                 <CounterSlider counterList={counterList} theme = {"light"}/>
             </Content>
