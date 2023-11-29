@@ -59,16 +59,6 @@ const Count = styled.div`
 		font-size: 64px;
 	}
 `;
-const StyledCarousel = styled(Carousel)<{ theme: TSectionTheme }>`
-	${({ theme }) => theme !== 'dark' && `
-    .control-prev.control-arrow:before {
-      border-right-color: black !important;
-    }
-    .control-next.control-arrow:before {
-      border-left-color: black !important;
-    }
-  `}
-`;
 const CounterSlider: React.FC<CounterSliderProps> = ({
 	counterList = [],
 	theme = 'dark',
@@ -78,8 +68,7 @@ const CounterSlider: React.FC<CounterSliderProps> = ({
 	const [current, setCurrent] = useState<number>(0);
 	return (
 		<CounterSliderContainer theme={theme}>
-			<StyledCarousel
-				theme={theme}
+			<Carousel
 				autoPlay
 				infiniteLoop
 				showStatus={false}
@@ -118,7 +107,7 @@ const CounterSlider: React.FC<CounterSliderProps> = ({
 						))}
 					</Grid>
 				))}
-			</StyledCarousel>
+			</Carousel>
 		</CounterSliderContainer>
 	);
 };

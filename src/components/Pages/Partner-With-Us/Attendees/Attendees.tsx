@@ -13,10 +13,10 @@ const HomeCountdownContainer = styled.div`
 
 const Content = styled.div`
   max-width: 1200px;
-  padding: 100px 24px 140px;
+  padding: 140px 24px 100px;
   position: relative;
   @media ${devices.mobile} {
-    padding: 100px 0px 140px;
+    padding: 140px 0px 100px;
   }
   @media ${devices.largeLaptop} {
     margin: 0 auto;
