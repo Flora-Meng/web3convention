@@ -16,6 +16,7 @@ interface PageCoverTitleProps {
 		additionalSubtitle?: string;
 	};
 	translateValue?: string;
+	children?: React.ReactNode;
 }
 
 const Container = styled.div<PageCoverTitleProps>`
@@ -62,7 +63,7 @@ const CoverTitle = styled(Title)`
 `;
 
 const PageCoverTitle: React.FC<PageCoverTitleProps> = props => {
-	const { coverText, translateValue } = props;
+	const { coverText, translateValue, children } = props;
 
 	return (
 		<Container translateValue={translateValue} coverText={coverText}>
@@ -74,6 +75,7 @@ const PageCoverTitle: React.FC<PageCoverTitleProps> = props => {
 					<CoverSubtitle isCurrent>{coverText.additionalSubtitle}</CoverSubtitle>
 				)}
 				<CoverTitle isCurrent>{coverText.title}</CoverTitle>
+				{children}
 			</div>
 		</Container>
 	);

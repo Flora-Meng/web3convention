@@ -1,19 +1,21 @@
 import styled from 'styled-components';
 
+import PageCoverTitle from '@/components/Shares/PageCoverTitle';
+import coverText from '@/components/Shares/PageCoverTitle/partnersCoverText.json';
+import ThemeButton from '@/components/Shares/ThemeButton';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 import PageHead from '@/layouts/PageHead';
 import { devices } from '@/styles/variables';
 
 const Cover = styled.div`
-	background-image: url('/images/partners/coverMobile.jpg');
+	background-image: url('/images/partners/coverMobile.webp');
 	background-position: center;
 	background-size: cover;
-	height: 478px;
+	padding-top: 85px;
 	position: relative;
 	@media ${devices.mobile} {
 		background-image: url('/images/partners/cover.webp');
-		height: 360px;
 		background-size: auto;
 	}
 `;
@@ -22,6 +24,31 @@ const HeaderContainer = styled.div`
 	top: 0;
 	width: 100%;
 	z-index: 2;
+`;
+const TitleContainer = styled.div`
+	height: inherit;
+	@media ${devices.mobile} {
+		padding-top: 40px;
+	}
+`;
+const Description = styled.p`
+	font-size: 18px;
+	margin-top: 32px;
+`;
+const Buttons = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	margin-bottom: 100px;
+	margin-top: 80px;
+	@media ${devices.mobile} {
+		:first-child {
+			margin-bottom: 0;
+		}
+		margin-top: 48px;
+		display: flex;
+		flex-direction: row;
+	}
 `;
 
 const PartnersPage = () => {
@@ -39,6 +66,25 @@ const PartnersPage = () => {
 				<HeaderContainer>
 					<Header />
 				</HeaderContainer>
+				<TitleContainer>
+					<PageCoverTitle coverText={coverText}>
+						<Description>
+							Get in touch with our specialist team today to secure your partnership
+							for 2024.
+						</Description>
+						<Buttons>
+							<ThemeButton width="fit-content" href="/contact-us">
+								ENQUIRE NOW
+							</ThemeButton>
+							<ThemeButton
+								width="fit-content"
+								href="https://w3con.eventsair.com/SponsorshipPortal/Account/Login?ReturnUrl=%2FSponsorshipPortal%2Fweb3convention%2Fsponsorship"
+							>
+								LOGIN WITH ACCOUNT
+							</ThemeButton>
+						</Buttons>
+					</PageCoverTitle>
+				</TitleContainer>
 			</Cover>
 			<Footer />
 		</>
