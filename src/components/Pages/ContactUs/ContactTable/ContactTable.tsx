@@ -36,7 +36,7 @@ const Container = styled.div`
 	}
 
 	.MuiTableContainer-root {
-		width: 720px;
+		width: 760px;
 	}
 
 	table {
@@ -134,7 +134,7 @@ const ContactTable = () => {
 		<Section>
 			<Container>
 				<TableContainer>
-					<Table sx={{ width: 720 }}>
+					<Table sx={{ width: 760 }}>
 						<TableHead>
 							<TableRow>
 								<TableCell>Name</TableCell>
@@ -152,6 +152,7 @@ const ContactTable = () => {
 									<TableCell>
 										<Email onClick={() => handleClickCopy(row.email)}>
 											{row.email}
+											{row.extra && <span>{` (${row.extra})`}</span>}
 										</Email>
 									</TableCell>
 								</TableRow>
@@ -180,6 +181,7 @@ const ContactTable = () => {
 								alt="success-icon"
 								width={20}
 								height={20}
+								unoptimized
 							/>
 							<MessageText>Email address copied</MessageText>
 						</MessageContainer>

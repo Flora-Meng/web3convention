@@ -1,5 +1,7 @@
 import dayjs from 'dayjs';
 import duration from 'dayjs/plugin/duration';
+import timezone from 'dayjs/plugin/timezone';
+import utc from 'dayjs/plugin/utc';
 import { upperFirst } from 'lodash';
 import ReactCountdown, { CountdownTimeDelta } from 'react-countdown';
 import styled from 'styled-components';
@@ -9,6 +11,8 @@ import { ISize } from '@/interfaces/variables';
 import { EDeviceSize, color, devices } from '@/styles/variables';
 
 dayjs.extend(duration);
+dayjs.extend(utc);
+dayjs.extend(timezone);
 const { primaryColor } = color;
 
 interface CountdownProps {
@@ -80,7 +84,7 @@ const CountdownUnit = styled.p`
 	margin: 0;
 `;
 
-const COUNTDOWN_DATE = '2024-05-18T22:00:00.000Z';
+const COUNTDOWN_DATE = dayjs.tz('2023-12-31T23:59:59', 'Australia/Brisbane').toISOString();
 
 const Countdown: React.FC<CountdownProps> = ({
 	countdownDate = COUNTDOWN_DATE,

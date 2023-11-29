@@ -87,7 +87,7 @@ const Title = styled.h2`
 	}
 `;
 
-const Description = styled.text`
+const Description = styled.p`
 	@media ${devices.miniMobile} {
 		font-size: 3.2vw;
 	}

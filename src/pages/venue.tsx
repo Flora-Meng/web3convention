@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import BrisBaneCity from '@/components/Pages/Venue/BrisbaneCity';
 import GoldCoastCity from '@/components/Pages/Venue/GoldCoastCity';
-import VenueMap from '@/components/Pages/Venue/Map';
+// import VenueMap from '@/components/Pages/Venue/Map';
 import VenueGallery from '@/components/Pages/Venue/VenueGallery';
 import VenueIntroCards from '@/components/Pages/Venue/VenuIntroCards/VenueIntroCards';
 import PageBanner from '@/components/Shares/PageBanner';
@@ -66,7 +66,7 @@ const VenuePage = () => {
 			<VenueGallery />
 			<BrisBaneCity />
 			<GoldCoastCity />
-			<VenueMap />
+			{/* <VenueMap /> // hide the map temporarily */}
 			<Footer />
 		</>
 	);
