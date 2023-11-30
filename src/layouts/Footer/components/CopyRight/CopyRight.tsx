@@ -1,5 +1,6 @@
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
@@ -15,6 +16,11 @@ const ContentContainer = styled.section`
 	@media ${devices.largeLaptop} {
 		padding: 12px 0;
 	}
+`;
+const StyledLink = styled(Link)`
+	font-size: 14px;
+	line-height: 1.43;
+	margin-bottom: 12px;
 `;
 const ContainerGrid = styled(Grid)`
 	margin: 0 auto;
@@ -101,7 +107,10 @@ const CopyRight: React.FC = () => {
 							© 2023 AI + Web3 Convention, All Rights Reserved. ACN 668 836 566
 						</CopyrightText>
 					)}
-					<CopyrightText>Terms And Conditions | Anti-harassment Policy</CopyrightText>
+					<CopyrightText>
+						Terms And Conditions |
+						<StyledLink href="/anti-harassment"> Anti-harassment Policy</StyledLink>
+					</CopyrightText>
 				</CopyrightGrid>
 				<Grid item {...gridColumn}>
 					<EmptyBox />
