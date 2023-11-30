@@ -31,11 +31,12 @@ const CounterSliderContainer = styled.div<IThemeProps>`
 const Counter = styled.div`
 	margin: 20px;
 	text-align: center;
+	align-items: flex-end;
 `;
 
 const CounterName = styled.h4`
 	color: ${({ theme }) => (theme === 'dark' ? primaryColor : darkPrimaryColor)};
-	font-size: 12px;
+	font-size: 18px;
 	font-weight: 700;
 	margin: 0;
 	@media ${devices.laptop} {
@@ -91,7 +92,7 @@ const CounterSlider: React.FC<CounterSliderProps> = ({
 				{chunkList.map((counters, index) => (
 					<Grid
 						container
-						className="flex justify-center items-center"
+						className="flex justify-center"
 						key={counters[0].name}
 					>
 						{counters.map(counter => (
@@ -100,7 +101,7 @@ const CounterSlider: React.FC<CounterSliderProps> = ({
 								miniMobile={6}
 								mobile={6}
 								laptop={12 / perSlider}
-								className="flex justify-center items-center"
+								className="flex justify-center"
 								key={counter.name}
 							>
 								<Counter key={counter.name}>

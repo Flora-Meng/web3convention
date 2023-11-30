@@ -13,12 +13,21 @@ interface CounterItemProps {
 
 const CounterItem: React.FC<CounterItemProps> = ({ shouldReset, ...props }) => {
 	const countUpRef = useRef(null);
+
+	const formatNumberWithCommas = (value: number) => {
+		return value.toLocaleString();
+	};
+
 	const { start } = useCountUp({
 		ref: countUpRef,
 		start: 0,
+		formattingFn: formatNumberWithCommas, // Use the formatting function
 		...props
 	});
-	if (shouldReset) start();
+
+	if (shouldReset) {
+		start();
+	}
 
 	return <div ref={countUpRef} />;
 };
