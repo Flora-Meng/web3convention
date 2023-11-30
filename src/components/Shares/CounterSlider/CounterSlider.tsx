@@ -24,7 +24,7 @@ const CounterSliderContainer = styled.div<IThemeProps>`
 	color: ${({ theme }) => (theme === 'dark' ? whiteColor : textColor)};
 	margin: 0 auto;
 	@media ${devices.mobile} {
-		padding: 0 0px;
+		padding: 0 20px;
 	}
 `;
 
