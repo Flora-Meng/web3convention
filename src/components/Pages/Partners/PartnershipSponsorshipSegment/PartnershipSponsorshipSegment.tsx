@@ -3,7 +3,6 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 import ThemeButton from '@/components/Shares/ThemeButton';
-import { registerSponsorShipUrl } from '@/constants/partner';
 import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
@@ -133,10 +132,8 @@ const PartnershipSponsorshipSegment = () => {
 								amidst innovation!
 							</Description>
 							<ButtonGroup>
-								<ThemeButton href={registerSponsorShipUrl}>ENQUIRE NOW</ThemeButton>
-								<ThemeButton href={registerSponsorShipUrl}>
-									BOOK STAND ONLY
-								</ThemeButton>
+								<ThemeButton href="/contact-us">ENQUIRE NOW</ThemeButton>
+								<ThemeButton href="/contact-us">BOOK STAND ONLY</ThemeButton>
 							</ButtonGroup>
 						</GridContent>
 					</ContentContainer>
@@ -169,7 +166,7 @@ const PartnershipSponsorshipSegment = () => {
 								opportunities awaiting you at the AI + Web3 Convention 2024.
 							</Description>
 							<ButtonGroup>
-								<ThemeButton href={registerSponsorShipUrl}>ENQUIRE NOW</ThemeButton>
+								<ThemeButton href="/contact-us">ENQUIRE NOW</ThemeButton>
 							</ButtonGroup>
 						</GridContent>
 					</ContentContainer>
