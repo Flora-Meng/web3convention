@@ -11,10 +11,9 @@ const WhyPartnersContainer = styled(Box)`
 const Container = styled.div`
 	margin: 0 auto;
 	max-width: 1200px;
-	padding: 40px 24px;
-	padding-top: 90px;
+	padding: 90px 24px 120px;
 	@media ${devices.laptop} {
-		padding: 50px 0;
+		padding: 50px 0 120px;
 	}
 `;
 const Backdrop = styled.div`
@@ -68,14 +67,13 @@ const ViewMore = styled.div`
 	align-items: center;
 	display: flex;
 	justify-content: center;
-	margin-bottom: 56px;
 	margin-top: 56px;
 	@media ${devices.laptop} {
 		margin-bottom: 0;
 	}
 `;
 
-const whyGridDatas = [
+const whyGridData = [
 	{
 		id: '1',
 		title: 'Brand Awareness',
@@ -122,7 +120,7 @@ const WhyPartners = () => {
 					opportunities for engagement and participation.
 				</Description>
 				<WhyGrid container>
-					{whyGridDatas.map((item, index) => (
+					{whyGridData.map((item, index) => (
 						<GridItem
 							miniMobile={12}
 							laptop={6}
