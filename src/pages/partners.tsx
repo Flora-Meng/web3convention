@@ -5,6 +5,7 @@ import WhyPartners from '@/components/Pages/Partners/WhyPartners';
 import PageCoverTitle from '@/components/Shares/PageCoverTitle';
 import coverText from '@/components/Shares/PageCoverTitle/partnersCoverText.json';
 import ThemeButton from '@/components/Shares/ThemeButton';
+import { registerSponsorShipUrl } from '@/constants/partner';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 import PageHead from '@/layouts/PageHead';
@@ -77,10 +78,7 @@ const PartnersPage = () => {
 							<ThemeButton width="fit-content" href="/contact-us">
 								ENQUIRE NOW
 							</ThemeButton>
-							<ThemeButton
-								width="fit-content"
-								href="https://w3con.eventsair.com/SponsorshipPortal/Account/Login?ReturnUrl=%2FSponsorshipPortal%2Fweb3convention%2Fsponsorship"
-							>
+							<ThemeButton width="fit-content" href={registerSponsorShipUrl}>
 								LOGIN WITH ACCOUNT
 							</ThemeButton>
 						</Buttons>

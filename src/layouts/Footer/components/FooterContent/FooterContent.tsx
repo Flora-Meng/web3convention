@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import SubscriptionModal from '@/components/Shares/SubscriptionModal';
+import { registerSponsorShipUrl } from '@/constants/partner';
 import useSubscription from '@/hooks/userSubscription';
 import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
@@ -104,7 +105,7 @@ const linkConfigList = [
 	},
 	{
 		label: 'Partner with Us',
-		path: 'https://w3con.eventsair.com/SponsorshipPortal/Account/Login?ReturnUrl=%2FSponsorshipPortal%2Fweb3convention%2Fsponsorship'
+		path: registerSponsorShipUrl
 	},
 	{
 		label: 'Agenda',

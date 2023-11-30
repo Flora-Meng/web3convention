@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import ThemeButton from '@/components/Shares/ThemeButton';
+import { registerSponsorShipUrl } from '@/constants/partner';
 import { animation, animationFillMode, sectionSubtitle } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
 
@@ -109,7 +110,7 @@ const ButtonContainer = styled.div`
 
 const partnerButtonConfig = {
 	text: 'PARTNER WITH US',
-	url: 'https://w3con.eventsair.com/SponsorshipPortal/Account/Login?ReturnUrl=%2FSponsorshipPortal%2Fweb3convention%2Fsponsorship'
+	url: registerSponsorShipUrl
 };
 
 const PageBanner: React.FC<PageBannerProps> = props => {

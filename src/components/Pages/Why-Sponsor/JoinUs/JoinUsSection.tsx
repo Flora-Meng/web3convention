@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Description } from '@/components/Pages/Home/HomeCarousel/components/CarouseItem/CarouseItem';
 import coverText from '@/components/Pages/Why-Sponsor/JoinUs/joinUsText.json';
 import ThemeButton from '@/components/Shares/ThemeButton';
+import { registerSponsorShipUrl } from '@/constants/partner';
 import { color, devices } from '@/styles/variables';
 
 const { whiteColor, primaryColor } = color;
@@ -75,7 +76,7 @@ const JoinUsAdditionalDescription = styled.div`
 
 const joinUsButtonConfig = {
 	text: 'REGISTER A SPONSOR NOW',
-	url: 'https://w3con.eventsair.com/SponsorshipPortal/Account/Login?ReturnUrl=%2FSponsorshipPortal%2Fweb3convention%2Fsponsorship'
+	url: registerSponsorShipUrl
 };
 
 const JoinUsSection = () => {
