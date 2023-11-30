@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-import TicketIntroCards from '@/components/Pages/Get-Tickets/TicketIntroCards';
 import PageCoverTitle from '@/components/Shares/PageCoverTitle';
 import coverText from '@/components/Shares/PageCoverTitle/ticketCoverText.json';
 import PageParallax from '@/components/Shares/PageParallax';
@@ -46,7 +45,6 @@ const GetTicketsPage = () => {
 					</HeaderContainer>
 					<PageCoverTitle coverText={coverText} />
 				</Cover>
-				<TicketIntroCards />
 			</BackgroundBanner>
 			<PageTicket />
 			<PageParallax />
