@@ -7,6 +7,13 @@ export const fetchMeetups = () => {
 		url: '/api/meetups?meetupEventType=web3'
 	});
 };
+export const fetchMoreEvents = () => {
+	return request({
+		baseURL,
+		method: 'GET',
+		url: '/api/meetups?meetupEventType=web3&featured=default'
+	});
+};
 
 export const fetchFeaturedEvents = () => {
 	return request({
