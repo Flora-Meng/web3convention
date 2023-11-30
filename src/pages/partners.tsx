@@ -1,5 +1,7 @@
+import React from 'react';
 import styled from 'styled-components';
 
+import Attendees from '@/components/Pages/Partner-With-Us/Attendees';
 import PartnershipSponsorshipSegment from '@/components/Pages/Partners/PartnershipSponsorshipSegment';
 import WhyPartners from '@/components/Pages/Partners/WhyPartners';
 import PageCoverTitle from '@/components/Shares/PageCoverTitle';
@@ -87,6 +89,7 @@ const PartnersPage = () => {
 					</PageCoverTitle>
 				</TitleContainer>
 			</Cover>
+			<Attendees />
 			<WhyPartners />
 			<PartnershipSponsorshipSegment />
 			<Footer />

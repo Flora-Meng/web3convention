@@ -29,13 +29,14 @@ const CounterSliderContainer = styled.div<IThemeProps>`
 `;
 
 const Counter = styled.div`
+	align-items: flex-end;
 	margin: 20px;
 	text-align: center;
 `;
 
 const CounterName = styled.h4`
 	color: ${({ theme }) => (theme === 'dark' ? primaryColor : darkPrimaryColor)};
-	font-size: 12px;
+	font-size: 18px;
 	font-weight: 700;
 	margin: 0;
 	@media ${devices.laptop} {
@@ -59,7 +60,15 @@ const Count = styled.div`
 		font-size: 64px;
 	}
 `;
+const StyledCarousel = styled(Carousel)<{ theme: TSectionTheme }>`
+	.control-prev.control-arrow:before {
+		${({ theme }) => theme === 'light' && 'border-right-color: black ;'}
+	}
 
+	.control-next.control-arrow:before {
+		${({ theme }) => theme === 'light' && 'border-left-color: black ;'}
+	}
+`;
 const CounterSlider: React.FC<CounterSliderProps> = ({
 	counterList = [],
 	theme = 'dark',
@@ -69,7 +78,8 @@ const CounterSlider: React.FC<CounterSliderProps> = ({
 	const [current, setCurrent] = useState<number>(0);
 	return (
 		<CounterSliderContainer theme={theme}>
-			<Carousel
+			<StyledCarousel
+				theme={theme}
 				autoPlay
 				infiniteLoop
 				showStatus={false}
@@ -79,18 +89,14 @@ const CounterSlider: React.FC<CounterSliderProps> = ({
 				interval={4000}
 			>
 				{chunkList.map((counters, index) => (
-					<Grid
-						container
-						className="flex justify-center items-center"
-						key={counters[0].name}
-					>
+					<Grid container className="flex justify-center" key={counters[0].name}>
 						{counters.map(counter => (
 							<Grid
 								item
 								miniMobile={6}
 								mobile={6}
 								laptop={12 / perSlider}
-								className="flex justify-center items-center"
+								className="flex justify-center"
 								key={counter.name}
 							>
 								<Counter key={counter.name}>
@@ -108,7 +114,7 @@ const CounterSlider: React.FC<CounterSliderProps> = ({
 						))}
 					</Grid>
 				))}
-			</Carousel>
+			</StyledCarousel>
 		</CounterSliderContainer>
 	);
 };
