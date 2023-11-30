@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+import PartnershipSponsorshipSegment from '@/components/Pages/Partners/PartnershipSponsorshipSegment';
 import WhyPartners from '@/components/Pages/Partners/WhyPartners';
 import PageCoverTitle from '@/components/Shares/PageCoverTitle';
 import coverText from '@/components/Shares/PageCoverTitle/partnersCoverText.json';
@@ -17,7 +18,6 @@ const Cover = styled.div`
 	position: relative;
 	@media ${devices.mobile} {
 		background-image: url('/images/partners/cover.webp');
-		background-size: auto;
 	}
 `;
 const HeaderContainer = styled.div`
@@ -88,6 +88,7 @@ const PartnersPage = () => {
 				</TitleContainer>
 			</Cover>
 			<WhyPartners />
+			<PartnershipSponsorshipSegment />
 			<Footer />
 		</>
 	);
