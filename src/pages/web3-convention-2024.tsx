@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import ConventionEvents from '@/components/Pages/ConventionEvents';
 import PageCoverTitle from '@/components/Shares/PageCoverTitle';
 import coverText from '@/components/Shares/PageCoverTitle/web3Convention2024Text.json';
 import Footer from '@/layouts/Footer';
@@ -46,6 +47,7 @@ const Web3Convention2024Page = () => {
 				</HeaderContainer>
 				<PageCoverTitle coverText={coverText} />
 			</Cover>
+			<ConventionEvents />
 			<Footer />
 		</>
 	);
