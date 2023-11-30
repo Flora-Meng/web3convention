@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-import StageCoverTitle from '@/components/Pages/Why-Sponsor/CoverTitle/whySponsorCoverTitle';
+import StageCoverTitle from '@/components/Pages/Why-Sponsor/CoverTitle';
+import JoinUsSection from '@/components/Pages/Why-Sponsor/JoinUs';
 import ReasonsToSponsor from '@/components/Pages/Why-Sponsor/ReasonsToSponsor';
 import SessionTypesSection from '@/components/Pages/Why-Sponsor/SessionTypesSection';
 import Footer from '@/layouts/Footer';
@@ -40,6 +41,7 @@ const WhySponsorPage = () => {
 			</Cover>
 			<SessionTypesSection />
 			<ReasonsToSponsor />
+			<JoinUsSection />
 			<Footer />
 		</>
 	);

@@ -1,1 +1,1 @@
-export { default } from './whySponsorCoverTitle';
+export { default } from './WhySponsorCoverTitle';
