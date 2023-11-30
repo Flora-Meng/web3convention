@@ -7,6 +7,7 @@ import {
 } from '@/components/Pages/Home/HomeCarousel/components/CarouseItem/CarouseItem';
 import coverText from '@/components/Pages/Why-Sponsor/CoverTitle/whySponsorCoverText.json';
 import ThemeButton from '@/components/Shares/ThemeButton';
+import { registerSponsorShipUrl } from '@/constants/partner';
 import { color, devices } from '@/styles/variables';
 
 const { whiteColor, primaryColor } = color;
@@ -84,7 +85,7 @@ const CoverAdditionalDescription = styled.div`
 
 const sponsorButtonConfig = {
 	text: 'BECOME A SPONSOR NOW',
-	url: 'https://w3con.eventsair.com/SponsorshipPortal/Account/Login?ReturnUrl=%2FSponsorshipPortal%2Fweb3convention%2Fsponsorship'
+	url: registerSponsorShipUrl
 };
 
 const StageCoverTitle = () => {
