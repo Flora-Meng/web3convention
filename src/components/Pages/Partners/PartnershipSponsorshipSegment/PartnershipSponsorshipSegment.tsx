@@ -133,7 +133,9 @@ const PartnershipSponsorshipSegment = () => {
 							</Description>
 							<ButtonGroup>
 								<ThemeButton href="/contact-us">ENQUIRE NOW</ThemeButton>
-								<ThemeButton href="/contact-us">BOOK STAND ONLY</ThemeButton>
+								<ThemeButton href="https://w3con.eventsair.com/ExhibitionPortal/Account/Login?ReturnUrl=%2FExhibitionPortal%2Fweb3convention%2Fexhibition">
+									BOOK STAND ONLY
+								</ThemeButton>
 							</ButtonGroup>
 						</GridContent>
 					</ContentContainer>
