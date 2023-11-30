@@ -1,5 +1,8 @@
+import React from 'react';
 import styled from 'styled-components';
 
+import Attendees from '@/components/Pages/Partner-With-Us/Attendees';
+import PartnershipSponsorshipSegment from '@/components/Pages/Partners/PartnershipSponsorshipSegment';
 import WhyPartners from '@/components/Pages/Partners/WhyPartners';
 import PageCoverTitle from '@/components/Shares/PageCoverTitle';
 import coverText from '@/components/Shares/PageCoverTitle/partnersCoverText.json';
@@ -8,8 +11,6 @@ import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 import PageHead from '@/layouts/PageHead';
 import { devices } from '@/styles/variables';
-import Attendees from "@/components/Pages/Partner-With-Us/Attendees";
-import React from "react";
 
 const Cover = styled.div`
 	background-image: url('/images/partners/coverMobile.webp');
@@ -19,7 +20,6 @@ const Cover = styled.div`
 	position: relative;
 	@media ${devices.mobile} {
 		background-image: url('/images/partners/cover.webp');
-		background-size: auto;
 	}
 `;
 const HeaderContainer = styled.div`
@@ -91,6 +91,7 @@ const PartnersPage = () => {
 			</Cover>
 			<Attendees />
 			<WhyPartners />
+			<PartnershipSponsorshipSegment />
 			<Footer />
 		</>
 	);

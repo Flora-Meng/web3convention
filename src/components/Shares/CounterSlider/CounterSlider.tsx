@@ -29,9 +29,9 @@ const CounterSliderContainer = styled.div<IThemeProps>`
 `;
 
 const Counter = styled.div`
+	align-items: flex-end;
 	margin: 20px;
 	text-align: center;
-	align-items: flex-end;
 `;
 
 const CounterName = styled.h4`
@@ -61,7 +61,9 @@ const Count = styled.div`
 	}
 `;
 const StyledCarousel = styled(Carousel)<{ theme: TSectionTheme }>`
-	${({ theme }) => theme !== 'dark' && `
+	${({ theme }) =>
+		theme !== 'dark' &&
+		`
     .control-prev.control-arrow:before {
       border-right-color: black !important;
     }
@@ -90,11 +92,7 @@ const CounterSlider: React.FC<CounterSliderProps> = ({
 				interval={4000}
 			>
 				{chunkList.map((counters, index) => (
-					<Grid
-						container
-						className="flex justify-center"
-						key={counters[0].name}
-					>
+					<Grid container className="flex justify-center" key={counters[0].name}>
 						{counters.map(counter => (
 							<Grid
 								item
