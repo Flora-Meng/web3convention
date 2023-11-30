@@ -181,6 +181,7 @@ const ModalPostDescription = styled.p`
 	max-height: 20vh;
 	overflow-y: scroll;
 	text-wrap: wrap;
+	white-space: pre-wrap;
 	@media ${devices.mobile} {
 		margin-top: 40px;
 		max-height: unset;
