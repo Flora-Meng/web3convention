@@ -52,8 +52,8 @@ const HomeCountdown: React.FC = () => {
 	return (
 		<HomeCountdownContainer>
 			<TitleContainer>
-				<Subtitle>New Price, 31 December, 2023</Subtitle>
-				<Title>Count Every Second Until the New Price Increase</Title>
+				<Subtitle>Brisbane, 18-19 May, 2024</Subtitle>
+				<Title>Count Every Second Until Event</Title>
 			</TitleContainer>
 			<DynamicCountdown />
 		</HomeCountdownContainer>
