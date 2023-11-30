@@ -61,16 +61,13 @@ const Count = styled.div`
 	}
 `;
 const StyledCarousel = styled(Carousel)<{ theme: TSectionTheme }>`
-	${({ theme }) =>
-		theme !== 'dark' &&
-		`
-    .control-prev.control-arrow:before {
-      border-right-color: black !important;
-    }
-    .control-next.control-arrow:before {
-      border-left-color: black !important;
-    }
-  `}
+	.control-prev.control-arrow:before {
+		${({ theme }) => theme === 'light' && 'border-right-color: black ;'}
+	}
+
+	.control-next.control-arrow:before {
+		${({ theme }) => theme === 'light' && 'border-left-color: black ;'}
+	}
 `;
 const CounterSlider: React.FC<CounterSliderProps> = ({
 	counterList = [],
