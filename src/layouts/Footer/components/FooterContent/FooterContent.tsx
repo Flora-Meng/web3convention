@@ -197,7 +197,6 @@ const FooterContent = () => {
 						<StyledLink href="/comingSoon">About Us</StyledLink>
 						<StyledLink href="/contact-us">Contact Us</StyledLink>
 					</div>
-					<ContentText>Tel: +61 429 991 399</ContentText>
 					<ContentText>Information: info@web3convention.com</ContentText>
 					<ContentText>Partnership: business@web3convention.com</ContentText>
 				</Grid>
