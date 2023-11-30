@@ -1,8 +1,9 @@
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
+
 import { color, devices, sizes } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 

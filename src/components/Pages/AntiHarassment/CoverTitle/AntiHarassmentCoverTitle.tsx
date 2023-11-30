@@ -1,18 +1,20 @@
 import styled from 'styled-components';
+
 import {
-    Subtitle,
-    Title
+	Subtitle,
+	Title
 } from '@/components/Pages/Home/HomeCarousel/components/CarouseItem/CarouseItem';
 import { color, devices } from '@/styles/variables';
+
 const { whiteColor, primaryColor } = color;
 interface PageCoverTitleProps {
-    coverText: {
-        _id: string;
-        title: string;
-        subtitle?: string;
-        additionalSubtitle?: string;
-    };
-    translateValue?: string;
+	coverText: {
+		_id: string;
+		title: string;
+		subtitle?: string;
+		additionalSubtitle?: string;
+	};
+	translateValue?: string;
 }
 const Container = styled.div<PageCoverTitleProps>`
 	color: ${whiteColor};
@@ -20,8 +22,8 @@ const Container = styled.div<PageCoverTitleProps>`
 	max-width: 1440px;
 	position: relative;
 	top: 30px;
-    width: calc(100vw - 40px);
-	
+	width: calc(100vw - 40px);
+
 	@media ${devices.laptop} {
 		width: calc(100vw - 720px);
 	}
@@ -53,15 +55,15 @@ const CoverTitle = styled(Title)`
 	}
 `;
 const AntiHarassmentCoverTitle: React.FC<PageCoverTitleProps> = props => {
-    const { coverText, translateValue } = props;
-    return (
-        <Container translateValue={translateValue} coverText={coverText}>
-            {coverText.subtitle && <CoverSubtitle isCurrent>{coverText.subtitle}</CoverSubtitle>}
-            {coverText.additionalSubtitle && (
-                <CoverSubtitle isCurrent>{coverText.additionalSubtitle}</CoverSubtitle>
-            )}
-            <CoverTitle isCurrent>{coverText.title}</CoverTitle>
-        </Container>
-    );
+	const { coverText, translateValue } = props;
+	return (
+		<Container translateValue={translateValue} coverText={coverText}>
+			{coverText.subtitle && <CoverSubtitle isCurrent>{coverText.subtitle}</CoverSubtitle>}
+			{coverText.additionalSubtitle && (
+				<CoverSubtitle isCurrent>{coverText.additionalSubtitle}</CoverSubtitle>
+			)}
+			<CoverTitle isCurrent>{coverText.title}</CoverTitle>
+		</Container>
+	);
 };
 export default AntiHarassmentCoverTitle;
