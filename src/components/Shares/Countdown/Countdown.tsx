@@ -84,7 +84,7 @@ const CountdownUnit = styled.p`
 	margin: 0;
 `;
 
-const COUNTDOWN_DATE = dayjs.tz('2023-12-31T23:59:59', 'Australia/Brisbane').toISOString();
+const COUNTDOWN_DATE = dayjs.tz('2024-05-19 08:00:00', 'Australia/Brisbane').toISOString();
 
 const Countdown: React.FC<CountdownProps> = ({
 	countdownDate = COUNTDOWN_DATE,
