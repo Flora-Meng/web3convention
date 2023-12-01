@@ -104,7 +104,7 @@ const linkConfigList = [
 	},
 	{
 		label: 'Partner with Us',
-		path: 'https://w3con.eventsair.com/SponsorshipPortal/Account/Login?ReturnUrl=%2FSponsorshipPortal%2Fweb3convention%2Fsponsorship'
+		path: '/partners'
 	},
 	{
 		label: 'Agenda',

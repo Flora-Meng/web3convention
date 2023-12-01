@@ -201,10 +201,7 @@ const CarouseItem: React.FC<CarouseItemProps> = ({
 						</ThemeButton>
 					</ButtonContainer>
 					<ButtonContainer isCurrent={isCurrent}>
-						<ThemeButton
-							width="215px"
-							href="https://w3con.eventsair.com/web3convention/sponsorship"
-						>
+						<ThemeButton width="215px" href="/partners">
 							PARTNER WITH US
 						</ThemeButton>
 					</ButtonContainer>

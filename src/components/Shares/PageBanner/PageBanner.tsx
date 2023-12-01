@@ -109,7 +109,7 @@ const ButtonContainer = styled.div`
 
 const partnerButtonConfig = {
 	text: 'PARTNER WITH US',
-	url: 'https://w3con.eventsair.com/SponsorshipPortal/Account/Login?ReturnUrl=%2FSponsorshipPortal%2Fweb3convention%2Fsponsorship'
+	url: '/partners'
 };
 
 const PageBanner: React.FC<PageBannerProps> = props => {
