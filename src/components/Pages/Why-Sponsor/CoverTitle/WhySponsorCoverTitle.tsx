@@ -66,24 +66,9 @@ const CoverDescription = styled(Description)`
 		font-size: 18px;
 	}
 `;
-const CoverAdditionalDescription = styled.div`
-	color: ${primaryColor};
-	line-height: 1;
-	margin-top: 10px;
-	@media ${devices.miniMobile} {
-		font-size: 10px;
-	}
-	@media ${devices.tablet} {
-		font-size: 12px;
-		line-height: 1.33;
-	}
-	@media ${devices.desktop} {
-		font-size: 14px;
-	}
-`;
 
 const sponsorButtonConfig = {
-	text: 'BECOME A SPONSOR NOW',
+	text: 'PARTNER WITH US',
 	url: 'https://w3con.eventsair.com/SponsorshipPortal/Account/Login?ReturnUrl=%2FSponsorshipPortal%2Fweb3convention%2Fsponsorship'
 };
 
@@ -95,7 +80,6 @@ const StageCoverTitle = () => {
 				<CoverTitle isCurrent>{coverText.title}</CoverTitle>
 				<CoverDescription isCurrent>{coverText.text}</CoverDescription>
 				<ThemeButton href={sponsorButtonConfig.url}>{sponsorButtonConfig.text}</ThemeButton>
-				<CoverAdditionalDescription>{coverText.additionalText}</CoverAdditionalDescription>
 			</MainContent>
 		</Container>
 	);

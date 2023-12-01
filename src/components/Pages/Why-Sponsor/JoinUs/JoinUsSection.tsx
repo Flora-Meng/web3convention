@@ -75,7 +75,7 @@ const JoinUsAdditionalDescription = styled.div`
 
 const joinUsButtonConfig = {
 	text: 'REGISTER A SPONSOR NOW',
-	url: 'https://w3con.eventsair.com/SponsorshipPortal/Account/Login?ReturnUrl=%2FSponsorshipPortal%2Fweb3convention%2Fsponsorship'
+	url: '/partners'
 };
 
 const JoinUsSection = () => {
