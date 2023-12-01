@@ -80,7 +80,7 @@ const linkConfigList = [
 	},
 	{
 		label: 'Partner with Us',
-		href: 'https://w3con.eventsair.com/web3convention/sponsorship'
+		href: '/partners'
 	}
 ];
 
