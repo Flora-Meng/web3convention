@@ -69,7 +69,7 @@ const CoverDescription = styled(Description)`
 
 const sponsorButtonConfig = {
 	text: 'PARTNER WITH US',
-	url: 'https://w3con.eventsair.com/SponsorshipPortal/Account/Login?ReturnUrl=%2FSponsorshipPortal%2Fweb3convention%2Fsponsorship'
+	url: '/partners'
 };
 
 const StageCoverTitle = () => {
