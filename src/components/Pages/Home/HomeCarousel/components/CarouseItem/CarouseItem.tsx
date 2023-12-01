@@ -70,7 +70,6 @@ export const Title = styled.h2<TextProps>`
 
 export const Subtitle = styled.p<TextProps>`
 	color: #52f6c6;
-	font-family: Arial;
 	font-size: 18px;
 	font-style: italic;
 	letter-spacing: 1px;

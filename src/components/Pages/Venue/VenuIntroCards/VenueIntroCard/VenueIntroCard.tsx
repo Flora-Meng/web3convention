@@ -58,7 +58,6 @@ const ContentContainer = styled.div`
 `;
 
 const Title = styled.h3`
-	font-family: Arial;
 	font-size: 18px;
 	font-weight: 700;
 	margin-bottom: 1.4vw;
@@ -86,7 +85,6 @@ const Title = styled.h3`
 
 const Description = styled.p`
 	color: ${descriptionColor};
-	font-family: Arial;
 	font-size: 12px;
 	line-height: 1.29;
 	@media ${devices.miniMobile} {

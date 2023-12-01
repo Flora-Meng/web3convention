@@ -105,7 +105,7 @@ const WhyPartners = () => {
 		<WhyPartnersContainer>
 			<Container>
 				<Backdrop>Why</Backdrop>
-				<SectionSubtitle>AI+Web3 Convention 2024</SectionSubtitle>
+				<SectionSubtitle>AI + Web3 Convention 2024</SectionSubtitle>
 				<SectionTitle>Why Partners with AI + Web3 Convention 2024?</SectionTitle>
 				<Description>
 					AI + Web3 Convention 2024 is set to bring together the foremost minds,

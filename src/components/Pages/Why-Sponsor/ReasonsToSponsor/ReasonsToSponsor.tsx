@@ -7,7 +7,6 @@ import imageLoader from '@/utils/loader';
 
 const Container = styled.div`
 	background-color: ${color.blackColor};
-	font-family: Arial;
 	padding: 24px;
 	width: 100%;
 `;
