@@ -41,7 +41,6 @@ const CityTitle = styled.p`
 	}
 `;
 const CityDescription = styled.p`
-	font-family: Arial;
 	font-size: 14px;
 	line-height: 1.57;
 	margin: 0 0 28px 0;

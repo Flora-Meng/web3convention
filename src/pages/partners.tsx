@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Attendees from '@/components/Pages/Partner-With-Us/Attendees';
+import Attendees from '@/components/Pages/Partners/Attendees';
+import NextSteps from '@/components/Pages/Partners/NextSteps';
 import PartnershipSponsorshipSegment from '@/components/Pages/Partners/PartnershipSponsorshipSegment';
 import WhyPartners from '@/components/Pages/Partners/WhyPartners';
 import PageCoverTitle from '@/components/Shares/PageCoverTitle';
@@ -92,6 +93,7 @@ const PartnersPage = () => {
 			<Attendees />
 			<WhyPartners />
 			<PartnershipSponsorshipSegment />
+			<NextSteps />
 			<Footer />
 		</>
 	);

@@ -14,7 +14,6 @@ const Cover = styled.div`
 	background-image: url('/images/background/generalEventsHeaderBG.png');
 	background-position: center;
 	background-size: cover;
-	font-family: Arial;
 	height: 478px;
 	letter-spacing: 0.78px;
 	@media ${devices.mobile} {
