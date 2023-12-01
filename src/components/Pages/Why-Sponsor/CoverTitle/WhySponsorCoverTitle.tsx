@@ -21,12 +21,9 @@ const Container = styled.div`
 const MainContent = styled.div`
 	color: ${whiteColor};
 	margin: 0 auto;
-	max-width: 700px;
+	max-width: 1440px;
 	@media ${devices.tablet} {
 		padding: 0 40px;
-	}
-	@media ${devices.largeLaptop} {
-		max-width: 1440px;
 	}
 `;
 const CoverSubtitle = styled(Subtitle)`
