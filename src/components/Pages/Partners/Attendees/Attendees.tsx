@@ -97,7 +97,7 @@ const Attendees: React.FC = () => {
 				<TitleContainer>
 					<Backdrop>Who</Backdrop>
 					<Subtitle>AI + Web3 Convention 2024</Subtitle>
-					<Title>Who attends AI + Web3 Convention?</Title>
+					<Title>Who attend AI + Web3 Convention?</Title>
 				</TitleContainer>
 				<CounterSlider counterList={counterList} theme="light" />
 			</Content>
