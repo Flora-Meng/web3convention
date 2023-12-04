@@ -8,11 +8,9 @@ import { devices } from '@/styles/variables';
 
 const Backdrop = styled.div`
 	${backdrop};
-	font-size: 70px;
-	left: -4px;
-	@media ${devices.laptop} {
-		font-size: 200px;
-		left: 100px;
+	left: 5vw;
+	@media ${devices.mobile} {
+		left: 2vw;
 	}
 `;
 
@@ -22,14 +20,17 @@ const HomeHighLightsContainer = styled(Box)`
 const Container = styled.div`
 	margin: 0 auto;
 	max-width: 1440px;
-	padding: 50px 0;
+	padding: 90px 0;
+	@media ${devices.mobile} {
+		padding: 80px 0;
+	}
 `;
 const SectionTitle = styled.h2`
 	${sectionTitle};
 	margin-bottom: 20px;
 	max-width: fit-content;
 	@media ${devices.laptop} {
-		margin-bottom: 64px;
+		margin-bottom: 104px;
 	}
 `;
 
