@@ -67,11 +67,11 @@ const AntiHarassment = () => {
 				<div>
 					<SubTitle>3. Definition of Harassment:</SubTitle>
 					<Description>
-							Harassment is defined as any unwelcome conduct or communication based on
-							an individual's race, gender, sexual orientation, gender identity or
-							expression, disability, physical appearance, religion, national origin,
-							age, or any other protected status. Harassment can take various forms,
-							including but not limited to:
+						Harassment is defined as any unwelcome conduct or communication based on an
+						individual's race, gender, sexual orientation, gender identity or
+						expression, disability, physical appearance, religion, national origin, age,
+						or any other protected status. Harassment can take various forms, including
+						but not limited to:
 					</Description>
 					<PointList>
 						<li>
@@ -87,10 +87,9 @@ const AntiHarassment = () => {
 						<li>Unwelcome sexual attention</li>
 					</PointList>
 					<Description>
-							Participants asked to stop any harassing behavior are expected to comply
-							immediately.
+						Participants asked to stop any harassing behavior are expected to comply
+						immediately.
 					</Description>
-
 				</div>
 				<div>
 					<SubTitle>4. Reporting Procedure:</SubTitle>
