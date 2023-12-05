@@ -24,7 +24,7 @@ const SubTitle = styled.p`
 	margin: 0;
 	padding: 16px 0;
 `;
-const Description = styled.p`
+const Description = styled.div`
 	color: ${color.whiteColor};
 	font-size: 16px;
 	line-height: 1.63;
