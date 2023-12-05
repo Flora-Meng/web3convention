@@ -74,7 +74,7 @@ const JoinUsAdditionalDescription = styled.div`
 `;
 
 const joinUsButtonConfig = {
-	text: 'REGISTER A SPONSOR NOW',
+	text: 'PARTNER WITH US',
 	url: '/partners'
 };
 

@@ -42,7 +42,6 @@ const Backdrop = styled.div`
 	left: 5vw;
 	z-index: -1;
 	@media ${devices.mobile} {
-		top: -32px;
 		left: 2vw;
 	}
 `;
