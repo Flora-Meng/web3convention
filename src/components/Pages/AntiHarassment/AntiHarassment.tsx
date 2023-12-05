@@ -24,7 +24,7 @@ const SubTitle = styled.p`
 	margin: 0;
 	padding: 16px 0;
 `;
-const Description = styled.div`
+const Description = styled.p`
 	color: ${color.whiteColor};
 	font-size: 16px;
 	line-height: 1.63;
@@ -32,6 +32,15 @@ const Description = styled.div`
 	padding: 0 0 24px 0;
 	white-space: pre-wrap;
 `;
+const PointList = styled.div`
+	color: ${color.whiteColor};
+	font-size: 16px;
+	line-height: 1.63;
+	margin: 0;
+	padding: 0 0 24px 0;
+	white-space: pre-wrap;
+`;
+
 const AntiHarassment = () => {
 	return (
 		<Container>
@@ -58,14 +67,13 @@ const AntiHarassment = () => {
 				<div>
 					<SubTitle>3. Definition of Harassment:</SubTitle>
 					<Description>
-						<p>
 							Harassment is defined as any unwelcome conduct or communication based on
 							an individual's race, gender, sexual orientation, gender identity or
 							expression, disability, physical appearance, religion, national origin,
 							age, or any other protected status. Harassment can take various forms,
 							including but not limited to:
-						</p>
-
+					</Description>
+					<PointList>
 						<li>
 							Offensive verbal comments related to gender, gender identity and
 							expression, sexual orientation, disability, physical appearance, body
@@ -77,12 +85,12 @@ const AntiHarassment = () => {
 						<li>Intimidation, stalking, or following.</li>
 						<li>Inappropriate use of social media or other communication channels.</li>
 						<li>Unwelcome sexual attention</li>
-
-						<p>
+					</PointList>
+					<Description>
 							Participants asked to stop any harassing behavior are expected to comply
 							immediately.
-						</p>
 					</Description>
+
 				</div>
 				<div>
 					<SubTitle>4. Reporting Procedure:</SubTitle>
