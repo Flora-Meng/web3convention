@@ -123,6 +123,7 @@ const ChooseLocation: React.FC<ChooseLocationProps> = ({ onLocationChange }) => 
 	const [searchedLocations, setSearchedLocations] = useState<ICity[]>([]);
 	const [isExpanded, setIsExpanded] = useState(false);
 	const [inputValue, setInputValue] = useState('');
+	const [filteredCities, setFilteredCities] = useState<ICity[]>([]);
 	const handleClickAway = () => {
 		setIsExpanded(false);
 	};
@@ -140,6 +141,16 @@ const ChooseLocation: React.FC<ChooseLocationProps> = ({ onLocationChange }) => 
 			value = value.slice(0, 50);
 		}
 		setInputValue(value);
+		if (value.trim() === '') {
+			// When input is empty, reset to the initial list
+			setFilteredCities(searchedLocations);
+		} else {
+			// Filter cities based on input value
+			const filtered = searchedLocations.filter(city =>
+				city.name.toLowerCase().startsWith(value)
+			);
+			setFilteredCities(filtered);
+		}
 	};
 	const extractLocalityName = (response: GeocodeResult[]) => {
 		if (!response || response.length === 0) return '';
@@ -186,6 +197,9 @@ const ChooseLocation: React.FC<ChooseLocationProps> = ({ onLocationChange }) => 
 	useEffect(() => {
 		fetchCities();
 	}, []);
+	useEffect(() => {
+		setFilteredCities(searchedLocations); // Initialize filteredCities on component mount
+	}, [searchedLocations]);
 
 	return (
 		<ClickAwayListener onClickAway={handleClickAway}>
@@ -224,7 +238,7 @@ const ChooseLocation: React.FC<ChooseLocationProps> = ({ onLocationChange }) => 
 								Use my current location
 							</CurrentLocation>
 						</CurrentLocationContainer>
-						{searchedLocations.map((city: ICity) => (
+						{(inputValue.trim() === '' ? searchedLocations : filteredCities).map((city: ICity) => (
 							<DropdownOption
 								key={city._id}
 								onClick={() => handleOptionClick(city.name)}
