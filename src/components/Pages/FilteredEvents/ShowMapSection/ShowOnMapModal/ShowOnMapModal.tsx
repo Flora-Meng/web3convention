@@ -23,20 +23,17 @@ const StyledBox = styled(Box)`
 	display: flex;
 	height: fit-content;
 	left: 50%;
-	padding: 40px ${mobilePaddingLeft};
 	position: absolute;
 	top: 50%;
 	transform: translate(-50%, -50%);
 	width: 90%;
 	@media ${devices.mobile} {
 		width: calc(100vw - 115px);
-		padding: 40px 70px;
 		border: solid 1px #969696;
 	}
 
 	@media ${devices.laptop} {
 		width: calc(100vw - 230px);
-		padding: 40px 70px;
 		border: solid 1px #969696;
 		height: calc(100vh - 140px);
 	}
