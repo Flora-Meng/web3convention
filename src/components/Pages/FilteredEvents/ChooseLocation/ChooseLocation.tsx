@@ -238,26 +238,28 @@ const ChooseLocation: React.FC<ChooseLocationProps> = ({ onLocationChange }) => 
 								Use my current location
 							</CurrentLocation>
 						</CurrentLocationContainer>
-						{(inputValue.trim() === '' ? searchedLocations : filteredCities).map((city: ICity) => (
-							<DropdownOption
-								key={city._id}
-								onClick={() => handleOptionClick(city.name)}
-							>
-								<DropdownContentIcon
-									loader={imageLoader}
-									src="/images/icons/search-history.svg"
-									alt="search history"
-									width={13}
-									height={13}
-								/>
-								<LocationText>
-									{city.name}
-									<LocationLabel>
-										{city.state},{city.country}
-									</LocationLabel>
-								</LocationText>
-							</DropdownOption>
-						))}
+						{(inputValue.trim() === '' ? searchedLocations : filteredCities).map(
+							(city: ICity) => (
+								<DropdownOption
+									key={city._id}
+									onClick={() => handleOptionClick(city.name)}
+								>
+									<DropdownContentIcon
+										loader={imageLoader}
+										src="/images/icons/search-history.svg"
+										alt="search history"
+										width={13}
+										height={13}
+									/>
+									<LocationText>
+										{city.name}
+										<LocationLabel>
+											{city.state},{city.country}
+										</LocationLabel>
+									</LocationText>
+								</DropdownOption>
+							)
+						)}
 					</DropdownContent>
 				)}
 			</MainContainer>
