@@ -50,14 +50,18 @@ const TermsAndConditions = () => {
 						<br />
 						Web3 Convention (WEB3 PTY. LTD.)
 						<br />
-						ABN: 86 618 319 770 <br />
-						Email: info@web3convention.com <br />
+						ABN: 86 618 319 770
+						<br />
+						Email: info@web3convention.com
+						<br />
 						All transactions are in Australian Dollars (AUD) unless otherwise stated.{' '}
 						<br />
 						You may purchase tickets for the "Web3 Convention" on our website, subject
-						to availability. <br />
+						to availability.
+						<br />
 						All ticket sales are final. Refunds and exchanges will not be provided
-						except as required by Australian consumer law. <br />
+						except as required by Australian consumer law.
+						<br />
 						The purchase of a ticket grants you access to the "Web3 Convention" on the
 						specified date(s) and venue.
 					</Description>
@@ -106,13 +110,18 @@ const TermsAndConditions = () => {
 						<br />
 						Entry to theconvention will be granted only to individuals with a valid and
 						properly worn ID card/ticket.
-						<br /> Defaced, damaged or lost tickets may not be accepted for entry.
-						<br /> Lost or stolen ID cards/tickets will not be reissued. You are
-						responsible for the safekeeping of your ID card/tickets.
-						<br /> You are solely responsible for your personal belongings at all times.
-						<br /> We reserve the right to conduct security searches to ensure safety.
-						<br /> We reserve the right to refuse entry or remove any person from the
-						Event at our discretion.
+						<br />
+						Defaced, damaged or lost tickets may not be accepted for entry.
+						<br />
+						Lost or stolen ID cards/tickets will not be reissued. You are responsible
+						for the safekeeping of your ID card/tickets.
+						<br />
+						You are solely responsible for your personal belongings at all times.
+						<br />
+						We reserve the right to conduct security searches to ensure safety.
+						<br />
+						We reserve the right to refuse entry or remove any person from the Event at
+						our discretion.
 					</Description>
 				</div>
 				<div>
@@ -170,41 +179,54 @@ const TermsAndConditions = () => {
 					<Description>
 						I confirm that the information I have entered is completely accurate, and in
 						particular, I have taken care to ensure that my email address is correctly
-						entered. <br />
-						<br />I agree and consent to my personal information being utilized for
-						current and future competitions, draws, lotteries, and promotions by the
-						promoters and exhibitors of the Convention. <br />
-						<br />I agree and consent to, for promotional purposes, you providing the
+						entered.
+						<br />
+						<br />
+						I agree and consent to my personal information being utilized for current
+						and future competitions, draws, lotteries, and promotions by the promoters
+						and exhibitors of the Convention.
+						<br />
+						<br />
+						I agree and consent to, for promotional purposes, you providing the
 						information I have entered into any electronic form on your site to
 						entities/businesses attached, related, affiliated, or associated to the
 						Convention, including but not limited to the Event Organiser, presenters,
 						sponsors, exhibitors, and suppliers.
-						<br /> <br />I agree that by my entering into any competitions at the
-						Convention, I agree and consent to my personal information being utilized by
-						such competition for the competition purposes and the promoter of the
-						competition and authorize the publication of my details as they relate to
-						the competition.
-						<br /> <br />I agree that you will not be liable to me, except in the case
-						of fraud, for any act or omission (whether negligent or misleading or
-						deceptive or otherwise) by you in the performance or purported performance
-						of your obligations under these terms and conditions.
-						<br /> <br />I indemnify you against all claims, except in the case of
-						fraud, arising out of or in any way connected with any act or omission by
-						you in the performance or purported performance of your obligations under
-						these terms and conditions. <br />
-						<br />I agree that liability on your part or on the part of your servants or
+						<br />
+						<br />
+						I agree that by my entering into any competitions at the Convention, I agree
+						and consent to my personal information being utilized by such competition
+						for the competition purposes and the promoter of the competition and
+						authorize the publication of my details as they relate to the competition.
+						<br />
+						<br />
+						I agree that you will not be liable to me, except in the case of fraud, for
+						any act or omission (whether negligent or misleading or deceptive or
+						otherwise) by you in the performance or purported performance of your
+						obligations under these terms and conditions.
+						<br />
+						<br />
+						I indemnify you against all claims, except in the case of fraud, arising out
+						of or in any way connected with any act or omission by you in the
+						performance or purported performance of your obligations under these terms
+						and conditions.
+						<br />
+						<br />
+						I agree that liability on your part or on the part of your servants or
 						agents for damages for or in respect of any claim arising out of or in
 						connection with the relationship established by this agreement or any
 						conduct under it or any orders or instructions given to you by me, shall not
 						in any event (and whether or not such liability results from or involves
 						negligence) exceed $50.00.
 						<br />
-						<br /> I agree that by my entering information into any electronic form on
-						your site, that I am agreeing to the terms and conditions herein and to the
+						<br />
+						I agree that by my entering information into any electronic form on your
+						site, that I am agreeing to the terms and conditions herein and to the
 						Disclaimer.
 						<br />
-						<br /> By purchasing a ticket for the "Web3 Convention," you agree to the
-						above terms and conditions.
+						<br />
+						By purchasing a ticket for the "Web3 Convention," you agree to the above
+						terms and conditions.
 					</Description>
 				</div>
 				<div>
