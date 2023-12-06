@@ -30,8 +30,8 @@ const Container = styled.div`
 `;
 const ImageWrapper = styled.div`
 	height: auto;
-	width: 245px;
 	padding-bottom: 15px;
+	width: 245px;
 	@media ${devices.mobile} {
 		padding-bottom: 0px;
 	}
@@ -44,12 +44,12 @@ const InfoContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	font-size: 16px;
+	gap: 10px;
 	height: 100%;
 	justify-content: space-between;
 	letter-spacing: 1px;
 	line-height: 1.5;
 	padding: 0 15px;
-	gap: 10px;
 	@media ${devices.mobile} {
 		padding: 0 27px;
 	}
@@ -65,7 +65,6 @@ const TimeAndLocationContainer = styled.div`
 	align-items: center;
 	display: flex;
 	flex-direction: row;
-	
 `;
 const Description = styled.span`
 	margin-left: 9px;

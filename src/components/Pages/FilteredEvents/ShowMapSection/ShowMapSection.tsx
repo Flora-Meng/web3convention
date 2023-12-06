@@ -1,13 +1,13 @@
 import Image from 'next/image';
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import ShowOnMapModal1 from './ShowOnMapModal';
+import ChooseLocation from '@/components/Pages/FilteredEvents/ChooseLocation';
 import ShowOnMapModal2 from '@/components/Shares/ShowOnMapModal';
-import {color, devices} from '@/styles/variables';
-import imageLoader from '@/utils/loader';
-import ChooseLocation from "@/components/Pages/FilteredEvents/ChooseLocation";
 import fetchMeetups from '@/services/meetup';
+import { color, devices } from '@/styles/variables';
+import imageLoader from '@/utils/loader';
 
 const { primaryColor } = color;
 const { blackColor } = color;
@@ -74,8 +74,8 @@ const SingleEventContainer = styled.div`
 const FilteredContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	width: 770px;
 	padding: 0 8px 0 8px;
+	width: 770px;
 	@media ${devices.mobile} {
 		padding: 0 8px 0 24px;
 	}
@@ -84,7 +84,7 @@ const LocationAndNameContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	padding: 1vw 1vw;
-	width:310px;
+	width: 310px;
 	@media ${devices.mobile} {
 		flex-direction: row;
 		padding: 24px 22px 40px 0px;
@@ -93,9 +93,9 @@ const LocationAndNameContainer = styled.div`
 	}
 `;
 const NameContainer = styled.div`
-	width: 100%;
-	text-align:center;
 	align-items: center;
+	text-align: center;
+	width: 100%;
 `;
 
 const ShowMapSection = () => {
@@ -138,9 +138,7 @@ const ShowMapSection = () => {
 				<ShowOnMapModal1 open={open} handleClose={handleClose}>
 					<FilteredContainer>
 						<LocationAndNameContainer>
-							<NameContainer>
-								Name Container
-							</NameContainer>
+							<NameContainer>Name Container</NameContainer>
 							<ChooseLocation onLocationChange={handleLocationChange} />
 						</LocationAndNameContainer>
 						<EventContainer>
