@@ -37,7 +37,7 @@ const PointList = styled.ul`
 	font-size: 16px;
 	line-height: 1.63;
 	margin: 0;
-	padding: 0 0 24px 0;
+	padding: 0 0 24px 16px;
 	white-space: pre-wrap;
 `;
 
