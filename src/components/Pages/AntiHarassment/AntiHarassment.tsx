@@ -32,7 +32,7 @@ const Description = styled.p`
 	padding: 0 0 24px 0;
 	white-space: pre-wrap;
 `;
-const PointList = styled.div`
+const PointList = styled.ul`
 	color: ${color.whiteColor};
 	font-size: 16px;
 	line-height: 1.63;
