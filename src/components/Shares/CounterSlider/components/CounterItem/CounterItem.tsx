@@ -11,11 +11,11 @@ interface CounterItemProps {
 	shouldReset: boolean;
 }
 
-const CounterItem: React.FC<CounterItemProps> = ({ shouldReset, ...props }) => {
+const CounterItem: React.FC<CounterItemProps> = ({ suffix, shouldReset, ...props }) => {
 	const countUpRef = useRef(null);
 
 	const formatNumberWithCommas = (value: number) => {
-		return value.toLocaleString();
+		return value.toLocaleString() + (suffix || '');
 	};
 
 	const { start } = useCountUp({
