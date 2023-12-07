@@ -45,8 +45,6 @@ const HackathonPage = () => {
 				<StageCoverTitle />
 			</Cover>
 			<Challenge />
-			<PageBanner bannerInfo={uniHackathon} />
-			<Agenda />
 			<WhyHackathon />
 			<Prizes />
 			<Benefits />

@@ -191,7 +191,7 @@ const Challenge = () => {
 	return (
 		<ContentContainer>
 			<Subtitle>Web3 Hackathon 2023</Subtitle>
-			<Title>The Next challenge</Title>
+			<Title>Challenges</Title>
 			<Backdrop>Challenge</Backdrop>
 			<p>
 				Build with the latest AI tools from OpenAI to create innovative new Web3 apps . Work

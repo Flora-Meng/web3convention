@@ -70,7 +70,6 @@ export const Title = styled.h2<TextProps>`
 
 export const Subtitle = styled.p<TextProps>`
 	color: #52f6c6;
-	font-family: Arial;
 	font-size: 18px;
 	font-style: italic;
 	letter-spacing: 1px;
@@ -202,10 +201,7 @@ const CarouseItem: React.FC<CarouseItemProps> = ({
 						</ThemeButton>
 					</ButtonContainer>
 					<ButtonContainer isCurrent={isCurrent}>
-						<ThemeButton
-							width="215px"
-							href="https://w3con.eventsair.com/web3convention/sponsorship"
-						>
+						<ThemeButton width="215px" href="/partners">
 							PARTNER WITH US
 						</ThemeButton>
 					</ButtonContainer>

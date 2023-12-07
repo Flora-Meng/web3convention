@@ -1,5 +1,6 @@
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { ClickAwayListener } from '@mui/material';
+import { isEmpty } from 'lodash';
 import Image from 'next/image';
 import React, { ChangeEvent, useEffect, useState } from 'react';
 import styled from 'styled-components';
@@ -123,6 +124,7 @@ const ChooseLocation: React.FC<ChooseLocationProps> = ({ onLocationChange }) => 
 	const [searchedLocations, setSearchedLocations] = useState<ICity[]>([]);
 	const [isExpanded, setIsExpanded] = useState(false);
 	const [inputValue, setInputValue] = useState('');
+	const [filteredCities, setFilteredCities] = useState<ICity[]>([]);
 	const handleClickAway = () => {
 		setIsExpanded(false);
 	};
@@ -140,6 +142,16 @@ const ChooseLocation: React.FC<ChooseLocationProps> = ({ onLocationChange }) => 
 			value = value.slice(0, 50);
 		}
 		setInputValue(value);
+		if (value.trim() === '') {
+			// When input is empty, reset to the initial list
+			setFilteredCities(searchedLocations);
+		} else {
+			// Filter cities based on input value
+			const filtered = searchedLocations.filter(city =>
+				city.name.toLowerCase().startsWith(value)
+			);
+			setFilteredCities(filtered);
+		}
 	};
 	const extractLocalityName = (response: GeocodeResult[]) => {
 		if (!response || response.length === 0) return '';
@@ -186,6 +198,9 @@ const ChooseLocation: React.FC<ChooseLocationProps> = ({ onLocationChange }) => 
 	useEffect(() => {
 		fetchCities();
 	}, []);
+	useEffect(() => {
+		setFilteredCities(searchedLocations); // Initialize filteredCities on component mount
+	}, [searchedLocations]);
 
 	return (
 		<ClickAwayListener onClickAway={handleClickAway}>
@@ -224,26 +239,28 @@ const ChooseLocation: React.FC<ChooseLocationProps> = ({ onLocationChange }) => 
 								Use my current location
 							</CurrentLocation>
 						</CurrentLocationContainer>
-						{searchedLocations.map((city: ICity) => (
-							<DropdownOption
-								key={city._id}
-								onClick={() => handleOptionClick(city.name)}
-							>
-								<DropdownContentIcon
-									loader={imageLoader}
-									src="/images/icons/search-history.svg"
-									alt="search history"
-									width={13}
-									height={13}
-								/>
-								<LocationText>
-									{city.name}
-									<LocationLabel>
-										{city.state},{city.country}
-									</LocationLabel>
-								</LocationText>
-							</DropdownOption>
-						))}
+						{(isEmpty(inputValue.trim()) ? searchedLocations : filteredCities).map(
+							(city: ICity) => (
+								<DropdownOption
+									key={city._id}
+									onClick={() => handleOptionClick(city.name)}
+								>
+									<DropdownContentIcon
+										loader={imageLoader}
+										src="/images/icons/search-history.svg"
+										alt="search history"
+										width={13}
+										height={13}
+									/>
+									<LocationText>
+										{city.name}
+										<LocationLabel>
+											{city.state},{city.country}
+										</LocationLabel>
+									</LocationText>
+								</DropdownOption>
+							)
+						)}
 					</DropdownContent>
 				)}
 			</MainContainer>

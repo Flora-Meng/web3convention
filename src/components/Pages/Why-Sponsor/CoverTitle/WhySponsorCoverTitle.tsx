@@ -21,12 +21,9 @@ const Container = styled.div`
 const MainContent = styled.div`
 	color: ${whiteColor};
 	margin: 0 auto;
-	max-width: 700px;
+	max-width: 1440px;
 	@media ${devices.tablet} {
 		padding: 0 40px;
-	}
-	@media ${devices.largeLaptop} {
-		max-width: 1440px;
 	}
 `;
 const CoverSubtitle = styled(Subtitle)`
@@ -66,25 +63,10 @@ const CoverDescription = styled(Description)`
 		font-size: 18px;
 	}
 `;
-const CoverAdditionalDescription = styled.div`
-	color: ${primaryColor};
-	line-height: 1;
-	margin-top: 10px;
-	@media ${devices.miniMobile} {
-		font-size: 10px;
-	}
-	@media ${devices.tablet} {
-		font-size: 12px;
-		line-height: 1.33;
-	}
-	@media ${devices.desktop} {
-		font-size: 14px;
-	}
-`;
 
 const sponsorButtonConfig = {
-	text: 'BECOME A SPONSOR NOW',
-	url: 'https://w3con.eventsair.com/SponsorshipPortal/Account/Login?ReturnUrl=%2FSponsorshipPortal%2Fweb3convention%2Fsponsorship'
+	text: 'PARTNER WITH US',
+	url: '/partners'
 };
 
 const StageCoverTitle = () => {
@@ -95,7 +77,6 @@ const StageCoverTitle = () => {
 				<CoverTitle isCurrent>{coverText.title}</CoverTitle>
 				<CoverDescription isCurrent>{coverText.text}</CoverDescription>
 				<ThemeButton href={sponsorButtonConfig.url}>{sponsorButtonConfig.text}</ThemeButton>
-				<CoverAdditionalDescription>{coverText.additionalText}</CoverAdditionalDescription>
 			</MainContent>
 		</Container>
 	);

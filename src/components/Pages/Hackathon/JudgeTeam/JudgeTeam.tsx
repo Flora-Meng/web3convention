@@ -124,7 +124,6 @@ const InfoMainContainer = styled.div`
 
 const MemberName = styled.div`
 	color: #fff;
-	font-family: Arial;
 	font-size: 32px;
 	font-weight: bold;
 	height: 38px;
@@ -174,13 +173,13 @@ const ModalSubtitle = styled.span`
 
 const ModalPostDescription = styled.p`
 	color: #e8e8e8;
-	font-family: Arial;
 	font-size: 14px;
 	line-height: 1.5;
 	margin-top: 24px;
 	max-height: 20vh;
 	overflow-y: scroll;
 	text-wrap: wrap;
+	white-space: pre-wrap;
 	@media ${devices.mobile} {
 		margin-top: 40px;
 		max-height: unset;

@@ -14,7 +14,6 @@ const Cover = styled.div`
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	font-family: Arial;
 	height: 478px;
 	@media ${devices.mobile} {
 		height: 360px;

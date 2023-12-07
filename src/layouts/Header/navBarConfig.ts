@@ -50,7 +50,7 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 		// 	path: '/web3-convention-2024'
 		// },
 		{
-			title: 'Hackathon',
+			title: 'Web3 Hackathon 2023',
 			path: '/hackathon'
 		}
 	],
@@ -77,7 +77,6 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 	[ENavItem.PARTNER]: [
 		{
 			title: 'Partner with Us',
-			// path: 'https://w3con.eventsair.com/SponsorshipPortal/Account/Login?ReturnUrl=%2FSponsorshipPortal%2Fweb3convention%2Fsponsorship'
 			path: '/partners'
 		},
 		{

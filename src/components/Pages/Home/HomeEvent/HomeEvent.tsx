@@ -15,35 +15,18 @@ const HomeEventContainer = styled.div`
 const Container = styled.div`
 	margin: 0 auto;
 	max-width: 1440px;
-	padding: 50px 0;
-`;
-
-const MaskContainer = styled.div`
-	position: absolute;
+	padding: 80px 0;
 	@media ${devices.mobile} {
-		margin-top: 40px;
-	}
-	@media ${devices.desktop} {
-		margin-top: 20px;
+		padding: 50px 0;
 	}
 `;
 
 const Backdrop = styled.div`
 	${backdrop};
-	font-size: 23vw;
-	left: 0;
-	@media ${devices.tablet} {
-		left: 60px;
-	}
-	@media ${devices.largeLaptop} {
-		font-size: 320px;
-	}
-	@media ${devices.miniMobile} {
-		font-size: 70px;
-	}
-	@media ${devices.desktop} {
-		font-size: 230px;
-		left: 0;
+	left: 5vw;
+	@media ${devices.mobile} {
+		left: 2vw;
+		top: 0;
 	}
 `;
 
@@ -79,9 +62,7 @@ const HomeEvent: React.FC = () => {
 	return (
 		<HomeEventContainer>
 			<Container>
-				<MaskContainer>
-					<Backdrop>Agenda</Backdrop>
-				</MaskContainer>
+				<Backdrop>Agenda</Backdrop>
 				<ContentContainer>
 					<Subtitle>AI + Web3 Convention 2024</Subtitle>
 					<Title>Convention Agenda</Title>

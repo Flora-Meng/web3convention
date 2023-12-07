@@ -11,7 +11,6 @@ const { whiteColor, primaryColor } = color;
 
 const Container = styled.div`
 	color: ${whiteColor};
-	font-family: Arial;
 	margin: 0 auto;
 	max-width: 1440px;
 	position: relative;
