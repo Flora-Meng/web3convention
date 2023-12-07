@@ -1,5 +1,6 @@
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { ClickAwayListener } from '@mui/material';
+import { isEmpty } from 'lodash';
 import Image from 'next/image';
 import React, { ChangeEvent, useEffect, useState } from 'react';
 import styled from 'styled-components';
@@ -9,7 +10,6 @@ import getStateFromCoordinates from '@/services/getStateFromCoordinates';
 import { color } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 import { isAlphaNumericSpace } from '@/utils/validator';
-import { isEmpty } from 'lodash';
 
 const { whiteColor, darkPrimaryColor, inputTextColor } = color;
 const MainContainer = styled.div`

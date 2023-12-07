@@ -1,3 +1,4 @@
+import { isEmpty } from 'lodash';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
@@ -8,7 +9,6 @@ import ShowOnMapModal2 from '@/components/Shares/ShowOnMapModal';
 import fetchMeetups from '@/services/meetup';
 import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
-import { isEmpty } from 'lodash';
 
 const { primaryColor } = color;
 const { blackColor } = color;
@@ -125,7 +125,8 @@ const ShowMapSection = () => {
 		setSelectedLocation(location);
 	};
 	const filteredEvents = filterEvent.filter(
-		event => isEmpty(selectedLocation) ||
+		event =>
+			isEmpty(selectedLocation) ||
 			(!isEmpty(event.city) && event.city[0].name === selectedLocation)
 	);
 	return (
