@@ -8,6 +8,7 @@ import ShowOnMapModal2 from '@/components/Shares/ShowOnMapModal';
 import fetchMeetups from '@/services/meetup';
 import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
+import { isEmpty } from 'lodash';
 
 const { primaryColor } = color;
 const { blackColor } = color;
@@ -74,10 +75,11 @@ const SingleEventContainer = styled.div`
 const FilteredContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	padding: 0 8px 0 8px;
-	width: 770px;
+	padding: 0 8px;
+	width: 100%;
 	@media ${devices.mobile} {
 		padding: 0 8px 0 24px;
+		width: 770px;
 	}
 `;
 const LocationAndNameContainer = styled.div`
@@ -122,6 +124,10 @@ const ShowMapSection = () => {
 	const handleLocationChange = (location: string) => {
 		setSelectedLocation(location);
 	};
+	const filteredEvents = filterEvent.filter(
+		event => isEmpty(selectedLocation) ||
+			(!isEmpty(event.city) && event.city[0].name === selectedLocation)
+	);
 	return (
 		<Container>
 			<MapContainer>
@@ -142,28 +148,14 @@ const ShowMapSection = () => {
 							<ChooseLocation onLocationChange={handleLocationChange} />
 						</LocationAndNameContainer>
 						<EventContainer>
-							{filterEvent.filter(
-								event =>
-									!selectedLocation ||
-									(event.city &&
-										event.city.length > 0 &&
-										event.city[0].name === selectedLocation)
-							).length > 0 ? (
-								filterEvent
-									.filter(
-										event =>
-											!selectedLocation ||
-											(event.city &&
-												event.city.length > 0 &&
-												event.city[0].name === selectedLocation)
-									)
-									.map(eventInfo => (
-										<SingleEventContainer key={eventInfo._id}>
-											<ShowOnMapModal2 event={eventInfo} />
-										</SingleEventContainer>
-									))
-							) : (
+							{isEmpty(filteredEvents) ? (
 								<div>No results found</div>
+							) : (
+								filteredEvents.map(eventInfo => (
+									<SingleEventContainer key={eventInfo._id}>
+										<ShowOnMapModal2 event={eventInfo} />
+									</SingleEventContainer>
+								))
 							)}
 						</EventContainer>
 					</FilteredContainer>

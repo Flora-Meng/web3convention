@@ -9,6 +9,7 @@ import getStateFromCoordinates from '@/services/getStateFromCoordinates';
 import { color } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 import { isAlphaNumericSpace } from '@/utils/validator';
+import { isEmpty } from 'lodash';
 
 const { whiteColor, darkPrimaryColor, inputTextColor } = color;
 const MainContainer = styled.div`
@@ -238,7 +239,7 @@ const ChooseLocation: React.FC<ChooseLocationProps> = ({ onLocationChange }) => 
 								Use my current location
 							</CurrentLocation>
 						</CurrentLocationContainer>
-						{(inputValue.trim() === '' ? searchedLocations : filteredCities).map(
+						{(isEmpty(inputValue.trim()) ? searchedLocations : filteredCities).map(
 							(city: ICity) => (
 								<DropdownOption
 									key={city._id}
