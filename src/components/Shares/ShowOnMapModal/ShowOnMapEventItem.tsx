@@ -79,11 +79,11 @@ interface EventCardProps {
 	event: IMeetup;
 }
 
-const ShowOnMapModal: React.FC<EventCardProps> = ({ event }) => {
+const ShowOnMapEventItem: React.FC<EventCardProps> = ({ event }) => {
 	const { _id, bannersUploader, title, location, city, period } = event;
 	const cityNames = city ? city.map(detail => detail.name).join(', ') : '';
-
 	const formattedDate = dayjs(period.start).utc().local().format('ddd, MMM D, YYYY, hA [GMT]Z');
+
 	return (
 		<Link href={`/event/${_id}`}>
 			<Container>
@@ -116,4 +116,4 @@ const ShowOnMapModal: React.FC<EventCardProps> = ({ event }) => {
 	);
 };
 
-export default ShowOnMapModal;
+export default ShowOnMapEventItem;
