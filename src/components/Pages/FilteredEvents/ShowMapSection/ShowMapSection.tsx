@@ -11,7 +11,6 @@ import ShowOnMapEventItem from '@/components/Shares/ShowOnMapModal/ShowOnMapEven
 import fetchMeetups from '@/services/meetup';
 import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
-import { isAlphaNumericSpace } from '@/utils/validator';
 
 const { primaryColor } = color;
 const { blackColor } = color;
