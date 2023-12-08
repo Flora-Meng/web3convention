@@ -1,13 +1,12 @@
-import { isEmpty } from 'lodash';
 import Image from 'next/image';
-import React, { ChangeEvent, useEffect, useState } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import styled from 'styled-components';
 
 import { color } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 import { isAlphaNumericSpace } from '@/utils/validator';
 
-const { whiteColor, darkPrimaryColor, inputTextColor } = color;
+const { darkPrimaryColor, inputTextColor } = color;
 
 const MainContainer = styled.div`
 	position: relative;
