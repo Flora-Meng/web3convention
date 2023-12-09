@@ -3,9 +3,11 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
+import InputTextFilter from '../InputTextFilter';
+
 import ShowOnMapModal1 from './ShowOnMapModal';
 import ChooseLocation from '@/components/Pages/FilteredEvents/ChooseLocation';
-import ShowOnMapModal2 from '@/components/Shares/ShowOnMapModal';
+import ShowOnMapEventItem from '@/components/Shares/ShowOnMapModal/ShowOnMapEventItem';
 import fetchMeetups from '@/services/meetup';
 import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
@@ -111,6 +113,7 @@ const ShowMapSection = () => {
 	};
 	const [filterEvent, setFilterEvent] = useState<IMeetup[]>([]);
 	const [selectedLocation, setSelectedLocation] = useState('');
+	const [searchInput, setSearchInput] = useState('');
 
 	const fetchEvent = async () => {
 		const response = await fetchMeetups();
@@ -121,13 +124,18 @@ const ShowMapSection = () => {
 		fetchEvent();
 	}, []);
 
+	const handleSearchInputChange = (inputValue: string) => {
+		setSearchInput(inputValue.toLowerCase());
+	};
+
 	const handleLocationChange = (location: string) => {
 		setSelectedLocation(location);
 	};
 	const filteredEvents = filterEvent.filter(
 		event =>
-			isEmpty(selectedLocation) ||
-			(!isEmpty(event.city) && event.city[0].name === selectedLocation)
+			(isEmpty(selectedLocation) ||
+				(!isEmpty(event.city) && event.city[0].name === selectedLocation)) &&
+			(isEmpty(searchInput) || event.title.toLowerCase().includes(searchInput))
 	);
 	return (
 		<Container>
@@ -145,7 +153,9 @@ const ShowMapSection = () => {
 				<ShowOnMapModal1 open={open} handleClose={handleClose}>
 					<FilteredContainer>
 						<LocationAndNameContainer>
-							<NameContainer>Name Container</NameContainer>
+							<NameContainer>
+								<InputTextFilter onInputChange={handleSearchInputChange} />
+							</NameContainer>
 							<ChooseLocation onLocationChange={handleLocationChange} />
 						</LocationAndNameContainer>
 						<EventContainer>
@@ -154,7 +164,7 @@ const ShowMapSection = () => {
 							) : (
 								filteredEvents.map(eventInfo => (
 									<SingleEventContainer key={eventInfo._id}>
-										<ShowOnMapModal2 event={eventInfo} />
+										<ShowOnMapEventItem event={eventInfo} />
 									</SingleEventContainer>
 								))
 							)}
