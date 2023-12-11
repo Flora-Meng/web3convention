@@ -206,7 +206,7 @@ const EventCard: React.FC<EventCardProps> = ({ eventInfo }) => {
 					</CompanyAvatar>
 					<CompanyName>{company.name}</CompanyName>
 				</StyledLink>
-				{exhibitors.length !== 0 ? (
+				{exhibitors?.length !== 0 ? (
 					<ExhibitorIconWrapper>
 						<StyledTooltip title={description} arrow>
 							<img

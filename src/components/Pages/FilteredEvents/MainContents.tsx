@@ -1,3 +1,6 @@
+import WestIcon from '@mui/icons-material/West';
+import { Button, Pagination, Stack } from '@mui/material';
+import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
@@ -5,10 +8,35 @@ import ChooseLocation from './ChooseLocation';
 import DateFilter from './DateFilter';
 import ShowMapSection from './ShowMapSection/ShowMapSection';
 import EventItem from '@/components/Shares/EventItem';
-import { fetchMeetups } from '@/services/meetup';
+import { fetchMeetupsPagination } from '@/services/meetup';
 import { color, devices } from '@/styles/variables';
 
-const { blackColor } = color;
+const { blackColor, primaryColor, whiteColor } = color;
+
+const Container = styled.div`
+	background-color: ${blackColor};
+`;
+
+const BackEventsButtonSection = styled.div`
+	display: flex;
+	justify-content: flex-start;
+	margin: 0 9vw;
+	max-width: 1440px;
+`;
+const BackEventsButtonContainer = styled.div`
+	align-items: center;
+	cursor: pointer;
+	display: flex;
+`;
+const BackEventsArrow = styled(WestIcon)`
+	color: ${primaryColor};
+	padding-right: 6px;
+`;
+const BackEventsText = styled.p`
+	color: ${primaryColor};
+	font-size: 20px;
+	letter-spacing: 1px;
+`;
 
 const MainContainer = styled.div`
 	background-color: ${blackColor};
@@ -42,55 +70,144 @@ const EventContainer = styled.div`
 const SingleEventContainer = styled.div`
 	margin-bottom: 40px;
 `;
+
+const PaginationContainer = styled.div`
+	color: white;
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+`;
+
+const MuiPagination = styled(Pagination)`
+	.MuiPaginationItem-root {
+		color: ${whiteColor};
+	}
+	.Mui-selected {
+		color: ${primaryColor};
+	}
+`;
+
+const MuiButton = styled(Button)`
+	color: ${props => (props.disabled ? 'green' : 'white')};
+	color: ${whiteColor};
+`;
+
 const MainContents = () => {
 	const [filterEvent, setFilterEvent] = useState<IMeetup[]>([]);
 	const [selectedLocation, setSelectedLocation] = useState('');
+	const [currentPage, setCurrentPage] = useState(1);
+	const [totalPages, setTotalPages] = useState(1);
+	const router = useRouter();
+
+	const pageLimit = 12;
+
+	const navigateToSideEvents = () => {
+		router.push('/side-events');
+	};
 
 	const fetchEvent = async () => {
-		const response = await fetchMeetups();
-		setFilterEvent(response.data);
+		const response = await fetchMeetupsPagination(currentPage);
+		const meetupData = response.data[0]?.paginatedData || [];
+		const totalCount = response.data[0]?.totalCount || 0;
+
+		setFilterEvent(meetupData);
+		setTotalPages(Math.ceil(totalCount / pageLimit));
 	};
 
 	useEffect(() => {
 		fetchEvent();
-	}, []);
+	}, [currentPage]);
 
 	const handleLocationChange = (location: string) => {
 		setSelectedLocation(location);
 	};
+
+	const handlePageChange = (page: number) => {
+		setCurrentPage(page);
+	};
+
+	const backButtonHandler = () => {
+		handlePageChange(currentPage - 1);
+	};
+
+	const nextButtonHandler = () => {
+		handlePageChange(currentPage + 1);
+	};
+
 	return (
-		<MainContainer>
-			<FilteredContainer>
-				<ShowMapSection />
-				<ChooseLocation onLocationChange={handleLocationChange} />
-				<DateFilter />
-			</FilteredContainer>
-			<EventContainer>
-				{filterEvent.filter(
-					event =>
-						!selectedLocation ||
-						(event.city &&
-							event.city.length > 0 &&
-							event.city[0].name === selectedLocation)
-				).length > 0 ? (
-					filterEvent
-						.filter(
-							event =>
-								!selectedLocation ||
-								(event.city &&
-									event.city.length > 0 &&
-									event.city[0].name === selectedLocation)
-						)
-						.map(eventInfo => (
-							<SingleEventContainer key={eventInfo._id}>
-								<EventItem eventInfo={eventInfo} />
-							</SingleEventContainer>
-						))
-				) : (
-					<div>No results found</div>
-				)}
-			</EventContainer>
-		</MainContainer>
+		<Container>
+			<BackEventsButtonSection>
+				<BackEventsButtonContainer onClick={navigateToSideEvents}>
+					<BackEventsArrow />
+					<BackEventsText>EVENTS</BackEventsText>
+				</BackEventsButtonContainer>
+			</BackEventsButtonSection>
+			<MainContainer>
+				<FilteredContainer>
+					<ShowMapSection />
+					<ChooseLocation onLocationChange={handleLocationChange} />
+					<DateFilter />
+				</FilteredContainer>
+				<EventContainer>
+					{filterEvent.filter(
+						event =>
+							!selectedLocation ||
+							(event.city &&
+								event.city.length > 0 &&
+								event.city[0].name === selectedLocation)
+					).length > 0 ? (
+						filterEvent
+							.filter(
+								event =>
+									!selectedLocation ||
+									(event.city &&
+										event.city.length > 0 &&
+										event.city[0].name === selectedLocation)
+							)
+							.map(eventInfo => (
+								<SingleEventContainer key={eventInfo._id}>
+									<EventItem eventInfo={eventInfo} />
+								</SingleEventContainer>
+							))
+					) : (
+						<div>No results found</div>
+					)}
+					<PaginationContainer>
+						<Stack direction="row" spacing={2}>
+							<MuiButton
+								onClick={backButtonHandler}
+								sx={{
+									'&:disabled': {
+										color: '#676767'
+									}
+								}}
+								disabled={currentPage === 1}
+							>
+								&lt; Back
+							</MuiButton>
+							<MuiPagination
+								count={totalPages}
+								page={currentPage}
+								onChange={(event, page) => handlePageChange(page)}
+								hidePrevButton
+								hideNextButton
+							/>
+							<MuiButton
+								onClick={nextButtonHandler}
+								sx={{
+									'&:disabled': {
+										color: '#676767'
+									}
+								}}
+								disabled={currentPage === totalPages}
+							>
+								Next &gt;
+							</MuiButton>
+						</Stack>
+					</PaginationContainer>
+				</EventContainer>
+			</MainContainer>
+		</Container>
 	);
 };
 
