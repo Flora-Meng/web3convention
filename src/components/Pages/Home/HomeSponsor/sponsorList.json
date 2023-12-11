@@ -5,8 +5,8 @@
 		"sponsor": [
 			{
 				"_id": "1",
-				"logoSrc": "./images/sponsors/MetaTree.png",
-				"logoSrcHighlight": "/images/sponsors/MetaTree.png"
+				"logoSrc": "./images/sponsors/meta-tree.png",
+				"logoSrcHighlight": "/images/sponsors/meta-tree.png"
 			}
 		]
 	},
@@ -16,8 +16,8 @@
 		"sponsor": [
 			{
 				"_id": "2",
-				"logoSrc": "/images/sponsors/1783Dao.png",
-				"logoSrcHighlight": "/images/sponsors/1783Dao.png"
+				"logoSrc": "/images/sponsors/1783dao.png",
+				"logoSrcHighlight": "/images/sponsors/1783dao.png"
 			}
 		]
 	},
@@ -27,18 +27,18 @@
 		"sponsor": [
 			{
 				"_id": "3",
-				"logoSrc": "/images/sponsors/hash mining.png",
-				"logoSrcHighlight": "/images/sponsors/hash mining.png"
+				"logoSrc": "/images/sponsors/hash-mining.png",
+				"logoSrcHighlight": "/images/sponsors/hash-mining.png"
 			},
 			{
 				"_id": "4",
-				"logoSrc": "/images/sponsors/jr academy.png",
-				"logoSrcHighlight": "/images/sponsors/jr academy.png"
+				"logoSrc": "/images/sponsors/jr-academy.png",
+				"logoSrcHighlight": "/images/sponsors/jr-academy.png"
 			},
 			{
 				"_id": "5",
-				"logoSrc": "/images/sponsors/fog hashing.png",
-				"logoSrcHighlight": "/images/sponsors/fog hashing.png"
+				"logoSrc": "/images/sponsors/fog-hashing.png",
+				"logoSrcHighlight": "/images/sponsors/fog-hashing.png"
 			},
 			{
 				"_id": "6",
@@ -47,8 +47,8 @@
 			},
 			{
 				"_id": "7",
-				"logoSrc": "/images/sponsors/AFI a.png",
-				"logoSrcHighlight": "/images/sponsors/AFI a.png"
+				"logoSrc": "/images/sponsors/afi.png",
+				"logoSrcHighlight": "/images/sponsors/afi.png"
 			}
 		]
 	},
@@ -58,18 +58,18 @@
 		"sponsor": [
 			{
 				"_id": "10",
-				"logoSrc": "/images/sponsors/捕鲸船Logo（黑）.png",
-				"logoSrcHighlight": "/images/sponsors/捕鲸船Logo（黑）.png"
+				"logoSrc": "/images/sponsors/hale.png",
+				"logoSrcHighlight": "/images/sponsors/hale.png"
 			},
 			{
 				"_id": "11",
-				"logoSrc": "/images/sponsors/博链财经2.png",
-				"logoSrcHighlight": "/images/sponsors/博链财经2.png"
+				"logoSrc": "/images/sponsors/bolian.png",
+				"logoSrcHighlight": "/images/sponsors/bolian.png"
 			},
 			{
 				"_id": "12",
-				"logoSrc": "./images/sponsors/w3a horizontal.png",
-				"logoSrcHighlight": "/images/sponsors/w3a horizontal.png"
+				"logoSrc": "./images/sponsors/w3a-horizontal.png",
+				"logoSrcHighlight": "/images/sponsors/w3a-horizontal.png"
 			},
 			{
 				"_id": "14",
@@ -83,8 +83,8 @@
 			},
 			{
 				"_id": "16",
-				"logoSrc": "./images/sponsors/infinity labs.png",
-				"logoSrcHighlight": "/images/sponsors/infinity labs.png"
+				"logoSrc": "./images/sponsors/infinity-labs.png",
+				"logoSrcHighlight": "/images/sponsors/infinity-labs.png"
 			},
 			{
 				"_id": "17",
@@ -104,63 +104,63 @@
 		"sponsor": [
 			{
 				"_id": "19",
-				"logoSrc": "/images/sponsors/FILDAO.png",
-				"logoSrcHighlight": "/images/sponsors/FILDAO.png"
+				"logoSrc": "/images/sponsors/fildao.png",
+				"logoSrcHighlight": "/images/sponsors/fildao.png"
 			},
 			{
 				"_id": "20",
-				"logoSrc": "/images/sponsors/SmartMesh Logo.png",
-				"logoSrcHighlight": "/images/sponsors/SmartMesh Logo.png"
+				"logoSrc": "/images/sponsors/smartmesh.png",
+				"logoSrcHighlight": "/images/sponsors/smartmesh.png"
 			},
 			{
 				"_id": "21",
-				"logoSrc": "/images/sponsors/WiKiEXPO.png",
-				"logoSrcHighlight": "/images/sponsors/WiKiEXPO.png"
+				"logoSrc": "/images/sponsors/wiki.png",
+				"logoSrcHighlight": "/images/sponsors/wiki.png"
 			},
 			{
 				"_id": "22",
-				"logoSrc": "/images/sponsors/IC1101.png",
-				"logoSrcHighlight": "/images/sponsors/IC1101.png"
+				"logoSrc": "/images/sponsors/ic1101.png",
+				"logoSrcHighlight": "/images/sponsors/ic1101.png"
 			},
 			{
 				"_id": "23",
-				"logoSrc": "/images/sponsors/ATB.png",
-				"logoSrcHighlight": "/images/sponsors/ATB.png"
+				"logoSrc": "/images/sponsors/atb.png",
+				"logoSrcHighlight": "/images/sponsors/atb.png"
 			},
 			{
 				"_id": "24",
-				"logoSrc": "/images/sponsors/Gold Coast Blockchain.png",
-				"logoSrcHighlight": "/images/sponsors/Gold Coast Blockchain.png"
+				"logoSrc": "/images/sponsors/gold.png",
+				"logoSrcHighlight": "/images/sponsors/gold.png"
 			},
 			{
 				"_id": "25",
-				"logoSrc": "/images/sponsors/BITCOIN MINING AUSTRALIA.png",
-				"logoSrcHighlight": "/images/sponsors/BITCOIN MINING AUSTRALIA.png"
+				"logoSrc": "/images/sponsors/bitcoin.png",
+				"logoSrcHighlight": "/images/sponsors/bitcoin.png"
 			},
 			{
 				"_id": "26",
-				"logoSrc": "/images/sponsors/FOREAL.png",
-				"logoSrcHighlight": "/images/sponsors/FOREAL.png"
+				"logoSrc": "/images/sponsors/foreal.png",
+				"logoSrcHighlight": "/images/sponsors/foreal.png"
 			},
 			{
 				"_id": "27",
-				"logoSrc": "/images/sponsors/bewater2.png",
-				"logoSrcHighlight": "/images/sponsors/bewater2.png"
+				"logoSrc": "/images/sponsors/bewater.png",
+				"logoSrcHighlight": "/images/sponsors/bewater.png"
 			},
 			{
 				"_id": "28",
-				"logoSrc": "/images/sponsors/The Fox Capital.png",
-				"logoSrcHighlight": "/images/sponsors/The Fox Capital.png"
+				"logoSrc": "/images/sponsors/fox.png",
+				"logoSrcHighlight": "/images/sponsors/fox.png"
 			},
 			{
 				"_id": "29",
-				"logoSrc": "/images/sponsors/Bitcoin Brisbane.png",
-				"logoSrcHighlight": "/images/sponsors/Bitcoin Brisbane.png"
+				"logoSrc": "/images/sponsors/bitcoin-b.png",
+				"logoSrcHighlight": "/images/sponsors/bitcoin-b.png"
 			},
 			{
 				"_id": "30",
-				"logoSrc": "/images/sponsors/LULU MARKET.png",
-				"logoSrcHighlight": "/images/sponsors/LULU MARKET.png"
+				"logoSrc": "/images/sponsors/lulu.png",
+				"logoSrcHighlight": "/images/sponsors/lulu.png"
 			},
 			{
 				"_id": "31",
@@ -179,48 +179,48 @@
 			},
 			{
 				"_id": "34",
-				"logoSrc": "/images/sponsors/XTCOM.png",
-				"logoSrcHighlight": "/images/sponsors/XTCOM.png"
+				"logoSrc": "/images/sponsors/xtcom.png",
+				"logoSrcHighlight": "/images/sponsors/xtcom.png"
 			},
 			{
 				"_id": "35",
-				"logoSrc": "/images/sponsors/impakt AI Coach2.png",
-				"logoSrcHighlight": "/images/sponsors/impakt AI Coach2.png"
+				"logoSrc": "/images/sponsors/impakt.png",
+				"logoSrcHighlight": "/images/sponsors/impakt.png"
 			},
 			{
 				"_id": "36",
-				"logoSrc": "/images/sponsors/tangDAOlogo透明底黑色.png",
-				"logoSrcHighlight": "/images/sponsors/tangDAOlogo透明底黑色.png"
+				"logoSrc": "/images/sponsors/tang.png",
+				"logoSrcHighlight": "/images/sponsors/tang.png"
 			},
 			{
 				"_id": "37",
-				"logoSrc": "/images/sponsors/编组.png",
-				"logoSrcHighlight": "/images/sponsors/编组.png"
+				"logoSrc": "/images/sponsors/mars.png",
+				"logoSrcHighlight": "/images/sponsors/mars.png"
 			},
 			{
 				"_id": "38",
-				"logoSrc": "/images/sponsors/MeshBox Logo.png",
-				"logoSrcHighlight": "/images/sponsors/MeshBox Logo.png"
+				"logoSrc": "/images/sponsors/mesh.png",
+				"logoSrcHighlight": "/images/sponsors/mesh.png"
 			},
 			{
 				"_id": "39",
-				"logoSrc": "/images/sponsors/Offchain Logo BLACK.png",
-				"logoSrcHighlight": "/images/sponsors/Offchain Logo BLACK.png"
+				"logoSrc": "/images/sponsors/offchain-logo.png",
+				"logoSrcHighlight": "/images/sponsors/offchain-logo.png"
 			},
 			{
 				"_id": "40",
-				"logoSrc": "/images/sponsors/MetaLife.png",
-				"logoSrcHighlight": "/images/sponsors/MetaLife.png"
+				"logoSrc": "/images/sponsors/metalife.png",
+				"logoSrcHighlight": "/images/sponsors/metalife.png"
 			},
 			{
 				"_id": "41",
-				"logoSrc": "/images/sponsors/PermaDAO LOGO_Green_H_1.png",
-				"logoSrcHighlight": "/images/sponsors/PermaDAO LOGO_Green_H_1.png"
+				"logoSrc": "/images/sponsors/perma.png",
+				"logoSrcHighlight": "/images/sponsors/perma.png"
 			},
 			{
 				"_id": "42",
-				"logoSrc": "/images/sponsors/CEEX LOGO.png",
-				"logoSrcHighlight": "/images/sponsors/CEEX LOGO.png"
+				"logoSrc": "/images/sponsors/ceex.png",
+				"logoSrcHighlight": "/images/sponsors/ceex.png"
 			},
 			{
 				"_id": "43",
@@ -234,38 +234,38 @@
 			},
 			{
 				"_id": "45",
-				"logoSrc": "/images/sponsors/LingoAI.png",
-				"logoSrcHighlight": "/images/sponsors/LingoAI.png"
+				"logoSrc": "/images/sponsors/lingoai.png",
+				"logoSrcHighlight": "/images/sponsors/lingoai.png"
 			},
 			{
 				"_id": "46",
-				"logoSrc": "/images/sponsors/Tiger VC DAO.png",
-				"logoSrcHighlight": "/images/sponsors/Tiger VC DAO.png"
+				"logoSrc": "/images/sponsors/tiger.png",
+				"logoSrcHighlight": "/images/sponsors/tiger.png"
 			},
 			{
 				"_id": "47",
-				"logoSrc": "/images/sponsors/ECHO3 DAO.png",
-				"logoSrcHighlight": "/images/sponsors/ECHO3 DAO.png"
+				"logoSrc": "/images/sponsors/echodao.png",
+				"logoSrcHighlight": "/images/sponsors/echodao.png"
 			},
 			{
 				"_id": "48",
-				"logoSrc": "/images/sponsors/Component 10.png",
-				"logoSrcHighlight": "/images/sponsors/Component 10.png"
+				"logoSrc": "/images/sponsors/component.png",
+				"logoSrcHighlight": "/images/sponsors/component.png"
 			},
 			{
 				"_id": "49",
-				"logoSrc": "/images/sponsors/Taitan-1.png",
-				"logoSrcHighlight": "/images/sponsors/Taitan-1.png"
+				"logoSrc": "/images/sponsors/taitan.png",
+				"logoSrcHighlight": "/images/sponsors/taitan.png"
 			},
 			{
 				"_id": "50",
-				"logoSrc": "/images/sponsors/Relation.png",
-				"logoSrcHighlight": "/images/sponsors/Relation.png"
+				"logoSrc": "/images/sponsors/relation.png",
+				"logoSrcHighlight": "/images/sponsors/relation.png"
 			},
 			{
 				"_id": "51",
-				"logoSrc": "/images/sponsors/AI天使汇.png",
-				"logoSrcHighlight": "/images/sponsors/AI天使汇.png"
+				"logoSrc": "/images/sponsors/aiag.png",
+				"logoSrcHighlight": "/images/sponsors/aiag.png"
 			}
 		]
 	},
@@ -280,18 +280,18 @@
 			},
 			{
 				"_id": "53",
-				"logoSrc": "./images/sponsors/WiKiBit.png",
-				"logoSrcHighlight": "/images/sponsors/WiKiBit.png"
+				"logoSrc": "./images/sponsors/wikibit.png",
+				"logoSrcHighlight": "/images/sponsors/wikibit.png"
 			},
 			{
 				"_id": "54",
-				"logoSrc": "./images/sponsors/WJB.png",
-				"logoSrcHighlight": "/images/sponsors/WJB.png"
+				"logoSrc": "./images/sponsors/wjb.png",
+				"logoSrcHighlight": "/images/sponsors/wjb.png"
 			},
 			{
 				"_id": "55",
-				"logoSrc": "./images/sponsors/LVDONG.png",
-				"logoSrcHighlight": "/images/sponsors/LVDONG.png"
+				"logoSrc": "./images/sponsors/lvdong.png",
+				"logoSrcHighlight": "/images/sponsors/lvdong.png"
 			},
 			{
 				"_id": "56",
@@ -310,8 +310,8 @@
 			},
 			{
 				"_id": "59",
-				"logoSrc": "./images/sponsors/PANews.png",
-				"logoSrcHighlight": "/images/sponsors/PANews.png"
+				"logoSrc": "./images/sponsors/panews.png",
+				"logoSrcHighlight": "/images/sponsors/panews.png"
 			},
 			{
 				"_id": "60",
@@ -335,8 +335,8 @@
 			},
 			{
 				"_id": "64",
-				"logoSrc": "./images/sponsors/41财经.png",
-				"logoSrcHighlight": "/images/sponsors/41财经.png"
+				"logoSrc": "./images/sponsors/41caijing.png",
+				"logoSrcHighlight": "/images/sponsors/41caijing.png"
 			},
 			{
 				"_id": "65",
@@ -345,8 +345,8 @@
 			},
 			{
 				"_id": "66",
-				"logoSrc": "./images/sponsors/奔跑财经.png",
-				"logoSrcHighlight": "/images/sponsors/奔跑财经.png"
+				"logoSrc": "./images/sponsors/benpao.png",
+				"logoSrcHighlight": "/images/sponsors/benpao.png"
 			},
 			{
 				"_id": "67",
