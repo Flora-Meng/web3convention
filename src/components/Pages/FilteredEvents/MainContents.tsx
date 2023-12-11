@@ -88,7 +88,6 @@ const MuiPagination = styled(Pagination)`
 `;
 
 const MuiButton = styled(Button)`
-	color: ${props => (props.disabled ? 'green' : 'white')};
 	color: ${whiteColor};
 `;
 
