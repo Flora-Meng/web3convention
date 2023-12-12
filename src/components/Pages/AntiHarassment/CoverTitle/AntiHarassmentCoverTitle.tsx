@@ -19,12 +19,13 @@ interface PageCoverTitleProps {
 const Container = styled.div<PageCoverTitleProps>`
 	color: ${whiteColor};
 	margin: 0 auto;
-	max-width: 1440px;
+	max-width: 700px;
 	position: relative;
 	top: 30px;
 	width: calc(100vw - 40px);
 
-	@media ${devices.laptop} {
+	@media ${devices.largeLaptop} {
+		max-width: 1440px;
 		width: calc(100vw - 720px);
 	}
 `;
@@ -51,7 +52,7 @@ const CoverTitle = styled(Title)`
 		font-size: 60px;
 	}
 	@media ${devices.largeLaptop} {
-		font-size: 70px;
+		font-size: 64px;
 	}
 `;
 const AntiHarassmentCoverTitle: React.FC<PageCoverTitleProps> = props => {
