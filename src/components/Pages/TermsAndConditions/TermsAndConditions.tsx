@@ -23,13 +23,15 @@ const SubTitle = styled.p`
 	margin: 0;
 	padding: 16px 0;
 `;
-const Description = styled.p`
+const Description = styled.div`
 	color: ${color.whiteColor};
 	font-size: 16px;
-	line-height: 1.63;
 	margin: 0;
 	padding: 0 0 24px 0;
 	white-space: pre-wrap;
+`;
+const Conditions = styled.p`
+	margin-top: 30px;
 `;
 
 const TermsAndConditions = () => {
@@ -39,44 +41,49 @@ const TermsAndConditions = () => {
 				<div>
 					<SubTitle>1. Acceptance of Terms </SubTitle>
 					<Description>
-						By purchasing a ticket to the "Web3 Convention" on our website, you agree to
-						the following terms and conditions. Please read them carefully.
+						<p>
+							By purchasing a ticket to the "Web3 Convention" on our website, you
+							agree to the following terms and conditions. Please read them carefully.
+						</p>
 					</Description>
 				</div>
 				<div>
 					<SubTitle>2. Ticket Purchase</SubTitle>
 					<Description>
-						You are purchasing your tickets for this Event from:
-						<br />
-						Web3 Convention (WEB3 PTY. LTD.)
-						<br />
-						ABN: 86 618 319 770
-						<br />
-						Email: info@web3convention.com
-						<br />
-						All transactions are in Australian Dollars (AUD) unless otherwise stated.{' '}
-						<br />
-						You may purchase tickets for the "Web3 Convention" on our website, subject
-						to availability.
-						<br />
-						All ticket sales are final. Refunds and exchanges will not be provided
-						except as required by Australian consumer law.
-						<br />
-						The purchase of a ticket grants you access to the "Web3 Convention" on the
-						specified date(s) and venue.
+						<p>You are purchasing your tickets for this Event from:</p>
+						<p>Web3 Convention (WEB3 PTY. LTD.)</p>
+						<p>ABN: 86 618 319 770</p>
+						<p>Email: info@web3convention.com</p>
+						<p>
+							All transactions are in Australian Dollars (AUD) unless otherwise
+							stated.{' '}
+						</p>
+						<p>
+							You may purchase tickets for the "Web3 Convention" on our website,
+							subject to availability.
+						</p>
+						<p>
+							All ticket sales are final. Refunds and exchanges will not be provided
+							except as required by Australian consumer law.
+						</p>
+						<p>
+							The purchase of a ticket grants you access to the "Web3 Convention" on
+							the specified date(s) and venue.
+						</p>
 					</Description>
 				</div>
 				<div>
 					<SubTitle>3. Ticket Usage</SubTitle>
 					<Description>
-						Tickets are non-transferable unless otherwise stated.
-						<br />
-						Tickets may not be resold at a price exceeding the price printed on the
-						ticket without explicit written permission.
-						<br />
-						Your ticket may be revoked without refund if found to be in violation of
-						these terms.
-						<br />
+						<p>Tickets are non-transferable unless otherwise stated.</p>
+						<p>
+							Tickets may not be resold at a price exceeding the price printed on the
+							ticket without explicit written permission.
+						</p>
+						<p>
+							Your ticket may be revoked without refund if found to be in violation of
+							these terms.
+						</p>
 					</Description>
 				</div>
 				<div>
@@ -96,32 +103,37 @@ const TermsAndConditions = () => {
 				<div>
 					<SubTitle>6. Ticket Distribution and Entry Procedure</SubTitle>
 					<Description>
-						Tickets for the "Web3 Convention" will be distributed at the entrance on the
-						day of the convention.
-						<br />
-						To receive your tickets, you must present your valid ticket purchase records
-						and personal identification.
-						<br />
-						The name on the ticket purchase records must match the name on the
-						identification provided.
-						<br />
-						You are required to wear the issued ID card as your ticket, securely hanging
-						it around your neck and visible at all times during the Event.
-						<br />
-						Entry to theconvention will be granted only to individuals with a valid and
-						properly worn ID card/ticket.
-						<br />
-						Defaced, damaged or lost tickets may not be accepted for entry.
-						<br />
-						Lost or stolen ID cards/tickets will not be reissued. You are responsible
-						for the safekeeping of your ID card/tickets.
-						<br />
-						You are solely responsible for your personal belongings at all times.
-						<br />
-						We reserve the right to conduct security searches to ensure safety.
-						<br />
-						We reserve the right to refuse entry or remove any person from the Event at
-						our discretion.
+						<p>
+							Tickets for the "Web3 Convention" will be distributed at the entrance on
+							the day of the convention.
+						</p>
+						<p>
+							To receive your tickets, you must present your valid ticket purchase
+							records and personal identification.
+						</p>
+						<p>
+							The name on the ticket purchase records must match the name on the
+							identification provided.
+						</p>
+						<p>
+							You are required to wear the issued ID card as your ticket, securely
+							hanging it around your neck and visible at all times during the Event.
+						</p>
+						<p>
+							Entry to theconvention will be granted only to individuals with a valid
+							and properly worn ID card/ticket.
+						</p>
+						<p>Defaced, damaged or lost tickets may not be accepted for entry.</p>
+						<p>
+							Lost or stolen ID cards/tickets will not be reissued. You are
+							responsible for the safekeeping of your ID card/tickets.
+						</p>
+						<p>You are solely responsible for your personal belongings at all times.</p>
+						<p>We reserve the right to conduct security searches to ensure safety.</p>
+						<p>
+							We reserve the right to refuse entry or remove any person from the Event
+							at our discretion.
+						</p>
 					</Description>
 				</div>
 				<div>
@@ -163,70 +175,76 @@ const TermsAndConditions = () => {
 				<div>
 					<SubTitle>Definitions</SubTitle>
 					<Description>
-						(a) "web" or "website" or "site" means the system or database on which the
-						personal information is stored; (b) "You" or "your" means Web3 Convention
-						(WEB3 PTY. LTD.), "I," "my," or "me" means the person who has entered
-						information into any electronic form on a site.
-						<br />
-						<br />
-						(d) "information" or "personal information" means any information entered
-						into any electronic form that may identify a person (e) "Convention" means
-						the event for which you registered.
+						<Conditions>
+							(a) "web" or "website" or "site" means the system or database on which
+							the personal information is stored; (b) "You" or "your" means Web3
+							Convention (WEB3 PTY. LTD.), "I," "my," or "me" means the person who has
+							entered information into any electronic form on a site.
+						</Conditions>
+						<Conditions>
+							(d) "information" or "personal information" means any information
+							entered into any electronic form that may identify a person (e)
+							"Convention" means the event for which you registered.
+						</Conditions>
 					</Description>
 				</div>
 				<div>
 					<SubTitle>General</SubTitle>
 					<Description>
-						I confirm that the information I have entered is completely accurate, and in
-						particular, I have taken care to ensure that my email address is correctly
-						entered.
-						<br />
-						<br />
-						I agree and consent to my personal information being utilized for current
-						and future competitions, draws, lotteries, and promotions by the promoters
-						and exhibitors of the Convention.
-						<br />
-						<br />
-						I agree and consent to, for promotional purposes, you providing the
-						information I have entered into any electronic form on your site to
-						entities/businesses attached, related, affiliated, or associated to the
-						Convention, including but not limited to the Event Organiser, presenters,
-						sponsors, exhibitors, and suppliers.
-						<br />
-						<br />
-						I agree that by my entering into any competitions at the Convention, I agree
-						and consent to my personal information being utilized by such competition
-						for the competition purposes and the promoter of the competition and
-						authorize the publication of my details as they relate to the competition.
-						<br />
-						<br />
-						I agree that you will not be liable to me, except in the case of fraud, for
-						any act or omission (whether negligent or misleading or deceptive or
-						otherwise) by you in the performance or purported performance of your
-						obligations under these terms and conditions.
-						<br />
-						<br />
-						I indemnify you against all claims, except in the case of fraud, arising out
-						of or in any way connected with any act or omission by you in the
-						performance or purported performance of your obligations under these terms
-						and conditions.
-						<br />
-						<br />
-						I agree that liability on your part or on the part of your servants or
-						agents for damages for or in respect of any claim arising out of or in
-						connection with the relationship established by this agreement or any
-						conduct under it or any orders or instructions given to you by me, shall not
-						in any event (and whether or not such liability results from or involves
-						negligence) exceed $50.00.
-						<br />
-						<br />
-						I agree that by my entering information into any electronic form on your
-						site, that I am agreeing to the terms and conditions herein and to the
-						Disclaimer.
-						<br />
-						<br />
-						By purchasing a ticket for the "Web3 Convention," you agree to the above
-						terms and conditions.
+						<Conditions>
+							I confirm that the information I have entered is completely accurate,
+							and in particular, I have taken care to ensure that my email address is
+							correctly entered.
+						</Conditions>
+						<Conditions>
+							I agree and consent to my personal information being utilized for
+							current and future competitions, draws, lotteries, and promotions by the
+							promoters and exhibitors of the Convention.
+						</Conditions>
+						<Conditions>
+							I agree and consent to, for promotional purposes, you providing the
+							information I have entered into any electronic form on your site to
+							entities/businesses attached, related, affiliated, or associated to the
+							Convention, including but not limited to the Event Organiser,
+							presenters, sponsors, exhibitors, and suppliers.
+						</Conditions>
+						<Conditions>
+							I agree that by my entering into any competitions at the Convention, I
+							agree and consent to my personal information being utilized by such
+							competition for the competition purposes and the promoter of the
+							competition and authorize the publication of my details as they relate
+							to the competition.
+						</Conditions>
+						<Conditions>
+							I agree that you will not be liable to me, except in the case of fraud,
+							for any act or omission (whether negligent or misleading or deceptive or
+							otherwise) by you in the performance or purported performance of your
+							obligations under these terms and conditions.
+						</Conditions>
+						<Conditions>
+							I indemnify you against all claims, except in the case of fraud, arising
+							out of or in any way connected with any act or omission by you in the
+							performance or purported performance of your obligations under these
+							terms and conditions.
+						</Conditions>
+						<Conditions>
+							{' '}
+							I agree that liability on your part or on the part of your servants or
+							agents for damages for or in respect of any claim arising out of or in
+							connection with the relationship established by this agreement or any
+							conduct under it or any orders or instructions given to you by me, shall
+							not in any event (and whether or not such liability results from or
+							involves negligence) exceed $50.00.
+						</Conditions>
+						<Conditions>
+							I agree that by my entering information into any electronic form on your
+							site, that I am agreeing to the terms and conditions herein and to the
+							Disclaimer.
+						</Conditions>
+						<Conditions>
+							By purchasing a ticket for the "Web3 Convention," you agree to the above
+							terms and conditions.
+						</Conditions>
 					</Description>
 				</div>
 				<div>
