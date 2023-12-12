@@ -14,8 +14,6 @@ interface CounterItemProps {
 const CounterItem: React.FC<CounterItemProps> = ({ shouldReset, ...props }) => {
 	const countUpRef = useRef(null);
 
-
-
 	const { start } = useCountUp({
 		ref: countUpRef,
 		start: 0,
