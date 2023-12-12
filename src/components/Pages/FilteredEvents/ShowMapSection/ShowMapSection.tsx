@@ -117,7 +117,7 @@ const ShowMapSection = () => {
 
 	const fetchEvent = async () => {
 		const response = await fetchMeetups();
-		const meetupData = response.data[0]?.paginatedData || [];
+		const meetupData = response.data.meetups || [];
 
 		setFilterEvent(meetupData);
 	};

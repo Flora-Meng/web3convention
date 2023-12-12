@@ -95,26 +95,28 @@ const MainContents = () => {
 	const [filterEvent, setFilterEvent] = useState<IMeetup[]>([]);
 	const [selectedLocation, setSelectedLocation] = useState('');
 	const [currentPage, setCurrentPage] = useState(1);
-	const [totalPages, setTotalPages] = useState(1);
-	const router = useRouter();
+	const [totalCount, setTotalCount] = useState(1);
+	const [isBackDisabled, setIsBackDisabled] = useState();
+	const [isNextDisabled, setIsNextDisabled] = useState();
 
-	const pageLimit = 12;
+	const router = useRouter();
 
 	const navigateToSideEvents = () => {
 		router.push('/side-events');
 	};
 
-	const fetchEvent = async () => {
-		const response = await fetchMeetupsPagination(currentPage);
-		const meetupData = response.data[0]?.paginatedData || [];
-		const totalCount = response.data[0]?.totalCount || 0;
-
+	const fetchEvents = async () => {
+		const response = await fetchMeetupsPagination(currentPage, 12);
+		const meetupData = response.data.meetups || [];
+		const { totalPages, backBtnIsDisabled, nextBtnIsDisabled } = response.data.pagination;
 		setFilterEvent(meetupData);
-		setTotalPages(Math.ceil(totalCount / pageLimit));
+		setTotalCount(totalPages || 0);
+		setIsBackDisabled(backBtnIsDisabled);
+		setIsNextDisabled(nextBtnIsDisabled);
 	};
 
 	useEffect(() => {
-		fetchEvent();
+		fetchEvents();
 	}, [currentPage]);
 
 	const handleLocationChange = (location: string) => {
@@ -180,12 +182,12 @@ const MainContents = () => {
 										color: '#676767'
 									}
 								}}
-								disabled={currentPage === 1}
+								disabled={isBackDisabled}
 							>
 								&lt; Back
 							</MuiButton>
 							<MuiPagination
-								count={totalPages}
+								count={totalCount}
 								page={currentPage}
 								onChange={(event, page) => handlePageChange(page)}
 								hidePrevButton
@@ -198,7 +200,7 @@ const MainContents = () => {
 										color: '#676767'
 									}
 								}}
-								disabled={currentPage === totalPages}
+								disabled={isNextDisabled}
 							>
 								Next &gt;
 							</MuiButton>
