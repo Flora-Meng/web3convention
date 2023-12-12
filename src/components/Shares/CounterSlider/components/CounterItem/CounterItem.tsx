@@ -14,14 +14,11 @@ interface CounterItemProps {
 const CounterItem: React.FC<CounterItemProps> = ({ shouldReset, ...props }) => {
 	const countUpRef = useRef(null);
 
-	const formatNumberWithCommas = (value: number) => {
-		return value.toLocaleString();
-	};
-
 	const { start } = useCountUp({
 		ref: countUpRef,
 		start: 0,
-		formattingFn: formatNumberWithCommas, // Use the formatting function
+		separator: ',', // Add a comma as the separator
+		useGrouping: true, // Enable grouping to format the number
 		...props
 	});
 

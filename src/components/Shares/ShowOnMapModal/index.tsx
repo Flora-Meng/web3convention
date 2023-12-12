@@ -1,1 +1,1 @@
-export { default } from './ShowOnMapModal';
+export { default } from './ShowOnMapEventItem';

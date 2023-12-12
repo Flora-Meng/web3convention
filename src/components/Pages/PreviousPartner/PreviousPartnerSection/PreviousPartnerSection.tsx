@@ -44,6 +44,7 @@ const StyledTypography = styled(Typography)`
 	@media ${devices.mobile} {
 		line-height: 1.33;
 		font-size: 18px;
+		text-align: center;
 	}
 `;
 
