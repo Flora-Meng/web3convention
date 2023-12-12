@@ -14,6 +14,7 @@ export const fetchMeetupsPagination = (page = 1, pageSize = 12) => {
 		url: `/api/meetups?meetupEventType=web3&page=${page}&pageSize=${pageSize}`
 	});
 };
+
 export const fetchMoreEvents = () => {
 	return request({
 		baseURL,
