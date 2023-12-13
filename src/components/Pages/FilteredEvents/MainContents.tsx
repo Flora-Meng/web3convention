@@ -11,6 +11,8 @@ import EventItem from '@/components/Shares/EventItem';
 import { fetchMeetupsPagination } from '@/services/meetup';
 import { color, devices } from '@/styles/variables';
 
+type TSweb3MeetupPagination = TSweb3Pagination<IMeetup>;
+
 const { blackColor, primaryColor, whiteColor } = color;
 
 const Container = styled.div`
@@ -19,9 +21,14 @@ const Container = styled.div`
 
 const BackEventsButtonSection = styled.div`
 	display: flex;
-	justify-content: flex-start;
-	margin: 0 9vw;
+	margin-left: 20px;
 	max-width: 1440px;
+	@media ${devices.laptop} {
+		margin-left: 130px;
+	}
+	@media ${devices.desktop} {
+		margin-left: 180px;
+	}
 `;
 const BackEventsButtonContainer = styled.div`
 	align-items: center;
@@ -96,8 +103,8 @@ const MainContents = () => {
 	const [selectedLocation, setSelectedLocation] = useState('');
 	const [currentPage, setCurrentPage] = useState(1);
 	const [totalCount, setTotalCount] = useState(1);
-	const [isBackDisabled, setIsBackDisabled] = useState();
-	const [isNextDisabled, setIsNextDisabled] = useState();
+	const [hasPreviousPage, setHasPreviousPage] = useState<boolean>();
+	const [hasFollowingPage, setHasFollowingPage] = useState<boolean>();
 
 	const router = useRouter();
 
@@ -107,12 +114,12 @@ const MainContents = () => {
 
 	const fetchEvents = async () => {
 		const response = await fetchMeetupsPagination(currentPage, 12);
-		const meetupData = response.data.meetups || [];
-		const { totalPages, backBtnIsDisabled, nextBtnIsDisabled } = response.data.pagination;
-		setFilterEvent(meetupData);
+		const meetupData: TSweb3MeetupPagination = response.data;
+		const { docs, totalPages, hasPrevPage, hasNextPage } = meetupData;
+		setFilterEvent(docs);
 		setTotalCount(totalPages || 0);
-		setIsBackDisabled(backBtnIsDisabled);
-		setIsNextDisabled(nextBtnIsDisabled);
+		setHasPreviousPage(hasPrevPage);
+		setHasFollowingPage(hasNextPage);
 	};
 
 	useEffect(() => {
@@ -182,7 +189,7 @@ const MainContents = () => {
 										color: '#676767'
 									}
 								}}
-								disabled={isBackDisabled}
+								disabled={!hasPreviousPage}
 							>
 								&lt; Back
 							</MuiButton>
@@ -200,7 +207,7 @@ const MainContents = () => {
 										color: '#676767'
 									}
 								}}
-								disabled={isNextDisabled}
+								disabled={!hasFollowingPage}
 							>
 								Next &gt;
 							</MuiButton>
