@@ -108,7 +108,7 @@ const CopyRight: React.FC = () => {
 						</CopyrightText>
 					)}
 					<CopyrightText>
-						Terms And Conditions |
+						<StyledLink href="/terms-and-conditions">Terms And Conditions</StyledLink> |
 						<StyledLink href="/anti-harassment"> Anti-harassment Policy</StyledLink>
 					</CopyrightText>
 				</CopyrightGrid>
