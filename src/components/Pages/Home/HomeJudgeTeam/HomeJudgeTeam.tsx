@@ -340,7 +340,7 @@ const SpeakerIconPlaceholder = styled.div`
 	width: 90px;
 `;
 
-const JudgeTeam: React.FC = () => {
+const HomeJudgeTeam: React.FC = () => {
 	const [open, setOpen] = useState(false);
 	const [teamMemberInfo, setTeamMemberInfo] = useState<TeamMemberProps | Record<string, never>>(
 		{}
@@ -357,7 +357,7 @@ const JudgeTeam: React.FC = () => {
 	return (
 		<ExpectedSpeakerContainer>
 			<Container>
-				<SectionSubtitle>Web3 Convention 2023</SectionSubtitle>
+				<SectionSubtitle>AI + Web3 Convention 2024</SectionSubtitle>
 				<SectionTitle>
 					<span>Judges, </span>
 					<span>Speakers & </span>
@@ -554,4 +554,4 @@ const JudgeTeam: React.FC = () => {
 	);
 };
 
-export default JudgeTeam;
+export default HomeJudgeTeam;
