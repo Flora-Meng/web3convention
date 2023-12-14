@@ -193,10 +193,7 @@ const CarouseItem: React.FC<CarouseItemProps> = ({
 				</HighlightContainer>
 				<MultipleButtonsContainer>
 					<ButtonContainer isCurrent={isCurrent}>
-						<ThemeButton
-							width="215px"
-							href="https://w3con.eventsair.com/web3convention/registration/Site/Register"
-						>
+						<ThemeButton width="215px" href="/get-tickets">
 							BOOK TICKETS
 						</ThemeButton>
 					</ButtonContainer>

@@ -125,7 +125,7 @@ const PageBanner: React.FC<PageBannerProps> = props => {
 
 					<ButtonContainer>
 						{buttonConfig && (
-							<ThemeButton href={buttonConfig.url}>{buttonConfig.text}</ThemeButton>
+							<ThemeButton href="/get-tickets">{buttonConfig.text}</ThemeButton>
 						)}
 						<ThemeButton href={partnerButtonConfig.url}>
 							{partnerButtonConfig.text}
