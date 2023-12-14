@@ -13,7 +13,7 @@ const Container = styled.div`
 	max-width: 1200px;
 	padding: 90px 24px 120px;
 	@media ${devices.laptop} {
-		padding: 50px 0 120px;
+		padding: 50px 20px 120px;
 	}
 `;
 const Backdrop = styled.div`
@@ -47,7 +47,7 @@ const Description = styled.p`
 const WhyGrid = styled(Grid)`
 	margin-top: 56px;
 `;
-const GridItem = styled(Grid)<{ color: string; bgcolor: string }>`
+const GridItem = styled(Grid) <{ color: string; bgcolor: string }>`
 	background-color: ${props => props.bgcolor || ''};
 	border: solid 1px ${color.blackColor};
 	color: ${props => props.color || ''};

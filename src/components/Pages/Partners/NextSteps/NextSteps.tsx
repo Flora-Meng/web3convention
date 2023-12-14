@@ -12,7 +12,7 @@ const Container = styled.div`
 	max-width: 1200px;
 	padding: 90px 24px 120px;
 	@media ${devices.laptop} {
-		padding: 50px 0;
+		padding: 50px 20px;
 		margin: 80px auto;
 	}
 `;

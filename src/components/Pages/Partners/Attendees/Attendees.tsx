@@ -16,7 +16,7 @@ const Content = styled.div`
 	padding: 140px 24px 100px;
 	position: relative;
 	@media ${devices.mobile} {
-		padding: 140px 0px 100px;
+		padding: 140px 20px 100px;
 	}
 	@media ${devices.laptop} {
 		margin: 0 auto;

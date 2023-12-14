@@ -103,11 +103,6 @@
 		"groupName": "STRATEGIC PARTNER",
 		"sponsor": [
 			{
-				"_id": "19",
-				"logoSrc": "/images/sponsors/fildao.png",
-				"logoSrcHighlight": "/images/sponsors/fildao.png"
-			},
-			{
 				"_id": "20",
 				"logoSrc": "/images/sponsors/smartmesh.png",
 				"logoSrcHighlight": "/images/sponsors/smartmesh.png"
@@ -121,6 +116,11 @@
 				"_id": "22",
 				"logoSrc": "/images/sponsors/ic1101.png",
 				"logoSrcHighlight": "/images/sponsors/ic1101.png"
+			},
+			{
+				"_id": "19",
+				"logoSrc": "/images/sponsors/fildao.png",
+				"logoSrcHighlight": "/images/sponsors/fildao.png"
 			},
 			{
 				"_id": "23",
