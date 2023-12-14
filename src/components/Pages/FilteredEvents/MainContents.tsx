@@ -8,7 +8,7 @@ import ChooseLocation from './ChooseLocation';
 import DateFilter from './DateFilter';
 import ShowMapSection from './ShowMapSection/ShowMapSection';
 import EventItem from '@/components/Shares/EventItem';
-import { fetchMeetupsPagination } from '@/services/meetup';
+import { fetchPaginatedMeetups } from '@/services/meetup';
 import { color, devices } from '@/styles/variables';
 
 type TSweb3MeetupPagination = TPagination<IMeetup>;
@@ -113,7 +113,7 @@ const MainContents = () => {
 	};
 
 	const fetchEvents = async () => {
-		const response = await fetchMeetupsPagination(currentPage, 12);
+		const response = await fetchPaginatedMeetups(currentPage, 12);
 		const meetupData: TSweb3MeetupPagination = response.data;
 		const { docs, totalPages, hasPrevPage, hasNextPage } = meetupData;
 		setFilterEvent(docs);
