@@ -30,7 +30,6 @@ interface IMeetup {
 	title: string;
 	period: Period;
 	description: string;
-	eventDescription: string;
 	agenda: string;
 	address: string;
 	exhibitors: Exhibitor[];
