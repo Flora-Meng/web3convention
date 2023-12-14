@@ -47,7 +47,7 @@ const Description = styled.p`
 const WhyGrid = styled(Grid)`
 	margin-top: 56px;
 `;
-const GridItem = styled(Grid) <{ color: string; bgcolor: string }>`
+const GridItem = styled(Grid)<{ color: string; bgcolor: string }>`
 	background-color: ${props => props.bgcolor || ''};
 	border: solid 1px ${color.blackColor};
 	color: ${props => props.color || ''};
