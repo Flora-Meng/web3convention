@@ -112,7 +112,7 @@ const linkConfigList = [
 	},
 	{
 		label: 'Apply to Speak',
-		path: '/apply-to-speak'
+		path: 'https://w3con.eventsair.com/web3convention/ats/Site/Register'
 	},
 	{
 		label: 'Volunteers',
