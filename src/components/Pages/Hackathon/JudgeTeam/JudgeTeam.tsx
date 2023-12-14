@@ -357,7 +357,7 @@ const JudgeTeam: React.FC = () => {
 	return (
 		<ExpectedSpeakerContainer>
 			<Container>
-				<SectionSubtitle>Web3 Convention 2023</SectionSubtitle>
+				<SectionSubtitle>Web3 Hackathon 2023</SectionSubtitle>
 				<SectionTitle>
 					<span>Judges, </span>
 					<span>Speakers & </span>
