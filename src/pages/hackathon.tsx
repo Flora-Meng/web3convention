@@ -6,6 +6,7 @@ import Challenge from '@/components/Pages/Hackathon/Challenge';
 import StageCoverTitle from '@/components/Pages/Hackathon/CoverTitle/HackathonCoverTitle';
 import JudgeCriteria from '@/components/Pages/Hackathon/JudgeCriteria';
 import JudgeTeam from '@/components/Pages/Hackathon/JudgeTeam';
+import teamMemberListHackathon from '@/components/Pages/Hackathon/JudgeTeam/teamMemberList.json';
 import Prizes from '@/components/Pages/Hackathon/Prizes';
 import WhyHackathon from '@/components/Pages/Hackathon/WhyHackathon';
 import PageBanner from '@/components/Shares/PageBanner';
@@ -48,7 +49,7 @@ const HackathonPage = () => {
 			<WhyHackathon />
 			<Prizes />
 			<Benefits />
-			<JudgeTeam />
+			<JudgeTeam subtitle="Web3 Hackathon 2023" teamMemberList={teamMemberListHackathon} />
 			<JudgeCriteria />
 			<Footer />
 		</>

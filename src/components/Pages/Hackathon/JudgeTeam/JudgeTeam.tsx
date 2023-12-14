@@ -7,7 +7,6 @@ import backgroundBlue from 'public/images/background/speaker-background.png';
 import { useState } from 'react';
 import styled from 'styled-components';
 
-import teamMemberList from './teamMemberList.json';
 import MemberModal from '@/components/Shares/MemberModal';
 import { backdrop, sectionSubtitle, sectionTitle } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
@@ -32,7 +31,7 @@ interface TeamMemberProps {
 	name: string;
 	description?: string;
 	jobTitle?: string;
-	avatarSrc?: string;
+	avatarSrc: string;
 	companySrc?: string;
 	isSpeaker?: boolean;
 	socialMedia?: {
@@ -340,7 +339,10 @@ const SpeakerIconPlaceholder = styled.div`
 	width: 90px;
 `;
 
-const JudgeTeam: React.FC = () => {
+const JudgeTeam: React.FC<{ subtitle: string; teamMemberList: TeamMemberProps[] }> = ({
+	subtitle,
+	teamMemberList
+}) => {
 	const [open, setOpen] = useState(false);
 	const [teamMemberInfo, setTeamMemberInfo] = useState<TeamMemberProps | Record<string, never>>(
 		{}
@@ -357,7 +359,7 @@ const JudgeTeam: React.FC = () => {
 	return (
 		<ExpectedSpeakerContainer>
 			<Container>
-				<SectionSubtitle>AI + Web3 Convention 2024</SectionSubtitle>
+				<SectionSubtitle>{subtitle}</SectionSubtitle>
 				<SectionTitle>
 					<span>Judges, </span>
 					<span>Speakers & </span>

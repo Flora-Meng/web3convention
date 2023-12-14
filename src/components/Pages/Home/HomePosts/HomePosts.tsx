@@ -79,7 +79,7 @@ const HomePosts: React.FC = () => {
 			<Backdrop>Side</Backdrop>
 			<Grid container spacing={1}>
 				{postList.map(post => {
-					const postLink = '/comingSoon';
+					const postLink = post._id === '4' ? '/hackathon' : '/comingSoon';
 					return (
 						<Grid
 							item
