@@ -109,13 +109,6 @@ const NameContainer = styled.div`
 
 const ShowMapSection = () => {
 	const [open, setOpen] = useState(false);
-
-	const handleOpen = () => {
-		setOpen(true);
-	};
-	const handleClose = () => {
-		setOpen(false);
-	};
 	const [filterEvent, setFilterEvent] = useState<IMeetup[]>([]);
 	const [selectedLocation, setSelectedLocation] = useState('');
 	const [searchInput, setSearchInput] = useState('');
@@ -157,9 +150,9 @@ const ShowMapSection = () => {
 						height={48}
 						loader={imageLoader}
 					/>
-					<StyledButton onClick={handleOpen}>Show on the map</StyledButton>
+					<StyledButton onClick={toggleModal}>Show on the map</StyledButton>
 				</InfoContainer>
-				<ShowOnMapModal1 open={open} handleClose={handleClose}>
+				<ShowOnMapModal1 open={open} handleClose={toggleModal}>
 					<FilteredContainer>
 						<LocationAndNameContainer>
 							<NameContainer>
