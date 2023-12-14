@@ -11,7 +11,7 @@ import EventItem from '@/components/Shares/EventItem';
 import { fetchMeetupsPagination } from '@/services/meetup';
 import { color, devices } from '@/styles/variables';
 
-type TSweb3MeetupPagination = TSweb3Pagination<IMeetup>;
+type TSweb3MeetupPagination = TPagination<IMeetup>;
 
 const { blackColor, primaryColor, whiteColor } = color;
 

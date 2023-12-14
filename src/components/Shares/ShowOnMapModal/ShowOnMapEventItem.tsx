@@ -83,7 +83,7 @@ const ShowOnMapEventItem: React.FC<EventCardProps> = ({ event }) => {
 	const { _id, bannersUploader, title, location, city, period } = event;
 	const cityNames = city ? city.map(detail => detail.name).join(', ') : '';
 	const formattedDate =
-		period && dayjs(period.start).utc().local().format('ddd, MMM D, YYYY, hA [GMT]Z');
+		period.start && dayjs(period.start).utc().local().format('ddd, MMM D, YYYY, hA [GMT]Z');
 
 	return (
 		<Link href={`/event/${_id}`}>

@@ -1,4 +1,4 @@
-type TSweb3Pagination<T> = {
+type TPagination<T> = {
 	docs: T[];
 	totalDocs: number;
 	limit: number;
