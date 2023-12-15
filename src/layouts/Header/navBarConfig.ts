@@ -33,12 +33,20 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 		{
 			title: 'Contact Us',
 			path: '/contact-us'
+		},
+		{
+			title: 'Apply to Volunteer',
+			path: 'https://w3con.eventsair.com/web3convention/atv/Site/Register'
 		}
 	],
 	[ENavItem.EVENTS]: [
 		{
 			title: 'Convention',
 			path: '/convention'
+		},
+		{
+			title: 'Startup Competition',
+			path: 'https://w3con.eventsair.com/web3convention/startupcomp'
 		},
 		{
 			title: 'Side Events',
