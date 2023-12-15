@@ -1,23 +1,23 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
-// Define the properties each event will have
+import googleMapStyles from './googleMapStyles.json';
+
 interface IEvent {
 	_id: string;
 	title: string;
 	latitude: number;
 	longitude: number;
 }
-
-// Define the props for the GoogleMapMarker component
 interface GoogleMapProps {
 	events: IEvent[];
+	activeEventId?: string;
 }
 
-const GoogleMapMarker: React.FC<GoogleMapProps> = ({ events }) => {
+const GoogleMapMarker: React.FC<GoogleMapProps> = ({ events, activeEventId }) => {
 	const mapRef = useRef<HTMLDivElement>(null);
+	const [googleMap, setGoogleMap] = useState<google.maps.Map>();
 	const markersRef = useRef<google.maps.Marker[]>([]);
 
-	// Function to load the Google Maps script
 	const loadGoogleMapsScript = (callback: () => void) => {
 		if (typeof window.google === 'object' && typeof window.google.maps === 'object') {
 			callback();
@@ -34,37 +34,60 @@ const GoogleMapMarker: React.FC<GoogleMapProps> = ({ events }) => {
 
 	useEffect(() => {
 		loadGoogleMapsScript(() => {
-			if (mapRef.current) {
+			if (mapRef.current && !googleMap) {
 				// Initialize the map
 				const map = new window.google.maps.Map(mapRef.current, {
 					center: { lat: events[0]?.latitude || 0, lng: events[0]?.longitude || 0 },
-					zoom: 8
+					zoom: 8,
+					mapTypeControl: false,
+					fullscreenControl: false,
+					streetViewControl: false,
+					styles: googleMapStyles
 				});
 
-				// Clear existing markers
-				markersRef.current.forEach(marker => marker.setMap(null));
-				markersRef.current = [];
-
-				// Create new markers
-				events.forEach(event => {
-					const marker = new google.maps.Marker({
-						position: { lat: event.latitude, lng: event.longitude },
-						map,
-						title: event.title
-					});
-
-					markersRef.current.push(marker);
-				});
+				setGoogleMap(map); // Set the map instance in state
 			}
 		});
-
-		// Cleanup function
-		return () => {
-			markersRef.current.forEach(marker => marker.setMap(null));
-		};
 	}, [events]);
 
-	return <div ref={mapRef} style={{ width: '100%', height: '400px' }} />;
+	useEffect(() => {
+		if (googleMap) {
+			// Clear existing markers
+			markersRef.current.forEach(marker => marker.setMap(null));
+			markersRef.current = [];
+
+			// Create new markers
+			events.forEach(event => {
+				const marker = new google.maps.Marker({
+					position: { lat: event.latitude, lng: event.longitude },
+					map: googleMap,
+					title: event.title,
+					icon: {
+						path: 'M7.499 16S14 11.321 14 6.368C14 2.852 11.09 0 7.499 0 3.907 0 1 2.852 1 6.368 1 11.428 7.499 16 7.499 16zm0-12.548c1.364 0 2.477 1.09 2.477 2.426 0 1.337-1.113 2.426-2.477 2.426-1.365 0-2.477-1.09-2.477-2.426 0-1.337 1.112-2.426 2.477-2.426z',
+						fillColor: '#52f6c6',
+						fillOpacity: 1.0,
+						scale: 2,
+						strokeColor: '#52f6c6',
+						strokeWeight: 2
+					}
+				});
+
+				markersRef.current.push(marker);
+			});
+		}
+	}, [events, googleMap]);
+
+	useEffect(() => {
+		if (activeEventId && googleMap) {
+			const activeEvent = events.find(event => event._id === activeEventId);
+			if (activeEvent) {
+				googleMap.panTo({ lat: activeEvent.latitude, lng: activeEvent.longitude });
+				googleMap.setZoom(14);
+			}
+		}
+	}, [activeEventId, events, googleMap]);
+
+	return <div ref={mapRef} style={{ width: '100%', height: '100%' }} />;
 };
 
 export default GoogleMapMarker;

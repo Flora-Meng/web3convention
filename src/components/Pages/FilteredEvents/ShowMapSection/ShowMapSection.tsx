@@ -112,6 +112,7 @@ const ShowMapSection = () => {
 	const [filterEvent, setFilterEvent] = useState<IMeetup[]>([]);
 	const [selectedLocation, setSelectedLocation] = useState('');
 	const [searchInput, setSearchInput] = useState('');
+	const [activeEventId, setActiveEventId] = useState('');
 
 	const fetchEvent = async () => {
 		const response = await fetchMeetups();
@@ -131,6 +132,13 @@ const ShowMapSection = () => {
 
 	const handleLocationChange = (location: string) => {
 		setSelectedLocation(location);
+	};
+	const handleEventMouseEnter = (eventId: string) => {
+		setActiveEventId(eventId);
+	};
+
+	const handleEventMouseLeave = () => {
+		setActiveEventId('');
 	};
 	const filteredEvents = filterEvent.filter(
 		event =>
@@ -165,7 +173,11 @@ const ShowMapSection = () => {
 								<div>No results found</div>
 							) : (
 								filteredEvents.map(eventInfo => (
-									<SingleEventContainer key={eventInfo._id}>
+									<SingleEventContainer
+										key={eventInfo._id}
+										onMouseEnter={() => handleEventMouseEnter(eventInfo._id)}
+										onMouseLeave={handleEventMouseLeave}
+									>
 										<ShowOnMapEventItem event={eventInfo} />
 									</SingleEventContainer>
 								))
@@ -173,7 +185,7 @@ const ShowMapSection = () => {
 						</EventContainer>
 					</FilteredContainer>
 					<ShowMapContainer>
-						<GoogleMapMarker events={filteredEvents} />
+						<GoogleMapMarker events={filteredEvents} activeEventId={activeEventId} />
 					</ShowMapContainer>
 				</ShowOnMapModal1>
 			</MapContainer>
