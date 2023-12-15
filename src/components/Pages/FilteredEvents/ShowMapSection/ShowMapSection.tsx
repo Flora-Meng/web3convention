@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import InputTextFilter from '../InputTextFilter';
 
 import ShowOnMapModal1 from './ShowOnMapModal';
+import GoogleMapMarker from './ShowOnMapModal/GoogleMapMarker';
 import ChooseLocation from '@/components/Pages/FilteredEvents/ChooseLocation';
 import ShowOnMapEventItem from '@/components/Shares/ShowOnMapModal/ShowOnMapEventItem';
 import fetchMeetups from '@/services/meetup';
@@ -74,6 +75,10 @@ const EventContainer = styled.div`
 const SingleEventContainer = styled.div`
 	margin-bottom: 16px;
 `;
+const ShowMapContainer = styled.div`
+	height: auto;
+	width: 100%;
+`;
 const FilteredContainer = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -121,11 +126,12 @@ const ShowMapSection = () => {
 
 		setFilterEvent(meetupData);
 	};
-
 	useEffect(() => {
 		fetchEvent();
 	}, []);
-
+	const toggleModal = () => {
+		setOpen(!open);
+	};
 	const handleSearchInputChange = (inputValue: string) => {
 		setSearchInput(inputValue.toLowerCase());
 	};
@@ -139,6 +145,7 @@ const ShowMapSection = () => {
 				(!isEmpty(event.city) && event.city[0].name === selectedLocation)) &&
 			(isEmpty(searchInput) || event.title.toLowerCase().includes(searchInput))
 	);
+
 	return (
 		<Container>
 			<MapContainer>
@@ -172,6 +179,9 @@ const ShowMapSection = () => {
 							)}
 						</EventContainer>
 					</FilteredContainer>
+					<ShowMapContainer>
+						<GoogleMapMarker events={filteredEvents} />
+					</ShowMapContainer>
 				</ShowOnMapModal1>
 			</MapContainer>
 		</Container>
