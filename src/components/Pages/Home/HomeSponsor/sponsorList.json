@@ -49,12 +49,37 @@
 				"_id": "7",
 				"logoSrc": "/images/sponsors/afi.png",
 				"logoSrcHighlight": "/images/sponsors/afi.png"
+			},
+			{
+				"_id": "69",
+				"logoSrc": "/images/sponsors/breakout.png",
+				"logoSrcHighlight": "/images/sponsors/breakout.png"
+			},
+			{
+				"_id": "70",
+				"logoSrc": "/images/sponsors/d-social.png",
+				"logoSrcHighlight": "/images/sponsors/d-social.png"
+			},
+			{
+				"_id": "71",
+				"logoSrc": "/images/sponsors/origyn.png",
+				"logoSrcHighlight": "/images/sponsors/origyn.png"
+			},
+			{
+				"_id": "72",
+				"logoSrc": "/images/sponsors/shiku.png",
+				"logoSrcHighlight": "/images/sponsors/shiku.png"
+			},
+			{
+				"_id": "73",
+				"logoSrc": "/images/sponsors/yumi.png",
+				"logoSrcHighlight": "/images/sponsors/yumi.png"
 			}
 		]
 	},
 	{
 		"groupId": 4,
-		"groupName": "Community Partners",
+		"groupName": "STRATEGY PARTNER",
 		"sponsor": [
 			{
 				"_id": "10",
@@ -100,7 +125,7 @@
 	},
 	{
 		"groupId": 5,
-		"groupName": "STRATEGIC PARTNER",
+		"groupName": "COMMUNITY PARTNER",
 		"sponsor": [
 			{
 				"_id": "20",
@@ -270,7 +295,7 @@
 		]
 	},
 	{
-		"groupId": 5,
+		"groupId": 6,
 		"groupName": "MEDIA PARTNER ",
 		"sponsor": [
 			{
@@ -352,6 +377,11 @@
 				"_id": "67",
 				"logoSrc": "./images/sponsors/web3pub.png",
 				"logoSrcHighlight": "/images/sponsors/web3pub.png"
+			},
+			{
+				"_id": "68",
+				"logoSrc": "./images/sponsors/wushuo.png",
+				"logoSrcHighlight": "/images/sponsors/wushuo.png"
 			}
 		]
 	}
