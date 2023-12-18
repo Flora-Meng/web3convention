@@ -99,10 +99,6 @@ const eventsConfig = [
 const partnersConfig = [
 	{
 		label: '2024 Partners',
-		path: '/comingSoon'
-	},
-	{
-		label: 'Previous Partners',
 		path: '/previous-partner'
 	},
 	{
