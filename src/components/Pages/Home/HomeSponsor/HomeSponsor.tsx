@@ -149,7 +149,7 @@ const HomeSponsor: React.FC = () => {
 		<HomeSponsorContainer>
 			<Container>
 				<Subtitle>AI + Web3 Convention 2024</Subtitle>
-				<Title>Previous Partners</Title>
+				<Title>2024 Partners</Title>
 				<Backdrop>Partners</Backdrop>
 				<SponsorGroup>
 					{sponsorList.map((sponsorGroup, index) => (

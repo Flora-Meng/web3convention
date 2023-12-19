@@ -76,7 +76,7 @@ const QRcodeGridItem = styled(Grid)`
 // Configuration
 const eventsConfig = [
 	{
-		label: 'Charity Dinner',
+		label: 'VIP Party',
 		path: '/convention'
 	},
 	{

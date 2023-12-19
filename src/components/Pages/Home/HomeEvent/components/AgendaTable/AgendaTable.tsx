@@ -198,7 +198,7 @@ const agendaConfig = [
 	},
 	{
 		_id: '8-2',
-		title: 'Australian AI + Web3 Charity Dinner',
+		title: 'VIP Party',
 		columns: 1,
 		offset: 1
 	},
