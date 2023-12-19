@@ -44,7 +44,8 @@ export const color: IColor = {
 	cardBackgroundColor: '#1a1a1a',
 	greyColor: '#b2b2b2',
 	buttonBackgroundColor: '#242424',
-	inputTextColor: '#858585'
+	inputTextColor: '#858585',
+	formTextColor: ' #999999'
 };
 
 export const inputColor: IInputColor = {
