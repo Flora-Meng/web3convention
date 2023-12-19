@@ -30,12 +30,13 @@ interface IMeetup {
 	title: string;
 	period: Period;
 	description: string;
+	agenda: string;
 	address: string;
 	exhibitors: Exhibitor[];
 	city: CityInfo[];
 	bannersUploader: Banner;
 	location: string;
-	descriptionImage: DescriptionImageInfo;
+	descriptionImage: DescriptionImage;
 	latitude: number;
 	longitude: number;
 }
