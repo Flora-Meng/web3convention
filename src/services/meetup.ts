@@ -7,6 +7,14 @@ export const fetchMeetups = () => {
 		url: '/api/meetups?meetupEventType=web3'
 	});
 };
+export const fetchPaginatedMeetups = (page = 1, pageSize = 12) => {
+	return request({
+		baseURL,
+		method: 'GET',
+		url: `/api/meetups?meetupEventType=web3&page=${page}&pageSize=${pageSize}`
+	});
+};
+
 export const fetchMoreEvents = () => {
 	return request({
 		baseURL,

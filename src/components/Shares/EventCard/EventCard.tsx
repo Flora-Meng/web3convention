@@ -6,6 +6,7 @@ import Tooltip, { TooltipProps, tooltipClasses } from '@mui/material/Tooltip';
 import dayjs from 'dayjs';
 import timezone from 'dayjs/plugin/timezone';
 import utc from 'dayjs/plugin/utc';
+import { isEmpty } from 'lodash';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -230,7 +231,7 @@ const EventCard: React.FC<EventCardProps> = ({ eventInfo }) => {
 					</CompanyAvatar>
 					<CompanyName>{company.name}</CompanyName>
 				</StyledLink>
-				{exhibitors.length !== 0 ? (
+				{!isEmpty(exhibitors) ? (
 					<ExhibitorIconWrapper>
 						<StyledTooltip title={description} arrow>
 							<img

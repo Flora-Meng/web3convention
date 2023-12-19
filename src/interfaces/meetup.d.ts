@@ -37,4 +37,6 @@ interface IMeetup {
 	bannersUploader: Banner;
 	location: string;
 	descriptionImage: DescriptionImage;
+	latitude: number;
+	longitude: number;
 }

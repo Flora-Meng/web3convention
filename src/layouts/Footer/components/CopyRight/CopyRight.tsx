@@ -12,7 +12,7 @@ const ContentContainer = styled.section`
 	align-items: center;
 	background-color: ${primaryColor};
 	font-size: 14px;
-	padding: 32px 0;
+	padding: 32px 20px;
 	@media ${devices.largeLaptop} {
 		padding: 12px 0;
 	}
@@ -24,17 +24,15 @@ const StyledLink = styled(Link)`
 `;
 const ContainerGrid = styled(Grid)`
 	margin: 0 auto;
-	width: calc(100vw - 75px);
 	@media ${devices.largeLaptop} {
 		max-width: 1440px;
 	}
 `;
 const LogoGrid = styled(Grid)`
-	align-items: center;
 	display: flex;
 	justify-content: center;
-	@media ${devices.largeLaptop} {
-		justify-content: start;
+	@media ${devices.tablet} {
+		justify-content: flex-start;
 	}
 `;
 const Logo = styled(Image)`
@@ -46,9 +44,13 @@ const Logo = styled(Image)`
 const CopyrightGrid = styled(Grid)`
 	align-items: center;
 	display: flex;
+	flex: 1;
 	flex-direction: column;
 	justify-content: center;
-	min-width: '600px';
+	@media ${devices.tablet} {
+		justify-content: flex-end;
+		align-items: flex-end;
+	}
 `;
 const CopyrightText = styled.p`
 	margin: 0 0;
@@ -65,11 +67,8 @@ const CopyrightText = styled.p`
 const gridColumn = {
 	mobile: 12,
 	tablet: 12,
-	laptop: 3
+	laptop: 4
 };
-const EmptyBox = styled.div`
-	width: 120px;
-`;
 const CopyRight: React.FC = () => {
 	const [isMobile, setIsMobile] = useState<boolean>();
 	useEffect(() => {
@@ -95,16 +94,19 @@ const CopyRight: React.FC = () => {
 						priority
 					/>
 				</LogoGrid>
-				<CopyrightGrid item {...gridColumn}>
+				<CopyrightGrid>
 					{isMobile && (
 						<>
-							<CopyrightText>© 2023 AI + Web3 Convention</CopyrightText>
-							<CopyrightText>All Rights Reserved,ACN 668 836 566</CopyrightText>
+							<CopyrightText>
+								Copyright © 2023-2024 AI + Web3 Convention
+							</CopyrightText>
+							<CopyrightText>All Rights Reserved, ACN 668 836 566</CopyrightText>
 						</>
 					)}
 					{!isMobile && (
 						<CopyrightText>
-							© 2023 AI + Web3 Convention, All Rights Reserved. ACN 668 836 566
+							Copyright © 2023-2024 AI + Web3 Convention. All Rights Reserved. ACN 668
+							836 566
 						</CopyrightText>
 					)}
 					<CopyrightText>
@@ -112,9 +114,6 @@ const CopyRight: React.FC = () => {
 						<StyledLink href="/anti-harassment"> Anti-harassment Policy</StyledLink>
 					</CopyrightText>
 				</CopyrightGrid>
-				<Grid item {...gridColumn}>
-					<EmptyBox />
-				</Grid>
 			</ContainerGrid>
 		</ContentContainer>
 	);

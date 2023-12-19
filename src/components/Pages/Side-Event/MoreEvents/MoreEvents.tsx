@@ -75,7 +75,8 @@ const MoreEvents: React.FC = () => {
 
 	const fetchData = async () => {
 		const response = await fetchMoreEvents();
-		setMoreEvents(response.data);
+		const meetupData = response.data.docs || [];
+		setMoreEvents(meetupData);
 	};
 
 	useEffect(() => {

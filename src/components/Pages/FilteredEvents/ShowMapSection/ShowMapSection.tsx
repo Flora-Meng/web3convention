@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import InputTextFilter from '../InputTextFilter';
 
 import ShowOnMapModal1 from './ShowOnMapModal';
+import GoogleMapMarker from './ShowOnMapModal/GoogleMapMarker';
 import ChooseLocation from '@/components/Pages/FilteredEvents/ChooseLocation';
 import ShowOnMapEventItem from '@/components/Shares/ShowOnMapModal/ShowOnMapEventItem';
 import fetchMeetups from '@/services/meetup';
@@ -74,6 +75,10 @@ const EventContainer = styled.div`
 const SingleEventContainer = styled.div`
 	margin-bottom: 16px;
 `;
+const ShowMapContainer = styled.div`
+	height: auto;
+	width: 100%;
+`;
 const FilteredContainer = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -104,26 +109,23 @@ const NameContainer = styled.div`
 
 const ShowMapSection = () => {
 	const [open, setOpen] = useState(false);
-
-	const handleOpen = () => {
-		setOpen(true);
-	};
-	const handleClose = () => {
-		setOpen(false);
-	};
 	const [filterEvent, setFilterEvent] = useState<IMeetup[]>([]);
 	const [selectedLocation, setSelectedLocation] = useState('');
 	const [searchInput, setSearchInput] = useState('');
+	const [activeEventId, setActiveEventId] = useState('');
 
 	const fetchEvent = async () => {
 		const response = await fetchMeetups();
-		setFilterEvent(response.data);
-	};
+		const meetupData = response.data.docs || [];
 
+		setFilterEvent(meetupData);
+	};
 	useEffect(() => {
 		fetchEvent();
 	}, []);
-
+	const toggleModal = () => {
+		setOpen(!open);
+	};
 	const handleSearchInputChange = (inputValue: string) => {
 		setSearchInput(inputValue.toLowerCase());
 	};
@@ -131,12 +133,20 @@ const ShowMapSection = () => {
 	const handleLocationChange = (location: string) => {
 		setSelectedLocation(location);
 	};
+	const handleEventMouseEnter = (eventId: string) => {
+		setActiveEventId(eventId);
+	};
+
+	const handleEventMouseLeave = () => {
+		setActiveEventId('');
+	};
 	const filteredEvents = filterEvent.filter(
 		event =>
 			(isEmpty(selectedLocation) ||
 				(!isEmpty(event.city) && event.city[0].name === selectedLocation)) &&
 			(isEmpty(searchInput) || event.title.toLowerCase().includes(searchInput))
 	);
+
 	return (
 		<Container>
 			<MapContainer>
@@ -148,9 +158,9 @@ const ShowMapSection = () => {
 						height={48}
 						loader={imageLoader}
 					/>
-					<StyledButton onClick={handleOpen}>Show on the map</StyledButton>
+					<StyledButton onClick={toggleModal}>Show on the map</StyledButton>
 				</InfoContainer>
-				<ShowOnMapModal1 open={open} handleClose={handleClose}>
+				<ShowOnMapModal1 open={open} handleClose={toggleModal}>
 					<FilteredContainer>
 						<LocationAndNameContainer>
 							<NameContainer>
@@ -163,13 +173,20 @@ const ShowMapSection = () => {
 								<div>No results found</div>
 							) : (
 								filteredEvents.map(eventInfo => (
-									<SingleEventContainer key={eventInfo._id}>
+									<SingleEventContainer
+										key={eventInfo._id}
+										onMouseEnter={() => handleEventMouseEnter(eventInfo._id)}
+										onMouseLeave={handleEventMouseLeave}
+									>
 										<ShowOnMapEventItem event={eventInfo} />
 									</SingleEventContainer>
 								))
 							)}
 						</EventContainer>
 					</FilteredContainer>
+					<ShowMapContainer>
+						<GoogleMapMarker events={filteredEvents} activeEventId={activeEventId} />
+					</ShowMapContainer>
 				</ShowOnMapModal1>
 			</MapContainer>
 		</Container>

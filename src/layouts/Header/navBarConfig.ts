@@ -33,12 +33,20 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 		{
 			title: 'Contact Us',
 			path: '/contact-us'
+		},
+		{
+			title: 'Apply to Volunteer',
+			path: 'https://w3con.eventsair.com/web3convention/atv/Site/Register'
 		}
 	],
 	[ENavItem.EVENTS]: [
 		{
 			title: 'Convention',
 			path: '/convention'
+		},
+		{
+			title: 'Startup Competition',
+			path: 'https://w3con.eventsair.com/web3convention/startupcomp'
 		},
 		{
 			title: 'Side Events',
@@ -61,7 +69,7 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 		},
 		{
 			title: 'Apply to Speak',
-			path: '/apply-to-speak'
+			path: 'https://w3con.eventsair.com/web3convention/ats/Site/Register'
 		}
 	],
 	[ENavItem.ATTEND]: [
@@ -84,11 +92,7 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 			path: '/why-sponsor'
 		},
 		{
-			title: 'Our Partners',
-			path: '/comingSoon'
-		},
-		{
-			title: 'Previous Partner',
+			title: '2024 Partners',
 			path: '/previous-partner'
 		}
 	]

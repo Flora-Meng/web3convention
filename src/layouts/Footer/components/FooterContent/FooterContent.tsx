@@ -73,15 +73,32 @@ const QRcodeGridItem = styled(Grid)`
 	line-height: 1.43;
 `;
 
-const eventLink = '/convention';
 // Configuration
+const eventsConfig = [
+	{
+		label: 'Charity Dinner',
+		path: '/convention'
+	},
+	{
+		label: 'Startup Competition',
+		path: 'https://w3con.eventsair.com/web3convention/startupcomp'
+	},
+	{
+		label: 'Capital Connect',
+		path: '/convention'
+	},
+	{
+		label: 'Cyber Party',
+		path: '/convention'
+	},
+	{
+		label: 'Side Events',
+		path: 'convention'
+	}
+];
 const partnersConfig = [
 	{
 		label: '2024 Partners',
-		path: '/comingSoon'
-	},
-	{
-		label: 'Previous Partners',
 		path: '/previous-partner'
 	},
 	{
@@ -112,11 +129,11 @@ const linkConfigList = [
 	},
 	{
 		label: 'Apply to Speak',
-		path: '/apply-to-speak'
+		path: 'https://w3con.eventsair.com/web3convention/ats/Site/Register'
 	},
 	{
 		label: 'Volunteers',
-		path: 'https://w3con.eventsair.com/web3convention/registration/Site/Register'
+		path: 'https://w3con.eventsair.com/web3convention/atv'
 	}
 ];
 const qrCodes = [
@@ -203,11 +220,11 @@ const FooterContent = () => {
 				<Grid item mobile={12} tablet={6} laptop={6} largeLaptop={1.5}>
 					<Title>Our Events</Title>
 					<div className="flex flex-col">
-						<StyledLink href={eventLink}>Charity Dinner</StyledLink>
-						<StyledLink href={eventLink}>Startup Competition</StyledLink>
-						<StyledLink href={eventLink}>Capital Connect</StyledLink>
-						<StyledLink href={eventLink}>Cyber Party</StyledLink>
-						<StyledLink href={eventLink}>Side Events</StyledLink>
+						{eventsConfig.map(linkConfig => (
+							<StyledLink href={linkConfig.path} key={linkConfig.label}>
+								{linkConfig.label}
+							</StyledLink>
+						))}
 					</div>
 				</Grid>
 				<Grid item mobile={12} tablet={6} laptop={6} largeLaptop={1.5}>

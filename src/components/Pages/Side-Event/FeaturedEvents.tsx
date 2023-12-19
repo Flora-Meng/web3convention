@@ -62,7 +62,7 @@ const FeaturedEvents = () => {
 	const [featuredEvents, setFeaturedEvents] = useState<IMeetup[]>([]);
 	const fetchData = async () => {
 		const response = await fetchFeaturedEvents();
-		setFeaturedEvents(response.data);
+		setFeaturedEvents(response.data.docs);
 	};
 	useEffect(() => {
 		fetchData();
