@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable @next/next/no-img-element */
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -7,6 +8,7 @@ import timezone from 'dayjs/plugin/timezone';
 import utc from 'dayjs/plugin/utc';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
 
 import { color } from '@/styles/variables';
@@ -151,12 +153,34 @@ dayjs.extend(timezone);
 const format = 'dddd, MMM D, hA [GMT]Z';
 
 const EventCard: React.FC<EventCardProps> = ({ eventInfo }) => {
-	const { _id, bannersUploader, address, exhibitors, period, title, description } = eventInfo;
+	const {
+		_id,
+		bannersUploader,
+		address,
+		exhibitors,
+		period,
+		title,
+		description,
+		agenda,
+		descriptionImage
+	} = eventInfo;
 	const company = exhibitors?.[0] || {};
+	const router = useRouter();
+	const imageUrl = eventInfo.descriptionImage?.url || '';
+	const navigateToEventDescription = () => {
+		router.push({
+			pathname: '/event-detail',
+			query: {
+				description: eventInfo.description,
+				agenda: eventInfo.agenda,
+				descriptionImage: imageUrl
+			}
+		});
+	};
 	return (
 		<StyledCard>
 			{bannersUploader?.url && (
-				<CardMediaLink href={`/events/${_id}`}>
+				<CardMediaLink href="#" onClick={navigateToEventDescription}>
 					<Image
 						src={bannersUploader?.url}
 						alt={title}
@@ -167,7 +191,7 @@ const EventCard: React.FC<EventCardProps> = ({ eventInfo }) => {
 				</CardMediaLink>
 			)}
 			<StyledCardContent>
-				<Link href={`/events/${_id}`}>
+				<Link href="#" onClick={navigateToEventDescription}>
 					<StyledTypography>{title}</StyledTypography>
 				</Link>
 				{period?.start && (
