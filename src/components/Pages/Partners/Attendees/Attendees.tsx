@@ -47,36 +47,40 @@ const Subtitle = styled.p`
 
 const counterList = [
 	{
-		name: 'Exhibitors',
-		count: 150
+		name: 'Online Attendees',
+		count: 100000
 	},
 	{
 		name: 'Onsite Attendees',
-		count: 10000
+		count: 5000
 	},
 	{
-		name: 'Online Attendees',
-		count: 200000
+		name: 'University Students',
+		count: 2000
 	},
 	{
-		name: 'Speakers',
-		count: 200
-	},
-	{
-		name: 'Creators',
-		count: 500
+		name: 'Exhibitors',
+		count: 100
 	},
 	{
 		name: 'Venture Capitalists',
 		count: 100
 	},
 	{
-		name: 'University Students',
-		count: 8000
+		name: 'Creators',
+		count: 100
 	},
 	{
 		name: 'Influencers',
 		count: 100
+	},
+	{
+		name: 'Speakers',
+		count: 200
+	},
+	{
+		name: 'Parties',
+		count: 3
 	}
 ];
 const Backdrop = styled.div`
