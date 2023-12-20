@@ -9,10 +9,10 @@ const ContentWrapper = styled.div`
 	max-width: 680px;
 `;
 const EventImage = styled.div`
-	height: 40vw;
+	height: 23vw;
 	position: relative;
 	width: 100%;
-	@media ${devices.tablet} {
+	@media ${devices.largeLaptop} {
 		height: 340px;
 	}
 `;
