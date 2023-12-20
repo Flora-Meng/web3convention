@@ -103,15 +103,15 @@ const partnersConfig = [
 	},
 	{
 		label: 'Sponsor Partners',
-		path: '/comingSoon'
+		path: '/partners'
 	},
 	{
 		label: 'Community Partners',
-		path: '/comingSoon'
+		path: '/partners'
 	},
 	{
 		label: 'Media Partners',
-		path: '/comingSoon'
+		path: '/partners'
 	}
 ];
 const linkConfigList = [
