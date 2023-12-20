@@ -45,4 +45,11 @@ export const fetchFeaturedConventionEvents = () => {
 		url: '/api/meetups?meetupEventType=web3&web3EventType=web3AiConvention&featured=popularEvents'
 	});
 };
+export const fetchExhibitor = (exhibitorID: string) => {
+	return request({
+		baseURL,
+		method: 'GET',
+		url: `/api/companies/${exhibitorID}`
+	});
+};
 export default fetchMeetups;
