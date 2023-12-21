@@ -11,7 +11,7 @@ import styled from 'styled-components';
 import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
-const { cardBackgroundColor, greyColor } = color;
+const { cardBackgroundColor, greyColor, primaryColor } = color;
 
 const dateIcon = '/images/icons/date.svg';
 const locationIcon = '/images/icons/location.svg';
@@ -40,6 +40,9 @@ const DateInfo = styled.span`
 	color: ${greyColor};
 	font-size: 16px;
 	margin-left: 8px;
+	&:hover {
+		color: ${primaryColor};
+	}
 `;
 const InfoContainer = styled.div`
 	align-items: baseline;
