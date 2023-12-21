@@ -11,7 +11,7 @@ import styled from 'styled-components';
 import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
-const { cardBackgroundColor } = color;
+const { cardBackgroundColor, greyColor } = color;
 
 const dateIcon = '/images/icons/date.svg';
 const locationIcon = '/images/icons/location.svg';
@@ -37,13 +37,13 @@ const StyledCardContent = styled(CardContent)`
 	margin-top: 16px;
 `;
 const DateInfo = styled.span`
-	color: #b2b2b2;
+	color: ${greyColor};
 	font-size: 16px;
 	margin-left: 8px;
 `;
 const InfoContainer = styled.div`
 	align-items: baseline;
-	color: #b2b2b2;
+	color: ${greyColor};
 	display: flex;
 	font-size: 16px;
 	letter-spacing: 1px;
@@ -59,17 +59,37 @@ const ImageContainer = styled.div`
 dayjs.extend(utc);
 dayjs.extend(timezone);
 const format = 'dddd, MMM D, hA [GMT]Z';
+interface UserLocation {
+	latitude: number | null;
+	longitude: number | null;
+}
+
+interface QueryParams {
+	maxRSVPs?: string;
+	address?: string;
+	periodStart?: string;
+	latitude?: string;
+	longitude?: string;
+}
 const LocationCard = () => {
 	const { query } = useRouter();
-	const { maxRSVPs, address } = query;
-	const periodStart = Array.isArray(query.periodStart) ? query.periodStart[0] : query.periodStart;
-	const latitude = typeof query.latitude === 'string' ? parseFloat(query.latitude) : null;
-	const longitude = typeof query.longitude === 'string' ? parseFloat(query.longitude) : null;
-	const [userLocation, setUserLocation] = useState<{
-		latitude: number | null;
-		longitude: number | null;
-	}>({ latitude: null, longitude: null });
-	const [distance, setDistance] = useState<number | null>(null);
+	const queryParams: QueryParams = query as QueryParams;
+	const { maxRSVPs, address } = queryParams;
+	const periodStart = Array.isArray(queryParams.periodStart)
+		? queryParams.periodStart[0]
+		: queryParams.periodStart;
+	const latitude =
+		typeof queryParams.latitude === 'string' ? parseFloat(queryParams.latitude) : null;
+	const longitude =
+		typeof queryParams.longitude === 'string' ? parseFloat(queryParams.longitude) : null;
+	const [userLocation, setUserLocation]: [
+		UserLocation,
+		React.Dispatch<React.SetStateAction<UserLocation>>
+	] = useState<UserLocation>({ latitude: null, longitude: null });
+	const [distance, setDistance]: [
+		number | null,
+		React.Dispatch<React.SetStateAction<number | null>>
+	] = useState<number | null>(null);
 
 	useEffect(() => {
 		if (navigator.geolocation) {
@@ -101,7 +121,7 @@ const LocationCard = () => {
 		}
 	}, [userLocation, latitude, longitude]);
 
-	const calculateDistance = (lat1: number, lon1: number, lat2: number, lon2: number) => {
+	const calculateDistance = (lat1: number, lon1: number, lat2: number, lon2: number): number => {
 		const R = 6371;
 		const dLat = ((lat2 - lat1) * Math.PI) / 180;
 		const dLon = ((lon2 - lon1) * Math.PI) / 180;
