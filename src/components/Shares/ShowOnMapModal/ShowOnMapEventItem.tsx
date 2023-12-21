@@ -21,10 +21,9 @@ const Container = styled.div`
 	margin-bottom: 16px;
 	max-width: 717px;
 	padding: 16px;
-	@media ${devices.mobile} {
+	@media ${devices.largeLaptop} {
 		flex-direction: row;
 		flex-grow: 1;
-		width: unset;
 		height: 148px;
 	}
 `;
@@ -68,11 +67,7 @@ const TimeAndLocationContainer = styled.div`
 `;
 const Description = styled.span`
 	margin-left: 9px;
-	width: 200px;
-	@media ${devices.mobile} {
-		margin-left: 9px;
-		width: 100%;
-	}
+	width: 100%;
 `;
 
 interface EventCardProps {

@@ -58,6 +58,9 @@ const EventContainer = styled.div`
 	overflow-y: auto;
 	padding-right: 8px; // Add space for moving the scrollbar
 	box-sizing: border-box; // Include padding in the width calculation
+	@media ${devices.largeLaptop} {
+		width: 717px;
+	}
 	&::-webkit-scrollbar {
 		width: 8px; // Adjust scrollbar width
 	}
