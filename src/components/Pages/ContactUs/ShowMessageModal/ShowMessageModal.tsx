@@ -1,9 +1,7 @@
 import { Box, Modal } from '@mui/material';
-import Image from 'next/image';
 import styled from 'styled-components';
 
 import { color, devices } from '@/styles/variables';
-import imageLoader from '@/utils/loader';
 
 const { whiteColor } = color;
 
@@ -12,8 +10,6 @@ interface ShowMessageModalProps {
 	open: boolean;
 	handleClose: () => void;
 }
-
-const mobilePaddingLeft = '24px';
 
 const StyledBox = styled(Box)`
 	background-color: ${whiteColor};
@@ -39,36 +35,10 @@ const StyledBox = styled(Box)`
 	}
 `;
 
-// const StyledButton = styled.div`
-// 	bottom: -60px;
-// 	cursor: pointer;
-// 	height: 44px;
-// 	left: calc(50% - ${mobilePaddingLeft});
-// 	position: absolute;
-// 	width: 44px;
-// 	@media${devices.mobile} {
-// 		right: -22px;
-// 		top: -22px;
-// 		left: unset;
-// 		bottom: unset;
-// 	}
-// `;
-
-const ShowMessageModal: React.FC<ShowMessageModalProps> = ({ children, open, handleClose }) => {
+const ShowMessageModal: React.FC<ShowMessageModalProps> = ({ children, open }) => {
 	return (
 		<Modal open={open}>
-			<StyledBox>
-				{children}
-				{/* <StyledButton onClick={handleClose}>
-					<Image
-						src="/images/icons/modal-button.svg"
-						alt="button"
-						loader={imageLoader}
-						unoptimized
-						fill
-					/>
-				</StyledButton> */}
-			</StyledBox>
+			<StyledBox>{children}</StyledBox>
 		</Modal>
 	);
 };
