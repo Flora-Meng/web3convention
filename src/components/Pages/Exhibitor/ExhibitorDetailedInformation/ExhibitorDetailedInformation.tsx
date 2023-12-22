@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import ExhibitorLocationOnMap from '../ExhibitorLocationOnMap';
 
 import { IExhibitor } from '@/interfaces/exhibitor';
+import calculateDistanceFromCoordinates from '@/services/calculateDistanceFromCoordinates';
 import { color } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
@@ -12,9 +13,10 @@ const Container = styled.div`
 	background-color: #1a1a1a;
 	height: 636px;
 	max-width: 400px;
+`;
+const InfoContainer = styled.div`
 	padding: 24px 33px 0;
 `;
-const InfoContainer = styled.div``;
 const DetailContainer = styled.div`
 	margin-bottom: 24px;
 `;
@@ -30,7 +32,8 @@ const Detail = styled.span`
 `;
 
 const ExhibitorLocationOnMapContainer = styled.div`
-	height: 332px;
+	height: 344px;
+	padding: 0px 12px 12px 12px;
 	width: auto;
 `;
 const ErrorMessage = styled.span`
@@ -56,17 +59,15 @@ const ExhibitorDetailedInformation: React.FC<{ exhibitorInfo: IExhibitor }> = ({
 					lat: position.coords.latitude,
 					lng: position.coords.longitude
 				});
-				console.log(userCoordinates);
 			},
-			error => {
-				setError(error.message);
+			err => {
+				setError(err.message);
 			}
 		);
 	}, []);
 
 	useEffect(() => {
 		const fetchCoordinates = async () => {
-			// Error handling is important when fetching from an external API
 			try {
 				const response = await fetch(
 					`https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(
@@ -74,10 +75,13 @@ const ExhibitorDetailedInformation: React.FC<{ exhibitorInfo: IExhibitor }> = ({
 					)}&key=${process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY}`
 				);
 				const data = await response.json();
-				const { lat, lng } = data.results[0]?.geometry.location;
-				setExhibitorCoordinates({ lat, lng });
-				console.log(exhibitorCoordinates);
-			} catch (error) {
+				if (data.results && data.results.length > 0 && data.results[0].geometry) {
+					const { lat, lng } = data.results[0].geometry.location;
+					setExhibitorCoordinates({ lat, lng });
+				} else {
+					setError('Location data not available');
+				}
+			} catch (err) {
 				setError('Failed to fetch exhibitor coordinates');
 			}
 		};
@@ -90,34 +94,14 @@ const ExhibitorDetailedInformation: React.FC<{ exhibitorInfo: IExhibitor }> = ({
 	useEffect(() => {
 		const calculateDistance = async () => {
 			if (userCoordinates && exhibitorCoordinates) {
-				const origin = `${userCoordinates.lat},${userCoordinates.lng}`;
-				const destination = `${exhibitorCoordinates.lat},${exhibitorCoordinates.lng}`;
-				console.log(userCoordinates);
-				console.log(exhibitorCoordinates);
-
 				try {
-					const response = await fetch(
-						`https://maps.googleapis.com/maps/api/distancematrix/json?units=metric&origins=${userCoordinates.lat}%${userCoordinates.lng}&destinations=${exhibitorCoordinates.lat}%${exhibitorCoordinates.lng}&key=${process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY}`
+					const response = await calculateDistanceFromCoordinates(
+						userCoordinates,
+						exhibitorCoordinates
 					);
 
-					if (!response.ok) {
-						throw new Error('Network response was not ok');
-					}
-
-					const data = await response.json();
-					if (data.status !== 'OK') {
-						throw new Error(`Error from the API: ${data.status}`);
-					}
-
-					// Assuming we have at least one result and that the first one is relevant
-					const distanceResult = data.rows[0].elements[0];
-					if (distanceResult.status === 'OK') {
-						setDistance(distanceResult.distance.text); // e.g., "12 km"
-					} else {
-						throw new Error(`Error in distance result: ${distanceResult.status}`);
-					}
-				} catch (error) {
-					console.error('Failed to fetch distance:', error);
+					setDistance(response.data.distance);
+				} catch (err) {
 					setError('Failed to fetch distance');
 				}
 			}
@@ -184,8 +168,8 @@ const ExhibitorDetailedInformation: React.FC<{ exhibitorInfo: IExhibitor }> = ({
 					<Detail>
 						{exhibitorInfo.officeAddress} <br />{' '}
 						{distance !== undefined
-							? `Distance from you: ${distance.toFixed(2)} km`
-							: 'Calculating distance...'}
+							? `(Distance from you ${distance})`
+							: '(Calculating distance...)'}
 					</Detail>
 				</DetailContainer>
 			</InfoContainer>
