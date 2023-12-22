@@ -61,7 +61,8 @@ const ImageContainer = styled.div`
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
-const format = 'dddd, MMM D, hA [GMT]Z';
+// eslint-disable-next-line @typescript-eslint/no-inferrable-types
+const format: string = 'dddd, MMM D, hA [GMT]Z';
 interface UserLocation {
 	latitude: number | null;
 	longitude: number | null;
@@ -81,9 +82,9 @@ const LocationCard = () => {
 	const periodStart = Array.isArray(queryParams.periodStart)
 		? queryParams.periodStart[0]
 		: queryParams.periodStart;
-	const latitude =
+	const latitude: number | null =
 		typeof queryParams.latitude === 'string' ? parseFloat(queryParams.latitude) : null;
-	const longitude =
+	const longitude: number | null =
 		typeof queryParams.longitude === 'string' ? parseFloat(queryParams.longitude) : null;
 	const [userLocation, setUserLocation]: [
 		UserLocation,
