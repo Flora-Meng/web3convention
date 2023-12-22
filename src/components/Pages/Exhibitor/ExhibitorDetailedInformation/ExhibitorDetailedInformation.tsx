@@ -1,5 +1,8 @@
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
+
+import ExhibitorLocationOnMap from '../ExhibitorLocationOnMap';
 
 import { IExhibitor } from '@/interfaces/exhibitor';
 import { color } from '@/styles/variables';
@@ -26,9 +29,103 @@ const Detail = styled.span`
 	line-height: 1.5;
 `;
 
+const ExhibitorLocationOnMapContainer = styled.div`
+	height: 332px;
+	width: auto;
+`;
+const ErrorMessage = styled.span`
+	color: red;
+`;
+
 const ExhibitorDetailedInformation: React.FC<{ exhibitorInfo: IExhibitor }> = ({
 	exhibitorInfo
 }) => {
+	const [userCoordinates, setUserCoordinates] = useState<
+		{ lat: number; lng: number } | undefined
+	>(undefined);
+	const [exhibitorCoordinates, setExhibitorCoordinates] = useState<
+		{ lat: number; lng: number } | undefined
+	>(undefined);
+	const [distance, setDistance] = useState<number | undefined>(undefined);
+	const [error, setError] = useState<string | null>(null);
+
+	useEffect(() => {
+		navigator.geolocation.getCurrentPosition(
+			position => {
+				setUserCoordinates({
+					lat: position.coords.latitude,
+					lng: position.coords.longitude
+				});
+				console.log(userCoordinates);
+			},
+			error => {
+				setError(error.message);
+			}
+		);
+	}, []);
+
+	useEffect(() => {
+		const fetchCoordinates = async () => {
+			// Error handling is important when fetching from an external API
+			try {
+				const response = await fetch(
+					`https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(
+						exhibitorInfo.branchAddress
+					)}&key=${process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY}`
+				);
+				const data = await response.json();
+				const { lat, lng } = data.results[0]?.geometry.location;
+				setExhibitorCoordinates({ lat, lng });
+				console.log(exhibitorCoordinates);
+			} catch (error) {
+				setError('Failed to fetch exhibitor coordinates');
+			}
+		};
+
+		if (exhibitorInfo.branchAddress) {
+			fetchCoordinates();
+		}
+	}, [exhibitorInfo.branchAddress]);
+
+	useEffect(() => {
+		const calculateDistance = async () => {
+			if (userCoordinates && exhibitorCoordinates) {
+				const origin = `${userCoordinates.lat},${userCoordinates.lng}`;
+				const destination = `${exhibitorCoordinates.lat},${exhibitorCoordinates.lng}`;
+				console.log(userCoordinates);
+				console.log(exhibitorCoordinates);
+
+				try {
+					const response = await fetch(
+						`https://maps.googleapis.com/maps/api/distancematrix/json?units=metric&origins=${userCoordinates.lat}%${userCoordinates.lng}&destinations=${exhibitorCoordinates.lat}%${exhibitorCoordinates.lng}&key=${process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY}`
+					);
+
+					if (!response.ok) {
+						throw new Error('Network response was not ok');
+					}
+
+					const data = await response.json();
+					if (data.status !== 'OK') {
+						throw new Error(`Error from the API: ${data.status}`);
+					}
+
+					// Assuming we have at least one result and that the first one is relevant
+					const distanceResult = data.rows[0].elements[0];
+					if (distanceResult.status === 'OK') {
+						setDistance(distanceResult.distance.text); // e.g., "12 km"
+					} else {
+						throw new Error(`Error in distance result: ${distanceResult.status}`);
+					}
+				} catch (error) {
+					console.error('Failed to fetch distance:', error);
+					setError('Failed to fetch distance');
+				}
+			}
+		};
+
+		calculateDistance();
+	}, [userCoordinates, exhibitorCoordinates]);
+
 	const roundUpToNearestHundred = (num: number) => {
 		return Math.floor(num / 100) * 100;
 	};
@@ -85,10 +182,19 @@ const ExhibitorDetailedInformation: React.FC<{ exhibitorInfo: IExhibitor }> = ({
 						height={16}
 					/>
 					<Detail>
-						{exhibitorInfo.officeAddress} <br /> (Distance from you 23km)
+						{exhibitorInfo.officeAddress} <br />{' '}
+						{distance !== undefined
+							? `Distance from you: ${distance.toFixed(2)} km`
+							: 'Calculating distance...'}
 					</Detail>
 				</DetailContainer>
 			</InfoContainer>
+			<ExhibitorLocationOnMapContainer>
+				{exhibitorCoordinates && (
+					<ExhibitorLocationOnMap exhibitorCoordinates={exhibitorCoordinates} />
+				)}
+			</ExhibitorLocationOnMapContainer>
+			{error && <ErrorMessage>Error: {error}</ErrorMessage>}
 		</Container>
 	);
 };
