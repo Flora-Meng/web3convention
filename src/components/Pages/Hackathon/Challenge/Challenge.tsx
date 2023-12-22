@@ -303,7 +303,7 @@ const Challenge = () => {
 				</Viture>
 			</LogoCollumns>
 
-			<h3>Media Partner</h3>
+			<h3>Media Partners</h3>
 			<LogoCollumns>
 				<Media>
 					{media_partner.map(item => {
@@ -324,7 +324,7 @@ const Challenge = () => {
 				</Media>
 			</LogoCollumns>
 
-			<h3>Community Partner</h3>
+			<h3>Community Partners</h3>
 			<LogoCollumns>
 				<Media>
 					{community_partner.map(item => {
