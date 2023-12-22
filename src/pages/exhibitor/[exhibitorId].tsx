@@ -15,8 +15,12 @@ const Cover = styled.div`
 		height: 20vh;
 	}
 `;
+interface Meta {
+	title: string;
+}
+
 const ExhibitorPage = () => {
-	const meta = {
+	const meta: Meta = {
 		title: 'AI + Web3 Convention 2024 | Exhibitor'
 	};
 	return (
