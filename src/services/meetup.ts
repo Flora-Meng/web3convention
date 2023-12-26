@@ -23,7 +23,7 @@ export const fetchMoreEvents = () => {
 	});
 };
 
-export const fetchFeaturedEvents = () => {
+export const fetchFeaturedEvents = (): Promise<{ data: { docs: IMeetup[] } }> => {
 	return request({
 		baseURL,
 		method: 'GET',

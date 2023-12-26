@@ -9,7 +9,7 @@ import { color, devices } from '@/styles/variables';
 
 const logoBackground = '/images/exhibition/invalid-name.png';
 const exhibitorIcon = '/images/icons/exhibitor.svg';
-const auIcon = '/images/icons/aus.png';
+const auIcon = '/images/icons/aus.svg';
 
 const Container = styled.div`
 	background-color: ${color.blackColor};
@@ -81,10 +81,12 @@ const ExhibitorInfo = styled.div`
 	flex-direction: column;
 	margin: 48px 0 0 0;
 `;
-const ExhibitorImage = styled.div`
+const ExhibitorImageWrapper = styled.div`
+	display: flex;
+	max-height: 364px;
+	width: 100%;
 	img {
-		max-height: 364px;
-		width: 100%;
+		flex-shrink: 1;
 	}
 `;
 const Description = styled.p`
@@ -129,9 +131,9 @@ const ExhibitorDetails = () => {
 				</ExhibitorContainer>
 				<ExhibitorInfo>
 					{backgroundImg && (
-						<ExhibitorImage>
+						<ExhibitorImageWrapper>
 							<img src={backgroundImg?.url} alt={name} />
-						</ExhibitorImage>
+						</ExhibitorImageWrapper>
 					)}
 					<Description>
 						Company Profile:
