@@ -51,8 +51,8 @@ const ExhibitorIconWrapper = styled.div`
 	height: 20px;
 	width: 90px;
 	img {
-		height: 20px;
-		width: 96px;
+		height: 100%;
+		width: auto;
 	}
 `;
 const ExhibitorName = styled.p`
@@ -61,10 +61,12 @@ const ExhibitorName = styled.p`
 	font-weight: bold;
 `;
 const ExhibitorCountry = styled.div`
+	height: 28px;
+	width: 28px;
 	img {
 		border-radius: 50%;
-		height: 28px;
-		width: 28px;
+		height: 100%;
+		width: auto;
 	}
 `;
 
