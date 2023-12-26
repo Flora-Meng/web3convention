@@ -320,8 +320,8 @@
 			},
 			{
 				"_id": "56",
-				"logoSrc": "./images/sponsors/chaincather.png",
-				"logoSrcHighlight": "/images/sponsors/chaincather.png"
+				"logoSrc": "./images/sponsors/wushuo.png",
+				"logoSrcHighlight": "/images/sponsors/wushuo.png"
 			},
 			{
 				"_id": "57",
@@ -380,8 +380,8 @@
 			},
 			{
 				"_id": "68",
-				"logoSrc": "./images/sponsors/wushuo.png",
-				"logoSrcHighlight": "/images/sponsors/wushuo.png"
+				"logoSrc": "./images/sponsors/chaincather.png",
+				"logoSrcHighlight": "/images/sponsors/chaincather.png"
 			}
 		]
 	}
