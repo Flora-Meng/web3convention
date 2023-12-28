@@ -4,20 +4,22 @@ import styled from 'styled-components';
 
 import { color, devices } from '@/styles/variables';
 
-const { primaryColor, textColor } = color;
+const { primaryColor, greyColor, textColor } = color;
 
 interface ThemeButtonProps {
 	children: React.ReactNode;
 	href?: string;
 	onClick?: React.MouseEventHandler;
+	disabled?: boolean;
 }
 
 type StyledButtonProps = {
 	width?: string;
+	disabled?: boolean;
 };
 
 const StyledButton = styled.button<StyledButtonProps>`
-	background-color: ${primaryColor};
+	background-color: ${props => (props.disabled ? greyColor : primaryColor)};
 	border: none;
 	border-radius: 30px;
 	color: ${textColor};
@@ -30,7 +32,9 @@ const StyledButton = styled.button<StyledButtonProps>`
 	text-transform: uppercase;
 	width: ${props => props.width || 'auto'};
 	&:hover {
-		background-color: ${primaryColor};
+		background-color: ${props => (props.disabled ? greyColor : primaryColor)};
+		cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
+
 		svg {
 			-moz-transform: translate(0, -50%);
 			-moz-transition: -moz-transform 0.2s cubic-bezier(0.19, 0.5, 0.46, 0.88), opacity 0.2s;

@@ -10,7 +10,7 @@ import PageHead from '@/layouts/PageHead/PageHead';
 import { devices } from '@/styles/variables';
 
 const Cover = styled.div`
-	background-image: url('/images/background/contactUsBackground.png');
+	background-image: url('/images/background/contact-us-background.png');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
