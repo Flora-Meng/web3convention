@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import ExhibitorDetailedInformation from './ExhibitorDetailedInformation';
+import { IExhibitor } from '@/interfaces/exhibitor';
 import fetchExhibitorById from '@/services/companies';
 import { color, devices } from '@/styles/variables';
 
@@ -11,13 +12,6 @@ const { blackColor, primaryColor, whiteColor } = color;
 const Container = styled.div`
 	background-color: ${blackColor};
 `;
-type IExhibitor = {
-	staffAmount: number;
-	website: string;
-	email: string;
-	industry: string;
-	officeAddress: string;
-};
 
 const MainContents = () => {
 	const router = useRouter();

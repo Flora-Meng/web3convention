@@ -8,12 +8,6 @@ import { devices } from '@/styles/variables';
 
 const Cover = styled.div`
 	background-color: #000;
-	@media ${devices.miniMobile} {
-		height: 25vh;
-	}
-	@media ${devices.tablet} {
-		height: 20vh;
-	}
 `;
 interface Meta {
 	title: string;
