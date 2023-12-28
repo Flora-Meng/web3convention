@@ -225,7 +225,7 @@ const EventCard: React.FC<EventCardProps> = ({ eventInfo }) => {
 				)}
 			</StyledCardContent>
 			<CompanyInfo>
-				<StyledLink href="/company/companyId">
+				<StyledLink href={`/companies/${company._id}`}>
 					<CompanyAvatar>
 						<img src={company.logo?.url} alt={company.name} className="company" />
 					</CompanyAvatar>

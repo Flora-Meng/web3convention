@@ -23,7 +23,7 @@ export const fetchMoreEvents = () => {
 	});
 };
 
-export const fetchFeaturedEvents = () => {
+export const fetchFeaturedEvents = (): Promise<{ data: { docs: IMeetup[] } }> => {
 	return request({
 		baseURL,
 		method: 'GET',
@@ -43,6 +43,13 @@ export const fetchFeaturedConventionEvents = () => {
 		baseURL,
 		method: 'GET',
 		url: '/api/meetups?meetupEventType=web3&web3EventType=web3AiConvention&featured=popularEvents'
+	});
+};
+export const fetchExhibitor = (exhibitorID: string) => {
+	return request({
+		baseURL,
+		method: 'GET',
+		url: `/api/companies/${exhibitorID}`
 	});
 };
 export default fetchMeetups;
