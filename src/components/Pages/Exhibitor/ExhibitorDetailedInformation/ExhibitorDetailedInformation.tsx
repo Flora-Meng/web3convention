@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 
+import { IExhibitor } from '@/interfaces/exhibitor';
 import { color } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
@@ -24,14 +25,6 @@ const Detail = styled.span`
 	letter-spacing: 1px;
 	line-height: 1.5;
 `;
-
-type IExhibitor = {
-	staffAmount: number;
-	website: string;
-	email: string;
-	industry: string;
-	officeAddress: string;
-};
 
 const ExhibitorDetailedInformation: React.FC<{ exhibitorInfo: IExhibitor }> = ({
 	exhibitorInfo
