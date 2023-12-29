@@ -356,6 +356,12 @@
 				"logoSrc": "/images/sponsors/auslaw.svg",
 				"logoSrcHighlight": "/images/sponsors/auslaw.svg",
 				"url": "https://www.auslaw.com.au/"
+			},
+			{
+				"_id": "53",
+				"logoSrc": "/images/sponsors/tibsa.png",
+				"logoSrcHighlight": "/images/sponsors/tibsa.png",
+				"url": ""
 			}
 		]
 	},
@@ -427,7 +433,7 @@
 				"_id": "62",
 				"logoSrc": "./images/sponsors/kaola.png",
 				"logoSrcHighlight": "/images/sponsors/kaola.png",
-				"url": "www.bitkoala.top"
+				"url": ""
 			},
 			{
 				"_id": "63",
