@@ -2,7 +2,6 @@ import { Typography } from '@mui/material';
 import styled from 'styled-components';
 
 import sponsorList from './sponsorList.json';
-import { ISponsorGroup } from '@/interfaces/sponsor';
 import { backdrop, sectionSubtitle, sectionTitle } from '@/styles/mixin';
 import { devices, sizes } from '@/styles/variables';
 
