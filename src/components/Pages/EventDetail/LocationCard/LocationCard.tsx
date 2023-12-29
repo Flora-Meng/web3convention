@@ -3,6 +3,7 @@ import CardContent from '@mui/material/CardContent';
 import dayjs from 'dayjs';
 import timezone from 'dayjs/plugin/timezone';
 import utc from 'dayjs/plugin/utc';
+import { isEmpty } from 'lodash';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -63,37 +64,23 @@ dayjs.extend(utc);
 dayjs.extend(timezone);
 // eslint-disable-next-line @typescript-eslint/no-inferrable-types
 const format: string = 'dddd, MMM D, hA [GMT]Z';
-interface UserLocation {
-	latitude: number | null;
-	longitude: number | null;
-}
-
-interface QueryParams {
-	maxRSVPs?: string;
-	address?: string;
-	periodStart?: string;
-	latitude?: string;
-	longitude?: string;
-}
 const LocationCard = () => {
 	const { query } = useRouter();
-	const queryParams: QueryParams = query as QueryParams;
-	const { maxRSVPs, address } = queryParams;
-	const periodStart = Array.isArray(queryParams.periodStart)
-		? queryParams.periodStart[0]
-		: queryParams.periodStart;
-	const latitude: number | null =
-		typeof queryParams.latitude === 'string' ? parseFloat(queryParams.latitude) : null;
-	const longitude: number | null =
-		typeof queryParams.longitude === 'string' ? parseFloat(queryParams.longitude) : null;
-	const [userLocation, setUserLocation]: [
-		UserLocation,
-		React.Dispatch<React.SetStateAction<UserLocation>>
-	] = useState<UserLocation>({ latitude: null, longitude: null });
-	const [distance, setDistance]: [
-		number | null,
-		React.Dispatch<React.SetStateAction<number | null>>
-	] = useState<number | null>(null);
+	const maxRSVPs: string | undefined = Array.isArray(query.maxRSVPs)
+		? query.maxRSVPs[0]
+		: query.maxRSVPs;
+	const address: string | undefined = Array.isArray(query.address)
+		? query.address[0]
+		: query.address;
+	const periodStart: string | undefined = Array.isArray(query.periodStart)
+		? query.periodStart[0]
+		: query.periodStart;
+	const latitude: number | undefined =
+		typeof query.latitude === 'string' ? parseFloat(query.latitude) : undefined;
+	const longitude: number | undefined =
+		typeof query.longitude === 'string' ? parseFloat(query.longitude) : undefined;
+	const [userLocation, setUserLocation] = useState<{ latitude?: number; longitude?: number }>({});
+	const [distance, setDistance] = useState<number | undefined>(undefined);
 
 	useEffect(() => {
 		if (navigator.geolocation) {
@@ -108,10 +95,11 @@ const LocationCard = () => {
 
 	useEffect(() => {
 		if (
-			userLocation.latitude &&
-			userLocation.longitude &&
-			latitude !== null &&
-			longitude !== null
+			!isEmpty(userLocation) &&
+			userLocation.latitude !== undefined &&
+			userLocation.longitude !== undefined &&
+			latitude !== undefined &&
+			longitude !== undefined
 		) {
 			setDistance(
 				// eslint-disable-next-line no-use-before-define
@@ -127,16 +115,16 @@ const LocationCard = () => {
 
 	const calculateDistance = (lat1: number, lon1: number, lat2: number, lon2: number): number => {
 		const R = 6371; /* radius of earth */
-		const dLat = ((lat2 - lat1) * Math.PI) / 180;
-		const dLon = ((lon2 - lon1) * Math.PI) / 180;
+		const dLat: number = ((lat2 - lat1) * Math.PI) / 180;
+		const dLon: number = ((lon2 - lon1) * Math.PI) / 180;
 		/* variable to calculate spherical distance */
-		const a =
+		const a: number =
 			Math.sin(dLat / 2) * Math.sin(dLat / 2) +
 			Math.cos((lat1 * Math.PI) / 180) *
 				Math.cos((lat2 * Math.PI) / 180) *
 				Math.sin(dLon / 2) *
 				Math.sin(dLon / 2);
-		const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+		const c: number = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 		return R * c;
 	};
 
