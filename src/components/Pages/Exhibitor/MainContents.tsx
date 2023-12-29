@@ -18,15 +18,15 @@ const MainContents = () => {
 	const { exhibitorId } = router.query;
 	const [exhibitorInfo, setExhibitorInfo] = useState<IExhibitor | null>(null);
 	const fetchData = async (): Promise<void> => {
-		if (typeof exhibitorId === 'string') {
-			const response = await fetchExhibitorById(exhibitorId);
+		if (router.isReady) {
+			const response = await fetchExhibitorById(exhibitorId as string);
 			setExhibitorInfo(response.data);
 		}
 	};
 
 	useEffect(() => {
 		fetchData();
-	}, [exhibitorId]);
+	}, [router.isReady]);
 	return (
 		<Container>
 			{exhibitorInfo && <ExhibitorDetailedInformation exhibitorInfo={exhibitorInfo} />}
