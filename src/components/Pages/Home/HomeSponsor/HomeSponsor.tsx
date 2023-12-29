@@ -1,8 +1,8 @@
 import { Typography } from '@mui/material';
-import Link from 'next/link';
 import styled from 'styled-components';
 
 import sponsorList from './sponsorList.json';
+import { ISponsorGroup } from '@/interfaces/sponsor';
 import { backdrop, sectionSubtitle, sectionTitle } from '@/styles/mixin';
 import { devices, sizes } from '@/styles/variables';
 
@@ -62,7 +62,7 @@ const StyledTypography = styled(Typography)`
 	}
 `;
 
-const ImageContainer = styled(Link)`
+const ImageContainer = styled.a`
 	align-items: center;
 	cursor: pointer;
 	display: flex;
@@ -158,7 +158,7 @@ const HomeSponsor: React.FC = () => {
 							<SponsorContainer className={`group-${index}`}>
 								{sponsorGroup.sponsor.map(sponsor => (
 									<Rectangle key={sponsor._id} className={`group-${index}`}>
-										<ImageContainer href="/#">
+										<ImageContainer href={sponsor.url}>
 											<StyledImage
 												src={sponsor.logoSrc}
 												alt={`sponsor_${sponsor._id}`}
