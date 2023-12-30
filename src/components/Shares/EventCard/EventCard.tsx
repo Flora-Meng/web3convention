@@ -163,7 +163,10 @@ const EventCard: React.FC<EventCardProps> = ({ eventInfo }) => {
 		title,
 		description,
 		agenda,
-		descriptionImage
+		descriptionImage,
+		maxRSVPs,
+		latitude,
+		longitude
 	} = eventInfo;
 	const company = exhibitors?.[0] || {};
 	const router = useRouter();
@@ -174,7 +177,12 @@ const EventCard: React.FC<EventCardProps> = ({ eventInfo }) => {
 			query: {
 				description: eventInfo.description,
 				agenda: eventInfo.agenda,
-				descriptionImage: imageUrl
+				descriptionImage: imageUrl,
+				maxRSVPs: eventInfo.maxRSVPs,
+				latitude: eventInfo.latitude,
+				longitude: eventInfo.longitude,
+				periodStart: eventInfo.period?.start,
+				address: eventInfo.address
 			}
 		});
 	};

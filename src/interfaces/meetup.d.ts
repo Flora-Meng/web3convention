@@ -44,4 +44,5 @@ interface IMeetup {
 	descriptionImage: DescriptionImage;
 	latitude: number;
 	longitude: number;
+	maxRSVPs: number;
 }
