@@ -25,11 +25,17 @@ const ContentWrapper = styled.div`
 	max-width: 1200px;
 	width: 100%;
 `;
+const Title = styled.h1`
+	color: ${color.whiteColor};
+	letter-spacing: 1px;
+	line-height: 1.25;
+	margin: 20px 0 32px 0;
+`;
 const EventDetailContent = () => {
 	return (
 		<MainContainer>
 			<ContentWrapper>
-				<div>This is Title Container</div>
+				<Title>The First Gathering of Web3Relation.</Title>
 				<DescriptionAndLocation>
 					<EventDescription />
 				</DescriptionAndLocation>
