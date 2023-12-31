@@ -3,7 +3,7 @@
 		"_id": "1",
 		"label": "VIP Party",
 		"subtitle": "18 May, 2024",
-		"imageSrc": "/images/charity-dinner.webp",
+		"imageSrc": "/images/vip-party.png",
 		"href": "/convention"
 	},
 	{
@@ -24,7 +24,7 @@
 		"_id": "4",
 		"label": "Cyber Party",
 		"subtitle": "18 May, 2024",
-		"imageSrc": "/images/cyber-party.webp",
+		"imageSrc": "/images/cyber-party.png",
 		"href": "/convention"
 	},
 	{
