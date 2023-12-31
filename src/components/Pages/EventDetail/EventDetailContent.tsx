@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import EventDescription from '@/components/Pages/EventDetail/EventDescription';
+import LocationCard from '@/components/Pages/EventDetail/LocationCard';
 import { color, devices } from '@/styles/variables';
 
 const { blackColor } = color;
@@ -15,9 +16,13 @@ const MainContainer = styled.div`
 const DescriptionAndLocation = styled.div`
 	display: flex;
 	flex-direction: column;
+	gap: 20px;
 	min-height: 100vh;
 	@media ${devices.mobile} {
 		flex-direction: row;
+	}
+	@media ${devices.largeLaptop} {
+		gap: 110px;
 	}
 `;
 const ContentWrapper = styled.div`
@@ -38,6 +43,7 @@ const EventDetailContent = () => {
 				<Title>The First Gathering of Web3Relation.</Title>
 				<DescriptionAndLocation>
 					<EventDescription />
+					<LocationCard />
 				</DescriptionAndLocation>
 			</ContentWrapper>
 		</MainContainer>

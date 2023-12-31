@@ -6,7 +6,8 @@
 			{
 				"_id": "1",
 				"logoSrc": "./images/sponsors/meta-tree.png",
-				"logoSrcHighlight": "/images/sponsors/meta-tree.png"
+				"logoSrcHighlight": "/images/sponsors/meta-tree.png",
+				"url": ""
 			}
 		]
 	},
@@ -17,7 +18,8 @@
 			{
 				"_id": "2",
 				"logoSrc": "/images/sponsors/1783dao.png",
-				"logoSrcHighlight": "/images/sponsors/1783dao.png"
+				"logoSrcHighlight": "/images/sponsors/1783dao.png",
+				"url": "https://twitter.com/1783DAO"
 			}
 		]
 	},
@@ -28,52 +30,68 @@
 			{
 				"_id": "3",
 				"logoSrc": "/images/sponsors/hash-mining.png",
-				"logoSrcHighlight": "/images/sponsors/hash-mining.png"
+				"logoSrcHighlight": "/images/sponsors/hash-mining.png",
+				"url": "https://www.hashxmining.com.au/"
 			},
 			{
 				"_id": "4",
 				"logoSrc": "/images/sponsors/jr-academy.png",
-				"logoSrcHighlight": "/images/sponsors/jr-academy.png"
+				"logoSrcHighlight": "/images/sponsors/jr-academy.png",
+				"url": "https://jracademy.com.au/"
 			},
 			{
 				"_id": "5",
 				"logoSrc": "/images/sponsors/fog-hashing.png",
-				"logoSrcHighlight": "/images/sponsors/fog-hashing.png"
+				"logoSrcHighlight": "/images/sponsors/fog-hashing.png",
+				"url": "https://foghashing.io/"
 			},
 			{
 				"_id": "6",
 				"logoSrc": "/images/sponsors/coinstash.png",
-				"logoSrcHighlight": "/images/sponsors/coinstash.png"
+				"logoSrcHighlight": "/images/sponsors/coinstash.png",
+				"url": "https://coinstash.com.au/"
 			},
 			{
 				"_id": "7",
 				"logoSrc": "/images/sponsors/afi.png",
-				"logoSrcHighlight": "/images/sponsors/afi.png"
+				"logoSrcHighlight": "/images/sponsors/afi.png",
+				"url": "https://www.ausfintech.com/"
+			},
+			{
+				"_id": "8",
+				"logoSrc": "/images/sponsors/sbl-labs.svg",
+				"logoSrcHighlight": "/images/sponsors/sbl-labs.svg",
+				"url": "https://swissblockchainlabs.org/"
 			},
 			{
 				"_id": "69",
 				"logoSrc": "/images/sponsors/breakout.png",
-				"logoSrcHighlight": "/images/sponsors/breakout.png"
+				"logoSrcHighlight": "/images/sponsors/breakout.png",
+				"url": "https://www.breakoutsolutions.com/"
 			},
 			{
 				"_id": "70",
 				"logoSrc": "/images/sponsors/d-social.png",
-				"logoSrcHighlight": "/images/sponsors/d-social.png"
+				"logoSrcHighlight": "/images/sponsors/d-social.png",
+				"url": "https://dsocial.app/"
 			},
 			{
 				"_id": "71",
 				"logoSrc": "/images/sponsors/origyn.png",
-				"logoSrcHighlight": "/images/sponsors/origyn.png"
+				"logoSrcHighlight": "/images/sponsors/origyn.png",
+				"url": "https://www.origyn.com/"
 			},
 			{
 				"_id": "72",
 				"logoSrc": "/images/sponsors/shiku.png",
-				"logoSrcHighlight": "/images/sponsors/shiku.png"
+				"logoSrcHighlight": "/images/sponsors/shiku.png",
+				"url": "https://shiku.com/"
 			},
 			{
 				"_id": "73",
 				"logoSrc": "/images/sponsors/yumi.png",
-				"logoSrcHighlight": "/images/sponsors/yumi.png"
+				"logoSrcHighlight": "/images/sponsors/yumi.png",
+				"url": "https://yumi.io/gold/market"
 			}
 		]
 	},
@@ -82,44 +100,52 @@
 		"groupName": "STRATEGIC PARTNERS",
 		"sponsor": [
 			{
+				"_id": "8",
+				"logoSrc": "./images/sponsors/future.png",
+				"logoSrcHighlight": "/images/sponsors/future.png",
+				"url": "http://www.future3.io/#/home"
+			},
+			{
+				"_id": "9",
+				"logoSrc": "./images/sponsors/crust.png",
+				"logoSrcHighlight": "/images/sponsors/crust.png",
+				"url": "https://crust.network/"
+			},
+			{
 				"_id": "10",
 				"logoSrc": "/images/sponsors/hale.png",
-				"logoSrcHighlight": "/images/sponsors/hale.png"
+				"logoSrcHighlight": "/images/sponsors/hale.png",
+				"url": ""
 			},
 			{
 				"_id": "11",
 				"logoSrc": "/images/sponsors/bolian.png",
-				"logoSrcHighlight": "/images/sponsors/bolian.png"
+				"logoSrcHighlight": "/images/sponsors/bolian.png",
+				"url": "https://www.qianba.com/"
 			},
 			{
 				"_id": "12",
 				"logoSrc": "./images/sponsors/w3a-horizontal.png",
-				"logoSrcHighlight": "/images/sponsors/w3a-horizontal.png"
+				"logoSrcHighlight": "/images/sponsors/w3a-horizontal.png",
+				"url": "https://w3a.world/"
+			},
+			{
+				"_id": "13",
+				"logoSrc": "./images/sponsors/infinity-labs.png",
+				"logoSrcHighlight": "/images/sponsors/infinity-labs.png",
+				"url": "http://www.infinitylabs.fund/#/home"
 			},
 			{
 				"_id": "14",
-				"logoSrc": "./images/sponsors/future.png",
-				"logoSrcHighlight": "/images/sponsors/future.png"
+				"logoSrc": "./images/sponsors/edge.png",
+				"logoSrcHighlight": "/images/sponsors/edge.png",
+				"url": "https://edgematrix.pro/"
 			},
 			{
 				"_id": "15",
-				"logoSrc": "./images/sponsors/crust.png",
-				"logoSrcHighlight": "/images/sponsors/crust.png"
-			},
-			{
-				"_id": "16",
-				"logoSrc": "./images/sponsors/infinity-labs.png",
-				"logoSrcHighlight": "/images/sponsors/infinity-labs.png"
-			},
-			{
-				"_id": "17",
-				"logoSrc": "./images/sponsors/edge.png",
-				"logoSrcHighlight": "/images/sponsors/edge.png"
-			},
-			{
-				"_id": "18",
 				"logoSrc": "./images/sponsors/four&co.png",
-				"logoSrcHighlight": "/images/sponsors/four&co.png"
+				"logoSrcHighlight": "/images/sponsors/four&co.png",
+				"url": "https://www.4and.co/"
 			}
 		]
 	},
@@ -130,167 +156,212 @@
 			{
 				"_id": "20",
 				"logoSrc": "/images/sponsors/smartmesh.png",
-				"logoSrcHighlight": "/images/sponsors/smartmesh.png"
+				"logoSrcHighlight": "/images/sponsors/smartmesh.png",
+				"url": "https://smartmesh.io/"
 			},
 			{
 				"_id": "21",
 				"logoSrc": "/images/sponsors/wiki.png",
-				"logoSrcHighlight": "/images/sponsors/wiki.png"
+				"logoSrcHighlight": "/images/sponsors/wiki.png",
+				"url": "https://www.wikiexpo.net/zh-cn"
 			},
 			{
 				"_id": "22",
 				"logoSrc": "/images/sponsors/ic1101.png",
-				"logoSrcHighlight": "/images/sponsors/ic1101.png"
+				"logoSrcHighlight": "/images/sponsors/ic1101.png",
+				"url": "https://ic1101.world/#/"
 			},
 			{
 				"_id": "19",
 				"logoSrc": "/images/sponsors/fildao.png",
-				"logoSrcHighlight": "/images/sponsors/fildao.png"
+				"logoSrcHighlight": "/images/sponsors/fildao.png",
+				"url": ""
 			},
 			{
 				"_id": "23",
-				"logoSrc": "/images/sponsors/atb.png",
-				"logoSrcHighlight": "/images/sponsors/atb.png"
+				"logoSrc": "/images/sponsors/atb.svg",
+				"logoSrcHighlight": "/images/sponsors/atb.svg",
+				"url": "https://www.allthingsblockchain.org.au/"
 			},
 			{
 				"_id": "24",
 				"logoSrc": "/images/sponsors/gold.png",
-				"logoSrcHighlight": "/images/sponsors/gold.png"
+				"logoSrcHighlight": "/images/sponsors/gold.png",
+				"url": "https://www.meetup.com/gold-coast-blockchain/"
 			},
 			{
 				"_id": "25",
 				"logoSrc": "/images/sponsors/bitcoin.png",
-				"logoSrcHighlight": "/images/sponsors/bitcoin.png"
+				"logoSrcHighlight": "/images/sponsors/bitcoin.png",
+				"url": "https://t.me/bitcoinminingaus"
 			},
 			{
 				"_id": "26",
 				"logoSrc": "/images/sponsors/foreal.png",
-				"logoSrcHighlight": "/images/sponsors/foreal.png"
+				"logoSrcHighlight": "/images/sponsors/foreal.png",
+				"url": ""
 			},
 			{
 				"_id": "27",
 				"logoSrc": "/images/sponsors/bewater.png",
-				"logoSrcHighlight": "/images/sponsors/bewater.png"
+				"logoSrcHighlight": "/images/sponsors/bewater.png",
+				"url": "https://bewater.xyz/"
 			},
 			{
 				"_id": "28",
 				"logoSrc": "/images/sponsors/fox.png",
-				"logoSrcHighlight": "/images/sponsors/fox.png"
+				"logoSrcHighlight": "/images/sponsors/fox.png",
+				"url": "https://fox-capital-eth.io"
 			},
 			{
 				"_id": "29",
 				"logoSrc": "/images/sponsors/bitcoin-b.png",
-				"logoSrcHighlight": "/images/sponsors/bitcoin-b.png"
+				"logoSrcHighlight": "/images/sponsors/bitcoin-b.png",
+				"url": "https://www.bitcoinbrisbane.com.au/"
 			},
 			{
 				"_id": "30",
 				"logoSrc": "/images/sponsors/lulu.png",
-				"logoSrcHighlight": "/images/sponsors/lulu.png"
+				"logoSrcHighlight": "/images/sponsors/lulu.png",
+				"url": ""
 			},
 			{
 				"_id": "31",
 				"logoSrc": "/images/sponsors/portkey.png",
-				"logoSrcHighlight": "/images/sponsors/portkey.png"
+				"logoSrcHighlight": "/images/sponsors/portkey.png",
+				"url": ""
 			},
 			{
 				"_id": "32",
 				"logoSrc": "/images/sponsors/denet.png",
-				"logoSrcHighlight": "/images/sponsors/denet.png"
+				"logoSrcHighlight": "/images/sponsors/denet.png",
+				"url": "https://denet.me/"
 			},
 			{
 				"_id": "33",
 				"logoSrc": "/images/sponsors/wanwudao.png",
-				"logoSrcHighlight": "/images/sponsors/wanwudao.png"
+				"logoSrcHighlight": "/images/sponsors/wanwudao.png",
+				"url": "https://www.threedao.org/cn/index.html"
 			},
 			{
 				"_id": "34",
 				"logoSrc": "/images/sponsors/xtcom.png",
-				"logoSrcHighlight": "/images/sponsors/xtcom.png"
+				"logoSrcHighlight": "/images/sponsors/xtcom.png",
+				"url": "https://www.xt.com/en"
 			},
 			{
 				"_id": "35",
 				"logoSrc": "/images/sponsors/impakt.png",
-				"logoSrcHighlight": "/images/sponsors/impakt.png"
+				"logoSrcHighlight": "/images/sponsors/impakt.png",
+				"url": "https://impakt.com/"
 			},
 			{
 				"_id": "36",
 				"logoSrc": "/images/sponsors/tang.png",
-				"logoSrcHighlight": "/images/sponsors/tang.png"
+				"logoSrcHighlight": "/images/sponsors/tang.png",
+				"url": ""
 			},
 			{
 				"_id": "37",
 				"logoSrc": "/images/sponsors/mars.png",
-				"logoSrcHighlight": "/images/sponsors/mars.png"
+				"logoSrcHighlight": "/images/sponsors/mars.png",
+				"url": ""
 			},
 			{
 				"_id": "38",
 				"logoSrc": "/images/sponsors/mesh.png",
-				"logoSrcHighlight": "/images/sponsors/mesh.png"
+				"logoSrcHighlight": "/images/sponsors/mesh.png",
+				"url": "https://meshbox.io/"
 			},
 			{
 				"_id": "39",
 				"logoSrc": "/images/sponsors/offchain-logo.png",
-				"logoSrcHighlight": "/images/sponsors/offchain-logo.png"
+				"logoSrcHighlight": "/images/sponsors/offchain-logo.png",
+				"url": "https://offchain.social/"
 			},
 			{
 				"_id": "40",
 				"logoSrc": "/images/sponsors/metalife.png",
-				"logoSrcHighlight": "/images/sponsors/metalife.png"
+				"logoSrcHighlight": "/images/sponsors/metalife.png",
+				"url": "https://metalife.social/"
 			},
 			{
 				"_id": "41",
 				"logoSrc": "/images/sponsors/perma.png",
-				"logoSrcHighlight": "/images/sponsors/perma.png"
+				"logoSrcHighlight": "/images/sponsors/perma.png",
+				"url": "https://permadao.notion.site/PermaDAO-76e627a9044548498d02b8fe4e962720"
 			},
 			{
 				"_id": "42",
 				"logoSrc": "/images/sponsors/ceex.png",
-				"logoSrcHighlight": "/images/sponsors/ceex.png"
+				"logoSrcHighlight": "/images/sponsors/ceex.png",
+				"url": ""
 			},
 			{
 				"_id": "43",
 				"logoSrc": "/images/sponsors/137labs-4.png",
-				"logoSrcHighlight": "/images/sponsors/137labs-4.png"
+				"logoSrcHighlight": "/images/sponsors/137labs-4.png",
+				"url": ""
 			},
 			{
 				"_id": "44",
 				"logoSrc": "/images/sponsors/wnaray.png",
-				"logoSrcHighlight": "/images/sponsors/wnaray.png"
+				"logoSrcHighlight": "/images/sponsors/wnaray.png",
+				"url": "https://lunaray.co/"
 			},
 			{
 				"_id": "45",
 				"logoSrc": "/images/sponsors/lingoai.png",
-				"logoSrcHighlight": "/images/sponsors/lingoai.png"
+				"logoSrcHighlight": "/images/sponsors/lingoai.png",
+				"url": "https://lingoai.io/home"
 			},
 			{
 				"_id": "46",
 				"logoSrc": "/images/sponsors/tiger.png",
-				"logoSrcHighlight": "/images/sponsors/tiger.png"
+				"logoSrcHighlight": "/images/sponsors/tiger.png",
+				"url": "https://tigervcdao.com/#/home"
 			},
 			{
 				"_id": "47",
 				"logoSrc": "/images/sponsors/echodao.png",
-				"logoSrcHighlight": "/images/sponsors/echodao.png"
+				"logoSrcHighlight": "/images/sponsors/echodao.png",
+				"url": ""
 			},
 			{
 				"_id": "48",
 				"logoSrc": "/images/sponsors/component.png",
-				"logoSrcHighlight": "/images/sponsors/component.png"
+				"logoSrcHighlight": "/images/sponsors/component.png",
+				"url": ""
 			},
 			{
 				"_id": "49",
 				"logoSrc": "/images/sponsors/taitan.png",
-				"logoSrcHighlight": "/images/sponsors/taitan.svg"
+				"logoSrcHighlight": "/images/sponsors/taitan.svg",
+				"url": "https://www.titannet.io/"
 			},
 			{
 				"_id": "50",
 				"logoSrc": "/images/sponsors/relation.png",
-				"logoSrcHighlight": "/images/sponsors/relation.png"
+				"logoSrcHighlight": "/images/sponsors/relation.png",
+				"url": ""
 			},
 			{
 				"_id": "51",
 				"logoSrc": "/images/sponsors/aiag.png",
-				"logoSrcHighlight": "/images/sponsors/aiag.png"
+				"logoSrcHighlight": "/images/sponsors/aiag.png",
+				"url": ""
+			},
+			{
+				"_id": "52",
+				"logoSrc": "/images/sponsors/auslaw.svg",
+				"logoSrcHighlight": "/images/sponsors/auslaw.svg",
+				"url": "https://www.auslaw.com.au/"
+			},
+			{
+				"_id": "53",
+				"logoSrc": "/images/sponsors/tibsa.png",
+				"logoSrcHighlight": "/images/sponsors/tibsa.png",
+				"url": ""
 			}
 		]
 	},
@@ -301,87 +372,116 @@
 			{
 				"_id": "52",
 				"logoSrc": "./images/sponsors/metaera.png",
-				"logoSrcHighlight": "/images/sponsors/metaera.png"
+				"logoSrcHighlight": "/images/sponsors/metaera.png",
+				"url": "https://www.metaera.media/#/"
 			},
 			{
 				"_id": "53",
 				"logoSrc": "./images/sponsors/wikibit.png",
-				"logoSrcHighlight": "/images/sponsors/wikibit.png"
+				"logoSrcHighlight": "/images/sponsors/wikibit.png",
+				"url": "https://www.wikibit.com/en/"
 			},
 			{
 				"_id": "54",
 				"logoSrc": "./images/sponsors/wjb.png",
-				"logoSrcHighlight": "/images/sponsors/wjb.png"
+				"logoSrcHighlight": "/images/sponsors/wjb.png",
+				"url": ""
 			},
 			{
 				"_id": "55",
 				"logoSrc": "./images/sponsors/lvdong.png",
-				"logoSrcHighlight": "/images/sponsors/lvdong.png"
+				"logoSrcHighlight": "/images/sponsors/lvdong.png",
+				"url": "https://www.theblockbeats.info/en/"
 			},
 			{
 				"_id": "56",
 				"logoSrc": "./images/sponsors/wushuo.png",
-				"logoSrcHighlight": "/images/sponsors/wushuo.png"
+				"logoSrcHighlight": "/images/sponsors/wushuo.png",
+				"url": "https://www.wublock123.com/html/en/"
 			},
 			{
 				"_id": "57",
 				"logoSrc": "./images/sponsors/cointime.png",
-				"logoSrcHighlight": "/images/sponsors/cointime.png"
+				"logoSrcHighlight": "/images/sponsors/cointime.png",
+				"url": "https://www.cointime.ai/"
 			},
 			{
 				"_id": "58",
 				"logoSrc": "./images/sponsors/odaily.png",
-				"logoSrcHighlight": "/images/sponsors/odaily.png"
+				"logoSrcHighlight": "/images/sponsors/odaily.png",
+				"url": "https://www.odaily.news/"
 			},
 			{
 				"_id": "59",
 				"logoSrc": "./images/sponsors/panews.png",
-				"logoSrcHighlight": "/images/sponsors/panews.png"
+				"logoSrcHighlight": "/images/sponsors/panews.png",
+				"url": "https://www.panewslab.com/"
 			},
 			{
 				"_id": "60",
 				"logoSrc": "./images/sponsors/foresight-news.png",
-				"logoSrcHighlight": "/images/sponsors/foresight-news.png"
+				"logoSrcHighlight": "/images/sponsors/foresight-news.png",
+				"url": "https://en.foresightnews.pro/"
 			},
 			{
 				"_id": "61",
 				"logoSrc": "./images/sponsors/mars-bit.png",
-				"logoSrcHighlight": "/images/sponsors/mars-bit.png"
+				"logoSrcHighlight": "/images/sponsors/mars-bit.png",
+				"url": "https://www.marsshare.cc/"
 			},
 			{
 				"_id": "62",
 				"logoSrc": "./images/sponsors/kaola.png",
-				"logoSrcHighlight": "/images/sponsors/kaola.png"
+				"logoSrcHighlight": "/images/sponsors/kaola.png",
+				"url": ""
 			},
 			{
 				"_id": "63",
 				"logoSrc": "./images/sponsors/coin.png",
-				"logoSrcHighlight": "/images/sponsors/coin.png"
+				"logoSrcHighlight": "/images/sponsors/coin.png",
+				"url": "https://coinvoice.net/en"
 			},
 			{
 				"_id": "64",
 				"logoSrc": "./images/sponsors/41caijing.png",
-				"logoSrcHighlight": "/images/sponsors/41caijing.png"
+				"logoSrcHighlight": "/images/sponsors/41caijing.png",
+				"url": "http://www.41jishu.com/"
 			},
 			{
 				"_id": "65",
 				"logoSrc": "./images/sponsors/shenchao.png",
-				"logoSrcHighlight": "/images/sponsors/shenchao.png"
+				"logoSrcHighlight": "/images/sponsors/shenchao.png",
+				"url": "https://www.techflowpost.com/index.aspx"
 			},
 			{
 				"_id": "66",
 				"logoSrc": "./images/sponsors/benpao.png",
-				"logoSrcHighlight": "/images/sponsors/benpao.png"
+				"logoSrcHighlight": "/images/sponsors/benpao.png",
+				"url": "https://www.finacerun.com/"
 			},
 			{
 				"_id": "67",
 				"logoSrc": "./images/sponsors/web3pub.png",
-				"logoSrcHighlight": "/images/sponsors/web3pub.png"
+				"logoSrcHighlight": "/images/sponsors/web3pub.png",
+				"url": "https://web3pub.xyz/"
 			},
 			{
 				"_id": "68",
 				"logoSrc": "./images/sponsors/chaincather.png",
-				"logoSrcHighlight": "/images/sponsors/chaincather.png"
+				"logoSrcHighlight": "/images/sponsors/chaincather.png",
+				"url": "https://www.chaincatcher.com/"
+			},
+			{
+				"_id": "69",
+				"logoSrc": "./images/sponsors/btm.png",
+				"logoSrcHighlight": "/images/sponsors/btm.png",
+				"url": "https://www.blockchaintimes.media/"
+			},
+			{
+				"_id": "70",
+				"logoSrc": "./images/sponsors/tcr.png",
+				"logoSrcHighlight": "/images/sponsors/tcr.png",
+				"url": "https://www.thecoinrepublic.com/"
 			}
 		]
 	}

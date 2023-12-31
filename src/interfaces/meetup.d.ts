@@ -1,12 +1,17 @@
 type LogoInfo = {
 	url: string;
 };
+type BackgroundInfo = {
+	url: string;
+};
 
 type Exhibitor = {
 	name: string;
 	description: string;
 	logo: LogoInfo;
 	_id: string;
+	country: string;
+	backgroundImg?: BackgroundInfo;
 };
 
 type CityInfo = {
@@ -39,4 +44,5 @@ interface IMeetup {
 	descriptionImage: DescriptionImage;
 	latitude: number;
 	longitude: number;
+	maxRSVPs: number;
 }
