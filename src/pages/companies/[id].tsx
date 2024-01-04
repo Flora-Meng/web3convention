@@ -3,12 +3,12 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import ExhibitorAvatar from '@/components/Shares/ExhibitorAvatar';
+import ExhibitorIcon from '@/components/Shares/ExhibitorIcon';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 import { fetchExhibitor } from '@/services/meetup';
 import { color, devices } from '@/styles/variables';
 
-const exhibitorIcon = '/images/icons/exhibitor.svg';
 const auIcon = '/images/icons/aus.svg';
 
 const Container = styled.div`
@@ -27,16 +27,6 @@ const ExhibitorContainer = styled.div`
 	padding: 40px 0;
 	@media ${devices.mobile} {
 		gap: 20px;
-	}
-`;
-const ExhibitorIconWrapper = styled.div`
-	cursor: pointer;
-	display: block;
-	height: 20px;
-	width: 90px;
-	img {
-		height: 100%;
-		width: auto;
 	}
 `;
 const ExhibitorName = styled.p`
@@ -111,9 +101,7 @@ const ExhibitorDetails = () => {
 						/>
 					)}
 					<ExhibitorName>{name}</ExhibitorName>
-					<ExhibitorIconWrapper>
-						<img className="exhibitorIcon" src={exhibitorIcon} alt="Exhibitor icon" />
-					</ExhibitorIconWrapper>
+					<ExhibitorIcon height="20px" />
 					<ExhibitorCountry>
 						<img src={auIcon} alt="aus" className="ausicon" />
 					</ExhibitorCountry>

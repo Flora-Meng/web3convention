@@ -1,5 +1,7 @@
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
 
+import ExhibitorInfo from './ExhibitorInfo';
 import EventDescription from '@/components/Pages/EventDetail/EventDescription';
 import LocationCard from '@/components/Pages/EventDetail/LocationCard';
 import { color, devices } from '@/styles/variables';
@@ -37,10 +39,13 @@ const Title = styled.h1`
 	margin: 20px 0 32px 0;
 `;
 const EventDetailContent = () => {
+	const router = useRouter();
+	const { title } = router.query;
 	return (
 		<MainContainer>
 			<ContentWrapper>
-				<Title>The First Gathering of Web3Relation.</Title>
+				<Title>{title}</Title>
+				<ExhibitorInfo />
 				<DescriptionAndLocation>
 					<EventDescription />
 					<LocationCard />
