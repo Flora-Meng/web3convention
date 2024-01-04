@@ -45,7 +45,7 @@ const ExhibitorLocationOnMap: React.FC<ExhibitorLocationOnMapProps> = ({
 
 				setGoogleMap(map);
 
-				new google.maps.Marker({
+				const marker = new google.maps.Marker({
 					position: exhibitorCoordinates,
 					map,
 					icon: {
