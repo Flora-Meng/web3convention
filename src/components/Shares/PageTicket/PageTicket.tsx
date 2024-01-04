@@ -126,7 +126,7 @@ const ticketConfig = [
 	{
 		_id: '1',
 		title: 'General Admission',
-		price: '40%OFF',
+		price: '$218+GST 40%OFF',
 		priceIncGST: false,
 		earlyBirdPrice: 130,
 		earlyBirdPriceIncGST: true,
@@ -144,7 +144,7 @@ const ticketConfig = [
 	{
 		_id: '2',
 		title: 'Premium GA',
-		price: '40%OFF',
+		price: '$268+GST 40%OFF',
 		priceIncGST: true,
 		earlyBirdPrice: 160,
 		earlyBirdPriceIncGST: false,
@@ -163,7 +163,7 @@ const ticketConfig = [
 	{
 		_id: '3',
 		title: 'VIP/Whale Pass',
-		price: '40%OFF',
+		price: '$2585+GST 40%OFF',
 		priceIncGST: false,
 		earlyBirdPrice: 1551,
 		earlyBirdPriceIncGST: false,
@@ -189,7 +189,7 @@ const ticketConfig = [
 	{
 		_id: '4',
 		title: 'Student Pass',
-		price: '40%OFF',
+		price: '$98+GST 40%OFF',
 		priceIncGST: false,
 		earlyBirdPrice: 58,
 		earlyBirdPriceIncGST: false,
