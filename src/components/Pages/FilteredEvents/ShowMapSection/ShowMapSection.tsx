@@ -1,3 +1,4 @@
+import { Button, Pagination, Stack } from '@mui/material';
 import { isEmpty } from 'lodash';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
@@ -9,12 +10,14 @@ import ShowOnMapModal1 from './ShowOnMapModal';
 import GoogleMapMarker from './ShowOnMapModal/GoogleMapMarker';
 import ChooseLocation from '@/components/Pages/FilteredEvents/ChooseLocation';
 import ShowOnMapEventItem from '@/components/Shares/ShowOnMapModal/ShowOnMapEventItem';
-import fetchMeetups from '@/services/meetup';
+// import fetchMeetups from '@/services/meetup';
+import { fetchPaginatedMeetups } from '@/services/meetup';
 import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
-const { primaryColor } = color;
-const { blackColor } = color;
+type TSweb3MeetupPagination = TPagination<IMeetup>;
+
+const { blackColor, primaryColor, whiteColor } = color;
 
 const Container = styled.div`
 	margin-bottom: 60px;
@@ -110,22 +113,51 @@ const NameContainer = styled.div`
 	width: 100%;
 `;
 
+const PaginationContainer = styled.div`
+	color: white;
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+`;
+
+const MuiPagination = styled(Pagination)`
+	.MuiPaginationItem-root {
+		color: ${whiteColor};
+	}
+	.Mui-selected {
+		color: ${primaryColor};
+	}
+`;
+
+const MuiButton = styled(Button)`
+	color: ${whiteColor};
+`;
+
 const ShowMapSection = () => {
 	const [open, setOpen] = useState(false);
 	const [filterEvent, setFilterEvent] = useState<IMeetup[]>([]);
 	const [selectedLocation, setSelectedLocation] = useState('');
 	const [searchInput, setSearchInput] = useState('');
 	const [activeEventId, setActiveEventId] = useState('');
+	const [currentPage, setCurrentPage] = useState(1);
+	const [totalCount, setTotalCount] = useState(1);
+	const [hasPreviousPage, setHasPreviousPage] = useState<boolean>();
+	const [hasFollowingPage, setHasFollowingPage] = useState<boolean>();
 
-	const fetchEvent = async () => {
-		const response = await fetchMeetups();
-		const meetupData = response.data.docs || [];
-
-		setFilterEvent(meetupData);
+	const fetchEvents = async () => {
+		const response = await fetchPaginatedMeetups(currentPage, 12);
+		const meetupData: TSweb3MeetupPagination = response.data;
+		const { docs, totalPages, hasPrevPage, hasNextPage } = meetupData;
+		setFilterEvent(docs);
+		setTotalCount(totalPages || 0);
+		setHasPreviousPage(hasPrevPage);
+		setHasFollowingPage(hasNextPage);
 	};
+
 	useEffect(() => {
-		fetchEvent();
-	}, []);
+		fetchEvents();
+	}, [currentPage]);
+
 	const toggleModal = () => {
 		setOpen(!open);
 	};
@@ -143,6 +175,19 @@ const ShowMapSection = () => {
 	const handleEventMouseLeave = () => {
 		setActiveEventId('');
 	};
+
+	const handlePageChange = (page: number) => {
+		setCurrentPage(page);
+	};
+
+	const backButtonHandler = () => {
+		handlePageChange(currentPage - 1);
+	};
+
+	const nextButtonHandler = () => {
+		handlePageChange(currentPage + 1);
+	};
+
 	const filteredEvents = filterEvent.filter(
 		event =>
 			(isEmpty(selectedLocation) ||
@@ -185,6 +230,39 @@ const ShowMapSection = () => {
 									</SingleEventContainer>
 								))
 							)}
+							<PaginationContainer>
+								<Stack direction="row" spacing={2}>
+									<MuiButton
+										onClick={backButtonHandler}
+										sx={{
+											'&:disabled': {
+												color: '#676767'
+											}
+										}}
+										disabled={!hasPreviousPage}
+									>
+										&lt; Back
+									</MuiButton>
+									<MuiPagination
+										count={totalCount}
+										page={currentPage}
+										onChange={(event, page) => handlePageChange(page)}
+										hidePrevButton
+										hideNextButton
+									/>
+									<MuiButton
+										onClick={nextButtonHandler}
+										sx={{
+											'&:disabled': {
+												color: '#676767'
+											}
+										}}
+										disabled={!hasFollowingPage}
+									>
+										Next &gt;
+									</MuiButton>
+								</Stack>
+							</PaginationContainer>
 						</EventContainer>
 					</FilteredContainer>
 					<ShowMapContainer>
