@@ -96,7 +96,6 @@ const PriceSub = styled.p`
 const OriginalPrice = styled.p`
 	color: #666;
 	font-size: 16px;
-	text-decoration-line: line-through;
 `;
 const BookBtn = styled(Link)`
 	background-color: ${color.primaryColor};
@@ -127,9 +126,9 @@ const ticketConfig = [
 	{
 		_id: '1',
 		title: 'General Admission',
-		price: 218,
+		price: '40%OFF',
 		priceIncGST: false,
-		earlyBirdPrice: 110,
+		earlyBirdPrice: 130,
 		earlyBirdPriceIncGST: true,
 		earlyBirdEndDate: '2024-03-21T14:00:00.000Z',
 		thumbnailSrc: '/images/tickets/general-admission.png',
@@ -145,9 +144,9 @@ const ticketConfig = [
 	{
 		_id: '2',
 		title: 'Premium GA',
-		price: 268,
+		price: '40%OFF',
 		priceIncGST: true,
-		earlyBirdPrice: 135,
+		earlyBirdPrice: 160,
 		earlyBirdPriceIncGST: false,
 		earlyBirdEndDate: '2024-03-21T14:00:00.000Z',
 		thumbnailSrc: '/images/tickets/premium-admission.png',
@@ -164,9 +163,9 @@ const ticketConfig = [
 	{
 		_id: '3',
 		title: 'VIP/Whale Pass',
-		price: 2585,
+		price: '40%OFF',
 		priceIncGST: false,
-		earlyBirdPrice: 1295,
+		earlyBirdPrice: 1551,
 		earlyBirdPriceIncGST: false,
 		thumbnailSrc: '/images/tickets/vip.png',
 		earlyBirdEndDate: '2024-03-21T14:00:00.000Z',
@@ -178,7 +177,7 @@ const ticketConfig = [
 			'Access to all side events',
 			'Access to Community House',
 			'Access to Cyber Party',
-			'Australian AI + Web3 Charity Dinner Pass',
+			'Access to VIP Party',
 			'Fast track entry to the event',
 			'Access to the VIP Lounge - Sponsored',
 			'Access to Startup Pitch House',
@@ -190,9 +189,9 @@ const ticketConfig = [
 	{
 		_id: '4',
 		title: 'Student Pass',
-		price: 98,
+		price: '40%OFF',
 		priceIncGST: false,
-		earlyBirdPrice: 49,
+		earlyBirdPrice: 58,
 		earlyBirdPriceIncGST: false,
 		thumbnailSrc: '/images/tickets/vip.png',
 		earlyBirdEndDate: '2024-03-21T14:00:00.000Z',
@@ -213,7 +212,9 @@ const PageTicket: React.FC = () => {
 		<HomeTicketContainer>
 			<Subtitle>AI + Web3 Convention 2024</Subtitle>
 			<Title>Are You with Us? Book Tickets</Title>
-			<Highlight>50% discount until 31 December, 2023, Book your tickets now.</Highlight>
+			<Highlight>
+				40% discount from 1 January - 29 February 2024, Book your tickets now.
+			</Highlight>
 			<Backdrop>Tickets</Backdrop>
 			<Grid container gap="8px">
 				{ticketConfig.map(ticket => {
@@ -231,7 +232,7 @@ const PageTicket: React.FC = () => {
 									<Price>{price}</Price>
 									<PriceSub>+GST</PriceSub>
 								</PriceContainer>
-								<OriginalPrice>${ticket.price}+GST</OriginalPrice>
+								<OriginalPrice>${ticket.price}</OriginalPrice>
 								<BookBtn href="https://w3con.eventsair.com/web3convention/registration/Site/Register">
 									BOOK NOW
 								</BookBtn>
