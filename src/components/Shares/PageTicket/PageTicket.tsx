@@ -232,7 +232,7 @@ const PageTicket: React.FC = () => {
 									<Price>{price}</Price>
 									<PriceSub>+GST</PriceSub>
 								</PriceContainer>
-								<OriginalPrice>${ticket.price}</OriginalPrice>
+								<OriginalPrice>{ticket.price}</OriginalPrice>
 								<BookBtn href="https://w3con.eventsair.com/web3convention/registration/Site/Register">
 									BOOK NOW
 								</BookBtn>
