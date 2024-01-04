@@ -176,6 +176,7 @@ const EventCard: React.FC<EventCardProps> = ({ eventInfo }) => {
 			pathname: '/event-detail',
 			query: {
 				description: eventInfo.description,
+				title: eventInfo.title,
 				agenda: eventInfo.agenda,
 				descriptionImage: imageUrl,
 				maxRSVPs: eventInfo.maxRSVPs,
