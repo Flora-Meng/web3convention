@@ -21,6 +21,10 @@ export const navItemsConfig: { [K in ENavItem]: INavItem } = {
 	[ENavItem.PARTNER]: {
 		title: 'partner',
 		path: '/comingSoon'
+	},
+	[ENavItem.SHOP]: {
+		title: 'shop',
+		path: 'https://shop.web3convention.com/'
 	}
 };
 
