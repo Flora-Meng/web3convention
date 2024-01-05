@@ -47,8 +47,7 @@ const ExhibitorInfo = () => {
 				<ExhibitorAvatar
 					logoUrl={exhibitorLogo as string}
 					name={exhibitorName as string}
-					width="50px"
-					height="58px"
+					logoSize={46}
 				/>
 			)}
 

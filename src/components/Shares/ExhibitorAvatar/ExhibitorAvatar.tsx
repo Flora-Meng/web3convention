@@ -1,37 +1,40 @@
+import Image from 'next/image';
 import styled from 'styled-components';
 
-interface AvatarProps {
-	width: string;
-	height: string;
-}
+import { color } from '@/styles/variables';
+import imageLoader from '@/utils/loader';
 
-interface ExhibitorAvatarProps extends AvatarProps {
+interface ExhibitorAvatarProps {
+	logoSize: number;
 	logoUrl: string;
 	name: string;
 }
 const logoBackground = '/images/exhibition/invalid-name.png';
 
-const Avatar = styled.div<AvatarProps>`
+const Avatar = styled.div`
 	background-image: url('${logoBackground}');
 	background-repeat: no-repeat;
-	background-size: cover;
-	height: ${props => props.height};
+	background-size: contain;
+	padding: 11px 2px 2px 2px;
 	position: relative;
-	width: ${props => props.width};
-	img.company {
-		border-radius: 50%;
-		height: calc(${props => props.height} - 11px);
-		margin: 9px 2px 2px 2px;
-		position: absolute;
-		transform: none;
-		width: calc(${props => props.width} - 4px);
-	}
 `;
 
-const ExhibitorAvatar: React.FC<ExhibitorAvatarProps> = ({ logoUrl, name, width, height }) => {
+const ExhibitorAvatar: React.FC<ExhibitorAvatarProps> = ({ logoUrl, name, logoSize }) => {
 	return (
-		<Avatar width={width} height={height}>
-			<img src={logoUrl} alt={name} className="company" />
+		<Avatar>
+			<Image
+				src={logoUrl}
+				loader={imageLoader}
+				width={logoSize}
+				height={logoSize}
+				style={{
+					objectFit: 'contain',
+					backgroundColor: `${color.whiteColor}`,
+					borderRadius: '50%'
+				}}
+				alt={name}
+				className="company"
+			/>
 		</Avatar>
 	);
 };

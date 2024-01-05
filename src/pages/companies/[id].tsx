@@ -92,14 +92,7 @@ const ExhibitorDetails = () => {
 			<Header />
 			<ExhibitorWrapper>
 				<ExhibitorContainer>
-					{logo?.url && (
-						<ExhibitorAvatar
-							width="39px"
-							height="46px"
-							logoUrl={logo?.url}
-							name={name}
-						/>
-					)}
+					{logo?.url && <ExhibitorAvatar logoUrl={logo?.url} name={name} logoSize={35} />}
 					<ExhibitorName>{name}</ExhibitorName>
 					<ExhibitorIcon height="20px" />
 					<ExhibitorCountry>
