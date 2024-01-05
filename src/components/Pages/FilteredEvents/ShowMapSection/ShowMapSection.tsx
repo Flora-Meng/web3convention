@@ -191,6 +191,9 @@ const ShowMapSection = () => {
 		handlePageChange(currentPage + 1);
 	};
 
+	const handleEventsFiltered = (filteredEvents: IMeetup[]) => {
+		setFilterEvent(filteredEvents); // Update state with filtered events
+	};
 	const filteredEvents = filterEvent.filter(
 		event =>
 			(isEmpty(selectedLocation) ||
@@ -269,7 +272,11 @@ const ShowMapSection = () => {
 						</EventContainer>
 					</FilteredContainer>
 					<ShowMapContainer>
-						<GoogleMapMarker events={filteredEvents} activeEventId={activeEventId} />
+						<GoogleMapMarker
+							events={filteredEvents}
+							activeEventId={activeEventId}
+							onEventsFiltered={handleEventsFiltered}
+						/>
 					</ShowMapContainer>
 				</ShowOnMapModal1>
 			</MapContainer>
