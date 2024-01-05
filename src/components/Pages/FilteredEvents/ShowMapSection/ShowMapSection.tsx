@@ -79,6 +79,10 @@ const EventContainer = styled.div`
 `;
 const SingleEventContainer = styled.div`
 	margin-bottom: 16px;
+	margin-top: 10px;
+	&:hover {
+		transform: translateY(-10px);
+	}
 `;
 const ShowMapContainer = styled.div`
 	height: auto;
