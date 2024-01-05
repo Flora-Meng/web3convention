@@ -85,6 +85,11 @@ const PaginationContainer = styled.div`
 	margin-top: 20px;
 `;
 
+const MuiStack = styled(Stack)`
+	align-items: center;
+	display: flex;
+`;
+
 const MuiPagination = styled(Pagination)`
 	.MuiPaginationItem-root {
 		color: ${whiteColor};
@@ -181,7 +186,7 @@ const MainContents = () => {
 						<div>No results found</div>
 					)}
 					<PaginationContainer>
-						<Stack direction="row" spacing={2}>
+						<MuiStack direction="row" spacing={2}>
 							<MuiButton
 								onClick={backButtonHandler}
 								sx={{
@@ -211,7 +216,7 @@ const MainContents = () => {
 							>
 								Next &gt;
 							</MuiButton>
-						</Stack>
+						</MuiStack>
 					</PaginationContainer>
 				</EventContainer>
 			</MainContainer>
