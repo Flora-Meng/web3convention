@@ -2,13 +2,13 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
+import ExhibitorAvatar from '@/components/Shares/ExhibitorAvatar';
+import ExhibitorIcon from '@/components/Shares/ExhibitorIcon';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 import { fetchExhibitor } from '@/services/meetup';
 import { color, devices } from '@/styles/variables';
 
-const logoBackground = '/images/exhibition/invalid-name.png';
-const exhibitorIcon = '/images/icons/exhibitor.svg';
 const auIcon = '/images/icons/aus.svg';
 
 const Container = styled.div`
@@ -27,32 +27,6 @@ const ExhibitorContainer = styled.div`
 	padding: 40px 0;
 	@media ${devices.mobile} {
 		gap: 20px;
-	}
-`;
-const ExhibitorAvatar = styled.div`
-	background-image: url(${logoBackground});
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 46px;
-	position: relative;
-	width: 39px;
-	img.company {
-		border-radius: 50%;
-		height: 35px;
-		margin: 9px 2px 2px 2px;
-		position: absolute;
-		transform: none;
-		width: 35px;
-	}
-`;
-const ExhibitorIconWrapper = styled.div`
-	cursor: pointer;
-	display: block;
-	height: 20px;
-	width: 90px;
-	img {
-		height: 100%;
-		width: auto;
 	}
 `;
 const ExhibitorName = styled.p`
@@ -118,15 +92,9 @@ const ExhibitorDetails = () => {
 			<Header />
 			<ExhibitorWrapper>
 				<ExhibitorContainer>
-					{logo?.url && (
-						<ExhibitorAvatar>
-							<img src={logo?.url} alt={name} className="company" />
-						</ExhibitorAvatar>
-					)}
+					{logo?.url && <ExhibitorAvatar logoUrl={logo?.url} name={name} logoSize={35} />}
 					<ExhibitorName>{name}</ExhibitorName>
-					<ExhibitorIconWrapper>
-						<img className="exhibitorIcon" src={exhibitorIcon} alt="Exhibitor icon" />
-					</ExhibitorIconWrapper>
+					<ExhibitorIcon height="20px" />
 					<ExhibitorCountry>
 						<img src={auIcon} alt="aus" className="ausicon" />
 					</ExhibitorCountry>

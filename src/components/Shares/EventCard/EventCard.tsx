@@ -175,6 +175,10 @@ const EventCard: React.FC<EventCardProps> = ({ eventInfo }) => {
 		router.push({
 			pathname: '/event-detail',
 			query: {
+				title,
+				exhibitorId: company._id,
+				exhibitorName: company.name,
+				exhibitorLogo: company.logo?.url,
 				description: eventInfo.description,
 				agenda: eventInfo.agenda,
 				descriptionImage: imageUrl,
