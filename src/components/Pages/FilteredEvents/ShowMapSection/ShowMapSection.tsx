@@ -10,7 +10,6 @@ import ShowOnMapModal1 from './ShowOnMapModal';
 import GoogleMapMarker from './ShowOnMapModal/GoogleMapMarker';
 import ChooseLocation from '@/components/Pages/FilteredEvents/ChooseLocation';
 import ShowOnMapEventItem from '@/components/Shares/ShowOnMapModal/ShowOnMapEventItem';
-// import fetchMeetups from '@/services/meetup';
 import { fetchPaginatedMeetups } from '@/services/meetup';
 import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
