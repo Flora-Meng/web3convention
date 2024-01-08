@@ -77,10 +77,6 @@ const counterList = [
 	{
 		name: 'Speakers',
 		count: 200
-	},
-	{
-		name: 'Parties',
-		count: 3
 	}
 ];
 const Backdrop = styled.div`

@@ -4,4 +4,5 @@ export interface IExhibitor {
 	email: string;
 	industry: string;
 	officeAddress: string;
+	branchAddress: string;
 }
