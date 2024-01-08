@@ -94,6 +94,10 @@ const eventsConfig = [
 	{
 		label: 'Side Events',
 		path: 'convention'
+	},
+	{
+		label: '2023 Web3 Career Expo',
+		path: 'https://www.youtube.com/watch?v=sdXh3m9bTso'
 	}
 ];
 const partnersConfig = [
