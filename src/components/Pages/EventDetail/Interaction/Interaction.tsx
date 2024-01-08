@@ -82,20 +82,15 @@ const ShareButton = styled.button`
 	}
 `;
 
-const AttendButton = styled.button`
+const AttendButton = styled(ShareButton)`
 	background-color: ${primaryColor};
 	border: unset;
-	border-radius: 30px;
-	font-size: 10px;
-	font-weight: bold;
-	height: 30px;
-	width: 100px;
-	@media ${devices.mobile} {
-		height: 52px;
-		width: 142px;
-		font-size: 14px;
-	}
+	color: ${blackColor};
 `;
+dayjs.extend(utc);
+dayjs.extend(timezone);
+const format = 'dddd, MMM D, hA [GMT]Z';
+
 const Interaction = () => {
 	const { query } = useRouter();
 	const periodStart: string | undefined = Array.isArray(query.periodStart)
@@ -103,9 +98,6 @@ const Interaction = () => {
 		: query.periodStart;
 	const { title } = query;
 
-	dayjs.extend(utc);
-	dayjs.extend(timezone);
-	const format = 'dddd, MMM D, hA [GMT]Z';
 	return (
 		<InteractionSection>
 			<InteractionWrapper>
