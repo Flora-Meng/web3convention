@@ -31,18 +31,18 @@ const InteractionWrapper = styled.div`
 	padding: 10px 40px;
 	width: calc(100vw - 48px);
 `;
-const InteractionInfo = styled.span`
+const InteractionInfo = styled.div`
 	display: flex;
 	flex-direction: column;
 	@media ${devices.mobile} {
 		white-space: nowrap;
 	}
 `;
-const DateInfo = styled.span`
+const DateInfo = styled.div`
 	color: #b2b2b2;
 	font-size: 16px;
 `;
-const EventTitle = styled.span`
+const EventTitle = styled.div`
 	color: #fff;
 	font-size: 20px;
 	font-weight: bold;

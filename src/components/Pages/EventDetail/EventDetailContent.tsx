@@ -11,6 +11,7 @@ const MainContainer = styled.div`
 	background-position: center;
 	display: flex;
 	flex-direction: column;
+	padding: 20px;
 	width: 100%;
 `;
 const DescriptionAndLocation = styled.div`
@@ -30,7 +31,6 @@ const ContentWrapper = styled.div`
 	flex-direction: column;
 	margin: 0 auto;
 	max-width: 1200px;
-	padding: 20px;
 	width: 100%;
 `;
 const EventDetailContent = () => {
