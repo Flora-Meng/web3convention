@@ -18,5 +18,10 @@
 		"_id": "4",
 		"title": "Web3 Hackathon 2023",
 		"imageSrc": "/images/highlights/hackathon.jpg"
+	},
+	{
+		"_id": "5",
+		"title": "2023 Web3 Career Expo",
+		"imageSrc": "/images/highlights/mpceMeeting.png"
 	}
 ]
