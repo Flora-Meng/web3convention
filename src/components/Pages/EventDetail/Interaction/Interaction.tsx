@@ -96,7 +96,7 @@ const Interaction = () => {
 	const periodStart: string | undefined = Array.isArray(query.periodStart)
 		? query.periodStart[0]
 		: query.periodStart;
-	const { title } = query;
+	const { title, price } = query;
 
 	return (
 		<InteractionSection>
@@ -106,7 +106,7 @@ const Interaction = () => {
 					<EventTitle>{title}</EventTitle>
 				</InteractionInfo>
 				<InteractionAction>
-					<PriceTag>A$99</PriceTag>
+					<PriceTag>{price}</PriceTag>
 					<FavoriteBorderIcon sx={{ color: 'white' }} />
 					<ShareButton>SHARE</ShareButton>
 					<AttendButton>ATTEND</AttendButton>

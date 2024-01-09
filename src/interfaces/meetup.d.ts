@@ -29,6 +29,7 @@ type Banner = {
 };
 
 type DescriptionImage = { url: string };
+type Ticket = { title: string; price: number; availableQuantity: number; description: string };
 
 interface IMeetup {
 	_id: string;
@@ -45,4 +46,5 @@ interface IMeetup {
 	latitude: number;
 	longitude: number;
 	maxRSVPs: number;
+	ticket: Ticket[];
 }

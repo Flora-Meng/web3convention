@@ -166,9 +166,11 @@ const EventCard: React.FC<EventCardProps> = ({ eventInfo }) => {
 		descriptionImage,
 		maxRSVPs,
 		latitude,
-		longitude
+		longitude,
+		ticket
 	} = eventInfo;
 	const company = exhibitors?.[0] || {};
+	const ticketInfo = ticket?.[0] || {};
 	const router = useRouter();
 	const imageUrl = eventInfo.descriptionImage?.url || '';
 	const navigateToEventDescription = () => {
@@ -176,11 +178,11 @@ const EventCard: React.FC<EventCardProps> = ({ eventInfo }) => {
 			pathname: '/event-detail',
 			query: {
 				title,
+				price: ticketInfo.price,
 				exhibitorId: company._id,
 				exhibitorName: company.name,
 				exhibitorLogo: company.logo?.url,
 				description: eventInfo.description,
-				title: eventInfo.title,
 				agenda: eventInfo.agenda,
 				descriptionImage: imageUrl,
 				maxRSVPs: eventInfo.maxRSVPs,
