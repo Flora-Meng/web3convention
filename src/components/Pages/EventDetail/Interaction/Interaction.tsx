@@ -29,7 +29,6 @@ const InteractionWrapper = styled.div`
 		padding: 20px 200px;
 	}
 	padding: 10px 40px;
-	width: calc(100vw - 48px);
 `;
 const InteractionInfo = styled.div`
 	display: flex;
@@ -106,7 +105,7 @@ const Interaction = () => {
 					<EventTitle>{title}</EventTitle>
 				</InteractionInfo>
 				<InteractionAction>
-					<PriceTag>{price}</PriceTag>
+					{price ? <PriceTag>{price}</PriceTag> : <PriceTag>Free</PriceTag>}
 					<FavoriteBorderIcon sx={{ color: 'white' }} />
 					<ShareButton>SHARE</ShareButton>
 					<AttendButton>ATTEND</AttendButton>
