@@ -8,7 +8,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 
 import MemberModal from '@/components/Shares/MemberModal';
-import { backdrop, sectionSubtitle, sectionTitle } from '@/styles/mixin';
+import { sectionSubtitle, sectionTitle } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
@@ -16,7 +16,7 @@ const { blackColor, whiteColor, primaryColor } = color;
 
 const speakerIcon = '/images/icons/speaker-icon.svg';
 const speakerArrow = '/images/icons/speaker-arrow.svg';
-const linkedlnIcon = '/images/icons/linkedln.svg';
+const linkedinIcon = '/images/icons/linkedin.svg';
 const facebookIcon = '/images/icons/Facebook_f_logo.svg';
 const twitterIcon = '/images/icons/twitter.svg';
 
@@ -203,6 +203,11 @@ const SectionTitle = styled.h2`
 		span {
 			display: inline;
 		}
+		span:last-child {
+			display: inline-block;
+			white-space: nowrap;
+		}
+
 		margin-bottom: 97px;
 	}
 `;
@@ -219,23 +224,6 @@ const Container = styled.div`
 	margin: 0 auto;
 	max-width: 1440px;
 	padding: 0 30px 0 50px;
-`;
-
-const Backdrop = styled.div`
-	${backdrop};
-	color: ${whiteColor};
-	&::after {
-		background-image: none;
-	}
-	@media ${devices.miniMobile} {
-		font-size: 70px;
-		transform: translateX(-35px);
-	}
-	@media ${devices.laptop} {
-		left: 176px;
-		font-size: 230px;
-		display: inline-block;
-	}
 `;
 
 const LogoWrapper = styled.div`
@@ -361,11 +349,9 @@ const JudgeTeam: React.FC<{ subtitle: string; teamMemberList: TeamMemberProps[] 
 			<Container>
 				<SectionSubtitle>{subtitle}</SectionSubtitle>
 				<SectionTitle>
-					<span>Judges, </span>
 					<span>Speakers & </span>
-					<span>Mentors</span>
+					<span>Advisors, Judges, Mentors</span>
 				</SectionTitle>
-				<Backdrop>Guests</Backdrop>
 				<HomeTeamContainer container spacing={2}>
 					<MemberModal open={open} handleClose={handleClose}>
 						<InfoHeader>
@@ -424,8 +410,8 @@ const JudgeTeam: React.FC<{ subtitle: string; teamMemberList: TeamMemberProps[] 
 														socialMediaIcon = (
 															<IconContainer>
 																<Image
-																	src={linkedlnIcon}
-																	alt="linkedln"
+																	src={linkedinIcon}
+																	alt="linkedin"
 																	loader={imageLoader}
 																	fill
 																	unoptimized
