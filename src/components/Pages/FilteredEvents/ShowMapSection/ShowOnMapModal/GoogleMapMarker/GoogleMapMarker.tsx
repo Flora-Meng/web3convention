@@ -1,22 +1,33 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 import googleMapStyles from './googleMapStyles.json';
+import fetchMeetups from '@/services/meetup';
 
-interface IEvent {
-	_id: string;
-	title: string;
-	latitude: number;
-	longitude: number;
-}
 interface GoogleMapProps {
-	events: IEvent[];
+	events: IMeetup[];
 	activeEventId?: string;
+	onEventsFiltered: (filteredEvents: IMeetup[]) => void;
 }
 
-const GoogleMapMarker: React.FC<GoogleMapProps> = ({ events, activeEventId }) => {
+const GoogleMapMarker: React.FC<GoogleMapProps> = ({ events, activeEventId, onEventsFiltered }) => {
 	const mapRef = useRef<HTMLDivElement>(null);
 	const [googleMap, setGoogleMap] = useState<google.maps.Map>();
 	const markersRef = useRef<google.maps.Marker[]>([]);
+
+	const fetchAndFilterEvents = async () => {
+		const response = await fetchMeetups();
+		const meetupData = response.data.docs || [];
+
+		if (googleMap) {
+			const bounds = googleMap.getBounds();
+			const filteredByBounds = meetupData.filter((event: IMeetup) => {
+				const eventPos = new google.maps.LatLng(event.latitude, event.longitude);
+				return bounds ? bounds.contains(eventPos) : false;
+			});
+
+			onEventsFiltered(filteredByBounds);
+		}
+	};
 
 	const loadGoogleMapsScript = (callback: () => void) => {
 		if (typeof window.google === 'object' && typeof window.google.maps === 'object') {
@@ -32,10 +43,23 @@ const GoogleMapMarker: React.FC<GoogleMapProps> = ({ events, activeEventId }) =>
 		document.head.appendChild(script);
 	};
 
+	// eslint-disable-next-line consistent-return
+	useEffect(() => {
+		if (googleMap) {
+			googleMap.addListener('dragend', fetchAndFilterEvents);
+			googleMap.addListener('zoom_changed', fetchAndFilterEvents);
+
+			fetchAndFilterEvents();
+
+			return () => {
+				google.maps.event.clearInstanceListeners(googleMap);
+			};
+		}
+	}, [googleMap]);
+
 	useEffect(() => {
 		loadGoogleMapsScript(() => {
 			if (mapRef.current && !googleMap) {
-				// Initialize the map
 				const map = new window.google.maps.Map(mapRef.current, {
 					center: { lat: events[0]?.latitude || 0, lng: events[0]?.longitude || 0 },
 					zoom: 8,
@@ -45,18 +69,16 @@ const GoogleMapMarker: React.FC<GoogleMapProps> = ({ events, activeEventId }) =>
 					styles: googleMapStyles
 				});
 
-				setGoogleMap(map); // Set the map instance in state
+				setGoogleMap(map);
 			}
 		});
 	}, [events]);
 
 	useEffect(() => {
 		if (googleMap) {
-			// Clear existing markers
 			markersRef.current.forEach(marker => marker.setMap(null));
 			markersRef.current = [];
 
-			// Create new markers
 			events.forEach(event => {
 				const marker = new google.maps.Marker({
 					position: { lat: event.latitude, lng: event.longitude },
