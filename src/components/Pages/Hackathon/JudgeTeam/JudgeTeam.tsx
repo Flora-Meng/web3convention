@@ -47,7 +47,9 @@ const HomeTeamContainer = styled(Grid)`
 const SpeakerArrowIconWrapper = styled.div`
 	display: none;
 	height: 20px;
-	img {
+	position: absolute;
+	right: 0;
+	> div {
 		height: 100%;
 		width: auto;
 	}
@@ -513,22 +515,14 @@ const JudgeTeam: React.FC<{ subtitle: string; teamMemberList: TeamMemberProps[] 
 										<JobTitleContainer>{teamMember.jobTitle}</JobTitleContainer>
 									</InfoSection>
 									<IconSection>
-										{teamMember.isSpeaker ? (
-											<SpeakerIconWrapper>
-												<img
-													className="speakerIcon"
-													src={speakerIcon}
-													alt="Speaker icon"
-												/>
-											</SpeakerIconWrapper>
-										) : (
-											<SpeakerIconPlaceholder />
-										)}
 										<SpeakerArrowIconWrapper>
-											<img
+											<Image
 												className="speakerArrow"
 												src={speakerArrow}
 												alt="Speaker more info"
+												loader={imageLoader}
+												width={20}
+												height={20}
 											/>
 										</SpeakerArrowIconWrapper>
 									</IconSection>
