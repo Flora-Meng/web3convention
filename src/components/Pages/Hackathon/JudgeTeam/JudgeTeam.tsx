@@ -8,7 +8,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 
 import MemberModal from '@/components/Shares/MemberModal';
-import { sectionSubtitle, sectionTitle } from '@/styles/mixin';
+import { backdrop, sectionSubtitle, sectionTitle } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
@@ -301,6 +301,22 @@ const JobTitleContainer = styled.div`
 	font-size: 14px;
 	margin-right: 10px;
 `;
+const Backdrop = styled.div`
+	${backdrop};
+	color: ${whiteColor};
+	&::after {
+		background-image: none;
+	}
+	@media ${devices.miniMobile} {
+		font-size: 70px;
+		transform: translateX(-35px);
+	}
+	@media ${devices.laptop} {
+		left: 176px;
+		font-size: 230px;
+		display: inline-block;
+	}
+`;
 
 const IconSection = styled.div`
 	align-items: center;
@@ -354,6 +370,7 @@ const JudgeTeam: React.FC<{ subtitle: string; teamMemberList: TeamMemberProps[] 
 					<span>Speakers & </span>
 					<span>Advisors, Judges, Mentors</span>
 				</SectionTitle>
+				<Backdrop>Guests</Backdrop>
 				<HomeTeamContainer container spacing={2}>
 					<MemberModal open={open} handleClose={handleClose}>
 						<InfoHeader>
