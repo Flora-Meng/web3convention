@@ -51,12 +51,7 @@
 				"logoSrcHighlight": "/images/sponsors/coinstash.png",
 				"url": "https://coinstash.com.au/"
 			},
-			{
-				"_id": "7",
-				"logoSrc": "/images/sponsors/afi.png",
-				"logoSrcHighlight": "/images/sponsors/afi.png",
-				"url": "https://www.ausfintech.com/"
-			},
+			
 			{
 				"_id": "8",
 				"logoSrc": "/images/sponsors/sbl-labs.svg",
