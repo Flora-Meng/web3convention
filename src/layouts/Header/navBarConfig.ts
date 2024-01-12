@@ -62,7 +62,7 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 		// 	path: '/web3-convention-2024'
 		// },
 		{
-			title: 'Web3 Hackathon 2023',
+			title: '2023 Web3 Hackathon',
 			path: '/hackathon'
 		}
 	],

@@ -76,10 +76,6 @@ const QRcodeGridItem = styled(Grid)`
 // Configuration
 const eventsConfig = [
 	{
-		label: 'VIP Party',
-		path: '/convention'
-	},
-	{
 		label: 'Startup Competition',
 		path: 'https://w3con.eventsair.com/web3convention/startupcomp'
 	},
@@ -88,7 +84,7 @@ const eventsConfig = [
 		path: '/convention'
 	},
 	{
-		label: 'Cyber Party',
+		label: 'VIP / Cyber Party',
 		path: '/convention'
 	},
 	{
@@ -96,8 +92,12 @@ const eventsConfig = [
 		path: 'convention'
 	},
 	{
-		label: '2023 Web3 Career Expo',
+		label: '2023 Web3 Career Forum',
 		path: 'https://www.youtube.com/watch?v=sdXh3m9bTso'
+	},
+	{
+		label: '2023 Web3 Hackathon',
+		path: '/hackathon'
 	}
 ];
 const partnersConfig = [
