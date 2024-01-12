@@ -77,7 +77,7 @@ const QRcodeGridItem = styled(Grid)`
 const eventsConfig = [
 	{
 		label: 'Startup Competition',
-		path: 'https://w3con.eventsair.com/web3convention/startupcomp'
+		path: '/startup'
 	},
 	{
 		label: 'Capital Connect',

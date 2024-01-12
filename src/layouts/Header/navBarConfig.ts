@@ -50,7 +50,7 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 		},
 		{
 			title: 'Startup Competition',
-			path: 'https://w3con.eventsair.com/web3convention/startupcomp'
+			path: '/startup'
 		},
 		{
 			title: 'Side Events',
