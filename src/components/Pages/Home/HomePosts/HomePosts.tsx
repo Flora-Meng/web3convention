@@ -81,6 +81,9 @@ const HomePosts: React.FC = () => {
 				{postList.map(post => {
 					let postLink;
 					switch (post._id) {
+						case '1':
+							postLink = '/startup';
+							break;
 						case '4':
 							postLink = '/hackathon';
 							break;
