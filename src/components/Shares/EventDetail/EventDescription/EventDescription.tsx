@@ -33,20 +33,24 @@ const Agenda = styled.p`
 	padding: 48px 0;
 	white-space: pre-wrap;
 `;
-const EventDescription = () => {
-	const router = useRouter();
-	const { query } = useRouter();
-	const { description } = query;
-	const { agenda } = query;
-	const { descriptionImage } = query;
-	const imageSrc = Array.isArray(descriptionImage)
-		? descriptionImage[0]
-		: (descriptionImage as string);
+interface eventDetailProps {
+	eventDetail: IMeetup;
+}
+const EventDescription: React.FC<eventDetailProps> = ({ eventDetail }) => {
+	const { descriptionImage, description, agenda } = eventDetail || {};
 
 	return (
 		<ContentWrapper>
 			<EventImage>
-				<Image src={imageSrc} alt="Description" unoptimized fill loader={imageLoader} />
+				{descriptionImage && (
+					<Image
+						src={descriptionImage.url}
+						alt="Description"
+						unoptimized
+						fill
+						loader={imageLoader}
+					/>
+				)}
 			</EventImage>
 			<Description>{description}</Description>
 			<Agenda>{agenda}</Agenda>

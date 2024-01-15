@@ -5,7 +5,6 @@ import timezone from 'dayjs/plugin/timezone';
 import utc from 'dayjs/plugin/utc';
 import { isEmpty } from 'lodash';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
@@ -59,26 +58,16 @@ const ImageContainer = styled.div`
 	min-width: 14px;
 	position: relative;
 `;
-
+interface eventDetailProps {
+	eventDetail: IMeetup;
+}
 dayjs.extend(utc);
 dayjs.extend(timezone);
 // eslint-disable-next-line @typescript-eslint/no-inferrable-types
 const format: string = 'dddd, MMM D, hA [GMT]Z';
-const LocationCard = () => {
-	const { query } = useRouter();
-	const maxRSVPs: string | undefined = Array.isArray(query.maxRSVPs)
-		? query.maxRSVPs[0]
-		: query.maxRSVPs;
-	const address: string | undefined = Array.isArray(query.address)
-		? query.address[0]
-		: query.address;
-	const periodStart: string | undefined = Array.isArray(query.periodStart)
-		? query.periodStart[0]
-		: query.periodStart;
-	const latitude: number | undefined =
-		typeof query.latitude === 'string' ? parseFloat(query.latitude) : undefined;
-	const longitude: number | undefined =
-		typeof query.longitude === 'string' ? parseFloat(query.longitude) : undefined;
+const LocationCard: React.FC<eventDetailProps> = ({ eventDetail }) => {
+	const { maxRSVPs, address, period, latitude, longitude } = eventDetail || {};
+
 	const [userLocation, setUserLocation] = useState<{ latitude?: number; longitude?: number }>({});
 	const [distance, setDistance] = useState<number | undefined>(undefined);
 
@@ -145,7 +134,7 @@ const LocationCard = () => {
 						<DateInfo>{maxRSVPs}+ People</DateInfo>
 					</InfoContainer>
 				)}
-				{periodStart && (
+				{period?.start && (
 					<InfoContainer>
 						<ImageContainer>
 							<Image
@@ -156,7 +145,7 @@ const LocationCard = () => {
 								unoptimized
 							/>
 						</ImageContainer>
-						<DateInfo>{dayjs(periodStart).utc().local().format(format)}</DateInfo>
+						<DateInfo>{dayjs(period.start).utc().local().format(format)}</DateInfo>
 					</InfoContainer>
 				)}
 				{address && (
