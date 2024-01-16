@@ -92,16 +92,16 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 	],
 	[ENavItem.PARTNER]: [
 		{
-			title: 'Partner with Us',
-			path: '/partners'
-		},
-		{
-			title: 'Why Partner?',
+			title: 'Why Partner',
 			path: '/why-sponsor'
 		},
 		{
 			title: '2024 Partners',
 			path: '/previous-partner'
+		},
+		{
+			title: 'Partner with Us',
+			path: '/partners'
 		}
 	]
 };
