@@ -1,37 +1,36 @@
-import Image from 'next/image';
-import { useRouter } from 'next/router';
 import styled from 'styled-components';
 
-import { color, devices } from '@/styles/variables';
-import imageLoader from '@/utils/loader';
-
 const ContentWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
 	max-width: 680px;
 `;
 const EventImage = styled.div`
-	height: 23vw;
-	position: relative;
-	width: 100%;
-	@media ${devices.largeLaptop} {
-		height: 340px;
+	display: flex;
+	max-width: 680px;
+	img {
+		height: auto;
+		width: 100%;
 	}
 `;
 const Description = styled.p`
-	color: ${color.whiteColor};
+	color: #fff;
 	font-size: 16px;
 	line-height: 1.5;
 	margin: 0;
 	padding: 32px 0 0 0;
 	white-space: pre-wrap;
+	width: 100%;
 `;
 const Agenda = styled.p`
-	color: ${color.whiteColor};
+	color: #fff;
 	font-size: 16px;
 	font-weight: bold;
 	line-height: 1.5;
 	margin: 0;
 	padding: 48px 0;
 	white-space: pre-wrap;
+	width: 100%;
 `;
 interface eventDetailProps {
 	eventDetail: IMeetup;
@@ -41,17 +40,12 @@ const EventDescription: React.FC<eventDetailProps> = ({ eventDetail }) => {
 
 	return (
 		<ContentWrapper>
-			<EventImage>
-				{descriptionImage && (
-					<Image
-						src={descriptionImage.url}
-						alt="Description"
-						unoptimized
-						fill
-						loader={imageLoader}
-					/>
-				)}
-			</EventImage>
+			{descriptionImage && (
+				<EventImage>
+					<img src={descriptionImage.url} alt="Description" />
+				</EventImage>
+			)}
+
 			<Description>{description}</Description>
 			<Agenda>{agenda}</Agenda>
 		</ContentWrapper>

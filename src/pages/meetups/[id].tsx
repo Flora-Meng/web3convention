@@ -23,7 +23,12 @@ const DescriptionAndLocation = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
-	min-height: 100vh;
+	@media ${devices.mobile} {
+		margin: 0 auto 250px;
+	}
+	margin: 0 auto 50px;
+	max-width: 1200px;
+	width: 100%;
 	@media ${devices.mobile} {
 		flex-direction: row;
 	}

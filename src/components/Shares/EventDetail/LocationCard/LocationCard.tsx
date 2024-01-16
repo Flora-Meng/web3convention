@@ -22,7 +22,6 @@ const StyledCard = styled(Card)`
 	display: flex;
 	flex-direction: column;
 	height: 540px;
-	min-width: 330px;
 	width: 330px;
 	@media ${devices.mobile} {
 		width: 400px;
