@@ -121,7 +121,9 @@ const PageBanner: React.FC<PageBannerProps> = props => {
 			<RightGrid imageSrc="/images/demo/main-home-banner-bg.jpg">
 				<InfoContainer className="flex flex-col justify-center">
 					<Subtitle>{bannerInfo.subtitle}</Subtitle>
-					<Subtitle>{bannerInfo.additionalSubtitle}</Subtitle>
+					{bannerInfo.additionalSubtitle && (
+						<Subtitle>{bannerInfo.additionalSubtitle}</Subtitle>
+					)}
 					<Title>{bannerInfo.title}</Title>
 					<Description>{bannerInfo.description}</Description>
 
