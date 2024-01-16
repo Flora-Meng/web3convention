@@ -14,10 +14,18 @@ const ContentContainer = styled.div`
 		padding: 50px 100px 50px;
 	}
 `;
+const Container = styled.div`
+	margin: 0 auto;
+	max-width: 1440px;
+	padding: 0 30px 0 50px;
+`;
 
 const Backdrop = styled.div`
 	${backdrop}
-	margin: -30px 20px 376px 130px;
+	margin: -7vh 0 0 12vw;
+	@media (max-width: 768px) {
+		margin: 0;
+	}
 `;
 
 const Title = styled.h2`
@@ -42,26 +50,28 @@ const HighlightImage = styled.img`
 const HighlightMoments: React.FC = () => {
 	return (
 		<ContentContainer>
-			<Subtitle>Web3 Hackathon 2023</Subtitle>
-			<Title>Highlight Moments</Title>
-			<Backdrop>Highlights</Backdrop>
-			<ImageListContainer container justifyContent="space-between" spacing={1}>
-				{highlightMomentsList.map((item, idx) => {
-					const laptopWidth = [3, 3, 3, 3];
-					return (
-						<Grid
-							item
-							mobile={12}
-							tablet={6}
-							laptop={laptopWidth[idx % 4]}
-							largeLaptop={laptopWidth[idx % 4]}
-							key={item._id}
-						>
-							<HighlightImage src={item.imageSrc} alt={item.label} />
-						</Grid>
-					);
-				})}
-			</ImageListContainer>
+			<Container>
+				<Subtitle>Web3 Hackathon 2023</Subtitle>
+				<Title>Highlight Moments</Title>
+				<Backdrop>Highlights</Backdrop>
+				<ImageListContainer container spacing={1}>
+					{highlightMomentsList.map((item, idx) => {
+						const laptopWidth = [3, 3, 3, 3];
+						return (
+							<Grid
+								item
+								mobile={12}
+								tablet={6}
+								laptop={laptopWidth[idx % 4]}
+								largeLaptop={laptopWidth[idx % 4]}
+								key={item._id}
+							>
+								<HighlightImage src={item.imageSrc} alt={item.label} />
+							</Grid>
+						);
+					})}
+				</ImageListContainer>
+			</Container>
 		</ContentContainer>
 	);
 };
