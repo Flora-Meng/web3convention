@@ -36,10 +36,14 @@ const Subtitle = styled.p`
 	${sectionSubtitle};
 `;
 
-const ImageListContainer = styled(Grid)``;
+const ImageListContainer = styled(Grid)`
+	text-align: center;
+`;
 
 const HighlightImage = styled.img`
+	display: block;
 	height: 400px;
+	margin: auto;
 	object-fit: cover;
 	width: 304px;
 	@media ${devices.mobile} {
