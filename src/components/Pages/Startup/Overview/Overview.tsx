@@ -18,8 +18,6 @@ const ContentWrapper = styled.div`
 	@media ${devices.tablet} {
 		padding: 0 40px;
 	}
-	@media ${devices.largeLaptop} {
-	}
 `;
 
 const TitleContainer = styled.div`
@@ -47,14 +45,12 @@ const Subtitle = styled.p`
 
 const Description = styled.p`
 	color: ${whiteColor};
-	font-size: 16px;
 	font-weight: bold;
 	line-height: 1.5;
 	margin-bottom: 24px;
 `;
 const Information = styled.p`
 	color: ${whiteColor};
-	font-size: 16px;
 	line-height: 24px;
 	margin-bottom: 24px;
 `;
