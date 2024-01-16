@@ -47,7 +47,6 @@ const StyledGridContainer = styled.div`
 `;
 const StyledGridItem = styled.div`
 	background-color: #131313;
-	border-radius: 4px;
 	height: 346px;
 	max-width: 368px;
 	position: relative;
