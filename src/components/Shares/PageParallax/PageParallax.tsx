@@ -45,6 +45,7 @@ const PageParallax: React.FC = () => {
 			<SubTitle>
 				Venue: Exhibition Hall 4, Brisbane Convention & Exhibition Centre, Australia
 			</SubTitle>
+			<SubTitle>Address: Merivale St, South Brisbane QLD 4101</SubTitle>
 			<SubTitle>Date: 18-19 May, 2024</SubTitle>
 			<ThemeButton href="https://web3convention.com/venue">VIEW MORE</ThemeButton>
 		</HomeParallaxContainer>
