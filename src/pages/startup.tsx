@@ -9,7 +9,7 @@ import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 import PageHead from '@/layouts/PageHead';
 import { devices } from '@/styles/variables';
-import Prize from "@/components/Pages/Start-Up/Prize";
+import Prize from "src/components/Pages/Startup/Prize";
 
 const Cover = styled.div`
 	background-image: url('/images/background/startup-background.webp');
