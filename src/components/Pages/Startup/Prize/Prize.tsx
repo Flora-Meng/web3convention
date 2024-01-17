@@ -57,7 +57,13 @@ const Prize = () => {
 				<Title>Prize</Title>
 				<StyledGridContainer>
 					{prize.map(prizeInfo => (
-						<ColorfulCard cardInfo={prizeInfo} format="li" />
+						<ColorfulCard
+							key={prizeInfo.title}
+							title={prizeInfo.title}
+							description={prizeInfo.description}
+							backgroundColor={prizeInfo.color}
+							showBulletPoint
+						/>
 					))}
 				</StyledGridContainer>
 			</ContentWrapper>

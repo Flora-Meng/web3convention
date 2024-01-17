@@ -3,13 +3,11 @@ import styled from 'styled-components';
 import { color } from '@/styles/variables';
 
 interface CardCategory {
-	cardInfo: {
-		title: string;
-		subtitle?: string;
-		description: string[];
-		color: string;
-	};
-	format: string;
+	title: string;
+	subtitle?: string;
+	description: string[];
+	backgroundColor: string;
+	showBulletPoint: boolean;
 }
 const StyledGridItem = styled.div`
 	background-color: #131313;
@@ -18,7 +16,7 @@ const StyledGridItem = styled.div`
 	position: relative;
 `;
 const SubTitle = styled.p`
-	background-color: ${(props: { color: string }) => props.color};
+	background-color: ${(props: { backgroundColor: string }) => props.backgroundColor};
 	color: ${color.blackcolor};
 	font-size: 24px;
 	font-weight: bold;
@@ -49,15 +47,21 @@ const Paragraph = styled.p`
 	line-height: 1.5;
 	margin-bottom: 16px;
 `;
-const ColorfulCard: React.FC<CardCategory> = ({ cardInfo, format }) => {
+const ColorfulCard: React.FC<CardCategory> = ({
+	title,
+	subtitle,
+	description,
+	backgroundColor,
+	showBulletPoint
+}) => {
 	return (
-		<StyledGridItem key={cardInfo.title}>
-			<SubTitle color={cardInfo.color}>{cardInfo.title}</SubTitle>
-			{cardInfo.subtitle && <CardTitle>{cardInfo.subtitle}</CardTitle>}
+		<StyledGridItem>
+			<SubTitle backgroundColor={backgroundColor}>{title}</SubTitle>
+			{subtitle && <CardTitle>{subtitle}</CardTitle>}
 			<DescriptionList>
-				{cardInfo.description.map(item => {
+				{description.map(item => {
 					const DescriptionItem = (
-						format === 'li' ? LiParagraph : Paragraph
+						showBulletPoint ? LiParagraph : Paragraph
 					) as React.ElementType;
 					return <DescriptionItem key={item}>{item}</DescriptionItem>;
 				})}
