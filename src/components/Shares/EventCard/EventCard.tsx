@@ -9,7 +9,6 @@ import utc from 'dayjs/plugin/utc';
 import { isEmpty } from 'lodash';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import styled from 'styled-components';
 
 import { color } from '@/styles/variables';
@@ -154,49 +153,12 @@ dayjs.extend(timezone);
 const format = 'dddd, MMM D, hA [GMT]Z';
 
 const EventCard: React.FC<EventCardProps> = ({ eventInfo }) => {
-	const {
-		_id,
-		bannersUploader,
-		address,
-		exhibitors,
-		period,
-		title,
-		description,
-		agenda,
-		descriptionImage,
-		maxRSVPs,
-		latitude,
-		longitude,
-		ticket
-	} = eventInfo;
+	const { _id, bannersUploader, address, exhibitors, period, title, description } = eventInfo;
 	const company = exhibitors?.[0] || {};
-	const ticketInfo = ticket?.[0] || {};
-	const router = useRouter();
-	const imageUrl = eventInfo.descriptionImage?.url || '';
-	const navigateToEventDescription = () => {
-		router.push({
-			pathname: '/event-detail',
-			query: {
-				title,
-				price: ticketInfo.price,
-				exhibitorId: company._id,
-				exhibitorName: company.name,
-				exhibitorLogo: company.logo?.url,
-				description: eventInfo.description,
-				agenda: eventInfo.agenda,
-				descriptionImage: imageUrl,
-				maxRSVPs: eventInfo.maxRSVPs,
-				latitude: eventInfo.latitude,
-				longitude: eventInfo.longitude,
-				periodStart: eventInfo.period?.start,
-				address: eventInfo.address
-			}
-		});
-	};
 	return (
 		<StyledCard>
 			{bannersUploader?.url && (
-				<CardMediaLink href="#" onClick={navigateToEventDescription}>
+				<CardMediaLink href={`/meetups/${_id}`}>
 					<Image
 						src={bannersUploader?.url}
 						alt={title}
@@ -207,7 +169,7 @@ const EventCard: React.FC<EventCardProps> = ({ eventInfo }) => {
 				</CardMediaLink>
 			)}
 			<StyledCardContent>
-				<Link href="#" onClick={navigateToEventDescription}>
+				<Link href={`/meetups/${_id}`}>
 					<StyledTypography>{title}</StyledTypography>
 				</Link>
 				{period?.start && (

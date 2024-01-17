@@ -52,12 +52,6 @@
 				"url": "https://coinstash.com.au/"
 			},
 			{
-				"_id": "7",
-				"logoSrc": "/images/sponsors/afi.png",
-				"logoSrcHighlight": "/images/sponsors/afi.png",
-				"url": "https://www.ausfintech.com/"
-			},
-			{
 				"_id": "8",
 				"logoSrc": "/images/sponsors/sbl-labs.svg",
 				"logoSrcHighlight": "/images/sponsors/sbl-labs.svg",
@@ -188,12 +182,6 @@
 				"logoSrc": "/images/sponsors/gold.png",
 				"logoSrcHighlight": "/images/sponsors/gold.png",
 				"url": "https://www.meetup.com/gold-coast-blockchain/"
-			},
-			{
-				"_id": "25",
-				"logoSrc": "/images/sponsors/bitcoin.png",
-				"logoSrcHighlight": "/images/sponsors/bitcoin.png",
-				"url": "https://t.me/bitcoinminingaus"
 			},
 			{
 				"_id": "26",

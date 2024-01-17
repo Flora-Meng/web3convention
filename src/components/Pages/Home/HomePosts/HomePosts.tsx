@@ -79,7 +79,21 @@ const HomePosts: React.FC = () => {
 			<Backdrop>Side</Backdrop>
 			<Grid container spacing={1}>
 				{postList.map(post => {
-					const postLink = post._id === '4' ? '/hackathon' : '/comingSoon';
+					let postLink;
+					switch (post._id) {
+						case '1':
+							postLink = '/startup';
+							break;
+						case '4':
+							postLink = '/hackathon';
+							break;
+						case '5':
+							postLink = 'https://www.youtube.com/watch?v=sdXh3m9bTso';
+							break;
+						default:
+							postLink = '/comingSoon';
+							break;
+					}
 					return (
 						<Grid
 							item

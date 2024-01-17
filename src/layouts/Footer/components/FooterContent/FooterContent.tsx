@@ -76,24 +76,28 @@ const QRcodeGridItem = styled(Grid)`
 // Configuration
 const eventsConfig = [
 	{
-		label: 'VIP Party',
-		path: '/convention'
-	},
-	{
 		label: 'Startup Competition',
-		path: 'https://w3con.eventsair.com/web3convention/startupcomp'
+		path: '/startup'
 	},
 	{
 		label: 'Capital Connect',
 		path: '/convention'
 	},
 	{
-		label: 'Cyber Party',
+		label: 'VIP / Cyber Party',
 		path: '/convention'
 	},
 	{
 		label: 'Side Events',
 		path: 'convention'
+	},
+	{
+		label: '2023 Web3 Career Forum',
+		path: 'https://www.youtube.com/watch?v=sdXh3m9bTso'
+	},
+	{
+		label: '2023 Web3 Hackathon',
+		path: '/hackathon'
 	}
 ];
 const partnersConfig = [
@@ -138,18 +142,6 @@ const linkConfigList = [
 ];
 const qrCodes = [
 	{
-		_id: 'eventbrite',
-		src: '/images/qr-code/eventbrite.webp',
-		alt: 'Eventbrite',
-		link: 'https://web3convention.eventbrite.com/'
-	},
-	{
-		_id: 'instagram',
-		src: '/images/qr-code/instagram.webp',
-		alt: 'Instagram',
-		link: 'https://www.instagram.com/web3convention/'
-	},
-	{
 		_id: 'linkedin',
 		src: '/images/qr-code/linkedin.webp',
 		alt: 'Linkedin',
@@ -162,16 +154,28 @@ const qrCodes = [
 		link: 'https://twitter.com/Web3Convention'
 	},
 	{
+		_id: 'telegram',
+		src: '/images/qr-code/telegram.webp',
+		alt: 'Telegram',
+		link: 'https://t.me/+_vbKyXR2wJlmYmJl'
+	},
+	{
 		_id: 'youtube',
 		src: '/images/qr-code/youtube.webp',
 		alt: 'Youtube',
 		link: 'https://www.youtube.com/channel/UCTJEa6rxybFHmmlx6YAf1iA'
 	},
 	{
-		_id: 'facebook',
-		src: '/images/qr-code/facebook.webp',
-		alt: 'Facebook',
-		link: 'https://www.facebook.com/profile.php?id=100088603939068&mibextid=LQQJ4d'
+		_id: 'instagram',
+		src: '/images/qr-code/instagram.webp',
+		alt: 'Instagram',
+		link: 'https://www.instagram.com/web3convention/'
+	},
+	{
+		_id: 'eventbrite',
+		src: '/images/qr-code/eventbrite.webp',
+		alt: 'Eventbrite',
+		link: 'https://web3convention.eventbrite.com/'
 	}
 ];
 

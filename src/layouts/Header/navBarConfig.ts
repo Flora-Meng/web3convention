@@ -50,7 +50,7 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 		},
 		{
 			title: 'Startup Competition',
-			path: 'https://w3con.eventsair.com/web3convention/startupcomp'
+			path: '/startup'
 		},
 		{
 			title: 'Side Events',
@@ -62,7 +62,7 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 		// 	path: '/web3-convention-2024'
 		// },
 		{
-			title: 'Web3 Hackathon 2023',
+			title: '2023 Web3 Hackathon',
 			path: '/hackathon'
 		}
 	],
@@ -78,6 +78,10 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 	],
 	[ENavItem.ATTEND]: [
 		{
+			title: 'Why Attend',
+			path: '/why-attend'
+		},
+		{
 			title: 'Ticket Types',
 			path: '/get-tickets'
 		},
@@ -88,16 +92,16 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 	],
 	[ENavItem.PARTNER]: [
 		{
-			title: 'Partner with Us',
-			path: '/partners'
-		},
-		{
-			title: 'Why Partner?',
+			title: 'Why Partner',
 			path: '/why-sponsor'
 		},
 		{
 			title: '2024 Partners',
 			path: '/previous-partner'
+		},
+		{
+			title: 'Partner with Us',
+			path: '/partners'
 		}
 	]
 };

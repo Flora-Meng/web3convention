@@ -89,19 +89,21 @@ const AttendButton = styled(ShareButton)`
 dayjs.extend(utc);
 dayjs.extend(timezone);
 const format = 'dddd, MMM D, hA [GMT]Z';
+interface eventDetailProps {
+	eventDetail: IMeetup;
+}
 
-const Interaction = () => {
-	const { query } = useRouter();
-	const periodStart: string | undefined = Array.isArray(query.periodStart)
-		? query.periodStart[0]
-		: query.periodStart;
-	const { title, price } = query;
-
+const Interaction: React.FC<eventDetailProps> = ({ eventDetail }) => {
+	const { title, period, ticket } = eventDetail || {};
+	const price = ticket[1]?.price;
 	return (
 		<InteractionSection>
 			<InteractionWrapper>
 				<InteractionInfo>
-					<DateInfo>{dayjs(periodStart).utc().local().format(format)}</DateInfo>
+					{period?.start && (
+						<DateInfo>{dayjs(period.start).utc().local().format(format)}</DateInfo>
+					)}
+
 					<EventTitle>{title}</EventTitle>
 				</InteractionInfo>
 				<InteractionAction>

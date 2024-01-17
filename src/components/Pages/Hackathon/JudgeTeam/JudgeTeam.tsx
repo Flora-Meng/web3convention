@@ -16,7 +16,7 @@ const { blackColor, whiteColor, primaryColor } = color;
 
 const speakerIcon = '/images/icons/speaker-icon.svg';
 const speakerArrow = '/images/icons/speaker-arrow.svg';
-const linkedlnIcon = '/images/icons/linkedln.svg';
+const linkedinIcon = '/images/icons/linkedin.svg';
 const facebookIcon = '/images/icons/Facebook_f_logo.svg';
 const twitterIcon = '/images/icons/twitter.svg';
 
@@ -47,7 +47,9 @@ const HomeTeamContainer = styled(Grid)`
 const SpeakerArrowIconWrapper = styled.div`
 	display: none;
 	height: 20px;
-	img {
+	position: absolute;
+	right: 0;
+	> div {
 		height: 100%;
 		width: auto;
 	}
@@ -203,6 +205,11 @@ const SectionTitle = styled.h2`
 		span {
 			display: inline;
 		}
+		span:last-child {
+			display: inline-block;
+			white-space: nowrap;
+		}
+
 		margin-bottom: 97px;
 	}
 `;
@@ -219,23 +226,6 @@ const Container = styled.div`
 	margin: 0 auto;
 	max-width: 1440px;
 	padding: 0 30px 0 50px;
-`;
-
-const Backdrop = styled.div`
-	${backdrop};
-	color: ${whiteColor};
-	&::after {
-		background-image: none;
-	}
-	@media ${devices.miniMobile} {
-		font-size: 70px;
-		transform: translateX(-35px);
-	}
-	@media ${devices.laptop} {
-		left: 176px;
-		font-size: 230px;
-		display: inline-block;
-	}
 `;
 
 const LogoWrapper = styled.div`
@@ -311,6 +301,22 @@ const JobTitleContainer = styled.div`
 	font-size: 14px;
 	margin-right: 10px;
 `;
+const Backdrop = styled.div`
+	${backdrop};
+	color: ${whiteColor};
+	&::after {
+		background-image: none;
+	}
+	@media ${devices.miniMobile} {
+		font-size: 70px;
+		transform: translateX(-35px);
+	}
+	@media ${devices.laptop} {
+		left: 176px;
+		font-size: 230px;
+		display: inline-block;
+	}
+`;
 
 const IconSection = styled.div`
 	align-items: center;
@@ -361,9 +367,8 @@ const JudgeTeam: React.FC<{ subtitle: string; teamMemberList: TeamMemberProps[] 
 			<Container>
 				<SectionSubtitle>{subtitle}</SectionSubtitle>
 				<SectionTitle>
-					<span>Judges, </span>
 					<span>Speakers & </span>
-					<span>Mentors</span>
+					<span>Advisors, Judges, Mentors</span>
 				</SectionTitle>
 				<Backdrop>Guests</Backdrop>
 				<HomeTeamContainer container spacing={2}>
@@ -424,8 +429,8 @@ const JudgeTeam: React.FC<{ subtitle: string; teamMemberList: TeamMemberProps[] 
 														socialMediaIcon = (
 															<IconContainer>
 																<Image
-																	src={linkedlnIcon}
-																	alt="linkedln"
+																	src={linkedinIcon}
+																	alt="linkedin"
 																	loader={imageLoader}
 																	fill
 																	unoptimized
@@ -527,22 +532,14 @@ const JudgeTeam: React.FC<{ subtitle: string; teamMemberList: TeamMemberProps[] 
 										<JobTitleContainer>{teamMember.jobTitle}</JobTitleContainer>
 									</InfoSection>
 									<IconSection>
-										{teamMember.isSpeaker ? (
-											<SpeakerIconWrapper>
-												<img
-													className="speakerIcon"
-													src={speakerIcon}
-													alt="Speaker icon"
-												/>
-											</SpeakerIconWrapper>
-										) : (
-											<SpeakerIconPlaceholder />
-										)}
 										<SpeakerArrowIconWrapper>
-											<img
+											<Image
 												className="speakerArrow"
 												src={speakerArrow}
 												alt="Speaker more info"
+												loader={imageLoader}
+												width={20}
+												height={20}
 											/>
 										</SpeakerArrowIconWrapper>
 									</IconSection>

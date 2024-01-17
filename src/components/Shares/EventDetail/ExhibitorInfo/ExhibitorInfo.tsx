@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import styled from 'styled-components';
 
 import ExhibitorAvatar from '@/components/Shares/ExhibitorAvatar';
@@ -37,31 +36,20 @@ const Name = styled(Link)`
 		color: ${color.primaryColor};
 	}
 `;
+interface ExhibitorInfoProps {
+	exhibitor: Exhibitor;
+}
 
-const ExhibitorInfo = () => {
-	const router = useRouter();
-	const { exhibitorId, exhibitorName, exhibitorLogo } = router.query;
+const ExhibitorInfo: React.FC<ExhibitorInfoProps> = ({ exhibitor }) => {
+	const { _id, name, logo } = exhibitor || {};
 	return (
 		<Wrapper>
-			{exhibitorLogo && (
-				<ExhibitorAvatar
-					logoUrl={exhibitorLogo as string}
-					name={exhibitorName as string}
-					logoSize={46}
-				/>
-			)}
+			{logo?.url && <ExhibitorAvatar logoUrl={logo.url} name={name} logoSize={46} />}
 
 			<div>
 				<Header>Hosted By</Header>
 				<NameBox>
-					<Name
-						href="#"
-						onClick={() => {
-							router.push(`/exhibitor/${exhibitorId}`);
-						}}
-					>
-						{exhibitorName}
-					</Name>
+					<Name href={`/exhibitor/${_id}`}>{name}</Name>
 					<ExhibitorIcon height="24px" />
 				</NameBox>
 			</div>

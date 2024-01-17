@@ -52,4 +52,13 @@ export const fetchExhibitor = (exhibitorID: string) => {
 		url: `/api/companies/${exhibitorID}`
 	});
 };
+
+export const fetchEventDetails = (eventID: string) => {
+	return request({
+		baseURL,
+		method: 'GET',
+		url: `/api/meetups/${eventID}`
+	});
+};
+
 export default fetchMeetups;
