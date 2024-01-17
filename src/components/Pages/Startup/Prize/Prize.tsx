@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-import Prizedata from './Prize.json';
+import ColorfulCard from '@/components/Shares/ColorfulCard';
+import prize from '@/components/Shares/ColorfulCard/Prize.json';
 import { animation, animationFillMode, sectionSubtitle } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
 
@@ -80,19 +81,7 @@ const Prize = () => {
 			<ContentWrapper>
 				<SectionSubtitle>AI + Web3 Convention 2024</SectionSubtitle>
 				<Title>Prize</Title>
-				<StyledGridContainer>
-					{Prizedata.map(prize => (
-						<StyledGridItem key={prize.title}>
-							<SubTitle>{prize.title}</SubTitle>
-							<DescriptionList>
-								{prize.description.map((item, index) => (
-									// eslint-disable-next-line react/no-array-index-key
-									<DescriptionItem key={index}>{item}</DescriptionItem>
-								))}
-							</DescriptionList>
-						</StyledGridItem>
-					))}
-				</StyledGridContainer>
+				<ColorfulCard ColorfulCardInfo={prize} />
 			</ContentWrapper>
 		</Container>
 	);
