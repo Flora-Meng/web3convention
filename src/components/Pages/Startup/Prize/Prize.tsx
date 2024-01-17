@@ -18,8 +18,6 @@ const ContentWrapper = styled.div`
 	@media ${devices.tablet} {
 		padding: 0 40px;
 	}
-	@media ${devices.largeLaptop} {
-	}
 `;
 const StyledGridContainer = styled.div`
 	display: grid;
@@ -61,7 +59,7 @@ const Prize = () => {
 							key={prizeInfo.title}
 							title={prizeInfo.title}
 							description={prizeInfo.description}
-							backgroundColor={prizeInfo.color}
+							backgroundColor={"#ecf652"}
 							showBulletPoint
 						/>
 					))}
