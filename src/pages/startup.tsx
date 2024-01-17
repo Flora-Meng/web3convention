@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Overview from '@/components/Pages/Startup/Overview';
 import PageCoverTitle from '@/components/Shares/PageCoverTitle';
 import coverText from '@/components/Shares/PageCoverTitle/startupCoverText.json';
 import ThemeButton from '@/components/Shares/ThemeButton';
@@ -69,7 +70,7 @@ const StartupPage = () => {
 								width="fit-content"
 								href="https://w3con.eventsair.com/web3convention/startupcomp"
 							>
-								Apply for Start-up Competition
+								Apply to Start-up Competition
 							</ThemeButton>
 							<ThemeButton
 								width="fit-content"
@@ -81,6 +82,7 @@ const StartupPage = () => {
 					</PageCoverTitle>
 				</TitleContainer>
 			</Cover>
+			<Overview />
 			<Prize />
 			<Footer />
 		</>

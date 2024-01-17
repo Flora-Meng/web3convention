@@ -8,6 +8,7 @@ const { whiteColor } = color;
 
 interface PageBannerProps {
 	bannerInfo: {
+		additionalSubtitle?: string;
 		title: string;
 		subtitle: string;
 		imageSrc: string;
@@ -120,6 +121,9 @@ const PageBanner: React.FC<PageBannerProps> = props => {
 			<RightGrid imageSrc="/images/demo/main-home-banner-bg.jpg">
 				<InfoContainer className="flex flex-col justify-center">
 					<Subtitle>{bannerInfo.subtitle}</Subtitle>
+					{bannerInfo.additionalSubtitle && (
+						<Subtitle>{bannerInfo.additionalSubtitle}</Subtitle>
+					)}
 					<Title>{bannerInfo.title}</Title>
 					<Description>{bannerInfo.description}</Description>
 

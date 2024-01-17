@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import EventDetailContent from '@/components/Pages/EventDetail/EventDetailContent';
+// import EventDetailContent from '@/components/Pages/EventDetail/EventDetailContent';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 import PageHead from '@/layouts/PageHead';
@@ -18,7 +18,7 @@ const EventDetailPage = () => {
 			<Cover>
 				<Header />
 			</Cover>
-			<EventDetailContent />
+			{/* <EventDetailContent /> */}
 			<Footer />
 		</>
 	);
