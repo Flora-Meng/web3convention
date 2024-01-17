@@ -29,7 +29,12 @@ type Banner = {
 };
 
 type DescriptionImage = { url: string };
-type Ticket = { title: string; price: number; availableQuantity: number; description: string };
+interface Ticket {
+	title: string;
+	price: number;
+	availableQuantity: number;
+	description: string;
+}
 
 interface IMeetup {
 	_id: string;
