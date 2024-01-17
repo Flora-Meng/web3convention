@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 
-import { color, devices } from '@/styles/variables';
+import { color } from '@/styles/variables';
 
 interface CardCategory {
 	cardInfo: {
 		title: string;
+		subtitle?: string;
 		description: string[];
 		color: string;
-		format: string;
 	};
+	format: string;
 }
 const StyledGridItem = styled.div`
 	background-color: #131313;
@@ -26,6 +27,12 @@ const SubTitle = styled.p`
 	max-width: 368px;
 	padding: 17px 24px;
 `;
+const CardTitle = styled.p`
+	color: ${color.whiteColor};
+	font-size: 20px;
+	font-weight: bold;
+	margin: 0 24px 16px;
+`;
 const DescriptionList = styled.ul`
 	padding: 0 24px;
 `;
@@ -42,24 +49,16 @@ const Paragraph = styled.p`
 	line-height: 1.5;
 	margin-bottom: 16px;
 `;
-const getStyledComponentForFormat = (format: string) => {
-	switch (format) {
-		case 'li':
-			return LiParagraph;
-		case 'p':
-			return Paragraph;
-		default:
-			return Paragraph;
-	}
-};
-const ColorfulCard: React.FC<CardCategory> = ({ cardInfo }) => {
+const ColorfulCard: React.FC<CardCategory> = ({ cardInfo, format }) => {
 	return (
 		<StyledGridItem key={cardInfo.title}>
 			<SubTitle color={cardInfo.color}>{cardInfo.title}</SubTitle>
+			{cardInfo.subtitle && <CardTitle>{cardInfo.subtitle}</CardTitle>}
 			<DescriptionList>
 				{cardInfo.description.map(item => {
-					const descriptionItem = getStyledComponentForFormat(cardInfo.format);
-					const DescriptionItem = descriptionItem as React.ElementType;
+					const DescriptionItem = (
+						format === 'li' ? LiParagraph : Paragraph
+					) as React.ElementType;
 					return <DescriptionItem key={item}>{item}</DescriptionItem>;
 				})}
 			</DescriptionList>

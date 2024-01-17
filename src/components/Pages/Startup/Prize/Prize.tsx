@@ -57,7 +57,7 @@ const Prize = () => {
 				<Title>Prize</Title>
 				<StyledGridContainer>
 					{prize.map(prizeInfo => (
-						<ColorfulCard cardInfo={prizeInfo} />
+						<ColorfulCard cardInfo={prizeInfo} format="li" />
 					))}
 				</StyledGridContainer>
 			</ContentWrapper>

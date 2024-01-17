@@ -7,8 +7,7 @@
             "Priority access to prominent blockchain incubators or accelerators.",
             "Opportunities for direct partnerships or integration with established Web3 platforms."
         ],
-        "color": "#ecf652",
-        "format": "li"
+        "color": "#ecf652"
     },
     {
         "title": "Runner-up",
@@ -17,39 +16,34 @@
             "Token-based incentives or staking opportunities.",
             "Mentorship sessions with leading figures in the blockchain industry."
         ],
-        "color": "#ecf652",
-        "format": "li"
+        "color": "#ecf652"
     },
     {
         "title": "Consolation Prize",
         "description": [
             "A modest cash prize and complimentary industry-related training or courses."
         ],
-        "color": "#ecf652",
-        "format": "li"
+        "color": "#ecf652"
     },
     {
         "title": "Promising AI Award",
         "description": [
             "Cash reward."
         ],
-        "color": "#ecf652",
-        "format": "li"
+        "color": "#ecf652"
     },
     {
         "title": "Special NFT Prize",
         "description": [
             "The winning team's concept or prototype will be tokenized as an NFT and auctioned, with proceeds going to the team."
         ],
-        "color": "#ecf652",
-        "format": "li"
+        "color": "#ecf652"
     },
     {
         "title": "People's Choice Award",
         "description": [
             "Direct investment opportunity from the community funds."
         ],
-        "color": "#ecf652",
-        "format": "li"
+        "color": "#ecf652"
     }
 ]
