@@ -21,6 +21,21 @@ const ContentWrapper = styled.div`
 	@media ${devices.largeLaptop} {
 	}
 `;
+const StyledGridContainer = styled.div`
+	display: grid;
+	gap: 50px;
+	position: relative;
+	@media ${devices.tablet} {
+		column-gap: 40px;
+		row-gap: 60px;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media ${devices.largeLaptop} {
+		column-gap: 60px;
+		row-gap: 66px;
+		grid-template-columns: repeat(3, 360px);
+	}
+`;
 const Title = styled.h2`
 	color: ${color.whiteColor};
 	font-size: 42px;
@@ -40,7 +55,11 @@ const Prize = () => {
 			<ContentWrapper>
 				<SectionSubtitle>AI + Web3 Convention 2024</SectionSubtitle>
 				<Title>Prize</Title>
-				<ColorfulCard ColorfulCardInfo={prize} />
+				<StyledGridContainer>
+					{prize.map(prizeInfo => (
+						<ColorfulCard cardInfo={prizeInfo} />
+					))}
+				</StyledGridContainer>
 			</ContentWrapper>
 		</Container>
 	);
