@@ -1,43 +1,43 @@
 [
-  {
-    "title": "First Prize",
-    "description": [
-      "Cash reward in cryptocurrency.",
-      "Potential token investments or liquidity provisions.",
-      "Priority access to prominent blockchain incubators or accelerators.",
-      "Opportunities for direct partnerships or integration with established Web3 platforms."
-    ]
-  },
-  {
-    "title": "Runner-up",
-    "description": [
-      "Cash reward.",
-      "Token-based incentives or staking opportunities.",
-      "Mentorship sessions with leading figures in the blockchain industry."
-    ]
-  },
-  {
-    "title": "Consolation Prize",
-    "description": [
-      "A modest cash prize and complimentary industry-related training or courses."
-    ]
-  },
-  {
-    "title": "Promising AI Award",
-    "description": [
-      "Cash reward."
-    ]
-  },
-  {
-    "title": "Special NFT Prize",
-    "description": [
-      "The winning team's concept or prototype will be tokenized as an NFT and auctioned, with proceeds going to the team."
-    ]
-  },
-  {
-    "title": "People's Choice Award",
-    "description": [
-      "Direct investment opportunity from the community funds."
-    ]
-  }
+    {
+        "title": "First Prize",
+        "description": [
+            "Cash reward in cryptocurrency.",
+            "Potential token investments or liquidity provisions.",
+            "Priority access to prominent blockchain incubators or accelerators.",
+            "Opportunities for direct partnerships or integration with established Web3 platforms."
+        ]
+    },
+    {
+        "title": "Runner-up",
+        "description": [
+            "Cash reward.",
+            "Token-based incentives or staking opportunities.",
+            "Mentorship sessions with leading figures in the blockchain industry."
+        ]
+    },
+    {
+        "title": "Consolation Prize",
+        "description": [
+            "A modest cash prize and complimentary industry-related training or courses."
+        ]
+    },
+    {
+        "title": "Promising AI Award",
+        "description": [
+            "Cash reward."
+        ]
+    },
+    {
+        "title": "Special NFT Prize",
+        "description": [
+            "The winning team's concept or prototype will be tokenized as an NFT and auctioned, with proceeds going to the team."
+        ]
+    },
+    {
+        "title": "People's Choice Award",
+        "description": [
+            "Direct investment opportunity from the community funds."
+        ]
+    }
 ]
