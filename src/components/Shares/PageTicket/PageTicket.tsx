@@ -189,9 +189,9 @@ const ticketConfig = [
 	{
 		_id: '4',
 		title: 'Student Pass',
-		price: '$98+GST 40%OFF',
+		price: '$63+GST 40%OFF',
 		priceIncGST: false,
-		earlyBirdPrice: 58,
+		earlyBirdPrice: 38,
 		earlyBirdPriceIncGST: false,
 		thumbnailSrc: '/images/tickets/vip.png',
 		earlyBirdEndDate: '2024-03-21T14:00:00.000Z',
