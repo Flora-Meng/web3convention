@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import Timeline from '../Timeline';
+
 import { sectionSubtitle, sectionTitle } from '@/styles/mixin';
 import { color, devices, sizes } from '@/styles/variables';
 
@@ -85,6 +87,7 @@ const Overview = () => {
 					buzzwords—they&apos;re shaping the next epoch of technological innovation. By
 					sponsoring, VCs play a pivotal role in catalyzing this wave. &quot;
 				</Information>
+				<Timeline />
 			</ContentWrapper>
 		</OverviewContainer>
 	);
