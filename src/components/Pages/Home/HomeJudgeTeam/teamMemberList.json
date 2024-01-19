@@ -109,32 +109,5 @@
     "avatarSrc": "/images/speakers/huizi.png",
     "companySrc": "/images/logo/bitcoinsv.png",
     "isSpeaker": true
-  },
-  {
-    "_id": "32",
-    "name": "Ting Wang",
-    "description": "At the forefront of Coinstash, Ting serves as the CEO, guiding the company's strategic direction and propelling its growth. With a diverse background spanning traditional financial services and the digital asset sector, Ting is a qualified lawyer in the Supreme Court of NSW and has held pivotal roles at KPMG and as a senior commercial analyst at a Fortune 500 company. Since 2015, Ting has been actively engaged in digital asset investments, bringing extensive experience to the table. His deep involvement in the ever-evolving digital landscape, combined with legal expertise and financial acumen, has solidified Coinstash as the foremost trusted cryptocurrency bank under Ting's dynamic and visionary leadership.",
-    "jobTitle": "CEO of Coinstash",
-    "avatarSrc": "/images/speakers/TingWang.png",
-    "companySrc": "/images/logo/CoinStash.png",
-    "isSpeaker": true
-  },
-  {
-    "_id": "33",
-    "name": "Yang Wang",
-    "description": "I'm Yang Wang, a Senior Solution Architect at Databricks, the Data and AI company. With over 15 years in software engineering, machine learning, big data, and Gen AI, I've navigated through diverse sectors like online advertising, telecom, banking, retail, and finance. As a certified professional, my journey has been more than just about leveraging Data & AI technologies; it's been about enabling transformations. My past experiences with industries like Cloudera, Hortonworks, and Tencent have enriched my perspective, allowing me to tackle complex business challenges with modern data and AI solutions.",
-    "jobTitle": "Senior Solution Architect of Databricks",
-    "avatarSrc": "/images/speakers/YangWang.png",
-    "companySrc": "/images/logo/Databricks.png",
-    "isSpeaker": true
-  },
-  {
-    "_id": "34",
-    "name": "Jason Tan",
-    "description": "Jason Tan is the Founder of Engage AI - a Second Brain to technical SME owners in the B2B industry like Anne Hathaway is to Meryl Streep in the iconic Devil Wears Prada movie. With its impeccable long-term memory and timely information, it acts like an ever-reliable PA. With Engage AI's aid in saying the right things at the right place to the right people, technical SME owners can confidently build relationships and sales pipelines. Taking the learnings from implementing Engage AI, he also assists and shares the learnt lessons with enterprises to embrace and incorporate Generative AI and LLMs into their business. Jason has a reach of 50,000 audiences across multiple social media platforms and newsletters.",
-    "jobTitle": "CEO/Founder of Engage Ai",
-    "avatarSrc": "/images/speakers/JasonTan.jpg",
-    "companySrc": "/images/logo/EngageAI.png",
-    "isSpeaker": true
   }
 ]
