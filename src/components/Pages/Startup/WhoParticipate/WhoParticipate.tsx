@@ -62,6 +62,10 @@ const DescriptionContainer = styled.div`
 	flex-direction: column;
 `;
 
+const DescriptionWrapper = styled.div`
+	margin-bottom: 32px;
+`;
+
 const DescriptionTitle = styled.div`
 	color: ${primaryColor};
 	font-size: 20px;
@@ -71,7 +75,6 @@ const DescriptionTitle = styled.div`
 
 const Description = styled.div`
 	color: ${whiteColor};
-	margin-bottom: 32px;
 `;
 
 const StyledImage = styled(Image)`
@@ -96,10 +99,10 @@ const WhoParticipate = () => {
 				<InformationContainer>
 					<DescriptionContainer>
 						{whoParticipateData.map(item => (
-							<>
+							<DescriptionWrapper key={item.id}>
 								<DescriptionTitle>{item.title}</DescriptionTitle>
 								<Description>{item.description}</Description>
-							</>
+							</DescriptionWrapper>
 						))}
 					</DescriptionContainer>
 					<StyledImage

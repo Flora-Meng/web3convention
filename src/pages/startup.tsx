@@ -1,8 +1,8 @@
 import React from 'react';
-import Prize from 'src/components/Pages/Startup/Prize';
 import styled from 'styled-components';
 
 import Overview from '@/components/Pages/Startup/Overview';
+import Prize from '@/components/Pages/Startup/Prize';
 import WhoParticipate from '@/components/Pages/Startup/WhoParticipate';
 import PageCoverTitle from '@/components/Shares/PageCoverTitle';
 import coverText from '@/components/Shares/PageCoverTitle/startupCoverText.json';
