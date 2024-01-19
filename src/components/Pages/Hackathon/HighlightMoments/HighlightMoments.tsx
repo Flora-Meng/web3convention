@@ -59,15 +59,14 @@ const HighlightMoments: React.FC = () => {
 				<Title>Highlight Moments</Title>
 				<Backdrop>Highlights</Backdrop>
 				<ImageListContainer container spacing={1}>
-					{highlightMomentsList.map((item, idx) => {
-						const laptopWidth = [3, 3, 3, 3];
+					{highlightMomentsList.map(item => {
 						return (
 							<Grid
 								item
 								mobile={12}
 								tablet={6}
-								laptop={laptopWidth[idx % 4]}
-								largeLaptop={laptopWidth[idx % 4]}
+								laptop={3}
+								largeLaptop={3}
 								key={item._id}
 							>
 								<HighlightImage src={item.imageSrc} alt={item.label} />
