@@ -1,7 +1,9 @@
 import React from 'react';
+import Prize from 'src/components/Pages/Startup/Prize';
 import styled from 'styled-components';
 
 import Overview from '@/components/Pages/Startup/Overview';
+import WhoParticipate from '@/components/Pages/Startup/WhoParticipate';
 import PageCoverTitle from '@/components/Shares/PageCoverTitle';
 import coverText from '@/components/Shares/PageCoverTitle/startupCoverText.json';
 import ThemeButton from '@/components/Shares/ThemeButton';
@@ -9,7 +11,6 @@ import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 import PageHead from '@/layouts/PageHead';
 import { devices } from '@/styles/variables';
-import Prize from "src/components/Pages/Startup/Prize";
 
 const Cover = styled.div`
 	background-image: url('/images/background/startup-background.webp');
@@ -84,6 +85,7 @@ const StartupPage = () => {
 			</Cover>
 			<Overview />
 			<Prize />
+			<WhoParticipate />
 			<Footer />
 		</>
 	);
