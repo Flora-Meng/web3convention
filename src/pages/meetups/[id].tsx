@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import EventDescription from '@/components/Shares/EventDetail/EventDescription';
 import ExhibitorInfo from '@/components/Shares/EventDetail/ExhibitorInfo';
+import Interaction from '@/components/Shares/EventDetail/Interaction';
 import LocationCard from '@/components/Shares/EventDetail/LocationCard';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
@@ -83,6 +84,7 @@ const EventDetails = () => {
 					<LocationCard eventDetail={eventDetail} />
 				</DescriptionAndLocation>
 			</ContentWrapper>
+			<Interaction eventDetail={eventDetail} />
 			<Footer />
 		</Container>
 	);
