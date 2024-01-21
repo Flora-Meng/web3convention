@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Opportunity from '@/components/Pages/Startup/Opportunity';
 import Overview from '@/components/Pages/Startup/Overview';
 import Prize from '@/components/Pages/Startup/Prize';
+import Timeline from '@/components/Pages/Startup/Timeline';
 import WhoParticipate from '@/components/Pages/Startup/WhoParticipate';
 import PageCoverTitle from '@/components/Shares/PageCoverTitle';
 import coverText from '@/components/Shares/PageCoverTitle/startupCoverText.json';
@@ -85,7 +87,9 @@ const StartupPage = () => {
 			</Cover>
 			<Overview />
 			<Prize />
+			<Timeline />
 			<WhoParticipate />
+			<Opportunity />
 			<Footer />
 		</>
 	);
