@@ -2,7 +2,6 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import dayjs from 'dayjs';
 import timezone from 'dayjs/plugin/timezone';
 import utc from 'dayjs/plugin/utc';
-import { useRouter } from 'next/router';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -95,7 +94,7 @@ interface eventDetailProps {
 
 const Interaction: React.FC<eventDetailProps> = ({ eventDetail }) => {
 	const { title, period, ticket } = eventDetail || {};
-	const price = ticket[1]?.price;
+	const price = ticket?.[1]?.price;
 	return (
 		<InteractionSection>
 			<InteractionWrapper>
