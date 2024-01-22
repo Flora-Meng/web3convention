@@ -59,7 +59,7 @@ const Prize = () => {
 							key={prizeInfo.title}
 							title={prizeInfo.title}
 							description={prizeInfo.description}
-							backgroundColor={"#ecf652"}
+							backgroundColor="#ecf652"
 							showBulletPoint
 						/>
 					))}
