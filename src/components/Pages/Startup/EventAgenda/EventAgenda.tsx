@@ -1,7 +1,7 @@
 import Grid from '@mui/material/Grid';
 import styled from 'styled-components';
 
-import eventAgenda from './EventAgenda.json';
+import eventAgenda from './eventAgenda.json';
 import ColorfulCard from '@/components/Shares/ColorfulCard';
 import { sectionSubtitle, sectionTitle } from '@/styles/mixin';
 import { devices } from '@/styles/variables';
@@ -35,10 +35,11 @@ const Subtitle = styled.p`
 
 const CardWrapper = styled.div`
 	background-color: #131313;
-	height: 466px;
 	justify-content: center;
+	max-width: 368px;
+	min-height: 466px;
+	overflow: auto;
 	padding: 0 0 24px;
-	width: 368px;
 `;
 
 const EventAgenda = () => {
