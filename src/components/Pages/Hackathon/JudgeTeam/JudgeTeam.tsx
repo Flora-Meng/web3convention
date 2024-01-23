@@ -544,18 +544,6 @@ const JudgeTeam: React.FC<{ subtitle: string; teamMemberList: TeamMemberProps[] 
 												/>
 											</LogoWrapper>
 										)}
-										{teamMember.secondCompanySrc && (
-											<SecondLogoWrapper>
-												<Image
-													src={teamMember.secondCompanySrc}
-													alt={teamMember.name}
-													loader={imageLoader}
-													fill
-													objectFit="contain"
-													unoptimized
-												/>
-											</SecondLogoWrapper>
-										)}
 									</LogoSection>
 									<InfoSection>
 										<AvatarContainer>
