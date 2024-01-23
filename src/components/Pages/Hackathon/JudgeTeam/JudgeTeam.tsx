@@ -33,6 +33,7 @@ interface TeamMemberProps {
 	jobTitle?: string;
 	avatarSrc: string;
 	companySrc?: string;
+	secondCompanySrc?: string;
 	isSpeaker?: boolean;
 	socialMedia?: {
 		linkedIn?: string;
@@ -94,6 +95,13 @@ const ModalAvatarContainer = styled.div`
 	width: 136px;
 `;
 
+const LogoGroup = styled.div`
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+`;
+
 const LogoContainer = styled.div`
 	align-items: center;
 	background-color: ${whiteColor};
@@ -105,11 +113,10 @@ const LogoContainer = styled.div`
 	padding: 5px 15px;
 	position: relative;
 	width: 108px;
-	img.logo {
-		height: auto;
-		transform: none;
-		width: 100%;
-	}
+`;
+const SecondLogoContainer = styled(LogoContainer)`
+	position: absolute;
+	top: 40px;
 `;
 
 const InfoMainContainer = styled.div`
@@ -238,7 +245,7 @@ const LogoWrapper = styled.div`
 	margin-top: 8px;
 	overflow: hidden;
 	padding: 5px 15px;
-	position: absolute;
+	position: relative;
 	top: 0px;
 	width: 110px;
 	@media ${devices.miniMobile} {
@@ -247,15 +254,18 @@ const LogoWrapper = styled.div`
 	@media ${devices.tablet} {
 		right: -10px;
 	}
-	img.logo {
-		height: auto;
-		transform: none;
-		width: 100%;
-	}
+`;
+
+const SecondLogoWrapper = styled(LogoWrapper)`
+	position: absolute;
+	right: -10px;
+	top: 100%;
 `;
 
 const LogoSection = styled.div`
+	align-items: flex-end;
 	display: flex;
+	flex-direction: column;
 	height: 50px;
 	justify-content: end;
 	position: relative;
@@ -386,15 +396,32 @@ const JudgeTeam: React.FC<{ subtitle: string; teamMemberList: TeamMemberProps[] 
 									/>
 								</ModalAvatarContainer>
 							)}
-							{teamMemberInfo.companySrc && (
-								<LogoContainer>
-									<img
-										src={teamMemberInfo.companySrc}
-										alt={teamMemberInfo.name}
-										className="logo"
-									/>
-								</LogoContainer>
-							)}
+							<LogoGroup>
+								{teamMemberInfo.companySrc && (
+									<LogoContainer>
+										<Image
+											src={teamMemberInfo.companySrc}
+											alt={teamMemberInfo.name}
+											loader={imageLoader}
+											fill
+											objectFit="contain"
+											unoptimized
+										/>
+									</LogoContainer>
+								)}
+								{teamMemberInfo.secondCompanySrc && (
+									<SecondLogoContainer>
+										<Image
+											src={teamMemberInfo.secondCompanySrc}
+											alt={teamMemberInfo.name}
+											loader={imageLoader}
+											fill
+											objectFit="contain"
+											unoptimized
+										/>
+									</SecondLogoContainer>
+								)}
+							</LogoGroup>
 						</InfoHeader>
 						<InfoMainContainer>
 							<NameAndTitle>
@@ -509,12 +536,27 @@ const JudgeTeam: React.FC<{ subtitle: string; teamMemberList: TeamMemberProps[] 
 									<LogoSection>
 										{teamMember.companySrc && (
 											<LogoWrapper>
-												<img
-													className="logo"
+												<Image
 													src={teamMember.companySrc}
 													alt={teamMember.name}
+													loader={imageLoader}
+													fill
+													objectFit="contain"
+													unoptimized
 												/>
 											</LogoWrapper>
+										)}
+										{teamMember.secondCompanySrc && (
+											<SecondLogoWrapper>
+												<Image
+													src={teamMember.secondCompanySrc}
+													alt={teamMember.name}
+													loader={imageLoader}
+													fill
+													objectFit="contain"
+													unoptimized
+												/>
+											</SecondLogoWrapper>
 										)}
 									</LogoSection>
 									<InfoSection>
