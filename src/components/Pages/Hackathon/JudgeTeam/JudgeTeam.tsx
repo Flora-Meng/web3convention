@@ -102,6 +102,12 @@ const LogoGroup = styled.div`
 	position: relative;
 `;
 
+const Logo = styled.img`
+	height: auto;
+	position: relative;
+	width: 100%;
+`;
+
 const LogoContainer = styled.div`
 	align-items: center;
 	background-color: ${whiteColor};
@@ -399,14 +405,9 @@ const JudgeTeam: React.FC<{ subtitle: string; teamMemberList: TeamMemberProps[] 
 							<LogoGroup>
 								{teamMemberInfo.companySrc && (
 									<LogoContainer>
-										<Image
+										<Logo
 											src={teamMemberInfo.companySrc}
 											alt={teamMemberInfo.name}
-											loader={imageLoader}
-											width={80}
-											height={23}
-											objectFit="contain"
-											unoptimized
 										/>
 									</LogoContainer>
 								)}
@@ -537,15 +538,10 @@ const JudgeTeam: React.FC<{ subtitle: string; teamMemberList: TeamMemberProps[] 
 									<LogoSection>
 										{teamMember.companySrc && (
 											<LogoWrapper>
-												<Image
+												<Logo
 													src={teamMember.companySrc}
 													alt={teamMember.name}
-													loader={imageLoader}
-														width={80}
-														height={23}
-													objectFit="contain"
-													unoptimized
-													/>
+												/>
 											</LogoWrapper>
 										)}
 										{teamMember.secondCompanySrc && (
