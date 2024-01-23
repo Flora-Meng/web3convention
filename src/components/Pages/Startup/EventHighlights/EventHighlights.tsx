@@ -85,16 +85,16 @@ const TitleHelper = styled.div`
 const StyledImage = styled(Image)`
 	@media ${devices.mobile} {
 		width: 500px;
-		height: 160px;
+		height: 170px;
 	}
 	@media ${devices.laptop} {
 		width: 900px;
-		height: 280px;
+		height: 300px;
 	}
 
 	@media ${devices.largeLaptop} {
 		width: 1360px;
-		height: 420px;
+		height: 440px;
 	}
 `;
 
@@ -152,7 +152,7 @@ const EventHighlights = () => {
 						alt="event highlights"
 						unoptimized
 						width={300}
-						height={90}
+						height={100}
 					/>
 				</InformationContainer>
 			</ContentWrapper>
