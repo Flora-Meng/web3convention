@@ -365,75 +365,75 @@
 			},
 			{
 				"_id": "53",
-				"logoSrc": "./images/sponsors/wikibit.png",
-				"logoSrcHighlight": "/images/sponsors/wikibit.png",
-				"url": "https://www.wikibit.com/en/"
-			},
-			{
-				"_id": "54",
-				"logoSrc": "./images/sponsors/wjb.png",
-				"logoSrcHighlight": "/images/sponsors/wjb.png",
-				"url": ""
-			},
-			{
-				"_id": "55",
-				"logoSrc": "./images/sponsors/lvdong.png",
-				"logoSrcHighlight": "/images/sponsors/lvdong.png",
-				"url": "https://www.theblockbeats.info/en/"
-			},
-			{
-				"_id": "56",
-				"logoSrc": "./images/sponsors/wushuo.png",
-				"logoSrcHighlight": "/images/sponsors/wushuo.png",
-				"url": "https://www.wublock123.com/html/en/"
-			},
-			{
-				"_id": "57",
 				"logoSrc": "./images/sponsors/cointime.png",
 				"logoSrcHighlight": "/images/sponsors/cointime.png",
 				"url": "https://www.cointime.ai/"
 			},
 			{
+				"_id": "54",
+				"logoSrc": "./images/sponsors/jinse.png",
+				"logoSrcHighlight": "/images/sponsors/jinse.png",
+				"url": "https://www.jinse.com/"
+			},
+			{
+				"_id": "55",
+				"logoSrc": "./images/sponsors/wjb.png",
+				"logoSrcHighlight": "/images/sponsors/wjb.png",
+				"url": ""
+			},
+			{
+				"_id": "56",
+				"logoSrc": "./images/sponsors/lvdong.png",
+				"logoSrcHighlight": "/images/sponsors/lvdong.png",
+				"url": "https://www.theblockbeats.info/en/"
+			},
+			{
+				"_id": "57",
+				"logoSrc": "./images/sponsors/wushuo.png",
+				"logoSrcHighlight": "/images/sponsors/wushuo.png",
+				"url": "https://www.wublock123.com/html/en/"
+			},
+			{
 				"_id": "58",
+				"logoSrc": "./images/sponsors/wikibit.png",
+				"logoSrcHighlight": "/images/sponsors/wikibit.png",
+				"url": "https://www.wikibit.com/en/"
+			},
+			{
+				"_id": "59",
 				"logoSrc": "./images/sponsors/odaily.png",
 				"logoSrcHighlight": "/images/sponsors/odaily.png",
 				"url": "https://www.odaily.news/"
 			},
 			{
-				"_id": "59",
+				"_id": "60",
 				"logoSrc": "./images/sponsors/panews.png",
 				"logoSrcHighlight": "/images/sponsors/panews.png",
 				"url": "https://www.panewslab.com/"
 			},
 			{
-				"_id": "60",
+				"_id": "61",
 				"logoSrc": "./images/sponsors/foresight-news.png",
 				"logoSrcHighlight": "/images/sponsors/foresight-news.png",
 				"url": "https://en.foresightnews.pro/"
 			},
 			{
-				"_id": "61",
+				"_id": "62",
 				"logoSrc": "./images/sponsors/mars-bit.png",
 				"logoSrcHighlight": "/images/sponsors/mars-bit.png",
 				"url": "https://www.marsshare.cc/"
 			},
 			{
-				"_id": "62",
+				"_id": "63",
 				"logoSrc": "./images/sponsors/kaola.png",
 				"logoSrcHighlight": "/images/sponsors/kaola.png",
 				"url": ""
 			},
 			{
-				"_id": "63",
+				"_id": "64",
 				"logoSrc": "./images/sponsors/coin.png",
 				"logoSrcHighlight": "/images/sponsors/coin.png",
 				"url": "https://coinvoice.net/en"
-			},
-			{
-				"_id": "64",
-				"logoSrc": "./images/sponsors/41caijing.png",
-				"logoSrcHighlight": "/images/sponsors/41caijing.png",
-				"url": "http://www.41jishu.com/"
 			},
 			{
 				"_id": "65",
@@ -449,27 +449,33 @@
 			},
 			{
 				"_id": "67",
-				"logoSrc": "./images/sponsors/web3pub.png",
-				"logoSrcHighlight": "/images/sponsors/web3pub.png",
-				"url": "https://web3pub.xyz/"
-			},
-			{
-				"_id": "68",
 				"logoSrc": "./images/sponsors/chaincather.png",
 				"logoSrcHighlight": "/images/sponsors/chaincather.png",
 				"url": "https://www.chaincatcher.com/"
 			},
 			{
-				"_id": "69",
+				"_id": "68",
 				"logoSrc": "./images/sponsors/btm.png",
 				"logoSrcHighlight": "/images/sponsors/btm.png",
 				"url": "https://www.blockchaintimes.media/"
 			},
 			{
-				"_id": "70",
+				"_id": "69",
 				"logoSrc": "./images/sponsors/tcr.png",
 				"logoSrcHighlight": "/images/sponsors/tcr.png",
 				"url": "https://www.thecoinrepublic.com/"
+			},
+			{
+				"_id": "70",
+				"logoSrc": "./images/sponsors/coinpedia.png",
+				"logoSrcHighlight": "/images/sponsors/coinpedia.png",
+				"url": "https://events.coinpedia.org/"
+			},
+			{
+				"_id": "71",
+				"logoSrc": "./images/sponsors/gogetgpt.png",
+				"logoSrcHighlight": "/images/sponsors/gogetgpt.png",
+				"url": "https://gogetgpt.com/"
 			}
 		]
 	}
