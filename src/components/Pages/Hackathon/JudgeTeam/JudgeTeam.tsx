@@ -403,7 +403,8 @@ const JudgeTeam: React.FC<{ subtitle: string; teamMemberList: TeamMemberProps[] 
 											src={teamMemberInfo.companySrc}
 											alt={teamMemberInfo.name}
 											loader={imageLoader}
-											fill
+											width={80}
+											height={23}
 											objectFit="contain"
 											unoptimized
 										/>
@@ -540,10 +541,11 @@ const JudgeTeam: React.FC<{ subtitle: string; teamMemberList: TeamMemberProps[] 
 													src={teamMember.companySrc}
 													alt={teamMember.name}
 													loader={imageLoader}
-													fill
+														width={80}
+														height={23}
 													objectFit="contain"
 													unoptimized
-												/>
+													/>
 											</LogoWrapper>
 										)}
 										{teamMember.secondCompanySrc && (
