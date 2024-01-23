@@ -117,11 +117,35 @@ const MainContents = () => {
 		router.push('/side-events');
 	};
 
+	type DateRange = {
+		startDate: Date | null;
+		endDate: Date | null;
+	};
+	const [dateRange, setDateRange] = useState<DateRange>({ startDate: null, endDate: null });
+	const handleDateChange = (startDate: Date, endDate: Date) => {
+		setDateRange({ startDate, endDate });
+	};
+
 	const fetchEvents = async () => {
 		const response = await fetchPaginatedMeetups(currentPage, 12);
 		const meetupData: TSweb3MeetupPagination = response.data;
 		const { docs, totalPages, hasPrevPage, hasNextPage } = meetupData;
-		setFilterEvent(docs);
+		if (dateRange.startDate && dateRange.endDate) {
+			const filteredEvents = docs.filter(event => {
+				if (event.period && event.period.start && event.period.end) {
+					const eventStartDate = new Date(event.period.start);
+					const eventEndDate = new Date(event.period.end);
+					return (
+						(dateRange.startDate ? eventStartDate >= dateRange.startDate : true) &&
+						(dateRange.endDate ? eventEndDate <= dateRange.endDate : true)
+					);
+				}
+				return false;
+			});
+			setFilterEvent(filteredEvents);
+		} else {
+			setFilterEvent(docs);
+		}
 		setTotalCount(totalPages || 0);
 		setHasPreviousPage(hasPrevPage);
 		setHasFollowingPage(hasNextPage);
@@ -129,7 +153,7 @@ const MainContents = () => {
 
 	useEffect(() => {
 		fetchEvents();
-	}, [currentPage]);
+	}, [currentPage, dateRange]);
 
 	const handleLocationChange = (location: string) => {
 		setSelectedLocation(location);
@@ -159,7 +183,7 @@ const MainContents = () => {
 				<FilteredContainer>
 					<ShowMapSection />
 					<ChooseLocation onLocationChange={handleLocationChange} />
-					<DateFilter />
+					<DateFilter onDateChange={handleDateChange} />
 				</FilteredContainer>
 				<EventContainer>
 					{filterEvent.filter(
