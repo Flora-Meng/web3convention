@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import EventAgenda from '@/components/Pages/Startup/EventAgenda';
+import EventHighlights from '@/components/Pages/Startup/EventHighlights';
 import Opportunity from '@/components/Pages/Startup/Opportunity';
 import Overview from '@/components/Pages/Startup/Overview';
 import Prize from '@/components/Pages/Startup/Prize';
@@ -87,6 +88,7 @@ const StartupPage = () => {
 				</TitleContainer>
 			</Cover>
 			<Overview />
+			<EventHighlights />
 			<EventAgenda />
 			<Prize />
 			<Timeline />
