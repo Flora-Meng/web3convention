@@ -46,7 +46,7 @@ const EventAgenda = () => {
 	return (
 		<EventAgendaContainer>
 			<ContentContainer>
-				<Subtitle>Web3 Hackathon 2024</Subtitle>
+				<Subtitle>AI + Web3 Convention 2024</Subtitle>
 				<Title>Event Agenda</Title>
 				<Grid container spacing={6} wrap="wrap">
 					{eventAgenda.map((eventAgendaInfo, index) => (
