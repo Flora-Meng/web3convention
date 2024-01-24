@@ -14,6 +14,10 @@ import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 import PageHead from '@/layouts/PageHead';
 import { devices } from '@/styles/variables';
+import ForSponsors from "src/components/Pages/Startup/ForSponsors";
+import ForStartUps from "@/components/Pages/Startup/ForStartUps";
+import ForEnterprise from "@/components/Pages/Startup/ForEnterprise";
+import ForInvestors from "@/components/Pages/Startup/ForInvestors";
 
 const Cover = styled.div`
 	background-image: url('/images/background/startup-background.webp');
@@ -91,6 +95,10 @@ const StartupPage = () => {
 			<Prize />
 			<Timeline />
 			<WhoParticipate />
+			<ForStartUps />
+			<ForEnterprise />
+			<ForInvestors />
+			<ForSponsors />
 			<Opportunity />
 			<Footer />
 		</>

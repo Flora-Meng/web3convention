@@ -8,11 +8,14 @@ interface CardCategory {
 	description: string[];
 	backgroundColor: string;
 	showBulletPoint: boolean;
+	cardWidth?: string;
+	cardHeight?: string;
 }
+// @ts-ignore
 const StyledGridItem = styled.div`
 	background-color: #131313;
-	height: 346px;
-	max-width: 368px;
+	height: ${(props: { cardHeight?: string }) => props.cardHeight || '346px'};
+	max-width: ${(props: { cardWidth?: string }) => props.cardWidth || '368px'};
 	position: relative;
 `;
 const SubTitle = styled.p`
@@ -20,9 +23,8 @@ const SubTitle = styled.p`
 	color: ${color.blackcolor};
 	font-size: 24px;
 	font-weight: bold;
-	height: 58px;
 	margin: 0 0 24px;
-	max-width: 368px;
+	width: 100%;
 	padding: 17px 24px;
 `;
 const CardTitle = styled.p`
@@ -52,10 +54,13 @@ const ColorfulCard: React.FC<CardCategory> = ({
 	subtitle,
 	description,
 	backgroundColor,
-	showBulletPoint
+	showBulletPoint,
+	cardWidth,
+	cardHeight
 }) => {
 	return (
-		<StyledGridItem>
+		// @ts-ignore
+		<StyledGridItem cardWidth={cardWidth} cardHeight={cardHeight}>
 			<SubTitle backgroundColor={backgroundColor}>{title}</SubTitle>
 			{subtitle && <CardTitle>{subtitle}</CardTitle>}
 			<DescriptionList>
