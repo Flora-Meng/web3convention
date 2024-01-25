@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import ColorfulCard from '@/components/Shares/ColorfulCard';
 import prize from '@/components/Pages/Startup/ForStartUps/forStartUps.json';
-import {sectionSubtitle, sectionTitle} from '@/styles/mixin';
+import ColorfulCard from '@/components/Shares/ColorfulCard';
+import { sectionSubtitle, sectionTitle } from '@/styles/mixin';
 import { color, devices } from '@/styles/variables';
 
 const Container = styled.div`
@@ -43,9 +43,9 @@ const Title = styled.h2`
 const ColorTitle = styled.h2`
 	${sectionTitle};
 	color: #f652f2;
+	font-size: 36px;
 	margin-bottom: 40px;
 	max-width: unset;
-	font-size: 36px;
 `;
 const SectionSubtitle = styled.p`
 	${sectionSubtitle};
