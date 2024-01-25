@@ -29,8 +29,8 @@
 		"sponsor": [
 			{
 				"_id": "7",
-				"logoSrc": "./images/sponsors/tron.png",
-				"logoSrcHighlight": "/images/sponsors/tron.png",
+				"logoSrc": "/images/logo/tron-logo.png",
+				"logoSrcHighlight": "/images/logo/tron-logo.png",
 				"url": "https://tron.network/index?lng=en"
 			},
 			{
