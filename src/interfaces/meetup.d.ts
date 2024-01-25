@@ -24,6 +24,8 @@ type Period = {
 	start: string;
 };
 
+type Price = 'free' | 'paid';
+
 type Banner = {
 	url: string;
 };
@@ -52,4 +54,5 @@ interface IMeetup {
 	longitude: number;
 	maxRSVPs: number;
 	ticket: Ticket[];
+	price: Price;
 }

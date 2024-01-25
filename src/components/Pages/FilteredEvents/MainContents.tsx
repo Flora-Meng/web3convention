@@ -6,6 +6,7 @@ import styled from 'styled-components';
 
 import ChooseLocation from './ChooseLocation';
 import DateFilter from './DateFilter';
+import PriceFilter from './PriceFilter';
 import ShowMapSection from './ShowMapSection/ShowMapSection';
 import EventItem from '@/components/Shares/EventItem';
 import { fetchPaginatedMeetups } from '@/services/meetup';
@@ -110,7 +111,7 @@ const MainContents = () => {
 	const [totalCount, setTotalCount] = useState(1);
 	const [hasPreviousPage, setHasPreviousPage] = useState<boolean>();
 	const [hasFollowingPage, setHasFollowingPage] = useState<boolean>();
-
+	const [priceFilter, setPriceFilter] = useState('');
 	const router = useRouter();
 
 	const navigateToSideEvents = () => {
@@ -121,7 +122,9 @@ const MainContents = () => {
 		const response = await fetchPaginatedMeetups(currentPage, 12);
 		const meetupData: TSweb3MeetupPagination = response.data;
 		const { docs, totalPages, hasPrevPage, hasNextPage } = meetupData;
-		setFilterEvent(docs);
+		const filteredByPrice =
+			priceFilter === '' ? docs : docs.filter(event => event.price === priceFilter);
+		setFilterEvent(filteredByPrice);
 		setTotalCount(totalPages || 0);
 		setHasPreviousPage(hasPrevPage);
 		setHasFollowingPage(hasNextPage);
@@ -129,7 +132,7 @@ const MainContents = () => {
 
 	useEffect(() => {
 		fetchEvents();
-	}, [currentPage]);
+	}, [currentPage, priceFilter]);
 
 	const handleLocationChange = (location: string) => {
 		setSelectedLocation(location);
@@ -147,6 +150,10 @@ const MainContents = () => {
 		handlePageChange(currentPage + 1);
 	};
 
+	const handlePriceChange = (selectedPrice: Price) => {
+		setPriceFilter(selectedPrice);
+	};
+
 	return (
 		<Container>
 			<BackEventsButtonSection>
@@ -160,6 +167,7 @@ const MainContents = () => {
 					<ShowMapSection />
 					<ChooseLocation onLocationChange={handleLocationChange} />
 					<DateFilter />
+					<PriceFilter onPriceChange={handlePriceChange} />
 				</FilteredContainer>
 				<EventContainer>
 					{filterEvent.filter(
