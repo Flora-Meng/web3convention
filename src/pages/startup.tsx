@@ -1,8 +1,12 @@
 import React from 'react';
+import ForSponsors from 'src/components/Pages/Startup/ForSponsors';
 import styled from 'styled-components';
 
 import EventAgenda from '@/components/Pages/Startup/EventAgenda';
 import EventHighlights from '@/components/Pages/Startup/EventHighlights';
+import ForEnterprise from '@/components/Pages/Startup/ForEnterprise';
+import ForInvestors from '@/components/Pages/Startup/ForInvestors';
+import ForStartUps from '@/components/Pages/Startup/ForStartUps';
 import Opportunity from '@/components/Pages/Startup/Opportunity';
 import Overview from '@/components/Pages/Startup/Overview';
 import Prize from '@/components/Pages/Startup/Prize';
@@ -15,10 +19,6 @@ import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 import PageHead from '@/layouts/PageHead';
 import { devices } from '@/styles/variables';
-import ForSponsors from "src/components/Pages/Startup/ForSponsors";
-import ForStartUps from "@/components/Pages/Startup/ForStartUps";
-import ForEnterprise from "@/components/Pages/Startup/ForEnterprise";
-import ForInvestors from "@/components/Pages/Startup/ForInvestors";
 
 const Cover = styled.div`
 	background-image: url('/images/background/startup-background.webp');
