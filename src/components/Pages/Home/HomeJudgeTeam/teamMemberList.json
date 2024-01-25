@@ -331,5 +331,23 @@
 		"avatarSrc": "/images/speakers/victorChen.png",
 		"companySrc": "/images/logo/dmc.png",
 		"isSpeaker": true
+	},
+	{
+		"_id": "38",
+		"name": "Michael Hazilias",
+		"jobTitle": "Co-Founder and CEO",
+		"description":"Leveraging his 26 years of software development and automation experience, Michael plunged headfirst into the world of Bitcoin and blockchain technology in 2017, quickly becoming a leading expert in both. Michael has more than 20x'd his digital asset portfolio, now managing a 7-figure investment portfolio across multiple asset classes. Michael leads the team at Breakout Solutions in creating automated passive income strategies leveraging the power of digital assets. He has also helped 450+ students generate millions of dollars in profit and passive income in under three years. Michael is on a mission with Breakout Solutions to Help 1 Million People Achieve Financial Independence By The Year 2032.",
+		"avatarSrc": "/images/speakers/michaelHazilias.png",
+		"companySrc": "/images/logo/breakout.png",
+		"isSpeaker": true
+	},
+	{
+		"_id": "39",
+		"name": "Wassim Dabboussi",
+		"jobTitle": "General Manager",
+		"description":"Armed with 20 years of business and entrepreneurial experience and having faced financial ruin during the 2020 lockdowns, Wassim reinvented himself by deep-diving into the cryptocurrency and digital asset space. Starting from scratch in 2021, through education, determination and perseverance, he now manages a multiple 6-figure digital asset portfolio. Wassim is passionate about helping individuals to reclaim their financial sovereignty and he is driven by a mission for a fairer and more equitable world. As part of the Breakout Solutions team, he educates people to utilise digital assets to transcend the constraints of the debt-driven financial matrix, empowering them to achieve financial freedom.",
+		"avatarSrc": "/images/speakers/wassimDabboussi.png",
+		"companySrc": "/images/logo/breakout.png",
+		"isSpeaker": true
 	}
 ]
