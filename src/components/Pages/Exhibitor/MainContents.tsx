@@ -5,9 +5,9 @@ import styled from 'styled-components';
 import ExhibitorDetailedInformation from './ExhibitorDetailedInformation';
 import { IExhibitor } from '@/interfaces/exhibitor';
 import fetchExhibitorById from '@/services/companies';
-import { color, devices } from '@/styles/variables';
+import { color } from '@/styles/variables';
 
-const { blackColor, primaryColor, whiteColor } = color;
+const { blackColor } = color;
 
 const Container = styled.div`
 	background-color: ${blackColor};
