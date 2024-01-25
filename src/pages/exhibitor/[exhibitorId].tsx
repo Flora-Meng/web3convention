@@ -4,7 +4,6 @@ import MainContents from '@/components/Pages/Exhibitor/MainContents';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header/Header';
 import PageHead from '@/layouts/PageHead';
-import { devices } from '@/styles/variables';
 
 const Cover = styled.div`
 	background-color: #000;

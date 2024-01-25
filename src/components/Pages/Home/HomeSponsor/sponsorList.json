@@ -28,6 +28,12 @@
 		"groupName": "SPONSORS",
 		"sponsor": [
 			{
+				"_id": "7",
+				"logoSrc": "./images/sponsors/tron.png",
+				"logoSrcHighlight": "/images/sponsors/tron.png",
+				"url": "https://tron.network/index?lng=en"
+			},
+			{
 				"_id": "3",
 				"logoSrc": "/images/sponsors/hash-mining.png",
 				"logoSrcHighlight": "/images/sponsors/hash-mining.png",
@@ -93,12 +99,6 @@
 		"groupId": 4,
 		"groupName": "STRATEGIC PARTNERS",
 		"sponsor": [
-			{
-				"_id": "7",
-				"logoSrc": "./images/sponsors/tron.png",
-				"logoSrcHighlight": "/images/sponsors/tron.png",
-				"url": "https://tron.network/index?lng=en"
-			},
 			{
 				"_id": "8",
 				"logoSrc": "./images/sponsors/future.png",
