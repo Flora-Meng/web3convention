@@ -274,5 +274,55 @@
     "jobTitle": "Safe And Ethical AI Researcher",
     "avatarSrc": "/images/speakers/lisaNew.jpg",
     "isSpeaker": true
+  },
+  {
+    "_id": "32",
+    "name": "Simon Callaghan",
+    "description": "Simon has spent his career within innovative technologies, including working with blockchain and financial technologies in Australia, the US, the UK, Asia, and Europe. Most recently leading the Digital Assets Programme at the University of Cambridge and as Co-Founder of middle office startup MOOPS Tech. He holds an MBA from AGSM and a Masters degree from Cambridge.",
+    "jobTitle": "CEO, Blockchain Australia",
+    "avatarSrc": "/images/speakers/simonCallaghan.png",
+    "isSpeaker": true
+  },
+  {
+    "_id": "33",
+    "name": "Rachael Jones",
+    "description": "Rachael brings a wealth of knowledge and a fresh perspective to discussions around finance, technology, and innovation. Her talks are grounded in practical experience and enriched by her ongoing engagement with the latest trends in blockchain and Web3.",
+    "jobTitle": "Business Analyst, BlockConsult",
+    "avatarSrc": "/images/speakers/rachaelJones.png",
+    "companySrc": "/images/logo/blockConsult.png",
+    "isSpeaker": true
+  },
+  {
+    "_id": "34",
+    "name": "Alyse Sue",
+    "description": "Web3 founder, tech entrepreneur and software engineer.- Director of Metaverse at KPMG Futures, where we use game-changing technologies to build new business models for the firm.- Cofounder of Transhuman Coin, a DeFi project that funds Transhuman projects which use science and technology to overcome limitations of human biology: www.transhumancoin.finance- Founding member of FutrDAO, an investment DAO that supports radical impact web3 projects, primarily in climate and healthy longevity.",
+    "jobTitle": "Co-founder, Transhuman Coin",
+    "avatarSrc": "/images/speakers/alyseSue.png",
+    "companySrc": "/images/logo/transhumanCoin.png",
+    "isSpeaker": true
+  },
+  {
+    "_id": "35",
+    "name": "Larry",
+    "jobTitle": "Senior Business Development Manager, Hashkey Exchange",
+    "avatarSrc": "/images/speakers/larry.jpg",
+    "companySrc": "/images/logo/hashkeyExchange.png",
+    "isSpeaker": true
+  },
+  {
+    "_id": "36",
+    "name": "YuanJie Zhang",
+    "jobTitle": "Co-Founder/Chief Shilling Officer, Conflux",
+    "avatarSrc": "/images/speakers/yuanjieZhang.jpg",
+    "companySrc": "/images/logo/conflux.png",
+    "isSpeaker": true
+  },
+  {
+    "_id": "37",
+    "name": "Victor Chen",
+    "jobTitle": "Foundation Chairman, Datamall Coin",
+    "avatarSrc": "/images/speakers/victorChen.png",
+    "companySrc": "/images/logo/dmc.png",
+    "isSpeaker": true
   }
 ]
