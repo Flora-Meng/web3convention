@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import styled from 'styled-components';
 
 import { color } from '@/styles/variables';
@@ -24,8 +25,8 @@ const SubTitle = styled.p`
 	font-size: 24px;
 	font-weight: bold;
 	margin: 0 0 24px;
-	width: 100%;
 	padding: 17px 24px;
+	width: 100%;
 `;
 const CardTitle = styled.p`
 	color: ${color.whiteColor};
