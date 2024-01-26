@@ -27,6 +27,7 @@
 		"_id": "6",
 		"name": "Ken Huang",
 		"description": "Ken Huang is the author and chief editor of eight books on artificial intelligence and Web3, published respectively by international publishers such as Springer and Cambridge University Press. Serving as the CEO of the AI and Web3 consulting and education company, he holds multiple roles including a Blockchain Expert of the Chinese Institute of Electronics. He is also a core contributor to the Generative AI Working Group at the NIST and a core author of the OWASP Top 10 for LLM Applications.\n\nKen Huang has been invited to provide Speaking or Consulting services at institutions such as the University of California, Berkeley, Stanford University, Peking University, Tsinghua University, the World Bank, and Huawei. Moreover, he has given keynote speeches at international conferences, for example, the Davos World Economic Forum 2020 Blockchain Conference; Consensus 2018 in New York; The American ACM AI & Blockchain Decentralized Annual Conference 2019; IEEE Technology and Engineering Management Society Annual Meeting 2019.",
+		"jobTitle": "Author and CEO of DistributedApps.AI",
 		"avatarSrc": "/images/speakers/kenHuang.jpg",
 		"isSpeaker": true
 	},
@@ -54,6 +55,14 @@
 		"description": "Jake the 'Crypto King' is a well-known KOL and VC in the blockchain and crypto space. Having been present for more than 6 years his background in law and finance makes him a formidable force. Providing consulting services along with venture capital funds makes him a standout social media presence. Having worked with real-world celebrities along with the most notable individuals in crypto he's solidified himself as a household name when it comes to blockchain. Now he enjoys traveling the world while educating those at crypto conferences.",
 		"jobTitle": "KOL & VC",
 		"avatarSrc": "/images/speakers/cryptoKing.png",
+		"isSpeaker": true
+	},
+	{
+		"_id": "36",
+		"name": "YuanJie Zhang",
+		"jobTitle": "Co-Founder/Chief Shilling Officer, Conflux",
+		"avatarSrc": "/images/speakers/yuanjieZhang.jpg",
+		"companySrc": "/images/logo/conflux.png",
 		"isSpeaker": true
 	},
 	{
@@ -110,6 +119,14 @@
 		"isSpeaker": true
 	},
 	{
+		"_id": "35",
+		"name": "Larry",
+		"jobTitle": "Senior Business Development Manager, Hashkey Exchange",
+		"avatarSrc": "/images/speakers/larry.jpg",
+		"companySrc": "/images/logo/hashkeyExchange.png",
+		"isSpeaker": true
+	},
+	{
 		"_id": "28",
 		"name": "Leigh Cowan",
 		"description": "Internationally revered expert on launching new innovations, popular presenter, highly sought-after trainer of senior executives in marketing and strategy, acclaimed author in leadership management and business strategy, with a 45-year career of successful business achievements. After reaching the CMO level in FMCG, Leigh moved into consulting for national and multi-national organizations and training larger c-suite executives. Part of the strategic consulting firm, Leadership Empowerment, Leigh facilitates leadership and management decision-making in strategy and planning.",
@@ -133,6 +150,24 @@
 		"jobTitle": "Founder & Engineer, Veritas Tech",
 		"avatarSrc": "/images/speakers/bob.png",
 		"companySrc": "/images/logo/veritas.jpeg",
+		"isSpeaker": true
+	},
+	{
+		"_id": "38",
+		"name": "Michael Hazilias",
+		"jobTitle": "Co-Founder and CEO",
+		"description": "Leveraging his 26 years of software development and automation experience, Michael plunged headfirst into the world of Bitcoin and blockchain technology in 2017, quickly becoming a leading expert in both. Michael has more than 20x'd his digital asset portfolio, now managing a 7-figure investment portfolio across multiple asset classes. Michael leads the team at Breakout Solutions in creating automated passive income strategies leveraging the power of digital assets. He has also helped 450+ students generate millions of dollars in profit and passive income in under three years. Michael is on a mission with Breakout Solutions to Help 1 Million People Achieve Financial Independence By The Year 2032.",
+		"avatarSrc": "/images/speakers/michaelHazilias.png",
+		"companySrc": "/images/logo/breakout.png",
+		"isSpeaker": true
+	},
+	{
+		"_id": "39",
+		"name": "Wassim Dabboussi",
+		"jobTitle": "General Manager",
+		"description": "Armed with 20 years of business and entrepreneurial experience and having faced financial ruin during the 2020 lockdowns, Wassim reinvented himself by deep-diving into the cryptocurrency and digital asset space. Starting from scratch in 2021, through education, determination and perseverance, he now manages a multiple 6-figure digital asset portfolio. Wassim is passionate about helping individuals to reclaim their financial sovereignty and he is driven by a mission for a fairer and more equitable world. As part of the Breakout Solutions team, he educates people to utilise digital assets to transcend the constraints of the debt-driven financial matrix, empowering them to achieve financial freedom.",
+		"avatarSrc": "/images/speakers/wassimDabboussi.png",
+		"companySrc": "/images/logo/breakout.png",
 		"isSpeaker": true
 	},
 	{
@@ -170,6 +205,14 @@
 		"jobTitle": "Founding Partner, ProDigital Future Fund",
 		"avatarSrc": "/images/speakers/curtShi.jpeg",
 		"companySrc": "/images/logo/proigtial.png",
+		"isSpeaker": true
+	},
+	{
+		"_id": "32",
+		"name": "Simon Callaghan",
+		"description": "Simon has spent his career within innovative technologies, including working with blockchain and financial technologies in Australia, the US, the UK, Asia, and Europe. Most recently leading the Digital Assets Programme at the University of Cambridge and as Co-Founder of middle office startup MOOPS Tech. He holds an MBA from AGSM and a Masters degree from Cambridge.",
+		"jobTitle": "CEO, Blockchain Australia",
+		"avatarSrc": "/images/speakers/simonCallaghan.png",
 		"isSpeaker": true
 	},
 	{
@@ -291,14 +334,6 @@
 		"isSpeaker": true
 	},
 	{
-		"_id": "32",
-		"name": "Simon Callaghan",
-		"description": "Simon has spent his career within innovative technologies, including working with blockchain and financial technologies in Australia, the US, the UK, Asia, and Europe. Most recently leading the Digital Assets Programme at the University of Cambridge and as Co-Founder of middle office startup MOOPS Tech. He holds an MBA from AGSM and a Masters degree from Cambridge.",
-		"jobTitle": "CEO, Blockchain Australia",
-		"avatarSrc": "/images/speakers/simonCallaghan.png",
-		"isSpeaker": true
-	},
-	{
 		"_id": "33",
 		"name": "Rachael Jones",
 		"description": "Rachael brings a wealth of knowledge and a fresh perspective to discussions around finance, technology, and innovation. Her talks are grounded in practical experience and enriched by her ongoing engagement with the latest trends in blockchain and Web3.",
@@ -317,45 +352,11 @@
 		"isSpeaker": true
 	},
 	{
-		"_id": "35",
-		"name": "Larry",
-		"jobTitle": "Senior Business Development Manager, Hashkey Exchange",
-		"avatarSrc": "/images/speakers/larry.jpg",
-		"companySrc": "/images/logo/hashkeyExchange.png",
-		"isSpeaker": true
-	},
-	{
-		"_id": "36",
-		"name": "YuanJie Zhang",
-		"jobTitle": "Co-Founder/Chief Shilling Officer, Conflux",
-		"avatarSrc": "/images/speakers/yuanjieZhang.jpg",
-		"companySrc": "/images/logo/conflux.png",
-		"isSpeaker": true
-	},
-	{
 		"_id": "37",
 		"name": "Victor Chen",
 		"jobTitle": "Foundation Chairman, Datamall Coin",
 		"avatarSrc": "/images/speakers/victorChen.png",
 		"companySrc": "/images/logo/dmc.png",
-		"isSpeaker": true
-	},
-	{
-		"_id": "38",
-		"name": "Michael Hazilias",
-		"jobTitle": "Co-Founder and CEO",
-		"description": "Leveraging his 26 years of software development and automation experience, Michael plunged headfirst into the world of Bitcoin and blockchain technology in 2017, quickly becoming a leading expert in both. Michael has more than 20x'd his digital asset portfolio, now managing a 7-figure investment portfolio across multiple asset classes. Michael leads the team at Breakout Solutions in creating automated passive income strategies leveraging the power of digital assets. He has also helped 450+ students generate millions of dollars in profit and passive income in under three years. Michael is on a mission with Breakout Solutions to Help 1 Million People Achieve Financial Independence By The Year 2032.",
-		"avatarSrc": "/images/speakers/michaelHazilias.png",
-		"companySrc": "/images/logo/breakout.png",
-		"isSpeaker": true
-	},
-	{
-		"_id": "39",
-		"name": "Wassim Dabboussi",
-		"jobTitle": "General Manager",
-		"description": "Armed with 20 years of business and entrepreneurial experience and having faced financial ruin during the 2020 lockdowns, Wassim reinvented himself by deep-diving into the cryptocurrency and digital asset space. Starting from scratch in 2021, through education, determination and perseverance, he now manages a multiple 6-figure digital asset portfolio. Wassim is passionate about helping individuals to reclaim their financial sovereignty and he is driven by a mission for a fairer and more equitable world. As part of the Breakout Solutions team, he educates people to utilise digital assets to transcend the constraints of the debt-driven financial matrix, empowering them to achieve financial freedom.",
-		"avatarSrc": "/images/speakers/wassimDabboussi.png",
-		"companySrc": "/images/logo/breakout.png",
 		"isSpeaker": true
 	}
 ]
