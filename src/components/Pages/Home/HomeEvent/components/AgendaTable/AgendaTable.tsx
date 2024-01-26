@@ -162,7 +162,7 @@ const agendaConfig = [
 	},
 	{
 		_id: '3-1',
-		title: 'Kickoff Party',
+		title: 'Welcome Party (Invited Only)',
 		columns: 1,
 		offset: 0
 	},
