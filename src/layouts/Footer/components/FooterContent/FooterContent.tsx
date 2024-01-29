@@ -12,6 +12,9 @@ import imageLoader from '@/utils/loader';
 
 const { blackColor, primaryColor, whiteColor } = color;
 
+const countryImage = '/images/country-1.png';
+const secondCountryImage = '/images/country-2.png';
+
 // Styles
 
 const ContentContainer = styled(Box)`
@@ -73,6 +76,35 @@ const QRcodeGridItem = styled(Grid)`
 	line-height: 1.43;
 `;
 
+const DisclaimerWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	@media ${devices.largeLaptop} {
+		max-width: 1440px;
+	}
+	width: calc(100vw - 48px);
+`;
+
+const DisclaimerTitle = styled.h3`
+	font-size: 16px;
+	font-weight: bold;
+`;
+const DisclaimerContentWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	@media ${devices.mobile} {
+		flex-direction: row;
+	}
+`;
+const FlagImage = styled.div`
+	height: 50px;
+	width: 72px;
+`;
+const DisclaimerContent = styled.div`
+	font-size: 14px;
+`;
 // Configuration
 const eventsConfig = [
 	{
@@ -279,6 +311,25 @@ const FooterContent = () => {
 				</Grid>
 			</ContainerGrid>
 			<SubscriptionModal message={message} open={openModal} handleClose={handleClose} />
+			<DisclaimerWrapper>
+				<DisclaimerTitle>Disclaimer</DisclaimerTitle>
+				<DisclaimerContentWrapper>
+					<FlagImage>
+						<img src={countryImage} alt="countryImage" />
+					</FlagImage>
+					<FlagImage>
+						<img src={secondCountryImage} alt="secondCountryImage" />
+					</FlagImage>
+					<DisclaimerContent>
+						Web3 Convention acknowledges Traditional Owners of Country throughout
+						Australia and recognises the continuing connection to lands, waters and
+						communities. We pay our respect to Aboriginal and Torres Strait Islander
+						cultures; and to Elders past and present. Aboriginal and Torres Strait
+						Islander peoples should be aware that this website may contain images or
+						names of people who have since passed away.
+					</DisclaimerContent>
+				</DisclaimerContentWrapper>
+			</DisclaimerWrapper>
 		</ContentContainer>
 	);
 };
