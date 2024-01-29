@@ -78,6 +78,7 @@ const Description = styled.div`
 `;
 
 const StyledImage = styled(Image)`
+	object-fit: contain;
 	@media ${devices.mobile} {
 		width: 400px;
 		height: 210px;
@@ -109,7 +110,6 @@ const WhoParticipate = () => {
 						loader={imageLoader}
 						src="/images/startup/who-participate.jpg"
 						alt="who participate"
-						style={{ objectFit: 'contain' }}
 						unoptimized
 						width={280}
 						height={150}

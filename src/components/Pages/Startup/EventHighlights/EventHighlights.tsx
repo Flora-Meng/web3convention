@@ -83,6 +83,7 @@ const TitleHelper = styled.div`
 `;
 
 const StyledImage = styled(Image)`
+	object-fit: contain;
 	@media ${devices.mobile} {
 		width: 500px;
 		height: 170px;
@@ -151,7 +152,6 @@ const EventHighlights = () => {
 						src="/images/startup/event-highlights.png"
 						alt="event highlights"
 						unoptimized
-						style={{ objectFit: 'contain' }}
 						width={300}
 						height={100}
 					/>
