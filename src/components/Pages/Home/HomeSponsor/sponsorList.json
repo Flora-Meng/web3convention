@@ -77,15 +77,21 @@
 			},
 			{
 				"_id": "72",
-				"logoSrc": "/images/sponsors/shiku.png",
-				"logoSrcHighlight": "/images/sponsors/shiku.png",
-				"url": "https://shiku.com/"
+				"logoSrc": "/images/sponsors/yuku.png",
+				"logoSrcHighlight": "/images/sponsors/yuku.png",
+				"url": "https://yuku.app/"
 			},
 			{
 				"_id": "73",
 				"logoSrc": "/images/sponsors/yumi.png",
 				"logoSrcHighlight": "/images/sponsors/yumi.png",
 				"url": "https://yumi.io/gold/market"
+			},
+			{
+				"_id": "14",
+				"logoSrc": "./images/sponsors/edge.png",
+				"logoSrcHighlight": "/images/sponsors/edge.png",
+				"url": "https://edgematrix.pro/"
 			}
 		]
 	},
@@ -130,16 +136,28 @@
 				"url": "http://www.infinitylabs.fund/#/home"
 			},
 			{
-				"_id": "14",
-				"logoSrc": "./images/sponsors/edge.png",
-				"logoSrcHighlight": "/images/sponsors/edge.png",
-				"url": "https://edgematrix.pro/"
-			},
-			{
 				"_id": "15",
 				"logoSrc": "./images/sponsors/four&co.png",
 				"logoSrcHighlight": "/images/sponsors/four&co.png",
 				"url": "https://www.4and.co/"
+			},
+			{
+				"_id": "16",
+				"logoSrc": "/images/sponsors/bewater.png",
+				"logoSrcHighlight": "/images/sponsors/bewater.png",
+				"url": "https://bewater.xyz/"
+			},
+			{
+				"_id": "17",
+				"logoSrc": "/images/sponsors/conflux.png",
+				"logoSrcHighlight": "/images/sponsors/conflux.png",
+				"url": "https://confluxnetwork.org/"				
+			},
+			{
+				"_id": "18",
+				"logoSrc": "/images/sponsors/hashkeyExchange.svg",
+				"logoSrcHighlight": "/images/sponsors/hashkeyExchange.svg",
+				"url": "https://www.hashkey.com/en-US/"
 			}
 		]
 	},
@@ -166,12 +184,6 @@
 				"url": "https://ic1101.world/#/"
 			},
 			{
-				"_id": "19",
-				"logoSrc": "/images/sponsors/fildao.png",
-				"logoSrcHighlight": "/images/sponsors/fildao.png",
-				"url": ""
-			},
-			{
 				"_id": "23",
 				"logoSrc": "/images/sponsors/atb.svg",
 				"logoSrcHighlight": "/images/sponsors/atb.svg",
@@ -188,12 +200,6 @@
 				"logoSrc": "/images/sponsors/foreal.png",
 				"logoSrcHighlight": "/images/sponsors/foreal.png",
 				"url": ""
-			},
-			{
-				"_id": "27",
-				"logoSrc": "/images/sponsors/bewater.png",
-				"logoSrcHighlight": "/images/sponsors/bewater.png",
-				"url": "https://bewater.xyz/"
 			},
 			{
 				"_id": "28",
