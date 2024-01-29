@@ -107,8 +107,9 @@ const WhoParticipate = () => {
 					</DescriptionContainer>
 					<StyledImage
 						loader={imageLoader}
-						src="/images/startup/who-participate.png"
+						src="/images/startup/who-participate.jpg"
 						alt="who participate"
+						style={{ objectFit: 'contain' }}
 						unoptimized
 						width={280}
 						height={150}

@@ -151,6 +151,7 @@ const EventHighlights = () => {
 						src="/images/startup/event-highlights.png"
 						alt="event highlights"
 						unoptimized
+						style={{ objectFit: 'contain' }}
 						width={300}
 						height={100}
 					/>
