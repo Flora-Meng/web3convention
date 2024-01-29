@@ -28,6 +28,12 @@
 		"groupName": "SPONSORS",
 		"sponsor": [
 			{
+				"_id": "7",
+				"logoSrc": "/images/logo/tron-logo.png",
+				"logoSrcHighlight": "/images/logo/tron-logo.png",
+				"url": "https://tron.network/index?lng=en"
+			},
+			{
 				"_id": "3",
 				"logoSrc": "/images/sponsors/hash-mining.png",
 				"logoSrcHighlight": "/images/sponsors/hash-mining.png",

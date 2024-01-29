@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-import Agenda from '@/components/Pages/Hackathon/Agenda';
 import Benefits from '@/components/Pages/Hackathon/Benefits';
 import Challenge from '@/components/Pages/Hackathon/Challenge';
 import StageCoverTitle from '@/components/Pages/Hackathon/CoverTitle/HackathonCoverTitle';
@@ -10,8 +9,6 @@ import JudgeTeam from '@/components/Pages/Hackathon/JudgeTeam';
 import teamMemberListHackathon from '@/components/Pages/Hackathon/JudgeTeam/teamMemberList.json';
 import Prizes from '@/components/Pages/Hackathon/Prizes';
 import WhyHackathon from '@/components/Pages/Hackathon/WhyHackathon';
-import PageBanner from '@/components/Shares/PageBanner';
-import uniHackathon from '@/components/Shares/PageBanner/uniHackathon.json';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 import PageHead from '@/layouts/PageHead';

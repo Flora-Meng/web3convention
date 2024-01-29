@@ -104,6 +104,8 @@ const LogoGroup = styled.div`
 
 const Logo = styled.img`
 	height: auto;
+	max-height: 30px;
+	object-fit: contain;
 	position: relative;
 	width: 100%;
 `;
@@ -262,12 +264,6 @@ const LogoWrapper = styled.div`
 	}
 `;
 
-const SecondLogoWrapper = styled(LogoWrapper)`
-	position: absolute;
-	right: -10px;
-	top: 100%;
-`;
-
 const LogoSection = styled.div`
 	align-items: flex-end;
 	display: flex;
@@ -356,9 +352,6 @@ const SpeakerIconWrapper = styled.div`
 		height: auto;
 		width: 100%;
 	}
-`;
-const SpeakerIconPlaceholder = styled.div`
-	width: 90px;
 `;
 
 const JudgeTeam: React.FC<{ subtitle: string; teamMemberList: TeamMemberProps[] }> = ({
