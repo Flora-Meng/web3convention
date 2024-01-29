@@ -83,6 +83,7 @@ const TitleHelper = styled.div`
 `;
 
 const StyledImage = styled(Image)`
+	object-fit: contain;
 	@media ${devices.mobile} {
 		width: 500px;
 		height: 170px;
