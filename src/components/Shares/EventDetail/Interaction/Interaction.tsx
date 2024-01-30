@@ -1,5 +1,7 @@
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import Alert from '@mui/material/Alert';
+import Snackbar from '@mui/material/Snackbar';
 import dayjs from 'dayjs';
 import timezone from 'dayjs/plugin/timezone';
 import utc from 'dayjs/plugin/utc';
@@ -80,18 +82,6 @@ const ShareButton = styled.button`
 		font-size: 14px;
 	}
 `;
-const Popup = styled.div`
-	background-color: white;
-	border-radius: 24px;
-	color: black;
-	font-family: Arial;
-	font-size: 16px;
-	left: 50%;
-	padding: 15px 24px;
-	position: fixed;
-	top: 120px;
-	transform: translateX(-50%);
-`;
 const AttendButton = styled(ShareButton)`
 	background-color: ${primaryColor};
 	border: unset;
@@ -108,18 +98,24 @@ const Interaction: React.FC<eventDetailProps> = ({ eventDetail }) => {
 	const { title, period, ticket } = eventDetail || {};
 	const price = ticket?.[1]?.price;
 	const [isSaved, setIsSaved] = useState(false);
-	const [showPopup, setShowPopup] = useState(false);
-	const [popupMessage, setPopupMessage] = useState('');
+	const [openSnackbar, setOpenSnackbar] = useState(false);
+	const [snackbarMessage, setSnackbarMessage] = useState('');
 
 	const handleFavoriteClick = () => {
 		setIsSaved(!isSaved);
-		setPopupMessage(
+		setSnackbarMessage(
 			isSaved
 				? 'Successfully removed from collections!'
 				: 'Successfully saved to collections!'
 		);
-		setShowPopup(true);
-		setTimeout(() => setShowPopup(false), 3000);
+		setOpenSnackbar(true);
+	};
+
+	const handleCloseSnackbar = (event: any, reason: string) => {
+		if (reason === 'clickaway') {
+			return;
+		}
+		setOpenSnackbar(false);
 	};
 	return (
 		<InteractionSection>
@@ -142,7 +138,14 @@ const Interaction: React.FC<eventDetailProps> = ({ eventDetail }) => {
 					<AttendButton>ATTEND</AttendButton>
 				</InteractionAction>
 			</InteractionWrapper>
-			{showPopup && <Popup>{popupMessage}</Popup>}
+			<Snackbar
+				open={openSnackbar}
+				autoHideDuration={3000}
+				onClose={handleCloseSnackbar}
+				anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+			>
+				<Alert severity="success">{snackbarMessage}</Alert>
+			</Snackbar>
 		</InteractionSection>
 	);
 };
