@@ -113,6 +113,11 @@ const MainContents = () => {
 	const [hasFollowingPage, setHasFollowingPage] = useState<boolean>();
 	const [priceFilter, setPriceFilter] = useState('');
 	const [error, setError] = useState(false);
+	type DateRange = {
+		startDate: Date | null;
+		endDate: Date | null;
+	};
+	const [dateRange, setDateRange] = useState<DateRange>({ startDate: null, endDate: null });
 	const router = useRouter();
 
 	const navigateToSideEvents = () => {
@@ -126,7 +131,22 @@ const MainContents = () => {
 			const { docs, totalPages, hasPrevPage, hasNextPage } = meetupData;
 			const filteredByPrice =
 				priceFilter === '' ? docs : docs.filter(event => event.price === priceFilter);
-			setFilterEvent(filteredByPrice);
+
+			const filteredEvents = filteredByPrice.filter(event => {
+				if (!dateRange.startDate || !dateRange.endDate) {
+					return true;
+				}
+				if (event.period && event.period.start && event.period.end) {
+					const eventStartDate = new Date(event.period.start);
+					const eventEndDate = new Date(event.period.end);
+					return (
+						eventStartDate >= dateRange.startDate && eventEndDate <= dateRange.endDate
+					);
+				}
+				return false;
+			});
+
+			setFilterEvent(filteredEvents);
 			setTotalCount(totalPages || 0);
 			setHasPreviousPage(hasPrevPage);
 			setHasFollowingPage(hasNextPage);
@@ -138,7 +158,7 @@ const MainContents = () => {
 
 	useEffect(() => {
 		fetchEvents();
-	}, [currentPage, priceFilter]);
+	}, [currentPage, priceFilter, dateRange]);
 
 	const handleLocationChange = (location: string) => {
 		setSelectedLocation(location);
@@ -160,6 +180,9 @@ const MainContents = () => {
 		setPriceFilter(selectedPrice);
 	};
 
+	const handleDateChange = (startDate: Date, endDate: Date) => {
+		setDateRange({ startDate, endDate });
+	};
 	return (
 		<Container>
 			<BackEventsButtonSection>
@@ -172,7 +195,7 @@ const MainContents = () => {
 				<FilteredContainer>
 					<ShowMapSection />
 					<ChooseLocation onLocationChange={handleLocationChange} />
-					<DateFilter />
+					<DateFilter onDateChange={handleDateChange} />
 					<PriceFilter onPriceChange={handlePriceChange} />
 				</FilteredContainer>
 				<EventContainer>
