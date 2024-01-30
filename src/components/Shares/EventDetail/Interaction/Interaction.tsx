@@ -86,7 +86,6 @@ const Popup = styled.div`
 	color: black;
 	font-family: Arial;
 	font-size: 16px;
-	height: 48px;
 	left: 50%;
 	padding: 15px 24px;
 	position: fixed;
