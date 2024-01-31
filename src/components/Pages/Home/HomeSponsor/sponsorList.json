@@ -20,6 +20,12 @@
 				"logoSrc": "/images/sponsors/1783dao.png",
 				"logoSrcHighlight": "/images/sponsors/1783dao.png",
 				"url": "https://twitter.com/1783DAO"
+			},
+			{
+				"_id": "3",
+				"logoSrc": "/images/sponsors/SINOHOPE.png",
+				"logoSrcHighlight": "/images/sponsors/SINOHOPE.png",
+				"url": "https://www.sinohope.com/en"
 			}
 		]
 	},
@@ -362,6 +368,12 @@
 				"logoSrc": "/images/sponsors/tibsa.png",
 				"logoSrcHighlight": "/images/sponsors/tibsa.png",
 				"url": ""
+			},
+			{
+				"_id": "54",
+				"logoSrc": "/images/sponsors/BY-DAO.png",
+				"logoSrcHighlight": "/images/sponsors/BY-DAO.png",
+				"url": "https://twitter.com/bydao_cn?s=21&t=YGD_-6sQ1MqcdazEZoMlTw"
 			}
 		]
 	},
