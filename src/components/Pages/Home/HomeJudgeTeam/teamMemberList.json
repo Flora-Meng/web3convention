@@ -2,10 +2,19 @@
 	{
 		"_id": "01",
 		"name": "Justin Sun",
-		"description": "",
+		"description": "Justin Sun is the Founder of TRON, one of the world's largest blockchain DAO ecosystems, and Member of the HTX Global Advisory Board, one of the world’s largest crypto exchanges. Sun has been named Forbes' 30 under 30 in the Consumer Technology category several times, among other global recognitions and actively engaged in philanthropic endeavours. Sun is an avid art collector, gamer, investor, philanthropist, and space enthusiast.",
 		"jobTitle": "Founder of TRON and Member of the HTX Global Advisory Board",
 		"avatarSrc": "/images/speakers/justinSun.png",
 		"companySrc": "/images/logo/tron-logo.png"
+	},
+	{
+		"_id": "02",
+		"name": "Jun Du",
+		"description": "",
+		"jobTitle": "CEO, SINOHOPE",
+		"avatarSrc": "/images/speakers/junDu.jpg",
+		"isSpeaker": true,
+		"companySrc": "/images/sponsors/SINOHOPE.png"
 	},
 	{
 		"_id": "22",
