@@ -13,6 +13,7 @@ import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 import PageHead from '@/layouts/PageHead';
 import { devices } from '@/styles/variables';
+import Location from '@/components/Pages/Venue/Location';
 
 const Cover = styled.div`
 	background-image: url('/images/demo/venuePage/coverMobile.jpg');
@@ -66,6 +67,7 @@ const VenuePage = () => {
 			<VenueGallery />
 			<BrisBaneCity />
 			<GoldCoastCity />
+			<Location />
 			{/* <VenueMap /> // hide the map temporarily */}
 			<Footer />
 		</>
