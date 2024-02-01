@@ -18,8 +18,8 @@ const SectionWrapperDiv= styled.div`
 	}
 `
 const Container = styled.div`
-  padding-top: 40px;
-  height: 500px;
+  padding-top: 50px;
+  height: 560px;
   width: 100%;
   position: relative;
 `
@@ -39,7 +39,7 @@ const Layer2 = styled.div`
 `
 
 const MapDiv = styled.div`
-  max-height: 80%;
+  height: 80%;
   aspect-ratio: 1 / 1;
   background-color: ${whiteColor};
 `
@@ -50,7 +50,7 @@ const DecTitle = styled.p`
 `;
 
 const Title = styled.p`
-  margin: 0 0 20px;
+  margin: 0 0 60px;
   font-size: 35px;
   font-weight: bold;
   color: ${whiteColor};
@@ -83,7 +83,7 @@ const ButtonContainer = styled.div`
 `
 
 const BoldText = styled.p`
-  margin-top: 240px;
+  margin-top: 300px;
   opacity: 0.11;
   font-size: 150px;
   font-weight: bold;
