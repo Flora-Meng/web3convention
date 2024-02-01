@@ -36,7 +36,7 @@ interface TeamMemberProps {
 	secondCompanySrc?: string;
 	isSpeaker?: boolean;
 	showBookLink?: string;
-	bookTitle?: string; 
+	bookTitle?: string;
 	socialMedia?: {
 		linkedIn?: string;
 		twitter?: string;
@@ -519,11 +519,16 @@ const JudgeTeam: React.FC<{ subtitle: string; teamMemberList: TeamMemberProps[] 
 						<ModalPostDescription>
 							{teamMemberInfo.description}
 							{teamMemberInfo.showBookLink && teamMemberInfo.bookTitle && (
-									<a href={teamMemberInfo.showBookLink} target="_blank" rel="noopener noreferrer">
+								<a
+									href={teamMemberInfo.showBookLink}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
 									<p>
-										<EBookLink>eBook Link: </EBookLink>{teamMemberInfo.bookTitle}
+										<EBookLink>eBook Link: </EBookLink>
+										{teamMemberInfo.bookTitle}
 									</p>
-									</a>
+								</a>
 							)}
 						</ModalPostDescription>
 					</MemberModal>
