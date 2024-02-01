@@ -3,6 +3,8 @@ import LocationInformation from './locationInformation.json';
 import styled from 'styled-components';
 import { sectionSubtitle } from '@/styles/mixin'
 import { color, devices } from '@/styles/variables';
+import VenueMap from '@/components/Pages/Venue/Map';
+
 const { darkPrimaryColor } = color;
 
 const SectionWrapperDiv= styled.div`
@@ -64,7 +66,7 @@ const Content = styled.p`
   font-size: 16px;
   color: #fff;
 `
-const Button = styled.button`
+const Link = styled.a`
   padding: 19px 45px;
   border-radius: 30px;
   border: none;
@@ -102,9 +104,11 @@ const Location = () => {
             <Content>{LocationInformation.Location.venue}</Content>
             <Subtitle>Address:</Subtitle>
             <Content>{LocationInformation.Location.address}</Content>
-            <Button>MAP DETAILS</Button>
+            <Link>MAP DETAILS</Link>
           </div>
-          <MapDiv></MapDiv>
+          <MapDiv>
+            <VenueMap position={LocationInformation.Location.position}/>
+          </MapDiv>
         </Layer2>
       </Container>
     </SectionWrapperDiv>
