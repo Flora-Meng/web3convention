@@ -9,10 +9,10 @@ import ThemeButton from '@/components/Shares/ThemeButton';
 const { darkPrimaryColor, whiteColor, blackColor } = color;
 
 const SectionWrapperDiv= styled.div`
-  background-color: #000;
   display: flex;
   justify-content: center;
   padding:0 30px;
+  background-color: ${blackColor};
 	@media ${devices.largeLaptop} {
     padding:0 270px;
 	}
@@ -22,7 +22,6 @@ const Container = styled.div`
   height: 500px;
   width: 100%;
   position: relative;
-  /* border: 1px white solid; */
 `
 const Layer1 = styled.div`
   position: absolute;
@@ -71,7 +70,7 @@ const Subtitle = styled.p`
 `
 
 const Content = styled.p`
-  margin: 10px 0 0;
+  margin: 6px 0 0;
   font-size: 14px;
   color: ${whiteColor};
   @media ${devices.largeLaptop} {
@@ -79,19 +78,22 @@ const Content = styled.p`
 	}
 `
 
+const ButtonContainer = styled.div`
+  margin-top: 80px;
+`
+
 const BoldText = styled.p`
-  margin-top: 280px;
+  margin-top: 240px;
   opacity: 0.11;
-  font-size: 230px;
+  font-size: 150px;
   font-weight: bold;
   color: ${color.whiteColor};
-  @media ${devices.tablet} {
-    font-size: 150px;
+  @media ${devices.largeLaptop} {
+    font-size: 230px;
 	}
 `
 
 const Location = () => {
-
   const partnerButtonConfig = {
     text: 'MAP DETAILS',
     url: 'https://www.google.com/maps?q=' + LocationInformation.Location.address
@@ -111,9 +113,11 @@ const Location = () => {
             <Content>{LocationInformation.Location.venue}</Content>
             <Subtitle>Address:</Subtitle>
             <Content>{LocationInformation.Location.address}</Content>
-            <ThemeButton href={partnerButtonConfig.url}>
-							{partnerButtonConfig.text}
-						</ThemeButton>
+            <ButtonContainer>
+              <ThemeButton href={partnerButtonConfig.url}>
+                {partnerButtonConfig.text}
+              </ThemeButton>
+            </ButtonContainer>
           </div>
           <MapDiv>
             <VenueMap position={LocationInformation.Location.position}/>
