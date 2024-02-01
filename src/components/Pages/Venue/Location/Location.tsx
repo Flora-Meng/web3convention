@@ -4,23 +4,25 @@ import styled from 'styled-components';
 import { sectionSubtitle } from '@/styles/mixin'
 import { color, devices } from '@/styles/variables';
 import VenueMap from '@/components/Pages/Venue/Map';
+import ThemeButton from '@/components/Shares/ThemeButton';
 
-const { darkPrimaryColor } = color;
+const { darkPrimaryColor, whiteColor, blackColor } = color;
 
 const SectionWrapperDiv= styled.div`
   background-color: #000;
   display: flex;
   justify-content: center;
-  padding:0 20px;
+  padding:0 30px;
 	@media ${devices.largeLaptop} {
-    padding:0 240px;
+    padding:0 270px;
 	}
 `
 const Container = styled.div`
+  padding-top: 40px;
   height: 500px;
   width: 100%;
   position: relative;
-  border: 1px white solid;
+  /* border: 1px white solid; */
 `
 const Layer1 = styled.div`
   position: absolute;
@@ -34,12 +36,13 @@ const Layer2 = styled.div`
   justify-content: space-between;
   width: 100%;
   height: 100%;
+  font-family: Arial;
 `
 
 const MapDiv = styled.div`
-  width: 520px;
-  max-width: 50%;
-  background-color: #fff;
+  max-height: 80%;
+  aspect-ratio: 1 / 1;
+  background-color: ${whiteColor};
 `
 
 const DecTitle = styled.p`
@@ -48,40 +51,38 @@ const DecTitle = styled.p`
 `;
 
 const Title = styled.p`
-  font-family: Arial;
-  font-size: 40px;
+  margin: 0 0 20px;
+  font-size: 35px;
   font-weight: bold;
-  color: #fff;
+  color: ${whiteColor};
+  @media ${devices.largeLaptop} {
+    font-size: 40px;
+	}
 `;
 
 const Subtitle = styled.p`
-  font-family: Arial;
-  font-size: 18px;
+  margin: 30px 0 0;
+  font-size: 16px;
   font-weight: bold;
   color: ${darkPrimaryColor};
+  @media ${devices.largeLaptop} {
+    font-size: 18px;
+	}
 `
 
 const Content = styled.p`
-  font-family: Arial;
-  font-size: 16px;
-  color: #fff;
-`
-const Link = styled.a`
-  padding: 19px 45px;
-  border-radius: 30px;
-  border: none;
-  background-color: ${darkPrimaryColor};
-  font-family: Arial;
+  margin: 10px 0 0;
   font-size: 14px;
-  font-weight: bold;
-  color: #000;
+  color: ${whiteColor};
+  @media ${devices.largeLaptop} {
+    font-size: 16px;
+	}
 `
 
 const BoldText = styled.p`
   margin-top: 280px;
   opacity: 0.11;
   font-size: 230px;
-  font-family: Arial;
   font-weight: bold;
   color: ${color.whiteColor};
   @media ${devices.tablet} {
@@ -90,6 +91,12 @@ const BoldText = styled.p`
 `
 
 const Location = () => {
+
+  const partnerButtonConfig = {
+    text: 'MAP DETAILS',
+    url: 'https://www.google.com/maps?q=' + LocationInformation.Location.address
+  };
+
   return (
     <SectionWrapperDiv>
       <Container>
@@ -104,7 +111,9 @@ const Location = () => {
             <Content>{LocationInformation.Location.venue}</Content>
             <Subtitle>Address:</Subtitle>
             <Content>{LocationInformation.Location.address}</Content>
-            <Link>MAP DETAILS</Link>
+            <ThemeButton href={partnerButtonConfig.url}>
+							{partnerButtonConfig.text}
+						</ThemeButton>
           </div>
           <MapDiv>
             <VenueMap position={LocationInformation.Location.position}/>
