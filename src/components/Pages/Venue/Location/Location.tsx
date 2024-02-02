@@ -14,7 +14,7 @@ const SectionWrapperDiv= styled.div`
   padding:0 30px;
   background-color: ${blackColor};
 	@media ${devices.largeLaptop} {
-    padding:0 270px;
+    padding:0 250px;
 	}
 `
 const Container = styled.div`
