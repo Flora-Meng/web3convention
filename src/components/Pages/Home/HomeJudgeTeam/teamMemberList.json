@@ -2,10 +2,19 @@
 	{
 		"_id": "01",
 		"name": "Justin Sun",
-		"description": "",
+		"description": "Justin Sun is the Founder of TRON, one of the world's largest blockchain DAO ecosystems, and Member of the HTX Global Advisory Board, one of the world’s largest crypto exchanges. Sun has been named Forbes' 30 under 30 in the Consumer Technology category several times, among other global recognitions and actively engaged in philanthropic endeavours. Sun is an avid art collector, gamer, investor, philanthropist, and space enthusiast.",
 		"jobTitle": "Founder of TRON and Member of the HTX Global Advisory Board",
 		"avatarSrc": "/images/speakers/justinSun.png",
 		"companySrc": "/images/logo/tron-logo.png"
+	},
+	{
+		"_id": "02",
+		"name": "Jun Du",
+		"description": "",
+		"jobTitle": "CEO, SINOHOPE",
+		"avatarSrc": "/images/speakers/junDu.jpg",
+		"isSpeaker": true,
+		"companySrc": "/images/sponsors/SINOHOPE.png"
 	},
 	{
 		"_id": "22",
@@ -19,8 +28,17 @@
 		"_id": "1",
 		"name": "Robert Lee",
 		"description": "Robert Lee, also known as Robert Li or Bo Li, holds a Ph.D. in Economics and is a seasoned senior engineer, professor, and doctoral supervisor. Beyond his academic achievements, he is the founder of the 518 Blockchain meetup. Additionally, he spearheads the International Digital Economy and Blockchain DBA program, contributing significantly to advancements in the realms of digital economics and blockchain technology.\n\nWith connections to numerous global educational institutions, industry associations, investment funds, research institutions, and cryptocurrency mining facilities, Robert Lee serves in various capacities such as team leader, chief economist, and advisor. His diverse roles reflect a commitment to fostering innovation and expertise in the dynamic fields of economics and blockchain technology.",
-		"jobTitle": "Chief Economist",
+		"jobTitle": "Ph.D., Chief Economist",
 		"avatarSrc": "/images/speakers/Robert.jpg",
+		"isSpeaker": true
+	},
+	{
+		"_id": "34",
+		"name": "Alyse Sue",
+		"description": "Web3 founder, tech entrepreneur and software engineer.- Director of Metaverse at KPMG Futures, where we use game-changing technologies to build new business models for the firm.- Cofounder of Transhuman Coin, a DeFi project that funds Transhuman projects which use science and technology to overcome limitations of human biology: www.transhumancoin.finance- Founding member of FutrDAO, an investment DAO that supports radical impact web3 projects, primarily in climate and healthy longevity.",
+		"jobTitle": "Co-founder, Transhuman Coin",
+		"avatarSrc": "/images/speakers/alyseSue.png",
+		"companySrc": "/images/logo/transhumanCoin.png",
 		"isSpeaker": true
 	},
 	{
@@ -29,7 +47,9 @@
 		"description": "Ken Huang is the author and chief editor of eight books on artificial intelligence and Web3, published respectively by international publishers such as Springer and Cambridge University Press. Serving as the CEO of the AI and Web3 consulting and education company, he holds multiple roles including a Blockchain Expert of the Chinese Institute of Electronics. He is also a core contributor to the Generative AI Working Group at the NIST and a core author of the OWASP Top 10 for LLM Applications.\n\nKen Huang has been invited to provide Speaking or Consulting services at institutions such as the University of California, Berkeley, Stanford University, Peking University, Tsinghua University, the World Bank, and Huawei. Moreover, he has given keynote speeches at international conferences, for example, the Davos World Economic Forum 2020 Blockchain Conference; Consensus 2018 in New York; The American ACM AI & Blockchain Decentralized Annual Conference 2019; IEEE Technology and Engineering Management Society Annual Meeting 2019.",
 		"jobTitle": "Author and CEO of DistributedApps.AI",
 		"avatarSrc": "/images/speakers/kenHuang.jpg",
-		"isSpeaker": true
+		"isSpeaker": true,
+		"showBookLink": "https://www.amazon.com/Beyond-AI-Business-Landscape-Tomorrow-ebook/dp/B0CK5F3KLY?ref=d6k_applink_bb_dls&dplnkId=d9a5a9e6-a1a7-4a3c-a007-cb478a5b76b7",
+		"bookTitle": "Beyond AI: ChatGPT, Web3, and the Business Landscape of Tomorrow (Future of Business and Finance)"
 	},
 	{
 		"_id": "14",
@@ -39,6 +59,15 @@
 		"avatarSrc": "/images/speakers/danielWu.png",
 		"isSpeaker": true,
 		"companySrc": "/images/logo/jpmorgan.png"
+	},
+	{
+		"_id": "20",
+		"name": "Debora Kocak",
+		"description": "Deb is a lawyer and is the founder of Granton, a consultancy aiding startups in grants, R&D incentives, and accelerators. She's already helped 50+ clients, securing over $6 million in grants. With a background in web2 startups, Deb transitioned into web3 as COO of Move to Earn App PUML. There, she spearheaded a token launch, crafted NFT collections, forged web3 partnerships, and implemented AI automations. Deb's expertise spans the dynamic realms of law, grants, and emerging technologies.",
+		"jobTitle": "Founder, Granton",
+		"avatarSrc": "/images/speakers/deboraKocak.png",
+		"companySrc": "/images/logo/granton.png",
+		"isSpeaker": true
 	},
 	{
 		"_id": "23",
@@ -66,6 +95,15 @@
 		"isSpeaker": true
 	},
 	{
+		"_id": "9",
+		"name": "Samira Tollo",
+		"description": "Samira Tollo, is an accomplished professional serving as the CTO and Co-Founder of Elbaite, a leading Australian self-custody crypto-exchange. Formerly an IBM blockchain consultant, Samira is passionately dedicated to propelling the growth of domestic blockchain use cases. Since 2017, Samira has been deeply engaged in blockchain and cryptocurrency, spanning projects from startups to enterprises. Her background as an electrical engineer further enriches her perspective. She actively promotes tech entrepreneurship among young Australians. Samira's accolades include being the 2023 Fintech Australia Awards finalist for Outstanding Fintech Leader and Emerging Fintech Leader, as well as the winner of the 2023 and 2022 Blockchain Australia Awards' Gender and Diversity Leader of the Year.",
+		"jobTitle": "CTO, Elbaite",
+		"avatarSrc": "/images/speakers/samira.png",
+		"companySrc": "/images/logo/elbaite.webp",
+		"isSpeaker": true
+	},
+	{
 		"_id": "25",
 		"name": "Daniel Leslie",
 		"description": "Daniel has been a miner since 2018 and over this time has built up a portfolio of Bitcoin miners. He has been involved in building out multi-megawatt mining projects with both air and immersion cooling setups. HashX is Australia’s premier supplier of mining hardware, with operations across Australia, New Zealand and South East Asia. HashX serves customers ranging from buying your first miner through to large-scale industrial mining farms.",
@@ -81,6 +119,16 @@
 		"jobTitle": "CEO & Co-Founder of Dibs Capital",
 		"avatarSrc": "/images/speakers/yaelTamar.jpg",
 		"companySrc": "/images/logo/dibs-capital.png",
+		"isSpeaker": true
+	},
+	{
+		"_id": "5",
+		"name": "Danielle Marie",
+		"description": "Danielle Marie is a seasoned Blockchain Educator, Crypto Enthusiast, and Community Organizer who was awarded Australian Blockchain Leader of the Year 2023. She is the founder of the Women in Digital Economy initiative fostering female empowerment and a founding member of ALL THINGS BLOCKCHAIN a non-profit association focused on growing the local blockchain ecosystem. ",
+		"jobTitle": "Web3 Educator & Community Builder, TAFE QLD, Women in Digital Economy",
+		"avatarSrc": "/images/speakers/danielleMarie.jpg",
+		"companySrc": "/images/logo/wide.png",
+		"secondCompanySrc": "/images/logo/tafeQueensland.jpg",
 		"isSpeaker": true
 	},
 	{
@@ -119,6 +167,14 @@
 		"isSpeaker": true
 	},
 	{
+		"_id": "13",
+		"name": "Stacy Quackenbush",
+		"description": "Third Academy CEO is a blockchain-based web3 social education platform with Soulbound NFT credentialling, a wallet-based recruiter matching system, and metaverse campuses.",
+		"jobTitle": "CEO, Third Academy",
+		"avatarSrc": "/images/speakers/stacy.png",
+		"isSpeaker": true
+	},
+	{
 		"_id": "35",
 		"name": "Larry",
 		"jobTitle": "Senior Business Development Manager, Hashkey Exchange",
@@ -141,6 +197,15 @@
 		"jobTitle": "CEO, Consola.finance",
 		"avatarSrc": "/images/speakers/jacobKobler.png",
 		"companySrc": "/images/logo/Consola.finance.jpg",
+		"isSpeaker": true
+	},
+	{
+		"_id": "8",
+		"name": "Nickie Scriven",
+		"description": "Nickie Scriven is a Non-Executive Director, former CEO of Zenith Media and the Founder of Chief Meta Chicks, a women's tech start-up community; and Alchemy8 Media, an independent marketing consultancy and agency. An Executive business, marketing and media professional with 27+ years' experience in business & marketing strategy, digital transformation, data, analytics & insights, e-commerce, communications & content, brand strategy & identity, digital & social media, public relations and sponsorship. An early adopter of Web3, excited by the opportunities and benefits of decentralisation and interoperability at a time when consumers are seeking control over their personal data and privacy. Passionate about educating and bringing more women on the web3 journey and the opportunities for innovation and business success. Working with communities, businesses and brands at the intersection of Web3 and IRL, via education, entertainment, e-commerce, socialisation and networking via her businesses Chief Meta Chicks and Alchemy8.",
+		"jobTitle": "Founder & CEO, Chief Meta Chicks",
+		"avatarSrc": "/images/speakers/nickieScriven.png",
+		"companySrc": "/images/logo/chiefMeta.png",
 		"isSpeaker": true
 	},
 	{
@@ -189,16 +254,6 @@
 		"isSpeaker": true
 	},
 	{
-		"_id": "5",
-		"name": "Danielle Marie",
-		"description": "Danielle Marie is a seasoned Blockchain Educator, Crypto Enthusiast, and Community Organizer who was awarded Australian Blockchain Leader of the Year 2023. She is the founder of the Women in Digital Economy initiative fostering female empowerment and a founding member of ALL THINGS BLOCKCHAIN a non-profit association focused on growing the local blockchain ecosystem. ",
-		"jobTitle": "Web3 Educator & Community Builder, TAFE QLD, Women in Digital Economy",
-		"avatarSrc": "/images/speakers/danielleMarie.jpg",
-		"companySrc": "/images/logo/wide.png",
-		"secondCompanySrc": "/images/logo/tafeQueensland.jpg",
-		"isSpeaker": true
-	},
-	{
 		"_id": "7",
 		"name": "Curt Shi",
 		"description": "Curt Shi, a seasoned investor specializing in early-stage and cross-border investments, has been a key player in China's TMT sector since 1999, successfully managing funds and achieving notable exits in both the American and Australian markets. In 2008, he founded Imprint Capital Partners, focusing on TMT and creative industries, with successful investments like Airtasker, Catapult Group International, and Sezzle. He co-founded Follow[the]Seed in 2015, a venture fund renowned for its predictive model and impressive portfolio including Jayride, award-winning Salt Security, and Whiterabbit.AI. In 2018, Curt Shi established Welinder & Shi Capital in the US, focusing on innovative lifestyle companies like CAKE and SYNG, which were featured in Time magazine’s ‘Best 100 Inventions’. He then shifted focus to digital assets and Web3, achieving notable success with STEPN, a move2earn NFT project. Following this, Curt founded the Prodigital Future Fund in Hong Kong, dedicated to supporting the foremost web3 startups worldwide, leveraging a vast global network and resources. Furthermore, he expanded his influence by joining Boson Ventures as a General Partner, reinforcing his commitment to nurturing startups with extensive resources and a comprehensive global network. ",
@@ -233,20 +288,19 @@
 		"isSpeaker": true
 	},
 	{
-		"_id": "9",
-		"name": "Samira Tollo",
-		"description": "Samira Tollo, is an accomplished professional serving as the CTO and Co-Founder of Elbaite, a leading Australian self-custody crypto-exchange. Formerly an IBM blockchain consultant, Samira is passionately dedicated to propelling the growth of domestic blockchain use cases. Since 2017, Samira has been deeply engaged in blockchain and cryptocurrency, spanning projects from startups to enterprises. Her background as an electrical engineer further enriches her perspective. She actively promotes tech entrepreneurship among young Australians. Samira's accolades include being the 2023 Fintech Australia Awards finalist for Outstanding Fintech Leader and Emerging Fintech Leader, as well as the winner of the 2023 and 2022 Blockchain Australia Awards' Gender and Diversity Leader of the Year.",
-		"jobTitle": "CTO, Elbaite",
-		"avatarSrc": "/images/speakers/samira.png",
-		"companySrc": "/images/logo/elbaite.webp",
-		"isSpeaker": true
-	},
-	{
 		"_id": "10",
 		"name": "Adam Stokes",
 		"description": "Adam Stokes is an Australian author, crypto commentator, trader and investor with an MBA, double advanced diploma, double bachelors and multiple diplomas in business, economics, government and languages. As a self-made millionaire and prior rifleman of the Australian Army and commissioned officer of the Royal Australian Air Force, Adam now focuses his service on helping others learn about finance, crypto and economics to protect and build their wealth. Adam has lived in Spain, the USA, South Korea, America, the Middle East, England and several states across Australia. He speaks English, Spanish and some Korean but believes strongly in the language of mathematics and thermodynamics.",
 		"jobTitle": "Economist, ATS",
 		"avatarSrc": "/images/speakers/adamStrokes.png",
+		"isSpeaker": true
+	},
+	{
+		"_id": "19",
+		"name": "Karen Cohen",
+		"description": "Karen Cohen aka “blockmum” is the Founder and Director of Emerging Tech HUB, a company that helps humans connect to Emerging Technology. She is the Founder of Women in Emerging Tech and Previous Deputy Chair for Blockchain Australia. She is the 2022 winner of the Blockchain Community Leader. Karen is the previous program manager for Inspiring Rare Birds where she ran the Prime Minister and Cabinet Office for Women mentoring scholarship program. She also ran the females in Fintech program for stone and chalk sponsored by LaunchVic.",
+		"jobTitle": "Founder, Emerging Tech Hub",
+		"avatarSrc": "/images/speakers/karenCohen.png",
 		"isSpeaker": true
 	},
 	{
@@ -267,29 +321,12 @@
 		"isSpeaker": true
 	},
 	{
-		"_id": "8",
-		"name": "Nickie Scriven",
-		"description": "Nickie Scriven is a Non-Executive Director, former CEO of Zenith Media and the Founder of Chief Meta Chicks, a women's tech start-up community; and Alchemy8 Media, an independent marketing consultancy and agency. An Executive business, marketing and media professional with 27+ years' experience in business & marketing strategy, digital transformation, data, analytics & insights, e-commerce, communications & content, brand strategy & identity, digital & social media, public relations and sponsorship. An early adopter of Web3, excited by the opportunities and benefits of decentralisation and interoperability at a time when consumers are seeking control over their personal data and privacy. Passionate about educating and bringing more women on the web3 journey and the opportunities for innovation and business success. Working with communities, businesses and brands at the intersection of Web3 and IRL, via education, entertainment, e-commerce, socialisation and networking via her businesses Chief Meta Chicks and Alchemy8.",
-		"jobTitle": "Founder & CEO, Chief Meta Chicks",
-		"avatarSrc": "/images/speakers/nickieScriven.png",
-		"companySrc": "/images/logo/chiefMeta.png",
-		"isSpeaker": true
-	},
-	{
 		"_id": "21",
 		"name": "Dr. LEE CHI KIN",
 		"description": "Dr. LEE CHI KIN is a blockchain industry analyst, founder of the Blockchain Industry Analyst Association, and holds a PhD in Philosophy from Shanghai University of Finance and Economics, doctoral in Financial Management from a European university, digital transformation executive certificate from the University of Cambridge",
 		"jobTitle": "Founder of the Blockchain Industry Analyst Association",
 		"avatarSrc": "/images/speakers/lee-chi-kin.jpg",
 		"companySrc": "",
-		"isSpeaker": true
-	},
-	{
-		"_id": "13",
-		"name": "Stacy Quackenbush",
-		"description": "Third Academy CEO is a blockchain-based web3 social education platform with Soulbound NFT credentialling, a wallet-based recruiter matching system, and metaverse campuses.",
-		"jobTitle": "CEO, Third Academy",
-		"avatarSrc": "/images/speakers/stacy.png",
 		"isSpeaker": true
 	},
 	{
@@ -309,23 +346,6 @@
 		"isSpeaker": true
 	},
 	{
-		"_id": "19",
-		"name": "Karen Cohen",
-		"description": "Karen Cohen aka “blockmum” is the Founder and Director of Emerging Tech HUB, a company that helps humans connect to Emerging Technology. She is the Founder of Women in Emerging Tech and Previous Deputy Chair for Blockchain Australia. She is the 2022 winner of the Blockchain Community Leader. Karen is the previous program manager for Inspiring Rare Birds where she ran the Prime Minister and Cabinet Office for Women mentoring scholarship program. She also ran the females in Fintech program for stone and chalk sponsored by LaunchVic.",
-		"jobTitle": "Founder, Emerging Tech Hub",
-		"avatarSrc": "/images/speakers/karenCohen.png",
-		"isSpeaker": true
-	},
-	{
-		"_id": "20",
-		"name": "Debora Kocak",
-		"description": "Deb is a lawyer and is the founder of Granton, a consultancy aiding startups in grants, R&D incentives, and accelerators. She's already helped 50+ clients, securing over $6 million in grants. With a background in web2 startups, Deb transitioned into web3 as COO of Move to Earn App PUML. There, she spearheaded a token launch, crafted NFT collections, forged web3 partnerships, and implemented AI automations. Deb's expertise spans the dynamic realms of law, grants, and emerging technologies.",
-		"jobTitle": "Founder, Granton",
-		"avatarSrc": "/images/speakers/deboraKocak.png",
-		"companySrc": "/images/logo/granton.png",
-		"isSpeaker": true
-	},
-	{
 		"_id": "30",
 		"name": "Lisa New",
 		"description": "Lisa New developed an Upper-Level Ontology and Formal Language and Grammar: An Integrative Cognitive Reasoning technology with embedded rule capacity that functions in Web 3 and empowers lay persons with advanced AI. It is, in very large platform collaboration, simultaneously a semantic web, cognitive reasoning, expert consensus development, best practice decision-support, multi-modal proof metadata, MLLM contextual Q&A data search/integrate/clean/analyse with human in the loop, and bias/error/corruption/inefficiency/ineffectiveness/unsafe/unsustainable identification and eradication tool. It can be relatively quickly co-developed using existing technologies, knowledge and skills; and then continuously co-improved for global shared problem solving.",
@@ -340,15 +360,6 @@
 		"jobTitle": "Business Analyst, BlockConsult",
 		"avatarSrc": "/images/speakers/rachaelJones.png",
 		"companySrc": "/images/logo/blockConsult.png",
-		"isSpeaker": true
-	},
-	{
-		"_id": "34",
-		"name": "Alyse Sue",
-		"description": "Web3 founder, tech entrepreneur and software engineer.- Director of Metaverse at KPMG Futures, where we use game-changing technologies to build new business models for the firm.- Cofounder of Transhuman Coin, a DeFi project that funds Transhuman projects which use science and technology to overcome limitations of human biology: www.transhumancoin.finance- Founding member of FutrDAO, an investment DAO that supports radical impact web3 projects, primarily in climate and healthy longevity.",
-		"jobTitle": "Co-founder, Transhuman Coin",
-		"avatarSrc": "/images/speakers/alyseSue.png",
-		"companySrc": "/images/logo/transhumanCoin.png",
 		"isSpeaker": true
 	},
 	{

@@ -72,6 +72,10 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 			path: '/agenda'
 		},
 		{
+			title: '2024 Speakers',
+			path: '/2024-speakers'
+		},
+		{
 			title: 'Apply to Speak',
 			path: 'https://w3con.eventsair.com/web3convention/ats/Site/Register'
 		}

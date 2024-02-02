@@ -20,6 +20,12 @@
 				"logoSrc": "/images/sponsors/1783dao.png",
 				"logoSrcHighlight": "/images/sponsors/1783dao.png",
 				"url": "https://twitter.com/1783DAO"
+			},
+			{
+				"_id": "3",
+				"logoSrc": "/images/sponsors/SINOHOPE.png",
+				"logoSrcHighlight": "/images/sponsors/SINOHOPE.png",
+				"url": "https://www.sinohope.com/en"
 			}
 		]
 	},
@@ -362,6 +368,12 @@
 				"logoSrc": "/images/sponsors/tibsa.png",
 				"logoSrcHighlight": "/images/sponsors/tibsa.png",
 				"url": ""
+			},
+			{
+				"_id": "54",
+				"logoSrc": "/images/sponsors/BY-DAO.png",
+				"logoSrcHighlight": "/images/sponsors/BY-DAO.png",
+				"url": "https://twitter.com/bydao_cn?s=21&t=YGD_-6sQ1MqcdazEZoMlTw"
 			}
 		]
 	},
@@ -466,12 +478,6 @@
 				"url": "https://www.chaincatcher.com/"
 			},
 			{
-				"_id": "68",
-				"logoSrc": "./images/sponsors/btm.png",
-				"logoSrcHighlight": "/images/sponsors/btm.png",
-				"url": "https://www.blockchaintimes.media/"
-			},
-			{
 				"_id": "69",
 				"logoSrc": "./images/sponsors/tcr.png",
 				"logoSrcHighlight": "/images/sponsors/tcr.png",
@@ -488,7 +494,20 @@
 				"logoSrc": "./images/sponsors/gogetgpt.png",
 				"logoSrcHighlight": "/images/sponsors/gogetgpt.png",
 				"url": "https://gogetgpt.com/"
+			},
+			{
+				"_id": "72",
+				"logoSrc": "./images/sponsors/metaspace-logo.jpg",
+				"logoSrcHighlight": "/images/sponsors/metaspace-logo.jpg",
+				"url": "https://x.com/metaspacedao?s=11"
+			},
+			{
+				"_id": "73",
+				"logoSrc": "./images/sponsors/blocktides-logo.png",
+				"logoSrcHighlight": "/images/sponsors/blocktides-logo.png",
+				"url": "https://blocktides.com"
 			}
+
 		]
 	}
 ]

@@ -108,7 +108,7 @@ const PartnershipSponsorshipSegment = () => {
 				<Grid item miniMobile={12} largeLaptop={6}>
 					<ImageContainer>
 						<Image
-							src="/images/partners/sponsorship.webp"
+							src="/images/partners/sponsorship.png"
 							alt="sponsorship"
 							fill
 							loader={imageLoader}
@@ -145,7 +145,7 @@ const PartnershipSponsorshipSegment = () => {
 				<Grid item miniMobile={12} largeLaptop={6}>
 					<ImageContainer>
 						<Image
-							src="/images/partners/partnership.webp"
+							src="/images/partners/partnership.png"
 							alt="partnership"
 							fill
 							loader={imageLoader}
