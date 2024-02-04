@@ -20,6 +20,12 @@
 				"logoSrc": "/images/sponsors/sinohope-logo.png",
 				"logoSrcHighlight": "/images/sponsors/sinohope-logo.png",
 				"url": "https://www.sinohope.com/en"
+			},
+			{
+				"_id": "16",
+				"logoSrc": "/images/sponsors/bewater.png",
+				"logoSrcHighlight": "/images/sponsors/bewater.png",
+				"url": "https://bewater.xyz/"
 			}
 		]
 	},
@@ -146,12 +152,6 @@
 				"logoSrc": "./images/sponsors/four&co.png",
 				"logoSrcHighlight": "/images/sponsors/four&co.png",
 				"url": "https://www.4and.co/"
-			},
-			{
-				"_id": "16",
-				"logoSrc": "/images/sponsors/bewater.png",
-				"logoSrcHighlight": "/images/sponsors/bewater.png",
-				"url": "https://bewater.xyz/"
 			},
 			{
 				"_id": "17",
