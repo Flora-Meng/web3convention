@@ -44,7 +44,7 @@ const Subtitle = styled.p`
 const counterList = [
 	{
 		name: 'Online Attendees',
-		count: 100000
+		count: 10000
 	},
 	{
 		name: 'Onsite Attendees',
