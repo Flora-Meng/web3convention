@@ -371,15 +371,6 @@
 		"isSpeaker": true
 	},
 	{
-		"_id": "38",
-		"name": "Lucas Cullen",
-		"description":"Lucas has a background in Mathematics from QUT and has been a professional software developer for over 15 years, experienced in a wide range of programming languages and industries including banking. In March 2013 he started the Brisbane Bitcoin and Blockchain meetups with nearly 3000 members. Aa former ConsenSys employee, he has worked on a number of large blockchain projects including \"Project Ubin\" with the Singapore Monetary Authority and \"Project i2i\" with the Union Bank and Virtue Poker.He is now founder and Visionary at DLTX Labs, a Brisbane Web3 Venture studio who take blockchain ideas to production.",
-		"jobTitle": "Visionary, Dltx Labs",
-		"avatarSrc": "/images/speakers/lucasCullen.jpg",
-		"companySrc": "/images/logo/dltx_Labs_Cullen-Lucas.jpg",
-		"isSpeaker": true
-	},
-	{
 		"_id": "39",
 		"name": "Jock Haslam",
 		"description":"Jock is a Director at Hashlock, Australia's leading Blockchain Cyber Security and Smart Contract Auditing Firm. Hashlock's focus on manual-analysis led security research helps secure startups to enterprise blockchain innovations, both in Australia and globally.",
