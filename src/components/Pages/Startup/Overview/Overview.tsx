@@ -83,7 +83,7 @@ const Overview = () => {
 				<Information>
 					<TitleHelper>Opportunity:</TitleHelper> &quot;AI & Web3 are more than
 					buzzwords—they&apos;re shaping the next epoch of technological innovation. By
-					sponsoring, VCs play a pivotal role in catalyzing this wave. &quot;
+					sponsoring, VCs play a pivotal role in catalysing this wave. &quot;
 				</Information>
 			</ContentWrapper>
 		</OverviewContainer>
