@@ -506,6 +506,12 @@
 				"logoSrc": "./images/sponsors/blocktides-logo.png",
 				"logoSrcHighlight": "/images/sponsors/blocktides-logo.png",
 				"url": "https://blocktides.com"
+			},
+			{
+				"_id": "74",
+				"logoSrc": "./images/sponsors/allconfs-logo.png",
+				"logoSrcHighlight": "/images/sponsors/allconfs-logo.png",
+				"url": "https://allconfsbot.website/"
 			}
 
 		]
