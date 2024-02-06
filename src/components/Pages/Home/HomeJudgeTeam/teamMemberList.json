@@ -33,6 +33,16 @@
 		"isSpeaker": true
 	},
 	{
+		"_id": "05",
+		"name": "Herbert",
+		"jobTitle": "GM of Asia, DFINITY Foundation",
+		"description": "Herbert Yang is a serial entrepreneur and business leader of growth and innovation. He leads DFINITY's Asia operations to grow the developer ecosystem for the Internet Computer and incubate disruptive Web3 startups. Before DFINITY, he headed the startup business for AWS Greater China, working with VC investors, PE firms, accelerators, incubators, and communities to build startup ecosystem across China, Hong Kong, and Taiwan. Previously Herbert was CFO of China Mobile’s “12580” service and Zhang Yimou’s “Impression Series” in Beijing, Deputy-Secretary for Wu Zuoren International Foundation of Fine Arts, CEO of ed-Tech startup Century Innovative Technology in Hong Kong, and founder CEO of fit-tech startup Linkqlo in Palo Alto. He was also an early member and director of PE firm Yunfeng Capital. Prior to startup and investment, Herbert was a finance executive in GE Capital leading digital innovation initiatives and driving turn-around transformation in Singapore, Tokyo, Munich, Florence, and Boston. Herbert earned MS degree (Sloan Fellow) from Graduate School of Business of Stanford University and BBA from National University of Singapore.",
+		"isSpeaker": true,
+		"avatarSrc": "/images/speakers/Herbert.png",
+		"companySrc": "/images/logo/internet-computer.png"
+
+	},
+	{
 		"_id": "34",
 		"name": "Alyse Sue",
 		"description": "Web3 founder, tech entrepreneur and software engineer.- Director of Metaverse at KPMG Futures, where we use game-changing technologies to build new business models for the firm.- Cofounder of Transhuman Coin, a DeFi project that funds Transhuman projects which use science and technology to overcome limitations of human biology: www.transhumancoin.finance- Founding member of FutrDAO, an investment DAO that supports radical impact web3 projects, primarily in climate and healthy longevity.",
