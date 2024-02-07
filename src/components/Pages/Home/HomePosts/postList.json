@@ -2,26 +2,26 @@
 	{
 		"_id": "1",
 		"title": "Startup Competition",
-		"imageSrc": "/images/highlights/competition2.png"
+		"imageSrc": "/images/highlights/startup-competition.png"
 	},
 	{
 		"_id": "2",
 		"title": "NFT Gallery",
-		"imageSrc": "/images/highlights/nft-gallery.png"
+		"imageSrc": "/images/highlights/nft-gallery2.png"
 	},
 	{
 		"_id": "3",
 		"title": "Cyber Party",
-		"imageSrc": "/images/highlights/party2.png"
+		"imageSrc": "/images/highlights/cyber-party.png"
 	},
 	{
 		"_id": "4",
 		"title": "2023 Web3 Hackathon",
-		"imageSrc": "/images/highlights/hackathon.jpg"
+		"imageSrc": "/images/highlights/web3-hackathon.png"
 	},
 	{
 		"_id": "5",
 		"title": "2023 Web3 Career Expo & Forum",
-		"imageSrc": "/images/highlights/mpceMeeting.png"
+		"imageSrc": "/images/highlights/career-expo.png"
 	}
 ]
