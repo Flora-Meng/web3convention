@@ -375,7 +375,6 @@ const JudgeTeam: React.FC<{ subtitle: string; teamMemberList: TeamMemberProps[] 
 		setOpen(false);
 		setTeamMemberInfo({});
 	};
-	const postLink = '/comingSoon';
 	return (
 		<ExpectedSpeakerContainer>
 			<Container>
@@ -426,9 +425,7 @@ const JudgeTeam: React.FC<{ subtitle: string; teamMemberList: TeamMemberProps[] 
 						<InfoMainContainer>
 							<NameAndTitle>
 								<MemberName>{teamMemberInfo.name}</MemberName>
-								<Link href={postLink}>
-									<ModalSubtitle>{teamMemberInfo.jobTitle}</ModalSubtitle>
-								</Link>
+								<ModalSubtitle>{teamMemberInfo.jobTitle}</ModalSubtitle>
 							</NameAndTitle>
 							<ModalIcons>
 								{
