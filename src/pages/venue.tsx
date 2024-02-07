@@ -6,14 +6,14 @@ import GoldCoastCity from '@/components/Pages/Venue/GoldCoastCity';
 import VenueGallery from '@/components/Pages/Venue/VenueGallery';
 import VenueIntroCards from '@/components/Pages/Venue/VenuIntroCards/VenueIntroCards';
 import PageBanner from '@/components/Shares/PageBanner';
-import bannerInfo from '@/components/Shares/PageBanner/venueBannerInfo.json';
 import PageCoverTitle from '@/components/Shares/PageCoverTitle';
-import coverText from '@/components/Shares/PageCoverTitle/venueCoverText.json';
+// import coverText from '@/components/Shares/PageCoverTitle/venueCoverText.json';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 import PageHead from '@/layouts/PageHead';
 import { devices } from '@/styles/variables';
 import Location from '@/components/Pages/Venue/Location';
+import { venueInfo } from '@/components/Pages/Venue/venueInfo';
 
 const Cover = styled.div`
 	background-image: url('/images/demo/venuePage/coverMobile.jpg');
@@ -59,11 +59,11 @@ const VenuePage = () => {
 					<Header />
 				</HeaderContainer>
 				<TitleContainer>
-					<PageCoverTitle coverText={coverText} />
+					<PageCoverTitle venueInfo={venueInfo} />
 				</TitleContainer>
 			</Cover>
 			<VenueIntroCards />
-			<PageBanner bannerInfo={bannerInfo} buttonConfig={buttonConfig} />
+			<PageBanner venueInfo={venueInfo} buttonConfig={buttonConfig} />
 			<VenueGallery />
 			<BrisBaneCity />
 			<GoldCoastCity />

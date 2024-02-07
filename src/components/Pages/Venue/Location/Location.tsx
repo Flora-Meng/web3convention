@@ -1,5 +1,6 @@
 import React from 'react'
-import LocationInformation from './locationInformation.json';
+// import LocationInformation from './locationInformation.json';
+import { venueInfo } from '../venueInfo';
 import styled from 'styled-components';
 import { sectionSubtitle } from '@/styles/mixin'
 import { color, devices } from '@/styles/variables';
@@ -96,7 +97,7 @@ const BoldText = styled.p`
 const Location = () => {
   const partnerButtonConfig = {
     text: 'MAP DETAILS',
-    url: 'https://www.google.com/maps?q=' + LocationInformation.Location.address
+    url: 'https://www.google.com/maps?q=' + venueInfo.address
   };
 
   return (
@@ -110,9 +111,9 @@ const Location = () => {
             <DecTitle>Location</DecTitle>
             <Title>Location</Title>
             <Subtitle>Venue:</Subtitle>
-            <Content>{LocationInformation.Location.venue}</Content>
+            <Content>{venueInfo.venue}</Content>
             <Subtitle>Address:</Subtitle>
-            <Content>{LocationInformation.Location.address}</Content>
+            <Content>{venueInfo.address}</Content>
             <ButtonContainer>
               <ThemeButton href={partnerButtonConfig.url}>
                 {partnerButtonConfig.text}
@@ -120,7 +121,7 @@ const Location = () => {
             </ButtonContainer>
           </div>
           <MapDiv>
-            <VenueMap position={LocationInformation.Location.position}/>
+            <VenueMap position={venueInfo.position}/>
           </MapDiv>
         </Layer2>
       </Container>

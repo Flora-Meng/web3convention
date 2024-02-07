@@ -18,6 +18,7 @@ import PageTicket from '@/components/Shares/PageTicket';
 // import HomeTestimonial from '@/components/Pages/Home/HomeTestimonial';
 import DefaultLayout from '@/layouts/DefaultLayout';
 import PageHead from '@/layouts/PageHead';
+import { venueInfo } from '@/components/Pages/Venue/venueInfo';
 
 type ComponentType = React.FC & { layout: typeof DefaultLayout };
 
@@ -33,7 +34,7 @@ const Homepage: ComponentType = () => {
 			<HomeCarousel />
 			<HomeCountdown />
 			<HomeHighLights />
-			<PageBanner bannerInfo={bannerInfo} buttonConfig={buttonConfig} />
+			<PageBanner venueInfo={venueInfo} buttonConfig={buttonConfig} />
 			<HomeEvent />
 			<JudgeTeam subtitle="AI + Web3 Convention 2024" teamMemberList={teamMemberListHome} />
 			<PageTicket />
