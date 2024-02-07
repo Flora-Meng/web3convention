@@ -16,16 +16,16 @@
 		"groupName": "CO-ORGANISER",
 		"sponsor": [
 			{
-				"_id": "2",
-				"logoSrc": "/images/sponsors/1783dao.png",
-				"logoSrcHighlight": "/images/sponsors/1783dao.png",
-				"url": "https://twitter.com/1783DAO"
+				"_id": "3",
+				"logoSrc": "/images/sponsors/sinohope-logo.png",
+				"logoSrcHighlight": "/images/sponsors/sinohope-logo.png",
+				"url": "https://www.sinohope.com/en"
 			},
 			{
-				"_id": "3",
-				"logoSrc": "/images/sponsors/SINOHOPE.png",
-				"logoSrcHighlight": "/images/sponsors/SINOHOPE.png",
-				"url": "https://www.sinohope.com/en"
+				"_id": "16",
+				"logoSrc": "/images/sponsors/bewater.png",
+				"logoSrcHighlight": "/images/sponsors/bewater.png",
+				"url": "https://bewater.xyz/"
 			}
 		]
 	},
@@ -154,12 +154,6 @@
 				"url": "https://www.4and.co/"
 			},
 			{
-				"_id": "16",
-				"logoSrc": "/images/sponsors/bewater.png",
-				"logoSrcHighlight": "/images/sponsors/bewater.png",
-				"url": "https://bewater.xyz/"
-			},
-			{
 				"_id": "17",
 				"logoSrc": "/images/sponsors/conflux.png",
 				"logoSrcHighlight": "/images/sponsors/conflux.png",
@@ -236,6 +230,12 @@
 				"logoSrc": "/images/sponsors/portkey.png",
 				"logoSrcHighlight": "/images/sponsors/portkey.png",
 				"url": ""
+			},
+			{
+				"_id": "2",
+				"logoSrc": "/images/sponsors/1783dao.png",
+				"logoSrcHighlight": "/images/sponsors/1783dao.png",
+				"url": "https://twitter.com/1783DAO"
 			},
 			{
 				"_id": "32",
@@ -506,6 +506,12 @@
 				"logoSrc": "./images/sponsors/blocktides-logo.png",
 				"logoSrcHighlight": "/images/sponsors/blocktides-logo.png",
 				"url": "https://blocktides.com"
+			},
+			{
+				"_id": "74",
+				"logoSrc": "./images/sponsors/allconfs-logo.png",
+				"logoSrcHighlight": "/images/sponsors/allconfs-logo.png",
+				"url": "https://allconfsbot.website/"
 			}
 
 		]

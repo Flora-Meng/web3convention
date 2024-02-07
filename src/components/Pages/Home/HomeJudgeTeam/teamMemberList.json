@@ -10,11 +10,11 @@
 	{
 		"_id": "02",
 		"name": "Jun Du",
-		"description": "",
-		"jobTitle": "CEO, SINOHOPE",
-		"avatarSrc": "/images/speakers/junDu.jpg",
+		"description": "Mr. Jun Du, as an early evangelist, serial entrepreneur, and investor in the blockchain and digital asset industry, boasts nearly 10 years of industry experience, spanning various areas such as corporate management, strategic planning, market expansion, and investment mergers and acquisitions. Prior to joining SINOHOPE Technology, he co-founded the globally leading cryptocurrency trading platform, Huobi Group, with Mr. Lin Li, Chairman of the Board, in 2013. Subsequently, Mr. Jun Du served as the Co-founder and Director of Chainup Pte. Ltd. starting in 2017 and assumed the role of Co-founder and Partner at ABCDE Capital from 2022.Before entering the blockchain industry, Mr. Jun Du held positions at well-known internet companies such as Tencent and Kingsoft. Currently, he is pursuing a Master's in Management at the National University of Singapore.\n\n\nSINOHOPE HK Listed：1611",
+		"jobTitle": "Executive Director & CEO, Sinohope",
+		"avatarSrc": "/images/speakers/jun-du.jpg",
 		"isSpeaker": true,
-		"companySrc": "/images/sponsors/SINOHOPE.png"
+		"companySrc": "/images/sponsors/sinohope-logo.png"
 	},
 	{
 		"_id": "22",
@@ -31,6 +31,16 @@
 		"jobTitle": "Ph.D., Chief Economist",
 		"avatarSrc": "/images/speakers/Robert.jpg",
 		"isSpeaker": true
+	},
+	{
+		"_id": "05",
+		"name": "Herbert",
+		"jobTitle": "GM of Asia, DFINITY Foundation",
+		"description": "Herbert Yang is a serial entrepreneur and business leader of growth and innovation. He leads DFINITY's Asia operations to grow the developer ecosystem for the Internet Computer and incubate disruptive Web3 startups. Before DFINITY, he headed the startup business for AWS Greater China, working with VC investors, PE firms, accelerators, incubators, and communities to build startup ecosystem across China, Hong Kong, and Taiwan. Previously Herbert was CFO of China Mobile’s “12580” service and Zhang Yimou’s “Impression Series” in Beijing, Deputy-Secretary for Wu Zuoren International Foundation of Fine Arts, CEO of ed-Tech startup Century Innovative Technology in Hong Kong, and founder CEO of fit-tech startup Linkqlo in Palo Alto. He was also an early member and director of PE firm Yunfeng Capital. Prior to startup and investment, Herbert was a finance executive in GE Capital leading digital innovation initiatives and driving turn-around transformation in Singapore, Tokyo, Munich, Florence, and Boston. Herbert earned MS degree (Sloan Fellow) from Graduate School of Business of Stanford University and BBA from National University of Singapore.",
+		"isSpeaker": true,
+		"avatarSrc": "/images/speakers/Herbert.png",
+		"companySrc": "/images/logo/internet-computer.png"
+
 	},
 	{
 		"_id": "34",
@@ -220,7 +230,7 @@
 	{
 		"_id": "38",
 		"name": "Michael Hazilias",
-		"jobTitle": "Co-Founder and CEO",
+		"jobTitle": "Co-Founder and CEO, Breakout Solutions",
 		"description": "Leveraging his 26 years of software development and automation experience, Michael plunged headfirst into the world of Bitcoin and blockchain technology in 2017, quickly becoming a leading expert in both. Michael has more than 20x'd his digital asset portfolio, now managing a 7-figure investment portfolio across multiple asset classes. Michael leads the team at Breakout Solutions in creating automated passive income strategies leveraging the power of digital assets. He has also helped 450+ students generate millions of dollars in profit and passive income in under three years. Michael is on a mission with Breakout Solutions to Help 1 Million People Achieve Financial Independence By The Year 2032.",
 		"avatarSrc": "/images/speakers/michaelHazilias.png",
 		"companySrc": "/images/logo/breakout.png",
@@ -229,7 +239,7 @@
 	{
 		"_id": "39",
 		"name": "Wassim Dabboussi",
-		"jobTitle": "General Manager",
+		"jobTitle": "General Manager, Breakout Solutions",
 		"description": "Armed with 20 years of business and entrepreneurial experience and having faced financial ruin during the 2020 lockdowns, Wassim reinvented himself by deep-diving into the cryptocurrency and digital asset space. Starting from scratch in 2021, through education, determination and perseverance, he now manages a multiple 6-figure digital asset portfolio. Wassim is passionate about helping individuals to reclaim their financial sovereignty and he is driven by a mission for a fairer and more equitable world. As part of the Breakout Solutions team, he educates people to utilise digital assets to transcend the constraints of the debt-driven financial matrix, empowering them to achieve financial freedom.",
 		"avatarSrc": "/images/speakers/wassimDabboussi.png",
 		"companySrc": "/images/logo/breakout.png",
@@ -356,10 +366,10 @@
 	{
 		"_id": "33",
 		"name": "Rachael Jones",
-		"description": "Rachael brings a wealth of knowledge and a fresh perspective to discussions around finance, technology, and innovation. Her talks are grounded in practical experience and enriched by her ongoing engagement with the latest trends in blockchain and Web3.",
-		"jobTitle": "Business Analyst, BlockConsult",
+		"description": "Rachael Jones is a Co-Founder and Head of Operations at Women in Digital Economy (WID_Economy), championing Web3 innovation and blockchain's transformative potential. Her strategic insights are drawn from a Master’s in Management in Financial Economics and a Diploma in Applied Blockchain which she leverages to drive WID_Economy's mission of empowering women in technology and digital finance. Rachael brings her expertise in Web3 project consulting along with a strong background in traditional finance.",
+		"jobTitle": "Co-founder, Women in Digital Economy",
 		"avatarSrc": "/images/speakers/rachaelJones.png",
-		"companySrc": "/images/logo/blockConsult.png",
+		"companySrc": "/images/logo/wide.png",
 		"isSpeaker": true
 	},
 	{
@@ -368,6 +378,109 @@
 		"jobTitle": "Foundation Chairman, Datamall Coin",
 		"avatarSrc": "/images/speakers/victorChen.png",
 		"companySrc": "/images/logo/dmc.png",
+		"isSpeaker": true
+	},
+	{
+		"_id": "39",
+		"name": "Jock Haslam",
+		"description":"Jock is a Director at Hashlock, Australia's leading Blockchain Cyber Security and Smart Contract Auditing Firm. Hashlock's focus on manual-analysis led security research helps secure startups to enterprise blockchain innovations, both in Australia and globally.",
+		"jobTitle": "Director, Hashlock",
+		"avatarSrc": "/images/speakers/jock.jpg",
+		"companySrc": "/images/logo/hashlock.png",
+		"isSpeaker": true
+	},
+	{
+		"_id": "40",
+		"name": "Fletcher Roberts",
+		"description":"Fletcher is a Director at Hashlock, Australia's leading Blockchain Cyber Security and Smart Contract Auditing Firm. Hashlock's focus on manual-analysis led security research helps secure startups to enterprise blockchain innovations, both in Australia and globally.",
+		"jobTitle": "Director, Hashlock",
+		"avatarSrc": "/images/speakers/fletcherRoberts.jpg",
+		"companySrc": "/images/logo/hashlock.png",
+		"isSpeaker": true
+	},
+	{
+		"_id": "41",
+		"name": "Electra Frost",
+		"description":"Electra Frost is an accounting innovator at the bleeding edge, championing the open knowledge economy with Web3 technologies. Her work at Digital Playhouse Foundation, particularly with Accountants On-Chain and The School of Bitcoin, has redefined her accounting practice into a co-opetition model through ElectraFi. In 2024, she's developing CREDU, a gateway for accountants and professionals into the Bitcoin Web3 ecosystem, facilitating tokenised credentials for their CPD verification, compliance and monetisation. Her dedication to integrating blockchain into small and medium accounting practices marks a shift towards a more collaborative, transparent, and tech-adaptive industry that is ready to guide businesses entering the space.",
+		"jobTitle": "Director, ElectraFi",
+		"avatarSrc": "/images/speakers/electraFrost.jpg",
+		"isSpeaker": true
+	},
+	{
+		"_id": "42",
+		"name": "Renee Francis",
+		"description":"After working for 10 years in 10 different companies in the traditional corporate world - in structures & environments that did not serve her, Renee built the grit and desire to shake up the 9-5 world. At the age of 27, Renee Francis founded The Bubble Co, now a multi-million-dollar web2 digital marketing agency and is also the founder and director of the web3 agency, Take3. Renee is a seasoned web3 native and has spoken on web3 stages all over the world. Renee’s mission is simple: to empower others to join her in shaping the future of the decentralised web.",
+		"jobTitle": "Founder and Director, Take3",
+		"avatarSrc": "/images/speakers/reneeFrancis.jpg",
+		"companySrc": "/images/logo/take3-Francis-Renee.png",
+		"isSpeaker": true
+	},
+	{
+		"_id": "43",
+		"name": "Peter Argent",
+		"description":"Pete is a technology educator and founder of U Cubed, a social enterprise whose mission is to empower the world's youth with Web3 digital skills.Pete’s tech career started at IBM until he launched a coding school in Sydney in 2013. Teaching thousands of people to code across Australia, led to engagements with a UN agency, delivering innovation and emerging tech workshops in India, Philippines, Bangladesh, Iran and Sri Lanka, where he lived for a time until the pandemic.Since 2021, he has lectured at RMIT University, teaching blockchain economics and entrepreneurship.",
+		"jobTitle": "Founder and Educator, U Cubed",
+		"avatarSrc": "/images/speakers/peterArgent.jpg",
+		"companySrc": "/images/logo/ucubed-Peter Argent.png",
+		"isSpeaker": true
+	},
+	{
+		"_id": "44",
+		"name": "Washington Sanchez",
+		"description":"I'm the Product Lead of Kraken's NFT marketplace, kNFT (http://www.kraken.com/nft ). I'm privileged to lead an amazing team that works tirelessly to bring NFTs to millions of our clients in a safe, easy, and delightful experience.Previously a co-founder of a startup company called OB1, which offers services to the users of the OpenBazaar network. Core developer of the OpenBazaar project, which is a decentralized peer-to-peer marketplace that uses Bitcoin.",
+		"jobTitle": "Head Of Tech and Business Pr, Kraken",
+		"avatarSrc": "/images/speakers/washington Sanchez.jpg",
+		"isSpeaker": true
+	},
+	{
+		"_id": "45",
+		"name": "Shiti Manghani",
+		"description":"Shiti Rastogi Manghani is an award-winning business leader with 14 years of experience across 11 countries managing multi-million-dollar projects. Currently, Manghani serves Find Satoshi Lab as its Chief Operating Officer where she oversees all marketing and communications growth initiatives for Find Satoshi Lab, as well as the brands it oversees. Manghani is an Electronics Engineer and holds an MBA in Marketing. She founded her own computer vision-based AI start-up, which is among the Top 50 well-being start-ups in the UK (At no. 14) and in the Top 100 health companies in the UK. Previously, she has worked towards launching Wall Street Journal’s digital arm in India and building power brands at PepsiCo US.",
+		"jobTitle": "CEO, Find Satoshi Lab",
+		"avatarSrc": "/images/speakers/shitiManghani.jpg",
+		"isSpeaker": true
+	},
+	{
+		"_id": "46",
+		"name": "Laurene Mcmeckan",
+		"description":"Laurene is the Business Development Lead at Omniscia.io, one of the most trusted and fastest-growing blockchain security firms globally. She has been leading global BD efforts at Omniscia since its early days at the start of 2021, with a recent focus on the APAC region. With her experience as an ex-lawyer and a global citizen, having worked and lived in multiple countries, Laurene has helped catapult Omniscia to its position as a leader in the industry, serving clients such as L'Oreal, Gnosis and Ava Labs.",
+		"jobTitle": "BD Lead, Omniscia",
+		"avatarSrc": "/images/speakers/laureneMcmeckan.jpg",
+		"companySrc": "/images/logo/omniscia-Mcmeckan-Laurene.png",
+		"isSpeaker": true
+	},
+	{
+		"_id": "48",
+		"name": "Pavel Entin",
+		"description":"With 28 years of professional experience, I am the CEO and co-founder of a visionary company that leverages AI and Web 3.0 technologies to create a human-centric and sustainable digital world. I have a PhD in International Economics and a passion for innovation, liberty, and social impact. As a former CFO of multi-billion corporations and a successful venture capitalist, I have led and participated in multiple IPOs, ICOs, and private placements, generating over $ 300 million in value for my clients and partners. I have also done business and deals in more than 15 countries, gaining a global perspective and a diverse network. I enjoy mentoring young people who share my vision and values.",
+		"jobTitle": "CEO & Co-founder, SynPlanet",
+		"avatarSrc": "/images/speakers/pavelEntin.jpg",
+		"companySrc": "/images/logo/transparent-Entin-Pavel.png",
+		"isSpeaker": true
+	},
+	{
+		"_id": "49",
+		"name": "Yolanda Li",
+		"description":"Yolanda is an award-nominated product manager with over a decade of experience in delivering product solutions focused on ML capabilities. Her work has significantly contributed to the creation and global scaling of multiple GenAI product features, which are now loved by millions of customers around the world.",
+		"jobTitle": "Product Manager, Canva",
+		"avatarSrc": "/images/speakers/yolandaLi.jpg",
+		"isSpeaker": true
+	},
+	{
+		"_id": "50",
+		"name": "Lisa Wade",
+		"description":"Lisa Wade has 30 years of experience in financial services and pioneered both responsible investment, and the emerging decentralised finance ecosystem. She has extensive portfolio management experience including derivative trading, equities, ventures and innovating financial structures with real asset tokens. She co-created the RARI Responsible investment ETF and in her role as Head of Digital Innovation and Sustainability at NAB lead projects such as Project Atom - the Australian CBDC project with the RBA.",
+		"jobTitle": "Chief Executive Officer, Digital X",
+		"avatarSrc": "/images/speakers/lisaWade.jpg",
+		"companySrc": "/images/logo/logo-lisaWade.png",
+		"isSpeaker": true
+	},
+	{
+		"_id": "51",
+		"name": "David Harris",
+		"description":"David is a serial entrepreneur and technologist working at the intersection of Web3 media, marketing and creative industries. He is a co-founder of The Great Wave Group, a Singapore-based investor and developer of the Splash.club ecosystem, the Cur8/Anywall digital art display platform and the Monet Media marketing agency.",
+		"jobTitle": "Founder, The Great Wave",
+		"avatarSrc": "/images/speakers/davidHarris.jpg",
 		"isSpeaker": true
 	}
 ]
