@@ -201,15 +201,6 @@
 		"isSpeaker": true
 	},
 	{
-		"_id": "11",
-		"name": "Jacob Kobler ",
-		"description": "Jacob is the former Crypto Product Lead of Bitpanda, Europe’s leading crypto broker. He has previously worked at BCG, consulting on digital transformation and strategy. He currently leads consola.finance, a crypto accounting software that helps crypto companies and accounting firms save time and improve accuracy in crypto accounting and bookkeeping.",
-		"jobTitle": "CEO, Consola.finance",
-		"avatarSrc": "/images/speakers/jacobKobler.png",
-		"companySrc": "/images/logo/Consola.finance.jpg",
-		"isSpeaker": true
-	},
-	{
 		"_id": "8",
 		"name": "Nickie Scriven",
 		"description": "Nickie Scriven is a Non-Executive Director, former CEO of Zenith Media and the Founder of Chief Meta Chicks, a women's tech start-up community; and Alchemy8 Media, an independent marketing consultancy and agency. An Executive business, marketing and media professional with 27+ years' experience in business & marketing strategy, digital transformation, data, analytics & insights, e-commerce, communications & content, brand strategy & identity, digital & social media, public relations and sponsorship. An early adopter of Web3, excited by the opportunities and benefits of decentralisation and interoperability at a time when consumers are seeking control over their personal data and privacy. Passionate about educating and bringing more women on the web3 journey and the opportunities for innovation and business success. Working with communities, businesses and brands at the intersection of Web3 and IRL, via education, entertainment, e-commerce, socialisation and networking via her businesses Chief Meta Chicks and Alchemy8.",
@@ -481,6 +472,14 @@
 		"description":"David is a serial entrepreneur and technologist working at the intersection of Web3 media, marketing and creative industries. He is a co-founder of The Great Wave Group, a Singapore-based investor and developer of the Splash.club ecosystem, the Cur8/Anywall digital art display platform and the Monet Media marketing agency.",
 		"jobTitle": "Founder, The Great Wave",
 		"avatarSrc": "/images/speakers/davidHarris.jpg",
+		"isSpeaker": true
+	},
+	{
+		"_id": "52",
+		"name": "Babu Pillai",
+		"description":"Dr Babu Pillai is a Lecturer and researcher at Southern Cross University within the Faculty of Science and Engineering, Gold Coast, Australia. His research interest is in Blockchain predominantly within the area of security, interoperability, digital assets and applications developments. He holds a PhD in Blockchain (cross-chain technology) and a Masters in Information Technology from Griffith University.",
+		"jobTitle": "Lecturer, Southern Cross University",
+		"avatarSrc": "/images/speakers/babuPillai.jpg",
 		"isSpeaker": true
 	}
 ]
