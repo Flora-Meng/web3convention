@@ -87,10 +87,6 @@ const linkConfigList = [
 		href: 'https://w3con.eventsair.com/web3convention/startupcomp'
 	},
 	{
-		label: 'Apply to Speak',
-		href: 'https://w3con.eventsair.com/web3convention/ats/Site/Register'
-	},
-	{
 		label: 'Apply to Volunteer',
 		href: 'https://w3con.eventsair.com/web3convention/atv'
 	}

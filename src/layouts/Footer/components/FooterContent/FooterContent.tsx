@@ -164,10 +164,6 @@ const linkConfigList = [
 		path: '/agenda'
 	},
 	{
-		label: 'Apply to Speak',
-		path: 'https://w3con.eventsair.com/web3convention/ats/Site/Register'
-	},
-	{
 		label: 'Volunteers',
 		path: 'https://w3con.eventsair.com/web3convention/atv'
 	}
