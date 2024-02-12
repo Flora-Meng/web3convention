@@ -374,6 +374,12 @@
 				"logoSrc": "/images/sponsors/BY-DAO.png",
 				"logoSrcHighlight": "/images/sponsors/BY-DAO.png",
 				"url": "https://twitter.com/bydao_cn?s=21&t=YGD_-6sQ1MqcdazEZoMlTw"
+			},
+			{
+				"_id": "55",
+				"logoSrc": "/images/sponsors/acic-logo.png",
+				"logoSrcHighlight": "/images/sponsors/acic-logo.png",
+				"url": ""
 			}
 		]
 	},
@@ -512,6 +518,12 @@
 				"logoSrc": "./images/sponsors/allconfs-logo.png",
 				"logoSrcHighlight": "/images/sponsors/allconfs-logo.png",
 				"url": "https://allconfsbot.website/"
+			},
+			{
+				"_id": "75",
+				"logoSrc": "./images/sponsors/pr-partner-logo.png",
+				"logoSrcHighlight": "/images/sponsors/pr-partner-logo.png.png",
+				"url": ""
 			}
 
 		]
