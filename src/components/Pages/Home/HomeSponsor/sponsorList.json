@@ -107,6 +107,73 @@
 			}
 		]
 	},
+{
+	"groupId": 7,
+		"groupName": "VC PARTNERS",
+		"sponsor": [
+			{
+				"_id": "1",
+				"logoSrc": "./images/vc-partners/okx.png",
+				"logoSrcHighlight": "/images/vc-partners/okx.png",
+				"url": "https://www.okx.com/ventures"
+			},
+			{
+				"_id": "2",
+				"logoSrc": "./images/vc-partners/abcde-logo.png",
+				"logoSrcHighlight": "/images/vc-partners/abcde-logo.png"
+			},
+			{
+				"_id": "3",
+				"logoSrc": "/images/vc-partners/bewater.jpg",
+				"logoSrcHighlight": "/images/vc-partners/bewater.jpg",
+				"url": "https://bewater.xyz/"
+			},
+			{
+				"_id": "4",
+				"logoSrc": "/images/vc-partners/frontier-research.png",
+				"logoSrcHighlight": "/images/vc-partners/frontier-research.png",
+				"url": "https://www.qianba.com/"
+			},
+			{
+				"_id": "5",
+				"logoSrc": "./images/vc-partners/inception-FoF-transparent.png",
+				"logoSrcHighlight": "/images/vc-partners/inception-FoF-transparent.png",
+				"url": "https://www.inception.capital/"
+			},
+			{
+				"_id": "6",
+				"logoSrc": "./images/vc-partners/sbl_black_logo.jpg",
+				"logoSrcHighlight": "/images/vc-partners/sbl_black_logo.jpg",
+				"url": "https://swissblockchainlabs.org/"
+			},
+			{
+				"_id": "7",
+				"logoSrc": "./images/vc-partners/future3-campus.png",
+				"logoSrcHighlight": "/images/vc-partners/future3-campus.png",
+				"url": "http://www.future3.io/#/home"
+			},
+			{
+				"_id": "8",
+				"logoSrc": "/images/vc-partners/cute-labs.png",
+				"logoSrcHighlight": "/images/vc-partners/cute-labs.png",
+				"url": "https://www.youtube.com/@GiantCutie-CH"				
+			},
+			{
+				"_id": "9",
+				"logoSrc": "/images/vc-partners/prodigital.png",
+				"logoSrcHighlight": "/images/vc-partners/prodigital.png",
+				"url": "https://www.prodigitalfund.com/"
+			},
+			{
+				"_id": "10",
+				"logoSrc": "/images/vc-partners/dibscapital.svg",
+				"logoSrcHighlight": "/images/vc-partners/dibscapital.svg",
+				"url": "https://dibscapital.com/home/"
+			}
+		]
+},
+
+
 	{
 		"groupId": 4,
 		"groupName": "STRATEGIC PARTNERS",
