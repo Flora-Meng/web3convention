@@ -111,7 +111,6 @@ const HomePosts: React.FC = () => {
 									alt={post.title}
 									fill
 									unoptimized
-									priority
 								/>
 							</ImageItem>
 							<Link href={postLink}>

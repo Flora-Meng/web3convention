@@ -30,6 +30,97 @@
 		]
 	},
 	{
+		"groupId": 7,
+		"groupName": "VC PARTNERS",
+		"sponsor": [
+			{
+				"_id": "1",
+				"logoSrc": "./images/vc-partners/okx.png",
+				"logoSrcHighlight": "/images/vc-partners/okx.png",
+				"url": "https://www.okx.com/ventures"
+			},
+			{
+				"_id": "2",
+				"logoSrc": "./images/vc-partners/abcde-logo.png",
+				"logoSrcHighlight": "/images/vc-partners/abcde-logo.png"
+			},
+			{
+				"_id": "3",
+				"logoSrc": "/images/vc-partners/bewater.jpg",
+				"logoSrcHighlight": "/images/vc-partners/bewater.jpg",
+				"url": "https://bewater.xyz/"
+			},
+			{
+				"_id": "2",
+				"logoSrc": "./images/vc-partners/kucion-labs.png",
+				"logoSrcHighlight": "/images/vc-partners/kucion-labs.png"
+			},
+			{
+				"_id": "2",
+				"logoSrc": "./images/vc-partners/c-ventures.png",
+				"logoSrcHighlight": "/images/vc-partners/c-ventures.png"
+			},
+			{
+				"_id": "2",
+				"logoSrc": "./images/vc-partners/hashkey-capital.png",
+				"logoSrcHighlight": "/images/vc-partners/hashkey-capital.png"
+			},
+			{
+				"_id": "2",
+				"logoSrc": "./images/vc-partners/bixin-logo.svg",
+				"logoSrcHighlight": "/images/vc-partners/bixin-logo.svg"
+			},
+			{
+				"_id": "4",
+				"logoSrc": "/images/vc-partners/find-satoshi-lab-logo.png",
+				"logoSrcHighlight": "/images/vc-partners/find-satoshi-lab-logo.png",
+				"url": "https://www.qianba.com/"
+			},
+			{
+				"_id": "4",
+				"logoSrc": "/images/vc-partners/frontier-research.png",
+				"logoSrcHighlight": "/images/vc-partners/frontier-research.png",
+				"url": "https://www.qianba.com/"
+			},
+			{
+				"_id": "5",
+				"logoSrc": "./images/vc-partners/inception-FoF-transparent.png",
+				"logoSrcHighlight": "/images/vc-partners/inception-FoF-transparent.png",
+				"url": "https://www.inception.capital/"
+			},
+			{
+				"_id": "6",
+				"logoSrc": "./images/vc-partners/sbl_black_logo.jpg",
+				"logoSrcHighlight": "/images/vc-partners/sbl_black_logo.jpg",
+				"url": "https://swissblockchainlabs.org/"
+			},
+			{
+				"_id": "7",
+				"logoSrc": "./images/vc-partners/future3-campus.png",
+				"logoSrcHighlight": "/images/vc-partners/future3-campus.png",
+				"url": "http://www.future3.io/#/home"
+			},
+			{
+				"_id": "8",
+				"logoSrc": "/images/vc-partners/cute-labs.png",
+				"logoSrcHighlight": "/images/vc-partners/cute-labs.png",
+				"url": "https://www.youtube.com/@GiantCutie-CH"
+			},
+			{
+				"_id": "9",
+				"logoSrc": "/images/vc-partners/prodigital.png",
+				"logoSrcHighlight": "/images/vc-partners/prodigital.png",
+				"url": "https://www.prodigitalfund.com/"
+			},
+			{
+				"_id": "10",
+				"logoSrc": "/images/vc-partners/dibscapital.svg",
+				"logoSrcHighlight": "/images/vc-partners/dibscapital.svg",
+				"url": "https://dibscapital.com/home/"
+			}
+		]
+	},
+	{
 		"groupId": 3,
 		"groupName": "SPONSORS",
 		"sponsor": [
@@ -157,7 +248,7 @@
 				"_id": "17",
 				"logoSrc": "/images/sponsors/conflux.png",
 				"logoSrcHighlight": "/images/sponsors/conflux.png",
-				"url": "https://confluxnetwork.org/"				
+				"url": "https://confluxnetwork.org/"
 			},
 			{
 				"_id": "18",
@@ -374,6 +465,12 @@
 				"logoSrc": "/images/sponsors/BY-DAO.png",
 				"logoSrcHighlight": "/images/sponsors/BY-DAO.png",
 				"url": "https://twitter.com/bydao_cn?s=21&t=YGD_-6sQ1MqcdazEZoMlTw"
+			},
+			{
+				"_id": "55",
+				"logoSrc": "/images/sponsors/acic-logo.png",
+				"logoSrcHighlight": "/images/sponsors/acic-logo.png",
+				"url": ""
 			}
 		]
 	},
@@ -512,8 +609,13 @@
 				"logoSrc": "./images/sponsors/allconfs-logo.png",
 				"logoSrcHighlight": "/images/sponsors/allconfs-logo.png",
 				"url": "https://allconfsbot.website/"
+			},
+			{
+				"_id": "75",
+				"logoSrc": "./images/sponsors/pr-partner-logo.png",
+				"logoSrcHighlight": "/images/sponsors/pr-partner-logo.png.png",
+				"url": ""
 			}
-
 		]
 	}
 ]

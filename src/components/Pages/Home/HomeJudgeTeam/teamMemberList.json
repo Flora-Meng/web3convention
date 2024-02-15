@@ -40,7 +40,6 @@
 		"isSpeaker": true,
 		"avatarSrc": "/images/speakers/Herbert.png",
 		"companySrc": "/images/logo/internet-computer.png"
-
 	},
 	{
 		"_id": "34",
@@ -69,6 +68,15 @@
 		"avatarSrc": "/images/speakers/danielWu.png",
 		"isSpeaker": true,
 		"companySrc": "/images/logo/jpmorgan.png"
+	},
+	{
+		"_id": "44",
+		"name": "Washington Sanchez",
+		"description": "I'm the Product Lead of Kraken's NFT marketplace, kNFT (http://www.kraken.com/nft ). I'm privileged to lead an amazing team that works tirelessly to bring NFTs to millions of our clients in a safe, easy, and delightful experience.Previously a co-founder of a startup company called OB1, which offers services to the users of the OpenBazaar network. Core developer of the OpenBazaar project, which is a decentralized peer-to-peer marketplace that uses Bitcoin.",
+		"jobTitle": "Product Lead for Kraken NFT Marketplace",
+		"avatarSrc": "/images/speakers/washington Sanchez.jpg",
+		"companySrc": "/images/logo/kraken-vector-logo.png",
+		"isSpeaker": true
 	},
 	{
 		"_id": "20",
@@ -114,12 +122,11 @@
 		"isSpeaker": true
 	},
 	{
-		"_id": "25",
-		"name": "Daniel Leslie",
-		"description": "Daniel has been a miner since 2018 and over this time has built up a portfolio of Bitcoin miners. He has been involved in building out multi-megawatt mining projects with both air and immersion cooling setups. HashX is Australia’s premier supplier of mining hardware, with operations across Australia, New Zealand and South East Asia. HashX serves customers ranging from buying your first miner through to large-scale industrial mining farms.",
-		"jobTitle": "Business Development Manager HashX Mining",
-		"avatarSrc": "/images/speakers/danielLeslie.png",
-		"companySrc": "/images/logo/hashx.jpg",
+		"_id": "49",
+		"name": "Yolanda Li",
+		"description": "Yolanda is an award-nominated product manager with over a decade of experience in delivering product solutions focused on ML capabilities. Her work has significantly contributed to the creation and global scaling of multiple GenAI product features, which are now loved by millions of customers around the world.",
+		"jobTitle": "Product Manager, Canva",
+		"avatarSrc": "/images/speakers/yolandaLi.jpg",
 		"isSpeaker": true
 	},
 	{
@@ -129,6 +136,15 @@
 		"jobTitle": "CEO & Co-Founder of Dibs Capital",
 		"avatarSrc": "/images/speakers/yaelTamar.jpg",
 		"companySrc": "/images/logo/dibs-capital.png",
+		"isSpeaker": true
+	},
+	{
+		"_id": "25",
+		"name": "Daniel Leslie",
+		"description": "Daniel has been a miner since 2018 and over this time has built up a portfolio of Bitcoin miners. He has been involved in building out multi-megawatt mining projects with both air and immersion cooling setups. HashX is Australia’s premier supplier of mining hardware, with operations across Australia, New Zealand and South East Asia. HashX serves customers ranging from buying your first miner through to large-scale industrial mining farms.",
+		"jobTitle": "Business Development Manager HashX Mining",
+		"avatarSrc": "/images/speakers/danielLeslie.png",
+		"companySrc": "/images/logo/hashx.jpg",
 		"isSpeaker": true
 	},
 	{
@@ -185,6 +201,15 @@
 		"isSpeaker": true
 	},
 	{
+		"_id": "45",
+		"name": "Shiti Manghani",
+		"description": "Shiti Rastogi Manghani is an award-winning business leader with 14 years of experience across 11 countries managing multi-million-dollar projects. Currently, Manghani serves Find Satoshi Lab as its Chief Operating Officer where she oversees all marketing and communications growth initiatives for Find Satoshi Lab, as well as the brands it oversees. Manghani is an Electronics Engineer and holds an MBA in Marketing. She founded her own computer vision-based AI start-up, which is among the Top 50 well-being start-ups in the UK (At no. 14) and in the Top 100 health companies in the UK. Previously, she has worked towards launching Wall Street Journal’s digital arm in India and building power brands at PepsiCo US.",
+		"jobTitle": "CEO, Find Satoshi Lab",
+		"avatarSrc": "/images/speakers/shitiManghani.jpg",
+		"companySrc": "/images/logo/find-satoshi-lab-logo.png",
+		"isSpeaker": true
+	},
+	{
 		"_id": "35",
 		"name": "Larry",
 		"jobTitle": "Senior Business Development Manager, Hashkey Exchange",
@@ -198,15 +223,6 @@
 		"description": "Internationally revered expert on launching new innovations, popular presenter, highly sought-after trainer of senior executives in marketing and strategy, acclaimed author in leadership management and business strategy, with a 45-year career of successful business achievements. After reaching the CMO level in FMCG, Leigh moved into consulting for national and multi-national organizations and training larger c-suite executives. Part of the strategic consulting firm, Leadership Empowerment, Leigh facilitates leadership and management decision-making in strategy and planning.",
 		"jobTitle": "Director Of Strategic Planning Leadership Empowerment Pty Ltd",
 		"avatarSrc": "/images/speakers/leighCowan.jpeg",
-		"isSpeaker": true
-	},
-	{
-		"_id": "11",
-		"name": "Jacob Kobler ",
-		"description": "Jacob is the former Crypto Product Lead of Bitpanda, Europe’s leading crypto broker. He has previously worked at BCG, consulting on digital transformation and strategy. He currently leads consola.finance, a crypto accounting software that helps crypto companies and accounting firms save time and improve accuracy in crypto accounting and bookkeeping.",
-		"jobTitle": "CEO, Consola.finance",
-		"avatarSrc": "/images/speakers/jacobKobler.png",
-		"companySrc": "/images/logo/Consola.finance.jpg",
 		"isSpeaker": true
 	},
 	{
@@ -278,6 +294,15 @@
 		"description": "Simon has spent his career within innovative technologies, including working with blockchain and financial technologies in Australia, the US, the UK, Asia, and Europe. Most recently leading the Digital Assets Programme at the University of Cambridge and as Co-Founder of middle office startup MOOPS Tech. He holds an MBA from AGSM and a Masters degree from Cambridge.",
 		"jobTitle": "CEO, Blockchain Australia",
 		"avatarSrc": "/images/speakers/simonCallaghan.png",
+		"isSpeaker": true
+	},
+	{
+		"_id": "50",
+		"name": "Lisa Wade",
+		"description": "Lisa Wade has 30 years of experience in financial services and pioneered both responsible investment, and the emerging decentralised finance ecosystem. She has extensive portfolio management experience including derivative trading, equities, ventures and innovating financial structures with real asset tokens. She co-created the RARI Responsible investment ETF and in her role as Head of Digital Innovation and Sustainability at NAB lead projects such as Project Atom - the Australian CBDC project with the RBA.",
+		"jobTitle": "Chief Executive Officer, Digital X",
+		"avatarSrc": "/images/speakers/lisaWade.jpg",
+		"companySrc": "/images/logo/logo-lisaWade.png",
 		"isSpeaker": true
 	},
 	{
@@ -383,7 +408,7 @@
 	{
 		"_id": "39",
 		"name": "Jock Haslam",
-		"description":"Jock is a Director at Hashlock, Australia's leading Blockchain Cyber Security and Smart Contract Auditing Firm. Hashlock's focus on manual-analysis led security research helps secure startups to enterprise blockchain innovations, both in Australia and globally.",
+		"description": "Jock is a Director at Hashlock, Australia's leading Blockchain Cyber Security and Smart Contract Auditing Firm. Hashlock's focus on manual-analysis led security research helps secure startups to enterprise blockchain innovations, both in Australia and globally.",
 		"jobTitle": "Director, Hashlock",
 		"avatarSrc": "/images/speakers/jock.jpg",
 		"companySrc": "/images/logo/hashlock.png",
@@ -392,7 +417,7 @@
 	{
 		"_id": "40",
 		"name": "Fletcher Roberts",
-		"description":"Fletcher is a Director at Hashlock, Australia's leading Blockchain Cyber Security and Smart Contract Auditing Firm. Hashlock's focus on manual-analysis led security research helps secure startups to enterprise blockchain innovations, both in Australia and globally.",
+		"description": "Fletcher is a Director at Hashlock, Australia's leading Blockchain Cyber Security and Smart Contract Auditing Firm. Hashlock's focus on manual-analysis led security research helps secure startups to enterprise blockchain innovations, both in Australia and globally.",
 		"jobTitle": "Director, Hashlock",
 		"avatarSrc": "/images/speakers/fletcherRoberts.jpg",
 		"companySrc": "/images/logo/hashlock.png",
@@ -401,15 +426,16 @@
 	{
 		"_id": "41",
 		"name": "Electra Frost",
-		"description":"Electra Frost is an accounting innovator at the bleeding edge, championing the open knowledge economy with Web3 technologies. Her work at Digital Playhouse Foundation, particularly with Accountants On-Chain and The School of Bitcoin, has redefined her accounting practice into a co-opetition model through ElectraFi. In 2024, she's developing CREDU, a gateway for accountants and professionals into the Bitcoin Web3 ecosystem, facilitating tokenised credentials for their CPD verification, compliance and monetisation. Her dedication to integrating blockchain into small and medium accounting practices marks a shift towards a more collaborative, transparent, and tech-adaptive industry that is ready to guide businesses entering the space.",
+		"description": "Electra Frost is an accounting innovator at the bleeding edge, championing the open knowledge economy with Web3 technologies. Her work at Digital Playhouse Foundation, particularly with Accountants On-Chain and The School of Bitcoin, has redefined her accounting practice into a co-opetition model through ElectraFi. In 2024, she's developing CREDU, a gateway for accountants and professionals into the Bitcoin Web3 ecosystem, facilitating tokenised credentials for their CPD verification, compliance and monetisation. Her dedication to integrating blockchain into small and medium accounting practices marks a shift towards a more collaborative, transparent, and tech-adaptive industry that is ready to guide businesses entering the space.",
 		"jobTitle": "Director, ElectraFi",
 		"avatarSrc": "/images/speakers/electraFrost.jpg",
+		"companySrc": "/images/logo/electrafi.svg",
 		"isSpeaker": true
 	},
 	{
 		"_id": "42",
 		"name": "Renee Francis",
-		"description":"After working for 10 years in 10 different companies in the traditional corporate world - in structures & environments that did not serve her, Renee built the grit and desire to shake up the 9-5 world. At the age of 27, Renee Francis founded The Bubble Co, now a multi-million-dollar web2 digital marketing agency and is also the founder and director of the web3 agency, Take3. Renee is a seasoned web3 native and has spoken on web3 stages all over the world. Renee’s mission is simple: to empower others to join her in shaping the future of the decentralised web.",
+		"description": "After working for 10 years in 10 different companies in the traditional corporate world - in structures & environments that did not serve her, Renee built the grit and desire to shake up the 9-5 world. At the age of 27, Renee Francis founded The Bubble Co, now a multi-million-dollar web2 digital marketing agency and is also the founder and director of the web3 agency, Take3. Renee is a seasoned web3 native and has spoken on web3 stages all over the world. Renee’s mission is simple: to empower others to join her in shaping the future of the decentralised web.",
 		"jobTitle": "Founder and Director, Take3",
 		"avatarSrc": "/images/speakers/reneeFrancis.jpg",
 		"companySrc": "/images/logo/take3-Francis-Renee.png",
@@ -418,32 +444,16 @@
 	{
 		"_id": "43",
 		"name": "Peter Argent",
-		"description":"Pete is a technology educator and founder of U Cubed, a social enterprise whose mission is to empower the world's youth with Web3 digital skills.Pete’s tech career started at IBM until he launched a coding school in Sydney in 2013. Teaching thousands of people to code across Australia, led to engagements with a UN agency, delivering innovation and emerging tech workshops in India, Philippines, Bangladesh, Iran and Sri Lanka, where he lived for a time until the pandemic.Since 2021, he has lectured at RMIT University, teaching blockchain economics and entrepreneurship.",
+		"description": "Pete is a technology educator and founder of U Cubed, a social enterprise whose mission is to empower the world's youth with Web3 digital skills.Pete’s tech career started at IBM until he launched a coding school in Sydney in 2013. Teaching thousands of people to code across Australia, led to engagements with a UN agency, delivering innovation and emerging tech workshops in India, Philippines, Bangladesh, Iran and Sri Lanka, where he lived for a time until the pandemic.Since 2021, he has lectured at RMIT University, teaching blockchain economics and entrepreneurship.",
 		"jobTitle": "Founder and Educator, U Cubed",
 		"avatarSrc": "/images/speakers/peterArgent.jpg",
 		"companySrc": "/images/logo/ucubed-Peter Argent.png",
 		"isSpeaker": true
 	},
 	{
-		"_id": "44",
-		"name": "Washington Sanchez",
-		"description":"I'm the Product Lead of Kraken's NFT marketplace, kNFT (http://www.kraken.com/nft ). I'm privileged to lead an amazing team that works tirelessly to bring NFTs to millions of our clients in a safe, easy, and delightful experience.Previously a co-founder of a startup company called OB1, which offers services to the users of the OpenBazaar network. Core developer of the OpenBazaar project, which is a decentralized peer-to-peer marketplace that uses Bitcoin.",
-		"jobTitle": "Head Of Tech and Business Pr, Kraken",
-		"avatarSrc": "/images/speakers/washington Sanchez.jpg",
-		"isSpeaker": true
-	},
-	{
-		"_id": "45",
-		"name": "Shiti Manghani",
-		"description":"Shiti Rastogi Manghani is an award-winning business leader with 14 years of experience across 11 countries managing multi-million-dollar projects. Currently, Manghani serves Find Satoshi Lab as its Chief Operating Officer where she oversees all marketing and communications growth initiatives for Find Satoshi Lab, as well as the brands it oversees. Manghani is an Electronics Engineer and holds an MBA in Marketing. She founded her own computer vision-based AI start-up, which is among the Top 50 well-being start-ups in the UK (At no. 14) and in the Top 100 health companies in the UK. Previously, she has worked towards launching Wall Street Journal’s digital arm in India and building power brands at PepsiCo US.",
-		"jobTitle": "CEO, Find Satoshi Lab",
-		"avatarSrc": "/images/speakers/shitiManghani.jpg",
-		"isSpeaker": true
-	},
-	{
 		"_id": "46",
 		"name": "Laurene Mcmeckan",
-		"description":"Laurene is the Business Development Lead at Omniscia.io, one of the most trusted and fastest-growing blockchain security firms globally. She has been leading global BD efforts at Omniscia since its early days at the start of 2021, with a recent focus on the APAC region. With her experience as an ex-lawyer and a global citizen, having worked and lived in multiple countries, Laurene has helped catapult Omniscia to its position as a leader in the industry, serving clients such as L'Oreal, Gnosis and Ava Labs.",
+		"description": "Laurene is the Business Development Lead at Omniscia.io, one of the most trusted and fastest-growing blockchain security firms globally. She has been leading global BD efforts at Omniscia since its early days at the start of 2021, with a recent focus on the APAC region. With her experience as an ex-lawyer and a global citizen, having worked and lived in multiple countries, Laurene has helped catapult Omniscia to its position as a leader in the industry, serving clients such as L'Oreal, Gnosis and Ava Labs.",
 		"jobTitle": "BD Lead, Omniscia",
 		"avatarSrc": "/images/speakers/laureneMcmeckan.jpg",
 		"companySrc": "/images/logo/omniscia-Mcmeckan-Laurene.png",
@@ -452,35 +462,27 @@
 	{
 		"_id": "48",
 		"name": "Pavel Entin",
-		"description":"With 28 years of professional experience, I am the CEO and co-founder of a visionary company that leverages AI and Web 3.0 technologies to create a human-centric and sustainable digital world. I have a PhD in International Economics and a passion for innovation, liberty, and social impact. As a former CFO of multi-billion corporations and a successful venture capitalist, I have led and participated in multiple IPOs, ICOs, and private placements, generating over $ 300 million in value for my clients and partners. I have also done business and deals in more than 15 countries, gaining a global perspective and a diverse network. I enjoy mentoring young people who share my vision and values.",
+		"description": "With 28 years of professional experience, I am the CEO and co-founder of a visionary company that leverages AI and Web 3.0 technologies to create a human-centric and sustainable digital world. I have a PhD in International Economics and a passion for innovation, liberty, and social impact. As a former CFO of multi-billion corporations and a successful venture capitalist, I have led and participated in multiple IPOs, ICOs, and private placements, generating over $ 300 million in value for my clients and partners. I have also done business and deals in more than 15 countries, gaining a global perspective and a diverse network. I enjoy mentoring young people who share my vision and values.",
 		"jobTitle": "CEO & Co-founder, SynPlanet",
 		"avatarSrc": "/images/speakers/pavelEntin.jpg",
 		"companySrc": "/images/logo/transparent-Entin-Pavel.png",
 		"isSpeaker": true
 	},
 	{
-		"_id": "49",
-		"name": "Yolanda Li",
-		"description":"Yolanda is an award-nominated product manager with over a decade of experience in delivering product solutions focused on ML capabilities. Her work has significantly contributed to the creation and global scaling of multiple GenAI product features, which are now loved by millions of customers around the world.",
-		"jobTitle": "Product Manager, Canva",
-		"avatarSrc": "/images/speakers/yolandaLi.jpg",
-		"isSpeaker": true
-	},
-	{
-		"_id": "50",
-		"name": "Lisa Wade",
-		"description":"Lisa Wade has 30 years of experience in financial services and pioneered both responsible investment, and the emerging decentralised finance ecosystem. She has extensive portfolio management experience including derivative trading, equities, ventures and innovating financial structures with real asset tokens. She co-created the RARI Responsible investment ETF and in her role as Head of Digital Innovation and Sustainability at NAB lead projects such as Project Atom - the Australian CBDC project with the RBA.",
-		"jobTitle": "Chief Executive Officer, Digital X",
-		"avatarSrc": "/images/speakers/lisaWade.jpg",
-		"companySrc": "/images/logo/logo-lisaWade.png",
-		"isSpeaker": true
-	},
-	{
 		"_id": "51",
 		"name": "David Harris",
-		"description":"David is a serial entrepreneur and technologist working at the intersection of Web3 media, marketing and creative industries. He is a co-founder of The Great Wave Group, a Singapore-based investor and developer of the Splash.club ecosystem, the Cur8/Anywall digital art display platform and the Monet Media marketing agency.",
+		"description": "David is a serial entrepreneur and technologist working at the intersection of Web3 media, marketing and creative industries. He is a co-founder of The Great Wave Group, a Singapore-based investor and developer of the Splash.club ecosystem, the Cur8/Anywall digital art display platform and the Monet Media marketing agency.",
 		"jobTitle": "Founder, The Great Wave",
 		"avatarSrc": "/images/speakers/davidHarris.jpg",
+		"isSpeaker": true
+	},
+	{
+		"_id": "52",
+		"name": "Babu Pillai",
+		"description": "Dr Babu Pillai is a Lecturer and researcher at Southern Cross University within the Faculty of Science and Engineering, Gold Coast, Australia. His research interest is in Blockchain predominantly within the area of security, interoperability, digital assets and applications developments. He holds a PhD in Blockchain (cross-chain technology) and a Masters in Information Technology from Griffith University.",
+		"jobTitle": "Lecturer, Southern Cross University",
+		"avatarSrc": "/images/speakers/babuPillai.jpg",
+		"companySrc": "/images/logo/southern-cross-university.png",
 		"isSpeaker": true
 	}
 ]
