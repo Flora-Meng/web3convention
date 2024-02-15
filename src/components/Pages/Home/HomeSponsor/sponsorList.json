@@ -107,8 +107,8 @@
 			}
 		]
 	},
-{
-	"groupId": 7,
+	{
+		"groupId": 7,
 		"groupName": "VC PARTNERS",
 		"sponsor": [
 			{
@@ -127,6 +127,26 @@
 				"logoSrc": "/images/vc-partners/bewater.jpg",
 				"logoSrcHighlight": "/images/vc-partners/bewater.jpg",
 				"url": "https://bewater.xyz/"
+			},
+			{
+				"_id": "2",
+				"logoSrc": "./images/vc-partners/kucion-labs.png",
+				"logoSrcHighlight": "/images/vc-partners/kucion-labs.png"
+			},
+			{
+				"_id": "2",
+				"logoSrc": "./images/vc-partners/c-ventures.png",
+				"logoSrcHighlight": "/images/vc-partners/c-ventures.png"
+			},
+			{
+				"_id": "2",
+				"logoSrc": "./images/vc-partners/hashkey-capital.png",
+				"logoSrcHighlight": "/images/vc-partners/hashkey-capital.png"
+			},
+			{
+				"_id": "2",
+				"logoSrc": "./images/vc-partners/bixin-logo.svg",
+				"logoSrcHighlight": "/images/vc-partners/bixin-logo.svg"
 			},
 			{
 				"_id": "4",
@@ -156,7 +176,7 @@
 				"_id": "8",
 				"logoSrc": "/images/vc-partners/cute-labs.png",
 				"logoSrcHighlight": "/images/vc-partners/cute-labs.png",
-				"url": "https://www.youtube.com/@GiantCutie-CH"				
+				"url": "https://www.youtube.com/@GiantCutie-CH"
 			},
 			{
 				"_id": "9",
@@ -171,9 +191,7 @@
 				"url": "https://dibscapital.com/home/"
 			}
 		]
-},
-
-
+	},
 	{
 		"groupId": 4,
 		"groupName": "STRATEGIC PARTNERS",
@@ -224,7 +242,7 @@
 				"_id": "17",
 				"logoSrc": "/images/sponsors/conflux.png",
 				"logoSrcHighlight": "/images/sponsors/conflux.png",
-				"url": "https://confluxnetwork.org/"				
+				"url": "https://confluxnetwork.org/"
 			},
 			{
 				"_id": "18",
@@ -592,7 +610,6 @@
 				"logoSrcHighlight": "/images/sponsors/pr-partner-logo.png.png",
 				"url": ""
 			}
-
 		]
 	}
 ]
