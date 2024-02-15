@@ -13,7 +13,7 @@ const PageHead: React.FC<PageHeadProps> = props => {
 	const {
 		meta: metaInfo,
 		url = 'https://web3convention.com/',
-		thumbnailSrc = 'https://web3convention.com/web3-logo.svg',
+		thumbnailSrc = '/images/demo/main-slider-background-2.jpg',
 		title
 	} = props;
 	const meta = {
