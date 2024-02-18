@@ -3,11 +3,13 @@ import CardContent from '@mui/material/CardContent';
 import dayjs from 'dayjs';
 import timezone from 'dayjs/plugin/timezone';
 import utc from 'dayjs/plugin/utc';
-import { isEmpty } from 'lodash';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
+import EventLocation from '../EventLocation';
+
+import calculateDistanceFromCoordinates from '@/services/calculateDistanceFromCoordinates';
 import { color, devices } from '@/styles/variables';
 import imageLoader from '@/utils/loader';
 
@@ -57,6 +59,16 @@ const ImageContainer = styled.div`
 	min-width: 14px;
 	position: relative;
 `;
+
+const MapContainer = styled.div`
+	height: 344px;
+	padding: 0px 12px 12px 12px;
+	width: auto;
+`;
+
+const ErrorMessage = styled.span`
+	color: red;
+`;
 interface eventDetailProps {
 	eventDetail: IMeetup;
 }
@@ -65,57 +77,71 @@ dayjs.extend(timezone);
 // eslint-disable-next-line @typescript-eslint/no-inferrable-types
 const format: string = 'dddd, MMM D, hA [GMT]Z';
 const LocationCard: React.FC<eventDetailProps> = ({ eventDetail }) => {
-	const { maxRSVPs, address, period, latitude, longitude } = eventDetail || {};
+	const { maxRSVPs, address, period } = eventDetail || {};
 
-	const [userLocation, setUserLocation] = useState<{ latitude?: number; longitude?: number }>({});
+	const [userLocation, setUserLocation] = useState<{ lat: number; lng: number } | undefined>(
+		undefined
+	);
+	const [eventCoordinates, setEventCoordinates] = useState<
+		{ lat: number; lng: number } | undefined
+	>(undefined);
 	const [distance, setDistance] = useState<number | undefined>(undefined);
+
+	const [error, setError] = useState<string | null>(null);
 
 	useEffect(() => {
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(position => {
 				setUserLocation({
-					latitude: position.coords.latitude,
-					longitude: position.coords.longitude
+					lat: position.coords.latitude,
+					lng: position.coords.longitude
 				});
 			});
 		}
 	}, []);
+	useEffect(() => {
+		const fetchCoordinates = async () => {
+			try {
+				const response = await fetch(
+					`https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(
+						address
+					)}&key=${process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY}`
+				);
+				const data = await response.json();
+				if (data.results && data.results.length > 0 && data.results[0].geometry) {
+					const { lat, lng } = data.results[0].geometry.location;
+					setEventCoordinates({ lat, lng });
+				} else {
+					setError('Location data not available');
+				}
+			} catch (err) {
+				setError('Failed to fetch exhibitor coordinates');
+			}
+		};
+
+		if (address) {
+			fetchCoordinates();
+		}
+	}, [address]);
 
 	useEffect(() => {
-		if (
-			!isEmpty(userLocation) &&
-			userLocation.latitude !== undefined &&
-			userLocation.longitude !== undefined &&
-			latitude !== undefined &&
-			longitude !== undefined
-		) {
-			setDistance(
-				// eslint-disable-next-line no-use-before-define
-				calculateDistance(
-					userLocation.latitude,
-					userLocation.longitude,
-					latitude,
-					longitude
-				)
-			);
-		}
-	}, [userLocation, latitude, longitude]);
+		const calculateDistance = async () => {
+			if (userLocation && eventCoordinates) {
+				try {
+					const response = await calculateDistanceFromCoordinates(
+						userLocation,
+						eventCoordinates
+					);
 
-	const calculateDistance = (lat1: number, lon1: number, lat2: number, lon2: number): number => {
-		const R = 6371; /* radius of earth */
-		const dLat: number = ((lat2 - lat1) * Math.PI) / 180;
-		const dLon: number = ((lon2 - lon1) * Math.PI) / 180;
-		/* variable to calculate spherical distance */
-		const a: number =
-			Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-			Math.cos((lat1 * Math.PI) / 180) *
-				Math.cos((lat2 * Math.PI) / 180) *
-				Math.sin(dLon / 2) *
-				Math.sin(dLon / 2);
-		const c: number = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-		return R * c;
-	};
+					setDistance(response.data.distance);
+				} catch (err) {
+					setError('Failed to fetch distance');
+				}
+			}
+		};
 
+		calculateDistance();
+	}, [userLocation, eventCoordinates]);
 	return (
 		<StyledCard>
 			<StyledCardContent>
@@ -160,15 +186,20 @@ const LocationCard: React.FC<eventDetailProps> = ({ eventDetail }) => {
 						</ImageContainer>
 						<div>
 							<DateInfo style={{ display: 'block' }}>{address}</DateInfo>
-							{distance && (
-								<DateInfo style={{ display: 'block' }}>
-									(Distance from you {distance.toFixed(2)} km)
-								</DateInfo>
-							)}
+
+							<DateInfo style={{ display: 'block' }}>
+								{/* (Distance from you {distance.toFixed(2)} km) */}
+								{distance !== undefined
+									? `(Distance from you ${distance})`
+									: '(Calculating distance...)'}
+							</DateInfo>
 						</div>
 					</InfoContainer>
 				)}
-				<DateInfo>Here should be map POI container</DateInfo>
+				<MapContainer>
+					{eventCoordinates && <EventLocation eventCoordinates={eventCoordinates} />}
+				</MapContainer>
+				{error && <ErrorMessage>Error: {error}</ErrorMessage>}
 			</StyledCardContent>
 		</StyledCard>
 	);
