@@ -105,25 +105,25 @@ const Location = () => {
         <SectionWrapperDiv>
         <Container>
             <Layer1>
-            <BoldText>LOCATION</BoldText>
+                <BoldText>LOCATION</BoldText>
             </Layer1>
             <Layer2>
-            <div>
-                <DecTitle>Location</DecTitle>
-                <Title>Location</Title>
-                <Subtitle>Venue:</Subtitle>
-                <Content>{venueInfo.venue}</Content>
-                <Subtitle>Address:</Subtitle>
-                <Content>{venueInfo.address}</Content>
-                <ButtonContainer>
-                <ThemeButton href={partnerButtonConfig.url}>
-                    {partnerButtonConfig.text}
-                </ThemeButton>
-                </ButtonContainer>
-            </div>
-            <MapDiv>
-                <VenueMap position={venueInfo.position}/>
-            </MapDiv>
+                <div>
+                    <DecTitle>Location</DecTitle>
+                    <Title>Location</Title>
+                    <Subtitle>Venue:</Subtitle>
+                    <Content>{venueInfo.venue}</Content>
+                    <Subtitle>Address:</Subtitle>
+                    <Content>{venueInfo.address}</Content>
+                    <ButtonContainer>
+                    <ThemeButton href={partnerButtonConfig.url}>
+                        {partnerButtonConfig.text}
+                    </ThemeButton>
+                    </ButtonContainer>
+                </div>
+                <MapDiv>
+                    <VenueMap position={venueInfo.position}/>
+                </MapDiv>
             </Layer2>
         </Container>
         </SectionWrapperDiv>
