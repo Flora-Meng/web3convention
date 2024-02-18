@@ -18,7 +18,7 @@ import PageTicket from '@/components/Shares/PageTicket';
 // import HomeTestimonial from '@/components/Pages/Home/HomeTestimonial';
 import DefaultLayout from '@/layouts/DefaultLayout';
 import PageHead from '@/layouts/PageHead';
-import { venueInfo } from '@/components/Pages/Venue/venueInfo';
+import venueInfo from '@/components/Pages/Venue/venueInfo.json';
 
 type ComponentType = React.FC & { layout: typeof DefaultLayout };
 

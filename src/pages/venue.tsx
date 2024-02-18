@@ -2,18 +2,16 @@ import styled from 'styled-components';
 
 import BrisBaneCity from '@/components/Pages/Venue/BrisbaneCity';
 import GoldCoastCity from '@/components/Pages/Venue/GoldCoastCity';
-// import VenueMap from '@/components/Pages/Venue/Map';
 import VenueGallery from '@/components/Pages/Venue/VenueGallery';
 import VenueIntroCards from '@/components/Pages/Venue/VenuIntroCards/VenueIntroCards';
 import PageBanner from '@/components/Shares/PageBanner';
 import PageCoverTitle from '@/components/Shares/PageCoverTitle';
-// import coverText from '@/components/Shares/PageCoverTitle/venueCoverText.json';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 import PageHead from '@/layouts/PageHead';
 import { devices } from '@/styles/variables';
 import Location from '@/components/Pages/Venue/Location';
-import { venueInfo } from '@/components/Pages/Venue/venueInfo';
+import venueInfo from '@/components/Pages/Venue/venueInfo.json';
 
 const Cover = styled.div`
 	background-image: url('/images/demo/venuePage/coverMobile.jpg');

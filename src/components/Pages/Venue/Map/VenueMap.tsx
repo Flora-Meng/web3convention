@@ -40,9 +40,9 @@ const VenueMap = ({ position } : { position: { lat:number; lng: number; }}) => {
 		return <h1>{status}</h1>;
 	};
 	return (
-		<Wrapper apiKey="AIzaSyDCKxgat91L8LiFigmKSwlcuO1_IUoBR5g" render={render}>
+		<Wrapper apiKey={process.env.GOOGLE_API || ''} render={render}>
 			<GoogleMap center={position} zoom={17}>
-				<Marker position={position} clickable={true} />
+				<Marker position={position} clickable />
 			</GoogleMap>
 		</Wrapper>
 	);

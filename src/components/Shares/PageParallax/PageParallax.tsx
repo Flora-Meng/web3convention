@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import ThemeButton from '@/components/Shares/ThemeButton';
 import { color, devices } from '@/styles/variables';
-import { venueInfo } from '@/components/Pages/Venue/venueInfo';
+import venueInfo from '@/components/Pages/Venue/venueInfo.json';
 
 const { whiteColor } = color;
 
