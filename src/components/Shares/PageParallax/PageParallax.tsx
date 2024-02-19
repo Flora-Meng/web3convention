@@ -1,9 +1,9 @@
 import { useRef } from 'react';
 import styled from 'styled-components';
 
+import venueInfo from '@/components/Pages/Venue/venueInfo.json';
 import ThemeButton from '@/components/Shares/ThemeButton';
 import { color, devices } from '@/styles/variables';
-import venueInfo from '@/components/Pages/Venue/venueInfo.json';
 
 const { whiteColor } = color;
 
@@ -43,9 +43,7 @@ const PageParallax: React.FC = () => {
 	return (
 		<HomeParallaxContainer ref={ParallaxContainer}>
 			<Title>Brisbane Convention & Exhibition Centre</Title>
-			<SubTitle>
-				Venue: {venueInfo.venue}
-			</SubTitle>
+			<SubTitle>Venue: {venueInfo.venue}</SubTitle>
 			<SubTitle>Address: {venueInfo.address}</SubTitle>
 			<SubTitle>Date: 18-19 May, 2024</SubTitle>
 			<ThemeButton href="https://web3convention.com/venue">VIEW MORE</ThemeButton>

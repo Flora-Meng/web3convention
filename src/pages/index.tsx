@@ -9,6 +9,7 @@ import teamMemberListHome from '@/components/Pages/Home/HomeJudgeTeam/teamMember
 import HomePosts from '@/components/Pages/Home/HomePosts';
 import HomeSponsor from '@/components/Pages/Home/HomeSponsor';
 // import HomeSubscription from '@/components/Pages/Home/HomeSubscription';
+import venueInfo from '@/components/Pages/Venue/venueInfo.json';
 import PageBanner from '@/components/Shares/PageBanner';
 import bannerInfo from '@/components/Shares/PageBanner/homeBannerInfo.json';
 import PageParallax from '@/components/Shares/PageParallax';
@@ -18,7 +19,6 @@ import PageTicket from '@/components/Shares/PageTicket';
 // import HomeTestimonial from '@/components/Pages/Home/HomeTestimonial';
 import DefaultLayout from '@/layouts/DefaultLayout';
 import PageHead from '@/layouts/PageHead';
-import venueInfo from '@/components/Pages/Venue/venueInfo.json';
 
 type ComponentType = React.FC & { layout: typeof DefaultLayout };
 

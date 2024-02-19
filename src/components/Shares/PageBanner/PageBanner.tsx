@@ -7,7 +7,7 @@ import { color, devices } from '@/styles/variables';
 const { whiteColor } = color;
 
 interface PageBannerProps {
-	venueInfo : {
+	venueInfo: {
 		name: string;
 		description: string;
 		imageSrc: string;
@@ -16,7 +16,7 @@ interface PageBannerProps {
 		position: {
 			lat: number;
 			lng: number;
-		}
+		};
 	};
 	buttonConfig?: {
 		text: string;
@@ -124,12 +124,12 @@ const PageBanner: React.FC<PageBannerProps> = props => {
 			<LeftGrid imageSrc={venueInfo.imageSrc} />
 			<RightGrid imageSrc="/images/demo/main-home-banner-bg.jpg">
 				<InfoContainer className="flex flex-col justify-center">
-					{ venueInfo &&
+					{venueInfo && (
 						<>
 							<Subtitle>Venue: {venueInfo.venue}</Subtitle>
 							<Subtitle>Address: {venueInfo.address}</Subtitle>
 						</>
-					}
+					)}
 					<Title>{venueInfo.name}</Title>
 					<Description>{venueInfo.description}</Description>
 

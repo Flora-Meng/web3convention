@@ -27,15 +27,15 @@ const GoogleMap: React.FC<MapProps> = props => {
 			{React.Children.map(children, child => {
 				if (React.isValidElement(child)) {
 					// eslint-disable-next-line @typescript-eslint/no-explicit-any
-					 return React.cloneElement<google.maps.Map | any>(child, { map })
+					return React.cloneElement<google.maps.Map | any>(child, { map });
 				}
 				return null;
 			})}
-		</div>	
+		</div>
 	);
 };
 
-const VenueMap = ({ position } : { position: { lat:number; lng: number; }}) => {
+const VenueMap = ({ position }: { position: { lat: number; lng: number } }) => {
 	const render = (status: Status) => {
 		return <h1>{status}</h1>;
 	};

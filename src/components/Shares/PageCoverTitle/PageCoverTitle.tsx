@@ -9,7 +9,7 @@ import { color, devices } from '@/styles/variables';
 const { whiteColor, primaryColor } = color;
 
 interface PageCoverTitleProps {
-	venueInfo : {
+	venueInfo: {
 		name: string;
 		description: string;
 		imageSrc: string;
@@ -18,7 +18,7 @@ interface PageCoverTitleProps {
 		position: {
 			lat: number;
 			lng: number;
-		}
+		};
 	};
 	translateValue?: string;
 	children?: React.ReactNode;
@@ -73,13 +73,13 @@ const PageCoverTitle: React.FC<PageCoverTitleProps> = props => {
 	return (
 		<Container translateValue={translateValue} venueInfo={venueInfo}>
 			<div>
-				{venueInfo &&
+				{venueInfo && (
 					<>
 						<CoverSubtitle isCurrent>Venue: {venueInfo.venue}</CoverSubtitle>
 						<CoverSubtitle isCurrent>Address: {venueInfo.address}</CoverSubtitle>
 						<CoverTitle isCurrent>{venueInfo.name}</CoverTitle>
 					</>
-				}
+				)}
 				{children}
 			</div>
 		</Container>
