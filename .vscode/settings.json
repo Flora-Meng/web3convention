@@ -15,14 +15,13 @@
 	"files.eol": "\n",
 	"editor.tabSize": 4,
 	"cSpell.words": [
-		"hackathon",
-		"Merivale",
-		"metaverse",
-		"sendgrid",
 		"stylelint",
 		"swipeable",
 		"unoptimized",
-		"webp"
+		"hackathon",
+		"webp",
+		"metaverse",
+		"sendgrid"
 	],
 	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": "explicit",

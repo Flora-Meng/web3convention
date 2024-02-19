@@ -7,16 +7,12 @@ import { color, devices } from '@/styles/variables';
 const { whiteColor } = color;
 
 interface PageBannerProps {
-	venueInfo: {
-		name: string;
-		description: string;
+	bannerInfo: {
+		additionalSubtitle?: string;
+		title: string;
+		subtitle: string;
 		imageSrc: string;
-		venue: string;
-		address: string;
-		position: {
-			lat: number;
-			lng: number;
-		};
+		description: string;
 	};
 	buttonConfig?: {
 		text: string;
@@ -118,20 +114,18 @@ const partnerButtonConfig = {
 };
 
 const PageBanner: React.FC<PageBannerProps> = props => {
-	const { venueInfo, buttonConfig } = props;
+	const { bannerInfo, buttonConfig } = props;
 	return (
 		<div className="flex">
-			<LeftGrid imageSrc={venueInfo.imageSrc} />
+			<LeftGrid imageSrc={bannerInfo.imageSrc} />
 			<RightGrid imageSrc="/images/demo/main-home-banner-bg.jpg">
 				<InfoContainer className="flex flex-col justify-center">
-					{venueInfo && (
-						<>
-							<Subtitle>Venue: {venueInfo.venue}</Subtitle>
-							<Subtitle>Address: {venueInfo.address}</Subtitle>
-						</>
+					<Subtitle>{bannerInfo.subtitle}</Subtitle>
+					{bannerInfo.additionalSubtitle && (
+						<Subtitle>{bannerInfo.additionalSubtitle}</Subtitle>
 					)}
-					<Title>{venueInfo.name}</Title>
-					<Description>{venueInfo.description}</Description>
+					<Title>{bannerInfo.title}</Title>
+					<Description>{bannerInfo.description}</Description>
 
 					<ButtonContainer>
 						{buttonConfig && (

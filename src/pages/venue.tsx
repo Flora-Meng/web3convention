@@ -2,12 +2,13 @@ import styled from 'styled-components';
 
 import BrisBaneCity from '@/components/Pages/Venue/BrisbaneCity';
 import GoldCoastCity from '@/components/Pages/Venue/GoldCoastCity';
-import Location from '@/components/Pages/Venue/Location';
+// import VenueMap from '@/components/Pages/Venue/Map';
 import VenueGallery from '@/components/Pages/Venue/VenueGallery';
-import venueInfo from '@/components/Pages/Venue/venueInfo.json';
 import VenueIntroCards from '@/components/Pages/Venue/VenuIntroCards/VenueIntroCards';
 import PageBanner from '@/components/Shares/PageBanner';
+import bannerInfo from '@/components/Shares/PageBanner/venueBannerInfo.json';
 import PageCoverTitle from '@/components/Shares/PageCoverTitle';
+import coverText from '@/components/Shares/PageCoverTitle/venueCoverText.json';
 import Footer from '@/layouts/Footer';
 import Header from '@/layouts/Header';
 import PageHead from '@/layouts/PageHead';
@@ -57,15 +58,14 @@ const VenuePage = () => {
 					<Header />
 				</HeaderContainer>
 				<TitleContainer>
-					<PageCoverTitle venueInfo={venueInfo} />
+					<PageCoverTitle coverText={coverText} />
 				</TitleContainer>
 			</Cover>
 			<VenueIntroCards />
-			<PageBanner venueInfo={venueInfo} buttonConfig={buttonConfig} />
+			<PageBanner bannerInfo={bannerInfo} buttonConfig={buttonConfig} />
 			<VenueGallery />
 			<BrisBaneCity />
 			<GoldCoastCity />
-			<Location />
 			{/* <VenueMap /> // hide the map temporarily */}
 			<Footer />
 		</>
