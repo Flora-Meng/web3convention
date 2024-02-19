@@ -9,11 +9,16 @@ import { color, devices } from '@/styles/variables';
 const { whiteColor, primaryColor } = color;
 
 interface PageCoverTitleProps {
-	coverText: {
-		_id: string;
-		title: string;
-		subtitle?: string;
-		additionalSubtitle?: string;
+	venueInfo: {
+		name: string;
+		description: string;
+		imageSrc: string;
+		venue: string;
+		address: string;
+		position: {
+			lat: number;
+			lng: number;
+		};
 	};
 	translateValue?: string;
 	children?: React.ReactNode;
@@ -63,18 +68,18 @@ const CoverTitle = styled(Title)`
 `;
 
 const PageCoverTitle: React.FC<PageCoverTitleProps> = props => {
-	const { coverText, translateValue, children } = props;
+	const { venueInfo, translateValue, children } = props;
 
 	return (
-		<Container translateValue={translateValue} coverText={coverText}>
+		<Container translateValue={translateValue} venueInfo={venueInfo}>
 			<div>
-				{coverText.subtitle && (
-					<CoverSubtitle isCurrent>{coverText.subtitle}</CoverSubtitle>
+				{venueInfo && (
+					<>
+						<CoverSubtitle isCurrent>Venue: {venueInfo.venue}</CoverSubtitle>
+						<CoverSubtitle isCurrent>Address: {venueInfo.address}</CoverSubtitle>
+						<CoverTitle isCurrent>{venueInfo.name}</CoverTitle>
+					</>
 				)}
-				{coverText.additionalSubtitle && (
-					<CoverSubtitle isCurrent>{coverText.additionalSubtitle}</CoverSubtitle>
-				)}
-				<CoverTitle isCurrent>{coverText.title}</CoverTitle>
 				{children}
 			</div>
 		</Container>

@@ -9,6 +9,7 @@ import teamMemberListHome from '@/components/Pages/Home/HomeJudgeTeam/teamMember
 import HomePosts from '@/components/Pages/Home/HomePosts';
 import HomeSponsor from '@/components/Pages/Home/HomeSponsor';
 // import HomeSubscription from '@/components/Pages/Home/HomeSubscription';
+import venueInfo from '@/components/Pages/Venue/venueInfo.json';
 import PageBanner from '@/components/Shares/PageBanner';
 import bannerInfo from '@/components/Shares/PageBanner/homeBannerInfo.json';
 import PageParallax from '@/components/Shares/PageParallax';
@@ -33,7 +34,7 @@ const Homepage: ComponentType = () => {
 			<HomeCarousel />
 			<HomeCountdown />
 			<HomeHighLights />
-			<PageBanner bannerInfo={bannerInfo} buttonConfig={buttonConfig} />
+			<PageBanner venueInfo={venueInfo} buttonConfig={buttonConfig} />
 			<HomeEvent />
 			<JudgeTeam subtitle="AI + Web3 Convention 2024" teamMemberList={teamMemberListHome} />
 			<PageTicket />

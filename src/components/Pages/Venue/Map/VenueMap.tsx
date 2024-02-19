@@ -23,8 +23,7 @@ const GoogleMap: React.FC<MapProps> = props => {
 		}
 	}, [ref, map]);
 	return (
-		<>
-			<div ref={ref} style={{ height: '60vh', width: '100%' }} />
+		<div ref={ref} style={{ height: '100%', width: '100%' }}>
 			{React.Children.map(children, child => {
 				if (React.isValidElement(child)) {
 					// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -32,19 +31,18 @@ const GoogleMap: React.FC<MapProps> = props => {
 				}
 				return null;
 			})}
-		</>
+		</div>
 	);
 };
 
-const VenueMap = () => {
+const VenueMap = ({ position }: { position: { lat: number; lng: number } }) => {
 	const render = (status: Status) => {
 		return <h1>{status}</h1>;
 	};
-	const position = { lat: -27.476389, lng: 153.018333 };
 	return (
-		<Wrapper apiKey="AIzaSyDCKxgat91L8LiFigmKSwlcuO1_IUoBR5g" render={render}>
+		<Wrapper apiKey={process.env.GOOGLE_API || ''} render={render}>
 			<GoogleMap center={position} zoom={17}>
-				<Marker position={position} clickable={false} />
+				<Marker position={position} clickable />
 			</GoogleMap>
 		</Wrapper>
 	);
