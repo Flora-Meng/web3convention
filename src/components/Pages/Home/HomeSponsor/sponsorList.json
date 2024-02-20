@@ -26,6 +26,12 @@
 				"logoSrc": "/images/sponsors/bewater.png",
 				"logoSrcHighlight": "/images/sponsors/bewater.png",
 				"url": "https://bewater.xyz/"
+			},
+			{
+				"_id": "7",
+				"logoSrc": "/images/logo/tron-logo.png",
+				"logoSrcHighlight": "/images/logo/tron-logo.png",
+				"url": "https://tron.network/index?lng=en"
 			}
 		]
 	},
@@ -124,12 +130,6 @@
 		"groupId": 3,
 		"groupName": "SPONSORS",
 		"sponsor": [
-			{
-				"_id": "7",
-				"logoSrc": "/images/logo/tron-logo.png",
-				"logoSrcHighlight": "/images/logo/tron-logo.png",
-				"url": "https://tron.network/index?lng=en"
-			},
 			{
 				"_id": "3",
 				"logoSrc": "/images/sponsors/hash-mining.png",
@@ -615,6 +615,12 @@
 				"logoSrc": "./images/sponsors/pr-partner-logo.png",
 				"logoSrcHighlight": "/images/sponsors/pr-partner-logo.png.png",
 				"url": ""
+			},
+			{
+				"_id": "76",
+				"logoSrc": "./images/sponsors/coinGabbar-dark.svg",
+				"logoSrcHighlight": "/images/sponsors/coinGabbar-dark.svg",
+				"url": "https://www.coingabbar.com/"
 			}
 		]
 	}
