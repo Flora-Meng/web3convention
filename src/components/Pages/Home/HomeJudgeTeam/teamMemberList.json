@@ -42,6 +42,15 @@
 		"companySrc": "/images/logo/robotic.png"
 	},
 	{
+		"_id": "54",
+		"name": "Jessie Hughes",
+		"jobTitle": "Senior Creative Technologist",
+		"description": "Jessie Hughes is an internationally-recognised new media artist, technologist, scholar and screenwriter, her works having exhibited most notably at Sundance, SXSW, Cannes and the Tate Modern. She’s collaborated with the likes of Meta, Oculus and Abode, in a decade of leading imaginative emerging technologies. Jessie Hughes is the Senior Creative Technologist and Artist-In-Residence at generative AI leader, Leonardo.Ai, pioneering tools for a new era for human creativity.",
+		"isSpeaker": true,
+		"avatarSrc": "/images/speakers/jessieHughes.png",
+		"companySrc": "/images/logo/leonardo-ai.svg"
+	},
+	{
 		"_id": "05",
 		"name": "Herbert",
 		"jobTitle": "GM of Asia, DFINITY Foundation",
