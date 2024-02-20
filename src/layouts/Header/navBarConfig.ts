@@ -52,10 +52,11 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 			title: 'Startup Competition',
 			path: '/startup'
 		},
-		{
-			title: 'Side Events',
-			path: '/side-events'
-		},
+		//	隐藏
+		// {
+		// 	title: 'Side Events',
+		// 	path: '/side-events'
+		// },
 		// 暂时隐藏，非删除
 		// {
 		// 	title: '2024 Web3 & AI Convention',
