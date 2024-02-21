@@ -182,10 +182,11 @@ const InfoHeader = styled.div`
 const ModalSubtitle = styled.span`
 	color: #aaa;
 	font-size: 18px;
-	height: 22px;
-	width: 212px;
+	height: 70px;
+	width: 250px;
 	@media ${devices.mobile} {
 		font-size: 20px;
+		height: 50px;
 	}
 `;
 

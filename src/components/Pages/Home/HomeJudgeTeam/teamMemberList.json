@@ -83,10 +83,10 @@
 		"_id": "14",
 		"name": "Daniel Wu",
 		"description": "Daniel Wu is an accomplished technical leader with over 20 years of expertise in software engineering, AI/ML, and team development. With a diverse career spanning technology, education, finance, and healthcare, he is credited for establishing high-performing AI teams, pioneering point-of-care expert systems, co-founding a successful online personal finance marketplace, and leading the development of an innovative online real estate brokerage platform. Passionate about technology democratization and ethical AI practices, Daniel actively promotes these principles through involvement in computer science and AI/ML education programs. A sought-after speaker, he shares insights and experiences at international conferences and corporate events. Daniel holds a computer science degree from Stanford University.",
-		"jobTitle": "Head of AI & Machine Learning",
+		"jobTitle": "Strategic AI Leadership | Keynote Speaker | Educator | Entrepreneur",
 		"avatarSrc": "/images/speakers/danielWu.png",
 		"isSpeaker": true,
-		"companySrc": "/images/logo/jpmorgan.png"
+		"companySrc": "/images/logo/stanfordUniversity.svg"
 	},
 	{
 		"_id": "44",
@@ -217,15 +217,6 @@
 		"description": "Third Academy CEO is a blockchain-based web3 social education platform with Soulbound NFT credentialling, a wallet-based recruiter matching system, and metaverse campuses.",
 		"jobTitle": "CEO, Third Academy",
 		"avatarSrc": "/images/speakers/stacy.png",
-		"isSpeaker": true
-	},
-	{
-		"_id": "53",
-		"name": "Yawn Rong",
-		"description": "Rong is an entrepreneur, crypto investor, and start-up incubator. He graduated from Unisa with a Master’s degree in marketing. In 2018, Rong co-founded Crypto SA, a crypto consulting firm, and Crypto SA Lab, a crypto incubator. Since 2019, Rong has served as an industrial representative for the South Australian Blockchain Association, Blockchain Australia, as well as a Business Ambassador for Algorand. After partnering with Jerry Huang, he co-founded STEPN in August of 2021, and Find Satoshi Lab in 2022. Rong is also bilingual in Chinese and English.",
-		"jobTitle": "Co-founder",
-		"avatarSrc": "/images/speakers/yawnRong.png",
-		"companySrc": "/images/logo/find-satoshi-lab-logo.png",
 		"isSpeaker": true
 	},
 	{
