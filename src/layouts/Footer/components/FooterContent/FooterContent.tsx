@@ -317,7 +317,7 @@ const FooterContent = () => {
 						<img src={secondCountryImage} alt="secondCountryImage" />
 					</FlagImage>
 					<DisclaimerContent>
-						Web3 Convention acknowledges Traditional Owners of Country throughout
+						AI + Web3 Convention acknowledges Traditional Owners of Country throughout
 						Australia and recognises the continuing connection to lands, waters and
 						communities. We pay our respect to Aboriginal and Torres Strait Islander
 						cultures; and to Elders past and present. Aboriginal and Torres Strait
