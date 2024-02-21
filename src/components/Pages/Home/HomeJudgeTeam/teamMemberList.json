@@ -72,8 +72,9 @@
 		"_id": "6",
 		"name": "Ken Huang",
 		"description": "Ken Huang is the author and chief editor of eight books on artificial intelligence and Web3, published respectively by international publishers such as Springer and Cambridge University Press. Serving as the CEO of the AI and Web3 consulting and education company, he holds multiple roles including a Blockchain Expert of the Chinese Institute of Electronics. He is also a core contributor to the Generative AI Working Group at the NIST and a core author of the OWASP Top 10 for LLM Applications.\n\nKen Huang has been invited to provide Speaking or Consulting services at institutions such as the University of California, Berkeley, Stanford University, Peking University, Tsinghua University, the World Bank, and Huawei. Moreover, he has given keynote speeches at international conferences, for example, the Davos World Economic Forum 2020 Blockchain Conference; Consensus 2018 in New York; The American ACM AI & Blockchain Decentralized Annual Conference 2019; IEEE Technology and Engineering Management Society Annual Meeting 2019.",
-		"jobTitle": "Author and CEO of DistributedApps.AI",
+		"jobTitle": "CEO of Distributedapp.ai and Co-Chairman of AI Safety Working Groups at Cloud Security Alliance",
 		"avatarSrc": "/images/speakers/kenHuang.jpg",
+		"companySrc": "/images/logo/distributedapp-logo.jpg",
 		"isSpeaker": true,
 		"showBookLink": "https://www.amazon.com/Beyond-AI-Business-Landscape-Tomorrow-ebook/dp/B0CK5F3KLY?ref=d6k_applink_bb_dls&dplnkId=d9a5a9e6-a1a7-4a3c-a007-cb478a5b76b7",
 		"bookTitle": "Beyond AI: ChatGPT, Web3, and the Business Landscape of Tomorrow (Future of Business and Finance)"
@@ -448,15 +449,6 @@
 		"jobTitle": "Director, ElectraFi",
 		"avatarSrc": "/images/speakers/electraFrost.jpg",
 		"companySrc": "/images/logo/electrafi.svg",
-		"isSpeaker": true
-	},
-	{
-		"_id": "42",
-		"name": "Renee Francis",
-		"description": "After working for 10 years in 10 different companies in the traditional corporate world - in structures & environments that did not serve her, Renee built the grit and desire to shake up the 9-5 world. At the age of 27, Renee Francis founded The Bubble Co, now a multi-million-dollar web2 digital marketing agency and is also the founder and director of the web3 agency, Take3. Renee is a seasoned web3 native and has spoken on web3 stages all over the world. Renee’s mission is simple: to empower others to join her in shaping the future of the decentralised web.",
-		"jobTitle": "Founder and Director, Take3",
-		"avatarSrc": "/images/speakers/reneeFrancis.jpg",
-		"companySrc": "/images/logo/take3-Francis-Renee.png",
 		"isSpeaker": true
 	},
 	{
