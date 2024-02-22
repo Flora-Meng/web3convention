@@ -45,6 +45,7 @@ const RightGrid = styled(GridItem)`
 	padding: 30px 0 30px 20px;
 	width: 100vw;
 	@media ${devices.tablet} {
+		padding-top: 80px;
 		padding-left: 50px;
 		width: 50vw;
 	}
