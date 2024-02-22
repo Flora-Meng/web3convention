@@ -2,6 +2,7 @@ import React from 'react';
 import ForSponsors from 'src/components/Pages/Startup/ForSponsors';
 import styled from 'styled-components';
 
+import HomeSponsor from '@/components/Pages/Home/HomeSponsor';
 import EventAgenda from '@/components/Pages/Startup/EventAgenda';
 import EventHighlights from '@/components/Pages/Startup/EventHighlights';
 import ForEnterprise from '@/components/Pages/Startup/ForEnterprise';
@@ -93,6 +94,7 @@ const StartupPage = () => {
 			</Cover>
 			<Overview />
 			<EventHighlights />
+			<HomeSponsor />
 			<EventAgenda />
 			<Prize />
 			<Timeline />
