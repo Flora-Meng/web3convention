@@ -52,9 +52,6 @@ const StyledButton = styled.button<StyledButtonProps>`
 			transform: translateX(-5px);
 		}
 	}
-	@media ${devices.laptop} {
-		padding: 14px 34px;
-	}
 `;
 
 const ButtonContent = styled.p`
