@@ -33,6 +33,7 @@ interface TeamMemberProps {
 	jobTitle?: string;
 	avatarSrc: string;
 	companySrc?: string;
+	companyLink?: string;
 	secondCompanySrc?: string;
 	isSpeaker?: boolean;
 	showBookLink?: string;
@@ -401,12 +402,14 @@ const JudgeTeam: React.FC<{ subtitle: string; teamMemberList: TeamMemberProps[] 
 								</ModalAvatarContainer>
 							)}
 							<LogoGroup>
-								{teamMemberInfo.companySrc && (
+								{teamMemberInfo.companySrc  && (
 									<LogoContainer>
-										<Logo
-											src={teamMemberInfo.companySrc}
-											alt={teamMemberInfo.name}
-										/>
+										<a href={teamMemberInfo.companyLink} target="_blank" rel="noopener noreferrer">
+											<Logo
+												src={teamMemberInfo.companySrc}
+												alt={teamMemberInfo.name}
+											/>
+										</a>
 									</LogoContainer>
 								)}
 								{teamMemberInfo.secondCompanySrc && (

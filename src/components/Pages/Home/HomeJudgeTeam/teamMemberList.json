@@ -30,6 +30,8 @@
 		"description": "Robert Lee, also known as Robert Li or Bo Li, holds a Ph.D. in Economics and is a seasoned senior engineer, professor, and doctoral supervisor. Beyond his academic achievements, he is the founder of the 518 Blockchain meetup. Additionally, he spearheads the International Digital Economy and Blockchain DBA program, contributing significantly to advancements in the realms of digital economics and blockchain technology.\n\nWith connections to numerous global educational institutions, industry associations, investment funds, research institutions, and cryptocurrency mining facilities, Robert Lee serves in various capacities such as team leader, chief economist, and advisor. His diverse roles reflect a commitment to fostering innovation and expertise in the dynamic fields of economics and blockchain technology.",
 		"jobTitle": "Ph.D., Chief Economist",
 		"avatarSrc": "/images/speakers/Robert.jpg",
+		"companySrc": "/images/logo/robertLee-logo.png",
+		"companyLink": "http://www.hkac.edu.hk/",
 		"isSpeaker": true
 	},
 	{
@@ -146,6 +148,8 @@
 		"description": "Yolanda is an award-nominated product manager with over a decade of experience in delivering product solutions focused on ML capabilities. Her work has significantly contributed to the creation and global scaling of multiple GenAI product features, which are now loved by millions of customers around the world.",
 		"jobTitle": "Product Manager, Canva",
 		"avatarSrc": "/images/speakers/yolandaLi.jpg",
+		"companySrc": "/images/logo/yolandaLiLogo.png",
+		"companyLink": "https://www.canva.com/",
 		"isSpeaker": true
 	},
 	{
@@ -191,6 +195,8 @@
 		"description": "Dr Xue Li is a Professor in School of Information Technology, the University of Queensland in Australia. Dr Xue Li’s work on Big Data Analytics has attracted wide attentions. For example, he was listed as one of 50 “The Most Powerful people in Australia\" on Big Data by the Financial Review - the Power Issue 2015; the Microsoft Start-Up Q Award 2014, Winner of the Best use of Open Data – QLD Premier’s Awards for Open Data 2014. His research interests are in database management, machine learning, and intelligent information systems. He is an Associate Editor of Journal of Advanced Internet of Things. He has over 200 publications as monograph, edited books, book chapters, and journal and conference papers. His Google h-Index is 54, with 9,600 citations. He has successfully supervised more than 35 PhD students to graduation as their principal supervisor.",
 		"jobTitle": "Professor, The University of Queensland",
 		"avatarSrc": "/images/speakers/xueLi.png",
+		"companySrc": "/images/logo/xueli-logo.png",
+		"companyLink": "https://www.uq.edu.au/",
 		"isSpeaker": true
 	},
 	{
@@ -217,6 +223,8 @@
 		"description": "Third Academy CEO is a blockchain-based web3 social education platform with Soulbound NFT credentialling, a wallet-based recruiter matching system, and metaverse campuses.",
 		"jobTitle": "CEO, Third Academy",
 		"avatarSrc": "/images/speakers/stacy.png",
+		"companySrc": "/images/logo/stacy-logo.png",
+		"companyLink": "https://www.third.academy/",
 		"isSpeaker": true
 	},
 	{
@@ -233,6 +241,8 @@
 		"description": "Internationally revered expert on launching new innovations, popular presenter, highly sought-after trainer of senior executives in marketing and strategy, acclaimed author in leadership management and business strategy, with a 45-year career of successful business achievements. After reaching the CMO level in FMCG, Leigh moved into consulting for national and multi-national organizations and training larger c-suite executives. Part of the strategic consulting firm, Leadership Empowerment, Leigh facilitates leadership and management decision-making in strategy and planning.",
 		"jobTitle": "Director Of Strategic Planning Leadership Empowerment Pty Ltd",
 		"avatarSrc": "/images/speakers/leighCowan.jpeg",
+		"companySrc": "/images/logo/leigh-logo.png",
+		"companyLink": "https://leadershipempowerment.com.au/",
 		"isSpeaker": true
 	},
 	{
@@ -338,6 +348,7 @@
 		"description": "Adam Stokes is an Australian author, crypto commentator, trader and investor with an MBA, double advanced diploma, double bachelors and multiple diplomas in business, economics, government and languages. As a self-made millionaire and prior rifleman of the Australian Army and commissioned officer of the Royal Australian Air Force, Adam now focuses his service on helping others learn about finance, crypto and economics to protect and build their wealth. Adam has lived in Spain, the USA, South Korea, America, the Middle East, England and several states across Australia. He speaks English, Spanish and some Korean but believes strongly in the language of mathematics and thermodynamics.",
 		"jobTitle": "Economist, ATS",
 		"avatarSrc": "/images/speakers/adamStrokes.png",
+		"companySrc": "/images/logo/adam-logo.png",
 		"isSpeaker": true
 	},
 	{
@@ -354,6 +365,8 @@
 		"description": "Dr. Brooks Huang is a visionary leader pioneering the tokenization of real-world assets. He explored blockchain's potential to revolutionize global commerce. With a team, he is developing a layer 1 blockchain for asset tokenization. JPMorgan and Citi are already exploring blockchain's efficiency in trading US Treasuries and digital securities. Dr. Huang's work aligns with market forecasts of trillions of dollars in tokenized digital securities by 2030.",
 		"jobTitle": "Director Joltify Chain",
 		"avatarSrc": "/images/speakers/brooksHuang.jpg",
+		"companySrc": "/images/logo/brooks-logo.png",
+		"companyLink": "https://joltify.io/",
 		"isSpeaker": true
 	},
 	{
@@ -380,6 +393,9 @@
 		"description": "Frederick is Tokens for Humanity’s co-founder, Chairman and COO, with formal education in finance, business management, IT, computer networking and project management, and a professional background in organisation and strategic risk management, end-to-end IT lifecycle management and investment in startups and alternative assets. Recognising the slow rate of technology adoption by charities, in 2017 Frederick co-founded Tokens for Humanity as a way to help organisations with positive social value utilise blockchain technology and access cryptoasset markets. Tokens for Humanity now works with a range of charitable organisations to build fundraising and governance solutions, assist in managing crypto-assets long-term, and educate stakeholders and regulators on how blockchain technology affects the charity sector. Outside of philanthropy and blockchain, Frederick is a current investor and startup advisor, devotes time to continuous education, and is interested in geopolitics and sciences.",
 		"jobTitle": "Co-founder, Tokens For Humanity",
 		"avatarSrc": "/images/speakers/frederBrien.png",
+		"companySrc": "/images/logo/fredrick-logo.png",
+		"companyLink": "https://www.tokensforhumanity.org.au/",
+		
 		"isSpeaker": true
 	},
 	{
@@ -388,6 +404,8 @@
 		"description": "Bryce is Tokens for Humanity's co-founder and CEO. Outside of philanthropy and blockchain, Bryce is passionate about finance, the environment and technology. Working in logistics for many years, he has seen first-hand how destructive some industries can be to the environment which led him to explore regenerative finance and sustainability; most recently founding Pepal, a Scope 3 emissions platform. Bryce is an active startup advisor and keeps busy by spreading his time between passions.",
 		"jobTitle": "Co-founder, Tokens For Humanity",
 		"avatarSrc": "/images/speakers/bryceThomas.png",
+		"companySrc": "/images/logo/fredrick-logo.png",
+		"companyLink": "https://www.tokensforhumanity.org.au/",
 		"isSpeaker": true
 	},
 	{
