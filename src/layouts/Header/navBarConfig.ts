@@ -83,7 +83,7 @@ export const subNavItemsConfig: { [K in ENavItem]?: INavItem[] } = {
 			path: '/why-attend'
 		},
 		{
-			title: 'Ticket Types',
+			title: 'Get Tickets',
 			path: '/get-tickets'
 		},
 		{
