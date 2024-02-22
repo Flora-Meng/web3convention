@@ -87,7 +87,7 @@ const Opportunity = () => {
 				<SponsorType>
 					<Sponsor>
 						<SponsorTitle>
-							Interested in becoming a sponsor? Let's explore how your organization
+							Interested in becoming a sponsor? Let us explore how your organization
 							can gain from supporting our startup competition.
 						</SponsorTitle>
 						<SponsorContent>
@@ -95,7 +95,7 @@ const Opportunity = () => {
 								For partnership details and opportunities, contact us:
 							</Content>
 							<Content>
-								Email:{' '}
+								Email:
 								<a href="mailto:business@web3convention.com">
 									business@web3convention.com
 								</a>
