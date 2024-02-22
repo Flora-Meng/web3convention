@@ -233,6 +233,14 @@ const ContactTable = () => {
 					<br />
 					For any inquiries, please take advantage of the contact form below. Rest
 					assured, we&apos;ll promptly address your queries.
+					<p>
+						Information:{' '}
+						<a href="mailto:info@web3convention.com">info@web3convention.com</a>
+					</p>
+					<p>
+						Partnership:{' '}
+						<a href="mailto:business@web3convention.com">business@web3convention.com</a>
+					</p>
 				</DescriptionText>
 				<FormContainer>
 					<ContactForm onSubmit={handleSubmit}>

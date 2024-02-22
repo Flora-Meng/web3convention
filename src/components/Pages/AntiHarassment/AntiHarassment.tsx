@@ -159,7 +159,7 @@ const AntiHarassment = () => {
 					<SubTitle>9. Contact Information:</SubTitle>
 					<Description>
 						If you have questions or need to report an incident, please contact us at
-						info@web3convention.com.
+						<a href="mailto:info@web3convention.com">info@web3convention.com</a>
 					</Description>
 				</div>
 			</ContentWrapper>

@@ -9,11 +9,11 @@ import teamMemberListHome from '@/components/Pages/Home/HomeJudgeTeam/teamMember
 import HomePosts from '@/components/Pages/Home/HomePosts';
 import HomeSponsor from '@/components/Pages/Home/HomeSponsor';
 // import HomeSubscription from '@/components/Pages/Home/HomeSubscription';
+import JoinUsSection from '@/components/Pages/Why-Sponsor/JoinUs';
 import PageBanner from '@/components/Shares/PageBanner';
 import bannerInfo from '@/components/Shares/PageBanner/homeBannerInfo.json';
 import PageParallax from '@/components/Shares/PageParallax';
 import PageTicket from '@/components/Shares/PageTicket';
-// import PageGallery from '@/components/Shares/PageGallery';
 // import imageList from '@/components/Shares/PageGallery/homeImageList.json';
 // import HomeTestimonial from '@/components/Pages/Home/HomeTestimonial';
 import DefaultLayout from '@/layouts/DefaultLayout';
@@ -44,6 +44,7 @@ const Homepage: ComponentType = () => {
 			<HomeSponsor />
 			<PageParallax />
 			<HomePosts />
+			<JoinUsSection />
 		</>
 	);
 };

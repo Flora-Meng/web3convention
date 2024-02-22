@@ -46,6 +46,7 @@ const JoinUsTitle = styled.div`
 `;
 const JoinUsDescription = styled(Description)`
 	color: #d9d9d9;
+	margin-top: 20px;
 	@media ${devices.miniMobile} {
 		line-height: 1.8;
 	}
@@ -55,6 +56,7 @@ const JoinUsDescription = styled(Description)`
 	}
 	@media ${devices.laptop} {
 		font-size: 18px;
+		margin-bottom: 20px;
 	}
 `;
 const JoinUsAdditionalDescription = styled.div`
@@ -84,6 +86,10 @@ const JoinUsSection = () => {
 			<MainContent>
 				<JoinUsTitle>{coverText.title}</JoinUsTitle>
 				<JoinUsDescription isCurrent>{coverText.text}</JoinUsDescription>
+				<JoinUsDescription isCurrent>
+					Partnership:{' '}
+					<a href="mailto:business@web3convention.com">business@web3convention.com</a>
+				</JoinUsDescription>
 				<ThemeButton href={joinUsButtonConfig.url}>{joinUsButtonConfig.text}</ThemeButton>
 				<JoinUsAdditionalDescription>
 					{coverText.additionalText}

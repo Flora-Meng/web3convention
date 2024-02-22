@@ -45,6 +45,7 @@ const SponsorType = styled.div`
 `;
 const Sponsor = styled.div`
 	display: flex;
+	flex: 1;
 	flex-direction: column;
 	gap: 20px;
 	@media ${devices.mobile} {
@@ -66,7 +67,7 @@ const SponsorContent = styled.div`
 		background-color: ${whiteColor};
 		content: '';
 		height: 1px;
-		left: 38%;
+		left: 0;
 		position: absolute;
 		top: -20px;
 		width: 66px;
@@ -85,22 +86,20 @@ const Opportunity = () => {
 				<Title>Sponsorship Opportunity</Title>
 				<SponsorType>
 					<Sponsor>
-						<SponsorTitle>Exclusive Sponsor</SponsorTitle>
-					</Sponsor>
-					<Sponsor>
-						<SponsorTitle>Whale Tank Sponsor</SponsorTitle>
-					</Sponsor>
-					<Sponsor>
-						<SponsorTitle>For Startups</SponsorTitle>
+						<SponsorTitle>
+							Interested in becoming a sponsor? Let's explore how your organization
+							can gain from supporting our startup competition.
+						</SponsorTitle>
 						<SponsorContent>
-							<Content>Startup Pitch Slot,Startup Pod</Content>
-							<Content>Networking Opportunities</Content>
-						</SponsorContent>
-					</Sponsor>
-					<Sponsor>
-						<SponsorTitle>For Investors</SponsorTitle>
-						<SponsorContent>
-							<Content>Exclusive Investor Pass</Content>
+							<Content>
+								For partnership details and opportunities, contact us:
+							</Content>
+							<Content>
+								Email:{' '}
+								<a href="mailto:business@web3convention.com">
+									business@web3convention.com
+								</a>
+							</Content>
 						</SponsorContent>
 					</Sponsor>
 				</SponsorType>

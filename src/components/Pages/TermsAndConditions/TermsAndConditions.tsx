@@ -52,9 +52,12 @@ const TermsAndConditions = () => {
 					<SubTitle>2. Ticket Purchase</SubTitle>
 					<Description>
 						<p>You are purchasing your tickets for this Event from:</p>
-						<p>Web3 Convention (WEB3 PTY. LTD.)</p>
-						<p>ABN: 86 618 319 770</p>
-						<p>Email: info@web3convention.com</p>
+						<p>METATREE PTY LTD</p>
+						<p>ABN: 55 668 836 566</p>
+						<p>
+							Email:{' '}
+							<a href="mailto:info@web3convention.com">info@web3convention.com</a>
+						</p>
 						<p>
 							All transactions are in Australian Dollars (AUD) unless otherwise
 							stated.{' '}
@@ -153,7 +156,7 @@ const TermsAndConditions = () => {
 						to allow entry to the event. Your information is shared with the Event
 						Organiser, to enable them to communicate to you regarding the event. If you
 						wish to be removed from any lists please email us at
-						info@web3convention.com.
+						<a href="mailto:info@web3convention.com">info@web3convention.com</a>.
 					</Description>
 				</div>
 				<div>

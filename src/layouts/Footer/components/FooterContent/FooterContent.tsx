@@ -246,8 +246,14 @@ const FooterContent = () => {
 						<StyledLink href="/comingSoon">About Us</StyledLink>
 						<StyledLink href="/contact-us">Contact Us</StyledLink>
 					</div>
-					<ContentText>Information: info@web3convention.com</ContentText>
-					<ContentText>Partnership: business@web3convention.com</ContentText>
+					<ContentText>
+						Information:{' '}
+						<a href="mailto:info@web3convention.com">info@web3convention.com</a>
+					</ContentText>
+					<ContentText>
+						Partnership:{' '}
+						<a href="mailto:business@web3convention.com">business@web3convention.com</a>
+					</ContentText>
 				</Grid>
 				<Grid item mobile={12} tablet={6} laptop={6} largeLaptop={1.5}>
 					<Title>Our Events</Title>
