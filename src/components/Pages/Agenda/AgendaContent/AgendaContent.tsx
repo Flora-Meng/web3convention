@@ -9,7 +9,7 @@ const HomeEventContainer = styled.div`
 const Container = styled.div`
 	margin: 0 auto;
 	max-width: 1440px;
-	padding: 50px 0;
+	padding: 50px 10px;
 `;
 
 const ContentContainer = styled.div`

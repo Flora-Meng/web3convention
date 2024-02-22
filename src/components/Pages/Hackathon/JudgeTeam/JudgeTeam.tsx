@@ -72,7 +72,7 @@ const GridItemContainer = styled.div<{ isSpeaker: boolean }>`
 		width: 100%;
 		background-size: cover;
 		background-position: center;
-		padding: 0 40px;
+		padding: 0 10px;
 	}
 	@media ${devices.tablet} {
 		padding: 0 18px;
@@ -243,7 +243,10 @@ const ExpectedSpeakerContainer = styled.div`
 const Container = styled.div`
 	margin: 0 auto;
 	max-width: 1440px;
-	padding: 0 30px 0 50px;
+	padding: 0;
+	@media ${devices.laptop} {
+		padding: 0 20px;
+	}
 `;
 
 const LogoWrapper = styled.div`
@@ -260,7 +263,7 @@ const LogoWrapper = styled.div`
 	top: 0px;
 	width: 110px;
 	@media ${devices.miniMobile} {
-		right: -30px;
+		right: 0;
 	}
 	@media ${devices.tablet} {
 		right: -10px;
@@ -534,7 +537,7 @@ const JudgeTeam: React.FC<{ subtitle: string; teamMemberList: TeamMemberProps[] 
 						return (
 							<Grid
 								item
-								mobile={12}
+								mobile={6}
 								tablet={6}
 								laptop={4}
 								largeLaptop={2.4}

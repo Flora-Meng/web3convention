@@ -17,7 +17,7 @@ const Container = styled.div`
 	max-width: 1440px;
 	padding: 80px 0;
 	@media ${devices.mobile} {
-		padding: 50px 0;
+		padding: 50px 10px;
 	}
 `;
 

@@ -28,7 +28,7 @@ const StyledButton = styled.button<StyledButtonProps>`
 	font-weight: 700;
 	letter-spacing: 1px;
 	line-height: 24px;
-	padding: 11px 33px;
+	padding: 11px 14px;
 	text-transform: uppercase;
 	width: ${props => props.width || 'auto'};
 	&:hover {

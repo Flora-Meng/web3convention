@@ -15,13 +15,13 @@ const ImageListContainer = styled(Grid)``;
 const ImageItem = styled(Link)`
 	${animationHoverImageParent()};
 	cursor: pointer;
-	height: 120vw;
+	height: 280px;
 	position: relative;
 	@media ${devices.mobile} {
-		height: 64vw;
+		height: 320px;
 	}
 	@media ${devices.tablet} {
-		height: 28vw;
+		height: 420px;
 	}
 `;
 
@@ -63,7 +63,7 @@ const HomeImageList: React.FC = () => {
 				return (
 					<Grid
 						item
-						mobile={12}
+						mobile={6}
 						tablet={6}
 						laptop={laptopWidth[idx % 4]}
 						largeLaptop={laptopWidth[idx % 4]}

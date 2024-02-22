@@ -20,9 +20,9 @@ const HomeHighLightsContainer = styled(Box)`
 const Container = styled.div`
 	margin: 0 auto;
 	max-width: 1440px;
-	padding: 90px 0;
+	padding: 90px 15px;
 	@media ${devices.mobile} {
-		padding: 80px 0;
+		padding: 80px 10px;
 	}
 `;
 const SectionTitle = styled.h2`
