@@ -83,8 +83,8 @@ const linkConfigList = [
 		href: '/partners'
 	},
 	{
-		label: 'Apply to Startup Competition',
-		href: 'https://w3con.eventsair.com/web3convention/startupcomp'
+		label: 'Sign Up for the Competition',
+		href: 'https://build.bewater.xyz/en/campaigns/rK6E-AI-Web3-Convention--Startup-Competition'
 	},
 	{
 		label: 'Apply to Volunteer',

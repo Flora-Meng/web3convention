@@ -198,8 +198,8 @@ const CarouseItem: React.FC<CarouseItemProps> = ({
 						</ThemeButton>
 					</ButtonContainer>
 					<ButtonContainer isCurrent={isCurrent}>
-						<ThemeButton width="215px" href="/partners">
-							PARTNER WITH US
+						<ThemeButton width="215px" href="/startup">
+							Startup Competition',
 						</ThemeButton>
 					</ButtonContainer>
 				</MultipleButtonsContainer>

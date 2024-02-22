@@ -24,16 +24,14 @@
 	},
 	{
 		"title": "Promising AI Award",
-		"description": ["Cash reward."]
-	},
-	{
-		"title": "Special NFT Prize",
 		"description": [
-			"The winning team's concept or prototype will be tokenized as an NFT and auctioned, with proceeds going to the team."
+			"Cash reward."
 		]
 	},
 	{
 		"title": "People's Choice Award",
-		"description": ["Direct investment opportunity from the community funds."]
+		"description": [
+			"Direct investment opportunity from the community funds."
+		]
 	}
 ]

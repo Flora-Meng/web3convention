@@ -77,7 +77,7 @@ const StartupPage = () => {
 						<Buttons>
 							<ThemeButton
 								width="fit-content"
-								href="https://w3con.eventsair.com/web3convention/startupcomp"
+								href="https://build.bewater.xyz/en/campaigns/rK6E-AI-Web3-Convention--Startup-Competition"
 							>
 								Apply to Start-up Competition
 							</ThemeButton>
