@@ -31,7 +31,6 @@
 		"jobTitle": "Ph.D., Chief Economist",
 		"avatarSrc": "/images/speakers/Robert.jpg",
 		"companySrc": "/images/logo/robertLee-logo.png",
-		"companyLink": "http://www.hkac.edu.hk/",
 		"isSpeaker": true
 	},
 	{
@@ -149,7 +148,6 @@
 		"jobTitle": "Product Manager, Canva",
 		"avatarSrc": "/images/speakers/yolandaLi.jpg",
 		"companySrc": "/images/logo/yolandaLiLogo.png",
-		"companyLink": "https://www.canva.com/",
 		"isSpeaker": true
 	},
 	{
@@ -196,7 +194,6 @@
 		"jobTitle": "Professor, The University of Queensland",
 		"avatarSrc": "/images/speakers/xueLi.png",
 		"companySrc": "/images/logo/xueli-logo.png",
-		"companyLink": "https://www.uq.edu.au/",
 		"isSpeaker": true
 	},
 	{
@@ -224,7 +221,6 @@
 		"jobTitle": "CEO, Third Academy",
 		"avatarSrc": "/images/speakers/stacy.png",
 		"companySrc": "/images/logo/stacy-logo.png",
-		"companyLink": "https://www.third.academy/",
 		"isSpeaker": true
 	},
 	{
@@ -242,7 +238,6 @@
 		"jobTitle": "Director Of Strategic Planning Leadership Empowerment Pty Ltd",
 		"avatarSrc": "/images/speakers/leighCowan.jpeg",
 		"companySrc": "/images/logo/leigh-logo.png",
-		"companyLink": "https://leadershipempowerment.com.au/",
 		"isSpeaker": true
 	},
 	{
@@ -366,7 +361,6 @@
 		"jobTitle": "Director Joltify Chain",
 		"avatarSrc": "/images/speakers/brooksHuang.jpg",
 		"companySrc": "/images/logo/brooks-logo.png",
-		"companyLink": "https://joltify.io/",
 		"isSpeaker": true
 	},
 	{
@@ -394,8 +388,6 @@
 		"jobTitle": "Co-founder, Tokens For Humanity",
 		"avatarSrc": "/images/speakers/frederBrien.png",
 		"companySrc": "/images/logo/fredrick-logo.png",
-		"companyLink": "https://www.tokensforhumanity.org.au/",
-		
 		"isSpeaker": true
 	},
 	{
@@ -405,7 +397,6 @@
 		"jobTitle": "Co-founder, Tokens For Humanity",
 		"avatarSrc": "/images/speakers/bryceThomas.png",
 		"companySrc": "/images/logo/fredrick-logo.png",
-		"companyLink": "https://www.tokensforhumanity.org.au/",
 		"isSpeaker": true
 	},
 	{
