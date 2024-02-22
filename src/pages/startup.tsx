@@ -86,7 +86,7 @@ const StartupPage = () => {
 								width="fit-content"
 								href="https://w3con.eventsair.com/web3convention/ati"
 							>
-								Apply to Investor
+								Investors Apply
 							</ThemeButton>
 						</Buttons>
 					</PageCoverTitle>
