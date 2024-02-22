@@ -117,6 +117,18 @@
 				"logoSrc": "/images/vc-partners/dibscapital.svg",
 				"logoSrcHighlight": "/images/vc-partners/dibscapital.svg",
 				"url": "https://dibscapital.com/home/"
+			},
+			{
+				"_id": "11",
+				"logoSrc": "/images/vc-partners/springX.png",
+				"logoSrcHighlight": "/images/vc-partners/springX.png",
+				"url": "https://www.springx.net/"
+			},
+			{
+				"_id": "12",
+				"logoSrc": "/images/vc-partners/arweaveSCP.png",
+				"logoSrcHighlight": "/images/vc-partners/arweaveSCP.png",
+				"url": "https://arscp.ventures/"
 			}
 		]
 	},
@@ -465,6 +477,12 @@
 				"logoSrc": "/images/sponsors/acic-logo.png",
 				"logoSrcHighlight": "/images/sponsors/acic-logo.png",
 				"url": ""
+			},
+			{
+				"_id": "56",
+				"logoSrc": "/images/sponsors/eths.png",
+				"logoSrcHighlight": "/images/sponsors/eths.png",
+				"url": "https://twitter.com/ethscription_id?lang=zh"
 			}
 		]
 	},
