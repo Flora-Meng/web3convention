@@ -120,9 +120,10 @@ const HomePosts: React.FC = () => {
 					);
 				})}
 			</Grid>
-			<ViewMore>
+			{/* 隐藏按钮 */}
+			{/* <ViewMore>
 				<ThemeButton href="https://web3convention.com/side-events">VIEW MORE</ThemeButton>
-			</ViewMore>
+			</ViewMore> */}
 		</HomePostsContainer>
 	);
 };
