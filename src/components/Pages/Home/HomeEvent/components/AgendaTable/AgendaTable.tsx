@@ -150,7 +150,7 @@ const agendaConfig = [
 
 	{
 		_id: '2-23',
-		title: 'AI Insight Symposium',
+		title: 'AI Insight Hub',
 		columns: 2,
 		offset: 0
 	},
@@ -168,13 +168,13 @@ const agendaConfig = [
 	},
 	{
 		_id: '3-23',
-		title: 'Web3 Innovation Symposium',
+		title: 'Web3 Innovation Hub',
 		columns: 2,
 		offset: 0
 	},
 	{
 		_id: '4-23',
-		title: 'FutureTech Symposium',
+		title: 'FutureTech Hub',
 		columns: 2,
 		offset: 1
 	},
