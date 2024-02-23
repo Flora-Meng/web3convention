@@ -494,5 +494,69 @@
 		"avatarSrc": "/images/speakers/babuPillai.jpg",
 		"companySrc": "/images/logo/southern-cross-university.png",
 		"isSpeaker": true
+	},
+	{
+		"_id": "53",
+		"name": "Allan Fang",
+		"jobTitle": "Moledao Co-founder",
+		"avatarSrc": "/images/speakers/allanFang.png",
+		"companySrc": "/images/logo/allan-logo.png",
+		"isSpeaker": true
+	},
+	{
+		"_id": "54",
+		"name": "BMAN",
+		"jobTitle": "BeWater Cofounder & ABCDE Capital",
+		"avatarSrc": "/images/speakers/bman.png",
+		"companySrc": "/images/logo/bman-logo.png",
+		"isSpeaker": true
+	},
+	{
+		"_id": "55",
+		"name": "Liu Yang",
+		"jobTitle": "Founder of MetaTrust & Professor at NTU Singapore",
+		"avatarSrc": "/images/speakers/liuyang.png",
+		"companySrc": "/images/logo/liuyang-logo.png",
+		"isSpeaker": true
+	},
+	{
+		"_id": "56",
+		"name": "Thomas Yao",
+		"jobTitle": "BeWater Cofounder & Desert Tech Cofounder",
+		"avatarSrc": "/images/speakers/thomasYao.png",
+		"companySrc": "/images/logo/bman-logo.png",
+		"isSpeaker": true
+	},
+	{
+		"_id": "57",
+		"name": "Frank Kong",
+		"jobTitle": "Developer Advocate at Chainlink",
+		"avatarSrc": "/images/speakers/frankKong.png",
+		"companySrc": "/images/logo/frankKong-logo.png",
+		"isSpeaker": true
+	},
+	{
+		"_id": "58",
+		"name": "Outprog",
+		"jobTitle": "Founder of everVision & PermaDAO",
+		"avatarSrc": "/images/speakers/outprog.png",
+		"companySrc": "/images/logo/outprog-logo.png",
+		"isSpeaker": true
+	},
+	{
+		"_id": "59",
+		"name": "Juile",
+		"jobTitle": "Aleo Event Ambassador",
+		"avatarSrc": "/images/speakers/juile.png",
+		"companySrc": "/images/logo/juile-logo.png",
+		"isSpeaker": true
+	},
+	{
+		"_id": "60",
+		"name": "Bruce Lan",
+		"jobTitle": "Partner of Bing Ventures",
+		"avatarSrc": "/images/speakers/bruceLan.png",
+		"companySrc": "/images/logo/bruceLan-logo.png",
+		"isSpeaker": true
 	}
 ]
