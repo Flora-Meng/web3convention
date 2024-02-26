@@ -1,5 +1,4 @@
 import Grid from '@mui/material/Unstable_Grid2';
-import Link from 'next/link';
 import styled from 'styled-components';
 
 import { WEEKDAY } from '@/constants/event';
@@ -233,11 +232,9 @@ const AgendaTable: React.FC = () => {
 						miniMobile={columns * 3}
 						miniMobileOffset={offset * 3}
 					>
-						<Link href="/comingSoon">
 							<GridItem bgColor={itemColors[index % 5]}>
 								<p>{title}</p>
 							</GridItem>
-						</Link>
 					</GridItemContainer>
 				))}
 			</Grid>
