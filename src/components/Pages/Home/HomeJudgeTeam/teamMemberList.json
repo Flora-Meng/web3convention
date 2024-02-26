@@ -100,10 +100,10 @@
 		"_id": "14",
 		"name": "Daniel Wu",
 		"description": "Daniel Wu is an accomplished technical leader with over 20 years of expertise in software engineering, AI/ML, and team development. With a diverse career spanning technology, education, finance, and healthcare, he is credited for establishing high-performing AI teams, pioneering point-of-care expert systems, co-founding a successful online personal finance marketplace, and leading the development of an innovative online real estate brokerage platform. Passionate about technology democratization and ethical AI practices, Daniel actively promotes these principles through involvement in computer science and AI/ML education programs. A sought-after speaker, he shares insights and experiences at international conferences and corporate events. Daniel holds a computer science degree from Stanford University.",
-		"jobTitle": "Strategic AI Leadership | Keynote Speaker | Educator | Entrepreneur",
+		"jobTitle": "Strategic AI Leadership | Keynote Speaker | Educator | Entrepreneur, Stanford University",
 		"avatarSrc": "/images/speakers/danielWu.png",
 		"isSpeaker": true,
-		"companySrc": "/images/logo/stanfordUniversity.svg"
+		"companySrc": "/images/logo/stanford-logo.png"
 	},
 	{
 		"_id": "44",
