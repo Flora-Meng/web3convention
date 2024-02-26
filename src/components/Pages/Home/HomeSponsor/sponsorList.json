@@ -129,6 +129,11 @@
 				"logoSrc": "/images/vc-partners/arweaveSCP.png",
 				"logoSrcHighlight": "/images/vc-partners/arweaveSCP.png",
 				"url": "https://arscp.ventures/"
+			},
+			{
+				"_id": "13",
+				"logoSrc": "/images/vc-partners/b612-2.png",
+				"logoSrcHighlight": "/images/vc-partners/b612-2.png"
 			}
 		]
 	},
