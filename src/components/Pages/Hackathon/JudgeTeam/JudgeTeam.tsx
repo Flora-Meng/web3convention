@@ -404,12 +404,12 @@ const JudgeTeam: React.FC<{ subtitle: string; teamMemberList: TeamMemberProps[] 
 								</ModalAvatarContainer>
 							)}
 							<LogoGroup>
-								{teamMemberInfo.companySrc  && (
+								{teamMemberInfo.companySrc && (
 									<LogoContainer>
-											<Logo
-												src={teamMemberInfo.companySrc}
-												alt={teamMemberInfo.name}
-											/>
+										<Logo
+											src={teamMemberInfo.companySrc}
+											alt={teamMemberInfo.name}
+										/>
 									</LogoContainer>
 								)}
 								{teamMemberInfo.secondCompanySrc && (

@@ -232,9 +232,9 @@ const AgendaTable: React.FC = () => {
 						miniMobile={columns * 3}
 						miniMobileOffset={offset * 3}
 					>
-							<GridItem bgColor={itemColors[index % 5]}>
-								<p>{title}</p>
-							</GridItem>
+						<GridItem bgColor={itemColors[index % 5]}>
+							<p>{title}</p>
+						</GridItem>
 					</GridItemContainer>
 				))}
 			</Grid>
